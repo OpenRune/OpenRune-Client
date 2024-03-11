@@ -46,6 +46,8 @@ apply<BootstrapPlugin>()
 description = "RuneLite Client"
 
 dependencies {
+    implementation(group = "org.bouncycastle", name = "bcprov-jdk15on", version = "1.52")
+
     annotationProcessor(group = "org.projectlombok", name = "lombok", version = ProjectVersions.lombokVersion)
     annotationProcessor(group = "org.pf4j", name = "pf4j", version = "3.6.0")
 

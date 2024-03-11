@@ -32,41 +32,34 @@ import lombok.Getter;
 @Getter
 class RSConfig
 {
+	private String codeBase = "http://oldschool14.runescape.com/";
+
 	private final Map<String, String> appletProperties = new HashMap<>();
-	private final Map<String, String> classLoaderProperties = new HashMap<>();
 
-	String getCodeBase()
+	RSConfig()
 	{
-		return classLoaderProperties.get("codebase");
-	}
-
-	void setCodebase(String codebase)
-	{
-		classLoaderProperties.put("codebase", codebase);
-	}
-
-	String getInitialJar()
-	{
-		return classLoaderProperties.get("initial_jar");
-	}
-
-	String getInitialClass()
-	{
-		return classLoaderProperties.get("initial_class").replace(".class", "");
-	}
-
-	boolean isFallback()
-	{
-		return getRuneLiteGamepack() != null;
-	}
-
-	String getRuneLiteGamepack()
-	{
-		return classLoaderProperties.get("runelite.gamepack");
-	}
-
-	String getRuneLiteWorldParam()
-	{
-		return classLoaderProperties.get("runelite.worldparam");
+		appletProperties.put("28", "https://account.jagex.com/");
+		appletProperties.put("8", "true");
+		appletProperties.put("16", "false");
+		appletProperties.put("7", "0");
+		appletProperties.put("25", "220");
+		appletProperties.put("18", "");
+		appletProperties.put("20", "https://social.auth.jagex.com/");
+		appletProperties.put("4", "1");
+		appletProperties.put("21", "0");
+		appletProperties.put("13", ".runescape.com");
+		appletProperties.put("19", "196515767263-1oo20deqm6edn7ujlihl6rpadk9drhva.apps.googleusercontent.com");
+		appletProperties.put("5", "1");
+		appletProperties.put("22", "https://auth.runescape.com/");
+		appletProperties.put("3", "true");
+		appletProperties.put("6", "0");
+		appletProperties.put("9", "ElZAIrq5NpKN6D3mDdihco3oPeYN2KFy2DCquj7JMmECPmLrDP3Bnw");
+		appletProperties.put("2", "https://payments.jagex.com/");
+		appletProperties.put("11", "https://auth.jagex.com/");
+		appletProperties.put("10", "5");
+		appletProperties.put("12", "314");
+		appletProperties.put("14", "0");
+		appletProperties.put("15", "0");
+		appletProperties.put("17", "http://www.runescape.com/g=oldscape/slr.ws?order=LPWM");
 	}
 }

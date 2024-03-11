@@ -48,8 +48,10 @@ configurations {
     }
 }
 
+val clientJar = project(":runescape-client").buildDir.resolve("libs").resolve("runescape-client-${ProjectVersions.unethicaliteVersion}.jar")
+
 dependencies {
-    vanillaDep(group = "net.runelite.rs", name = "vanilla", version = ProjectVersions.rsversion.toString())
+    vanillaDep(files(clientJar))
     rsapiDep(project(":runescape-api"))
     rsclientDep(project(":runescape-client"))
     mixinsDep(project(":runelite-mixins"))
