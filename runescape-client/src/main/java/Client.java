@@ -6515,6 +6515,7 @@ public final class Client extends GameEngine implements Usernamed, OAuthApi, cla
 				}
 
 				class193.client = this;
+				RuneLiteMenuEntry.client = (RSClient) (Object) this;
 				RunException.field5367 = clientType;
 				class53.initCredentials();
 				if (Boolean.parseBoolean(System.getProperty("jagex.disableBouncyCastle"))) {
