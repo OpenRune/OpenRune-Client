@@ -919,8 +919,8 @@ public class Login {
 				int[] var27 = new int[4];
 				Rasterizer2D.Rasterizer2D_getClipArray(var27);
 				Rasterizer2D.Rasterizer2D_setClip(xPadding, 0, xPadding + 765, WorldMapArea.canvasHeight);
-				class325.loginScreenRunesAnimation.draw(xPadding - 22, Client.cycle);
-				class325.loginScreenRunesAnimation.draw(xPadding + 22 + 765 - 128, Client.cycle);
+//				class325.loginScreenRunesAnimation.draw(xPadding - 22, Client.cycle);
+//				class325.loginScreenRunesAnimation.draw(xPadding + 22 + 765 - 128, Client.cycle);
 				Rasterizer2D.Rasterizer2D_setClipArray(var27);
 			}
 
