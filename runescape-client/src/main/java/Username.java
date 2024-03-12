@@ -18,12 +18,12 @@ public class Username implements Comparable {
 	)
 	public Username(String var1, LoginType var2) {
 		this.name = var1;
-		this.cleanName = HealthBarDefinition.method3645(var1, var2);
+		this.cleanName = HealthBarDefinition.method928(var1, var2);
 	}
 
 	public Username(String var1) {
 		this.name = var1;
-		this.cleanName = HealthBarDefinition.method3645(var1, LoginType.oldscape);
+		this.cleanName = HealthBarDefinition.method928(var1, LoginType.oldscape);
 	}
 
 	@ObfuscatedName("aq")
@@ -41,14 +41,14 @@ public class Username implements Comparable {
 		descriptor = "(I)Ljava/lang/String;",
 		garbageValue = "-519587625"
 	)
-	public String method10078() {
+	public String method2776() {
 		return this.cleanName;
 	}
 
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "(I)Z",
-		garbageValue = "-600620911"
+		garbageValue = "-1729290000"
 	)
 	@Export("hasCleanName")
 	public boolean hasCleanName() {

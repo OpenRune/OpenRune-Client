@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,5 +9,6 @@ public interface class494 {
 		descriptor = "(I)Lsg;",
 		garbageValue = "712919587"
 	)
+	@Export("get")
 	PlatformInfo get();
 }

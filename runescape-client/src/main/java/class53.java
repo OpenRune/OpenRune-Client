@@ -8,15 +8,15 @@ public class class53 extends Node {
 	@ObfuscatedSignature(
 		descriptor = "Lgt;"
 	)
-	static ClanSettings field363;
+	static ClanSettings field255;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lbh;"
 	)
-	class47 field364;
+	class47 field256;
 
 	public class53() {
-		this.field364 = null;
+		this.field256 = null;
 	}
 
 	@ObfuscatedSignature(
@@ -24,7 +24,7 @@ public class class53 extends Node {
 	)
 	class53(VorbisSample var1) {
 		if (var1 != null) {
-			this.field364 = new class47(var1, (RawSound)null);
+			this.field256 = new class47(var1, (RawSound)null);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class class53 extends Node {
 		descriptor = "(Lbr;)V"
 	)
 	public class53(RawSound var1) {
-		this.field364 = new class47((VorbisSample)null, var1);
+		this.field256 = new class47((VorbisSample)null, var1);
 	}
 
 	@ObfuscatedName("aq")
@@ -40,8 +40,8 @@ public class class53 extends Node {
 		descriptor = "(I)Z",
 		garbageValue = "-1084806884"
 	)
-	public boolean method1066() {
-		return this.field364 == null;
+	public boolean method283() {
+		return this.field256 == null;
 	}
 
 	@ObfuscatedName("aw")
@@ -49,13 +49,13 @@ public class class53 extends Node {
 		descriptor = "(B)Lbr;",
 		garbageValue = "64"
 	)
-	public RawSound method1060() {
-		if (this.field364 != null && this.field364.field330.tryLock()) {
+	public RawSound method284() {
+		if (this.field256 != null && this.field256.field225.tryLock()) {
 			RawSound var1;
 			try {
-				var1 = this.method1057();
+				var1 = this.method287();
 			} finally {
-				this.field364.field330.unlock();
+				this.field256.field225.unlock();
 			}
 
 			return var1;
@@ -69,15 +69,15 @@ public class class53 extends Node {
 		descriptor = "(I)Lbr;",
 		garbageValue = "-2117300742"
 	)
-	public RawSound method1067() {
-		if (this.field364 != null) {
-			this.field364.field330.lock();
+	public RawSound method285() {
+		if (this.field256 != null) {
+			this.field256.field225.lock();
 
 			RawSound var1;
 			try {
-				var1 = this.method1057();
+				var1 = this.method287();
 			} finally {
-				this.field364.field330.unlock();
+				this.field256.field225.unlock();
 			}
 
 			return var1;
@@ -91,13 +91,13 @@ public class class53 extends Node {
 		descriptor = "(B)Lbr;",
 		garbageValue = "15"
 	)
-	RawSound method1057() {
-		if (this.field364.field329 == null) {
-			this.field364.field329 = this.field364.field328.toRawSound((int[])null);
-			this.field364.field328 = null;
+	RawSound method287() {
+		if (this.field256.field223 == null) {
+			this.field256.field223 = this.field256.field224.toRawSound((int[])null);
+			this.field256.field224 = null;
 		}
 
-		return this.field364.field329;
+		return this.field256.field223;
 	}
 
 	@ObfuscatedName("al")
@@ -105,7 +105,7 @@ public class class53 extends Node {
 		descriptor = "(Ljava/lang/CharSequence;IZB)Z",
 		garbageValue = "7"
 	)
-	static boolean method1068(CharSequence var0, int var1, boolean var2) {
+	static boolean method286(CharSequence var0, int var1, boolean var2) {
 		if (var1 >= 2 && var1 <= 36) {
 			boolean var3 = false;
 			boolean var4 = false;
@@ -166,7 +166,7 @@ public class class53 extends Node {
 		descriptor = "(Lkq;[Liz;I)V",
 		garbageValue = "-248181376"
 	)
-	static final void method1069(Scene var0, CollisionMap[] var1) {
+	static final void method289(Scene var0, CollisionMap[] var1) {
 		int var2;
 		int var3;
 		int var4;
@@ -238,7 +238,7 @@ public class class53 extends Node {
 					var18 = (var14 << 8) / var15;
 					var19 = (var16 * -50 + var18 * -50 + var17 * -10) / var10 + 96;
 					int var57 = (var47[var12][var11 + 1] >> 3) + (var47[var12 - 1][var11] >> 2) + (var47[var12][var11 - 1] >> 2) + (var47[var12 + 1][var11] >> 3) + (var47[var12][var11] >> 1);
-					Tiles.field1049[var12][var11] = var19 - var57;
+					Tiles.field876[var12][var11] = var19 - var57;
 				}
 			}
 
@@ -247,7 +247,7 @@ public class class53 extends Node {
 				MilliClock.Tiles_saturation[var11] = 0;
 				ApproximateRouteStrategy.Tiles_lightness[var11] = 0;
 				class182.Tiles_hueMultiplier[var11] = 0;
-				class324.field3538[var11] = 0;
+				class324.field2901[var11] = 0;
 			}
 
 			for (var11 = -5; var11 < 109; ++var11) {
@@ -255,20 +255,20 @@ public class class53 extends Node {
 					var13 = var11 + 5;
 					int var10002;
 					if (var13 >= 0 && var13 < 104) {
-						long var51 = (long)Math.pow(2.0D, 15.0D) - 1L;
-						var16 = (int)var51;
+						long var48 = (long)Math.pow(2.0D, 15.0D) - 1L;
+						var16 = (int)var48;
 						var17 = GrandExchangeOfferAgeComparator.Tiles_underlays[var2][var13][var12] & var16;
 						if (var17 > 0) {
-							FloorUnderlayDefinition var53 = GrandExchangeOfferOwnWorldComparator.method1203(var17 - 1);
+							FloorUnderlayDefinition var50 = GrandExchangeOfferOwnWorldComparator.method347(var17 - 1);
 							var10000 = Huffman.Tiles_hue;
-							var10000[var12] += var53.hue;
+							var10000[var12] += var50.hue;
 							var10000 = MilliClock.Tiles_saturation;
-							var10000[var12] += var53.saturation;
+							var10000[var12] += var50.saturation;
 							var10000 = ApproximateRouteStrategy.Tiles_lightness;
-							var10000[var12] += var53.lightness;
+							var10000[var12] += var50.lightness;
 							var10000 = class182.Tiles_hueMultiplier;
-							var10000[var12] += var53.hueMultiplier;
-							var10002 = class324.field3538[var12]++;
+							var10000[var12] += var50.hueMultiplier;
+							var10002 = class324.field2901[var12]++;
 						}
 					}
 
@@ -278,7 +278,7 @@ public class class53 extends Node {
 						var17 = (int)var54;
 						var18 = GrandExchangeOfferAgeComparator.Tiles_underlays[var2][var14][var12] & var17;
 						if (var18 > 0) {
-							FloorUnderlayDefinition var56 = GrandExchangeOfferOwnWorldComparator.method1203(var18 - 1);
+							FloorUnderlayDefinition var56 = GrandExchangeOfferOwnWorldComparator.method347(var18 - 1);
 							var10000 = Huffman.Tiles_hue;
 							var10000[var12] -= var56.hue;
 							var10000 = MilliClock.Tiles_saturation;
@@ -287,7 +287,7 @@ public class class53 extends Node {
 							var10000[var12] -= var56.lightness;
 							var10000 = class182.Tiles_hueMultiplier;
 							var10000[var12] -= var56.hueMultiplier;
-							var10002 = class324.field3538[var12]--;
+							var10002 = class324.field2901[var12]--;
 						}
 					}
 				}
@@ -306,7 +306,7 @@ public class class53 extends Node {
 							var13 += MilliClock.Tiles_saturation[var18];
 							var14 += ApproximateRouteStrategy.Tiles_lightness[var18];
 							var15 += class182.Tiles_hueMultiplier[var18];
-							var16 += class324.field3538[var18];
+							var16 += class324.field2901[var18];
 						}
 
 						var19 = var17 - 5;
@@ -315,7 +315,7 @@ public class class53 extends Node {
 							var13 -= MilliClock.Tiles_saturation[var19];
 							var14 -= ApproximateRouteStrategy.Tiles_lightness[var19];
 							var15 -= class182.Tiles_hueMultiplier[var19];
-							var16 -= class324.field3538[var19];
+							var16 -= class324.field2901[var19];
 						}
 
 						if (var17 >= 1 && var17 < 103 && (!Client.isLowDetail || (Tiles.Tiles_renderFlags[0][var11][var17] & 2) != 0 || (Tiles.Tiles_renderFlags[var2][var11][var17] & 16) == 0)) {
@@ -332,10 +332,10 @@ public class class53 extends Node {
 								int var26 = Tiles.Tiles_heights[var2][var11 + 1][var17];
 								int var27 = Tiles.Tiles_heights[var2][var11 + 1][var17 + 1];
 								int var28 = Tiles.Tiles_heights[var2][var11][var17 + 1];
-								int var29 = Tiles.field1049[var11][var17];
-								int var30 = Tiles.field1049[var11 + 1][var17];
-								int var31 = Tiles.field1049[var11 + 1][var17 + 1];
-								int var32 = Tiles.field1049[var11][var17 + 1];
+								int var29 = Tiles.field876[var11][var17];
+								int var30 = Tiles.field876[var11 + 1][var17];
+								int var31 = Tiles.field876[var11 + 1][var17 + 1];
+								int var32 = Tiles.field876[var11][var17 + 1];
 								int var33 = -1;
 								int var34 = -1;
 								int var35;
@@ -345,7 +345,7 @@ public class class53 extends Node {
 									var35 = var12 * 256 / var15;
 									var36 = var13 / var16;
 									var37 = var14 / var16;
-									var33 = class31.method425(var35, var36, var37);
+									var33 = class31.method114(var35, var36, var37);
 									var35 = var35 + Tiles.rndHue & 255;
 									var37 += Tiles.rndLightness;
 									if (var37 < 0) {
@@ -354,7 +354,7 @@ public class class53 extends Node {
 										var37 = 255;
 									}
 
-									var34 = class31.method425(var35, var36, var37);
+									var34 = class31.method114(var35, var36, var37);
 								}
 
 								FloorOverlayDefinition var38;
@@ -367,9 +367,9 @@ public class class53 extends Node {
 									if (var24 > 0) {
 										var37 = var24 - 1;
 										var38 = (FloorOverlayDefinition)FloorOverlayDefinition.FloorOverlayDefinition_cached.get((long)var37);
-										FloorOverlayDefinition var48;
+										FloorOverlayDefinition var51;
 										if (var38 != null) {
-											var48 = var38;
+											var51 = var38;
 										} else {
 											byte[] var39 = FloorOverlayDefinition.FloorOverlayDefinition_archive.takeFile(4, var37);
 											var38 = new FloorOverlayDefinition();
@@ -379,60 +379,60 @@ public class class53 extends Node {
 
 											var38.postDecode();
 											FloorOverlayDefinition.FloorOverlayDefinition_cached.put(var38, (long)var37);
-											var48 = var38;
+											var51 = var38;
 										}
 
-										if (!var48.hideUnderlay) {
+										if (!var51.hideUnderlay) {
 											var64 = false;
 										}
 									}
 
 									if (var64 && var26 == var25 && var25 == var27 && var25 == var28) {
-										var10000 = Tiles.field1050[var2][var11];
+										var10000 = Tiles.field878[var2][var11];
 										var10000[var17] |= 2340;
 									}
 								}
 
 								var35 = 0;
 								if (var34 != -1) {
-									var35 = Rasterizer3D.Rasterizer3D_colorPalette[Canvas.method295(var34, 96)];
+									var35 = Rasterizer3D.Rasterizer3D_colorPalette[Canvas.method75(var34, 96)];
 								}
 
 								if (var24 == 0) {
-									var0.addTile(var2, var11, var17, 0, 0, -1, var25, var26, var27, var28, Canvas.method295(var33, var29), Canvas.method295(var33, var30), Canvas.method295(var33, var31), Canvas.method295(var33, var32), 0, 0, 0, 0, var35, 0);
+									var0.addTile(var2, var11, var17, 0, 0, -1, var25, var26, var27, var28, Canvas.method75(var33, var29), Canvas.method75(var33, var30), Canvas.method75(var33, var31), Canvas.method75(var33, var32), 0, 0, 0, 0, var35, 0);
 								} else {
 									var36 = class173.Tiles_shapes[var2][var11][var17] + 1;
-									byte var65 = class350.field3876[var2][var11][var17];
-									int var49 = var24 - 1;
-									FloorOverlayDefinition var40 = (FloorOverlayDefinition)FloorOverlayDefinition.FloorOverlayDefinition_cached.get((long)var49);
+									byte var65 = class350.field3188[var2][var11][var17];
+									int var52 = var24 - 1;
+									FloorOverlayDefinition var40 = (FloorOverlayDefinition)FloorOverlayDefinition.FloorOverlayDefinition_cached.get((long)var52);
 									if (var40 != null) {
 										var38 = var40;
 									} else {
-										byte[] var41 = FloorOverlayDefinition.FloorOverlayDefinition_archive.takeFile(4, var49);
+										byte[] var41 = FloorOverlayDefinition.FloorOverlayDefinition_archive.takeFile(4, var52);
 										var40 = new FloorOverlayDefinition();
 										if (var41 != null) {
-											var40.decode(new Buffer(var41), var49);
+											var40.decode(new Buffer(var41), var52);
 										}
 
 										var40.postDecode();
-										FloorOverlayDefinition.FloorOverlayDefinition_cached.put(var40, (long)var49);
+										FloorOverlayDefinition.FloorOverlayDefinition_cached.put(var40, (long)var52);
 										var38 = var40;
 									}
 
-									int var50 = var38.texture;
+									int var53 = var38.texture;
 									int var42;
 									int var43;
 									int var44;
 									int var45;
-									if (var50 >= 0) {
-										var43 = Rasterizer3D.clips.Rasterizer3D_textureLoader.getAverageTextureRGB(var50);
+									if (var53 >= 0) {
+										var43 = Rasterizer3D.clips.Rasterizer3D_textureLoader.getAverageTextureRGB(var53);
 										var42 = -1;
 									} else if (var38.primaryRgb == 16711935) {
 										var42 = -2;
-										var50 = -1;
+										var53 = -1;
 										var43 = -2;
 									} else {
-										var42 = class31.method425(var38.hue, var38.saturation, var38.lightness);
+										var42 = class31.method114(var38.hue, var38.saturation, var38.lightness);
 										var44 = var38.hue + Tiles.rndHue & 255;
 										var45 = var38.lightness + Tiles.rndLightness;
 										if (var45 < 0) {
@@ -441,12 +441,12 @@ public class class53 extends Node {
 											var45 = 255;
 										}
 
-										var43 = class31.method425(var44, var38.saturation, var45);
+										var43 = class31.method114(var44, var38.saturation, var45);
 									}
 
 									var44 = 0;
 									if (var43 != -2) {
-										var44 = Rasterizer3D.Rasterizer3D_colorPalette[class485.method8808(var43, 96)];
+										var44 = Rasterizer3D.Rasterizer3D_colorPalette[class485.method2424(var43, 96)];
 									}
 
 									if (var38.secondaryRgb != -1) {
@@ -458,11 +458,11 @@ public class class53 extends Node {
 											var46 = 255;
 										}
 
-										var43 = class31.method425(var45, var38.secondarySaturation, var46);
-										var44 = Rasterizer3D.Rasterizer3D_colorPalette[class485.method8808(var43, 96)];
+										var43 = class31.method114(var45, var38.secondarySaturation, var46);
+										var44 = Rasterizer3D.Rasterizer3D_colorPalette[class485.method2424(var43, 96)];
 									}
 
-									var0.addTile(var2, var11, var17, var36, var65, var50, var25, var26, var27, var28, Canvas.method295(var33, var29), Canvas.method295(var33, var30), Canvas.method295(var33, var31), Canvas.method295(var33, var32), class485.method8808(var42, var29), class485.method8808(var42, var30), class485.method8808(var42, var31), class485.method8808(var42, var32), var35, var44);
+									var0.addTile(var2, var11, var17, var36, var65, var53, var25, var26, var27, var28, Canvas.method75(var33, var29), Canvas.method75(var33, var30), Canvas.method75(var33, var31), Canvas.method75(var33, var32), class485.method2424(var42, var29), class485.method2424(var42, var30), class485.method2424(var42, var31), class485.method2424(var42, var32), var35, var44);
 								}
 							}
 						}
@@ -472,18 +472,18 @@ public class class53 extends Node {
 
 			for (var11 = 1; var11 < 103; ++var11) {
 				for (var12 = 1; var12 < 103; ++var12) {
-					var0.setTileMinPlane(var2, var12, var11, RouteStrategy.method4510(var2, var12, var11));
+					var0.setTileMinPlane(var2, var12, var11, RouteStrategy.method1208(var2, var12, var11));
 				}
 			}
 
 			GrandExchangeOfferAgeComparator.Tiles_underlays[var2] = null;
 			TriBool.Tiles_overlays[var2] = null;
 			class173.Tiles_shapes[var2] = null;
-			class350.field3876[var2] = null;
+			class350.field3188[var2] = null;
 			class151.Tiles_underlays2[var2] = null;
 		}
 
-		var0.method5451(-50, -10, -50);
+		var0.method1533(-50, -10, -50);
 
 		for (var2 = 0; var2 < 104; ++var2) {
 			for (var3 = 0; var3 < 104; ++var3) {
@@ -508,34 +508,34 @@ public class class53 extends Node {
 				for (int var61 = 0; var61 <= 104; ++var61) {
 					for (int var62 = 0; var62 <= 104; ++var62) {
 						short var63;
-						if ((Tiles.field1050[var60][var62][var61] & var2) != 0) {
+						if ((Tiles.field878[var60][var62][var61] & var2) != 0) {
 							var9 = var61;
 							var10 = var61;
 							var11 = var60;
 
-							for (var12 = var60; var9 > 0 && (Tiles.field1050[var60][var62][var9 - 1] & var2) != 0; --var9) {
+							for (var12 = var60; var9 > 0 && (Tiles.field878[var60][var62][var9 - 1] & var2) != 0; --var9) {
 							}
 
-							while (var10 < 104 && (Tiles.field1050[var60][var62][var10 + 1] & var2) != 0) {
+							while (var10 < 104 && (Tiles.field878[var60][var62][var10 + 1] & var2) != 0) {
 								++var10;
 							}
 
-							label443:
+							label355:
 							while (var11 > 0) {
 								for (var13 = var9; var13 <= var10; ++var13) {
-									if ((Tiles.field1050[var11 - 1][var62][var13] & var2) == 0) {
-										break label443;
+									if ((Tiles.field878[var11 - 1][var62][var13] & var2) == 0) {
+										break label355;
 									}
 								}
 
 								--var11;
 							}
 
-							label432:
+							label344:
 							while (var12 < var5) {
 								for (var13 = var9; var13 <= var10; ++var13) {
-									if ((Tiles.field1050[var12 + 1][var62][var13] & var2) == 0) {
-										break label432;
+									if ((Tiles.field878[var12 + 1][var62][var13] & var2) == 0) {
+										break label344;
 									}
 								}
 
@@ -551,41 +551,41 @@ public class class53 extends Node {
 
 								for (var17 = var11; var17 <= var12; ++var17) {
 									for (var18 = var9; var18 <= var10; ++var18) {
-										var10000 = Tiles.field1050[var17][var62];
+										var10000 = Tiles.field878[var17][var62];
 										var10000[var18] &= ~var2;
 									}
 								}
 							}
 						}
 
-						if ((Tiles.field1050[var60][var62][var61] & var3) != 0) {
+						if ((Tiles.field878[var60][var62][var61] & var3) != 0) {
 							var9 = var62;
 							var10 = var62;
 							var11 = var60;
 
-							for (var12 = var60; var9 > 0 && (Tiles.field1050[var60][var9 - 1][var61] & var3) != 0; --var9) {
+							for (var12 = var60; var9 > 0 && (Tiles.field878[var60][var9 - 1][var61] & var3) != 0; --var9) {
 							}
 
-							while (var10 < 104 && (Tiles.field1050[var60][var10 + 1][var61] & var3) != 0) {
+							while (var10 < 104 && (Tiles.field878[var60][var10 + 1][var61] & var3) != 0) {
 								++var10;
 							}
 
-							label496:
+							label408:
 							while (var11 > 0) {
 								for (var13 = var9; var13 <= var10; ++var13) {
-									if ((Tiles.field1050[var11 - 1][var13][var61] & var3) == 0) {
-										break label496;
+									if ((Tiles.field878[var11 - 1][var13][var61] & var3) == 0) {
+										break label408;
 									}
 								}
 
 								--var11;
 							}
 
-							label485:
+							label397:
 							while (var12 < var5) {
 								for (var13 = var9; var13 <= var10; ++var13) {
-									if ((Tiles.field1050[var12 + 1][var13][var61] & var3) == 0) {
-										break label485;
+									if ((Tiles.field878[var12 + 1][var13][var61] & var3) == 0) {
+										break label397;
 									}
 								}
 
@@ -601,41 +601,41 @@ public class class53 extends Node {
 
 								for (var17 = var11; var17 <= var12; ++var17) {
 									for (var18 = var9; var18 <= var10; ++var18) {
-										var10000 = Tiles.field1050[var17][var18];
+										var10000 = Tiles.field878[var17][var18];
 										var10000[var61] &= ~var3;
 									}
 								}
 							}
 						}
 
-						if ((Tiles.field1050[var60][var62][var61] & var4) != 0) {
+						if ((Tiles.field878[var60][var62][var61] & var4) != 0) {
 							var9 = var62;
 							var10 = var62;
 							var11 = var61;
 
-							for (var12 = var61; var11 > 0 && (Tiles.field1050[var60][var62][var11 - 1] & var4) != 0; --var11) {
+							for (var12 = var61; var11 > 0 && (Tiles.field878[var60][var62][var11 - 1] & var4) != 0; --var11) {
 							}
 
-							while (var12 < 104 && (Tiles.field1050[var60][var62][var12 + 1] & var4) != 0) {
+							while (var12 < 104 && (Tiles.field878[var60][var62][var12 + 1] & var4) != 0) {
 								++var12;
 							}
 
-							label549:
+							label461:
 							while (var9 > 0) {
 								for (var13 = var11; var13 <= var12; ++var13) {
-									if ((Tiles.field1050[var60][var9 - 1][var13] & var4) == 0) {
-										break label549;
+									if ((Tiles.field878[var60][var9 - 1][var13] & var4) == 0) {
+										break label461;
 									}
 								}
 
 								--var9;
 							}
 
-							label538:
+							label450:
 							while (var10 < 104) {
 								for (var13 = var11; var13 <= var12; ++var13) {
-									if ((Tiles.field1050[var60][var10 + 1][var13] & var4) == 0) {
-										break label538;
+									if ((Tiles.field878[var60][var10 + 1][var13] & var4) == 0) {
+										break label450;
 									}
 								}
 
@@ -648,7 +648,7 @@ public class class53 extends Node {
 
 								for (var14 = var9; var14 <= var10; ++var14) {
 									for (var15 = var11; var15 <= var12; ++var15) {
-										var10000 = Tiles.field1050[var60][var14];
+										var10000 = Tiles.field878[var60][var14];
 										var10000[var15] &= ~var4;
 									}
 								}
@@ -666,8 +666,8 @@ public class class53 extends Node {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "-846967718"
 	)
-	static final void method1064(String var0) {
-		SecureRandomCallable.method2319("Please remove " + var0 + " from your friend list first");
+	static final void method288(String var0) {
+		SecureRandomCallable.method466("Please remove " + var0 + " from your friend list first");
 	}
 
 	@ObfuscatedName("gn")
@@ -681,6 +681,6 @@ public class class53 extends Node {
 		class521.refreshToken = System.getenv("JX_REFRESH_TOKEN");
 		class357.sessionId = System.getenv("JX_SESSION_ID");
 		Renderable.characterId = System.getenv("JX_CHARACTER_ID");
-		WorldMapDecorationType.method6986(System.getenv("JX_DISPLAY_NAME"));
+		WorldMapDecorationType.method1947(System.getenv("JX_DISPLAY_NAME"));
 	}
 }

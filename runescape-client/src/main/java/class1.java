@@ -11,16 +11,18 @@ public class class1 implements Callable {
 	@ObfuscatedSignature(
 		descriptor = "Luq;"
 	)
-	final Buffer field1;
+	final Buffer field2;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lai;"
 	)
-	final class3 field2;
+	final class3 field1;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Laz;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final class7 this$0;
 
 	@ObfuscatedSignature(
@@ -28,12 +30,12 @@ public class class1 implements Callable {
 	)
 	class1(class7 var1, Buffer var2, class3 var3) {
 		this.this$0 = var1;
-		this.field1 = var2;
-		this.field2 = var3;
+		this.field2 = var2;
+		this.field1 = var3;
 	}
 
 	public Object call() {
-		return this.field2.vmethod14(this.field1);
+		return this.field1.vmethod14(this.field2);
 	}
 
 	@ObfuscatedName("aq")
@@ -51,18 +53,18 @@ public class class1 implements Callable {
 		byte var4 = (byte)(var3 >> 28);
 		int var5 = var3 >> 14 & 16383;
 		int var6 = var3 & 16383;
-		var2.pathX[0] = var5 - Projectile.baseX * 64;
+		var2.pathX[0] = var5 - Projectile.baseX;
 		var2.x = (var2.pathX[0] << 7) + (var2.transformedSize() << 6);
-		var2.pathY[0] = var6 - GameEngine.baseY * 64;
+		var2.pathY[0] = var6 - GameEngine.baseY;
 		var2.y = (var2.pathY[0] << 7) + (var2.transformedSize() << 6);
 		class473.Client_plane = var2.plane = var4;
-		if (Players.field1389[var1] != null) {
-			var2.read(Players.field1389[var1]);
+		if (Players.field1152[var1] != null) {
+			var2.read(Players.field1152[var1]);
 		}
 
 		Players.Players_count = 0;
 		Players.Players_indices[++Players.Players_count - 1] = var1;
-		Players.field1379[var1] = 0;
+		Players.field1140[var1] = 0;
 		Players.Players_emptyIdxCount = 0;
 
 		for (int var7 = 1; var7 < 2048; ++var7) {
@@ -75,7 +77,7 @@ public class class1 implements Callable {
 				Players.Players_orientations[var7] = 0;
 				Players.Players_targetIndices[var7] = -1;
 				Players.Players_emptyIndices[++Players.Players_emptyIdxCount - 1] = var7;
-				Players.field1379[var7] = 0;
+				Players.field1140[var7] = 0;
 			}
 		}
 
@@ -125,8 +127,8 @@ public class class1 implements Callable {
 	)
 	@Export("sortWorldList")
 	static void sortWorldList(int var0, boolean var1, int var2, boolean var3) {
-		if (WorldMapID.World_worlds != null) {
-			WorldMapSectionType.doWorldSorting(0, WorldMapID.World_worlds.length - 1, var0, var1, var2, var3);
+		if (class256.World_worlds != null) {
+			WorldMapSectionType.doWorldSorting(0, class256.World_worlds.length - 1, var0, var1, var2, var3);
 		}
 
 	}

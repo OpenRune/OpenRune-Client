@@ -1,14 +1,15 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("rx")
 public class class467 {
 	@ObfuscatedName("aq")
-	float field4828;
+	float field3963;
 	@ObfuscatedName("aw")
-	float field4830;
+	float field3964;
 	@ObfuscatedName("al")
-	float field4829;
+	float field3962;
 
 	static {
 		new class467(0.0F, 0.0F, 0.0F);
@@ -19,9 +20,9 @@ public class class467 {
 	}
 
 	class467(float var1, float var2, float var3) {
-		this.field4828 = var1;
-		this.field4830 = var2;
-		this.field4829 = var3;
+		this.field3963 = var1;
+		this.field3964 = var2;
+		this.field3962 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -29,11 +30,11 @@ public class class467 {
 		descriptor = "(B)F",
 		garbageValue = "-1"
 	)
-	final float method8586() {
-		return (float)Math.sqrt((double)(this.field4829 * this.field4829 + this.field4828 * this.field4828 + this.field4830 * this.field4830));
+	final float method2367() {
+		return (float)Math.sqrt((double)(this.field3962 * this.field3962 + this.field3963 * this.field3963 + this.field3964 * this.field3964));
 	}
 
 	public String toString() {
-		return this.field4828 + ", " + this.field4830 + ", " + this.field4829;
+		return this.field3963 + ", " + this.field3964 + ", " + this.field3962;
 	}
 }

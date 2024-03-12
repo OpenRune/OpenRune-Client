@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,61 +7,31 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapSection2")
 public class WorldMapSection2 implements WorldMapSection {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1498493131
-	)
 	@Export("minPlane")
 	int minPlane;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 458296287
-	)
 	@Export("planes")
 	int planes;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -716917895
-	)
 	@Export("regionStartX")
 	int regionStartX;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1697814459
-	)
 	@Export("regionStartY")
 	int regionStartY;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -675216363
-	)
 	@Export("regionEndX")
 	int regionEndX;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 734996977
-	)
 	@Export("regionEndY")
 	int regionEndY;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -814306673
-	)
-	int field2514;
+	int field2010;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -1975311153
-	)
-	int field2513;
+	int field2019;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -1436960625
-	)
-	int field2509;
+	int field2013;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 99455885
-	)
-	int field2515;
+	int field2017;
 
 	WorldMapSection2() {
 	}
@@ -74,20 +43,20 @@ public class WorldMapSection2 implements WorldMapSection {
 	)
 	@Export("expandBounds")
 	public void expandBounds(WorldMapArea var1) {
-		if (var1.regionLowX > this.field2514) {
-			var1.regionLowX = this.field2514;
+		if (var1.regionLowX > this.field2010) {
+			var1.regionLowX = this.field2010;
 		}
 
-		if (var1.regionHighX < this.field2509) {
-			var1.regionHighX = this.field2509;
+		if (var1.regionHighX < this.field2013) {
+			var1.regionHighX = this.field2013;
 		}
 
-		if (var1.regionLowY > this.field2513) {
-			var1.regionLowY = this.field2513;
+		if (var1.regionLowY > this.field2019) {
+			var1.regionLowY = this.field2019;
 		}
 
-		if (var1.regionHighY < this.field2515) {
-			var1.regionHighY = this.field2515;
+		if (var1.regionHighY < this.field2017) {
+			var1.regionHighY = this.field2017;
 		}
 
 	}
@@ -113,7 +82,7 @@ public class WorldMapSection2 implements WorldMapSection {
 	)
 	@Export("containsPosition")
 	public boolean containsPosition(int var1, int var2) {
-		return var1 >> 6 >= this.field2514 && var1 >> 6 <= this.field2509 && var2 >> 6 >= this.field2513 && var2 >> 6 <= this.field2515;
+		return var1 >> 6 >= this.field2010 && var1 >> 6 <= this.field2013 && var2 >> 6 >= this.field2019 && var2 >> 6 <= this.field2017;
 	}
 
 	@ObfuscatedName("ai")
@@ -126,7 +95,7 @@ public class WorldMapSection2 implements WorldMapSection {
 		if (!this.containsCoord(var1, var2, var3)) {
 			return null;
 		} else {
-			int[] var4 = new int[]{this.field2514 * 64 - this.regionStartX * 64 + var2, var3 + (this.field2513 * 64 - this.regionStartY * 64)};
+			int[] var4 = new int[]{var2 + (this.field2010 * 64 - this.regionStartX * 64), var3 + (this.field2019 * 64 - this.regionStartY * 64)};
 			return var4;
 		}
 	}
@@ -141,8 +110,8 @@ public class WorldMapSection2 implements WorldMapSection {
 		if (!this.containsPosition(var1, var2)) {
 			return null;
 		} else {
-			int var3 = this.regionStartX * 64 - this.field2514 * 64 + var1;
-			int var4 = this.regionStartY * 64 - this.field2513 * 64 + var2;
+			int var3 = this.regionStartX * 64 - this.field2010 * 64 + var1;
+			int var4 = var2 + (this.regionStartY * 64 - this.field2019 * 64);
 			return new Coord(this.minPlane, var3, var4);
 		}
 	}
@@ -160,10 +129,10 @@ public class WorldMapSection2 implements WorldMapSection {
 		this.regionStartY = var1.readUnsignedShort();
 		this.regionEndX = var1.readUnsignedShort();
 		this.regionEndY = var1.readUnsignedShort();
-		this.field2514 = var1.readUnsignedShort();
-		this.field2513 = var1.readUnsignedShort();
-		this.field2509 = var1.readUnsignedShort();
-		this.field2515 = var1.readUnsignedShort();
+		this.field2010 = var1.readUnsignedShort();
+		this.field2019 = var1.readUnsignedShort();
+		this.field2013 = var1.readUnsignedShort();
+		this.field2017 = var1.readUnsignedShort();
 		this.postRead();
 	}
 
@@ -181,7 +150,7 @@ public class WorldMapSection2 implements WorldMapSection {
 		descriptor = "(Lof;B)V",
 		garbageValue = "0"
 	)
-	public static void method4667(AbstractArchive var0) {
+	public static void method1251(AbstractArchive var0) {
 		VarbitComposition.VarbitDefinition_archive = var0;
 	}
 }

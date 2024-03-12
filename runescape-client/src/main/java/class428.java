@@ -71,7 +71,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("ak")
-	public static void method8056(int[] var0, int var1, int var2, int var3) {
+	public static void method2226(int[] var0, int var1, int var2, int var3) {
 		if (var2 == 0 && var3 == 0) {
 			var2 = (int)(Math.random() * 2.147483647E9D);
 			var3 = (int)(Math.random() * 2.147483647E9D);

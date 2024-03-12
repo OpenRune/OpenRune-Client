@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,15 +7,12 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Friend")
 public class Friend extends Buddy {
 	@ObfuscatedName("kx")
-	@ObfuscatedGetter(
-		intValue = -490399289
-	)
 	@Export("oculusOrbFocalPointX")
 	static int oculusOrbFocalPointX;
 	@ObfuscatedName("aq")
-	boolean field4745;
+	boolean field3890;
 	@ObfuscatedName("aw")
-	boolean field4748;
+	boolean field3891;
 
 	Friend() {
 	}
@@ -36,13 +32,13 @@ public class Friend extends Buddy {
 			return -1;
 		} else if (var1.world != 0 && super.world == 0) {
 			return 1;
-		} else if (this.field4745 && !var1.field4745) {
+		} else if (this.field3890 && !var1.field3890) {
 			return -1;
-		} else if (!this.field4745 && var1.field4745) {
+		} else if (!this.field3890 && var1.field3890) {
 			return 1;
-		} else if (this.field4748 && !var1.field4748) {
+		} else if (this.field3891 && !var1.field3891) {
 			return -1;
-		} else if (!this.field4748 && var1.field4748) {
+		} else if (!this.field3891 && var1.field3891) {
 			return 1;
 		} else {
 			return super.world != 0 ? super.int2 - var1.int2 : var1.int2 - super.int2;
@@ -68,7 +64,7 @@ public class Friend extends Buddy {
 		descriptor = "(B)[Ldh;",
 		garbageValue = "-54"
 	)
-	static class91[] method8300() {
-		return new class91[]{class91.field1132, class91.field1128, class91.field1127, class91.field1123, class91.field1124, class91.field1130};
+	static class91[] method2284() {
+		return new class91[]{class91.field927, class91.field928, class91.field924, class91.field925, class91.field929, class91.field926};
 	}
 }

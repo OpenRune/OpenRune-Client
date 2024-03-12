@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,18 +8,16 @@ final class class520 implements class517 {
 	@Export("Interpreter_intLocals")
 	static int[] Interpreter_intLocals;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 1238683605
-	)
-	static int field5121;
+	static int field4196;
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "(Ljava/lang/Object;Luq;S)V",
 		garbageValue = "25989"
 	)
+	@Export("vmethod9339")
 	public void vmethod9339(Object var1, Buffer var2) {
-		this.method9318((Long)var1, var2);
+		this.method2565((Long)var1, var2);
 	}
 
 	@ObfuscatedName("aw")
@@ -28,6 +25,7 @@ final class class520 implements class517 {
 		descriptor = "(Luq;I)Ljava/lang/Object;",
 		garbageValue = "-1139404213"
 	)
+	@Export("vmethod9338")
 	public Object vmethod9338(Buffer var1) {
 		return var1.readLong();
 	}
@@ -37,7 +35,7 @@ final class class520 implements class517 {
 		descriptor = "(Ljava/lang/Long;Luq;B)V",
 		garbageValue = "96"
 	)
-	void method9318(Long var1, Buffer var2) {
+	void method2565(Long var1, Buffer var2) {
 		var2.writeLong(var1);
 	}
 }

@@ -10,8 +10,7 @@ public class HttpAuthenticationHeader {
 	@ObfuscatedSignature(
 		descriptor = "Lqn;"
 	)
-	@Export("BASIC")
-	static final HttpAuthenticationHeader BASIC;
+	static final HttpAuthenticationHeader field3857;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lqn;"
@@ -23,7 +22,7 @@ public class HttpAuthenticationHeader {
 	final String key;
 
 	static {
-		BASIC = new HttpAuthenticationHeader("Basic");
+		field3857 = new HttpAuthenticationHeader("Basic");
 		BEARER = new HttpAuthenticationHeader("Bearer");
 	}
 

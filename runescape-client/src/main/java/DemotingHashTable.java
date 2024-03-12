@@ -28,7 +28,7 @@ public final class DemotingHashTable {
 	@ObfuscatedSignature(
 		descriptor = "Llw;"
 	)
-	class300 field3155;
+	class300 field2555;
 
 	public DemotingHashTable(int var1, int var2) {
 		this.queue = new IterableDualNodeQueue();
@@ -99,39 +99,35 @@ public final class DemotingHashTable {
 	}
 
 	@ObfuscatedName("ai")
-	public void method5975(Object var1, long var2) {
+	public void method1659(Object var1, long var2) {
 		this.put(var1, var2, 1);
 	}
 
 	@ObfuscatedName("ar")
 	@Export("put")
 	public void put(Object var1, long var2, int var4) {
-		if (var4 > this.capacity) {
-			throw new IllegalStateException();
-		} else {
-			this.remove(var2);
-			this.remaining -= var4;
+		this.remove(var2);
+		this.remaining -= var4;
 
-			while (this.remaining < 0) {
-				Wrapper var5 = (Wrapper)this.queue.removeLast();
-				if (var5 == null) {
-					throw new RuntimeException("");
-				}
-
-				if (!var5.isSoft()) {
-				}
-
-				this.removeWrapper(var5);
-				if (this.field3155 != null) {
-					this.field3155.method5969(var5.get());
-				}
+		while (this.remaining < 0) {
+			Wrapper var5 = (Wrapper)this.queue.removeLast();
+			if (var5 == null) {
+				throw new RuntimeException("");
 			}
 
-			DirectWrapper var6 = new DirectWrapper(var1, var4);
-			this.hashTable.put(var6, var2);
-			this.queue.add(var6);
-			var6.keyDual = 0L;
+			if (!var5.isSoft()) {
+			}
+
+			this.removeWrapper(var5);
+			if (this.field2555 != null) {
+				this.field2555.method1655(var5.get());
+			}
 		}
+
+		DirectWrapper var6 = new DirectWrapper(var1, var4);
+		this.hashTable.put(var6, var2);
+		this.queue.add(var6);
+		var6.keyDual = 0L;
 	}
 
 	@ObfuscatedName("as")

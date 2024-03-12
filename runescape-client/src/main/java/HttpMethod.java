@@ -1,9 +1,7 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("au")
 @Implements("HttpMethod")
@@ -42,19 +40,16 @@ public class HttpMethod implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lrc;"
 	)
-	static Bounds field35;
+	static Bounds field19;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 1320722447
-	)
-	int field30;
+	int field25;
 	@ObfuscatedName("aa")
 	@Export("name")
 	String name;
 	@ObfuscatedName("az")
-	boolean field32;
+	boolean field24;
 	@ObfuscatedName("ao")
-	boolean field25;
+	boolean field23;
 
 	static {
 		POST = new HttpMethod(0, "POST", true, true);
@@ -65,10 +60,10 @@ public class HttpMethod implements Enum {
 	}
 
 	HttpMethod(int var1, String var2, boolean var3, boolean var4) {
-		this.field30 = var1;
+		this.field25 = var1;
 		this.name = var2;
-		this.field32 = var3;
-		this.field25 = var4;
+		this.field24 = var3;
+		this.field23 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -78,7 +73,7 @@ public class HttpMethod implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field30;
+		return this.field25;
 	}
 
 	@ObfuscatedName("ar")
@@ -86,8 +81,8 @@ public class HttpMethod implements Enum {
 		descriptor = "(I)Z",
 		garbageValue = "-236928179"
 	)
-	boolean method63() {
-		return this.field32;
+	boolean method22() {
+		return this.field24;
 	}
 
 	@ObfuscatedName("as")
@@ -105,8 +100,8 @@ public class HttpMethod implements Enum {
 		descriptor = "(B)Z",
 		garbageValue = "93"
 	)
-	boolean method68() {
-		return this.field25;
+	boolean method24() {
+		return this.field23;
 	}
 
 	@ObfuscatedName("ar")
@@ -114,15 +109,15 @@ public class HttpMethod implements Enum {
 		descriptor = "(FFFFLfr;B)V",
 		garbageValue = "34"
 	)
-	static void method67(float var0, float var1, float var2, float var3, class132 var4) {
+	static void method26(float var0, float var1, float var2, float var3, class132 var4) {
 		float var5 = var1 - var0;
 		float var6 = var2 - var1;
 		float var7 = var3 - var2;
 		float var8 = var6 - var5;
-		var4.field1566 = var7 - var6 - var8;
-		var4.field1562 = var8 + var8 + var8;
-		var4.field1564 = var5 + var5 + var5;
-		var4.field1563 = var0;
+		var4.field1284 = var7 - var6 - var8;
+		var4.field1286 = var8 + var8 + var8;
+		var4.field1289 = var5 + var5 + var5;
+		var4.field1288 = var0;
 	}
 
 	@ObfuscatedName("ad")
@@ -130,13 +125,13 @@ public class HttpMethod implements Enum {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-1822218626"
 	)
-	static int method83(int var0, Script var1, boolean var2) {
+	static int method27(int var0, Script var1, boolean var2) {
 		Widget var3 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
-		if (var0 == ScriptOpcodes.CC_GETTARGETMASK) {
+		if (var0 == 1800) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = TextureProvider.Widget_unpackTargetMask(class429.getWidgetFlags(var3));
 			return 1;
-		} else if (var0 != ScriptOpcodes.CC_GETOP) {
-			if (var0 == ScriptOpcodes.CC_GETOPBASE) {
+		} else if (var0 != 1801) {
+			if (var0 == 1802) {
 				if (var3.dataText == null) {
 					Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = "";
 				} else {
@@ -165,13 +160,13 @@ public class HttpMethod implements Enum {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-259088192"
 	)
-	static int method82(int var0, Script var1, boolean var2) {
-		Widget var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-		if (var0 == ScriptOpcodes.IF_GETTARGETMASK) {
+	static int method28(int var0, Script var1, boolean var2) {
+		Widget var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+		if (var0 == 2800) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = TextureProvider.Widget_unpackTargetMask(class429.getWidgetFlags(var3));
 			return 1;
-		} else if (var0 != ScriptOpcodes.IF_GETOP) {
-			if (var0 == ScriptOpcodes.IF_GETOPBASE) {
+		} else if (var0 != 2801) {
+			if (var0 == 2802) {
 				if (var3.dataText == null) {
 					Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = "";
 				} else {
@@ -200,7 +195,7 @@ public class HttpMethod implements Enum {
 		descriptor = "(I)V",
 		garbageValue = "-2111193111"
 	)
-	static final void method80() {
-		FriendLoginUpdate.method8302();
+	static final void method29() {
+		FriendLoginUpdate.method2286();
 	}
 }

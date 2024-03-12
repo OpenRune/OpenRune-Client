@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,28 +11,22 @@ public class class162 {
 	@Export("worldSelectFlagSprites")
 	static IndexedSprite[] worldSelectFlagSprites;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = -906448207537196297L
-	)
-	long field1786;
+	long field1439;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		longValue = 6665924676591181619L
-	)
-	public long field1785;
+	public long field1441;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lpo;"
 	)
-	IterableNodeDeque field1787;
+	IterableNodeDeque field1440;
 
 	@ObfuscatedSignature(
 		descriptor = "(Luq;)V"
 	)
 	public class162(Buffer var1) {
-		this.field1785 = -1L;
-		this.field1787 = new IterableNodeDeque();
-		this.method3441(var1);
+		this.field1441 = -1L;
+		this.field1440 = new IterableNodeDeque();
+		this.method857(var1);
 	}
 
 	@ObfuscatedName("aq")
@@ -41,9 +34,9 @@ public class class162 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "-175058432"
 	)
-	void method3441(Buffer var1) {
-		this.field1786 = var1.readLong();
-		this.field1785 = var1.readLong();
+	void method857(Buffer var1) {
+		this.field1439 = var1.readLong();
+		this.field1441 = var1.readLong();
 
 		for (int var2 = var1.readUnsignedByte(); var2 != 0; var2 = var1.readUnsignedByte()) {
 			Object var3;
@@ -64,7 +57,7 @@ public class class162 {
 			}
 
 			((class161)var3).vmethod3504(var1);
-			this.field1787.addFirst((Node)var3);
+			this.field1440.addFirst((Node)var3);
 		}
 
 	}
@@ -74,13 +67,13 @@ public class class162 {
 		descriptor = "(Lgg;I)V",
 		garbageValue = "2036232616"
 	)
-	public void method3442(ClanChannel var1) {
-		if (var1.key == this.field1786 && var1.field1808 == this.field1785) {
-			for (class161 var2 = (class161)this.field1787.last(); var2 != null; var2 = (class161)this.field1787.previous()) {
+	public void method858(ClanChannel var1) {
+		if (var1.key == this.field1439 && var1.field1453 == this.field1441) {
+			for (class161 var2 = (class161)this.field1440.last(); var2 != null; var2 = (class161)this.field1440.previous()) {
 				var2.vmethod3509(var1);
 			}
 
-			++var1.field1808;
+			++var1.field1453;
 		} else {
 			throw new RuntimeException("");
 		}

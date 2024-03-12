@@ -1,33 +1,26 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("fg")
 public class class148 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = 516388591765987837L
-	)
-	long field1690;
+	long field1369;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -932184463
-	)
-	public int field1686;
+	public int field1371;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lpo;"
 	)
-	IterableNodeDeque field1684;
+	IterableNodeDeque field1370;
 
 	@ObfuscatedSignature(
 		descriptor = "(Luq;)V"
 	)
 	public class148(Buffer var1) {
-		this.field1686 = -1;
-		this.field1684 = new IterableNodeDeque();
-		this.method3250(var1);
+		this.field1371 = -1;
+		this.field1370 = new IterableNodeDeque();
+		this.method786(var1);
 	}
 
 	@ObfuscatedName("aq")
@@ -35,9 +28,9 @@ public class class148 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "1872970638"
 	)
-	void method3250(Buffer var1) {
-		this.field1690 = var1.readLong();
-		this.field1686 = var1.readInt();
+	void method786(Buffer var1) {
+		this.field1369 = var1.readLong();
+		this.field1371 = var1.readInt();
 
 		for (int var2 = var1.readUnsignedByte(); var2 != 0; var2 = var1.readUnsignedByte()) {
 			Object var3;
@@ -78,7 +71,7 @@ public class class148 {
 			}
 
 			((class145)var3).vmethod3512(var1);
-			this.field1684.addFirst((Node)var3);
+			this.field1370.addFirst((Node)var3);
 		}
 
 	}
@@ -88,13 +81,13 @@ public class class148 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "-137780697"
 	)
-	public void method3245(ClanSettings var1) {
-		if (var1.field1744 == this.field1690 && this.field1686 == var1.field1754) {
-			for (class145 var2 = (class145)this.field1684.last(); var2 != null; var2 = (class145)this.field1684.previous()) {
+	public void method787(ClanSettings var1) {
+		if (var1.field1404 == this.field1369 && this.field1371 == var1.field1417) {
+			for (class145 var2 = (class145)this.field1370.last(); var2 != null; var2 = (class145)this.field1370.previous()) {
 				var2.vmethod3513(var1);
 			}
 
-			++var1.field1754;
+			++var1.field1417;
 		} else {
 			throw new RuntimeException("");
 		}
@@ -105,7 +98,7 @@ public class class148 {
 		descriptor = "(III)I",
 		garbageValue = "-1271412777"
 	)
-	public static int method3252(int var0, int var1) {
+	public static int method785(int var0, int var1) {
 		int var2;
 		for (var2 = 1; var1 > 1; var1 >>= 1) {
 			if ((var1 & 1) != 0) {
@@ -127,14 +120,14 @@ public class class148 {
 		descriptor = "([FIFZFZ[FI)I",
 		garbageValue = "-176509577"
 	)
-	public static int method3244(float[] var0, int var1, float var2, boolean var3, float var4, boolean var5, float[] var6) {
+	public static int method783(float[] var0, int var1, float var2, boolean var3, float var4, boolean var5, float[] var6) {
 		float var7 = 0.0F;
 
 		for (int var8 = 0; var8 < var1 + 1; ++var8) {
 			var7 += Math.abs(var0[var8]);
 		}
 
-		float var44 = (Math.abs(var2) + Math.abs(var4)) * (float)(var1 + 1) * class128.field1512;
+		float var44 = (Math.abs(var2) + Math.abs(var4)) * (float)(var1 + 1) * class128.field1237;
 		if (var7 <= var44) {
 			return -1;
 		} else {
@@ -175,7 +168,7 @@ public class class148 {
 				}
 
 				float[] var41 = new float[var1 + 1];
-				int var14 = method3244(var12, var1 - 1, var2, false, var4, false, var41);
+				int var14 = method783(var12, var1 - 1, var2, false, var4, false, var41);
 				if (var14 == -1) {
 					return 0;
 				} else {
@@ -192,7 +185,7 @@ public class class148 {
 						float var16;
 						if (var20 == 0) {
 							var16 = var2;
-							var18 = class361.method6995(var9, var1, var2);
+							var18 = class361.method1950(var9, var1, var2);
 							if (Math.abs(var18) <= var44 && var3) {
 								var6[var10++] = var2;
 							}
@@ -208,7 +201,7 @@ public class class148 {
 							var19 = var41[var20];
 						}
 
-						var17 = class361.method6995(var9, var1, var19);
+						var17 = class361.method1950(var9, var1, var19);
 						if (var15) {
 							var15 = false;
 						} else if (Math.abs(var17) < var44) {
@@ -220,13 +213,13 @@ public class class148 {
 							int var22 = var10++;
 							float var24 = var16;
 							float var25 = var19;
-							float var26 = class361.method6995(var11.field4861, var11.field4860, var16);
+							float var26 = class361.method1950(var11.field3989, var11.field3990, var16);
 							float var23;
-							if (Math.abs(var26) < class128.field1512) {
+							if (Math.abs(var26) < class128.field1237) {
 								var23 = var16;
 							} else {
-								float var27 = class361.method6995(var11.field4861, var11.field4860, var19);
-								if (Math.abs(var27) < class128.field1512) {
+								float var27 = class361.method1950(var11.field3989, var11.field3990, var19);
+								if (Math.abs(var27) < class128.field1237) {
 									var23 = var19;
 								} else {
 									float var28 = 0.0F;
@@ -255,7 +248,7 @@ public class class148 {
 											var35 = var26;
 										}
 
-										float var38 = class128.field1519 * Math.abs(var25) + 0.0F;
+										float var38 = class128.field1238 * Math.abs(var25) + 0.0F;
 										float var39 = 0.5F * (var28 - var25);
 										boolean var40 = Math.abs(var39) > var38 && var27 != 0.0F;
 										if (var40) {
@@ -302,7 +295,7 @@ public class class148 {
 												var25 -= var38;
 											}
 
-											var27 = class361.method6995(var11.field4861, var11.field4860, var25);
+											var27 = class361.method1950(var11.field3989, var11.field3990, var25);
 											if ((double)(var27 * (var35 / Math.abs(var35))) > 0.0D) {
 												var36 = true;
 												var37 = true;
@@ -359,19 +352,19 @@ public class class148 {
 	)
 	@Export("Login_promptCredentials")
 	static void Login_promptCredentials(boolean var0) {
-		if (!class193.client.containsAccessAndRefreshToken() && !class193.client.method1216() && !class193.client.containsSessionAndCharacterId()) {
+		if (!class193.client.containsAccessAndRefreshToken() && !class193.client.method360() && !class193.client.containsSessionAndCharacterId()) {
 			Login.Login_response1 = "";
 			Login.Login_response2 = "Enter your username/email & password.";
 			Login.Login_response3 = "";
-			JagexCache.method4224(2);
+			JagexCache.method1113(2);
 			if (var0) {
 				Login.Login_password = "";
 			}
 
-			LoginPacket.method3203();
-			Message.method1182();
+			LoginPacket.method767();
+			Message.method341();
 		} else {
-			JagexCache.method4224(10);
+			JagexCache.method1113(10);
 		}
 	}
 
@@ -393,22 +386,22 @@ public class class148 {
 		int var5 = var3 - 334;
 		int var6;
 		if (var5 < 0) {
-			var6 = Client.field724;
+			var6 = Client.field663;
 		} else if (var5 >= 100) {
-			var6 = Client.field803;
+			var6 = Client.field664;
 		} else {
-			var6 = (Client.field803 - Client.field724) * var5 / 100 + Client.field724;
+			var6 = (Client.field664 - Client.field663) * var5 / 100 + Client.field663;
 		}
 
 		int var7 = var3 * var6 * 512 / (var2 * 334);
 		int var8;
 		int var9;
 		short var14;
-		if (var7 < Client.field722) {
-			var14 = Client.field722;
+		if (var7 < Client.field669) {
+			var14 = Client.field669;
 			var6 = var14 * var2 * 334 / (var3 * 512);
-			if (var6 > Client.field807) {
-				var6 = Client.field807;
+			if (var6 > Client.field666) {
+				var6 = Client.field666;
 				var8 = var3 * var6 * 512 / (var14 * 334);
 				var9 = (var2 - var8) / 2;
 				if (var4) {
@@ -420,11 +413,11 @@ public class class148 {
 				var0 += var9;
 				var2 -= var9 * 2;
 			}
-		} else if (var7 > Client.field809) {
-			var14 = Client.field809;
+		} else if (var7 > Client.field667) {
+			var14 = Client.field667;
 			var6 = var14 * var2 * 334 / (var3 * 512);
-			if (var6 < Client.field806) {
-				var6 = Client.field806;
+			if (var6 < Client.field668) {
+				var6 = Client.field668;
 				var8 = var14 * var2 * 334 / (var6 * 512);
 				var9 = (var3 - var8) / 2;
 				if (var4) {
@@ -444,9 +437,9 @@ public class class148 {
 
 			for (var9 = 0; var9 < var13.length; ++var9) {
 				int var10 = var9 * 32 + 15 + 128;
-				int var11 = WorldMapCacheName.method5111(var10);
+				int var11 = WorldMapCacheName.method1397(var10);
 				int var12 = Rasterizer3D.Rasterizer3D_sine[var10];
-				var11 = class127.method2998(var11, var3);
+				var11 = class127.method698(var11, var3);
 				var13[var9] = var12 * var11 >> 16;
 			}
 

@@ -50,7 +50,7 @@ public class IterableNodeHashTableIterator implements Iterator {
 	@ObfuscatedSignature(
 		descriptor = "()Lse;"
 	)
-	public Node method9127() {
+	public Node method2526() {
 		this.start();
 		return (Node)this.next();
 	}
@@ -95,11 +95,7 @@ public class IterableNodeHashTableIterator implements Iterator {
 	}
 
 	public void remove() {
-		if (this.last == null) {
-			throw new IllegalStateException();
-		} else {
-			this.last.remove();
-			this.last = null;
-		}
+		this.last.remove();
+		this.last = null;
 	}
 }

@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,5 +9,6 @@ public interface class339 {
 		descriptor = "(B)V",
 		garbageValue = "3"
 	)
+	@Export("vmethod6430")
 	void vmethod6430();
 }

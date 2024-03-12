@@ -9,7 +9,7 @@ public class class383 {
 		descriptor = "(II)I",
 		garbageValue = "1854478125"
 	)
-	public static int method7273(int var0) {
+	public static int method2034(int var0) {
 		return var0 != 0 && var0 != 1 ? -1 : 0;
 	}
 
@@ -94,10 +94,8 @@ public class class383 {
 			return 'O';
 		} else if (var0 == 339) {
 			return 'o';
-		} else if (var0 == 376) {
-			return 'Y';
 		} else {
-			return var0;
+			return var0 == 376 ? 'Y' : var0;
 		}
 	}
 }

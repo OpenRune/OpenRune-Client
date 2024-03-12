@@ -77,9 +77,9 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "(IB)Lhr;",
-		garbageValue = "-123"
+		garbageValue = "-81"
 	)
-	public static FloorUnderlayDefinition method1203(int var0) {
+	public static FloorUnderlayDefinition method347(int var0) {
 		FloorUnderlayDefinition var1 = (FloorUnderlayDefinition)FloorUnderlayDefinition.FloorUnderlayDefinition_cached.get((long)var0);
 		if (var1 != null) {
 			return var1;
@@ -101,7 +101,7 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 		descriptor = "(ILrl;Lom;I)V",
 		garbageValue = "-1206837819"
 	)
-	static void method1204(int var0, ArchiveDisk var1, Archive var2) {
+	static void method349(int var0, ArchiveDisk var1, Archive var2) {
 		byte[] var3 = null;
 		synchronized(ArchiveDiskActionHandler.ArchiveDiskActionHandler_requestQueue) {
 			for (ArchiveDiskAction var5 = (ArchiveDiskAction)ArchiveDiskActionHandler.ArchiveDiskActionHandler_requestQueue.last(); var5 != null; var5 = (ArchiveDiskAction)ArchiveDiskActionHandler.ArchiveDiskActionHandler_requestQueue.previous()) {
@@ -121,7 +121,7 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 	}
 
 	@ObfuscatedName("aw")
-	static final void method1205(long var0) {
+	static final void method346(long var0) {
 		try {
 			Thread.sleep(var0);
 		} catch (InterruptedException var3) {
@@ -134,8 +134,8 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 		descriptor = "(I)V",
 		garbageValue = "-1865309453"
 	)
-	public static void method1192() {
-		class321.field3484.clear();
+	public static void method350() {
+		class321.field2858.clear();
 	}
 
 	@ObfuscatedName("nw")
@@ -143,30 +143,30 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 		descriptor = "(Lng;B)V",
 		garbageValue = "55"
 	)
-	static final void method1202(Widget var0) {
+	static final void method351(Widget var0) {
 		int var1 = var0.contentType;
 		if (var1 == 324) {
-			if (Client.field593 == -1) {
-				Client.field593 = var0.spriteId2;
-				Client.field716 = var0.spriteId;
+			if (Client.field565 == -1) {
+				Client.field565 = var0.spriteId2;
+				Client.field571 = var0.spriteId;
 			}
 
 			if (Client.playerAppearance.gender == 1) {
-				var0.spriteId2 = Client.field593;
+				var0.spriteId2 = Client.field565;
 			} else {
-				var0.spriteId2 = Client.field716;
+				var0.spriteId2 = Client.field571;
 			}
 
 		} else if (var1 == 325) {
-			if (Client.field593 == -1) {
-				Client.field593 = var0.spriteId2;
-				Client.field716 = var0.spriteId;
+			if (Client.field565 == -1) {
+				Client.field565 = var0.spriteId2;
+				Client.field571 = var0.spriteId;
 			}
 
 			if (Client.playerAppearance.gender == 1) {
-				var0.spriteId2 = Client.field716;
+				var0.spriteId2 = Client.field571;
 			} else {
-				var0.spriteId2 = Client.field593;
+				var0.spriteId2 = Client.field565;
 			}
 
 		} else if (var1 == 327) {

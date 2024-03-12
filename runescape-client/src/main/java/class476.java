@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -7,7 +8,7 @@ public abstract class class476 implements class296 {
 	@ObfuscatedSignature(
 		descriptor = "Luh;"
 	)
-	class521 field4875;
+	class521 field4001;
 
 	class476(int var1) {
 	}
@@ -17,6 +18,7 @@ public abstract class class476 implements class296 {
 		descriptor = "(Luq;II)V",
 		garbageValue = "-1596270008"
 	)
+	@Export("vmethod8737")
 	abstract void vmethod8737(Buffer var1, int var2);
 
 	@ObfuscatedName("ai")
@@ -24,19 +26,19 @@ public abstract class class476 implements class296 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "1129594658"
 	)
-	public void method8736(Buffer var1) {
+	public void method2403(Buffer var1) {
 		while (true) {
 			int var2 = var1.readUnsignedByte();
 			if (var2 == 0) {
 				return;
 			}
 
-			class472[] var3 = new class472[]{class472.field4863, class472.field4866, class472.field4862, class472.field4864};
+			class472[] var3 = new class472[]{class472.field3995, class472.field3994, class472.field3992, class472.field3993};
 			class472 var4 = (class472)class356.findEnumerated(var3, var2);
 			if (var4 != null) {
-				switch(var4.field4865) {
+				switch(var4.field3996) {
 				case 0:
-					class370[] var5 = new class370[]{class370.field4322, class370.field4321, class370.field4320, class370.field4326};
+					class370[] var5 = new class370[]{class370.field3568, class370.field3569, class370.field3571, class370.field3570};
 					class356.findEnumerated(var5, var1.readUnsignedByte());
 					break;
 				case 1:
@@ -44,12 +46,8 @@ public abstract class class476 implements class296 {
 					break;
 				case 2:
 					int var6 = var1.readUnsignedByte();
-					this.field4875 = class297.method5966(var6);
-					if (this.field4875 != null) {
-						break;
-					}
-
-					throw new IllegalStateException("Unknown ScriptVarType ID in VarType.decode: " + var6);
+					this.field4001 = class297.method1653(var6);
+					break;
 				default:
 					throw new IllegalStateException("Unrecognised VarTypeEncodingKey - " + var4);
 				}
@@ -64,8 +62,8 @@ public abstract class class476 implements class296 {
 		descriptor = "(I)Z",
 		garbageValue = "-87852554"
 	)
-	boolean method8738() {
-		return this.field4875 != null;
+	boolean method2404() {
+		return this.field4001 != null;
 	}
 
 	@ObfuscatedName("as")
@@ -73,13 +71,13 @@ public abstract class class476 implements class296 {
 		descriptor = "(I)Ljava/lang/Object;",
 		garbageValue = "-2127993541"
 	)
-	Object method8741() {
-		if (this.field4875 == class521.field5125) {
+	Object method2405() {
+		if (this.field4001 == class521.field4199) {
 			return 0;
-		} else if (this.field4875 == class521.field5128) {
+		} else if (this.field4001 == class521.field4200) {
 			return -1L;
 		} else {
-			return this.field4875 == class521.field5126 ? "" : null;
+			return this.field4001 == class521.field4198 ? "" : null;
 		}
 	}
 }

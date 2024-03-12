@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,6 +13,7 @@ public abstract class class498 extends class499 {
 		descriptor = "(I)I",
 		garbageValue = "1316582552"
 	)
+	@Export("vmethod8869")
 	public abstract int vmethod8869();
 
 	@ObfuscatedName("aw")
@@ -19,6 +21,7 @@ public abstract class class498 extends class499 {
 		descriptor = "(I)I",
 		garbageValue = "1514290339"
 	)
+	@Export("vmethod8868")
 	public abstract int vmethod8868();
 
 	@ObfuscatedName("al")
@@ -26,5 +29,6 @@ public abstract class class498 extends class499 {
 		descriptor = "(B)I",
 		garbageValue = "-79"
 	)
+	@Export("vmethod8874")
 	public abstract int vmethod8874();
 }

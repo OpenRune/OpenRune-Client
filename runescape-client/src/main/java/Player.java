@@ -1,9 +1,7 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("dj")
 @Implements("Player")
@@ -24,66 +22,36 @@ public final class Player extends Actor {
 	@Export("appearance")
 	PlayerComposition appearance;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 220135685
-	)
 	@Export("headIconPk")
 	int headIconPk;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1824775655
-	)
 	@Export("headIconPrayer")
 	int headIconPrayer;
 	@ObfuscatedName("as")
 	@Export("actions")
 	String[] actions;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 390481241
-	)
 	@Export("combatLevel")
 	int combatLevel;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -155352863
-	)
 	@Export("skillLevel")
 	int skillLevel;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1450972121
-	)
 	@Export("tileHeight")
 	int tileHeight;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = -1789956059
-	)
 	@Export("animationCycleStart")
 	int animationCycleStart;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -885798137
-	)
 	@Export("animationCycleEnd")
 	int animationCycleEnd;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 1313065405
-	)
-	int field1144;
+	int field942;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -1316361177
-	)
 	@Export("tileHeight2")
 	int tileHeight2;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = 500198341
-	)
-	int field1146;
+	int field940;
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
 		descriptor = "Lkz;"
@@ -91,51 +59,30 @@ public final class Player extends Actor {
 	@Export("model0")
 	Model model0;
 	@ObfuscatedName("ag")
-	@ObfuscatedGetter(
-		intValue = 1869927091
-	)
 	@Export("minX")
 	int minX;
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = 903529191
-	)
 	@Export("minY")
 	int minY;
 	@ObfuscatedName("ad")
-	@ObfuscatedGetter(
-		intValue = -2073638373
-	)
 	@Export("maxX")
 	int maxX;
 	@ObfuscatedName("at")
-	@ObfuscatedGetter(
-		intValue = 642011955
-	)
 	@Export("maxY")
 	int maxY;
 	@ObfuscatedName("ay")
 	@Export("isUnanimated")
 	boolean isUnanimated;
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = -694155901
-	)
 	@Export("team")
 	int team;
 	@ObfuscatedName("ac")
 	@Export("isHidden")
 	boolean isHidden;
 	@ObfuscatedName("ab")
-	@ObfuscatedGetter(
-		intValue = -689360121
-	)
 	@Export("plane")
 	int plane;
 	@ObfuscatedName("av")
-	@ObfuscatedGetter(
-		intValue = -1576791471
-	)
 	@Export("index")
 	int index;
 	@ObfuscatedName("ap")
@@ -157,17 +104,11 @@ public final class Player extends Actor {
 	@Export("isInClanChat")
 	TriBool isInClanChat;
 	@ObfuscatedName("bd")
-	boolean field1147;
+	boolean field935;
 	@ObfuscatedName("bi")
-	@ObfuscatedGetter(
-		intValue = -711103877
-	)
 	@Export("tileX")
 	int tileX;
 	@ObfuscatedName("bq")
-	@ObfuscatedGetter(
-		intValue = -736458179
-	)
 	@Export("tileY")
 	int tileY;
 
@@ -190,7 +131,7 @@ public final class Player extends Actor {
 		this.isFriendTriBool = TriBool.TriBool_unknown;
 		this.isInFriendsChat = TriBool.TriBool_unknown;
 		this.isInClanChat = TriBool.TriBool_unknown;
-		this.field1147 = false;
+		this.field935 = false;
 	}
 
 	@ObfuscatedName("aq")
@@ -249,7 +190,7 @@ public final class Player extends Actor {
 
 		for (var8 = 0; var8 < 5; ++var8) {
 			var9 = var1.readUnsignedByte();
-			if (var9 < 0 || var9 >= class407.field4547[var8].length) {
+			if (var9 < 0 || var9 >= class407.field3753[var8].length) {
 				var9 = 0;
 			}
 
@@ -295,9 +236,9 @@ public final class Player extends Actor {
 		this.username = new Username(var1.readStringCp1252NullTerminated(), FriendLoginUpdate.loginType);
 		this.clearIsFriend();
 		this.clearIsInFriendsChat();
-		this.method2388();
+		this.method500();
 		if (this == VarpDefinition.localPlayer) {
-			RunException.field5364 = this.username.getName();
+			RunException.field4393 = this.username.getName();
 		}
 
 		this.combatLevel = var1.readUnsignedByte();
@@ -372,7 +313,7 @@ public final class Player extends Actor {
 			this.appearance = new PlayerComposition();
 		}
 
-		this.appearance.method6467(var26, var5, var28, var30, var27, var2, var4, var29);
+		this.appearance.method1796(var26, var5, var28, var30, var27, var2, var4, var29);
 	}
 
 	@ObfuscatedName("aw")
@@ -386,7 +327,7 @@ public final class Player extends Actor {
 			return null;
 		} else {
 			SequenceDefinition var1 = super.sequence != -1 && super.sequenceDelay == 0 ? MilliClock.SequenceDefinition_get(super.sequence) : null;
-			SequenceDefinition var2 = super.movementSequence == -1 || this.isUnanimated || super.movementSequence == super.idleSequence && var1 != null ? null : MilliClock.SequenceDefinition_get(super.movementSequence);
+			SequenceDefinition var2 = super.movementSequence != -1 && !this.isUnanimated && (super.movementSequence != super.idleSequence || var1 == null) ? MilliClock.SequenceDefinition_get(super.movementSequence) : null;
 			Model var3 = this.appearance.getModel(var1, super.sequenceFrame, var2, super.movementFrame);
 			if (var3 == null) {
 				return null;
@@ -395,7 +336,7 @@ public final class Player extends Actor {
 				super.defaultHeight = var3.height;
 				int var4 = var3.indicesCount;
 				if (!this.isUnanimated) {
-					var3 = this.method2469(var3);
+					var3 = this.method534(var3);
 				}
 
 				if (!this.isUnanimated && this.model0 != null) {
@@ -405,7 +346,7 @@ public final class Player extends Actor {
 
 					if (Client.cycle >= this.animationCycleStart && Client.cycle < this.animationCycleEnd) {
 						Model var5 = this.model0;
-						var5.offsetBy(this.field1144 * 4096 - super.x, this.tileHeight2 - this.tileHeight, this.field1146 * 4096 - super.y);
+						var5.offsetBy(this.field942 - super.x, this.tileHeight2 - this.tileHeight, this.field940 - super.y);
 						if (super.orientation == 512) {
 							var5.rotateY90Ccw();
 							var5.rotateY90Ccw();
@@ -430,17 +371,17 @@ public final class Player extends Actor {
 							var5.rotateY90Ccw();
 						}
 
-						var5.offsetBy(super.x - this.field1144 * 4096, this.tileHeight - this.tileHeight2, super.y - this.field1146 * 4096);
+						var5.offsetBy(super.x - this.field942, this.tileHeight - this.tileHeight2, super.y - this.field940);
 					}
 				}
 
 				var3.isSingleTile = true;
-				if (super.field1255 != 0 && Client.cycle >= super.field1262 && Client.cycle < super.field1278) {
-					var3.overrideHue = super.field1268;
-					var3.overrideSaturation = super.field1269;
-					var3.overrideLuminance = super.field1276;
-					var3.overrideAmount = super.field1255;
-					var3.field3059 = (short)var4;
+				if (super.field1001 != 0 && Client.cycle >= super.field1047 && Client.cycle < super.field1046) {
+					var3.overrideHue = super.field1002;
+					var3.overrideSaturation = super.field1003;
+					var3.overrideLuminance = super.field1004;
+					var3.overrideAmount = super.field1001;
+					var3.field2480 = (short)var4;
 				} else {
 					var3.overrideAmount = 0;
 				}
@@ -526,7 +467,7 @@ public final class Player extends Actor {
 	@Export("updateIsInClanChat")
 	void updateIsInClanChat() {
 		for (int var1 = 0; var1 < 4; ++var1) {
-			if (Client.currentClanSettings[var1] != null && Client.currentClanSettings[var1].method3390(this.username.getName()) != -1 && var1 != 2) {
+			if (Client.currentClanSettings[var1] != null && Client.currentClanSettings[var1].method816(this.username.getName()) != -1 && var1 != 2) {
 				this.isInClanChat = TriBool.TriBool_true;
 				return;
 			}
@@ -540,7 +481,7 @@ public final class Player extends Actor {
 		descriptor = "(B)V",
 		garbageValue = "-58"
 	)
-	void method2388() {
+	void method500() {
 		this.isInClanChat = TriBool.TriBool_unknown;
 	}
 
@@ -573,31 +514,31 @@ public final class Player extends Actor {
 		descriptor = "(IILip;I)V",
 		garbageValue = "1011163909"
 	)
-	final void method2433(int var1, int var2, class233 var3) {
-		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field2273 == 1) {
+	final void method504(int var1, int var2, class233 var3) {
+		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field1839 == 1) {
 			super.sequence = -1;
 		}
 
-		this.method2470();
+		this.method535();
 		if (var1 >= 0 && var1 < 104 && var2 >= 0 && var2 < 104) {
 			if (super.pathX[0] >= 0 && super.pathX[0] < 104 && super.pathY[0] >= 0 && super.pathY[0] < 104) {
-				if (var3 == class233.field2472) {
+				if (var3 == class233.field1988) {
 					Player var4 = this;
-					class233 var5 = class233.field2472;
+					class233 var5 = class233.field1988;
 					int var6 = super.pathX[0];
 					int var7 = super.pathY[0];
 					int var8 = this.transformedSize();
 					if (var6 >= var8 && var6 < 104 - var8 && var7 >= var8 && var7 < 104 - var8 && var1 >= var8 && var1 < 104 - var8 && var2 >= var8 && var2 < 104 - var8) {
-						int var9 = Client.field827.method4571(var6, var7, this.transformedSize(), ModeWhere.method7374(var1, var2), Client.collisionMaps[this.plane], true, Client.field747, Client.field833);
+						int var9 = Client.field684.method1225(var6, var7, this.transformedSize(), ModeWhere.method2066(var1, var2), Client.collisionMaps[this.plane], true, Client.field617, Client.field618);
 						if (var9 >= 1) {
 							for (int var10 = 0; var10 < var9 - 1; ++var10) {
-								var4.method2435(Client.field747[var10], Client.field833[var10], var5);
+								var4.method506(Client.field617[var10], Client.field618[var10], var5);
 							}
 						}
 					}
 				}
 
-				this.method2435(var1, var2, var3);
+				this.method506(var1, var2, var3);
 			} else {
 				this.resetPath(var1, var2);
 			}
@@ -615,8 +556,8 @@ public final class Player extends Actor {
 	@Export("resetPath")
 	void resetPath(int var1, int var2) {
 		super.pathLength = 0;
-		super.field1280 = 0;
-		super.field1279 = 0;
+		super.field1057 = 0;
+		super.field1059 = 0;
 		super.pathX[0] = var1;
 		super.pathY[0] = var2;
 		int var3 = this.transformedSize();
@@ -629,7 +570,7 @@ public final class Player extends Actor {
 		descriptor = "(IILip;I)V",
 		garbageValue = "-609876944"
 	)
-	final void method2435(int var1, int var2, class233 var3) {
+	final void method506(int var1, int var2, class233 var3) {
 		if (super.pathLength < 9) {
 			++super.pathLength;
 		}
@@ -670,89 +611,89 @@ public final class Player extends Actor {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-1936855348"
 	)
-	static int method2437(int var0, Script var1, boolean var2) {
-		if (var0 == ScriptOpcodes.CLIENTCLOCK) {
+	static int method508(int var0, Script var1, boolean var2) {
+		if (var0 == 3300) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.cycle;
 			return 1;
 		} else {
 			int var3;
 			int var4;
-			if (var0 == ScriptOpcodes.INV_GETOBJ) {
+			if (var0 == 3301) {
 				Interpreter.Interpreter_intStackSize -= 2;
 				var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 				var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class218.method4260(var3, var4);
+				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class218.method1123(var3, var4);
 				return 1;
-			} else if (var0 == ScriptOpcodes.INV_GETNUM) {
+			} else if (var0 == 3302) {
 				Interpreter.Interpreter_intStackSize -= 2;
 				var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 				var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class223.ItemContainer_getCount(var3, var4);
 				return 1;
-			} else if (var0 == ScriptOpcodes.INV_TOTAL) {
+			} else if (var0 == 3303) {
 				Interpreter.Interpreter_intStackSize -= 2;
 				var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 				var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class402.method7575(var3, var4);
+				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class402.method2104(var3, var4);
 				return 1;
-			} else if (var0 == ScriptOpcodes.INV_SIZE) {
+			} else if (var0 == 3304) {
 				var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class91.getInvDefinition(var3).size;
 				return 1;
-			} else if (var0 == ScriptOpcodes.STAT) {
+			} else if (var0 == 3305) {
 				var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.currentLevels[var3];
 				return 1;
-			} else if (var0 == ScriptOpcodes.STAT_BASE) {
+			} else if (var0 == 3306) {
 				var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.levels[var3];
 				return 1;
-			} else if (var0 == ScriptOpcodes.STAT_XP) {
+			} else if (var0 == 3307) {
 				var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.experience[var3];
 				return 1;
 			} else {
 				int var5;
-				if (var0 == ScriptOpcodes.COORD) {
+				if (var0 == 3308) {
 					var3 = class473.Client_plane;
-					var4 = Projectile.baseX * 64 + (VarpDefinition.localPlayer.x >> 7);
-					var5 = GameEngine.baseY * 64 + (VarpDefinition.localPlayer.y >> 7);
+					var4 = (VarpDefinition.localPlayer.x >> 7) + Projectile.baseX;
+					var5 = (VarpDefinition.localPlayer.y >> 7) + GameEngine.baseY;
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = (var4 << 14) + var5 + (var3 << 28);
 					return 1;
-				} else if (var0 == ScriptOpcodes.COORDX) {
+				} else if (var0 == 3309) {
 					var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3 >> 14 & 16383;
 					return 1;
-				} else if (var0 == ScriptOpcodes.COORDZ) {
+				} else if (var0 == 3310) {
 					var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3 >> 28;
 					return 1;
-				} else if (var0 == ScriptOpcodes.COORDY) {
+				} else if (var0 == 3311) {
 					var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3 & 16383;
 					return 1;
-				} else if (var0 == ScriptOpcodes.MAP_MEMBERS) {
+				} else if (var0 == 3312) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.isMembersWorld ? 1 : 0;
 					return 1;
-				} else if (var0 == ScriptOpcodes.INVOTHER_GETOBJ) {
+				} else if (var0 == 3313) {
 					Interpreter.Interpreter_intStackSize -= 2;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize] + 32768;
 					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class218.method4260(var3, var4);
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class218.method1123(var3, var4);
 					return 1;
-				} else if (var0 == ScriptOpcodes.INVOTHER_GETNUM) {
+				} else if (var0 == 3314) {
 					Interpreter.Interpreter_intStackSize -= 2;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize] + 32768;
 					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class223.ItemContainer_getCount(var3, var4);
 					return 1;
-				} else if (var0 == ScriptOpcodes.INVOTHER_TOTAL) {
+				} else if (var0 == 3315) {
 					Interpreter.Interpreter_intStackSize -= 2;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize] + 32768;
 					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class402.method7575(var3, var4);
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class402.method2104(var3, var4);
 					return 1;
-				} else if (var0 == ScriptOpcodes.STAFFMODLEVEL) {
+				} else if (var0 == 3316) {
 					if (Client.staffModLevel >= 2) {
 						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.staffModLevel;
 					} else {
@@ -760,19 +701,19 @@ public final class Player extends Actor {
 					}
 
 					return 1;
-				} else if (var0 == ScriptOpcodes.REBOOTTIMER) {
+				} else if (var0 == 3317) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.rebootTimer;
 					return 1;
-				} else if (var0 == ScriptOpcodes.MAP_WORLD) {
+				} else if (var0 == 3318) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.worldId;
 					return 1;
-				} else if (var0 == ScriptOpcodes.RUNENERGY_VISIBLE) {
+				} else if (var0 == 3321) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.runEnergy / 100;
 					return 1;
-				} else if (var0 == ScriptOpcodes.RUNWEIGHT_VISIBLE) {
+				} else if (var0 == 3322) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.weight;
 					return 1;
-				} else if (var0 == ScriptOpcodes.PLAYERMOD) {
+				} else if (var0 == 3323) {
 					if (Client.playerMod) {
 						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = 1;
 					} else {
@@ -780,10 +721,10 @@ public final class Player extends Actor {
 					}
 
 					return 1;
-				} else if (var0 == ScriptOpcodes.WORLDFLAGS) {
+				} else if (var0 == 3324) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.worldProperties;
 					return 1;
-				} else if (var0 == ScriptOpcodes.MOVECOORD) {
+				} else if (var0 == 3325) {
 					Interpreter.Interpreter_intStackSize -= 4;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
@@ -795,17 +736,17 @@ public final class Player extends Actor {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3;
 					return 1;
 				} else if (var0 == 3326) {
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field557;
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field452;
 					return 1;
 				} else if (var0 == 3327) {
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field697;
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field460;
 					return 1;
 				} else if (var0 == 3331) {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.runEnergy;
 					return 1;
 				} else if (var0 == 3332) {
 					var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field672[var3];
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field591[var3];
 					return 1;
 				} else {
 					return 2;

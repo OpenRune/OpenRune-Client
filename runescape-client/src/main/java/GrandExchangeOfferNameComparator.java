@@ -30,8 +30,8 @@ final class GrandExchangeOfferNameComparator implements Comparator {
 		descriptor = "(Lng;IIIB)V",
 		garbageValue = "1"
 	)
-	static final void method7261(Widget var0, int var1, int var2, int var3) {
-		SpriteMask var4 = var0.method6801(ArchiveLoader.widgetDefinition, false);
+	static final void method2031(Widget var0, int var1, int var2, int var3) {
+		SpriteMask var4 = var0.method1901(ArchiveLoader.widgetDefinition, false);
 		if (var4 != null) {
 			if (Client.minimapState < 3) {
 				Varps.compass.drawRotatedMaskedCenteredAround(var1, var2, var4.width, var4.height, 25, 25, Client.camAngleY, 256, var4.xStarts, var4.xWidths);

@@ -29,7 +29,7 @@ public final class Canvas extends java.awt.Canvas {
 		descriptor = "(B)I",
 		garbageValue = "67"
 	)
-	static int method297() {
+	static int method73() {
 		return ++Messages.Messages_count - 1;
 	}
 
@@ -38,107 +38,107 @@ public final class Canvas extends java.awt.Canvas {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1372269351"
 	)
-	static int method296(int var0, Script var1, boolean var2) {
+	static int method74(int var0, Script var1, boolean var2) {
 		if (var0 < 1000) {
-			return class228.method4468(var0, var1, var2);
+			return class228.method1190(var0, var1, var2);
 		} else if (var0 < 1100) {
-			return class357.method6983(var0, var1, var2);
+			return class357.method1945(var0, var1, var2);
 		} else if (var0 < 1200) {
-			return class103.method2749(var0, var1, var2);
+			return class103.method617(var0, var1, var2);
 		} else if (var0 < 1300) {
-			return class193.method3783(var0, var1, var2);
+			return class193.method975(var0, var1, var2);
 		} else if (var0 < 1400) {
-			return class175.method3549(var0, var1, var2);
+			return class175.method899(var0, var1, var2);
 		} else if (var0 < 1500) {
-			return SecureRandomSSLSocket.method145(var0, var1, var2);
+			return SecureRandomSSLSocket.method41(var0, var1, var2);
 		} else if (var0 < 1600) {
-			return class155.method3310(var0, var1, var2);
+			return class155.method811(var0, var1, var2);
 		} else if (var0 < 1700) {
-			return VarbitComposition.method3832(var0, var1, var2);
+			return VarbitComposition.method993(var0, var1, var2);
 		} else if (var0 < 1800) {
-			return class136.method3143(var0, var1, var2);
+			return class136.method747(var0, var1, var2);
 		} else if (var0 < 1900) {
-			return HttpMethod.method83(var0, var1, var2);
+			return HttpMethod.method27(var0, var1, var2);
 		} else if (var0 < 2000) {
-			return UserComparator4.method2936(var0, var1, var2);
+			return UserComparator4.method672(var0, var1, var2);
 		} else if (var0 < 2100) {
-			return class357.method6983(var0, var1, var2);
+			return class357.method1945(var0, var1, var2);
 		} else if (var0 < 2200) {
-			return class103.method2749(var0, var1, var2);
+			return class103.method617(var0, var1, var2);
 		} else if (var0 < 2300) {
-			return class193.method3783(var0, var1, var2);
+			return class193.method975(var0, var1, var2);
 		} else if (var0 < 2400) {
-			return class175.method3549(var0, var1, var2);
+			return class175.method899(var0, var1, var2);
 		} else if (var0 < 2500) {
-			return SecureRandomSSLSocket.method145(var0, var1, var2);
+			return SecureRandomSSLSocket.method41(var0, var1, var2);
 		} else if (var0 < 2600) {
-			return Occluder.method5636(var0, var1, var2);
+			return Occluder.method1563(var0, var1, var2);
 		} else if (var0 < 2700) {
-			return ArchiveDiskAction.method7035(var0, var1, var2);
+			return ArchiveDiskAction.method1970(var0, var1, var2);
 		} else if (var0 < 2800) {
-			return class11.method106(var0, var1, var2);
+			return class11.method38(var0, var1, var2);
 		} else if (var0 < 2900) {
-			return HttpMethod.method82(var0, var1, var2);
+			return HttpMethod.method28(var0, var1, var2);
 		} else if (var0 < 3000) {
-			return UserComparator4.method2936(var0, var1, var2);
+			return UserComparator4.method672(var0, var1, var2);
 		} else if (var0 < 3200) {
-			return Archive.method7100(var0, var1, var2);
+			return Archive.method1986(var0, var1, var2);
 		} else if (var0 < 3300) {
-			return FloorUnderlayDefinition.method3816(var0, var1, var2);
+			return FloorUnderlayDefinition.method986(var0, var1, var2);
 		} else if (var0 < 3400) {
-			return Player.method2437(var0, var1, var2);
+			return Player.method508(var0, var1, var2);
 		} else if (var0 < 3500) {
-			return class257.method5057(var0, var1, var2);
+			return class257.method1381(var0, var1, var2);
 		} else if (var0 < 3600) {
-			return class366.method7007(var0, var1, var2);
+			return class366.method1953(var0, var1, var2);
 		} else if (var0 < 3700) {
-			return class209.method4124(var0, var1, var2);
+			return class209.method1084(var0, var1, var2);
 		} else if (var0 < 3800) {
-			return CollisionMap.method4470(var0, var1, var2);
+			return CollisionMap.method1203(var0, var1, var2);
 		} else if (var0 < 3900) {
-			return class371.method7019(var0, var1, var2);
+			return class371.method1966(var0, var1, var2);
 		} else if (var0 < 4000) {
-			return HttpRequestTask.method255(var0, var1, var2);
+			return HttpRequestTask.method60(var0, var1, var2);
 		} else if (var0 < 4100) {
-			return WorldMapSprite.method5040(var0, var1, var2);
+			return WorldMapSprite.method1373(var0, var1, var2);
 		} else if (var0 < 4200) {
-			return class161.method3440(var0, var1, var2);
+			return class161.method853(var0, var1, var2);
 		} else if (var0 < 4300) {
-			return class218.method4259(var0, var1, var2);
+			return class218.method1127(var0, var1, var2);
 		} else if (var0 < 5100) {
-			return StructComposition.method3875(var0, var1, var2);
+			return StructComposition.method1007(var0, var1, var2);
 		} else if (var0 < 5400) {
-			return TextureProvider.method5671(var0, var1, var2);
+			return TextureProvider.method1574(var0, var1, var2);
 		} else if (var0 < 5600) {
-			return LoginState.method1207(var0, var1, var2);
+			return LoginState.method353(var0, var1, var2);
 		} else if (var0 < 5700) {
-			return HttpRequest.method98(var0, var1, var2);
+			return HttpRequest.method37(var0, var1, var2);
 		} else if (var0 < 6300) {
-			return class93.method2439(var0, var1, var2);
+			return class93.method514(var0, var1, var2);
 		} else if (var0 < 6600) {
-			return class182.method3658(var0, var1, var2);
+			return class182.method935(var0, var1, var2);
 		} else if (var0 < 6700) {
-			return WorldMapData_0.method4613(var0, var1, var2);
+			return WorldMapData_0.method1234(var0, var1, var2);
 		} else if (var0 < 6800) {
-			return Login.method2199(var0, var1, var2);
+			return Login.method439(var0, var1, var2);
 		} else if (var0 < 6900) {
-			return AABB.method5619(var0, var1, var2);
+			return AABB.method1558(var0, var1, var2);
 		} else if (var0 < 7000) {
-			return BuddyRankComparator.method2976(var0, var1, var2);
+			return BuddyRankComparator.method689(var0, var1, var2);
 		} else if (var0 < 7100) {
-			return WorldMapID.method5043(var0, var1, var2);
+			return class256.method1377(var0, var1, var2);
 		} else if (var0 < 7200) {
-			return class4.method19(var0, var1, var2);
+			return class4.method7(var0, var1, var2);
 		} else if (var0 < 7300) {
-			return FloorOverlayDefinition.method4052(var0, var1, var2);
+			return FloorOverlayDefinition.method1060(var0, var1, var2);
 		} else if (var0 < 7500) {
-			return class11.method100(var0, var1, var2);
+			return class11.method39(var0, var1, var2);
 		} else if (var0 < 7600) {
-			return PcmPlayer.method790(var0, var1, var2);
+			return PcmPlayer.method202(var0, var1, var2);
 		} else if (var0 < 7700) {
-			return Client.method1531(var0, var1, var2);
+			return Client.method377(var0, var1, var2);
 		} else {
-			return var0 < 8100 ? CollisionMap.method4501(var0, var1, var2) : 2;
+			return var0 < 8100 ? CollisionMap.method1204(var0, var1, var2) : 2;
 		}
 	}
 
@@ -147,7 +147,7 @@ public final class Canvas extends java.awt.Canvas {
 		descriptor = "(III)I",
 		garbageValue = "-1833781181"
 	)
-	static final int method295(int var0, int var1) {
+	static final int method75(int var0, int var1) {
 		if (var0 == -1) {
 			return 12345678;
 		} else {
@@ -172,7 +172,7 @@ public final class Canvas extends java.awt.Canvas {
 		class485.logOut();
 		switch(var0) {
 		case 1:
-			JagexCache.method4224(24);
+			JagexCache.method1113(24);
 			SecureUrlRequester.setLoginResponseString("", "You were disconnected from the server.", "");
 			break;
 		case 2:

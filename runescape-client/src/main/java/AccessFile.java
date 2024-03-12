@@ -5,7 +5,6 @@ import java.io.RandomAccessFile;
 import java.io.SyncFailedException;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -16,15 +15,9 @@ public final class AccessFile {
 	@Export("file")
 	RandomAccessFile file;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		longValue = -6077631661832154153L
-	)
 	@Export("maxSize")
 	final long maxSize;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		longValue = 8681587200327058877L
-	)
 	@Export("offset")
 	long offset;
 

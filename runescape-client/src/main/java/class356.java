@@ -8,7 +8,7 @@ public class class356 {
 	@ObfuscatedSignature(
 		descriptor = "Lot;"
 	)
-	static JagNetThread field3897;
+	static JagNetThread field3198;
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(

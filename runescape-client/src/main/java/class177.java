@@ -30,13 +30,13 @@ public class class177 extends DualNode {
 		descriptor = "(II)Lvi;",
 		garbageValue = "-1248794564"
 	)
-	public static PrivateChatMode method3562(int var0) {
-		PrivateChatMode[] var1 = new PrivateChatMode[]{PrivateChatMode.field5341, PrivateChatMode.field5343, PrivateChatMode.field5340};
+	public static PrivateChatMode method904(int var0) {
+		PrivateChatMode[] var1 = new PrivateChatMode[]{PrivateChatMode.field4375, PrivateChatMode.field4374, PrivateChatMode.field4376};
 		PrivateChatMode[] var2 = var1;
 
 		for (int var3 = 0; var3 < var2.length; ++var3) {
 			PrivateChatMode var4 = var2[var3];
-			if (var0 == var4.field5342) {
+			if (var0 == var4.field4377) {
 				return var4;
 			}
 		}

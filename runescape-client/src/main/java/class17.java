@@ -4,6 +4,7 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSessionContext;
 import javax.security.cert.X509Certificate;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -13,11 +14,13 @@ class class17 implements SSLSession {
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	public static AbstractArchive field81;
+	public static AbstractArchive field53;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Laj;"
 	)
+	@Export("this$1")
+	@ObfuscatedName("this$1")
 	final SecureRandomSSLSocket this$1;
 
 	@ObfuscatedSignature(
@@ -27,12 +30,12 @@ class class17 implements SSLSession {
 		this.this$1 = var1;
 	}
 
-	public void removeValue(String var1) {
-		throw new UnsupportedOperationException();
-	}
-
 	public int getApplicationBufferSize() {
 		return 0;
+	}
+
+	public String getCipherSuite() {
+		throw new UnsupportedOperationException();
 	}
 
 	public long getCreationTime() {
@@ -40,6 +43,14 @@ class class17 implements SSLSession {
 	}
 
 	public byte[] getId() {
+		throw new UnsupportedOperationException();
+	}
+
+	public long getLastAccessedTime() {
+		throw new UnsupportedOperationException();
+	}
+
+	public Certificate[] getLocalCertificates() {
 		throw new UnsupportedOperationException();
 	}
 
@@ -51,8 +62,16 @@ class class17 implements SSLSession {
 		throw new UnsupportedOperationException();
 	}
 
+	public X509Certificate[] getPeerCertificateChain() throws SSLPeerUnverifiedException {
+		return null;
+	}
+
 	public Certificate[] getPeerCertificates() throws SSLPeerUnverifiedException {
-		return this.this$1.field55;
+		return this.this$1.field41;
+	}
+
+	public String getPeerHost() {
+		throw new UnsupportedOperationException();
 	}
 
 	public int getPeerPort() {
@@ -71,6 +90,14 @@ class class17 implements SSLSession {
 		throw new UnsupportedOperationException();
 	}
 
+	public Object getValue(String var1) {
+		throw new UnsupportedOperationException();
+	}
+
+	public String[] getValueNames() {
+		throw new UnsupportedOperationException();
+	}
+
 	public void invalidate() {
 		throw new UnsupportedOperationException();
 	}
@@ -83,31 +110,7 @@ class class17 implements SSLSession {
 		throw new UnsupportedOperationException();
 	}
 
-	public X509Certificate[] getPeerCertificateChain() throws SSLPeerUnverifiedException {
-		return null;
-	}
-
-	public Certificate[] getLocalCertificates() {
-		throw new UnsupportedOperationException();
-	}
-
-	public long getLastAccessedTime() {
-		throw new UnsupportedOperationException();
-	}
-
-	public String getPeerHost() {
-		throw new UnsupportedOperationException();
-	}
-
-	public Object getValue(String var1) {
-		throw new UnsupportedOperationException();
-	}
-
-	public String[] getValueNames() {
-		throw new UnsupportedOperationException();
-	}
-
-	public String getCipherSuite() {
+	public void removeValue(String var1) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -116,7 +119,7 @@ class class17 implements SSLSession {
 		descriptor = "(IIIII)I",
 		garbageValue = "-1909408545"
 	)
-	static final int method210(int var0, int var1, int var2, int var3) {
+	static final int method51(int var0, int var1, int var2, int var3) {
 		return var3 * var0 + var2 * var1 >> 16;
 	}
 }

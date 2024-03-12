@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -23,9 +22,6 @@ public class ParamComposition extends DualNode {
 	@Export("type")
 	char type;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 443607463
-	)
 	@Export("defaultInt")
 	public int defaultInt;
 	@ObfuscatedName("ar")

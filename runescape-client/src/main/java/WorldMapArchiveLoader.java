@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,9 +16,6 @@ public class WorldMapArchiveLoader {
 	@Export("archive")
 	AbstractArchive archive;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -1090501963
-	)
 	@Export("percentLoaded")
 	int percentLoaded;
 	@ObfuscatedName("az")
@@ -64,7 +60,7 @@ public class WorldMapArchiveLoader {
 			this.loaded = true;
 		} else {
 			if (this.percentLoaded < 33) {
-				if (!this.archive.tryLoadFileByNames(WorldMapCacheName.field2678.name, this.cacheName)) {
+				if (!this.archive.tryLoadFileByNames(WorldMapCacheName.field2153.name, this.cacheName)) {
 					return this.percentLoaded;
 				}
 
@@ -72,7 +68,7 @@ public class WorldMapArchiveLoader {
 			}
 
 			if (this.percentLoaded == 33) {
-				if (this.archive.isValidFileName(WorldMapCacheName.field2681.name, this.cacheName) && !this.archive.tryLoadFileByNames(WorldMapCacheName.field2681.name, this.cacheName)) {
+				if (this.archive.isValidFileName(WorldMapCacheName.field2150.name, this.cacheName) && !this.archive.tryLoadFileByNames(WorldMapCacheName.field2150.name, this.cacheName)) {
 					return this.percentLoaded;
 				}
 
@@ -80,7 +76,7 @@ public class WorldMapArchiveLoader {
 			}
 
 			if (this.percentLoaded == 66) {
-				if (!this.archive.tryLoadFileByNames(this.cacheName, WorldMapCacheName.field2682.name)) {
+				if (!this.archive.tryLoadFileByNames(this.cacheName, WorldMapCacheName.field2152.name)) {
 					return this.percentLoaded;
 				}
 

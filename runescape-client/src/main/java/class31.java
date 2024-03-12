@@ -6,9 +6,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @ObfuscatedName("ba")
 public class class31 {
 	@ObfuscatedName("aq")
-	public static Applet field164;
+	public static Applet field86;
 	@ObfuscatedName("aw")
-	public static String field160;
+	public static String field87;
 	@ObfuscatedName("vt")
 	@ObfuscatedSignature(
 		descriptor = "Lsg;"
@@ -17,8 +17,8 @@ public class class31 {
 	static PlatformInfo platformInfo;
 
 	static {
-		field164 = null;
-		field160 = "";
+		field86 = null;
+		field87 = "";
 	}
 
 	@ObfuscatedName("aq")
@@ -26,7 +26,7 @@ public class class31 {
 		descriptor = "(I)V",
 		garbageValue = "-511691401"
 	)
-	public static void method430() {
+	public static void method113() {
 		class190.field2100.clear();
 	}
 
@@ -35,7 +35,7 @@ public class class31 {
 		descriptor = "(IIII)I",
 		garbageValue = "-2030677800"
 	)
-	static final int method425(int var0, int var1, int var2) {
+	static final int method114(int var0, int var1, int var2) {
 		if (var2 > 179) {
 			var1 /= 2;
 		}

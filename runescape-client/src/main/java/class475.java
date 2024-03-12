@@ -13,6 +13,7 @@ public class class475 extends class476 {
 		descriptor = "(Luq;II)V",
 		garbageValue = "-1596270008"
 	)
+	@Export("vmethod8737")
 	void vmethod8737(Buffer var1, int var2) {
 	}
 

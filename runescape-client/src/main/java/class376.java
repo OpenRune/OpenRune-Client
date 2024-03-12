@@ -1,4 +1,3 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,19 +7,16 @@ public class class376 extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
 	)
-	static Archive field4387;
+	static Archive field3623;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
 	)
-	Archive field4385;
+	Archive field3626;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1831422623
-	)
-	int field4384;
+	int field3625;
 	@ObfuscatedName("al")
-	byte field4386;
+	byte field3624;
 
 	class376() {
 	}
@@ -30,7 +26,7 @@ public class class376 extends DualNode {
 		descriptor = "(IIZI)Ljava/lang/String;",
 		garbageValue = "634448861"
 	)
-	static String method7101(int var0, int var1, boolean var2) {
+	static String method1987(int var0, int var1, boolean var2) {
 		if (var1 >= 2 && var1 <= 36) {
 			if (var2 && var0 >= 0) {
 				int var3 = 2;

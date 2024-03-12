@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,67 +8,67 @@ public class class109 {
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1391;
+	static final class109 field1163;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1392;
+	static final class109 field1167;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1393;
+	static final class109 field1160;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1394;
+	static final class109 field1157;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1395;
+	static final class109 field1164;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1396;
+	static final class109 field1165;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1397;
+	static final class109 field1154;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1404;
+	static final class109 field1169;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1399;
+	static final class109 field1162;
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1401;
+	static final class109 field1166;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1402;
+	static final class109 field1159;
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1400;
+	static final class109 field1156;
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1403;
+	static final class109 field1158;
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
@@ -80,39 +79,36 @@ public class class109 {
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1405;
+	static final class109 field1168;
 	@ObfuscatedName("an")
 	@ObfuscatedSignature(
 		descriptor = "Lex;"
 	)
-	static final class109 field1406;
+	static final class109 field1161;
 	@ObfuscatedName("ag")
-	@ObfuscatedGetter(
-		intValue = 170127347
-	)
-	int field1407;
+	int field1170;
 
 	static {
-		field1391 = new class109(0);
-		field1392 = new class109(1);
-		field1393 = new class109(2);
-		field1394 = new class109(3);
-		field1395 = new class109(4);
-		field1396 = new class109(5);
-		field1397 = new class109(6);
-		field1404 = new class109(7);
-		field1399 = new class109(8);
-		field1401 = new class109(9);
-		field1402 = new class109(10);
-		field1400 = new class109(11);
-		field1403 = new class109(12);
+		field1163 = new class109(0);
+		field1167 = new class109(1);
+		field1160 = new class109(2);
+		field1157 = new class109(3);
+		field1164 = new class109(4);
+		field1165 = new class109(5);
+		field1154 = new class109(6);
+		field1169 = new class109(7);
+		field1162 = new class109(8);
+		field1166 = new class109(9);
+		field1159 = new class109(10);
+		field1156 = new class109(11);
+		field1158 = new class109(12);
 		field1390 = new class109(13);
-		field1405 = new class109(14);
-		field1406 = new class109(15);
+		field1168 = new class109(14);
+		field1161 = new class109(15);
 	}
 
 	class109(int var1) {
-		this.field1407 = var1;
+		this.field1170 = var1;
 	}
 
 	@ObfuscatedName("ah")
@@ -120,7 +116,7 @@ public class class109 {
 		descriptor = "(B)V",
 		garbageValue = "31"
 	)
-	static void method2796() {
+	static void method631() {
 		Login.Login_username = Login.Login_username.trim();
 		if (Login.Login_username.length() == 0) {
 			SecureUrlRequester.setLoginResponseString("", "Please enter your username/email address.", "");

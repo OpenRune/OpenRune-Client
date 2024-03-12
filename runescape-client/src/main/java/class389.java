@@ -8,28 +8,28 @@ public class class389 {
 	@ObfuscatedSignature(
 		descriptor = "Low;"
 	)
-	static final class389 field4480;
+	static final class389 field3699;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Low;"
 	)
-	static final class389 field4477;
+	static final class389 field3700;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Low;"
 	)
-	static final class389 field4478;
+	static final class389 field3698;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Low;"
 	)
-	static final class389 field4476;
+	static final class389 field3697;
 
 	static {
-		field4480 = new class389();
-		field4477 = new class389();
-		field4478 = new class389();
-		field4476 = new class389();
+		field3699 = new class389();
+		field3700 = new class389();
+		field3698 = new class389();
+		field3697 = new class389();
 	}
 
 	class389() {

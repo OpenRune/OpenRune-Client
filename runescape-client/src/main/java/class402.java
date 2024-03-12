@@ -8,7 +8,7 @@ public final class class402 {
 		descriptor = "(III)I",
 		garbageValue = "2077460460"
 	)
-	static int method7575(int var0, int var1) {
+	static int method2104(int var0, int var1) {
 		ItemContainer var2 = (ItemContainer)ItemContainer.itemContainers.get((long)var0);
 		if (var2 == null) {
 			return 0;

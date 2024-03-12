@@ -46,7 +46,7 @@ public class FontName {
 	@ObfuscatedSignature(
 		descriptor = "Lng;"
 	)
-	static Widget field5062;
+	static Widget field4142;
 	@ObfuscatedName("aa")
 	@Export("name")
 	String name;
@@ -69,7 +69,7 @@ public class FontName {
 		descriptor = "(I)[Ltu;",
 		garbageValue = "1003881005"
 	)
-	public static FontName[] method9110() {
+	public static FontName[] method2520() {
 		return new FontName[]{FontName_bold12, FontName_verdana11, FontName_plain11, FontName_verdana13, FontName_plain12, FontName_verdana15};
 	}
 
@@ -78,7 +78,7 @@ public class FontName {
 		descriptor = "(Lof;B)V",
 		garbageValue = "66"
 	)
-	public static void method9114(AbstractArchive var0) {
+	public static void method2521(AbstractArchive var0) {
 		InvDefinition.InvDefinition_archive = var0;
 	}
 
@@ -89,7 +89,7 @@ public class FontName {
 	)
 	@Export("PlayerType_values")
 	public static PlayerType[] PlayerType_values() {
-		return new PlayerType[]{PlayerType.field4341, PlayerType.field4348, PlayerType.PlayerType_ironman, PlayerType.field4340, PlayerType.field4345, PlayerType.PlayerType_normal, PlayerType.PlayerType_ultimateIronman, PlayerType.field4344, PlayerType.PlayerType_playerModerator, PlayerType.field4336, PlayerType.PlayerType_jagexModerator, PlayerType.field4349, PlayerType.field4347, PlayerType.field4343, PlayerType.field4342, PlayerType.PlayerType_hardcoreIronman, PlayerType.field4346};
+		return new PlayerType[]{PlayerType.field3594, PlayerType.field3593, PlayerType.PlayerType_ironman, PlayerType.field3584, PlayerType.field3580, PlayerType.PlayerType_normal, PlayerType.PlayerType_ultimateIronman, PlayerType.field3583, PlayerType.PlayerType_playerModerator, PlayerType.field3586, PlayerType.PlayerType_jagexModerator, PlayerType.field3578, PlayerType.field3579, PlayerType.field3591, PlayerType.field3587, PlayerType.PlayerType_hardcoreIronman, PlayerType.field3581};
 	}
 
 	@ObfuscatedName("ic")
@@ -97,7 +97,7 @@ public class FontName {
 		descriptor = "(S)V",
 		garbageValue = "-13732"
 	)
-	static void method9111() {
+	static void method2523() {
 		if (VarpDefinition.localPlayer.x >> 7 == Client.destinationX && VarpDefinition.localPlayer.y >> 7 == Client.destinationY) {
 			Client.destinationX = 0;
 		}
@@ -109,7 +109,7 @@ public class FontName {
 		descriptor = "(I)I",
 		garbageValue = "1476352820"
 	)
-	static final int method9113() {
+	static final int method2524() {
 		return Client.menuOptionsCount - 1;
 	}
 }

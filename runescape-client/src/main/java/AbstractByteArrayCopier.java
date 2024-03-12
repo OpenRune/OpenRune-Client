@@ -34,14 +34,14 @@ public abstract class AbstractByteArrayCopier {
 	@Export("playSong")
 	static void playSong(int var0) {
 		if (var0 == -1 && !Client.playingJingle) {
-			class169.method3521(0, 0);
-		} else if (var0 != -1 && !WorldMapRenderer.method4894(var0) && class30.clientPreferences.getMusicVolume() != 0) {
+			class169.method882(0, 0);
+		} else if (var0 != -1 && !WorldMapRenderer.method1318(var0) && class30.clientPreferences.getMusicVolume() != 0) {
 			ArrayList var1 = new ArrayList();
 			var1.add(new MusicSong(Renderable.archive6, var0, 0, class30.clientPreferences.getMusicVolume(), false));
 			if (Client.playingJingle) {
-				class133.method3120(var1, 0, 100, 100, 0);
+				class133.method737(var1, 0, 100, 100, 0);
 			} else {
-				PacketWriter.method2891(var1, 0, 100, 100, 0, false);
+				PacketWriter.method648(var1, 0, 100, 100, 0, false);
 			}
 		}
 
@@ -52,7 +52,7 @@ public abstract class AbstractByteArrayCopier {
 		descriptor = "(I)V",
 		garbageValue = "-1743387110"
 	)
-	static final void method6954() {
+	static final void method1932() {
 		int var0 = Players.Players_count;
 		int[] var1 = Players.Players_indices;
 

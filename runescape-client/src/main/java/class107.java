@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -7,6 +8,8 @@ final class class107 implements class339 {
 	@ObfuscatedSignature(
 		descriptor = "Lng;"
 	)
+	@Export("val$cc")
+	@ObfuscatedName("val$cc")
 	final Widget val$cc;
 
 	@ObfuscatedSignature(
@@ -21,12 +24,13 @@ final class class107 implements class339 {
 		descriptor = "(B)V",
 		garbageValue = "3"
 	)
+	@Export("vmethod6430")
 	public void vmethod6430() {
-		if (this.val$cc != null && this.val$cc.method6841().field3658 != null) {
+		if (this.val$cc != null && this.val$cc.method1926().field2991 != null) {
 			ScriptEvent var1 = new ScriptEvent();
-			var1.method2355(this.val$cc);
-			var1.setArgs(this.val$cc.method6841().field3658);
-			DirectByteArrayCopier.method6959().addFirst(var1);
+			var1.method479(this.val$cc);
+			var1.setArgs(this.val$cc.method1926().field2991);
+			DirectByteArrayCopier.method1938().addFirst(var1);
 		}
 
 	}
@@ -36,7 +40,7 @@ final class class107 implements class339 {
 		descriptor = "(B)Z",
 		garbageValue = "85"
 	)
-	public static boolean method2782() {
+	public static boolean method628() {
 		ReflectionCheck var0 = (ReflectionCheck)class36.reflectionChecks.last();
 		return var0 != null;
 	}

@@ -2,7 +2,6 @@ import java.io.EOFException;
 import java.io.IOException;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -19,54 +18,30 @@ public class BufferedFile {
 	@Export("readBuffer")
 	byte[] readBuffer;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		longValue = -7401845383885582861L
-	)
 	@Export("readBufferOffset")
 	long readBufferOffset;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -295801469
-	)
 	@Export("readBufferLength")
 	int readBufferLength;
 	@ObfuscatedName("as")
 	@Export("writeBuffer")
 	byte[] writeBuffer;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		longValue = -697073314669318731L
-	)
 	@Export("writeBufferOffset")
 	long writeBufferOffset;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -772261409
-	)
 	@Export("writeBufferLength")
 	int writeBufferLength;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		longValue = 1768223492564779353L
-	)
 	@Export("offset")
 	long offset;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		longValue = -268033493958014907L
-	)
 	@Export("fileLength")
 	long fileLength;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		longValue = 717309608724462431L
-	)
 	@Export("length")
 	long length;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		longValue = 6593700787690911001L
-	)
 	@Export("fileOffset")
 	long fileOffset;
 
@@ -353,7 +328,7 @@ public class BufferedFile {
 			}
 
 			this.accessFile.write(this.writeBuffer, 0, this.writeBufferLength);
-			this.fileOffset += -772261409L * (long)(this.writeBufferLength * 397066783);
+			this.fileOffset += (long)this.writeBufferLength;
 			if (this.fileOffset > this.fileLength) {
 				this.fileLength = this.fileOffset;
 			}

@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,21 +13,12 @@ public class Decimator {
 	@Export("ItemDefinition_fontPlain11")
 	public static Font ItemDefinition_fontPlain11;
 	@ObfuscatedName("np")
-	@ObfuscatedGetter(
-		intValue = 1949191081
-	)
 	@Export("menuY")
 	static int menuY;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1558579081
-	)
 	@Export("inputRate")
 	int inputRate;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 793602059
-	)
 	@Export("outputRate")
 	int outputRate;
 	@ObfuscatedName("as")
@@ -37,7 +27,7 @@ public class Decimator {
 
 	public Decimator(int var1, int var2) {
 		if (var2 != var1) {
-			int var3 = UserList.method8427(var1, var2);
+			int var3 = UserList.method2305(var1, var2);
 			var1 /= var3;
 			var2 /= var3;
 			this.inputRate = var1;
@@ -151,7 +141,7 @@ public class Decimator {
 		descriptor = "(II)Z",
 		garbageValue = "-717284719"
 	)
-	public static boolean method1103(int var0) {
+	public static boolean method300(int var0) {
 		return (var0 >> 20 & 1) != 0;
 	}
 
@@ -160,8 +150,8 @@ public class Decimator {
 		descriptor = "(IIII)I",
 		garbageValue = "747088777"
 	)
-	public static int method1107(int var0, int var1, int var2) {
-		int var3 = class315.method6060(var2 - var1 + 1);
+	public static int method302(int var0, int var1, int var2) {
+		int var3 = class315.method1685(var2 - var1 + 1);
 		var3 <<= var1;
 		return var0 & ~var3;
 	}
@@ -171,10 +161,10 @@ public class Decimator {
 		descriptor = "(III)I",
 		garbageValue = "-76245267"
 	)
-	static final int method1104(int var0, int var1) {
-		int var2 = class210.method4166(var0 - 1, var1 - 1) + class210.method4166(var0 + 1, var1 - 1) + class210.method4166(var0 - 1, 1 + var1) + class210.method4166(var0 + 1, 1 + var1);
-		int var3 = class210.method4166(var0 - 1, var1) + class210.method4166(var0 + 1, var1) + class210.method4166(var0, var1 - 1) + class210.method4166(var0, 1 + var1);
-		int var4 = class210.method4166(var0, var1);
+	static final int method305(int var0, int var1) {
+		int var2 = class210.method1103(var0 - 1, var1 - 1) + class210.method1103(var0 + 1, var1 - 1) + class210.method1103(var0 - 1, 1 + var1) + class210.method1103(var0 + 1, 1 + var1);
+		int var3 = class210.method1103(var0 - 1, var1) + class210.method1103(var0 + 1, var1) + class210.method1103(var0, var1 - 1) + class210.method1103(var0, 1 + var1);
+		int var4 = class210.method1103(var0, var1);
 		return var2 / 16 + var3 / 8 + var4 / 4;
 	}
 
@@ -183,7 +173,7 @@ public class Decimator {
 		descriptor = "(IB)V",
 		garbageValue = "0"
 	)
-	static final void method1096(int var0) {
+	static final void method306(int var0) {
 		int[] var1 = KeyHandler.sceneMinimapSprite.pixels;
 		int var2 = var1.length;
 
@@ -235,7 +225,7 @@ public class Decimator {
 				if (var7 != 0L) {
 					int var9 = Message.Entity_unpackID(var7);
 					int var10 = class127.getObjectDefinition(var9).mapIconId;
-					if (var10 >= 0 && class139.WorldMapElement_get(var10).field1876) {
+					if (var10 >= 0 && class139.WorldMapElement_get(var10).field1499) {
 						Client.mapIcons[Client.mapIconCount] = class139.WorldMapElement_get(var10).getSpriteBool(false);
 						Client.mapIconXs[Client.mapIconCount] = var5;
 						Client.mapIconYs[Client.mapIconCount] = var6;

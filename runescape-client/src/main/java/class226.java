@@ -9,16 +9,16 @@ public class class226 implements class29 {
 	@ObfuscatedSignature(
 		descriptor = "Lng;"
 	)
-	Widget field2414;
+	Widget field1942;
 	@ObfuscatedName("aw")
-	boolean field2412;
+	boolean field1941;
 	@ObfuscatedName("al")
-	boolean field2411;
+	boolean field1940;
 
 	public class226() {
-		this.field2414 = null;
-		this.field2412 = false;
-		this.field2411 = false;
+		this.field1942 = null;
+		this.field1941 = false;
+		this.field1940 = false;
 	}
 
 	@ObfuscatedName("aq")
@@ -26,30 +26,31 @@ public class class226 implements class29 {
 		descriptor = "(II)Z",
 		garbageValue = "2108130536"
 	)
+	@Export("vmethod4425")
 	public boolean vmethod4425(int var1) {
-		if (this.field2414 == null) {
+		if (this.field1942 == null) {
 			return false;
 		} else {
-			class27 var2 = this.field2414.method6825();
+			class27 var2 = this.field1942.method1925();
 			if (var2 == null) {
 				return false;
 			} else {
-				if (var2.method387(var1)) {
+				if (var2.method98(var1)) {
 					switch(var1) {
 					case 81:
-						this.field2411 = true;
+						this.field1940 = true;
 						break;
 					case 82:
-						this.field2412 = true;
+						this.field1941 = true;
 						break;
 					default:
-						if (this.method4398(var1)) {
-							UserComparator5.invalidateWidget(this.field2414);
+						if (this.method1174(var1)) {
+							UserComparator5.invalidateWidget(this.field1942);
 						}
 					}
 				}
 
-				return var2.method363(var1);
+				return var2.method96(var1);
 			}
 		}
 	}
@@ -62,10 +63,10 @@ public class class226 implements class29 {
 	public boolean vmethod4442(int var1) {
 		switch(var1) {
 		case 81:
-			this.field2411 = false;
+			this.field1940 = false;
 			return false;
 		case 82:
-			this.field2412 = false;
+			this.field1941 = false;
 			return false;
 		default:
 			return false;
@@ -77,23 +78,24 @@ public class class226 implements class29 {
 		descriptor = "(CB)Z",
 		garbageValue = "-71"
 	)
+	@Export("vmethod4427")
 	public boolean vmethod4427(char var1) {
-		if (this.field2414 == null) {
+		if (this.field1942 == null) {
 			return false;
-		} else if (!class344.method6465(var1)) {
+		} else if (!class344.method1794(var1)) {
 			return false;
 		} else {
-			class347 var2 = this.field2414.method6806();
-			if (var2 != null && var2.method6562()) {
-				class27 var3 = this.field2414.method6825();
+			class347 var2 = this.field1942.method1923();
+			if (var2 != null && var2.method1865()) {
+				class27 var3 = this.field1942.method1925();
 				if (var3 == null) {
 					return false;
 				} else {
-					if (var3.method380(var1) && var2.method6524(var1)) {
-						UserComparator5.invalidateWidget(this.field2414);
+					if (var3.method99(var1) && var2.method1826(var1)) {
+						UserComparator5.invalidateWidget(this.field1942);
 					}
 
-					return var3.method358(var1);
+					return var3.method97(var1);
 				}
 			} else {
 				return false;
@@ -106,6 +108,7 @@ public class class226 implements class29 {
 		descriptor = "(ZI)Z",
 		garbageValue = "289932078"
 	)
+	@Export("vmethod4467")
 	public boolean vmethod4467(boolean var1) {
 		return false;
 	}
@@ -115,26 +118,26 @@ public class class226 implements class29 {
 		descriptor = "(Lng;B)V",
 		garbageValue = "-104"
 	)
-	public void method4402(Widget var1) {
+	public void method1166(Widget var1) {
 		if (var1 != null) {
-			if (var1 != this.field2414) {
-				this.method4394();
-				this.field2414 = var1;
+			if (var1 != this.field1942) {
+				this.method1168();
+				this.field1942 = var1;
 			}
 
-			class345 var2 = var1.method6841();
+			class345 var2 = var1.method1926();
 			if (var2 != null) {
-				if (!var2.field3656.method6557() && var2.field3659 != null) {
+				if (!var2.field2994.method1860() && var2.field2992 != null) {
 					ScriptEvent var3 = new ScriptEvent();
-					var3.method2355(var1);
-					var3.setArgs(var2.field3659);
-					DirectByteArrayCopier.method6959().addFirst(var3);
+					var3.method479(var1);
+					var3.setArgs(var2.field2992);
+					DirectByteArrayCopier.method1938().addFirst(var3);
 				}
 
-				var2.field3656.method6722(true);
+				var2.field2994.method1809(true);
 			}
 		} else {
-			this.method4394();
+			this.method1168();
 		}
 
 	}
@@ -144,8 +147,8 @@ public class class226 implements class29 {
 		descriptor = "(B)Lng;",
 		garbageValue = "10"
 	)
-	public Widget method4393() {
-		return this.field2414;
+	public Widget method1167() {
+		return this.field1942;
 	}
 
 	@ObfuscatedName("ad")
@@ -153,20 +156,20 @@ public class class226 implements class29 {
 		descriptor = "(B)V",
 		garbageValue = "27"
 	)
-	public void method4394() {
-		if (this.field2414 != null) {
-			class345 var1 = this.field2414.method6841();
-			Widget var2 = this.field2414;
-			this.field2414 = null;
+	public void method1168() {
+		if (this.field1942 != null) {
+			class345 var1 = this.field1942.method1926();
+			Widget var2 = this.field1942;
+			this.field1942 = null;
 			if (var1 != null) {
-				if (var1.field3656.method6557() && var1.field3659 != null) {
+				if (var1.field2994.method1860() && var1.field2992 != null) {
 					ScriptEvent var3 = new ScriptEvent();
-					var3.method2355(var2);
-					var3.setArgs(var1.field3659);
-					DirectByteArrayCopier.method6959().addFirst(var3);
+					var3.method479(var2);
+					var3.setArgs(var1.field2992);
+					DirectByteArrayCopier.method1938().addFirst(var3);
 				}
 
-				var1.field3656.method6722(false);
+				var1.field2994.method1809(false);
 			}
 		}
 	}
@@ -176,136 +179,136 @@ public class class226 implements class29 {
 		descriptor = "(IB)Z",
 		garbageValue = "91"
 	)
-	boolean method4398(int var1) {
-		if (this.field2414 == null) {
+	boolean method1174(int var1) {
+		if (this.field1942 == null) {
 			return false;
 		} else {
-			class347 var2 = this.field2414.method6806();
-			if (var2 != null && var2.method6562()) {
+			class347 var2 = this.field1942.method1923();
+			if (var2 != null && var2.method1865()) {
 				Clipboard var5;
 				switch(var1) {
 				case 13:
-					this.method4394();
+					this.method1168();
 					return true;
 				case 48:
-					if (this.field2412) {
-						var2.method6514();
+					if (this.field1941) {
+						var2.method1832();
 					}
 
 					return true;
 				case 65:
-					if (this.field2412) {
-						var5 = class193.client.method460();
-						var2.method6747(var5);
+					if (this.field1941) {
+						var5 = class193.client.method129();
+						var2.method1851(var5);
 					}
 
 					return true;
 				case 66:
-					if (this.field2412) {
-						var5 = class193.client.method460();
-						var2.method6547(var5);
+					if (this.field1941) {
+						var5 = class193.client.method129();
+						var2.method1850(var5);
 					}
 
 					return true;
 				case 67:
-					if (this.field2412) {
-						var5 = class193.client.method460();
-						var2.method6599(var5);
+					if (this.field1941) {
+						var5 = class193.client.method129();
+						var2.method1852(var5);
 					}
 
 					return true;
 				case 84:
-					if (var2.method6568() == 0) {
-						var2.method6524(10);
-					} else if (this.field2411 && var2.method6572()) {
-						var2.method6524(10);
+					if (var2.method1871() == 0) {
+						var2.method1826(10);
+					} else if (this.field1940 && var2.method1875()) {
+						var2.method1826(10);
 					} else {
-						class345 var3 = this.field2414.method6841();
+						class345 var3 = this.field1942.method1926();
 						ScriptEvent var4 = new ScriptEvent();
-						var4.method2355(this.field2414);
-						var4.setArgs(var3.field3660);
-						DirectByteArrayCopier.method6959().addFirst(var4);
-						this.method4394();
+						var4.method479(this.field1942);
+						var4.setArgs(var3.field2990);
+						DirectByteArrayCopier.method1938().addFirst(var4);
+						this.method1168();
 					}
 
 					return true;
 				case 85:
-					if (this.field2412) {
-						var2.method6783();
+					if (this.field1941) {
+						var2.method1829();
 					} else {
-						var2.method6525();
+						var2.method1827();
 					}
 
 					return true;
 				case 96:
-					if (this.field2412) {
-						var2.method6537(this.field2411);
+					if (this.field1941) {
+						var2.method1840(this.field1940);
 					} else {
-						var2.method6535(this.field2411);
+						var2.method1838(this.field1940);
 					}
 
 					return true;
 				case 97:
-					if (this.field2412) {
-						var2.method6538(this.field2411);
+					if (this.field1941) {
+						var2.method1841(this.field1940);
 					} else {
-						var2.method6737(this.field2411);
+						var2.method1839(this.field1940);
 					}
 
 					return true;
 				case 98:
-					if (this.field2412) {
-						var2.method6550();
+					if (this.field1941) {
+						var2.method1853();
 					} else {
-						var2.method6539(this.field2411);
+						var2.method1842(this.field1940);
 					}
 
 					return true;
 				case 99:
-					if (this.field2412) {
-						var2.method6653();
+					if (this.field1941) {
+						var2.method1854();
 					} else {
-						var2.method6710(this.field2411);
+						var2.method1843(this.field1940);
 					}
 
 					return true;
 				case 101:
-					if (this.field2412) {
-						var2.method6528();
+					if (this.field1941) {
+						var2.method1830();
 					} else {
-						var2.method6526();
+						var2.method1828();
 					}
 
 					return true;
 				case 102:
-					if (this.field2412) {
-						var2.method6533(this.field2411);
+					if (this.field1941) {
+						var2.method1836(this.field1940);
 					} else {
-						var2.method6531(this.field2411);
+						var2.method1834(this.field1940);
 					}
 
 					return true;
 				case 103:
-					if (this.field2412) {
-						var2.method6766(this.field2411);
+					if (this.field1941) {
+						var2.method1837(this.field1940);
 					} else {
-						var2.method6532(this.field2411);
+						var2.method1835(this.field1940);
 					}
 
 					return true;
 				case 104:
-					if (this.field2412) {
-						var2.method6543(this.field2411);
+					if (this.field1941) {
+						var2.method1846(this.field1940);
 					} else {
-						var2.method6505(this.field2411);
+						var2.method1844(this.field1940);
 					}
 
 					return true;
 				case 105:
-					if (this.field2412) {
-						var2.method6544(this.field2411);
+					if (this.field1941) {
+						var2.method1847(this.field1940);
 					} else {
-						var2.method6542(this.field2411);
+						var2.method1845(this.field1940);
 					}
 
 					return true;
@@ -414,7 +417,7 @@ public class class226 implements class29 {
 		descriptor = "(Ljava/lang/String;B)I",
 		garbageValue = "-13"
 	)
-	static int method4395(String var0) {
+	static int method1175(String var0) {
 		if (var0.equals("centre")) {
 			return 1;
 		} else {

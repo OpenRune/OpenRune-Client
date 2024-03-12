@@ -43,7 +43,7 @@ public class UserComparator5 extends AbstractUserComparator {
 	)
 	@Export("getNextWorldListWorld")
 	static World getNextWorldListWorld() {
-		return World.World_listCount < World.World_count ? WorldMapID.World_worlds[++World.World_listCount - 1] : null;
+		return World.World_listCount < World.World_count ? class256.World_worlds[++World.World_listCount - 1] : null;
 	}
 
 	@ObfuscatedName("mx")
@@ -53,7 +53,7 @@ public class UserComparator5 extends AbstractUserComparator {
 	)
 	@Export("invalidateWidget")
 	public static void invalidateWidget(Widget var0) {
-		if (var0 != null && var0.cycle == Client.field832) {
+		if (var0 != null && var0.cycle == Client.field555) {
 			Client.validRootWidgets[var0.rootIndex] = true;
 		}
 

@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -10,50 +9,26 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("ByteArrayPool")
 public class ByteArrayPool {
 	@ObfuscatedName("ar")
-	static final Object field4643;
+	static final Object field3844;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 95075025
-	)
 	@Export("ByteArrayPool_smallCount")
 	static int ByteArrayPool_smallCount;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -1733840085
-	)
 	@Export("ByteArrayPool_mediumCount")
 	static int ByteArrayPool_mediumCount;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 238849037
-	)
 	@Export("ByteArrayPool_largeCount")
 	static int ByteArrayPool_largeCount;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1707937517
-	)
-	static int field4650;
+	static int field3840;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1718537455
-	)
-	static int field4651;
+	static int field3842;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = 780171219
-	)
-	static int field4652;
+	static int field3839;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 1424963267
-	)
-	static int field4653;
+	static int field3837;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -446408405
-	)
-	static int field4654;
+	static int field3838;
 	@ObfuscatedName("af")
 	@Export("ByteArrayPool_small")
 	static byte[][] ByteArrayPool_small;
@@ -64,12 +39,12 @@ public class ByteArrayPool {
 	@Export("ByteArrayPool_large")
 	static byte[][] ByteArrayPool_large;
 	@ObfuscatedName("ag")
-	static byte[][] field4658;
+	static byte[][] field3832;
 	@ObfuscatedName("am")
 	@Export("ByteArrayPool_alternativeSizes")
 	public static int[] ByteArrayPool_alternativeSizes;
 	@ObfuscatedName("ay")
-	public static ArrayList field4646;
+	public static ArrayList field3830;
 	@ObfuscatedName("dm")
 	@ObfuscatedSignature(
 		descriptor = "Ldq;"
@@ -78,21 +53,21 @@ public class ByteArrayPool {
 	static MouseRecorder mouseRecorder;
 
 	static {
-		field4643 = new Object();
+		field3844 = new Object();
 		ByteArrayPool_smallCount = 0;
 		ByteArrayPool_mediumCount = 0;
 		ByteArrayPool_largeCount = 0;
-		field4650 = 0;
-		field4651 = 1000;
-		field4652 = 250;
-		field4653 = 100;
-		field4654 = 50;
+		field3840 = 0;
+		field3842 = 1000;
+		field3839 = 250;
+		field3837 = 100;
+		field3838 = 50;
 		ByteArrayPool_small = new byte[1000][];
 		ByteArrayPool_medium = new byte[250][];
 		ByteArrayPool_large = new byte[100][];
-		field4658 = new byte[50][];
-		field4646 = new ArrayList();
-		Message.method1184();
+		field3832 = new byte[50][];
+		field3830 = new ArrayList();
+		Message.method334();
 		new HashMap();
 	}
 }

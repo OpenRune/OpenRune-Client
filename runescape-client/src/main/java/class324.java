@@ -1,27 +1,25 @@
 import java.util.concurrent.ThreadFactory;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("mk")
 class class324 implements ThreadFactory {
 	@ObfuscatedName("af")
-	static int[] field3538;
+	static int[] field2901;
 	@ObfuscatedName("hz")
 	@ObfuscatedSignature(
 		descriptor = "Lrr;"
 	)
-	static AbstractSocket field3539;
+	static AbstractSocket field2902;
 	@ObfuscatedName("ix")
-	@ObfuscatedGetter(
-		intValue = -741637037
-	)
-	static int field3537;
+	static int field2900;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lmo;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final MidiPcmStream this$0;
 
 	@ObfuscatedSignature(
@@ -45,7 +43,7 @@ class class324 implements ThreadFactory {
 		int var2 = var0.readUnsignedByte();
 		int var3;
 		if (var1 == null) {
-			var3 = class318.method6083(var2);
+			var3 = class318.method1693(var2);
 			var1 = new IterableNodeHashTable(var3);
 		}
 

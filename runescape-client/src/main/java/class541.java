@@ -1,3 +1,4 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,5 +9,6 @@ public interface class541 {
 		descriptor = "(II)Ljava/lang/Object;",
 		garbageValue = "-276041869"
 	)
+	@Export("vmethod9769")
 	Object vmethod9769(int var1);
 }

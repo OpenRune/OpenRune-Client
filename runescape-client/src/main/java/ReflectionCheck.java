@@ -2,7 +2,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -10,15 +9,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("ReflectionCheck")
 public class ReflectionCheck extends Node {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 808189433
-	)
 	@Export("id")
 	int id;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1434409415
-	)
 	@Export("size")
 	int size;
 	@ObfuscatedName("al")
@@ -63,9 +56,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPLOC5, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortAddLE(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeShort(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAddLE(GameEngine.baseY + var1);
+			var9.packetBuffer.writeShort(var0 + Projectile.baseX);
+			var9.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 			var9.packetBuffer.writeShortAddLE(var3);
 			Client.packetWriter.addNode(var9);
 		}
@@ -75,12 +68,12 @@ public class ReflectionCheck extends Node {
 		if (var2 == 58) {
 			var14 = ArchiveLoader.widgetDefinition.getWidgetChild(var1, var0);
 			if (var14 != null) {
-				if (var14.field3833 != null) {
+				if (var14.field3162 != null) {
 					ScriptEvent var10 = new ScriptEvent();
 					var10.widget = var14;
 					var10.opIndex = var3;
 					var10.targetName = var6;
-					var10.args = var14.field3833;
+					var10.args = var14.field3162;
 					class177.runScriptEvent(var10);
 				}
 
@@ -103,10 +96,10 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJ5, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeByteNeg(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShort(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeByteNeg(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShort(GameEngine.baseY + var1);
 			var9.packetBuffer.writeShortLE(var3);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -118,10 +111,10 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJ3, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortLE(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeShortLE(GameEngine.baseY + var1);
 			var9.packetBuffer.writeShort(var3);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
+			var9.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -156,9 +149,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPLOC1, Client.packetWriter.isaacCipher);
 			var9.packetBuffer.writeShort(var3);
-			var9.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShortLE(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShortLE(GameEngine.baseY + var1);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -169,14 +162,14 @@ public class ReflectionCheck extends Node {
 			Client.mouseCrossState = 0;
 			Client.destinationX = var0;
 			Client.destinationY = var1;
-			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.field3258, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeByteNeg(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShortLE(class128.field1513);
-			var9.packetBuffer.writeIntLE(class324.field3537);
-			var9.packetBuffer.writeShortAdd(class422.field4618);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
+			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.field2567, Client.packetWriter.isaacCipher);
+			var9.packetBuffer.writeByteNeg(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShortLE(class128.field1241);
+			var9.packetBuffer.writeIntLE(class324.field2900);
+			var9.packetBuffer.writeShortAdd(class422.field3809);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
 			var9.packetBuffer.writeShortAdd(var3);
-			var9.packetBuffer.writeShort(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeShort(GameEngine.baseY + var1);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -189,9 +182,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJ4, Client.packetWriter.isaacCipher);
 			var9.packetBuffer.writeShortLE(var3);
-			var9.packetBuffer.writeShort(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShort(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeShort(var0 + Projectile.baseX);
+			var9.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShort(GameEngine.baseY + var1);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -209,9 +202,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPLOC2, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShortAdd(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAdd(var0 + Projectile.baseX);
+			var9.packetBuffer.writeShortAdd(GameEngine.baseY + var1);
 			var9.packetBuffer.writeShortAddLE(var3);
 			Client.packetWriter.addNode(var9);
 		}
@@ -225,12 +218,12 @@ public class ReflectionCheck extends Node {
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJT, Client.packetWriter.isaacCipher);
 			var9.packetBuffer.writeShortAddLE(var3);
-			var9.packetBuffer.writeShortAdd(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeShortAdd(var0 + Projectile.baseX);
 			var9.packetBuffer.writeShortLE(Client.selectedSpellItemId);
-			var9.packetBuffer.writeShort(GameEngine.baseY * 64 + var1);
+			var9.packetBuffer.writeShort(GameEngine.baseY + var1);
 			var9.packetBuffer.writeShortAddLE(Client.selectedSpellChildIndex);
 			var9.packetBuffer.writeIntIME(class160.selectedSpellWidget);
-			var9.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -246,7 +239,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYERT, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeIntIME(class160.selectedSpellWidget);
-				var15.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortAddLE(Client.selectedSpellItemId);
 				var15.packetBuffer.writeShortAddLE(var3);
 				var15.packetBuffer.writeShort(Client.selectedSpellChildIndex);
@@ -265,7 +258,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPC1, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortAddLE(var3);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -278,10 +271,10 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPLOC4, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAdd(GameEngine.baseY + var1);
+			var9.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 			var9.packetBuffer.writeShort(var3);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -295,7 +288,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER6, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortLE(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -311,7 +304,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPC5, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortLE(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -334,8 +327,8 @@ public class ReflectionCheck extends Node {
 			Client.mouseCrossState = 0;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJE, Client.packetWriter.isaacCipher);
 			var9.packetBuffer.writeShortAddLE(var3);
-			var9.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeShort(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeShortAdd(GameEngine.baseY + var1);
+			var9.packetBuffer.writeShort(var0 + Projectile.baseX);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -358,7 +351,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER5, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortLE(var3);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -374,7 +367,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER3, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortAddLE(var3);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -388,12 +381,12 @@ public class ReflectionCheck extends Node {
 				Client.mouseCrossState = 0;
 				Client.destinationX = var0;
 				Client.destinationY = var1;
-				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.field3226, Client.packetWriter.isaacCipher);
+				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.field2594, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortAddLE(var3);
-				var15.packetBuffer.writeIntLE(class324.field3537);
-				var15.packetBuffer.writeShortLE(class128.field1513);
-				var15.packetBuffer.writeShortAdd(class422.field4618);
-				var15.packetBuffer.writeByteNeg(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeIntLE(class324.field2900);
+				var15.packetBuffer.writeShortLE(class128.field1241);
+				var15.packetBuffer.writeShortAdd(class422.field3809);
+				var15.packetBuffer.writeByteNeg(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -407,12 +400,12 @@ public class ReflectionCheck extends Node {
 				Client.mouseCrossState = 0;
 				Client.destinationX = var0;
 				Client.destinationY = var1;
-				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.field3239, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
-				var15.packetBuffer.writeIntLE(class324.field3537);
+				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.field2635, Client.packetWriter.isaacCipher);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
+				var15.packetBuffer.writeIntLE(class324.field2900);
 				var15.packetBuffer.writeShortAdd(var3);
-				var15.packetBuffer.writeShortAdd(class422.field4618);
-				var15.packetBuffer.writeShortLE(class128.field1513);
+				var15.packetBuffer.writeShortAdd(class422.field3809);
+				var15.packetBuffer.writeShortLE(class128.field1241);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -425,9 +418,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPLOC3, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeShortAddLE(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
+			var9.packetBuffer.writeShortAddLE(GameEngine.baseY + var1);
+			var9.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 			var9.packetBuffer.writeShortAdd(var3);
 			Client.packetWriter.addNode(var9);
 		}
@@ -442,7 +435,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPC2, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortAdd(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -459,7 +452,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER4, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShort(var3);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -478,14 +471,14 @@ public class ReflectionCheck extends Node {
 			Client.mouseCrossState = 0;
 			Client.destinationX = var0;
 			Client.destinationY = var1;
-			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.field3192, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortLE(class128.field1513);
-			var9.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeShortAdd(class422.field4618);
-			var9.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
-			var9.packetBuffer.writeShortLE(Projectile.baseX * 64 + var0);
+			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.field2597, Client.packetWriter.isaacCipher);
+			var9.packetBuffer.writeShortLE(class128.field1241);
+			var9.packetBuffer.writeShortAdd(GameEngine.baseY + var1);
+			var9.packetBuffer.writeShortAdd(class422.field3809);
+			var9.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
+			var9.packetBuffer.writeShortLE(var0 + Projectile.baseX);
 			var9.packetBuffer.writeShort(var3);
-			var9.packetBuffer.writeIntME(class324.field3537);
+			var9.packetBuffer.writeIntME(class324.field2900);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -499,7 +492,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER7, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteSub(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteSub(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortAdd(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -516,7 +509,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER2, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortLE(var3);
-				var15.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
@@ -529,9 +522,9 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJ1, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
-			var9.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeByteNeg(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
+			var9.packetBuffer.writeShortAdd(GameEngine.baseY + var1);
+			var9.packetBuffer.writeByteNeg(Client.field623.method1186(82) ? 1 : 0);
 			var9.packetBuffer.writeShort(var3);
 			Client.packetWriter.addNode(var9);
 		}
@@ -542,7 +535,7 @@ public class ReflectionCheck extends Node {
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.WIDGET_TYPE, Client.packetWriter.isaacCipher);
 			var9.packetBuffer.writeInt(var1);
 			Client.packetWriter.addNode(var9);
-			var19 = ArchiveLoader.widgetDefinition.method6431(var1);
+			var19 = ArchiveLoader.widgetDefinition.method1785(var1);
 			if (var19 != null && var19.cs1Instructions != null && var19.cs1Instructions[0][0] == 5) {
 				var12 = var19.cs1Instructions[0][1];
 				Varps.Varps_main[var12] = 1 - Varps.Varps_main[var12];
@@ -561,13 +554,13 @@ public class ReflectionCheck extends Node {
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPC4, Client.packetWriter.isaacCipher);
 				var15.packetBuffer.writeShortAdd(var3);
-				var15.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var15);
 			}
 		}
 
 		if (var2 == 26) {
-			class272.method5372();
+			class272.method1486();
 		}
 
 		if (var2 == 19) {
@@ -578,10 +571,10 @@ public class ReflectionCheck extends Node {
 			Client.destinationX = var0;
 			Client.destinationY = var1;
 			var9 = ViewportMouse.getPacketBufferNode(ClientPacket.OPOBJ2, Client.packetWriter.isaacCipher);
-			var9.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
+			var9.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
 			var9.packetBuffer.writeShortLE(var3);
-			var9.packetBuffer.writeShortLE(GameEngine.baseY * 64 + var1);
-			var9.packetBuffer.writeShort(Projectile.baseX * 64 + var0);
+			var9.packetBuffer.writeShortLE(GameEngine.baseY + var1);
+			var9.packetBuffer.writeShort(var0 + Projectile.baseX);
 			Client.packetWriter.addNode(var9);
 		}
 
@@ -595,7 +588,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPC3, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortAddLE(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -611,7 +604,7 @@ public class ReflectionCheck extends Node {
 				Client.destinationX = var0;
 				Client.destinationY = var1;
 				var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER8, Client.packetWriter.isaacCipher);
-				var15.packetBuffer.writeByteAdd(Client.field792.method4466(82) ? 1 : 0);
+				var15.packetBuffer.writeByteAdd(Client.field623.method1186(82) ? 1 : 0);
 				var15.packetBuffer.writeShortAddLE(var3);
 				Client.packetWriter.addNode(var15);
 			}
@@ -620,8 +613,8 @@ public class ReflectionCheck extends Node {
 		if (var2 == 25) {
 			var14 = ArchiveLoader.widgetDefinition.getWidgetChild(var1, var0);
 			if (var14 != null) {
-				GameObject.method5963();
-				VarbitComposition.method3820(var1, var0, TextureProvider.Widget_unpackTargetMask(class429.getWidgetFlags(var14)), var4);
+				GameObject.method1652();
+				VarbitComposition.method994(var1, var0, TextureProvider.Widget_unpackTargetMask(class429.getWidgetFlags(var14)), var4);
 				Client.isItemSelected = 0;
 				Client.selectedSpellActionName = UserComparator9.Widget_getSpellActionName(var14);
 				if (Client.selectedSpellActionName == null) {
@@ -631,7 +624,7 @@ public class ReflectionCheck extends Node {
 				if (var14.isIf3) {
 					Client.selectedSpellName = var14.dataText + class370.colorStartTag(16777215);
 				} else {
-					Client.selectedSpellName = class370.colorStartTag(65280) + var14.field3785 + class370.colorStartTag(16777215);
+					Client.selectedSpellName = class370.colorStartTag(65280) + var14.field3181 + class370.colorStartTag(16777215);
 				}
 			}
 
@@ -641,11 +634,11 @@ public class ReflectionCheck extends Node {
 			}
 
 			if (var2 == 24) {
-				var14 = ArchiveLoader.widgetDefinition.method6431(var1);
+				var14 = ArchiveLoader.widgetDefinition.method1785(var1);
 				if (var14 != null) {
 					boolean var13 = true;
 					if (var14.contentType > 0) {
-						var13 = SoundSystem.method807(var14);
+						var13 = SoundSystem.method212(var14);
 					}
 
 					if (var13) {
@@ -660,7 +653,7 @@ public class ReflectionCheck extends Node {
 				var9 = ViewportMouse.getPacketBufferNode(ClientPacket.WIDGET_TYPE, Client.packetWriter.isaacCipher);
 				var9.packetBuffer.writeInt(var1);
 				Client.packetWriter.addNode(var9);
-				var19 = ArchiveLoader.widgetDefinition.method6431(var1);
+				var19 = ArchiveLoader.widgetDefinition.method1785(var1);
 				if (var19 != null && var19.cs1Instructions != null && var19.cs1Instructions[0][0] == 5) {
 					var12 = var19.cs1Instructions[0][1];
 					if (Varps.Varps_main[var12] != var19.cs1ComparisonValues[0]) {
@@ -680,7 +673,7 @@ public class ReflectionCheck extends Node {
 					Client.destinationX = var0;
 					Client.destinationY = var1;
 					var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPPLAYER1, Client.packetWriter.isaacCipher);
-					var15.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
+					var15.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
 					var15.packetBuffer.writeShortLE(var3);
 					Client.packetWriter.addNode(var15);
 				}
@@ -697,10 +690,10 @@ public class ReflectionCheck extends Node {
 				var9.packetBuffer.writeIntME(class160.selectedSpellWidget);
 				var9.packetBuffer.writeShortAddLE(var3);
 				var9.packetBuffer.writeShort(Client.selectedSpellItemId);
-				var9.packetBuffer.writeShortLE(GameEngine.baseY * 64 + var1);
+				var9.packetBuffer.writeShortLE(GameEngine.baseY + var1);
 				var9.packetBuffer.writeShort(Client.selectedSpellChildIndex);
-				var9.packetBuffer.writeShortAddLE(Projectile.baseX * 64 + var0);
-				var9.packetBuffer.writeByte(Client.field792.method4466(82) ? 1 : 0);
+				var9.packetBuffer.writeShortAddLE(var0 + Projectile.baseX);
+				var9.packetBuffer.writeByte(Client.field623.method1186(82) ? 1 : 0);
 				Client.packetWriter.addNode(var9);
 			}
 
@@ -715,7 +708,7 @@ public class ReflectionCheck extends Node {
 					Client.destinationY = var1;
 					var15 = ViewportMouse.getPacketBufferNode(ClientPacket.OPNPCT, Client.packetWriter.isaacCipher);
 					var15.packetBuffer.writeInt(class160.selectedSpellWidget);
-					var15.packetBuffer.writeByteNeg(Client.field792.method4466(82) ? 1 : 0);
+					var15.packetBuffer.writeByteNeg(Client.field623.method1186(82) ? 1 : 0);
 					var15.packetBuffer.writeShortAddLE(var3);
 					var15.packetBuffer.writeShortAddLE(Client.selectedSpellItemId);
 					var15.packetBuffer.writeShortAddLE(Client.selectedSpellChildIndex);
@@ -725,11 +718,11 @@ public class ReflectionCheck extends Node {
 
 			if (Client.isItemSelected != 0) {
 				Client.isItemSelected = 0;
-				UserComparator5.invalidateWidget(ArchiveLoader.widgetDefinition.method6431(class324.field3537));
+				UserComparator5.invalidateWidget(ArchiveLoader.widgetDefinition.method1785(class324.field2900));
 			}
 
 			if (Client.isSpellSelected) {
-				GameObject.method5963();
+				GameObject.method1652();
 			}
 
 		}

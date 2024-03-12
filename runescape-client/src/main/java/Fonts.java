@@ -57,7 +57,7 @@ public class Fonts {
 					int var10 = var7.getGroupId(var9);
 					int var11 = var7.getFileId(var10, "");
 					Font var12;
-					if (!class130.method3074(var7, var10, var11)) {
+					if (!class130.method720(var7, var10, var11)) {
 						var12 = null;
 					} else {
 						var12 = class529.fontFromBytes(var8.takeFile(var10, var11));
@@ -81,7 +81,7 @@ public class Fonts {
 		descriptor = "(IIIIII)Z",
 		garbageValue = "-2107938255"
 	)
-	static final boolean method9105(int var0, int var1, int var2, int var3, int var4) {
+	static final boolean method2518(int var0, int var1, int var2, int var3, int var4) {
 		PendingSpawn var5 = null;
 
 		for (PendingSpawn var6 = (PendingSpawn)Client.pendingSpawns.last(); var6 != null; var6 = (PendingSpawn)Client.pendingSpawns.previous()) {
@@ -92,7 +92,7 @@ public class Fonts {
 		}
 
 		if (var5 != null) {
-			var5.field1203 = var4;
+			var5.field984 = var4;
 			return true;
 		} else {
 			return false;
@@ -104,7 +104,7 @@ public class Fonts {
 		descriptor = "(I)Lot;",
 		garbageValue = "-2108213446"
 	)
-	static JagNetThread method9109() {
-		return class356.field3897;
+	static JagNetThread method2519() {
+		return class356.field3198;
 	}
 }

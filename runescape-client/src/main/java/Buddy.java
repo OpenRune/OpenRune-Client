@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,21 +7,12 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Buddy")
 public class Buddy extends User {
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 548444203
-	)
 	@Export("world")
 	public int world;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 1270931115
-	)
 	@Export("int2")
 	public int int2;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 599549949
-	)
 	@Export("rank")
 	public int rank;
 

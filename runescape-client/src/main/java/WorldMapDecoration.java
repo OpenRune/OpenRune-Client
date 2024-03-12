@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,21 +7,12 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapDecoration")
 public class WorldMapDecoration {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 621533651
-	)
 	@Export("objectDefinitionId")
 	final int objectDefinitionId;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -31802257
-	)
 	@Export("decoration")
 	final int decoration;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1589480589
-	)
 	@Export("rotation")
 	final int rotation;
 
@@ -37,7 +27,7 @@ public class WorldMapDecoration {
 		descriptor = "(I)V",
 		garbageValue = "90246290"
 	)
-	static void method5034() {
+	static void method1370() {
 		if (Login.clearLoginScreen) {
 			class155.titleboxSprite = null;
 			Login.titlebuttonSprite = null;
@@ -52,10 +42,10 @@ public class WorldMapDecoration {
 			class162.worldSelectFlagSprites = null;
 			World.worldSelectArrows = null;
 			Frames.worldSelectStars = null;
-			ModeWhere.field4514 = null;
-			class325.loginScreenRunesAnimation.method2514();
-			class169.method3521(0, 100);
-			Fonts.method9109().method7212(true);
+			ModeWhere.field3715 = null;
+			class325.loginScreenRunesAnimation.method541();
+			class169.method882(0, 100);
+			Fonts.method2519().method2018(true);
 			Login.clearLoginScreen = false;
 		}
 	}
@@ -65,7 +55,7 @@ public class WorldMapDecoration {
 		descriptor = "(II)I",
 		garbageValue = "-848566446"
 	)
-	public static int method5032(int var0) {
+	public static int method1369(int var0) {
 		long var2 = ViewportMouse.ViewportMouse_entityTags[var0];
 		int var1 = (int)(var2 >>> 14 & 3L);
 		return var1;
@@ -76,9 +66,9 @@ public class WorldMapDecoration {
 		descriptor = "(Ldi;B)V",
 		garbageValue = "-69"
 	)
-	static void method5033(class93 var0) {
-		if (Client.field553 != var0) {
-			Client.field553 = var0;
+	static void method1371(class93 var0) {
+		if (Client.field438 != var0) {
+			Client.field438 = var0;
 		}
 	}
 }

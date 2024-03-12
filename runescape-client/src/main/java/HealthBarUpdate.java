@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.RandomAccessFile;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -13,27 +12,15 @@ public class HealthBarUpdate extends Node {
 	@Export("ItemDefinition_inMembersWorld")
 	public static boolean ItemDefinition_inMembersWorld;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 1776138225
-	)
 	@Export("cycle")
 	int cycle;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1179032873
-	)
 	@Export("health")
 	int health;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -354392767
-	)
 	@Export("health2")
 	int health2;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1503916889
-	)
 	@Export("cycleOffset")
 	int cycleOffset;
 
@@ -62,8 +49,8 @@ public class HealthBarUpdate extends Node {
 		descriptor = "(Lof;B)V",
 		garbageValue = "123"
 	)
-	public static void method2495(AbstractArchive var0) {
-		DbTableType.field5137 = var0;
+	public static void method537(AbstractArchive var0) {
+		DbTableType.field4208 = var0;
 	}
 
 	@ObfuscatedName("aw")
@@ -71,7 +58,7 @@ public class HealthBarUpdate extends Node {
 		descriptor = "(Ljava/io/File;ZS)Z",
 		garbageValue = "-694"
 	)
-	static boolean method2494(File var0, boolean var1) {
+	static boolean method538(File var0, boolean var1) {
 		try {
 			RandomAccessFile var2 = new RandomAccessFile(var0, "rw");
 			int var3 = var2.read();

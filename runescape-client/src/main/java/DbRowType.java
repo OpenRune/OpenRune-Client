@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,7 +10,7 @@ public class DbRowType extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	static AbstractArchive field5151;
+	static AbstractArchive field4214;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lll;"
@@ -22,11 +21,8 @@ public class DbRowType extends DualNode {
 	@Export("columnTypes")
 	Object[][] columnTypes;
 	@ObfuscatedName("ai")
-	int[][] field5147;
+	int[][] field4215;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1361280359
-	)
 	@Export("tableId")
 	public int tableId;
 
@@ -43,14 +39,14 @@ public class DbRowType extends DualNode {
 		descriptor = "(Luq;I)V",
 		garbageValue = "-216042909"
 	)
-	void method9374(Buffer var1) {
+	void method2581(Buffer var1) {
 		while (true) {
 			int var2 = var1.readUnsignedByte();
 			if (var2 == 0) {
 				return;
 			}
 
-			this.method9376(var1, var2);
+			this.method2583(var1, var2);
 		}
 	}
 
@@ -69,12 +65,12 @@ public class DbRowType extends DualNode {
 		descriptor = "(Luq;II)V",
 		garbageValue = "1950036921"
 	)
-	void method9376(Buffer var1, int var2) {
+	void method2583(Buffer var1, int var2) {
 		if (var2 == 3) {
 			int var3 = var1.readUnsignedByte();
 			if (this.columnTypes == null) {
 				this.columnTypes = new Object[var3][];
-				this.field5147 = new int[var3][];
+				this.field4215 = new int[var3][];
 			}
 
 			for (int var4 = var1.readUnsignedByte(); var4 != 255; var4 = var1.readUnsignedByte()) {
@@ -85,8 +81,8 @@ public class DbRowType extends DualNode {
 					var6[var7] = var1.readUShortSmart();
 				}
 
-				this.columnTypes[var4] = class75.method2123(var1, var6);
-				this.field5147[var4] = var6;
+				this.columnTypes[var4] = class75.method430(var1, var6);
+				this.field4215[var4] = var6;
 			}
 		} else if (var2 == 4) {
 			this.tableId = var1.packBytesToInt();
@@ -99,6 +95,6 @@ public class DbRowType extends DualNode {
 		descriptor = "(B)V",
 		garbageValue = "1"
 	)
-	void method9377() {
+	void method2584() {
 	}
 }

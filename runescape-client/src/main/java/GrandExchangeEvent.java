@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,15 +7,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("GrandExchangeEvent")
 public class GrandExchangeEvent {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1812147417
-	)
 	@Export("world")
 	public final int world;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		longValue = 579716858626638199L
-	)
 	@Export("age")
 	public final long age;
 	@ObfuscatedName("al")
@@ -43,8 +36,8 @@ public class GrandExchangeEvent {
 		int var4 = var1.readInt();
 		int var5 = var1.readInt();
 		this.grandExchangeOffer = new GrandExchangeOffer();
-		this.grandExchangeOffer.method7298(2);
-		this.grandExchangeOffer.method7299(var2);
+		this.grandExchangeOffer.method2045(2);
+		this.grandExchangeOffer.method2046(var2);
 		this.grandExchangeOffer.unitPrice = var4;
 		this.grandExchangeOffer.totalQuantity = var5;
 		this.grandExchangeOffer.currentQuantity = 0;
@@ -81,7 +74,7 @@ public class GrandExchangeEvent {
 	static final void checkIfMinimapClicked(Widget var0, int var1, int var2) {
 		if (Client.minimapState == 0 || Client.minimapState == 3) {
 			if (!Client.isMenuOpen && (MouseHandler.MouseHandler_lastButton == 1 || !DbTableType.mouseCam && MouseHandler.MouseHandler_lastButton == 4)) {
-				SpriteMask var3 = var0.method6801(ArchiveLoader.widgetDefinition, true);
+				SpriteMask var3 = var0.method1901(ArchiveLoader.widgetDefinition, true);
 				if (var3 == null) {
 					return;
 				}
@@ -98,11 +91,11 @@ public class GrandExchangeEvent {
 					int var10 = var5 * var8 - var7 * var4 >> 11;
 					int var11 = var9 + VarpDefinition.localPlayer.x >> 7;
 					int var12 = VarpDefinition.localPlayer.y - var10 >> 7;
-					PacketBufferNode var13 = ViewportMouse.getPacketBufferNode(ClientPacket.field3176, Client.packetWriter.isaacCipher);
+					PacketBufferNode var13 = ViewportMouse.getPacketBufferNode(ClientPacket.field2577, Client.packetWriter.isaacCipher);
 					var13.packetBuffer.writeByte(18);
-					var13.packetBuffer.writeByteSub(Client.field792.method4466(82) ? (Client.field792.method4466(81) ? 2 : 1) : 0);
-					var13.packetBuffer.writeShortAdd(Projectile.baseX * 64 + var11);
-					var13.packetBuffer.writeShortAdd(GameEngine.baseY * 64 + var12);
+					var13.packetBuffer.writeByteSub(Client.field623.method1186(82) ? (Client.field623.method1186(81) ? 2 : 1) : 0);
+					var13.packetBuffer.writeShortAdd(var11 + Projectile.baseX);
+					var13.packetBuffer.writeShortAdd(var12 + GameEngine.baseY);
 					var13.packetBuffer.writeByte(var4);
 					var13.packetBuffer.writeByte(var5);
 					var13.packetBuffer.writeShort(Client.camAngleY);

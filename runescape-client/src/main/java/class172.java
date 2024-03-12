@@ -20,7 +20,7 @@ public class class172 extends DualNode {
 		descriptor = "(I)[Lmf;",
 		garbageValue = "-1094244381"
 	)
-	static class314[] method3542() {
-		return new class314[]{class314.field3435, class314.field3424, class314.field3429, class314.field3430, class314.field3427, class314.field3425, class314.field3433, class314.field3426};
+	static class314[] method892() {
+		return new class314[]{class314.field2818, class314.field2817, class314.field2820, class314.field2815, class314.field2822, class314.field2821, class314.field2819, class314.field2816};
 	}
 }

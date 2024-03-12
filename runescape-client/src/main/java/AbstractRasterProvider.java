@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,19 +10,13 @@ public abstract class AbstractRasterProvider {
 	@Export("pixels")
 	public int[] pixels;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1797318603
-	)
 	@Export("width")
 	public int width;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -1733921925
-	)
 	@Export("height")
 	public int height;
 	@ObfuscatedName("as")
-	protected float[] field5280;
+	protected float[] field4324;
 
 	protected AbstractRasterProvider() {
 	}
@@ -51,7 +44,7 @@ public abstract class AbstractRasterProvider {
 	)
 	@Export("apply")
 	public final void apply() {
-		Rasterizer2D.method9822(this.pixels, this.width, this.height, this.field5280);
+		Rasterizer2D.method2696(this.pixels, this.width, this.height, this.field4324);
 	}
 
 	@ObfuscatedName("ay")
@@ -59,7 +52,7 @@ public abstract class AbstractRasterProvider {
 		descriptor = "(ZI)V",
 		garbageValue = "-2055289986"
 	)
-	public final void method9862(boolean var1) {
-		this.field5280 = var1 ? new float[this.width * this.height + 1] : null;
+	public final void method2722(boolean var1) {
+		this.field4324 = var1 ? new float[this.width * this.height + 1] : null;
 	}
 }

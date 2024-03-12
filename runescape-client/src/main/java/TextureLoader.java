@@ -27,6 +27,7 @@ public interface TextureLoader {
 		descriptor = "(II)Z",
 		garbageValue = "995906382"
 	)
+	@Export("vmethod5948")
 	boolean vmethod5948(int var1);
 
 	@ObfuscatedName("as")

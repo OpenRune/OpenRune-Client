@@ -3,7 +3,6 @@ import java.util.BitSet;
 import java.util.List;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,9 +10,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("ClanChannel")
 public class ClanChannel extends Node {
 	@ObfuscatedName("aq")
-	boolean field1805;
+	boolean field1446;
 	@ObfuscatedName("aw")
-	boolean field1802;
+	boolean field1447;
 	@ObfuscatedName("al")
 	@Export("members")
 	public List members;
@@ -21,17 +20,14 @@ public class ClanChannel extends Node {
 	@Export("sortedMembers")
 	int[] sortedMembers;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		longValue = 9051283318980582005L
-	)
-	public long field1808;
+	public long field1453;
 	@ObfuscatedName("as")
 	@Export("name")
 	public String name;
 	@ObfuscatedName("aa")
-	public byte field1806;
+	public byte field1449;
 	@ObfuscatedName("az")
-	public byte field1801;
+	public byte field1450;
 
 	static {
 		new BitSet(65536);
@@ -41,9 +37,9 @@ public class ClanChannel extends Node {
 		descriptor = "(Luq;)V"
 	)
 	public ClanChannel(Buffer var1) {
-		this.field1802 = true;
+		this.field1447 = true;
 		this.name = null;
-		this.method3475(var1);
+		this.method871(var1);
 	}
 
 	@ObfuscatedName("aq")
@@ -58,10 +54,10 @@ public class ClanChannel extends Node {
 			this.sortedMembers = new int[this.members.size()];
 
 			for (int var2 = 0; var2 < this.members.size(); this.sortedMembers[var2] = var2++) {
-				var1[var2] = ((ClanChannelMember)this.members.get(var2)).username.method10078();
+				var1[var2] = ((ClanChannelMember)this.members.get(var2)).username.method2776();
 			}
 
-			class237.method4614(var1, this.sortedMembers);
+			class237.method1235(var1, this.sortedMembers);
 		}
 
 		return this.sortedMembers;
@@ -94,7 +90,7 @@ public class ClanChannel extends Node {
 		descriptor = "(B)I",
 		garbageValue = "-104"
 	)
-	public int method3481() {
+	public int method869() {
 		return this.members.size();
 	}
 
@@ -103,8 +99,8 @@ public class ClanChannel extends Node {
 		descriptor = "(Ljava/lang/String;I)I",
 		garbageValue = "-2146908176"
 	)
-	public int method3487(String var1) {
-		if (!this.field1802) {
+	public int method870(String var1) {
+		if (!this.field1447) {
 			throw new RuntimeException("Displaynames not available");
 		} else {
 			for (int var2 = 0; var2 < this.members.size(); ++var2) {
@@ -122,14 +118,14 @@ public class ClanChannel extends Node {
 		descriptor = "(Luq;I)V",
 		garbageValue = "1159592870"
 	)
-	void method3475(Buffer var1) {
+	void method871(Buffer var1) {
 		int var2 = var1.readUnsignedByte();
 		if ((var2 & 1) != 0) {
-			this.field1805 = true;
+			this.field1446 = true;
 		}
 
 		if ((var2 & 2) != 0) {
-			this.field1802 = true;
+			this.field1447 = true;
 		}
 
 		int var3 = 2;
@@ -138,22 +134,22 @@ public class ClanChannel extends Node {
 		}
 
 		super.key = var1.readLong();
-		this.field1808 = var1.readLong();
+		this.field1453 = var1.readLong();
 		this.name = var1.readStringCp1252NullTerminated();
 		var1.readBoolean();
-		this.field1801 = var1.readByte();
-		this.field1806 = var1.readByte();
+		this.field1450 = var1.readByte();
+		this.field1449 = var1.readByte();
 		int var4 = var1.readUnsignedShort();
 		if (var4 > 0) {
 			this.members = new ArrayList(var4);
 
 			for (int var5 = 0; var5 < var4; ++var5) {
 				ClanChannelMember var6 = new ClanChannelMember();
-				if (this.field1805) {
+				if (this.field1446) {
 					var1.readLong();
 				}
 
-				if (this.field1802) {
+				if (this.field1447) {
 					var6.username = new Username(var1.readStringCp1252NullTerminated());
 				}
 
@@ -174,7 +170,7 @@ public class ClanChannel extends Node {
 		descriptor = "(Ljava/lang/String;B)Ljava/lang/String;",
 		garbageValue = "9"
 	)
-	public static String method3490(String var0) {
+	public static String method872(String var0) {
 		int var1 = var0.length();
 		char[] var2 = new char[var1];
 		byte var3 = 2;

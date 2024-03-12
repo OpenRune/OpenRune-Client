@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -16,39 +15,36 @@ public class class388 {
 	@Export("bounds")
 	Bounds bounds;
 	@ObfuscatedName("al")
-	int[] field4473;
+	int[] field3694;
 	@ObfuscatedName("ai")
-	int[] field4470;
+	int[] field3693;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 450207765
-	)
-	int field4472;
+	int field3692;
 
 	public class388() {
 		this.spriteMap = new HashMap();
 		this.bounds = new Bounds(0, 0);
-		this.field4473 = new int[2048];
-		this.field4470 = new int[2048];
-		this.field4472 = 0;
-		UserComparator8.field1457 = new int[2000];
+		this.field3694 = new int[2048];
+		this.field3693 = new int[2048];
+		this.field3692 = 0;
+		UserComparator8.field1210 = new int[2000];
 		int var1 = 0;
 		int var2 = 240;
 
 		int var4;
 		for (byte var3 = 12; var1 < 16; var2 -= var3) {
-			var4 = class103.method2747((double)((float)var2 / 360.0F), 0.9998999834060669D, (double)((float)var1 * 0.425F / 16.0F + 0.075F));
-			UserComparator8.field1457[var1] = var4;
+			var4 = class103.method611((double)((float)var2 / 360.0F), 0.9998999834060669D, (double)((float)var1 * 0.425F / 16.0F + 0.075F));
+			UserComparator8.field1210[var1] = var4;
 			++var1;
 		}
 
 		var2 = 48;
 
-		for (int var6 = var2 / 6; var1 < UserComparator8.field1457.length; var2 -= var6) {
+		for (int var6 = var2 / 6; var1 < UserComparator8.field1210.length; var2 -= var6) {
 			var4 = var1 * 2;
 
-			for (int var5 = class103.method2747((double)((float)var2 / 360.0F), 0.9998999834060669D, 0.5D); var1 < var4 && var1 < UserComparator8.field1457.length; ++var1) {
-				UserComparator8.field1457[var1] = var5;
+			for (int var5 = class103.method611((double)((float)var2 / 360.0F), 0.9998999834060669D, 0.5D); var1 < var4 && var1 < UserComparator8.field1210.length; ++var1) {
+				UserComparator8.field1210[var1] = var5;
 			}
 		}
 
@@ -59,9 +55,9 @@ public class class388 {
 		descriptor = "(IB)V",
 		garbageValue = "-9"
 	)
-	void method7338(int var1) {
+	void method2048(int var1) {
 		int var2 = var1 * 2 + 1;
-		double[] var3 = VertexNormal.method5839(0.0D, (double)((float)var1 / 3.0F), var1);
+		double[] var3 = VertexNormal.method1613(0.0D, (double)((float)var1 / 3.0F), var1);
 		double var4 = var3[var1] * var3[var1];
 		int[] var6 = new int[var2 * var2];
 		boolean var7 = false;
@@ -84,9 +80,9 @@ public class class388 {
 		descriptor = "(II)Lvd;",
 		garbageValue = "-1639040198"
 	)
-	SpritePixels method7328(int var1) {
+	SpritePixels method2049(int var1) {
 		if (!this.spriteMap.containsKey(var1)) {
-			this.method7338(var1);
+			this.method2048(var1);
 		}
 
 		return (SpritePixels)this.spriteMap.get(var1);
@@ -97,11 +93,11 @@ public class class388 {
 		descriptor = "(IIB)V",
 		garbageValue = "101"
 	)
-	public final void method7320(int var1, int var2) {
-		if (this.field4472 < this.field4473.length) {
-			this.field4473[this.field4472] = var1;
-			this.field4470[this.field4472] = var2;
-			++this.field4472;
+	public final void method2050(int var1, int var2) {
+		if (this.field3692 < this.field3694.length) {
+			this.field3694[this.field3692] = var1;
+			this.field3693[this.field3692] = var2;
+			++this.field3692;
 		}
 	}
 
@@ -110,8 +106,8 @@ public class class388 {
 		descriptor = "(I)V",
 		garbageValue = "-378916128"
 	)
-	public final void method7322() {
-		this.field4472 = 0;
+	public final void method2051() {
+		this.field3692 = 0;
 	}
 
 	@ObfuscatedName("ar")
@@ -119,9 +115,9 @@ public class class388 {
 		descriptor = "(IILvd;FB)V",
 		garbageValue = "-16"
 	)
-	public final void method7323(int var1, int var2, SpritePixels var3, float var4) {
+	public final void method2052(int var1, int var2, SpritePixels var3, float var4) {
 		int var5 = (int)(18.0F * var4);
-		SpritePixels var6 = this.method7328(var5);
+		SpritePixels var6 = this.method2049(var5);
 		int var7 = var5 * 2 + 1;
 		Bounds var8 = new Bounds(0, 0, var3.subWidth, var3.subHeight);
 		Bounds var9 = new Bounds(0, 0);
@@ -131,14 +127,14 @@ public class class388 {
 		int var10;
 		int var11;
 		int var12;
-		for (var10 = 0; var10 < this.field4472; ++var10) {
-			var11 = this.field4473[var10];
-			var12 = this.field4470[var10];
+		for (var10 = 0; var10 < this.field3692; ++var10) {
+			var11 = this.field3694[var10];
+			var12 = this.field3693[var10];
 			int var13 = (int)(var4 * (float)(var11 - var1)) - var5;
 			int var14 = (int)((float)var3.subHeight - (float)(var12 - var2) * var4) - var5;
 			this.bounds.setLow(var13, var14);
-			this.bounds.method8550(var8, var9);
-			this.method7324(var6, var3, var9);
+			this.bounds.method2362(var8, var9);
+			this.method2053(var6, var3, var9);
 		}
 
 		System.nanoTime();
@@ -152,11 +148,11 @@ public class class388 {
 				if (var11 <= 0) {
 					var3.pixels[var10] = -16777216;
 				} else {
-					if (var11 > UserComparator8.field1457.length) {
-						var11 = UserComparator8.field1457.length;
+					if (var11 > UserComparator8.field1210.length) {
+						var11 = UserComparator8.field1210.length;
 					}
 
-					var12 = UserComparator8.field1457[var11 - 1];
+					var12 = UserComparator8.field1210[var11 - 1];
 					var3.pixels[var10] = -16777216 | var12;
 				}
 			}
@@ -170,7 +166,7 @@ public class class388 {
 		descriptor = "(Lvd;Lvd;Lrc;I)V",
 		garbageValue = "1201645068"
 	)
-	void method7324(SpritePixels var1, SpritePixels var2, Bounds var3) {
+	void method2053(SpritePixels var1, SpritePixels var2, Bounds var3) {
 		if (var3.highX != 0 && var3.highY != 0) {
 			int var4 = 0;
 			int var5 = 0;
@@ -204,8 +200,8 @@ public class class388 {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "121"
 	)
-	static final void method7344(String var0) {
-		SecureRandomCallable.method2319("Please remove " + var0 + " from your ignore list first");
+	static final void method2054(String var0) {
+		SecureRandomCallable.method466("Please remove " + var0 + " from your ignore list first");
 	}
 
 	@ObfuscatedName("jd")
@@ -213,7 +209,7 @@ public class class388 {
 		descriptor = "(IIIIIIIIIIIIILdj;B)V",
 		garbageValue = "55"
 	)
-	static void method7327(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, Player var13) {
+	static void method2055(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, Player var13) {
 		ObjectComposition var14 = class127.getObjectDefinition(var6);
 		int var15;
 		int var16;
@@ -235,12 +231,12 @@ public class class388 {
 		int var24 = (var2 << 7) + (var16 << 6);
 		Model var25 = var14.getModel(var3, var4, var21, var23, var22, var24);
 		if (var25 != null) {
-			class91.method2381(var0, var1, var2, var5, -1, 0, 0, 31, var7 + 1, var8 + 1);
+			class91.method490(var0, var1, var2, var5, -1, 0, 0, 31, var7 + 1, var8 + 1);
 			var13.animationCycleStart = var7 + Client.cycle;
 			var13.animationCycleEnd = var8 + Client.cycle;
 			var13.model0 = var25;
-			var13.field1144 = var1 * 128 + var15 * 64;
-			var13.field1146 = var2 * 128 + var16 * 64;
+			var13.field942 = var15 * 64 + var1 * 128;
+			var13.field940 = var16 * 64 + var2 * 128;
 			var13.tileHeight2 = var22;
 			int var26;
 			if (var9 > var11) {

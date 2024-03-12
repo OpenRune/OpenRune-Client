@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,24 +16,15 @@ public class BufferedSource implements Runnable {
 	@Export("inputStream")
 	InputStream inputStream;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -243319149
-	)
 	@Export("capacity")
 	int capacity;
 	@ObfuscatedName("ai")
 	@Export("buffer")
 	byte[] buffer;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1935229593
-	)
 	@Export("position")
 	int position;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -343151065
-	)
 	@Export("limit")
 	int limit;
 	@ObfuscatedName("aa")
@@ -196,6 +186,8 @@ public class BufferedSource implements Runnable {
 
 	}
 
+//	@Export("run")
+//	@ObfuscatedName("run")
 	public void run() {
 		while (true) {
 			int var1;
@@ -249,7 +241,7 @@ public class BufferedSource implements Runnable {
 		descriptor = "(II)Z",
 		garbageValue = "-500131227"
 	)
-	static final boolean method8521(int var0) {
+	static final boolean method2350(int var0) {
 		if (var0 < 0) {
 			return false;
 		} else {

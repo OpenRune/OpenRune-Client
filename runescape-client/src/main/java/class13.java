@@ -59,7 +59,7 @@ class class13 extends DefaultTlsClient {
 		descriptor = "(Ljava/lang/String;Lng;B)Ljava/lang/String;",
 		garbageValue = "52"
 	)
-	static String method155(String var0, Widget var1) {
+	static String method42(String var0, Widget var1) {
 		if (var0.indexOf("%") != -1) {
 			for (int var2 = 1; var2 <= 5; ++var2) {
 				while (true) {
@@ -69,7 +69,7 @@ class class13 extends DefaultTlsClient {
 					}
 
 					String var4 = var0.substring(0, var3);
-					int var6 = Client.method1763(var1, var2 - 1);
+					int var6 = Client.method386(var1, var2 - 1);
 					String var5;
 					if (var6 < 999999999) {
 						var5 = Integer.toString(var6);

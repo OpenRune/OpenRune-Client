@@ -166,7 +166,7 @@ public class NodeDeque {
 	}
 
 	@ObfuscatedName("ak")
-	public boolean method7425() {
+	public boolean method2080() {
 		return this.sentinel.previous == this.sentinel;
 	}
 

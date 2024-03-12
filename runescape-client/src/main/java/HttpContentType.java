@@ -16,15 +16,14 @@ public class HttpContentType {
 	@ObfuscatedSignature(
 		descriptor = "Lsp;"
 	)
-	@Export("TEXT_PLAIN")
-	static final HttpContentType TEXT_PLAIN;
+	static final HttpContentType field4003;
 	@ObfuscatedName("al")
 	@Export("contentType")
 	String contentType;
 
 	static {
 		APPLICATION_JSON = new HttpContentType("application/json");
-		TEXT_PLAIN = new HttpContentType("text/plain");
+		field4003 = new HttpContentType("text/plain");
 	}
 
 	HttpContentType(String var1) {
@@ -46,7 +45,7 @@ public class HttpContentType {
 		descriptor = "([BILjava/lang/CharSequence;B)I",
 		garbageValue = "-120"
 	)
-	public static int method8756(byte[] var0, int var1, CharSequence var2) {
+	public static int method2407(byte[] var0, int var1, CharSequence var2) {
 		int var3 = var2.length();
 		int var4 = var1;
 
@@ -72,14 +71,14 @@ public class HttpContentType {
 		descriptor = "(B)V",
 		garbageValue = "3"
 	)
-	static void method8753() {
-		if (MilliClock.field2352 != null) {
-			Client.field825 = Client.cycle;
-			MilliClock.field2352.method7322();
+	static void method2409() {
+		if (MilliClock.field1892 != null) {
+			Client.field390 = Client.cycle;
+			MilliClock.field1892.method2051();
 
 			for (int var0 = 0; var0 < Client.players.length; ++var0) {
 				if (Client.players[var0] != null) {
-					MilliClock.field2352.method7320(Projectile.baseX * 64 + (Client.players[var0].x >> 7), GameEngine.baseY * 64 + (Client.players[var0].y >> 7));
+					MilliClock.field1892.method2050((Client.players[var0].x >> 7) + Projectile.baseX, (Client.players[var0].y >> 7) + GameEngine.baseY);
 				}
 			}
 		}

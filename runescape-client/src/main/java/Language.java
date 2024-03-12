@@ -1,7 +1,6 @@
 import java.util.Locale;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -57,35 +56,28 @@ public class Language implements Enum {
 	@Export("Language_valuesOrdered")
 	public static final Language[] Language_valuesOrdered;
 	@ObfuscatedName("az")
-	final String field4490;
+	final String field3714;
 	@ObfuscatedName("ao")
 	@Export("language")
 	final String language;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 786804823
-	)
 	@Export("id")
 	final int id;
 
 	static {
-		Language_EN = new Language("EN", "en", "English", ModeWhere.field4505, 0, "GB");
-		Language_DE = new Language("DE", "de", "German", ModeWhere.field4505, 1, "DE");
-		Language_FR = new Language("FR", "fr", "French", ModeWhere.field4505, 2, "FR");
-		Language_PT = new Language("PT", "pt", "Portuguese", ModeWhere.field4505, 3, "BR");
-		Language_NL = new Language("NL", "nl", "Dutch", ModeWhere.field4498, 4, "NL");
-		Language_ES = new Language("ES", "es", "Spanish", ModeWhere.field4498, 5, "ES");
-		Language_ES_MX = new Language("ES_MX", "es-mx", "Spanish (Latin American)", ModeWhere.field4505, 6, "MX");
+		Language_EN = new Language("EN", "en", "English", ModeWhere.field3723, 0, "GB");
+		Language_DE = new Language("DE", "de", "German", ModeWhere.field3723, 1, "DE");
+		Language_FR = new Language("FR", "fr", "French", ModeWhere.field3723, 2, "FR");
+		Language_PT = new Language("PT", "pt", "Portuguese", ModeWhere.field3723, 3, "BR");
+		Language_NL = new Language("NL", "nl", "Dutch", ModeWhere.field3718, 4, "NL");
+		Language_ES = new Language("ES", "es", "Spanish", ModeWhere.field3718, 5, "ES");
+		Language_ES_MX = new Language("ES_MX", "es-mx", "Spanish (Latin American)", ModeWhere.field3723, 6, "MX");
 		Language[] var0 = new Language[]{Language_ES_MX, Language_ES, Language_PT, Language_FR, Language_EN, Language_NL, Language_DE};
 		Language_valuesOrdered = new Language[var0.length];
 		Language[] var2 = var0;
 
 		for (int var3 = 0; var3 < var2.length; ++var3) {
 			Language var4 = var2[var3];
-			if (Language_valuesOrdered[var4.id] != null) {
-				throw new IllegalStateException();
-			}
-
 			Language_valuesOrdered[var4.id] = var4;
 		}
 
@@ -95,7 +87,7 @@ public class Language implements Enum {
 		descriptor = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lpl;ILjava/lang/String;)V"
 	)
 	Language(String var1, String var2, String var3, ModeWhere var4, int var5, String var6) {
-		this.field4490 = var1;
+		this.field3714 = var1;
 		this.language = var2;
 		this.id = var5;
 		if (var6 != null) {
@@ -135,7 +127,7 @@ public class Language implements Enum {
 		descriptor = "(II)Lhi;",
 		garbageValue = "15658734"
 	)
-	public static HitSplatDefinition method7357(int var0) {
+	public static HitSplatDefinition method2058(int var0) {
 		HitSplatDefinition var1 = (HitSplatDefinition)HitSplatDefinition.HitSplatDefinition_cached.get((long)var0);
 		if (var1 != null) {
 			return var1;
@@ -156,7 +148,7 @@ public class Language implements Enum {
 		descriptor = "(IIIIB)V",
 		garbageValue = "33"
 	)
-	static final void method7364(int var0, int var1, int var2, int var3) {
+	static final void method2061(int var0, int var1, int var2, int var3) {
 		for (int var4 = 0; var4 < Client.rootWidgetCount; ++var4) {
 			if (Client.rootWidgetXs[var4] + Client.rootWidgetWidths[var4] > var0 && Client.rootWidgetXs[var4] < var0 + var2 && Client.rootWidgetHeights[var4] + Client.rootWidgetYs[var4] > var1 && Client.rootWidgetYs[var4] < var3 + var1) {
 				Client.validRootWidgets[var4] = true;

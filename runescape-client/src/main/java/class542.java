@@ -1,23 +1,20 @@
-import net.runelite.mapping.ObfuscatedGetter;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 
 @ObfuscatedName("uk")
 public class class542 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1606110677
-	)
-	public final int field5267;
+	public final int field4315;
 	@ObfuscatedName("aw")
-	public Object field5268;
+	public Object field4314;
 
 	public class542(int var1) {
-		this.field5267 = var1;
+		this.field4315 = var1;
 	}
 
 	public class542(int var1, Object var2) {
-		this.field5267 = var1;
-		this.field5268 = var2;
+		this.field4315 = var1;
+		this.field4314 = var2;
 	}
 
 	public int hashCode() {
@@ -29,12 +26,12 @@ public class class542 {
 			return false;
 		} else {
 			class542 var2 = (class542)var1;
-			if (var2.field5268 == null && this.field5268 != null) {
+			if (var2.field4314 == null && this.field4314 != null) {
 				return false;
-			} else if (this.field5268 == null && var2.field5268 != null) {
+			} else if (this.field4314 == null && var2.field4314 != null) {
 				return false;
 			} else {
-				return var2.field5267 == this.field5267 && var2.field5268.equals(this.field5268);
+				return var2.field4315 == this.field4315 && var2.field4314.equals(this.field4314);
 			}
 		}
 	}

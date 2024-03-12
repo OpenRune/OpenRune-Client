@@ -76,10 +76,10 @@ public abstract class AbstractSocket {
 		descriptor = "(Ljava/lang/String;ILjava/lang/String;B)Z",
 		garbageValue = "-43"
 	)
-	static boolean method8473(String var0, int var1, String var2) {
+	static boolean method2331(String var0, int var1, String var2) {
 		if (var1 == 0) {
 			try {
-				if (!class31.field160.startsWith("win")) {
+				if (!class31.field87.startsWith("win")) {
 					throw new Exception();
 				} else if (!var0.startsWith("http://") && !var0.startsWith("https://")) {
 					throw new Exception();
@@ -100,8 +100,8 @@ public abstract class AbstractSocket {
 			}
 		} else if (var1 == 1) {
 			try {
-				Applet var7 = class31.field164;
-				Object[] var5 = new Object[]{(new URL(class31.field164.getCodeBase(), var0)).toString()};
+				Applet var7 = class31.field86;
+				Object[] var5 = new Object[]{(new URL(class31.field86.getCodeBase(), var0)).toString()};
 				Object var13 = JSObject.getWindow(var7).call(var2, var5);
 				return var13 != null;
 			} catch (Throwable var9) {
@@ -109,20 +109,20 @@ public abstract class AbstractSocket {
 			}
 		} else if (var1 == 2) {
 			try {
-				class31.field164.getAppletContext().showDocument(new URL(class31.field164.getCodeBase(), var0), "_blank");
+				class31.field86.getAppletContext().showDocument(new URL(class31.field86.getCodeBase(), var0), "_blank");
 				return true;
 			} catch (Exception var10) {
 				return false;
 			}
 		} else if (var1 == 3) {
 			try {
-				Applet var3 = class31.field164;
+				Applet var3 = class31.field86;
 				JSObject.getWindow(var3).call("loggedout", (Object[])null);
 			} catch (Throwable var12) {
 			}
 
 			try {
-				class31.field164.getAppletContext().showDocument(new URL(class31.field164.getCodeBase(), var0), "_top");
+				class31.field86.getAppletContext().showDocument(new URL(class31.field86.getCodeBase(), var0), "_top");
 				return true;
 			} catch (Exception var11) {
 				return false;

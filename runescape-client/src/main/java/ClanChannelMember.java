@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,9 +16,6 @@ public class ClanChannelMember {
 	@Export("rank")
 	public byte rank;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -98830189
-	)
 	@Export("world")
 	public int world;
 	@ObfuscatedName("al")
@@ -39,7 +35,7 @@ public class ClanChannelMember {
 	)
 	@Export("ByteArrayPool_getArrayBool")
 	public static byte[] ByteArrayPool_getArrayBool(int var0, boolean var1) {
-		synchronized(ByteArrayPool.field4643) {
+		synchronized(ByteArrayPool.field3844) {
 			byte[] var3;
 			if ((var0 == 100 || var0 < 100 && var1) && ByteArrayPool.ByteArrayPool_smallCount > 0) {
 				var3 = ByteArrayPool.ByteArrayPool_small[--ByteArrayPool.ByteArrayPool_smallCount];
@@ -59,9 +55,9 @@ public class ClanChannelMember {
 				return var3;
 			}
 
-			if ((var0 == 30000 || var0 < 30000 && var1) && ByteArrayPool.field4650 > 0) {
-				var3 = ByteArrayPool.field4658[--ByteArrayPool.field4650];
-				ByteArrayPool.field4658[ByteArrayPool.field4650] = null;
+			if ((var0 == 30000 || var0 < 30000 && var1) && ByteArrayPool.field3840 > 0) {
+				var3 = ByteArrayPool.field3832[--ByteArrayPool.field3840];
+				ByteArrayPool.field3832[ByteArrayPool.field3840] = null;
 				return var3;
 			}
 
@@ -95,15 +91,15 @@ public class ClanChannelMember {
 	)
 	@Export("ByteArrayPool_release")
 	public static void ByteArrayPool_release(byte[] var0) {
-		synchronized(ByteArrayPool.field4643) {
-			if (var0.length == 100 && ByteArrayPool.ByteArrayPool_smallCount < ByteArrayPool.field4651) {
+		synchronized(ByteArrayPool.field3844) {
+			if (var0.length == 100 && ByteArrayPool.ByteArrayPool_smallCount < ByteArrayPool.field3842) {
 				ByteArrayPool.ByteArrayPool_small[++ByteArrayPool.ByteArrayPool_smallCount - 1] = var0;
-			} else if (var0.length == 5000 && ByteArrayPool.ByteArrayPool_mediumCount < ByteArrayPool.field4652) {
+			} else if (var0.length == 5000 && ByteArrayPool.ByteArrayPool_mediumCount < ByteArrayPool.field3839) {
 				ByteArrayPool.ByteArrayPool_medium[++ByteArrayPool.ByteArrayPool_mediumCount - 1] = var0;
-			} else if (var0.length == 10000 && ByteArrayPool.ByteArrayPool_largeCount < ByteArrayPool.field4653) {
+			} else if (var0.length == 10000 && ByteArrayPool.ByteArrayPool_largeCount < ByteArrayPool.field3837) {
 				ByteArrayPool.ByteArrayPool_large[++ByteArrayPool.ByteArrayPool_largeCount - 1] = var0;
-			} else if (var0.length == 30000 && ByteArrayPool.field4650 < ByteArrayPool.field4654) {
-				ByteArrayPool.field4658[++ByteArrayPool.field4650 - 1] = var0;
+			} else if (var0.length == 30000 && ByteArrayPool.field3840 < ByteArrayPool.field3838) {
+				ByteArrayPool.field3832[++ByteArrayPool.field3840 - 1] = var0;
 			} else {
 				if (Varcs.ByteArrayPool_arrays != null) {
 					for (int var2 = 0; var2 < ByteArrayPool.ByteArrayPool_alternativeSizes.length; ++var2) {

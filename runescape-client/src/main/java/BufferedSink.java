@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -10,10 +9,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("BufferedSink")
 public class BufferedSink implements Runnable {
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = 1521097063
-	)
-	static int field4801;
+	static int field3930;
 	@ObfuscatedName("aq")
 	@Export("thread")
 	Thread thread;
@@ -21,24 +17,15 @@ public class BufferedSink implements Runnable {
 	@Export("outputStream")
 	OutputStream outputStream;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1682690735
-	)
 	@Export("capacity")
 	int capacity;
 	@ObfuscatedName("ai")
 	@Export("buffer")
 	byte[] buffer;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1028221283
-	)
 	@Export("position")
 	int position;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -989749177
-	)
 	@Export("limit")
 	int limit;
 	@ObfuscatedName("aa")
@@ -143,6 +130,8 @@ public class BufferedSink implements Runnable {
 
 	}
 
+//	@Export("run")
+//	@ObfuscatedName("run")
 	public void run() {
 		do {
 			int var1;

@@ -6,16 +6,14 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("ak")
 @Implements("HttpRequest")
 public class HttpRequest {
 	@ObfuscatedName("ag")
-	static String[] field43;
+	static String[] field27;
 	@ObfuscatedName("aq")
 	@Export("connection")
 	final HttpsURLConnection connection;
@@ -29,7 +27,7 @@ public class HttpRequest {
 	@ObfuscatedSignature(
 		descriptor = "Lau;"
 	)
-	final HttpMethod field38;
+	final HttpMethod field32;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lsz;"
@@ -40,31 +38,26 @@ public class HttpRequest {
 	@Export("requestInitialized")
 	boolean requestInitialized;
 	@ObfuscatedName("as")
-	@Export("followRedirects")
-	boolean followRedirects;
+	boolean field29;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 2069293369
-	)
-	@Export("connectionTimeout")
-	int connectionTimeout;
+	int field30;
 
 	@ObfuscatedSignature(
 		descriptor = "(Ljava/net/URL;Lau;Lqw;Z)V"
 	)
 	public HttpRequest(URL var1, HttpMethod var2, HttpHeaders var3, boolean var4) throws IOException {
 		this.requestInitialized = false;
-		this.followRedirects = false;
-		this.connectionTimeout = 300000;
-		if (!var2.method63()) {
+		this.field29 = false;
+		this.field30 = 300000;
+		if (!var2.method22()) {
 			throw new UnsupportedEncodingException("Unsupported request method used " + var2.getName());
 		} else {
 			this.connection = (HttpsURLConnection)var1.openConnection();
 			if (!var4) {
-				this.connection.setSSLSocketFactory(SecureRandomSSLSocketFactory.method167());
+				this.connection.setSSLSocketFactory(SecureRandomSSLSocketFactory.method48());
 			}
 
-			this.field38 = var2;
+			this.field32 = var2;
 			this.httpHeaders = var3 != null ? var3 : new HttpHeaders();
 		}
 	}
@@ -117,9 +110,9 @@ public class HttpRequest {
 	@Export("initializeRequest")
 	void initializeRequest() throws ProtocolException {
 		if (!this.requestInitialized) {
-			this.connection.setRequestMethod(this.field38.getName());
+			this.connection.setRequestMethod(this.field32.getName());
 			this.httpHeaders.setRequestProperties(this.connection);
-			if (this.field38.method68() && this.httpPayload != null) {
+			if (this.field32.method24() && this.httpPayload != null) {
 				this.connection.setDoOutput(true);
 				ByteArrayOutputStream var1 = new ByteArrayOutputStream();
 
@@ -138,8 +131,8 @@ public class HttpRequest {
 				}
 			}
 
-			this.connection.setConnectTimeout(this.connectionTimeout);
-			this.connection.setInstanceFollowRedirects(this.followRedirects);
+			this.connection.setConnectTimeout(this.field30);
+			this.connection.setInstanceFollowRedirects(this.field29);
 			this.requestInitialized = true;
 		}
 	}
@@ -189,8 +182,8 @@ public class HttpRequest {
 	}
 
 	@ObfuscatedName("aw")
-	static double method84(double var0, double var2, double var4) {
-		return class140.method3167((var0 - var2) / var4) / var4;
+	static double method30(double var0, double var2, double var4) {
+		return class140.method752((var0 - var2) / var4) / var4;
 	}
 
 	@ObfuscatedName("ac")
@@ -198,8 +191,8 @@ public class HttpRequest {
 		descriptor = "(Ljava/lang/String;II)V",
 		garbageValue = "-2021156366"
 	)
-	static final void method88(String var0, int var1) {
-		PacketBufferNode var2 = ViewportMouse.getPacketBufferNode(ClientPacket.field3240, Client.packetWriter.isaacCipher);
+	static final void method36(String var0, int var1) {
+		PacketBufferNode var2 = ViewportMouse.getPacketBufferNode(ClientPacket.field2621, Client.packetWriter.isaacCipher);
 		var2.packetBuffer.writeByte(class145.stringCp1252NullTerminatedByteSize(var0) + 1);
 		var2.packetBuffer.writeStringCp1252NullTerminated(var0);
 		var2.packetBuffer.writeByteSub(var1);
@@ -211,8 +204,8 @@ public class HttpRequest {
 		descriptor = "(ILdc;ZB)I",
 		garbageValue = "-76"
 	)
-	static int method98(int var0, Script var1, boolean var2) {
-		if (var0 == ScriptOpcodes.LOGOUT) {
+	static int method37(int var0, Script var1, boolean var2) {
+		if (var0 == 5630) {
 			Client.logoutTimer = 250;
 			return 1;
 		} else {

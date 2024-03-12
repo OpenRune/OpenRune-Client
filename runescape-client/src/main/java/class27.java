@@ -12,15 +12,15 @@ public class class27 {
 	@Export("soundSystem")
 	static SoundSystem soundSystem;
 	@ObfuscatedName("aa")
-	int[] field127;
+	int[] field80;
 	@ObfuscatedName("az")
-	int[] field128;
+	int[] field81;
 
 	public class27() {
-		this.field127 = new int[112];
-		this.field128 = new int[192];
-		Arrays.fill(this.field127, 3);
-		Arrays.fill(this.field128, 3);
+		this.field80 = new int[112];
+		this.field81 = new int[192];
+		Arrays.fill(this.field80, 3);
+		Arrays.fill(this.field81, 3);
 	}
 
 	@ObfuscatedName("aq")
@@ -28,9 +28,9 @@ public class class27 {
 		descriptor = "(IIB)V",
 		garbageValue = "-77"
 	)
-	public void method359(int var1, int var2) {
-		if (this.method386(var1) && this.method369(var2)) {
-			this.field127[var1] = var2;
+	public void method92(int var1, int var2) {
+		if (this.method100(var1) && this.method102(var2)) {
+			this.field80[var1] = var2;
 		}
 
 	}
@@ -40,9 +40,9 @@ public class class27 {
 		descriptor = "(CII)V",
 		garbageValue = "1201352236"
 	)
-	public void method360(char var1, int var2) {
-		if (this.method377(var1) && this.method369(var2)) {
-			this.field128[var1] = var2;
+	public void method93(char var1, int var2) {
+		if (this.method101(var1) && this.method102(var2)) {
+			this.field81[var1] = var2;
 		}
 
 	}
@@ -52,8 +52,8 @@ public class class27 {
 		descriptor = "(II)I",
 		garbageValue = "1745274365"
 	)
-	public int method361(int var1) {
-		return this.method386(var1) ? this.field127[var1] : 0;
+	public int method94(int var1) {
+		return this.method100(var1) ? this.field80[var1] : 0;
 	}
 
 	@ObfuscatedName("ai")
@@ -61,8 +61,8 @@ public class class27 {
 		descriptor = "(CI)I",
 		garbageValue = "155074636"
 	)
-	public int method362(char var1) {
-		return this.method377(var1) ? this.field128[var1] : 0;
+	public int method95(char var1) {
+		return this.method101(var1) ? this.field81[var1] : 0;
 	}
 
 	@ObfuscatedName("ar")
@@ -70,8 +70,8 @@ public class class27 {
 		descriptor = "(II)Z",
 		garbageValue = "1589962869"
 	)
-	public boolean method363(int var1) {
-		return this.method386(var1) && (this.field127[var1] == 1 || this.field127[var1] == 3);
+	public boolean method96(int var1) {
+		return this.method100(var1) && (this.field80[var1] == 1 || this.field80[var1] == 3);
 	}
 
 	@ObfuscatedName("as")
@@ -79,8 +79,8 @@ public class class27 {
 		descriptor = "(CI)Z",
 		garbageValue = "-674999067"
 	)
-	public boolean method358(char var1) {
-		return this.method377(var1) && (this.field128[var1] == 1 || this.field128[var1] == 3);
+	public boolean method97(char var1) {
+		return this.method101(var1) && (this.field81[var1] == 1 || this.field81[var1] == 3);
 	}
 
 	@ObfuscatedName("aa")
@@ -88,8 +88,8 @@ public class class27 {
 		descriptor = "(II)Z",
 		garbageValue = "-729885849"
 	)
-	public boolean method387(int var1) {
-		return this.method386(var1) && (this.field127[var1] == 2 || this.field127[var1] == 3);
+	public boolean method98(int var1) {
+		return this.method100(var1) && (this.field80[var1] == 2 || this.field80[var1] == 3);
 	}
 
 	@ObfuscatedName("az")
@@ -97,8 +97,8 @@ public class class27 {
 		descriptor = "(CI)Z",
 		garbageValue = "-1669763559"
 	)
-	public boolean method380(char var1) {
-		return this.method377(var1) && (this.field128[var1] == 2 || this.field128[var1] == 3);
+	public boolean method99(char var1) {
+		return this.method101(var1) && (this.field81[var1] == 2 || this.field81[var1] == 3);
 	}
 
 	@ObfuscatedName("ao")
@@ -106,7 +106,7 @@ public class class27 {
 		descriptor = "(II)Z",
 		garbageValue = "2047713770"
 	)
-	boolean method386(int var1) {
+	boolean method100(int var1) {
 		if (var1 >= 0 && var1 < 112) {
 			return true;
 		} else {
@@ -120,7 +120,7 @@ public class class27 {
 		descriptor = "(CI)Z",
 		garbageValue = "2055456568"
 	)
-	boolean method377(char var1) {
+	boolean method101(char var1) {
 		if (var1 >= 0 && var1 < 192) {
 			return true;
 		} else {
@@ -134,7 +134,7 @@ public class class27 {
 		descriptor = "(IB)Z",
 		garbageValue = "-51"
 	)
-	boolean method369(int var1) {
+	boolean method102(int var1) {
 		if (var1 >= 0 && var1 < 4) {
 			return true;
 		} else {
@@ -169,7 +169,7 @@ public class class27 {
 							break;
 						}
 
-						var5 = ArchiveLoader.widgetDefinition.method6431(var5.parentId);
+						var5 = ArchiveLoader.widgetDefinition.method1785(var5.parentId);
 						if (var5 == null) {
 							var4 = null;
 							break;
@@ -201,7 +201,7 @@ public class class27 {
 								break;
 							}
 
-							var5 = ArchiveLoader.widgetDefinition.method6431(var5.parentId);
+							var5 = ArchiveLoader.widgetDefinition.method1785(var5.parentId);
 							if (var5 == null) {
 								var4 = null;
 								break;
@@ -221,7 +221,7 @@ public class class27 {
 					Client.widgetClickY = var2;
 					WorldMapLabelSize.widgetDragDuration = 0;
 					Client.isDraggingWidget = false;
-					int var11 = FontName.method9113();
+					int var11 = FontName.method2524();
 					if (var11 != -1) {
 						class363.tempMenuAction = new MenuAction();
 						class363.tempMenuAction.param0 = Client.menuArguments1[var11];

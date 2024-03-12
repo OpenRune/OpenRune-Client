@@ -1,36 +1,32 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("eo")
 public class class127 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 300976639
-	)
-	int field1501;
+	int field1236;
 	@ObfuscatedName("aw")
-	float field1500;
+	float field1235;
 	@ObfuscatedName("al")
-	float field1503;
+	float field1232;
 	@ObfuscatedName("ai")
-	float field1502;
+	float field1231;
 	@ObfuscatedName("ar")
-	float field1499;
+	float field1233;
 	@ObfuscatedName("as")
-	float field1506;
+	float field1234;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Leo;"
 	)
-	class127 field1505;
+	class127 field1230;
 
 	class127() {
-		this.field1503 = Float.MAX_VALUE;
-		this.field1502 = Float.MAX_VALUE;
-		this.field1499 = Float.MAX_VALUE;
-		this.field1506 = Float.MAX_VALUE;
+		this.field1232 = Float.MAX_VALUE;
+		this.field1231 = Float.MAX_VALUE;
+		this.field1233 = Float.MAX_VALUE;
+		this.field1234 = Float.MAX_VALUE;
 	}
 
 	@ObfuscatedName("aq")
@@ -38,13 +34,13 @@ public class class127 {
 		descriptor = "(Luq;II)V",
 		garbageValue = "-1382456271"
 	)
-	void method2994(Buffer var1, int var2) {
-		this.field1501 = var1.readShort();
-		this.field1500 = var1.method9481();
-		this.field1503 = var1.method9481();
-		this.field1502 = var1.method9481();
-		this.field1499 = var1.method9481();
-		this.field1506 = var1.method9481();
+	void method695(Buffer var1, int var2) {
+		this.field1236 = var1.readShort();
+		this.field1235 = var1.method2624();
+		this.field1232 = var1.method2624();
+		this.field1231 = var1.method2624();
+		this.field1233 = var1.method2624();
+		this.field1234 = var1.method2624();
 	}
 
 	@ObfuscatedName("aq")
@@ -81,12 +77,12 @@ public class class127 {
 		descriptor = "([BIIB)Z",
 		garbageValue = "72"
 	)
-	static final boolean method2999(byte[] var0, int var1, int var2) {
+	static final boolean method697(byte[] var0, int var1, int var2) {
 		boolean var3 = true;
 		Buffer var4 = new Buffer(var0);
 		int var5 = -1;
 
-		label71:
+		label57:
 		while (true) {
 			int var6 = var4.readIncrSmallSmart();
 			if (var6 == 0) {
@@ -102,7 +98,7 @@ public class class127 {
 				while (!var8) {
 					var9 = var4.readUShortSmart();
 					if (var9 == 0) {
-						continue label71;
+						continue label57;
 					}
 
 					var7 += var9 - 1;
@@ -115,7 +111,7 @@ public class class127 {
 						ObjectComposition var15 = getObjectDefinition(var5);
 						if (var12 != 22 || !Client.isLowDetail || var15.int1 != 0 || var15.interactType == 1 || var15.boolean2) {
 							if (!var15.needsModelFiles()) {
-								++Client.field621;
+								++Client.field474;
 								var3 = false;
 							}
 
@@ -139,7 +135,7 @@ public class class127 {
 		descriptor = "(III)I",
 		garbageValue = "-1602956230"
 	)
-	static int method2998(int var0, int var1) {
+	static int method698(int var0, int var1) {
 		int var2 = var1 - 334;
 		if (var2 < 0) {
 			var2 = 0;

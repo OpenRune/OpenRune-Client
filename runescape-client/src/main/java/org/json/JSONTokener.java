@@ -4,13 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
+import net.runelite.mapping.ObfuscatedName;
 
-@Implements("JSONTokener")
 public class JSONTokener {
 	boolean useLastChar;
-	int index;
 	Reader reader;
+	int index;
 	char lastChar;
 
 	public JSONTokener(String var1) {
@@ -59,7 +60,7 @@ public class JSONTokener {
 		}
 	}
 
-	public String nextString(char var1) throws JSONException {
+	public String nextTo(char var1) throws JSONException {
 		StringBuffer var3 = new StringBuffer();
 
 		while (true) {
@@ -107,10 +108,10 @@ public class JSONTokener {
 					var3.append('\t');
 					continue;
 				case 'u':
-					var3.append((char)Integer.parseInt(this.next((int)4), 16));
+					var3.append((char)Integer.parseInt(this.next(4), 16));
 					continue;
 				case 'x':
-					var3.append((char)Integer.parseInt(this.next((int)2), 16));
+					var3.append((char)Integer.parseInt(this.next(2), 16));
 					continue;
 				}
 			default:
@@ -176,7 +177,7 @@ public class JSONTokener {
 		switch(var1) {
 		case '"':
 		case '\'':
-			return this.nextString(var1);
+			return this.nextTo(var1);
 		case '(':
 		case '[':
 			this.back();
@@ -197,91 +198,6 @@ public class JSONTokener {
 			} else {
 				return JSONObject.stringToValue(var2);
 			}
-		}
-	}
-
-	public boolean more() throws JSONException {
-		char var1 = this.next();
-		if (var1 == 0) {
-			return false;
-		} else {
-			this.back();
-			return true;
-		}
-	}
-
-	public char next(char var1) throws JSONException {
-		char var2 = this.next();
-		if (var2 != var1) {
-			throw this.syntaxError("Expected '" + var1 + "' and instead saw '" + var2 + "'");
-		} else {
-			return var2;
-		}
-	}
-
-	public String nextTo(char var1) throws JSONException {
-		StringBuffer var2 = new StringBuffer();
-
-		while (true) {
-			char var3 = this.next();
-			if (var3 == var1 || var3 == 0 || var3 == '\n' || var3 == '\r') {
-				if (var3 != 0) {
-					this.back();
-				}
-
-				return var2.toString().trim();
-			}
-
-			var2.append(var3);
-		}
-	}
-
-	public char skipTo(char var1) throws JSONException {
-		char var2;
-		try {
-			int var3 = this.index;
-			this.reader.mark(Integer.MAX_VALUE);
-
-			do {
-				var2 = this.next();
-				if (var2 == 0) {
-					this.reader.reset();
-					this.index = var3;
-					return var2;
-				}
-			} while(var2 != var1);
-		} catch (IOException var5) {
-			throw new JSONException(var5);
-		}
-
-		this.back();
-		return var2;
-	}
-
-	public String nextTo(String var1) throws JSONException {
-		StringBuffer var3 = new StringBuffer();
-
-		while (true) {
-			char var2 = this.next();
-			if (var1.indexOf(var2) >= 0 || var2 == 0 || var2 == '\n' || var2 == '\r') {
-				if (var2 != 0) {
-					this.back();
-				}
-
-				return var3.toString().trim();
-			}
-
-			var3.append(var2);
-		}
-	}
-
-	public static int dehexchar(char var0) {
-		if (var0 >= '0' && var0 <= '9') {
-			return var0 - '0';
-		} else if (var0 >= 'A' && var0 <= 'F') {
-			return var0 - '7';
-		} else {
-			return var0 >= 'a' && var0 <= 'f' ? var0 - 'W' : -1;
 		}
 	}
 }

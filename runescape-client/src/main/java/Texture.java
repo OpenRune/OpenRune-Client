@@ -13,16 +13,16 @@ public class Texture extends Node {
 	@Export("averageRGB")
 	int averageRGB;
 	@ObfuscatedName("as")
-	boolean field2767;
+	boolean field2226;
 	@ObfuscatedName("aa")
 	@Export("fileIds")
 	int[] fileIds;
 	@ObfuscatedName("az")
-	int[] field2773;
+	int[] field2234;
 	@ObfuscatedName("ao")
-	int[] field2775;
+	int[] field2232;
 	@ObfuscatedName("au")
-	int[] field2772;
+	int[] field2233;
 	@ObfuscatedName("ak")
 	@Export("animationDirection")
 	int animationDirection;
@@ -42,7 +42,7 @@ public class Texture extends Node {
 	Texture(Buffer var1) {
 		this.isLoaded = false;
 		this.averageRGB = var1.readUnsignedShort();
-		this.field2767 = var1.readUnsignedByte() == 1;
+		this.field2226 = var1.readUnsignedByte() == 1;
 		int var2 = var1.readUnsignedByte();
 		if (var2 >= 1 && var2 <= 4) {
 			this.fileIds = new int[var2];
@@ -53,25 +53,25 @@ public class Texture extends Node {
 			}
 
 			if (var2 > 1) {
-				this.field2773 = new int[var2 - 1];
+				this.field2234 = new int[var2 - 1];
 
 				for (var3 = 0; var3 < var2 - 1; ++var3) {
-					this.field2773[var3] = var1.readUnsignedByte();
+					this.field2234[var3] = var1.readUnsignedByte();
 				}
 			}
 
 			if (var2 > 1) {
-				this.field2775 = new int[var2 - 1];
+				this.field2232 = new int[var2 - 1];
 
 				for (var3 = 0; var3 < var2 - 1; ++var3) {
-					this.field2775[var3] = var1.readUnsignedByte();
+					this.field2232[var3] = var1.readUnsignedByte();
 				}
 			}
 
-			this.field2772 = new int[var2];
+			this.field2233 = new int[var2];
 
 			for (var3 = 0; var3 < var2; ++var3) {
-				this.field2772[var3] = var1.readInt();
+				this.field2233[var3] = var1.readInt();
 			}
 
 			this.animationDirection = var1.readUnsignedByte();
@@ -99,11 +99,11 @@ public class Texture extends Node {
 		this.pixels = new int[var5];
 
 		for (int var6 = 0; var6 < this.fileIds.length; ++var6) {
-			IndexedSprite var7 = class159.method3418(var4, this.fileIds[var6]);
+			IndexedSprite var7 = class159.method842(var4, this.fileIds[var6]);
 			var7.normalize();
 			byte[] var8 = var7.pixels;
 			int[] var9 = var7.palette;
-			int var10 = this.field2772[var6];
+			int var10 = this.field2233[var6];
 			if ((var10 & -16777216) == 16777216) {
 			}
 
@@ -134,7 +134,7 @@ public class Texture extends Node {
 			if (var6 == 0) {
 				var11 = 0;
 			} else {
-				var11 = this.field2773[var6 - 1];
+				var11 = this.field2234[var6 - 1];
 			}
 
 			if (var11 == 0) {

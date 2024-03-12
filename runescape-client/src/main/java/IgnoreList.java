@@ -10,14 +10,14 @@ public class IgnoreList extends UserList {
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	final LoginType field4726;
+	final LoginType field3877;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lte;)V"
 	)
 	public IgnoreList(LoginType var1) {
 		super(400);
-		this.field4726 = var1;
+		this.field3877 = var1;
 	}
 
 	@ObfuscatedName("aq")
@@ -50,24 +50,16 @@ public class IgnoreList extends UserList {
 		while (var1.offset < var2) {
 			int var3 = var1.readUnsignedByte();
 			if (var3 == 4) {
-				Username var10 = new Username(var1.readStringCp1252NullTerminated(), this.field4726);
-				if (!var10.hasCleanName()) {
-					throw new IllegalStateException();
-				}
-
-				boolean var11 = false;
-				InterfaceParent.friendSystem.removeIgnore(var10.getName(), var11);
+				Username var4 = new Username(var1.readStringCp1252NullTerminated(), this.field3877);
+				boolean var5 = false;
+				InterfaceParent.friendSystem.removeIgnore(var4.getName(), var5);
 			} else {
-				boolean var4 = (var3 & 1) != 0;
-				Username var5 = new Username(var1.readStringCp1252NullTerminated(), this.field4726);
-				Username var6 = new Username(var1.readStringCp1252NullTerminated(), this.field4726);
+				boolean var9 = (var3 & 1) != 0;
+				Username var10 = new Username(var1.readStringCp1252NullTerminated(), this.field3877);
+				Username var6 = new Username(var1.readStringCp1252NullTerminated(), this.field3877);
 				var1.readStringCp1252NullTerminated();
-				if (!var5.hasCleanName()) {
-					throw new IllegalStateException();
-				}
-
-				Ignored var7 = (Ignored)this.getByCurrentUsername(var5);
-				if (var4) {
+				Ignored var7 = (Ignored)this.getByCurrentUsername(var10);
+				if (var9) {
 					Ignored var8 = (Ignored)this.getByCurrentUsername(var6);
 					if (var8 != null && var7 != var8) {
 						if (var7 != null) {
@@ -79,11 +71,11 @@ public class IgnoreList extends UserList {
 				}
 
 				if (var7 != null) {
-					this.changeName(var7, var5, var6);
+					this.changeName(var7, var10, var6);
 				} else if (this.getSize() < 400) {
-					int var9 = this.getSize();
-					var7 = (Ignored)this.addLast(var5, var6);
-					var7.id = var9;
+					int var11 = this.getSize();
+					var7 = (Ignored)this.addLast(var10, var6);
+					var7.id = var11;
 				}
 			}
 		}
@@ -95,7 +87,7 @@ public class IgnoreList extends UserList {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "-5"
 	)
-	static final void method8240(String var0) {
+	static final void method2268(String var0) {
 		PacketBufferNode var1 = ViewportMouse.getPacketBufferNode(ClientPacket.FRIEND_ADDUSER, Client.packetWriter.isaacCipher);
 		var1.packetBuffer.writeByte(class145.stringCp1252NullTerminatedByteSize(var0));
 		var1.packetBuffer.writeStringCp1252NullTerminated(var0);

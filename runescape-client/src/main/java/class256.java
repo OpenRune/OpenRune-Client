@@ -1,22 +1,19 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("jc")
-@Implements("WorldMapID")
-public class WorldMapID {
+public class class256 {
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Ljc;"
 	)
-	static final WorldMapID field2659;
+	static final class256 field2136;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Ljc;"
 	)
-	static final WorldMapID field2658;
+	static final class256 field2137;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "[Lcj;"
@@ -24,19 +21,15 @@ public class WorldMapID {
 	@Export("World_worlds")
 	static World[] World_worlds;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1317539837
-	)
-	@Export("value")
-	final int value;
+	final int field2138;
 
 	static {
-		field2659 = new WorldMapID(0);
-		field2658 = new WorldMapID(1);
+		field2136 = new class256(0);
+		field2137 = new class256(1);
 	}
 
-	WorldMapID(int var1) {
-		this.value = var1;
+	class256(int var1) {
+		this.field2138 = var1;
 	}
 
 	@ObfuscatedName("ar")
@@ -44,8 +37,8 @@ public class WorldMapID {
 		descriptor = "(Ljava/lang/CharSequence;IB)I",
 		garbageValue = "101"
 	)
-	public static int method5045(CharSequence var0, int var1) {
-		return Script.method2242(var0, var1, true);
+	public static int method1376(CharSequence var0, int var1) {
+		return Script.method455(var0, var1, true);
 	}
 
 	@ObfuscatedName("bs")
@@ -53,7 +46,7 @@ public class WorldMapID {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1075667756"
 	)
-	static int method5043(int var0, Script var1, boolean var2) {
+	static int method1377(int var0, Script var1, boolean var2) {
 		return 2;
 	}
 
@@ -69,8 +62,8 @@ public class WorldMapID {
 		int var3 = 0;
 
 		for (int var4 = 0; var4 < ItemComposition.ItemDefinition_fileCount; ++var4) {
-			ItemComposition var9 = ArchiveDiskActionHandler.ItemDefinition_get(var4);
-			if ((!var1 || var9.isTradable) && var9.noteTemplate == -1 && var9.name.toLowerCase().indexOf(var0) != -1) {
+			ItemComposition var5 = ArchiveDiskActionHandler.ItemDefinition_get(var4);
+			if ((!var1 || var5.isTradable) && var5.noteTemplate == -1 && var5.name.toLowerCase().indexOf(var0) != -1) {
 				if (var3 >= 250) {
 					class207.foundItemIdCount = -1;
 					class73.foundItemIds = null;
@@ -96,8 +89,8 @@ public class WorldMapID {
 		class207.foundItemIdCount = var3;
 		String[] var8 = new String[class207.foundItemIdCount];
 
-		for (int var5 = 0; var5 < class207.foundItemIdCount; ++var5) {
-			var8[var5] = ArchiveDiskActionHandler.ItemDefinition_get(var2[var5]).name;
+		for (int var9 = 0; var9 < class207.foundItemIdCount; ++var9) {
+			var8[var9] = ArchiveDiskActionHandler.ItemDefinition_get(var2[var9]).name;
 		}
 
 		short[] var10 = class73.foundItemIds;

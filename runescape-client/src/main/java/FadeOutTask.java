@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,29 +13,26 @@ public class FadeOutTask extends SongTask {
 	@ObfuscatedSignature(
 		descriptor = "Lmy;"
 	)
-	MusicSong field4622;
+	MusicSong field3812;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1681384595
-	)
-	int field4621;
+	int field3811;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lqe;IZI)V"
 	)
 	public FadeOutTask(SongTask var1, int var2, boolean var3, int var4) {
 		super(var1);
-		this.field4622 = null;
-		this.field4621 = 0;
-		super.field4627 = "FadeOutTask";
+		this.field3812 = null;
+		this.field3811 = 0;
+		super.field3818 = "FadeOutTask";
 		if (var2 >= 0) {
-			if (var3 && var2 < class321.field3478.size()) {
-				this.field4622 = (MusicSong)class321.field3478.get(var2);
+			if (var3 && var2 < class321.field2849.size()) {
+				this.field3812 = (MusicSong)class321.field2849.get(var2);
 			} else if (!var3 && var2 < class321.musicSongs.size()) {
-				this.field4622 = (MusicSong)class321.musicSongs.get(var2);
+				this.field3812 = (MusicSong)class321.musicSongs.get(var2);
 			}
 
-			this.field4621 = var4;
+			this.field3811 = var4;
 		}
 	}
 
@@ -45,28 +41,29 @@ public class FadeOutTask extends SongTask {
 		descriptor = "(I)Z",
 		garbageValue = "-2024199564"
 	)
+	@Export("vmethod8043")
 	public boolean vmethod8043() {
-		if (this.field4622 != null && this.field4622.midiPcmStream != null) {
-			this.field4622.field3597 = true;
+		if (this.field3812 != null && this.field3812.midiPcmStream != null) {
+			this.field3812.field2944 = true;
 
 			try {
-				if (this.field4622.field3602 > 0.0F && this.field4622.midiPcmStream.isReady()) {
-					float var1 = this.field4621 == 0 ? (float)this.field4621 : (float)this.field4622.musicTrackVolume / (float)this.field4621;
-					MusicSong var10000 = this.field4622;
-					var10000.field3602 -= var1 == 0.0F ? (float)this.field4622.musicTrackVolume : var1;
-					if (this.field4622.field3602 < 0.0F) {
-						this.field4622.field3602 = 0.0F;
+				if (this.field3812.field2947 > 0.0F && this.field3812.midiPcmStream.isReady()) {
+					float var1 = this.field3811 == 0 ? (float)this.field3811 : (float)this.field3812.musicTrackVolume / (float)this.field3811;
+					MusicSong var10000 = this.field3812;
+					var10000.field2947 -= var1 == 0.0F ? (float)this.field3812.musicTrackVolume : var1;
+					if (this.field3812.field2947 < 0.0F) {
+						this.field3812.field2947 = 0.0F;
 					}
 
-					this.field4622.midiPcmStream.setPcmStreamVolume((int)this.field4622.field3602);
+					this.field3812.midiPcmStream.setPcmStreamVolume((int)this.field3812.field2947);
 					return false;
 				}
 			} catch (Exception var3) {
-				this.method8017(var3.getMessage());
+				this.method2218(var3.getMessage());
 				return true;
 			}
 
-			this.field4622.field3597 = false;
+			this.field3812.field2944 = false;
 			return true;
 		} else {
 			return true;
@@ -78,7 +75,7 @@ public class FadeOutTask extends SongTask {
 		descriptor = "(B)Lmn;",
 		garbageValue = "0"
 	)
-	static PacketBufferNode method8005() {
+	static PacketBufferNode method2209() {
 		return PacketBufferNode.PacketBufferNode_packetBufferNodeCount == 0 ? new PacketBufferNode() : PacketBufferNode.PacketBufferNode_packetBufferNodes[--PacketBufferNode.PacketBufferNode_packetBufferNodeCount];
 	}
 
@@ -93,13 +90,13 @@ public class FadeOutTask extends SongTask {
 		if (var1 != null) {
 			return var1;
 		} else {
-			byte[] var2 = DbRowType.field5151.takeFile(38, var0);
+			byte[] var2 = DbRowType.field4214.takeFile(38, var0);
 			var1 = new DbRowType();
 			if (var2 != null) {
-				var1.method9374(new Buffer(var2));
+				var1.method2581(new Buffer(var2));
 			}
 
-			var1.method9377();
+			var1.method2584();
 			DbRowType.DBRowType_cache.put(var1, (long)var0);
 			return var1;
 		}

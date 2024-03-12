@@ -5,11 +5,13 @@ import net.runelite.mapping.ObfuscatedSignature;
 @ObfuscatedName("iq")
 public abstract class class224 {
 	@ObfuscatedName("ai")
-	String field2408;
+	String field1939;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lit;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final class221 this$0;
 
 	@ObfuscatedSignature(
@@ -17,7 +19,7 @@ public abstract class class224 {
 	)
 	class224(class221 var1, String var2) {
 		this.this$0 = var1;
-		this.field2408 = var2;
+		this.field1939 = var2;
 	}
 
 	@ObfuscatedName("aq")
@@ -25,6 +27,7 @@ public abstract class class224 {
 		descriptor = "(I)I",
 		garbageValue = "2105911105"
 	)
+	@Export("vmethod4366")
 	public abstract int vmethod4366();
 
 	@ObfuscatedName("aw")
@@ -32,6 +35,7 @@ public abstract class class224 {
 		descriptor = "(S)I",
 		garbageValue = "-8310"
 	)
+	@Export("vmethod4368")
 	public int vmethod4368() {
 		return -1;
 	}
@@ -41,6 +45,7 @@ public abstract class class224 {
 		descriptor = "(B)Ljava/lang/String;",
 		garbageValue = "0"
 	)
+	@Export("vmethod4367")
 	public String vmethod4367() {
 		return null;
 	}
@@ -50,8 +55,8 @@ public abstract class class224 {
 		descriptor = "(I)Ljava/lang/String;",
 		garbageValue = "-1193221178"
 	)
-	public String method4365() {
-		return this.field2408;
+	public String method1158() {
+		return this.field1939;
 	}
 
 	@ObfuscatedName("aq")
@@ -59,7 +64,7 @@ public abstract class class224 {
 		descriptor = "(IIIIS)I",
 		garbageValue = "13055"
 	)
-	static final int method4378(int var0, int var1, int var2, int var3) {
+	static final int method1156(int var0, int var1, int var2, int var3) {
 		return var2 * var1 - var3 * var0 >> 16;
 	}
 
@@ -105,7 +110,7 @@ public abstract class class224 {
 	)
 	@Export("FriendSystem_invalidateIgnoreds")
 	static final void FriendSystem_invalidateIgnoreds() {
-		Script.method2240();
+		Script.method454();
 		if (Projectile.friendsChat != null) {
 			Projectile.friendsChat.invalidateIgnoreds();
 		}

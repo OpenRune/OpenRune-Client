@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,7 +10,7 @@ public enum HorizontalAlignment implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lhj;"
 	)
-	field1950(2, 0),
+	field1556(2, 0),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lhj;"
@@ -22,21 +21,15 @@ public enum HorizontalAlignment implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lhj;"
 	)
-	field1951(0, 2);
+	field1555(0, 2);
 
 	@ObfuscatedName("ji")
 	@Export("regionMapArchives")
 	static byte[][] regionMapArchives;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1967956355
-	)
 	@Export("value")
 	public final int value;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1226860911
-	)
 	@Export("id")
 	final int id;
 
@@ -60,7 +53,7 @@ public enum HorizontalAlignment implements Enum {
 		descriptor = "(I)V",
 		garbageValue = "628076490"
 	)
-	public static void method3694() {
+	public static void method945() {
 		VarpDefinition.VarpDefinition_cached.clear();
 	}
 
@@ -69,7 +62,7 @@ public enum HorizontalAlignment implements Enum {
 		descriptor = "(CI)Z",
 		garbageValue = "537001060"
 	)
-	static boolean method3688(char var0) {
+	static boolean method946(char var0) {
 		return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"ï¿½$%^&*()-_=+[{]};:'@#~,<.>/?\\| ".indexOf(var0) != -1;
 	}
 }

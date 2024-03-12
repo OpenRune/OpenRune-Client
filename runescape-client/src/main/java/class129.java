@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,83 +8,80 @@ public class class129 {
 	@ObfuscatedSignature(
 		descriptor = "Loy;"
 	)
-	static GameBuild field1536;
+	static GameBuild field1245;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 335239889
-	)
-	public final int field1528;
+	public final int field1259;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lez;"
 	)
-	public class129 field1522;
+	public class129 field1258;
 	@ObfuscatedName("al")
-	float[][] field1523;
+	float[][] field1251;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "[Lsr;"
 	)
-	final class469[] field1524;
+	final class469[] field1257;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "[Lsr;"
 	)
-	class469[] field1525;
+	class469[] field1255;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "[Lsr;"
 	)
-	class469[] field1526;
+	class469[] field1256;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lsr;"
 	)
-	class469 field1527;
+	class469 field1252;
 	@ObfuscatedName("az")
-	boolean field1533;
+	boolean field1247;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lsr;"
 	)
-	class469 field1529;
+	class469 field1254;
 	@ObfuscatedName("au")
-	boolean field1530;
+	boolean field1246;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Lsr;"
 	)
-	class469 field1531;
+	class469 field1253;
 	@ObfuscatedName("ah")
-	float[][] field1535;
+	float[][] field1249;
 	@ObfuscatedName("aj")
-	float[][] field1521;
+	float[][] field1250;
 	@ObfuscatedName("af")
-	float[][] field1534;
+	float[][] field1248;
 
 	@ObfuscatedSignature(
 		descriptor = "(ILuq;Z)V"
 	)
 	public class129(int var1, Buffer var2, boolean var3) {
-		this.field1527 = new class469();
-		this.field1533 = true;
-		this.field1529 = new class469();
-		this.field1530 = true;
-		this.field1531 = new class469();
-		this.field1528 = var2.readShort();
-		this.field1524 = new class469[var1];
-		this.field1525 = new class469[this.field1524.length];
-		this.field1526 = new class469[this.field1524.length];
-		this.field1523 = new float[this.field1524.length][3];
+		this.field1252 = new class469();
+		this.field1247 = true;
+		this.field1254 = new class469();
+		this.field1246 = true;
+		this.field1253 = new class469();
+		this.field1259 = var2.readShort();
+		this.field1257 = new class469[var1];
+		this.field1255 = new class469[this.field1257.length];
+		this.field1256 = new class469[this.field1257.length];
+		this.field1251 = new float[this.field1257.length][3];
 
-		for (int var4 = 0; var4 < this.field1524.length; ++var4) {
-			this.field1524[var4] = new class469(var2, var3);
-			this.field1523[var4][0] = var2.method9481();
-			this.field1523[var4][1] = var2.method9481();
-			this.field1523[var4][2] = var2.method9481();
+		for (int var4 = 0; var4 < this.field1257.length; ++var4) {
+			this.field1257[var4] = new class469(var2, var3);
+			this.field1251[var4][0] = var2.method2624();
+			this.field1251[var4][1] = var2.method2624();
+			this.field1251[var4][2] = var2.method2624();
 		}
 
-		this.method3023();
+		this.method703();
 	}
 
 	@ObfuscatedName("aq")
@@ -93,24 +89,24 @@ public class class129 {
 		descriptor = "(S)V",
 		garbageValue = "-3568"
 	)
-	void method3023() {
-		this.field1535 = new float[this.field1524.length][3];
-		this.field1521 = new float[this.field1524.length][3];
-		this.field1534 = new float[this.field1524.length][3];
-		class469 var1 = UserComparator9.method2965();
+	void method703() {
+		this.field1249 = new float[this.field1257.length][3];
+		this.field1250 = new float[this.field1257.length][3];
+		this.field1248 = new float[this.field1257.length][3];
+		class469 var1 = UserComparator9.method685();
 
-		for (int var2 = 0; var2 < this.field1524.length; ++var2) {
-			class469 var3 = this.method3046(var2);
-			var1.method8629(var3);
-			var1.method8685();
-			this.field1535[var2] = var1.method8634();
-			this.field1521[var2][0] = var3.field4843[12];
-			this.field1521[var2][1] = var3.field4843[13];
-			this.field1521[var2][2] = var3.field4843[14];
-			this.field1534[var2] = var3.method8623();
+		for (int var2 = 0; var2 < this.field1257.length; ++var2) {
+			class469 var3 = this.method704(var2);
+			var1.method2379(var3);
+			var1.method2387();
+			this.field1249[var2] = var1.method2376();
+			this.field1250[var2][0] = var3.field3976[12];
+			this.field1250[var2][1] = var3.field3976[13];
+			this.field1250[var2][2] = var3.field3976[14];
+			this.field1248[var2] = var3.method2388();
 		}
 
-		var1.method8648();
+		var1.method2373();
 	}
 
 	@ObfuscatedName("aw")
@@ -118,8 +114,8 @@ public class class129 {
 		descriptor = "(II)Lsr;",
 		garbageValue = "2146006295"
 	)
-	class469 method3046(int var1) {
-		return this.field1524[var1];
+	class469 method704(int var1) {
+		return this.field1257[var1];
 	}
 
 	@ObfuscatedName("al")
@@ -127,17 +123,17 @@ public class class129 {
 		descriptor = "(II)Lsr;",
 		garbageValue = "1910783398"
 	)
-	class469 method3024(int var1) {
-		if (this.field1525[var1] == null) {
-			this.field1525[var1] = new class469(this.method3046(var1));
-			if (this.field1522 != null) {
-				this.field1525[var1].method8633(this.field1522.method3024(var1));
+	class469 method705(int var1) {
+		if (this.field1255[var1] == null) {
+			this.field1255[var1] = new class469(this.method704(var1));
+			if (this.field1258 != null) {
+				this.field1255[var1].method2383(this.field1258.method705(var1));
 			} else {
-				this.field1525[var1].method8633(class469.field4844);
+				this.field1255[var1].method2383(class469.field3972);
 			}
 		}
 
-		return this.field1525[var1];
+		return this.field1255[var1];
 	}
 
 	@ObfuscatedName("ai")
@@ -145,13 +141,13 @@ public class class129 {
 		descriptor = "(II)Lsr;",
 		garbageValue = "953941007"
 	)
-	class469 method3052(int var1) {
-		if (this.field1526[var1] == null) {
-			this.field1526[var1] = new class469(this.method3024(var1));
-			this.field1526[var1].method8685();
+	class469 method706(int var1) {
+		if (this.field1256[var1] == null) {
+			this.field1256[var1] = new class469(this.method705(var1));
+			this.field1256[var1].method2387();
 		}
 
-		return this.field1526[var1];
+		return this.field1256[var1];
 	}
 
 	@ObfuscatedName("ar")
@@ -159,10 +155,10 @@ public class class129 {
 		descriptor = "(Lsr;I)V",
 		garbageValue = "-618236681"
 	)
-	void method3027(class469 var1) {
-		this.field1527.method8629(var1);
-		this.field1533 = true;
-		this.field1530 = true;
+	void method708(class469 var1) {
+		this.field1252.method2379(var1);
+		this.field1247 = true;
+		this.field1246 = true;
 	}
 
 	@ObfuscatedName("as")
@@ -170,8 +166,8 @@ public class class129 {
 		descriptor = "(B)Lsr;",
 		garbageValue = "-107"
 	)
-	class469 method3056() {
-		return this.field1527;
+	class469 method709() {
+		return this.field1252;
 	}
 
 	@ObfuscatedName("aa")
@@ -179,17 +175,17 @@ public class class129 {
 		descriptor = "(I)Lsr;",
 		garbageValue = "-986807821"
 	)
-	class469 method3028() {
-		if (this.field1533) {
-			this.field1529.method8629(this.method3056());
-			if (this.field1522 != null) {
-				this.field1529.method8633(this.field1522.method3028());
+	class469 method710() {
+		if (this.field1247) {
+			this.field1254.method2379(this.method709());
+			if (this.field1258 != null) {
+				this.field1254.method2383(this.field1258.method710());
 			}
 
-			this.field1533 = false;
+			this.field1247 = false;
 		}
 
-		return this.field1529;
+		return this.field1254;
 	}
 
 	@ObfuscatedName("az")
@@ -197,14 +193,14 @@ public class class129 {
 		descriptor = "(IB)Lsr;",
 		garbageValue = "-105"
 	)
-	public class469 method3060(int var1) {
-		if (this.field1530) {
-			this.field1531.method8629(this.method3052(var1));
-			this.field1531.method8633(this.method3028());
-			this.field1530 = false;
+	public class469 method711(int var1) {
+		if (this.field1246) {
+			this.field1253.method2379(this.method706(var1));
+			this.field1253.method2383(this.method710());
+			this.field1246 = false;
 		}
 
-		return this.field1531;
+		return this.field1253;
 	}
 
 	@ObfuscatedName("ao")
@@ -212,8 +208,8 @@ public class class129 {
 		descriptor = "(II)[F",
 		garbageValue = "-20472245"
 	)
-	float[] method3061(int var1) {
-		return this.field1535[var1];
+	float[] method712(int var1) {
+		return this.field1249[var1];
 	}
 
 	@ObfuscatedName("au")
@@ -221,8 +217,8 @@ public class class129 {
 		descriptor = "(II)[F",
 		garbageValue = "2027097190"
 	)
-	float[] method3031(int var1) {
-		return this.field1521[var1];
+	float[] method713(int var1) {
+		return this.field1250[var1];
 	}
 
 	@ObfuscatedName("ak")
@@ -230,8 +226,8 @@ public class class129 {
 		descriptor = "(IB)[F",
 		garbageValue = "-29"
 	)
-	float[] method3063(int var1) {
-		return this.field1534[var1];
+	float[] method714(int var1) {
+		return this.field1248[var1];
 	}
 
 	@ObfuscatedName("ai")
@@ -239,8 +235,8 @@ public class class129 {
 		descriptor = "(Ljava/lang/CharSequence;I)I",
 		garbageValue = "-1081828510"
 	)
-	public static int method3066(CharSequence var0) {
-		return Script.method2242(var0, 10, true);
+	public static int method707(CharSequence var0) {
+		return Script.method455(var0, 10, true);
 	}
 
 	@ObfuscatedName("kz")
@@ -248,7 +244,7 @@ public class class129 {
 		descriptor = "(II)V",
 		garbageValue = "1910155406"
 	)
-	static final void method3067(int var0) {
+	static final void method715(int var0) {
 		if (var0 >= 0) {
 			int var1 = Client.menuArguments1[var0];
 			int var2 = Client.menuArguments2[var0];
@@ -289,7 +285,7 @@ public class class129 {
 				var10.cycle = Client.cycle;
 				if (!var10.isIf3 || !PcmPlayer.isComponentHidden(var10)) {
 					if (var10.contentType > 0) {
-						GrandExchangeOfferOwnWorldComparator.method1202(var10);
+						GrandExchangeOfferOwnWorldComparator.method351(var10);
 					}
 
 					int var12 = var10.x + var6;
@@ -299,31 +295,31 @@ public class class129 {
 					int var16;
 					if (var10 == Client.clickedWidget) {
 						if (var1 != -1412584499 && !var10.isScrollBar) {
-							ModelData0.field3105 = var0;
-							class103.field1354 = var6;
-							BoundaryObject.field3111 = var7;
+							ModelData0.field2514 = var0;
+							class103.field1125 = var6;
+							BoundaryObject.field2515 = var7;
 							continue;
 						}
 
-						if (Client.isDraggingWidget && Client.field746) {
+						if (Client.isDraggingWidget && Client.field420) {
 							var15 = MouseHandler.MouseHandler_x;
 							var16 = MouseHandler.MouseHandler_y;
 							var15 -= Client.widgetClickX;
 							var16 -= Client.widgetClickY;
-							if (var15 < Client.field765) {
-								var15 = Client.field765;
+							if (var15 < Client.field532) {
+								var15 = Client.field532;
 							}
 
-							if (var15 + var10.width > Client.field765 + Client.clickedWidgetParent.width) {
-								var15 = Client.field765 + Client.clickedWidgetParent.width - var10.width;
+							if (var15 + var10.width > Client.field532 + Client.clickedWidgetParent.width) {
+								var15 = Client.field532 + Client.clickedWidgetParent.width - var10.width;
 							}
 
-							if (var16 < Client.field774) {
-								var16 = Client.field774;
+							if (var16 < Client.field537) {
+								var16 = Client.field537;
 							}
 
-							if (var16 + var10.height > Client.field774 + Client.clickedWidgetParent.height) {
-								var16 = Client.field774 + Client.clickedWidgetParent.height - var10.height;
+							if (var16 + var10.height > Client.field537 + Client.clickedWidgetParent.height) {
+								var16 = Client.field537 + Client.clickedWidgetParent.height - var10.height;
 							}
 
 							var12 = var15;
@@ -407,7 +403,7 @@ public class class129 {
 							}
 
 							if (var10.contentType == 1339) {
-								GrandExchangeOfferNameComparator.method7261(var10, var12, var13, var11);
+								GrandExchangeOfferNameComparator.method2031(var10, var12, var13, var11);
 								Rasterizer2D.Rasterizer2D_setClip(var2, var3, var4, var5);
 								continue;
 							}
@@ -465,7 +461,7 @@ public class class129 {
 							Rasterizer3D.resetRasterClipping();
 						}
 
-						if (Client.isResizable || Client.field570[var11] || Client.gameDrawingMode > 1) {
+						if (Client.isResizable || Client.field431[var11] || Client.gameDrawingMode > 1) {
 							if (var10.type == 0 && !var10.isIf3 && var10.scrollHeight > var10.height) {
 								PlayerCompositionColorTextureOverride.drawScrollBar(var12 + var10.width, var13, var10.scrollY, var10.height, var10.scrollHeight);
 							}
@@ -485,7 +481,7 @@ public class class129 {
 									}
 
 									if (var10.fill) {
-										switch(var10.fillMode.field5286) {
+										switch(var10.fillMode.field4332) {
 										case 1:
 											Rasterizer2D.Rasterizer2D_fillRectangleGradient(var12, var13, var10.width, var10.height, var10.color, var10.color2);
 											break;
@@ -507,7 +503,7 @@ public class class129 {
 								} else if (var10.type == 4) {
 									Font var40 = var10.getFont(ArchiveLoader.widgetDefinition);
 									if (var40 == null) {
-										if (Widget.field3722) {
+										if (Widget.field3035) {
 											UserComparator5.invalidateWidget(var10);
 										}
 									} else {
@@ -546,10 +542,10 @@ public class class129 {
 										}
 
 										if (!var10.isIf3) {
-											var42 = class13.method155(var42, var10);
+											var42 = class13.method42(var42, var10);
 										}
 
-										var40.drawWidgetText(var42, var12, var13, var10.width, var10.height, var20, var10.textShadowed ? 0 : -1, class485.method8809(var10.transparencyTop), var10.textXAlignment, var10.textYAlignment, var10.textLineHeight);
+										var40.drawWidgetText(var42, var12, var13, var10.width, var10.height, var20, var10.textShadowed ? 0 : -1, class485.method2422(var10.transparencyTop), var10.textXAlignment, var10.textYAlignment, var10.textLineHeight);
 									}
 								} else {
 									int var23;
@@ -561,7 +557,7 @@ public class class129 {
 											var38 = var10.getSprite(ArchiveLoader.widgetDefinition, class341.runCs1(var10), InvDefinition.urlRequester);
 											if (var38 != null) {
 												var38.drawTransBgAt(var12, var13);
-											} else if (Widget.field3722) {
+											} else if (Widget.field3035) {
 												UserComparator5.invalidateWidget(var10);
 											}
 										} else {
@@ -572,7 +568,7 @@ public class class129 {
 											}
 
 											if (var38 == null) {
-												if (Widget.field3722) {
+												if (Widget.field3035) {
 													UserComparator5.invalidateWidget(var10);
 												}
 											} else {
@@ -581,7 +577,7 @@ public class class129 {
 												if (!var10.spriteTiling) {
 													var22 = var10.width * 4096 / var20;
 													if (var10.spriteAngle != 0) {
-														var38.method9929(var10.width / 2 + var12, var10.height / 2 + var13, var10.spriteAngle, var22);
+														var38.method2763(var10.width / 2 + var12, var10.height / 2 + var13, var10.spriteAngle, var22);
 													} else if (var14 != 0) {
 														var38.drawTransScaledAt(var12, var13, var10.width, var10.height, 256 - (var14 & 255));
 													} else if (var20 == var10.width && var21 == var10.height) {
@@ -597,7 +593,7 @@ public class class129 {
 													for (var24 = 0; var24 < var22; ++var24) {
 														for (var25 = 0; var25 < var23; ++var25) {
 															if (var10.spriteAngle != 0) {
-																var38.method9929(var20 / 2 + var12 + var24 * var20, var21 / 2 + var13 + var21 * var25, var10.spriteAngle, 4096);
+																var38.method2763(var20 / 2 + var12 + var24 * var20, var21 / 2 + var13 + var21 * var25, var10.spriteAngle, 4096);
 															} else if (var14 != 0) {
 																var38.drawTransAt(var12 + var24 * var20, var13 + var21 * var25, 256 - (var14 & 255));
 															} else {
@@ -641,7 +637,7 @@ public class class129 {
 													var39 = VarpDefinition.localPlayer.getModel();
 												}
 											} else if (var10.modelType == 7) {
-												var39 = var10.field3774.getModel((SequenceDefinition)null, -1, MilliClock.SequenceDefinition_get(VarpDefinition.localPlayer.idleSequence), VarpDefinition.localPlayer.movementFrame);
+												var39 = var10.field3186.getModel((SequenceDefinition)null, -1, MilliClock.SequenceDefinition_get(VarpDefinition.localPlayer.idleSequence), VarpDefinition.localPlayer.movementFrame);
 											} else {
 												NPCComposition var45 = null;
 												NpcOverrides var33 = null;
@@ -651,7 +647,7 @@ public class class129 {
 														NPC var34 = Client.npcs[var25];
 														if (var34 != null) {
 															var45 = var34.definition;
-															var33 = var34.method2669();
+															var33 = var34.method603();
 														}
 													}
 												}
@@ -664,12 +660,12 @@ public class class129 {
 												}
 
 												var39 = var10.getModel(ArchiveLoader.widgetDefinition, var35, var26, var36, VarpDefinition.localPlayer.appearance, var45, var33);
-												if (var39 == null && Widget.field3722) {
+												if (var39 == null && Widget.field3035) {
 													UserComparator5.invalidateWidget(var10);
 												}
 											}
 
-											Rasterizer3D.method5277(var10.width / 2 + var12, var10.height / 2 + var13);
+											Rasterizer3D.method1469(var10.width / 2 + var12, var10.height / 2 + var13);
 											var23 = Rasterizer3D.Rasterizer3D_sine[var10.modelAngleX] * var10.modelZoom >> 16;
 											var24 = Rasterizer3D.Rasterizer3D_cosine[var10.modelAngleX] * var10.modelZoom >> 16;
 											if (var39 != null) {
@@ -678,24 +674,24 @@ public class class129 {
 												} else {
 													var39.calculateBoundsCylinder();
 													if (var10.modelOrthog) {
-														var39.method5708(0, var10.modelAngleY, var10.modelAngleZ, var10.modelAngleX, var10.modelOffsetX, var23 + var22 + var10.modelOffsetY, var24 + var10.modelOffsetY, var10.modelZoom);
+														var39.method1603(0, var10.modelAngleY, var10.modelAngleZ, var10.modelAngleX, var10.modelOffsetX, var23 + var22 + var10.modelOffsetY, var24 + var10.modelOffsetY, var10.modelZoom);
 													} else {
 														var39.drawFrustum(0, var10.modelAngleY, var10.modelAngleZ, var10.modelAngleX, var10.modelOffsetX, var22 + var23 + var10.modelOffsetY, var24 + var10.modelOffsetY);
 													}
 												}
 											}
 
-											Rasterizer3D.method5294();
+											Rasterizer3D.method1468();
 										} else {
 											Font var29;
-											if (var10.type == 8 && var10 == FontName.field5062 && Client.field690 == Client.field689) {
+											if (var10.type == 8 && var10 == FontName.field4142 && Client.field522 == Client.field528) {
 												var19 = 0;
 												var20 = 0;
 												var29 = class141.fontPlain12;
 												String var30 = var10.text;
 
 												String var31;
-												for (var30 = class13.method155(var30, var10); var30.length() > 0; var20 = var20 + var29.ascent + 1) {
+												for (var30 = class13.method42(var30, var10); var30.length() > 0; var20 = var20 + var29.ascent + 1) {
 													var24 = var30.indexOf("<br>");
 													if (var24 != -1) {
 														var31 = var30.substring(0, var24);
@@ -732,7 +728,7 @@ public class class129 {
 												var30 = var10.text;
 												var26 = var25 + var29.ascent + 2;
 
-												for (var30 = class13.method155(var30, var10); var30.length() > 0; var26 = var26 + var29.ascent + 1) {
+												for (var30 = class13.method42(var30, var10); var30.length() > 0; var26 = var26 + var29.ascent + 1) {
 													int var27 = var30.indexOf("<br>");
 													if (var27 != -1) {
 														var31 = var30.substring(0, var27);
@@ -747,7 +743,7 @@ public class class129 {
 											}
 
 											if (var10.type == 9) {
-												if (var10.field3759) {
+												if (var10.field3050) {
 													var19 = var12;
 													var20 = var13 + var10.height;
 													var21 = var12 + var10.width;
@@ -762,22 +758,22 @@ public class class129 {
 												if (var10.lineWid == 1) {
 													Rasterizer2D.Rasterizer2D_drawLine(var19, var20, var21, var22, var10.color);
 												} else {
-													MusicPatchNode.method6381(var19, var20, var21, var22, var10.color, var10.lineWid);
+													MusicPatchNode.method1771(var19, var20, var21, var22, var10.color, var10.lineWid);
 												}
 											} else if (var10.type == 12) {
-												class347 var37 = var10.method6806();
-												class341 var32 = var10.method6823();
-												if (var37 != null && var32 != null && var37.method6562()) {
+												class347 var37 = var10.method1923();
+												class341 var32 = var10.method1924();
+												if (var37 != null && var32 != null && var37.method1865()) {
 													var29 = var10.getFont(ArchiveLoader.widgetDefinition);
 													if (var29 != null) {
-														Client.field740.method10058(var12, var13, var10.width, var10.height, var37.method6507(), var37.method6564(), var37.method6560(), var37.method6561(), var37.method6559());
-														var22 = var10.textShadowed ? var10.spriteShadow : -1;
-														if (!var37.method6557() && var37.method6515().method7778()) {
-															Client.field740.method10059(var32.field3640, var22, var32.field3643, var32.field3639);
-															Client.field740.method10060(var37.method6711(), var29);
+														Client.field677.method2770(var12, var13, var10.width, var10.height, var37.method1866(), var37.method1867(), var37.method1863(), var37.method1864(), var37.method1862());
+														var22 = var10.textShadowed ? var10.spriteShadow * 1074151339 * 1112195843 : -1;
+														if (!var37.method1860() && var37.method1857().method2118()) {
+															Client.field677.method2771(var32.field2983, var22, var32.field2984, var32.field2985);
+															Client.field677.method2772(var37.method1858(), var29);
 														} else {
-															Client.field740.method10059(var10.color, var22, var32.field3643, var32.field3639);
-															Client.field740.method10060(var37.method6515(), var29);
+															Client.field677.method2771(var10.color, var22, var32.field2984, var32.field2985);
+															Client.field677.method2772(var37.method1857(), var29);
 														}
 
 														Rasterizer2D.Rasterizer2D_setClip(var2, var3, var4, var5);

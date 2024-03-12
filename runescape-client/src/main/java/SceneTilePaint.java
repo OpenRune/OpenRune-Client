@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,42 +13,24 @@ public final class SceneTilePaint {
 	@Export("pcmStreamMixer")
 	static PcmStreamMixer pcmStreamMixer;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 677978795
-	)
 	@Export("swColor")
 	int swColor;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1630788437
-	)
 	@Export("seColor")
 	int seColor;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1609665507
-	)
 	@Export("neColor")
 	int neColor;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1064087665
-	)
 	@Export("nwColor")
 	int nwColor;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 273150913
-	)
 	@Export("texture")
 	int texture;
 	@ObfuscatedName("as")
 	@Export("isFlat")
 	boolean isFlat;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 637934421
-	)
 	@Export("rgb")
 	int rgb;
 

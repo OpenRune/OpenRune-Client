@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,22 +8,22 @@ public enum class472 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lsa;"
 	)
-	field4866(2, 1),
+	field3994(2, 1),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lsa;"
 	)
-	field4863(0, 2),
+	field3995(0, 2),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lsa;"
 	)
-	field4864(3, 3),
+	field3993(3, 3),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lsa;"
 	)
-	field4862(1, 10);
+	field3992(1, 10);
 
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
@@ -33,19 +32,13 @@ public enum class472 implements Enum {
 	@Export("options_buttons_2Sprite")
 	static IndexedSprite options_buttons_2Sprite;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -2085928835
-	)
-	final int field4865;
+	final int field3996;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 1509857283
-	)
-	final int field4867;
+	final int field3997;
 
 	class472(int var3, int var4) {
-		this.field4865 = var3;
-		this.field4867 = var4;
+		this.field3996 = var3;
+		this.field3997 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -55,6 +48,6 @@ public enum class472 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field4867;
+		return this.field3997;
 	}
 }

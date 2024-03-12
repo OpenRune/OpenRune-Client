@@ -1,7 +1,6 @@
 import java.net.URL;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,34 +8,25 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("UrlRequest")
 public class UrlRequest {
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 264132147
-	)
-	static int field1446;
+	static int field1204;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 2113744603
-	)
-	static int field1445;
+	static int field1203;
 	@ObfuscatedName("aq")
-	final URL field1447;
+	final URL field1205;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1904658645
-	)
-	volatile int field1448;
+	volatile int field1207;
 	@ObfuscatedName("ar")
 	@Export("response0")
 	volatile byte[] response0;
 
 	static {
-		field1446 = -1;
-		field1445 = -2;
+		field1204 = -1;
+		field1203 = -2;
 	}
 
 	UrlRequest(URL var1) {
-		this.field1448 = field1446;
-		this.field1447 = var1;
+		this.field1207 = field1204;
+		this.field1205 = var1;
 	}
 
 	@ObfuscatedName("aq")
@@ -46,7 +36,7 @@ public class UrlRequest {
 	)
 	@Export("isDone")
 	public boolean isDone() {
-		return this.field1448 != field1446;
+		return this.field1207 != field1204;
 	}
 
 	@ObfuscatedName("aw")
@@ -64,8 +54,8 @@ public class UrlRequest {
 		descriptor = "(B)Ljava/lang/String;",
 		garbageValue = "-122"
 	)
-	public String method2921() {
-		return this.field1447.toString();
+	public String method668() {
+		return this.field1205.toString();
 	}
 
 	@ObfuscatedName("lf")

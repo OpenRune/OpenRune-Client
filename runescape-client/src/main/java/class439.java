@@ -10,6 +10,8 @@ class class439 implements Comparator {
 	@ObfuscatedSignature(
 		descriptor = "Lqw;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final HttpHeaders this$0;
 
 	@ObfuscatedSignature(
@@ -24,12 +26,12 @@ class class439 implements Comparator {
 		descriptor = "(Ljava/util/Map$Entry;Ljava/util/Map$Entry;I)I",
 		garbageValue = "-856053440"
 	)
-	int method8183(Entry var1, Entry var2) {
+	int method2253(Entry var1, Entry var2) {
 		return ((Float)var2.getValue()).compareTo((Float)var1.getValue());
 	}
 
 	public int compare(Object var1, Object var2) {
-		return this.method8183((Entry)var1, (Entry)var2);
+		return this.method2253((Entry)var1, (Entry)var2);
 	}
 
 	public boolean equals(Object var1) {
@@ -41,7 +43,7 @@ class class439 implements Comparator {
 		descriptor = "(Ldz;I)V",
 		garbageValue = "-1619141249"
 	)
-	static final void method8184(Actor var0) {
+	static final void method2254(Actor var0) {
 		var0.isWalking = false;
 		if (var0.movementSequence != -1) {
 			SequenceDefinition var1 = MilliClock.SequenceDefinition_get(var0.movementSequence);
@@ -51,51 +53,51 @@ class class439 implements Comparator {
 					if (var0.movementFrame < var1.frameIds.length && var0.movementFrameCycle > var1.frameLengths[var0.movementFrame]) {
 						var0.movementFrameCycle = 1;
 						++var0.movementFrame;
-						GraphicsObject.method2116(var1, var0.movementFrame, var0.x, var0.y, var0);
+						GraphicsObject.method426(var1, var0.movementFrame, var0.x, var0.y, var0);
 					}
 
 					if (var0.movementFrame >= var1.frameIds.length) {
 						if (var1.frameCount > 0) {
 							var0.movementFrame -= var1.frameCount;
-							if (var1.field2270) {
-								++var0.field1232;
+							if (var1.field1831) {
+								++var0.field1035;
 							}
 
-							if (var0.movementFrame < 0 || var0.movementFrame >= var1.frameIds.length || var1.field2270 && var0.field1232 >= var1.field2269) {
+							if (var0.movementFrame < 0 || var0.movementFrame >= var1.frameIds.length || var1.field1831 && var0.field1035 >= var1.field1841) {
 								var0.movementFrameCycle = 0;
 								var0.movementFrame = 0;
-								var0.field1232 = 0;
+								var0.field1035 = 0;
 							}
 						} else {
 							var0.movementFrameCycle = 0;
 							var0.movementFrame = 0;
 						}
 
-						GraphicsObject.method2116(var1, var0.movementFrame, var0.x, var0.y, var0);
+						GraphicsObject.method426(var1, var0.movementFrame, var0.x, var0.y, var0);
 					}
 				} else if (var1.isCachedModelIdSet()) {
 					++var0.movementFrame;
-					int var2 = var1.method4065();
+					int var2 = var1.method1073();
 					if (var0.movementFrame < var2) {
-						class334.method6394(var1, var0.movementFrame, var0.x, var0.y, var0);
+						class334.method1777(var1, var0.movementFrame, var0.x, var0.y, var0);
 					} else {
 						if (var1.frameCount > 0) {
 							var0.movementFrame -= var1.frameCount;
-							if (var1.field2270) {
-								++var0.field1232;
+							if (var1.field1831) {
+								++var0.field1035;
 							}
 
-							if (var0.movementFrame < 0 || var0.movementFrame >= var2 || var1.field2270 && var0.field1232 >= var1.field2269) {
+							if (var0.movementFrame < 0 || var0.movementFrame >= var2 || var1.field1831 && var0.field1035 >= var1.field1841) {
 								var0.movementFrame = 0;
 								var0.movementFrameCycle = 0;
-								var0.field1232 = 0;
+								var0.field1035 = 0;
 							}
 						} else {
 							var0.movementFrameCycle = 0;
 							var0.movementFrame = 0;
 						}
 
-						class334.method6394(var1, var0.movementFrame, var0.x, var0.y, var0);
+						class334.method1777(var1, var0.movementFrame, var0.x, var0.y, var0);
 					}
 				} else {
 					var0.movementSequence = -1;
@@ -105,11 +107,11 @@ class class439 implements Comparator {
 			}
 		}
 
-		IterableNodeHashTableIterator var7 = new IterableNodeHashTableIterator(var0.method2475());
+		IterableNodeHashTableIterator var7 = new IterableNodeHashTableIterator(var0.method532());
 
 		int var3;
-		for (ActorSpotAnim var6 = (ActorSpotAnim)var7.method9127(); var6 != null; var6 = (ActorSpotAnim)var7.next()) {
-			if (var6.spotAnimation != -1 && Client.cycle >= var6.field5351) {
+		for (ActorSpotAnim var6 = (ActorSpotAnim)var7.method2526(); var6 != null; var6 = (ActorSpotAnim)var7.next()) {
+			if (var6.spotAnimation != -1 && Client.cycle >= var6.field4380) {
 				var3 = VarbitComposition.SpotAnimationDefinition_get(var6.spotAnimation).sequence;
 				if (var3 == -1) {
 					var6.remove();
@@ -122,7 +124,7 @@ class class439 implements Comparator {
 						if (var6.spotAnimationFrame < var4.frameIds.length && var6.spotAnimationFrameCycle > var4.frameLengths[var6.spotAnimationFrame]) {
 							var6.spotAnimationFrameCycle = 1;
 							++var6.spotAnimationFrame;
-							GraphicsObject.method2116(var4, var6.spotAnimationFrame, var0.x, var0.y, var0);
+							GraphicsObject.method426(var4, var6.spotAnimationFrame, var0.x, var0.y, var0);
 						}
 
 						if (var6.spotAnimationFrame >= var4.frameIds.length) {
@@ -131,9 +133,9 @@ class class439 implements Comparator {
 						}
 					} else if (var4.isCachedModelIdSet()) {
 						++var6.spotAnimationFrame;
-						int var5 = var4.method4065();
+						int var5 = var4.method1073();
 						if (var6.spotAnimationFrame < var5) {
-							class334.method6394(var4, var6.spotAnimationFrame, var0.x, var0.y, var0);
+							class334.method1777(var4, var6.spotAnimationFrame, var0.x, var0.y, var0);
 						} else {
 							var6.remove();
 							--var0.graphicsCount;
@@ -149,7 +151,7 @@ class class439 implements Comparator {
 		SequenceDefinition var8;
 		if (var0.sequence != -1 && var0.sequenceDelay <= 1) {
 			var8 = MilliClock.SequenceDefinition_get(var0.sequence);
-			if (var8.field2271 == 1 && var0.field1280 > 0 && var0.spotAnimation <= Client.cycle && var0.field1271 < Client.cycle) {
+			if (var8.field1838 == 1 && var0.field1057 > 0 && var0.spotAnimation <= Client.cycle && var0.field1038 < Client.cycle) {
 				var0.sequenceDelay = 1;
 				return;
 			}
@@ -163,34 +165,34 @@ class class439 implements Comparator {
 					if (var0.sequenceFrame < var8.frameIds.length && var0.sequenceFrameCycle > var8.frameLengths[var0.sequenceFrame]) {
 						var0.sequenceFrameCycle = 1;
 						++var0.sequenceFrame;
-						GraphicsObject.method2116(var8, var0.sequenceFrame, var0.x, var0.y, var0);
+						GraphicsObject.method426(var8, var0.sequenceFrame, var0.x, var0.y, var0);
 					}
 
 					if (var0.sequenceFrame >= var8.frameIds.length) {
 						var0.sequenceFrame -= var8.frameCount;
-						++var0.field1254;
-						if (var0.field1254 >= var8.field2269) {
+						++var0.field1051;
+						if (var0.field1051 >= var8.field1841) {
 							var0.sequence = -1;
 						} else if (var0.sequenceFrame >= 0 && var0.sequenceFrame < var8.frameIds.length) {
-							GraphicsObject.method2116(var8, var0.sequenceFrame, var0.x, var0.y, var0);
+							GraphicsObject.method426(var8, var0.sequenceFrame, var0.x, var0.y, var0);
 						} else {
 							var0.sequence = -1;
 						}
 					}
 
-					var0.isWalking = var8.field2265;
+					var0.isWalking = var8.field1830;
 				} else if (var8.isCachedModelIdSet()) {
 					++var0.sequenceFrame;
-					var3 = var8.method4065();
+					var3 = var8.method1073();
 					if (var0.sequenceFrame < var3) {
-						class334.method6394(var8, var0.sequenceFrame, var0.x, var0.y, var0);
+						class334.method1777(var8, var0.sequenceFrame, var0.x, var0.y, var0);
 					} else {
 						var0.sequenceFrame -= var8.frameCount;
-						++var0.field1254;
-						if (var0.field1254 >= var8.field2269) {
+						++var0.field1051;
+						if (var0.field1051 >= var8.field1841) {
 							var0.sequence = -1;
 						} else if (var0.sequenceFrame >= 0 && var0.sequenceFrame < var3) {
-							class334.method6394(var8, var0.sequenceFrame, var0.x, var0.y, var0);
+							class334.method1777(var8, var0.sequenceFrame, var0.x, var0.y, var0);
 						} else {
 							var0.sequence = -1;
 						}
@@ -276,7 +278,7 @@ class class439 implements Comparator {
 					Object var10000 = null;
 
 					for (ObjectSound var28 = (ObjectSound)ObjectSound.objectSounds.last(); var28 != null; var28 = (ObjectSound)ObjectSound.objectSounds.previous()) {
-						if (var0 == var28.plane && var15 == var28.x * 16384 && var16 == var28.y * 128 && var19 == var28.maxX * 128 && var20 == var28.maxY * 16384 && var21 == var28.soundEffectId && var22 == var28.field872 && var23 == var28.field864) {
+						if (var0 == var28.plane && var15 == var28.x && var16 == var28.y && var19 == var28.maxX && var20 == var28.maxY && var21 == var28.soundEffectId && var22 == var28.field721 && var23 == var28.field731) {
 							if (var28.stream1 != null) {
 								SceneTilePaint.pcmStreamMixer.removeSubStream(var28.stream1);
 								var28.stream1 = null;
@@ -298,7 +300,7 @@ class class439 implements Comparator {
 				if (var1 == 0) {
 					Actor.scene.removeBoundaryObject(var0, var2, var3);
 					if (var14.interactType != 0) {
-						Client.collisionMaps[var0].method4476(var2, var3, var26, var27, var14.boolean1);
+						Client.collisionMaps[var0].method1199(var2, var3, var26, var27, var14.boolean1);
 					}
 				}
 
@@ -320,7 +322,7 @@ class class439 implements Comparator {
 				if (var1 == 3) {
 					Actor.scene.removeFloorDecoration(var0, var2, var3);
 					if (var14.interactType == 1) {
-						Client.collisionMaps[var0].method4489(var2, var3);
+						Client.collisionMaps[var0].method1202(var2, var3);
 					}
 				}
 			}
@@ -331,7 +333,7 @@ class class439 implements Comparator {
 					var13 = var0 + 1;
 				}
 
-				World.method1821(var0, var13, var2, var3, var4, var5, var6, var7, Actor.scene, Client.collisionMaps[var0]);
+				World.method401(var0, var13, var2, var3, var4, var5, var6, var7, Actor.scene, Client.collisionMaps[var0]);
 				var14 = class127.getObjectDefinition(var4);
 				if (var14 != null && var14.hasSound()) {
 					WorldMapScaleHandler.createObjectSound(var13, var2, var3, var14, var5);

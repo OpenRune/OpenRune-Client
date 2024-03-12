@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,55 +8,49 @@ public class class538 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	public static final class538 field5255;
+	public static final class538 field4303;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	public static final class538 field5253;
+	public static final class538 field4304;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	static final class538 field5254;
+	static final class538 field4306;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	static final class538 field5259;
+	static final class538 field4305;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	static final class538 field5256;
+	static final class538 field4307;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lul;"
 	)
-	static final class538 field5257;
+	static final class538 field4308;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -987935687
-	)
-	final int field5258;
+	final int field4309;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 526282423
-	)
-	final int field5252;
+	final int field4310;
 
 	static {
-		field5255 = new class538(2, 0);
-		field5253 = new class538(0, 2);
-		field5254 = new class538(1, 5);
-		field5259 = new class538(4, 6);
-		field5256 = new class538(5, 7);
-		field5257 = new class538(3, 8);
+		field4303 = new class538(2, 0);
+		field4304 = new class538(0, 2);
+		field4306 = new class538(1, 5);
+		field4305 = new class538(4, 6);
+		field4307 = new class538(5, 7);
+		field4308 = new class538(3, 8);
 	}
 
 	class538(int var1, int var2) {
-		this.field5258 = var1;
-		this.field5252 = var2;
+		this.field4309 = var1;
+		this.field4310 = var2;
 	}
 
 	@ObfuscatedName("aq")
@@ -67,7 +60,7 @@ public class class538 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field5252;
+		return this.field4310;
 	}
 
 	@ObfuscatedName("ar")
@@ -75,8 +68,8 @@ public class class538 implements Enum {
 		descriptor = "(I)Z",
 		garbageValue = "1025371396"
 	)
-	public boolean method9755() {
-		return this == field5253;
+	public boolean method2691() {
+		return this == field4304;
 	}
 
 	@ObfuscatedName("gc")
@@ -84,7 +77,7 @@ public class class538 implements Enum {
 		descriptor = "(I)I",
 		garbageValue = "-2144369700"
 	)
-	static int method9752() {
+	static int method2692() {
 		if (Client.archiveLoaders != null && Client.archiveLoadersDone < Client.archiveLoaders.size()) {
 			int var0 = 0;
 
@@ -92,7 +85,7 @@ public class class538 implements Enum {
 				var0 += ((ArchiveLoader)Client.archiveLoaders.get(var1)).loadedCount;
 			}
 
-			return var0 * 10000 / Client.field786;
+			return var0 * 10000 / Client.field574;
 		} else {
 			return 10000;
 		}

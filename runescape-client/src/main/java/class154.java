@@ -12,9 +12,9 @@ public class class154 extends class145 {
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
 	)
-	static Archive field1724;
+	static Archive field1393;
 	@ObfuscatedName("aq")
-	String field1726;
+	String field1394;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -33,8 +33,9 @@ public class class154 extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
-		this.field1726 = var1.readStringCp1252NullTerminated();
+		this.field1394 = var1.readStringCp1252NullTerminated();
 		var1.readInt();
 	}
 
@@ -43,8 +44,9 @@ public class class154 extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.name = this.field1726;
+		var1.name = this.field1394;
 	}
 
 	@ObfuscatedName("ak")

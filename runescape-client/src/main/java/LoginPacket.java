@@ -1,5 +1,5 @@
+import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -7,14 +7,11 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("LoginPacket")
 public class LoginPacket extends class145 {
 	@ObfuscatedName("af")
-	public static short[][] field1665;
+	public static short[][] field1358;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = -1426659775971560283L
-	)
-	long field1667;
+	long field1360;
 	@ObfuscatedName("aw")
-	String field1664;
+	String field1359;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -26,8 +23,8 @@ public class LoginPacket extends class145 {
 	)
 	LoginPacket(class148 var1) {
 		this.this$0 = var1;
-		this.field1667 = -1L;
-		this.field1664 = null;
+		this.field1360 = -1L;
+		this.field1359 = null;
 	}
 
 	@ObfuscatedName("aq")
@@ -35,13 +32,14 @@ public class LoginPacket extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
 		if (var1.readUnsignedByte() != 255) {
 			--var1.offset;
-			this.field1667 = var1.readLong();
+			this.field1360 = var1.readLong();
 		}
 
-		this.field1664 = var1.readStringCp1252NullTerminatedOrNull();
+		this.field1359 = var1.readStringCp1252NullTerminatedOrNull();
 	}
 
 	@ObfuscatedName("aw")
@@ -49,18 +47,19 @@ public class LoginPacket extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.method3362(this.field1667, this.field1664, 0);
+		var1.method820(this.field1360, this.field1359, 0);
 	}
 
 	@ObfuscatedName("aq")
-	public static final void method3209(long var0) {
+	public static final void method764(long var0) {
 		if (var0 > 0L) {
 			if (var0 % 10L == 0L) {
-				GrandExchangeOfferOwnWorldComparator.method1205(var0 - 1L);
-				GrandExchangeOfferOwnWorldComparator.method1205(1L);
+				GrandExchangeOfferOwnWorldComparator.method346(var0 - 1L);
+				GrandExchangeOfferOwnWorldComparator.method346(1L);
 			} else {
-				GrandExchangeOfferOwnWorldComparator.method1205(var0);
+				GrandExchangeOfferOwnWorldComparator.method346(var0);
 			}
 
 		}
@@ -71,9 +70,9 @@ public class LoginPacket extends class145 {
 		descriptor = "(Lfr;FFFFFFFFI)V",
 		garbageValue = "-2128666244"
 	)
-	static void method3208(class132 var0, float var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8) {
+	static void method768(class132 var0, float var1, float var2, float var3, float var4, float var5, float var6, float var7, float var8) {
 		if (var0 != null) {
-			var0.field1561 = var1;
+			var0.field1280 = var1;
 			float var9 = var4 - var1;
 			float var10 = var8 - var5;
 			float var11 = var2 - var1;
@@ -91,10 +90,10 @@ public class LoginPacket extends class145 {
 			float var14 = 1.0F / (var9 * var9);
 			float var15 = var12 * var9;
 			float var16 = var13 * var9;
-			var0.field1563 = (var15 + var16 - var10 - var10) * var14 / var9;
-			var0.field1564 = (var10 + var10 + var10 - var15 - var15 - var16) * var14;
-			var0.field1562 = var12;
-			var0.field1566 = var5;
+			var0.field1288 = (var15 + var16 - var10 - var10) * var14 / var9;
+			var0.field1289 = (var10 + var10 + var10 - var15 - var15 - var16) * var14;
+			var0.field1286 = var12;
+			var0.field1284 = var5;
 		}
 	}
 
@@ -103,7 +102,7 @@ public class LoginPacket extends class145 {
 		descriptor = "(B)V",
 		garbageValue = "9"
 	)
-	static void method3203() {
+	static void method767() {
 		if (Login.Login_username == null || Login.Login_username.length() <= 0) {
 			if (class30.clientPreferences.getRememberedUsername() != null) {
 				Login.Login_username = class30.clientPreferences.getRememberedUsername();
@@ -120,7 +119,7 @@ public class LoginPacket extends class145 {
 		descriptor = "(I)V",
 		garbageValue = "720920902"
 	)
-	static void method3200() {
+	static void method769() {
 		Varps.compass = null;
 		ItemComposition.redHintArrowSprite = null;
 		AbstractSocket.mapSceneSprites = null;
@@ -129,9 +128,9 @@ public class LoginPacket extends class145 {
 		ChatChannel.headIconHintSprites = null;
 		Players.mapDotSprites = null;
 		GrandExchangeOfferOwnWorldComparator.crossSprites = null;
-		class246.field2581 = null;
+		class246.field2076 = null;
 		ClanChannelMember.scrollBarSprites = null;
-		WorldMapCacheName.field2685 = null;
+		WorldMapCacheName.field2156 = null;
 	}
 
 	@ObfuscatedName("kn")
@@ -139,9 +138,9 @@ public class LoginPacket extends class145 {
 		descriptor = "(Ldx;B)V",
 		garbageValue = "104"
 	)
-	static void method3207(NPC var0) {
-		var0.field1212 = var0.definition.size;
-		var0.field1249 = var0.definition.rotation;
+	static void method770(NPC var0) {
+		var0.field1015 = var0.definition.size;
+		var0.field1039 = var0.definition.rotation;
 		var0.walkSequence = var0.definition.walkSequence;
 		var0.walkBackSequence = var0.definition.walkBackSequence;
 		var0.walkLeftSequence = var0.definition.walkLeftSequence;
@@ -149,13 +148,13 @@ public class LoginPacket extends class145 {
 		var0.idleSequence = var0.definition.idleSequence;
 		var0.turnLeftSequence = var0.definition.turnLeftSequence;
 		var0.turnRightSequence = var0.definition.turnRightSequence;
-		var0.runSequence = var0.definition.field1979;
-		var0.field1219 = var0.definition.field1980;
-		var0.field1220 = var0.definition.field1987;
-		var0.field1221 = var0.definition.field1982;
-		var0.field1222 = var0.definition.field1983;
-		var0.field1216 = var0.definition.field1966;
-		var0.field1224 = var0.definition.field1984;
-		var0.field1225 = var0.definition.field1986;
+		var0.runSequence = var0.definition.field1597;
+		var0.field1008 = var0.definition.field1590;
+		var0.field1007 = var0.definition.field1600;
+		var0.field1024 = var0.definition.field1603;
+		var0.field1011 = var0.definition.field1591;
+		var0.field1019 = var0.definition.field1589;
+		var0.field1012 = var0.definition.field1588;
+		var0.field1014 = var0.definition.field1601;
 	}
 }

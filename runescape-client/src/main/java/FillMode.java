@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,27 +16,21 @@ public enum FillMode implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Luy;"
 	)
-	field5283(1, 1),
+	field4330(1, 1),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Luy;"
 	)
-	field5284(2, 2);
+	field4329(2, 2);
 
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 2017597387
-	)
-	public final int field5286;
+	public final int field4332;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1973894159
-	)
-	final int field5282;
+	final int field4331;
 
 	FillMode(int var3, int var4) {
-		this.field5286 = var3;
-		this.field5282 = var4;
+		this.field4332 = var3;
+		this.field4331 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -47,6 +40,6 @@ public enum FillMode implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field5282;
+		return this.field4331;
 	}
 }

@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,90 +8,89 @@ public class class134 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1595;
+	static final class134 field1319;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1607;
+	static final class134 field1323;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1596;
+	static final class134 field1316;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1613;
+	static final class134 field1313;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1598;
+	static final class134 field1320;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1599;
+	static final class134 field1321;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1600;
+	static final class134 field1309;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1601;
+	static final class134 field1325;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1602;
+	static final class134 field1318;
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1603;
+	static final class134 field1322;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1608;
+	static final class134 field1315;
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1605;
+	static final class134 field1312;
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1606;
+	static final class134 field1314;
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1594;
+	static final class134 field1310;
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1609;
+	static final class134 field1324;
 	@ObfuscatedName("an")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1604;
+	static final class134 field1317;
 	@ObfuscatedName("ag")
 	@ObfuscatedSignature(
 		descriptor = "Lfj;"
 	)
-	static final class134 field1610;
+	static final class134 field1311;
 	@ObfuscatedName("gf")
-	@Export("gameSessionServiceBaseUrl")
-	static String gameSessionServiceBaseUrl;
+	static String field1307;
 	@ObfuscatedName("on")
 	@ObfuscatedSignature(
 		descriptor = "Lng;"
@@ -100,39 +98,30 @@ public class class134 implements Enum {
 	@Export("mousedOverWidgetIf1")
 	static Widget mousedOverWidgetIf1;
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = -1953087335
-	)
-	final int field1611;
+	final int field1327;
 	@ObfuscatedName("ad")
-	@ObfuscatedGetter(
-		intValue = -895136985
-	)
-	final int field1612;
+	final int field1326;
 	@ObfuscatedName("at")
-	@ObfuscatedGetter(
-		intValue = -1661970145
-	)
-	final int field1615;
+	final int field1328;
 
 	static {
-		field1595 = new class134(0, 0, (String)null, -1, -1);
-		field1607 = new class134(1, 1, (String)null, 0, 2);
-		field1596 = new class134(2, 2, (String)null, 1, 2);
-		field1613 = new class134(3, 3, (String)null, 2, 2);
-		field1598 = new class134(4, 4, (String)null, 3, 1);
-		field1599 = new class134(5, 5, (String)null, 4, 1);
-		field1600 = new class134(6, 6, (String)null, 5, 1);
-		field1601 = new class134(7, 7, (String)null, 6, 3);
-		field1602 = new class134(8, 8, (String)null, 7, 3);
-		field1603 = new class134(9, 9, (String)null, 8, 3);
-		field1608 = new class134(10, 10, (String)null, 0, 7);
-		field1605 = new class134(11, 11, (String)null, 1, 7);
-		field1606 = new class134(12, 12, (String)null, 2, 7);
-		field1594 = new class134(13, 13, (String)null, 3, 7);
-		field1609 = new class134(14, 14, (String)null, 4, 7);
-		field1604 = new class134(15, 15, (String)null, 5, 7);
-		field1610 = new class134(16, 16, (String)null, 0, 5);
+		field1319 = new class134(0, 0, (String)null, -1, -1);
+		field1323 = new class134(1, 1, (String)null, 0, 2);
+		field1316 = new class134(2, 2, (String)null, 1, 2);
+		field1313 = new class134(3, 3, (String)null, 2, 2);
+		field1320 = new class134(4, 4, (String)null, 3, 1);
+		field1321 = new class134(5, 5, (String)null, 4, 1);
+		field1309 = new class134(6, 6, (String)null, 5, 1);
+		field1325 = new class134(7, 7, (String)null, 6, 3);
+		field1318 = new class134(8, 8, (String)null, 7, 3);
+		field1322 = new class134(9, 9, (String)null, 8, 3);
+		field1315 = new class134(10, 10, (String)null, 0, 7);
+		field1312 = new class134(11, 11, (String)null, 1, 7);
+		field1314 = new class134(12, 12, (String)null, 2, 7);
+		field1310 = new class134(13, 13, (String)null, 3, 7);
+		field1324 = new class134(14, 14, (String)null, 4, 7);
+		field1317 = new class134(15, 15, (String)null, 5, 7);
+		field1311 = new class134(16, 16, (String)null, 0, 5);
 	}
 
 	@ObfuscatedSignature(
@@ -140,9 +129,9 @@ public class class134 implements Enum {
 		garbageValue = "-1"
 	)
 	class134(int var1, int var2, String var3, int var4, int var5) {
-		this.field1611 = var1;
-		this.field1612 = var2;
-		this.field1615 = var4;
+		this.field1327 = var1;
+		this.field1326 = var2;
+		this.field1328 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -152,7 +141,7 @@ public class class134 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field1612;
+		return this.field1326;
 	}
 
 	@ObfuscatedName("as")
@@ -160,8 +149,8 @@ public class class134 implements Enum {
 		descriptor = "(B)I",
 		garbageValue = "87"
 	)
-	int method3124() {
-		return this.field1615;
+	int method741() {
+		return this.field1328;
 	}
 
 	@ObfuscatedName("he")
@@ -177,7 +166,7 @@ public class class134 implements Enum {
 			Client.queuedSoundEffectDelays[Client.soundEffectCount] = var2;
 			Client.soundEffects[Client.soundEffectCount] = null;
 			Client.soundLocations[Client.soundEffectCount] = 0;
-			Client.field554[Client.soundEffectCount] = 0;
+			Client.field609[Client.soundEffectCount] = 0;
 			++Client.soundEffectCount;
 		}
 

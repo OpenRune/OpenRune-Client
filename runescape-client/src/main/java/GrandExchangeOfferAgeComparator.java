@@ -30,7 +30,7 @@ final class GrandExchangeOfferAgeComparator implements Comparator {
 	}
 
 	@ObfuscatedName("ai")
-	public static int method7271(long var0) {
+	public static int method2033(long var0) {
 		return (int)(var0 >>> 0 & 127L);
 	}
 }

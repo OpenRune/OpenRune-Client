@@ -24,7 +24,7 @@ public class SecureRandomSSLSocketFactory extends SSLSocketFactory {
 	@Export("INSTANCE")
 	static SecureRandomSSLSocketFactory INSTANCE;
 	@ObfuscatedName("aq")
-	SecureRandom field73;
+	SecureRandom field50;
 
 	static {
 		if (Security.getProvider("BC") == null) {
@@ -34,7 +34,7 @@ public class SecureRandomSSLSocketFactory extends SSLSocketFactory {
 	}
 
 	SecureRandomSSLSocketFactory() {
-		this.field73 = new SecureRandom();
+		this.field50 = new SecureRandom();
 	}
 
 	@ObfuscatedName("aw")
@@ -47,7 +47,24 @@ public class SecureRandomSSLSocketFactory extends SSLSocketFactory {
 		return new SecureRandomSSLSocket(this, var2, var1);
 	}
 
+	public Socket createSocket(Socket var1, String var2, int var3, boolean var4) throws IOException {
+		if (var1 == null) {
+			var1 = new Socket();
+		}
+
+		if (!var1.isConnected()) {
+			var1.connect(new InetSocketAddress(var2, var3));
+		}
+
+		TlsClientProtocol var5 = new TlsClientProtocol(var1.getInputStream(), var1.getOutputStream(), this.field50);
+		return this.createSocket(var2, var5);
+	}
+
 	public String[] getDefaultCipherSuites() {
+		return null;
+	}
+
+	public String[] getSupportedCipherSuites() {
 		return null;
 	}
 
@@ -63,23 +80,6 @@ public class SecureRandomSSLSocketFactory extends SSLSocketFactory {
 		return null;
 	}
 
-	public String[] getSupportedCipherSuites() {
-		return null;
-	}
-
-	public Socket createSocket(Socket var1, String var2, int var3, boolean var4) throws IOException {
-		if (var1 == null) {
-			var1 = new Socket();
-		}
-
-		if (!var1.isConnected()) {
-			var1.connect(new InetSocketAddress(var2, var3));
-		}
-
-		TlsClientProtocol var5 = new TlsClientProtocol(var1.getInputStream(), var1.getOutputStream(), this.field73);
-		return this.createSocket(var2, var5);
-	}
-
 	public Socket createSocket(InetAddress var1, int var2, InetAddress var3, int var4) throws IOException {
 		return null;
 	}
@@ -89,7 +89,7 @@ public class SecureRandomSSLSocketFactory extends SSLSocketFactory {
 		descriptor = "(I)Lan;",
 		garbageValue = "-26245534"
 	)
-	public static SecureRandomSSLSocketFactory method167() {
+	public static SecureRandomSSLSocketFactory method48() {
 		if (INSTANCE == null) {
 			INSTANCE = new SecureRandomSSLSocketFactory();
 		}

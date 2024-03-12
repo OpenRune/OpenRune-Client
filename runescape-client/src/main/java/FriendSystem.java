@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,14 +7,8 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("FriendSystem")
 public class FriendSystem {
 	@ObfuscatedName("ca")
-	@ObfuscatedGetter(
-		intValue = -883395869
-	)
-	static int field859;
+	static int field711;
 	@ObfuscatedName("ko")
-	@ObfuscatedGetter(
-		intValue = 1321952883
-	)
 	@Export("cameraPitch")
 	static int cameraPitch;
 	@ObfuscatedName("ai")
@@ -37,16 +30,13 @@ public class FriendSystem {
 	@Export("ignoreList")
 	public final IgnoreList ignoreList;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -216489171
-	)
-	int field857;
+	int field713;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lte;)V"
 	)
 	FriendSystem(LoginType var1) {
-		this.field857 = 0;
+		this.field713 = 0;
 		this.loginType = var1;
 		this.friendsList = new FriendsList(var1);
 		this.ignoreList = new IgnoreList(var1);
@@ -57,8 +47,8 @@ public class FriendSystem {
 		descriptor = "(I)Z",
 		garbageValue = "-152880935"
 	)
-	boolean method1942() {
-		return this.field857 == 2;
+	boolean method402() {
+		return this.field713 == 2;
 	}
 
 	@ObfuscatedName("aw")
@@ -66,8 +56,8 @@ public class FriendSystem {
 		descriptor = "(I)V",
 		garbageValue = "-240124587"
 	)
-	final void method1874() {
-		this.field857 = 1;
+	final void method403() {
+		this.field713 = 1;
 	}
 
 	@ObfuscatedName("al")
@@ -78,14 +68,14 @@ public class FriendSystem {
 	@Export("readUpdate")
 	final void readUpdate(Buffer var1, int var2) {
 		this.friendsList.read(var1, var2);
-		this.field857 = 2;
+		this.field713 = 2;
 
 		for (int var3 = 0; var3 < Players.Players_count; ++var3) {
 			Player var4 = Client.players[Players.Players_indices[var3]];
 			var4.clearIsFriend();
 		}
 
-		PendingSpawn.method2454();
+		PendingSpawn.method523();
 		if (Projectile.friendsChat != null) {
 			Projectile.friendsChat.clearFriends();
 		}
@@ -100,7 +90,7 @@ public class FriendSystem {
 	@Export("processFriendUpdates")
 	final void processFriendUpdates() {
 		for (FriendLoginUpdate var1 = (FriendLoginUpdate)this.friendsList.friendLoginUpdates.last(); var1 != null; var1 = (FriendLoginUpdate)this.friendsList.friendLoginUpdates.previous()) {
-			if ((long)var1.field4751 < SecureRandomCallable.method2320() / 1000L - 5L) {
+			if ((long)var1.field3894 < SecureRandomCallable.method465() / 1000L - 5L) {
 				if (var1.world > 0) {
 					class209.addGameMessage(5, "", var1.username + " has logged in.");
 				}
@@ -122,7 +112,7 @@ public class FriendSystem {
 	)
 	@Export("clear")
 	final void clear() {
-		this.field857 = 0;
+		this.field713 = 0;
 		this.friendsList.clear();
 		this.ignoreList.clear();
 	}
@@ -168,15 +158,15 @@ public class FriendSystem {
 			Username var2 = new Username(var1, this.loginType);
 			if (var2.hasCleanName()) {
 				if (this.friendsListIsFull()) {
-					class59.method1137();
+					class59.method316();
 				} else if (VarpDefinition.localPlayer.username.equals(var2)) {
-					SecureRandomCallable.method2319("You can't add yourself to your own friend list");
+					SecureRandomCallable.method466("You can't add yourself to your own friend list");
 				} else if (this.isFriended(var2, false)) {
-					class30.method416(var1);
+					class30.method111(var1);
 				} else if (this.isIgnored(var2)) {
-					class388.method7344(var1);
+					class388.method2054(var1);
 				} else {
-					IgnoreList.method8240(var1);
+					IgnoreList.method2268(var1);
 				}
 			}
 		}
@@ -189,7 +179,7 @@ public class FriendSystem {
 	)
 	@Export("friendsListIsFull")
 	final boolean friendsListIsFull() {
-		return this.friendsList.isFull() || this.friendsList.getSize() >= 200 && Client.field653 != 1;
+		return this.friendsList.isFull() || this.friendsList.getSize() >= 200 && Client.field514 != 1;
 	}
 
 	@ObfuscatedName("ax")
@@ -203,15 +193,15 @@ public class FriendSystem {
 			Username var2 = new Username(var1, this.loginType);
 			if (var2.hasCleanName()) {
 				if (this.canAddIgnore()) {
-					SecureRandomCallable.method2319("Your ignore list is full. Max of 100 for free users, and 400 for members");
+					SecureRandomCallable.method466("Your ignore list is full. Max of 100 for free users, and 400 for members");
 				} else if (VarpDefinition.localPlayer.username.equals(var2)) {
-					NPC.method2711();
+					NPC.method600();
 				} else if (this.isIgnored(var2)) {
-					class368.method7011(var1);
+					class368.method1956(var1);
 				} else if (this.isFriended(var2, false)) {
-					class53.method1064(var1);
+					class53.method288(var1);
 				} else {
-					HitSplatDefinition.method3917(var1);
+					HitSplatDefinition.method1017(var1);
 				}
 			}
 		}
@@ -224,7 +214,7 @@ public class FriendSystem {
 	)
 	@Export("canAddIgnore")
 	final boolean canAddIgnore() {
-		return this.ignoreList.isFull() || this.ignoreList.getSize() >= 100 && Client.field653 != 1;
+		return this.ignoreList.isFull() || this.ignoreList.getSize() >= 100 && Client.field514 != 1;
 	}
 
 	@ObfuscatedName("ay")
@@ -238,7 +228,7 @@ public class FriendSystem {
 			Username var2 = new Username(var1, this.loginType);
 			if (var2.hasCleanName()) {
 				if (this.friendsList.removeByUsername(var2)) {
-					Client.field732 = Client.cycleCntr;
+					Client.field541 = Client.cycleCntr;
 					PacketBufferNode var3 = ViewportMouse.getPacketBufferNode(ClientPacket.FRIEND_DELUSER, Client.packetWriter.isaacCipher);
 					var3.packetBuffer.writeByte(class145.stringCp1252NullTerminatedByteSize(var1));
 					var3.packetBuffer.writeStringCp1252NullTerminated(var1);
@@ -250,7 +240,7 @@ public class FriendSystem {
 					var4.clearIsFriend();
 				}
 
-				PendingSpawn.method2454();
+				PendingSpawn.method523();
 				if (Projectile.friendsChat != null) {
 					Projectile.friendsChat.clearFriends();
 				}
@@ -270,7 +260,7 @@ public class FriendSystem {
 			Username var3 = new Username(var1, this.loginType);
 			if (var3.hasCleanName()) {
 				if (this.ignoreList.removeByUsername(var3)) {
-					Client.field732 = Client.cycleCntr;
+					Client.field541 = Client.cycleCntr;
 					if (var2) {
 						PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.IGNORE_DELUSER, Client.packetWriter.isaacCipher);
 						var4.packetBuffer.writeByte(class145.stringCp1252NullTerminatedByteSize(var1));
@@ -302,7 +292,7 @@ public class FriendSystem {
 	)
 	@Export("changeGameOptions")
 	static final void changeGameOptions(int var0) {
-		LoginState.method1206();
+		LoginState.method354();
 
 		for (ObjectSound var1 = (ObjectSound)ObjectSound.objectSounds.last(); var1 != null; var1 = (ObjectSound)ObjectSound.objectSounds.previous()) {
 			if (var1.obj != null) {
@@ -315,19 +305,19 @@ public class FriendSystem {
 			int var2 = Varps.Varps_main[var0];
 			if (var3 == 1) {
 				if (var2 == 1) {
-					HttpRequestTask.method260(0.9D);
+					HttpRequestTask.method61(0.9D);
 				}
 
 				if (var2 == 2) {
-					HttpRequestTask.method260(0.8D);
+					HttpRequestTask.method61(0.8D);
 				}
 
 				if (var2 == 3) {
-					HttpRequestTask.method260(0.7D);
+					HttpRequestTask.method61(0.7D);
 				}
 
 				if (var2 == 4) {
-					HttpRequestTask.method260(0.6D);
+					HttpRequestTask.method61(0.6D);
 				}
 			}
 
@@ -355,23 +345,23 @@ public class FriendSystem {
 
 			if (var3 == 4) {
 				if (var2 == 0) {
-					SoundCache.method831(127);
+					SoundCache.method221(127);
 				}
 
 				if (var2 == 1) {
-					SoundCache.method831(96);
+					SoundCache.method221(96);
 				}
 
 				if (var2 == 2) {
-					SoundCache.method831(64);
+					SoundCache.method221(64);
 				}
 
 				if (var2 == 3) {
-					SoundCache.method831(32);
+					SoundCache.method221(32);
 				}
 
 				if (var2 == 4) {
-					SoundCache.method831(0);
+					SoundCache.method221(0);
 				}
 			}
 
@@ -388,23 +378,23 @@ public class FriendSystem {
 
 			if (var3 == 10) {
 				if (var2 == 0) {
-					class222.method4344(127);
+					class222.method1148(127);
 				}
 
 				if (var2 == 1) {
-					class222.method4344(96);
+					class222.method1148(96);
 				}
 
 				if (var2 == 2) {
-					class222.method4344(64);
+					class222.method1148(64);
 				}
 
 				if (var2 == 3) {
-					class222.method4344(32);
+					class222.method1148(32);
 				}
 
 				if (var2 == 4) {
-					class222.method4344(0);
+					class222.method1148(0);
 				}
 			}
 
@@ -413,7 +403,7 @@ public class FriendSystem {
 			}
 
 			if (var3 == 18) {
-				Client.playerAttackOption = (AttackOption)class356.findEnumerated(UserComparator7.method2951(), var2);
+				Client.playerAttackOption = (AttackOption)class356.findEnumerated(UserComparator7.method678(), var2);
 				if (Client.playerAttackOption == null) {
 					Client.playerAttackOption = AttackOption.AttackOption_dependsOnCombatLevels;
 				}
@@ -428,7 +418,7 @@ public class FriendSystem {
 			}
 
 			if (var3 == 22) {
-				Client.npcAttackOption = (AttackOption)class356.findEnumerated(UserComparator7.method2951(), var2);
+				Client.npcAttackOption = (AttackOption)class356.findEnumerated(UserComparator7.method678(), var2);
 				if (Client.npcAttackOption == null) {
 					Client.npcAttackOption = AttackOption.AttackOption_dependsOnCombatLevels;
 				}

@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,27 +7,15 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("RouteStrategy")
 public abstract class RouteStrategy {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 898172715
-	)
 	@Export("approxDestinationX")
 	public int approxDestinationX;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1058943793
-	)
 	@Export("approxDestinationY")
 	public int approxDestinationY;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 420319251
-	)
 	@Export("approxDestinationSizeX")
 	public int approxDestinationSizeX;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1635143841
-	)
 	@Export("approxDestinationSizeY")
 	public int approxDestinationSizeY;
 
@@ -48,7 +35,7 @@ public abstract class RouteStrategy {
 		descriptor = "(B)V",
 		garbageValue = "-107"
 	)
-	public static void method4513() {
+	public static void method1207() {
 		WorldMapRegion.WorldMapRegion_cachedSprites.clear();
 	}
 
@@ -57,7 +44,7 @@ public abstract class RouteStrategy {
 		descriptor = "(IIII)I",
 		garbageValue = "1091177009"
 	)
-	static int method4510(int var0, int var1, int var2) {
+	static int method1208(int var0, int var1, int var2) {
 		if ((Tiles.Tiles_renderFlags[var0][var1][var2] & 8) != 0) {
 			return 0;
 		} else {
@@ -81,11 +68,11 @@ public abstract class RouteStrategy {
 			Rasterizer2D.Rasterizer2D_fillRectangle(var3 - var2, var4 - var2, var2 + var2 + var5, var2 + var6 + var2, 0);
 			Rasterizer2D.Rasterizer2D_drawRectangle(var3 - var2, var4 - var2, var5 + var2 + var2, var6 + var2 + var2, 16777215);
 			class141.fontPlain12.drawLines(var0, var3, var4, var5, var6, 16777215, -1, 1, 1, 0);
-			Language.method7364(var3 - var2, var4 - var2, var2 + var5 + var2, var2 + var2 + var6);
+			Language.method2061(var3 - var2, var4 - var2, var2 + var5 + var2, var2 + var2 + var6);
 			if (var1) {
 				UserComparator8.rasterProvider.drawFull(0, 0);
 			} else {
-				class106.method2774(var3, var4, var5, var6);
+				class106.method626(var3, var4, var5, var6);
 			}
 
 		}

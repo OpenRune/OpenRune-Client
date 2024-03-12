@@ -3,19 +3,14 @@ import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("bf")
 @Implements("PcmPlayer")
 public class PcmPlayer {
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 345499435
-	)
-	public static int field295;
+	public static int field183;
 	@ObfuscatedName("as")
 	@Export("PcmPlayer_stereo")
 	protected static boolean PcmPlayer_stereo;
@@ -32,87 +27,54 @@ public class PcmPlayer {
 	@Export("stream")
 	PcmStream stream;
 	@ObfuscatedName("an")
-	@ObfuscatedGetter(
-		intValue = 1666009421
-	)
-	int field285;
+	int field194;
 	@ObfuscatedName("ag")
-	@ObfuscatedGetter(
-		longValue = 7904803181192803033L
-	)
 	@Export("timeMs")
 	long timeMs;
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = -57612285
-	)
 	@Export("capacity")
 	int capacity;
 	@ObfuscatedName("ad")
-	@ObfuscatedGetter(
-		intValue = -1722443599
-	)
-	int field288;
+	int field191;
 	@ObfuscatedName("at")
-	@ObfuscatedGetter(
-		intValue = 185087089
-	)
-	int field279;
+	int field195;
 	@ObfuscatedName("ay")
-	@ObfuscatedGetter(
-		longValue = -5103555793324550579L
-	)
-	long field290;
+	long field199;
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = -2127435563
-	)
-	int field291;
+	int field192;
 	@ObfuscatedName("ac")
-	@ObfuscatedGetter(
-		intValue = -927399077
-	)
-	int field292;
+	int field190;
 	@ObfuscatedName("ab")
-	@ObfuscatedGetter(
-		intValue = -1628734865
-	)
-	int field293;
+	int field189;
 	@ObfuscatedName("av")
-	@ObfuscatedGetter(
-		longValue = 1679271652544265673L
-	)
-	long field294;
+	long field198;
 	@ObfuscatedName("ap")
-	boolean field298;
+	boolean field188;
 	@ObfuscatedName("ba")
-	@ObfuscatedGetter(
-		intValue = -474525305
-	)
-	int field284;
+	int field196;
 	@ObfuscatedName("bt")
 	@ObfuscatedSignature(
 		descriptor = "[Lbj;"
 	)
-	PcmStream[] field283;
+	PcmStream[] field187;
 	@ObfuscatedName("bk")
 	@ObfuscatedSignature(
 		descriptor = "[Lbj;"
 	)
-	PcmStream[] field289;
+	PcmStream[] field186;
 
 	protected PcmPlayer() {
-		this.field285 = 32;
-		this.timeMs = SecureRandomCallable.method2320();
-		this.field290 = 0L;
-		this.field291 = 0;
-		this.field292 = 0;
-		this.field293 = 0;
-		this.field294 = 0L;
-		this.field298 = true;
-		this.field284 = 0;
-		this.field283 = new PcmStream[8];
-		this.field289 = new PcmStream[8];
+		this.field194 = 32;
+		this.timeMs = SecureRandomCallable.method465();
+		this.field199 = 0L;
+		this.field192 = 0;
+		this.field190 = 0;
+		this.field189 = 0;
+		this.field198 = 0L;
+		this.field188 = true;
+		this.field196 = 0;
+		this.field187 = new PcmStream[8];
+		this.field186 = new PcmStream[8];
 	}
 
 	@ObfuscatedName("aq")
@@ -127,7 +89,7 @@ public class PcmPlayer {
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "(IB)V",
-		garbageValue = "-51"
+		garbageValue = "41"
 	)
 	@Export("open")
 	protected void open(int var1) throws Exception {
@@ -184,25 +146,25 @@ public class PcmPlayer {
 	@Export("run")
 	public final synchronized void run() {
 		if (this.samples != null) {
-			long var1 = SecureRandomCallable.method2320();
+			long var1 = SecureRandomCallable.method465();
 
 			try {
-				if (0L != this.field290) {
-					if (var1 < this.field290) {
+				if (0L != this.field199) {
+					if (var1 < this.field199) {
 						return;
 					}
 
 					this.open(this.capacity);
-					this.field290 = 0L;
-					this.field298 = true;
+					this.field199 = 0L;
+					this.field188 = true;
 				}
 
 				int var3 = this.position();
-				if (this.field293 - var3 > this.field291) {
-					this.field291 = this.field293 - var3;
+				if (this.field189 - var3 > this.field192) {
+					this.field192 = this.field189 - var3;
 				}
 
-				int var4 = this.field288 + this.field279;
+				int var4 = this.field191 + this.field195;
 				if (var4 + 256 > 16384) {
 					var4 = 16128;
 				}
@@ -216,10 +178,10 @@ public class PcmPlayer {
 					this.close();
 					this.open(this.capacity);
 					var3 = 0;
-					this.field298 = true;
+					this.field188 = true;
 					if (var4 + 256 > this.capacity) {
 						var4 = this.capacity - 256;
-						this.field279 = var4 - this.field288;
+						this.field195 = var4 - this.field191;
 					}
 				}
 
@@ -229,28 +191,28 @@ public class PcmPlayer {
 					var3 += 256;
 				}
 
-				if (var1 > this.field294) {
-					if (!this.field298) {
-						if (this.field291 == 0 && this.field292 == 0) {
+				if (var1 > this.field198) {
+					if (!this.field188) {
+						if (this.field192 == 0 && this.field190 == 0) {
 							this.close();
-							this.field290 = 2000L + var1;
+							this.field199 = 2000L + var1;
 							return;
 						}
 
-						this.field279 = Math.min(this.field292, this.field291);
-						this.field292 = this.field291;
+						this.field195 = Math.min(this.field190, this.field192);
+						this.field190 = this.field192;
 					} else {
-						this.field298 = false;
+						this.field188 = false;
 					}
 
-					this.field291 = 0;
-					this.field294 = 2000L + var1;
+					this.field192 = 0;
+					this.field198 = 2000L + var1;
 				}
 
-				this.field293 = var3;
+				this.field189 = var3;
 			} catch (Exception var7) {
 				this.close();
-				this.field290 = var1 + 2000L;
+				this.field199 = var1 + 2000L;
 			}
 
 			try {
@@ -260,7 +222,7 @@ public class PcmPlayer {
 
 				while (var1 > 5000L + this.timeMs) {
 					this.skip(256);
-					this.timeMs += (long)(256000 / field295);
+					this.timeMs += (long)(256000 / field183);
 				}
 			} catch (Exception var6) {
 				this.timeMs = var1;
@@ -274,8 +236,8 @@ public class PcmPlayer {
 		descriptor = "(B)V",
 		garbageValue = "76"
 	)
-	public final void method741() {
-		this.field298 = true;
+	public final void method190() {
+		this.field188 = true;
 	}
 
 	@ObfuscatedName("bo")
@@ -285,13 +247,13 @@ public class PcmPlayer {
 	)
 	@Export("tryDiscard")
 	public final synchronized void tryDiscard() {
-		this.field298 = true;
+		this.field188 = true;
 
 		try {
 			this.discard();
 		} catch (Exception var2) {
 			this.close();
-			this.field290 = SecureRandomCallable.method2320() + 2000L;
+			this.field199 = SecureRandomCallable.method465() + 2000L;
 		}
 
 	}
@@ -334,9 +296,9 @@ public class PcmPlayer {
 	)
 	@Export("skip")
 	final void skip(int var1) {
-		this.field284 -= var1;
-		if (this.field284 < 0) {
-			this.field284 = 0;
+		this.field196 -= var1;
+		if (this.field196 < 0) {
+			this.field196 = 0;
 		}
 
 		if (this.stream != null) {
@@ -354,17 +316,17 @@ public class PcmPlayer {
 		}
 
 		class428.clearIntArray(var1, 0, var3);
-		this.field284 -= var2;
-		if (this.stream != null && this.field284 <= 0) {
-			this.field284 += field295 >> 4;
+		this.field196 -= var2;
+		if (this.stream != null && this.field196 <= 0) {
+			this.field196 += field183 >> 4;
 			class60.PcmStream_disable(this.stream);
-			this.method781(this.stream, this.stream.vmethod1014());
+			this.method195(this.stream, this.stream.vmethod1014());
 			int var4 = 0;
 			int var5 = 255;
 
 			int var6;
 			PcmStream var10;
-			label107:
+			label105:
 			for (var6 = 7; var5 != 0; --var6) {
 				int var7;
 				int var8;
@@ -380,13 +342,13 @@ public class PcmPlayer {
 					if ((var9 & 1) != 0) {
 						var5 &= ~(1 << var7);
 						var10 = null;
-						PcmStream var11 = this.field283[var7];
+						PcmStream var11 = this.field187[var7];
 
-						label101:
+						label99:
 						while (true) {
 							while (true) {
 								if (var11 == null) {
-									break label101;
+									break label99;
 								}
 
 								AbstractSound var12 = var11.sound;
@@ -402,30 +364,30 @@ public class PcmPlayer {
 										var12.position += var13;
 									}
 
-									if (var4 >= this.field285) {
-										break label107;
+									if (var4 >= this.field194) {
+										break label105;
 									}
 
 									PcmStream var14 = var11.firstSubStream();
 									if (var14 != null) {
-										for (int var15 = var11.field348; var14 != null; var14 = var11.nextSubStream()) {
-											this.method781(var14, var15 * var14.vmethod1014() >> 8);
+										for (int var15 = var11.field243; var14 != null; var14 = var11.nextSubStream()) {
+											this.method195(var14, var15 * var14.vmethod1014() >> 8);
 										}
 									}
 
-									PcmStream var18 = var11.after;
+									PcmStream var16 = var11.after;
 									var11.after = null;
 									if (var10 == null) {
-										this.field283[var7] = var18;
+										this.field187[var7] = var16;
 									} else {
-										var10.after = var18;
+										var10.after = var16;
 									}
 
-									if (var18 == null) {
-										this.field289[var7] = var10;
+									if (var16 == null) {
+										this.field186[var7] = var10;
 									}
 
-									var11 = var18;
+									var11 = var16;
 								}
 							}
 						}
@@ -437,26 +399,26 @@ public class PcmPlayer {
 			}
 
 			for (var6 = 0; var6 < 8; ++var6) {
-				PcmStream var16 = this.field283[var6];
-				PcmStream[] var17 = this.field283;
-				this.field289[var6] = null;
+				PcmStream var17 = this.field187[var6];
+				PcmStream[] var18 = this.field187;
+				this.field186[var6] = null;
 
-				for (var17[var6] = null; var16 != null; var16 = var10) {
-					var10 = var16.after;
-					var16.after = null;
+				for (var18[var6] = null; var17 != null; var17 = var10) {
+					var10 = var17.after;
+					var17.after = null;
 				}
 			}
 		}
 
-		if (this.field284 < 0) {
-			this.field284 = 0;
+		if (this.field196 < 0) {
+			this.field196 = 0;
 		}
 
 		if (this.stream != null) {
 			this.stream.fill(var1, 0, var2);
 		}
 
-		this.timeMs = SecureRandomCallable.method2320();
+		this.timeMs = SecureRandomCallable.method465();
 	}
 
 	@ObfuscatedName("bt")
@@ -464,17 +426,17 @@ public class PcmPlayer {
 		descriptor = "(Lbj;IB)V",
 		garbageValue = "1"
 	)
-	final void method781(PcmStream var1, int var2) {
+	final void method195(PcmStream var1, int var2) {
 		int var3 = var2 >> 5;
-		PcmStream var4 = this.field289[var3];
+		PcmStream var4 = this.field186[var3];
 		if (var4 == null) {
-			this.field283[var3] = var1;
+			this.field187[var3] = var1;
 		} else {
 			var4.after = var1;
 		}
 
-		this.field289[var3] = var1;
-		var1.field348 = var2;
+		this.field186[var3] = var1;
+		var1.field243 = var2;
 	}
 
 	@ObfuscatedName("cs")
@@ -482,64 +444,64 @@ public class PcmPlayer {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-1753341754"
 	)
-	static int method790(int var0, Script var1, boolean var2) {
+	static int method202(int var0, Script var1, boolean var2) {
 		int var3;
-		Object var4;
 		int var5;
-		DbTable var6;
 		int var7;
-		if (var0 != ScriptOpcodes.DB_FIND_WITH_COUNT && var0 != ScriptOpcodes.DB_FIND) {
-			if (var0 != ScriptOpcodes.DB_FINDNEXT) {
-				int var19;
-				int var20;
-				if (var0 == ScriptOpcodes.DB_GETFIELD) {
+		Object var21;
+		DbTable var22;
+		if (var0 != 7500 && var0 != 7508) {
+			if (var0 != 7501) {
+				int var4;
+				int var6;
+				if (var0 == 7502) {
 					Interpreter.Interpreter_intStackSize -= 3;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
-					var19 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
+					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
 					var5 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 2];
-					var20 = class133.method3115(var19);
-					var7 = class227.method4423(var19);
-					int var21 = class167.method3503(var19);
-					DbRowType var26 = FadeOutTask.getDbRowType(var3);
-					DbTableType var27 = WorldMapScaleHandler.getDbTableType(var20);
-					int[] var28 = var27.types[var7];
+					var6 = class133.method734(var4);
+					var7 = class227.method1176(var4);
+					int var8 = class167.method874(var4);
+					DbRowType var23 = FadeOutTask.getDbRowType(var3);
+					DbTableType var24 = WorldMapScaleHandler.getDbTableType(var6);
+					int[] var25 = var24.types[var7];
 					int var12 = 0;
-					int var13 = var28.length;
-					if (var21 >= 0) {
-						if (var21 >= var13) {
-							throw new RuntimeException("Tuple index out-of-bounds. Requested: " + var21 + ", Max: " + var13);
+					int var13 = var25.length;
+					if (var8 >= 0) {
+						if (var8 >= var13) {
+							throw new RuntimeException("Tuple index out-of-bounds. Requested: " + var8 + ", Max: " + var13);
 						}
 
-						var12 = var21;
-						var13 = var21 + 1;
+						var12 = var8;
+						var13 = var8 + 1;
 					}
 
-					Object[] var14 = var26.getColumnType(var7);
-					if (var14 == null && var27.defaultValues != null) {
-						var14 = var27.defaultValues[var7];
+					Object[] var14 = var23.getColumnType(var7);
+					if (var14 == null && var24.defaultValues != null) {
+						var14 = var24.defaultValues[var7];
 					}
 
 					int var15;
 					int var16;
 					if (var14 == null) {
 						for (var15 = var12; var15 < var13; ++var15) {
-							var16 = var28[var15];
-							class521 var22 = class297.method5966(var16);
-							if (var22 == class521.field5126) {
+							var16 = var25[var15];
+							class521 var19 = class297.method1653(var16);
+							if (var19 == class521.field4198) {
 								Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = "";
 							} else {
-								Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class383.method7273(var16);
+								Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class383.method2034(var16);
 							}
 						}
 
 						return 1;
 					} else {
-						var15 = var14.length / var28.length;
+						var15 = var14.length / var25.length;
 						if (var5 >= 0 && var5 < var15) {
 							for (var16 = var12; var16 < var13; ++var16) {
-								int var17 = var16 + var28.length * var5;
-								class521 var18 = class297.method5966(var28[var16]);
-								if (var18 == class521.field5126) {
+								int var17 = var16 + var25.length * var5;
+								class521 var18 = class297.method1653(var25[var16]);
+								if (var18 == class521.field4198) {
 									Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = (String)var14[var17];
 								} else {
 									Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = (Integer)var14[var17];
@@ -551,17 +513,17 @@ public class PcmPlayer {
 							throw new RuntimeException();
 						}
 					}
-				} else if (var0 == ScriptOpcodes.DB_GETFIELDCOUNT) {
+				} else if (var0 == 7503) {
 					Interpreter.Interpreter_intStackSize -= 2;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
-					var19 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
+					var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
 					var5 = 0;
-					var20 = class133.method3115(var19);
-					var7 = class227.method4423(var19);
-					DbRowType var25 = FadeOutTask.getDbRowType(var3);
-					DbTableType var9 = WorldMapScaleHandler.getDbTableType(var20);
+					var6 = class133.method734(var4);
+					var7 = class227.method1176(var4);
+					DbRowType var26 = FadeOutTask.getDbRowType(var3);
+					DbTableType var9 = WorldMapScaleHandler.getDbTableType(var6);
 					int[] var10 = var9.types[var7];
-					Object[] var11 = var25.getColumnType(var7);
+					Object[] var11 = var26.getColumnType(var7);
 					if (var11 == null && var9.defaultValues != null) {
 						var11 = var9.defaultValues[var7];
 					}
@@ -572,47 +534,47 @@ public class PcmPlayer {
 
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var5;
 					return 1;
-				} else if (var0 != ScriptOpcodes.DB_FINDALL_WITH_COUNT && var0 != ScriptOpcodes.DB_FIND_FILTER) {
-					if (var0 == ScriptOpcodes.DB_GETROWTABLE) {
+				} else if (var0 != 7504 && var0 != 7510) {
+					if (var0 == 7505) {
 						var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-						DbRowType var24 = FadeOutTask.getDbRowType(var3);
-						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var24.tableId;
+						DbRowType var28 = FadeOutTask.getDbRowType(var3);
+						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var28.tableId;
 						return 1;
-					} else if (var0 == ScriptOpcodes.DB_GETROW) {
+					} else if (var0 == 7506) {
 						var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-						var19 = -1;
-						if (class173.field1847 != null && var3 >= 0 && var3 < class173.field1847.size()) {
-							var19 = (Integer)class173.field1847.get(var3);
+						var4 = -1;
+						if (class173.field1476 != null && var3 >= 0 && var3 < class173.field1476.size()) {
+							var4 = (Integer)class173.field1476.get(var3);
 						}
 
-						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var19;
+						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var4;
 						return 1;
-					} else if (var0 != ScriptOpcodes.DB_FIND_FILTER_WITH_COUNT && var0 != ScriptOpcodes.DB_FINDALL) {
+					} else if (var0 != 7507 && var0 != 7509) {
 						return 2;
 					} else {
 						var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-						var4 = class319.method6108(var3);
+						var21 = class319.method1694(var3);
 						var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-						var6 = ModelData0.getDbTable(var5);
-						if (var6 == null) {
+						var22 = ModelData0.getDbTable(var5);
+						if (var22 == null) {
 							throw new RuntimeException();
-						} else if (class133.method3115(var5) != Client.field824) {
+						} else if (class133.method734(var5) != Client.field573) {
 							throw new RuntimeException();
-						} else if (class173.field1847 == null && class173.field1847.isEmpty()) {
+						} else if (class173.field1476 == null && class173.field1476.isEmpty()) {
 							throw new RuntimeException();
 						} else {
-							var7 = class167.method3503(var5);
-							List var8 = var6.method9370(var4, var7);
-							class173.field1847 = new LinkedList(class173.field1847);
-							if (var8 != null) {
-								class173.field1847.retainAll(var8);
+							var7 = class167.method874(var5);
+							List var20 = var22.method2580(var21, var7);
+							class173.field1476 = new LinkedList(class173.field1476);
+							if (var20 != null) {
+								class173.field1476.retainAll(var20);
 							} else {
-								class173.field1847.clear();
+								class173.field1476.clear();
 							}
 
-							Timer.field4675 = class173.field1847.iterator();
-							if (var0 == ScriptOpcodes.DB_FIND_FILTER_WITH_COUNT) {
-								Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class173.field1847.size();
+							Timer.field3845 = class173.field1476.iterator();
+							if (var0 == 7507) {
+								Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class173.field1476.size();
 							}
 
 							return 1;
@@ -621,19 +583,19 @@ public class PcmPlayer {
 				} else {
 					--Interpreter.Interpreter_intStackSize;
 					var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
-					DbTable var23 = DelayFadeTask.method7998(var3);
-					if (var23 == null) {
+					DbTable var27 = DelayFadeTask.method2207(var3);
+					if (var27 == null) {
 						throw new RuntimeException();
 					} else {
-						class173.field1847 = var23.method9370(0, 0);
+						class173.field1476 = var27.method2580(0, 0);
 						var5 = 0;
-						if (class173.field1847 != null) {
-							Client.field824 = var3;
-							Timer.field4675 = class173.field1847.iterator();
-							var5 = class173.field1847.size();
+						if (class173.field1476 != null) {
+							Client.field573 = var3;
+							Timer.field3845 = class173.field1476.iterator();
+							var5 = class173.field1476.size();
 						}
 
-						if (var0 == ScriptOpcodes.DB_FINDALL_WITH_COUNT) {
+						if (var0 == 7504) {
 							Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var5;
 						}
 
@@ -641,8 +603,8 @@ public class PcmPlayer {
 					}
 				}
 			} else {
-				if (Timer.field4675 != null && Timer.field4675.hasNext()) {
-					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = (Integer)Timer.field4675.next();
+				if (Timer.field3845 != null && Timer.field3845.hasNext()) {
+					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = (Integer)Timer.field3845.next();
 				} else {
 					Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = -1;
 				}
@@ -651,24 +613,24 @@ public class PcmPlayer {
 			}
 		} else {
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			var4 = class319.method6108(var3);
+			var21 = class319.method1694(var3);
 			var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			var6 = ModelData0.getDbTable(var5);
-			if (var6 == null) {
+			var22 = ModelData0.getDbTable(var5);
+			if (var22 == null) {
 				throw new RuntimeException();
 			} else {
-				var7 = class167.method3503(var5);
-				class173.field1847 = var6.method9370(var4, var7);
-				if (class173.field1847 != null) {
-					Client.field824 = class133.method3115(var5);
-					Timer.field4675 = class173.field1847.iterator();
-					if (var0 == ScriptOpcodes.DB_FIND_WITH_COUNT) {
-						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class173.field1847.size();
+				var7 = class167.method874(var5);
+				class173.field1476 = var22.method2580(var21, var7);
+				if (class173.field1476 != null) {
+					Client.field573 = class133.method734(var5);
+					Timer.field3845 = class173.field1476.iterator();
+					if (var0 == 7500) {
+						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class173.field1476.size();
 					}
 				} else {
-					Client.field824 = -1;
-					Timer.field4675 = null;
-					if (var0 == ScriptOpcodes.DB_FIND_WITH_COUNT) {
+					Client.field573 = -1;
+					Timer.field3845 = null;
+					if (var0 == 7500) {
 						Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = 0;
 					}
 				}

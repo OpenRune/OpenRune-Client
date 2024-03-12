@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("di")
 public class class93 {
@@ -12,112 +11,112 @@ public class class93 {
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1171;
+	static final class93 field973;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1165;
+	static final class93 field977;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1166;
+	static final class93 field969;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1167;
+	static final class93 field966;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1168;
+	static final class93 field974;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1177;
+	static final class93 field975;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1170;
+	static final class93 field962;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1173;
+	static final class93 field979;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1172;
+	static final class93 field972;
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1175;
+	static final class93 field976;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1178;
+	static final class93 field968;
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1164;
+	static final class93 field965;
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1176;
+	static final class93 field967;
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1174;
+	static final class93 field963;
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1180;
+	static final class93 field978;
 	@ObfuscatedName("an")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1179;
+	static final class93 field971;
 	@ObfuscatedName("ag")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1169;
+	static final class93 field964;
 	@ObfuscatedName("am")
 	@ObfuscatedSignature(
 		descriptor = "Ldi;"
 	)
-	static final class93 field1181;
+	static final class93 field970;
 
 	static {
-		field1171 = new class93();
-		field1165 = new class93();
-		field1166 = new class93();
-		field1167 = new class93();
-		field1168 = new class93();
-		field1177 = new class93();
-		field1170 = new class93();
-		field1173 = new class93();
-		field1172 = new class93();
-		field1175 = new class93();
-		field1178 = new class93();
-		field1164 = new class93();
-		field1176 = new class93();
-		field1174 = new class93();
-		field1180 = new class93();
-		field1179 = new class93();
-		field1169 = new class93();
-		field1181 = new class93();
+		field973 = new class93();
+		field977 = new class93();
+		field969 = new class93();
+		field966 = new class93();
+		field974 = new class93();
+		field975 = new class93();
+		field962 = new class93();
+		field979 = new class93();
+		field972 = new class93();
+		field976 = new class93();
+		field968 = new class93();
+		field965 = new class93();
+		field967 = new class93();
+		field963 = new class93();
+		field978 = new class93();
+		field971 = new class93();
+		field964 = new class93();
+		field970 = new class93();
 	}
 
 	class93() {
@@ -128,7 +127,7 @@ public class class93 {
 		descriptor = "(Lof;Lof;IZI)Lfc;",
 		garbageValue = "-1532755804"
 	)
-	public static class140 method2440(AbstractArchive var0, AbstractArchive var1, int var2, boolean var3) {
+	public static class140 method509(AbstractArchive var0, AbstractArchive var1, int var2, boolean var3) {
 		boolean var4 = true;
 		byte[] var5 = var0.getFile(var2 >> 16 & 65535, var2 & 65535);
 		if (var5 == null) {
@@ -150,9 +149,9 @@ public class class93 {
 			if (!var4) {
 				return null;
 			} else {
-				if (GrandExchangeOfferUnitPriceComparator.field4467 == null) {
-					class520.field5121 = Runtime.getRuntime().availableProcessors();
-					GrandExchangeOfferUnitPriceComparator.field4467 = new ThreadPoolExecutor(0, class520.field5121, 0L, TimeUnit.MILLISECONDS, new ArrayBlockingQueue(class520.field5121 * 100 + 100), new class137());
+				if (GrandExchangeOfferUnitPriceComparator.field3691 == null) {
+					class520.field4196 = Runtime.getRuntime().availableProcessors();
+					GrandExchangeOfferUnitPriceComparator.field3691 = new ThreadPoolExecutor(0, class520.field4196, 0L, TimeUnit.MILLISECONDS, new ArrayBlockingQueue(class520.field4196 * 100 + 100), new class137());
 				}
 
 				try {
@@ -169,15 +168,15 @@ public class class93 {
 		descriptor = "(FFFFLfr;B)V",
 		garbageValue = "5"
 	)
-	static void method2443(float var0, float var1, float var2, float var3, class132 var4) {
+	static void method511(float var0, float var1, float var2, float var3, class132 var4) {
 		float var5 = var1 - var0;
 		float var6 = var2 - var1;
 		float var7 = var3 - var2;
 		float var8 = var6 - var5;
-		var4.field1570 = var7 - var6 - var8;
-		var4.field1573 = var8 + var8 + var8;
-		var4.field1569 = var5 + var5 + var5;
-		var4.field1567 = var0;
+		var4.field1287 = var7 - var6 - var8;
+		var4.field1290 = var8 + var8 + var8;
+		var4.field1283 = var5 + var5 + var5;
+		var4.field1285 = var0;
 	}
 
 	@ObfuscatedName("ax")
@@ -185,7 +184,7 @@ public class class93 {
 		descriptor = "(B)I",
 		garbageValue = "-33"
 	)
-	static final int method2438() {
+	static final int method510() {
 		return ViewportMouse.ViewportMouse_y;
 	}
 
@@ -194,7 +193,7 @@ public class class93 {
 		descriptor = "(III)I",
 		garbageValue = "534540991"
 	)
-	static int method2441(int var0, int var1) {
+	static int method512(int var0, int var1) {
 		for (int var2 = 0; var2 < 8; ++var2) {
 			if (var1 <= var0 + 30) {
 				return var2;
@@ -212,21 +211,21 @@ public class class93 {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-884462320"
 	)
-	static int method2439(int var0, Script var1, boolean var2) {
-		if (var0 == ScriptOpcodes.VIEWPORT_SETFOV) {
+	static int method514(int var0, Script var1, boolean var2) {
+		if (var0 == 6200) {
 			Interpreter.Interpreter_intStackSize -= 2;
-			Client.field724 = (short)Skeleton.method5416(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize]);
-			if (Client.field724 <= 0) {
-				Client.field724 = 256;
+			Client.field663 = (short)Skeleton.method1500(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize]);
+			if (Client.field663 <= 0) {
+				Client.field663 = 256;
 			}
 
-			Client.field803 = (short)Skeleton.method5416(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1]);
-			if (Client.field803 <= 0) {
-				Client.field803 = 256;
+			Client.field664 = (short)Skeleton.method1500(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1]);
+			if (Client.field664 <= 0) {
+				Client.field664 = 256;
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.VIEWPORT_SETZOOM) {
+		} else if (var0 == 6201) {
 			Interpreter.Interpreter_intStackSize -= 2;
 			Client.zoomHeight = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 			if (Client.zoomHeight <= 0) {
@@ -239,34 +238,34 @@ public class class93 {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.VIEWPORT_CLAMPFOV) {
+		} else if (var0 == 6202) {
 			Interpreter.Interpreter_intStackSize -= 4;
-			Client.field806 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
-			if (Client.field806 <= 0) {
-				Client.field806 = 1;
+			Client.field668 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
+			if (Client.field668 <= 0) {
+				Client.field668 = 1;
 			}
 
-			Client.field807 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-			if (Client.field807 <= 0) {
-				Client.field807 = 32767;
-			} else if (Client.field807 < Client.field806) {
-				Client.field807 = Client.field806;
+			Client.field666 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
+			if (Client.field666 <= 0) {
+				Client.field666 = 32767;
+			} else if (Client.field666 < Client.field668) {
+				Client.field666 = Client.field668;
 			}
 
-			Client.field722 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 2];
-			if (Client.field722 <= 0) {
-				Client.field722 = 1;
+			Client.field669 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 2];
+			if (Client.field669 <= 0) {
+				Client.field669 = 1;
 			}
 
-			Client.field809 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 3];
-			if (Client.field809 <= 0) {
-				Client.field809 = 32767;
-			} else if (Client.field809 < Client.field722) {
-				Client.field809 = Client.field722;
+			Client.field667 = (short)Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 3];
+			if (Client.field667 <= 0) {
+				Client.field667 = 32767;
+			} else if (Client.field667 < Client.field669) {
+				Client.field667 = Client.field669;
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.VIEWPORT_GETEFFECTIVESIZE) {
+		} else if (var0 == 6203) {
 			if (Client.viewportWidget != null) {
 				class148.setViewportShape(0, 0, Client.viewportWidget.width, Client.viewportWidget.height, false);
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.viewportWidth;
@@ -277,13 +276,13 @@ public class class93 {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.VIEWPORT_GETZOOM) {
+		} else if (var0 == 6204) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.zoomHeight;
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.zoomWidth;
 			return 1;
-		} else if (var0 == ScriptOpcodes.VIEWPORT_GETFOV) {
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = JagNetThread.method7241(Client.field724);
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = JagNetThread.method7241(Client.field803);
+		} else if (var0 == 6205) {
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = JagNetThread.method2027(Client.field663);
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = JagNetThread.method2027(Client.field664);
 			return 1;
 		} else if (var0 == 6220) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = 0;
@@ -309,7 +308,7 @@ public class class93 {
 	)
 	@Export("getLoginError")
 	static void getLoginError(int var0) {
-		int var1 = SoundSystem.method808();
+		int var1 = SoundSystem.method210();
 		if (var0 == -3) {
 			SecureUrlRequester.setLoginResponseString("Connection timed out.", "Please try using a different world.", "");
 		} else if (var0 == -2) {
@@ -317,17 +316,17 @@ public class class93 {
 		} else if (var0 == -1) {
 			SecureUrlRequester.setLoginResponseString("No response from server.", "Please try using a different world.", "");
 		} else if (var0 == 3) {
-			JagexCache.method4224(3);
-			Login.field977 = 1;
+			JagexCache.method1113(3);
+			Login.field787 = 1;
 		} else if (var0 == 4) {
-			class150.method3272(0);
+			class150.method794(0);
 		} else if (var0 == 5) {
-			Login.field977 = 2;
+			Login.field787 = 2;
 			SecureUrlRequester.setLoginResponseString("Either your account is still logged in, or the last", "world you were using has become unavailable.", "Please try again later.");
 		} else if (var0 == 68) {
-			if (!Client.field532) {
-				Client.field532 = true;
-				class371.method7026();
+			if (!Client.field398) {
+				Client.field398 = true;
+				class371.method1964();
 				return;
 			}
 
@@ -352,11 +351,11 @@ public class class93 {
 			SecureUrlRequester.setLoginResponseString("The server is being updated.", "Please wait 1 minute and try again.", "");
 		} else if (var0 == 16) {
 			SecureUrlRequester.setLoginResponseString("Too many login attempts.", "You can use the Jagex Launcher to continue playing.", "Press the button below to download it now.");
-			JagexCache.method4224(33);
+			JagexCache.method1113(33);
 		} else if (var0 == 17) {
 			SecureUrlRequester.setLoginResponseString("To access this free world, log into a", "members world and move your character", "to a non-members area.");
 		} else if (var0 == 18) {
-			class150.method3272(1);
+			class150.method794(1);
 		} else if (var0 == 19) {
 			SecureUrlRequester.setLoginResponseString("This world is running a closed Beta.", "Sorry invited players only.", "Please use a different world.");
 		} else if (var0 == 20) {
@@ -376,7 +375,7 @@ public class class93 {
 		} else if (var0 == 31) {
 			SecureUrlRequester.setLoginResponseString("Your account must have a displayname set", "in order to play the game.  Please set it", "via the website, or the main game.");
 		} else if (var0 == 32) {
-			class150.method3272(2);
+			class150.method794(2);
 		} else if (var0 == 37) {
 			SecureUrlRequester.setLoginResponseString("Your account is currently inaccessible.", "Please try again in a few minutes.", "");
 		} else if (var0 == 38) {
@@ -384,7 +383,7 @@ public class class93 {
 		} else if (var0 == 74) {
 			SecureUrlRequester.setLoginResponseString("This world is running a", "closed beta. Please", "use a different world.");
 		} else if (var0 == 55) {
-			JagexCache.method4224(8);
+			JagexCache.method1113(8);
 		} else {
 			if (var0 == 56) {
 				SecureUrlRequester.setLoginResponseString("Enter the 6-digit code generated by your", "authenticator app.", "");
@@ -400,40 +399,40 @@ public class class93 {
 
 			if (var0 == 61) {
 				SecureUrlRequester.setLoginResponseString("", "Please enter your date of birth (DD/MM/YYYY)", "");
-				JagexCache.method4224(7);
+				JagexCache.method1113(7);
 			} else {
 				if (var0 == 62) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(9);
+					JagexCache.method1113(9);
 					SecureUrlRequester.setLoginResponseString("Login attempt timed out.", "Please try again.", "");
 					return;
 				}
 
 				if (var0 == 63) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(9);
+					JagexCache.method1113(9);
 					SecureUrlRequester.setLoginResponseString("You were signed out.", "Please sign in again.", "");
 					return;
 				}
 
 				if (var0 == 65 || var0 == 67) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(9);
+					JagexCache.method1113(9);
 					SecureUrlRequester.setLoginResponseString("Failed to login.", "Please try again.", "");
 					return;
 				}
 
 				if (var0 == 71) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(7);
+					JagexCache.method1113(7);
 					SecureUrlRequester.setLoginResponseString("There was a problem updating your DOB.", "Please try again later. If the problem ", "persists, please contact Jagex Support.");
 				} else if (var0 == 73) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(6);
+					JagexCache.method1113(6);
 					SecureUrlRequester.setLoginResponseString("Your date of birth information is waiting", "to be reviewed by our staff.", "It will be processed shortly.");
 				} else if (var0 == 72) {
 					Interpreter.updateGameState(10);
-					JagexCache.method4224(32);
+					JagexCache.method1113(32);
 				} else {
 					SecureUrlRequester.setLoginResponseString("Unexpected server response", "Please try using a different world.", "");
 				}
@@ -441,9 +440,9 @@ public class class93 {
 		}
 
 		Interpreter.updateGameState(10);
-		boolean var2 = var1 != SoundSystem.method808();
-		if (!var2 && Client.field563.method9755()) {
-			JagexCache.method4224(9);
+		boolean var2 = var1 != SoundSystem.method210();
+		if (!var2 && Client.field676.method2691()) {
+			JagexCache.method1113(9);
 		}
 
 	}
@@ -463,13 +462,13 @@ public class class93 {
 		descriptor = "(III)V",
 		garbageValue = "-1456462183"
 	)
-	static final void method2442(int var0, int var1) {
+	static final void method516(int var0, int var1) {
 		ClanChannel var2 = var0 >= 0 ? Client.currentClanChannels[var0] : class316.guestClanChannel;
-		if (var2 != null && var1 >= 0 && var1 < var2.method3481()) {
+		if (var2 != null && var1 >= 0 && var1 < var2.method869()) {
 			ClanChannelMember var3 = (ClanChannelMember)var2.members.get(var1);
 			if (var3.rank == -1) {
 				String var4 = var3.username.getName();
-				PacketBufferNode var5 = ViewportMouse.getPacketBufferNode(ClientPacket.field3198, Client.packetWriter.isaacCipher);
+				PacketBufferNode var5 = ViewportMouse.getPacketBufferNode(ClientPacket.field2587, Client.packetWriter.isaacCipher);
 				var5.packetBuffer.writeByte(3 + class145.stringCp1252NullTerminatedByteSize(var4));
 				var5.packetBuffer.writeByte(var0);
 				var5.packetBuffer.writeShort(var1);

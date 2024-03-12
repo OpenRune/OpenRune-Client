@@ -37,13 +37,13 @@ public class UserComparator9 extends AbstractUserComparator {
 		descriptor = "(B)Lsr;",
 		garbageValue = "73"
 	)
-	public static class469 method2965() {
-		synchronized(class469.field4845) {
-			if (class469.field4842 == 0) {
+	public static class469 method685() {
+		synchronized(class469.field3975) {
+			if (class469.field3973 == 0) {
 				return new class469();
 			} else {
-				class469.field4845[--class469.field4842].method8627();
-				return class469.field4845[class469.field4842];
+				class469.field3975[--class469.field3973].method2377();
+				return class469.field3975[class469.field3973];
 			}
 		}
 	}

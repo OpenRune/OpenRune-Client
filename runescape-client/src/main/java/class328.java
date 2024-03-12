@@ -1,6 +1,7 @@
 import java.util.PriorityQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicBoolean;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -10,8 +11,12 @@ class class328 implements Callable {
 	@ObfuscatedSignature(
 		descriptor = "Lmo;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final MidiPcmStream this$0;
 	// $FF: synthetic field
+	@Export("val$cancelled")
+	@ObfuscatedName("val$cancelled")
 	final AtomicBoolean val$cancelled;
 
 	@ObfuscatedSignature(
@@ -35,7 +40,7 @@ class class328 implements Callable {
 				var2 = (class325)var1.remove();
 			}
 
-			var2.field3541.method1060();
+			var2.field2904.method284();
 		}
 	}
 
@@ -44,8 +49,8 @@ class class328 implements Callable {
 		descriptor = "(I)[Lfh;",
 		garbageValue = "1060291848"
 	)
-	static class130[] method6344() {
-		return new class130[]{class130.field1548, class130.field1539, class130.field1540, class130.field1541, class130.field1544};
+	static class130[] method1760() {
+		return new class130[]{class130.field1263, class130.field1265, class130.field1262, class130.field1261, class130.field1264};
 	}
 
 	@ObfuscatedName("au")
@@ -53,7 +58,7 @@ class class328 implements Callable {
 		descriptor = "(IIII)D",
 		garbageValue = "635977340"
 	)
-	static double method6345(int var0, int var1, int var2) {
+	static double method1759(int var0, int var1, int var2) {
 		double var3 = var1 > 0 ? (double)Math.max(0.0F, Math.min(1.0F, (float)var0 / (float)var1)) : 1.0D;
 		if (var3 > 0.0D && var3 < 1.0D) {
 			double var5;

@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,74 +8,65 @@ public class class230 {
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2450;
+	static final class230 field1969;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2446;
+	static final class230 field1972;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2447;
+	static final class230 field1968;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2448;
+	static final class230 field1967;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2449;
+	static final class230 field1970;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2445;
+	static final class230 field1971;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lic;"
 	)
-	static final class230 field2451;
+	static final class230 field1966;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "[Lic;"
 	)
-	static final class230[] field2455;
+	static final class230[] field1973;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 1495969513
-	)
-	final int field2452;
+	final int field1976;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -2113963923
-	)
-	final int field2453;
+	final int field1974;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1237540519
-	)
-	final int field2454;
+	final int field1975;
 
 	static {
-		field2450 = new class230(0, 8, 8);
-		field2446 = new class230(6, 16, 16);
-		field2447 = new class230(3, 32, 32);
-		field2448 = new class230(1, 48, 48);
-		field2449 = new class230(2, 64, 64);
-		field2445 = new class230(4, 96, 96);
-		field2451 = new class230(5, 128, 128);
-		field2455 = DirectByteArrayCopier.method6962();
-		Arrays.sort(field2455, new class235());
+		field1969 = new class230(0, 8, 8);
+		field1972 = new class230(6, 16, 16);
+		field1968 = new class230(3, 32, 32);
+		field1967 = new class230(1, 48, 48);
+		field1970 = new class230(2, 64, 64);
+		field1971 = new class230(4, 96, 96);
+		field1966 = new class230(5, 128, 128);
+		field1973 = DirectByteArrayCopier.method1937();
+		Arrays.sort(field1973, new class235());
 	}
 
 	class230(int var1, int var2, int var3) {
-		this.field2452 = var1;
-		this.field2453 = var2;
-		this.field2454 = var3;
+		this.field1976 = var1;
+		this.field1974 = var2;
+		this.field1975 = var3;
 	}
 
 	@ObfuscatedName("aw")
@@ -84,7 +74,7 @@ public class class230 {
 		descriptor = "(I)I",
 		garbageValue = "140463448"
 	)
-	int method4505() {
-		return this.field2454 * this.field2453;
+	int method1206() {
+		return this.field1975 * this.field1974;
 	}
 }

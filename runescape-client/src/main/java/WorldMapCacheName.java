@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,27 +10,27 @@ public class WorldMapCacheName {
 	@ObfuscatedSignature(
 		descriptor = "Lkl;"
 	)
-	public static final WorldMapCacheName field2680;
+	public static final WorldMapCacheName field2151;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lkl;"
 	)
-	public static final WorldMapCacheName field2678;
+	public static final WorldMapCacheName field2153;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lkl;"
 	)
-	public static final WorldMapCacheName field2681;
+	public static final WorldMapCacheName field2150;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lkl;"
 	)
-	static final WorldMapCacheName field2677;
+	static final WorldMapCacheName field2157;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lkl;"
 	)
-	public static final WorldMapCacheName field2682;
+	public static final WorldMapCacheName field2152;
 	@ObfuscatedName("ci")
 	@ObfuscatedSignature(
 		descriptor = "Lpe;"
@@ -42,22 +41,19 @@ public class WorldMapCacheName {
 	@ObfuscatedSignature(
 		descriptor = "[Lvg;"
 	)
-	static IndexedSprite[] field2685;
+	static IndexedSprite[] field2156;
 	@ObfuscatedName("ub")
-	@ObfuscatedGetter(
-		intValue = -957921043
-	)
-	static int field2683;
+	static int field2154;
 	@ObfuscatedName("as")
 	@Export("name")
 	public final String name;
 
 	static {
-		field2680 = new WorldMapCacheName("details");
-		field2678 = new WorldMapCacheName("compositemap");
-		field2681 = new WorldMapCacheName("compositetexture");
-		field2677 = new WorldMapCacheName("area");
-		field2682 = new WorldMapCacheName("labels");
+		field2151 = new WorldMapCacheName("details");
+		field2153 = new WorldMapCacheName("compositemap");
+		field2150 = new WorldMapCacheName("compositetexture");
+		field2157 = new WorldMapCacheName("area");
+		field2152 = new WorldMapCacheName("labels");
 	}
 
 	WorldMapCacheName(String var1) {
@@ -69,7 +65,7 @@ public class WorldMapCacheName {
 		descriptor = "(II)I",
 		garbageValue = "-1813975840"
 	)
-	static int method5111(int var0) {
+	static int method1397(int var0) {
 		return var0 * 3 + 600;
 	}
 }

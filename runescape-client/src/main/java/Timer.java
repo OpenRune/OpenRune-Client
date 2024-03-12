@@ -1,7 +1,6 @@
 import java.util.Iterator;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,7 +8,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Timer")
 public class Timer {
 	@ObfuscatedName("wb")
-	static Iterator field4675;
+	static Iterator field3845;
 	@ObfuscatedName("dk")
 	@ObfuscatedSignature(
 		descriptor = "[Lvd;"
@@ -17,64 +16,37 @@ public class Timer {
 	@Export("worldSelectBackSprites")
 	static SpritePixels[] worldSelectBackSprites;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = -7653010758668939065L
-	)
-	long field4676;
+	long field3852;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		longValue = -6545887099209885385L
-	)
-	long field4666;
+	long field3855;
 	@ObfuscatedName("al")
-	public boolean field4665;
+	public boolean field3856;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		longValue = 1139078630527989975L
-	)
-	long field4668;
+	long field3851;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		longValue = 5107382463968810817L
-	)
-	long field4669;
+	long field3853;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		longValue = -2042036406760048143L
-	)
-	long field4670;
+	long field3854;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 282494099
-	)
-	int field4671;
+	int field3847;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -90523561
-	)
-	int field4667;
+	int field3850;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1422789313
-	)
-	int field4673;
+	int field3848;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1418530473
-	)
-	int field4672;
+	int field3849;
 
 	public Timer() {
-		this.field4676 = -1L;
-		this.field4666 = -1L;
-		this.field4665 = false;
-		this.field4668 = 0L;
-		this.field4669 = 0L;
-		this.field4670 = 0L;
-		this.field4671 = 0;
-		this.field4667 = 0;
-		this.field4673 = 0;
-		this.field4672 = 0;
+		this.field3852 = -1L;
+		this.field3855 = -1L;
+		this.field3856 = false;
+		this.field3851 = 0L;
+		this.field3853 = 0L;
+		this.field3854 = 0L;
+		this.field3847 = 0;
+		this.field3850 = 0;
+		this.field3848 = 0;
+		this.field3849 = 0;
 	}
 
 	@ObfuscatedName("aq")
@@ -82,8 +54,8 @@ public class Timer {
 		descriptor = "(S)V",
 		garbageValue = "255"
 	)
-	public void method8120() {
-		this.field4676 = SecureRandomCallable.method2320();
+	public void method2230() {
+		this.field3852 = SecureRandomCallable.method465();
 	}
 
 	@ObfuscatedName("aw")
@@ -91,10 +63,10 @@ public class Timer {
 		descriptor = "(B)V",
 		garbageValue = "1"
 	)
-	public void method8102() {
-		if (this.field4676 != -1L) {
-			this.field4669 = SecureRandomCallable.method2320() - this.field4676;
-			this.field4676 = -1L;
+	public void method2231() {
+		if (this.field3852 != -1L) {
+			this.field3853 = SecureRandomCallable.method465() - this.field3852;
+			this.field3852 = -1L;
 		}
 
 	}
@@ -104,9 +76,9 @@ public class Timer {
 		descriptor = "(IB)V",
 		garbageValue = "1"
 	)
-	public void method8108(int var1) {
-		this.field4666 = SecureRandomCallable.method2320();
-		this.field4671 = var1;
+	public void method2232(int var1) {
+		this.field3855 = SecureRandomCallable.method465();
+		this.field3847 = var1;
 	}
 
 	@ObfuscatedName("ai")
@@ -114,14 +86,14 @@ public class Timer {
 		descriptor = "(I)V",
 		garbageValue = "-1323143876"
 	)
-	public void method8104() {
-		if (this.field4666 != -1L) {
-			this.field4668 = SecureRandomCallable.method2320() - this.field4666;
-			this.field4666 = -1L;
+	public void method2233() {
+		if (this.field3855 != -1L) {
+			this.field3851 = SecureRandomCallable.method465() - this.field3855;
+			this.field3855 = -1L;
 		}
 
-		++this.field4673;
-		this.field4665 = true;
+		++this.field3848;
+		this.field3856 = true;
 	}
 
 	@ObfuscatedName("ar")
@@ -129,9 +101,9 @@ public class Timer {
 		descriptor = "(I)V",
 		garbageValue = "-1204226511"
 	)
-	public void method8105() {
-		this.field4665 = false;
-		this.field4667 = 0;
+	public void method2234() {
+		this.field3856 = false;
+		this.field3850 = 0;
 	}
 
 	@ObfuscatedName("as")
@@ -139,8 +111,8 @@ public class Timer {
 		descriptor = "(B)V",
 		garbageValue = "-84"
 	)
-	public void method8123() {
-		this.method8104();
+	public void method2235() {
+		this.method2233();
 	}
 
 	@ObfuscatedName("aa")
@@ -150,7 +122,7 @@ public class Timer {
 	)
 	@Export("write")
 	public void write(Buffer var1) {
-		long var2 = this.field4669;
+		long var2 = this.field3853;
 		var2 /= 10L;
 		if (var2 < 0L) {
 			var2 = 0L;
@@ -159,7 +131,7 @@ public class Timer {
 		}
 
 		var1.writeShort((int)var2);
-		long var4 = this.field4668;
+		long var4 = this.field3851;
 		var4 /= 10L;
 		if (var4 < 0L) {
 			var4 = 0L;
@@ -168,7 +140,7 @@ public class Timer {
 		}
 
 		var1.writeShort((int)var4);
-		long var6 = this.field4670;
+		long var6 = this.field3854;
 		var6 /= 10L;
 		if (var6 < 0L) {
 			var6 = 0L;
@@ -177,9 +149,9 @@ public class Timer {
 		}
 
 		var1.writeShort((int)var6);
-		var1.writeShort(this.field4671);
-		var1.writeShort(this.field4667);
-		var1.writeShort(this.field4673);
-		var1.writeShort(this.field4672);
+		var1.writeShort(this.field3847);
+		var1.writeShort(this.field3850);
+		var1.writeShort(this.field3848);
+		var1.writeShort(this.field3849);
 	}
 }

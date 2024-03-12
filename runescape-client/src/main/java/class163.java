@@ -1,20 +1,13 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("ge")
 public class class163 extends class145 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -837953891
-	)
-	int field1792;
+	int field1442;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1269869285
-	)
-	int field1793;
+	int field1443;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -33,9 +26,10 @@ public class class163 extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
-		this.field1792 = var1.readInt();
-		this.field1793 = var1.readInt();
+		this.field1442 = var1.readInt();
+		this.field1443 = var1.readInt();
 	}
 
 	@ObfuscatedName("aw")
@@ -43,8 +37,9 @@ public class class163 extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.method3335(this.field1792, this.field1793);
+		var1.method829(this.field1442, this.field1443);
 	}
 
 	@ObfuscatedName("mw")
@@ -69,7 +64,7 @@ public class class163 extends class145 {
 
 					InterfaceParent var4 = (InterfaceParent)Client.interfaceParents.get((long)var3.id);
 					if (var4 != null) {
-						WorldMapRenderer.method4881(var4.group);
+						WorldMapRenderer.method1328(var4.group);
 					}
 				}
 
@@ -98,7 +93,7 @@ public class class163 extends class145 {
 								}
 							} else {
 								var3.modelFrame += Client.graphicsCycle;
-								int var7 = var6.method4065();
+								int var7 = var6.method1073();
 								if (var3.modelFrame >= var7) {
 									var3.modelFrame -= var6.frameCount;
 									if (var3.modelFrame < 0 || var3.modelFrame >= var7) {
@@ -111,9 +106,9 @@ public class class163 extends class145 {
 						}
 					}
 
-					if (var3.field3782 != 0 && !var3.isIf3) {
-						int var9 = var3.field3782 >> 16;
-						var5 = var3.field3782 << 16 >> 16;
+					if (var3.field3114 != 0 && !var3.isIf3) {
+						int var9 = var3.field3114 >> 16;
+						var5 = var3.field3114 << 16 >> 16;
 						var9 *= Client.graphicsCycle;
 						var5 *= Client.graphicsCycle;
 						var3.modelAngleX = var9 + var3.modelAngleX & 2047;

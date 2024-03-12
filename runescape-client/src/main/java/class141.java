@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,47 +8,47 @@ public enum class141 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1642(0, 0),
+	field1347(0, 0),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1653(1, 1),
+	field1350(1, 1),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1641(2, 2),
+	field1345(2, 2),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1652(3, 3),
+	field1344(3, 3),
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1645(4, 4),
+	field1348(4, 4),
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1646(5, 5),
+	field1349(5, 5),
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1647(6, 6),
+	field1343(6, 6),
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1648(7, 7),
+	field1351(7, 7),
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lfm;"
 	)
-	field1649(8, 8);
+	field1346(8, 8);
 
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
@@ -64,19 +63,13 @@ public enum class141 implements Enum {
 	@Export("fontPlain12")
 	static Font fontPlain12;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = -614422849
-	)
-	final int field1643;
+	final int field1353;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = 2028799887
-	)
-	final int field1651;
+	final int field1352;
 
 	class141(int var3, int var4) {
-		this.field1643 = var3;
-		this.field1651 = var4;
+		this.field1353 = var3;
+		this.field1352 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -86,6 +79,6 @@ public enum class141 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field1651;
+		return this.field1352;
 	}
 }

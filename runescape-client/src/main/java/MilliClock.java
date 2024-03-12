@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,47 +10,32 @@ public class MilliClock extends Clock {
 	@ObfuscatedSignature(
 		descriptor = "Loq;"
 	)
-	public static class388 field2352;
+	public static class388 field1892;
 	@ObfuscatedName("ak")
 	@Export("Tiles_saturation")
 	static int[] Tiles_saturation;
 	@ObfuscatedName("aq")
-	long[] field2353;
+	long[] field1899;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 476101663
-	)
-	int field2351;
+	int field1897;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1855746457
-	)
-	int field2348;
+	int field1894;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		longValue = -9122481072101471877L
-	)
-	long field2349;
+	long field1898;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -988131973
-	)
-	int field2350;
+	int field1895;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 1508861897
-	)
-	int field2346;
+	int field1896;
 
 	MilliClock() {
-		this.field2353 = new long[10];
-		this.field2351 = 256;
-		this.field2348 = 1;
-		this.field2350 = 0;
-		this.field2349 = SecureRandomCallable.method2320();
+		this.field1899 = new long[10];
+		this.field1897 = 256;
+		this.field1894 = 1;
+		this.field1895 = 0;
+		this.field1898 = SecureRandomCallable.method465();
 
 		for (int var1 = 0; var1 < 10; ++var1) {
-			this.field2353[var1] = this.field2349;
+			this.field1899[var1] = this.field1898;
 		}
 
 	}
@@ -64,7 +48,7 @@ public class MilliClock extends Clock {
 	@Export("mark")
 	public void mark() {
 		for (int var1 = 0; var1 < 10; ++var1) {
-			this.field2353[var1] = 0L;
+			this.field1899[var1] = 0L;
 		}
 
 	}
@@ -76,53 +60,53 @@ public class MilliClock extends Clock {
 	)
 	@Export("wait")
 	public int wait(int var1, int var2) {
-		int var3 = this.field2351;
-		int var4 = this.field2348;
-		this.field2351 = 300;
-		this.field2348 = 1;
-		this.field2349 = SecureRandomCallable.method2320();
-		if (this.field2353[this.field2346] == 0L) {
-			this.field2351 = var3;
-			this.field2348 = var4;
-		} else if (this.field2349 > this.field2353[this.field2346]) {
-			this.field2351 = (int)((long)(var1 * 2560) / (this.field2349 - this.field2353[this.field2346]));
+		int var3 = this.field1897;
+		int var4 = this.field1894;
+		this.field1897 = 300;
+		this.field1894 = 1;
+		this.field1898 = SecureRandomCallable.method465();
+		if (this.field1899[this.field1896] == 0L) {
+			this.field1897 = var3;
+			this.field1894 = var4;
+		} else if (this.field1898 > this.field1899[this.field1896]) {
+			this.field1897 = (int)((long)(var1 * 2560) / (this.field1898 - this.field1899[this.field1896]));
 		}
 
-		if (this.field2351 < 25) {
-			this.field2351 = 25;
+		if (this.field1897 < 25) {
+			this.field1897 = 25;
 		}
 
-		if (this.field2351 > 256) {
-			this.field2351 = 256;
-			this.field2348 = (int)((long)var1 - (this.field2349 - this.field2353[this.field2346]) / 10L);
+		if (this.field1897 > 256) {
+			this.field1897 = 256;
+			this.field1894 = (int)((long)var1 - (this.field1898 - this.field1899[this.field1896]) / 10L);
 		}
 
-		if (this.field2348 > var1) {
-			this.field2348 = var1;
+		if (this.field1894 > var1) {
+			this.field1894 = var1;
 		}
 
-		this.field2353[this.field2346] = this.field2349;
-		this.field2346 = (this.field2346 + 1) % 10;
+		this.field1899[this.field1896] = this.field1898;
+		this.field1896 = (this.field1896 + 1) % 10;
 		int var5;
-		if (this.field2348 > 1) {
+		if (this.field1894 > 1) {
 			for (var5 = 0; var5 < 10; ++var5) {
-				if (this.field2353[var5] != 0L) {
-					this.field2353[var5] += (long)this.field2348;
+				if (this.field1899[var5] != 0L) {
+					this.field1899[var5] += (long)this.field1894;
 				}
 			}
 		}
 
-		if (this.field2348 < var2) {
-			this.field2348 = var2;
+		if (this.field1894 < var2) {
+			this.field1894 = var2;
 		}
 
-		LoginPacket.method3209((long)this.field2348);
+		LoginPacket.method764((long)this.field1894);
 
-		for (var5 = 0; this.field2350 < 256; this.field2350 += this.field2351) {
+		for (var5 = 0; this.field1895 < 256; this.field1895 += this.field1897) {
 			++var5;
 		}
 
-		this.field2350 &= 255;
+		this.field1895 &= 255;
 		return var5;
 	}
 
@@ -154,8 +138,8 @@ public class MilliClock extends Clock {
 		descriptor = "(B)[Llq;",
 		garbageValue = "53"
 	)
-	public static class311[] method4249() {
-		return new class311[]{class311.field3284, class311.field3275, class311.field3276, class311.field3277, class311.field3278, class311.field3279, class311.field3286, class311.field3285, class311.field3282, class311.field3281, class311.field3287, class311.field3280};
+	public static class311[] method1117() {
+		return new class311[]{class311.field2673, class311.field2677, class311.field2671, class311.field2669, class311.field2674, class311.field2675, class311.field2667, class311.field2678, class311.field2672, class311.field2676, class311.field2670, class311.field2668};
 	}
 
 	@ObfuscatedName("lx")
@@ -202,7 +186,7 @@ public class MilliClock extends Clock {
 
 				int var10;
 				if (Client.isItemSelected == 1) {
-					UrlRequest.insertMenuItemNoShift("Use", Client.field822 + " " + "->" + " " + class370.colorStartTag(16777215) + var4, 14, var1, var2, var3);
+					UrlRequest.insertMenuItemNoShift("Use", Client.field625 + " " + "->" + " " + class370.colorStartTag(16777215) + var4, 14, var1, var2, var3);
 				} else if (Client.isSpellSelected) {
 					if ((class128.selectedSpellFlags & 8) == 8) {
 						UrlRequest.insertMenuItemNoShift(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + class370.colorStartTag(16777215) + var4, 15, var1, var2, var3);
@@ -226,7 +210,7 @@ public class MilliClock extends Clock {
 									} else {
 										var11 = 0;
 									}
-								} else if (AttackOption.field1362 == Client.playerAttackOption && var0.isClanMember()) {
+								} else if (AttackOption.field1133 == Client.playerAttackOption && var0.isClanMember()) {
 									var11 = 2000;
 								}
 							} else if (Client.playerOptionsPriorities[var10]) {

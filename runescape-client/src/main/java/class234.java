@@ -7,17 +7,17 @@ public class class234 {
 	@ObfuscatedSignature(
 		descriptor = "[Lid;"
 	)
-	class232[] field2474;
+	class232[] field1993;
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "(B)V",
 		garbageValue = "-10"
 	)
-	public void method4570() {
-		this.field2474 = new class232[1];
-		class230 var1 = class230.field2447;
-		this.field2474[0] = new class232(var1.field2453, var1.field2454);
+	public void method1224() {
+		this.field1993 = new class232[1];
+		class230 var1 = class230.field1968;
+		this.field1993[0] = new class232(var1.field1974, var1.field1975);
 	}
 
 	@ObfuscatedName("aw")
@@ -25,8 +25,8 @@ public class class234 {
 		descriptor = "(IIILih;Liz;Z[I[II)I",
 		garbageValue = "-531168220"
 	)
-	public int method4571(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, boolean var6, int[] var7, int[] var8) {
-		return this.method4572(var1, var2, var3, var4, var5, var6, var7, var8, this.field2474[0]);
+	public int method1225(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, boolean var6, int[] var7, int[] var8) {
+		return this.method1226(var1, var2, var3, var4, var5, var6, var7, var8, this.field1993[0]);
 	}
 
 	@ObfuscatedName("al")
@@ -34,27 +34,27 @@ public class class234 {
 		descriptor = "(IIILih;Liz;Z[I[ILid;I)I",
 		garbageValue = "-23549821"
 	)
-	int method4572(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, boolean var6, int[] var7, int[] var8, class232 var9) {
-		var9.method4519();
-		int var10 = var9.method4523();
-		int var11 = var9.method4524();
-		int[][] var12 = var9.method4526();
-		int[][] var13 = var9.method4546();
-		int[] var14 = var9.method4527();
-		int[] var15 = var9.method4528();
+	int method1226(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, boolean var6, int[] var7, int[] var8, class232 var9) {
+		var9.method1211();
+		int var10 = var9.method1215();
+		int var11 = var9.method1216();
+		int[][] var12 = var9.method1218();
+		int[][] var13 = var9.method1217();
+		int[] var14 = var9.method1219();
+		int[] var15 = var9.method1220();
 		boolean var16;
 		if (var3 == 1) {
-			var16 = this.method4573(var1, var2, var4, var5, var9);
+			var16 = this.method1227(var1, var2, var4, var5, var9);
 		} else if (var3 == 2) {
-			var16 = this.method4574(var1, var2, var4, var5, var9);
+			var16 = this.method1229(var1, var2, var4, var5, var9);
 		} else {
-			var16 = this.method4583(var1, var2, var3, var4, var5, var9);
+			var16 = this.method1230(var1, var2, var3, var4, var5, var9);
 		}
 
 		int var17 = var1 - (var10 >> 1);
 		int var18 = var2 - (var11 >> 1);
-		int var19 = var9.method4552();
-		int var20 = var9.method4557();
+		int var19 = var9.method1213();
+		int var20 = var9.method1214();
 		int var21;
 		int var22;
 		int var24;
@@ -156,14 +156,14 @@ public class class234 {
 		descriptor = "(IILih;Liz;Lid;B)Z",
 		garbageValue = "14"
 	)
-	final boolean method4573(int var1, int var2, RouteStrategy var3, CollisionMap var4, class232 var5) {
-		int var6 = var5.method4523();
-		int var7 = var5.method4524();
-		int[][] var8 = var5.method4526();
-		int[][] var9 = var5.method4546();
-		int[] var10 = var5.method4527();
-		int[] var11 = var5.method4528();
-		int var12 = var5.method4529();
+	final boolean method1227(int var1, int var2, RouteStrategy var3, CollisionMap var4, class232 var5) {
+		int var6 = var5.method1215();
+		int var7 = var5.method1216();
+		int[][] var8 = var5.method1218();
+		int[][] var9 = var5.method1217();
+		int[] var10 = var5.method1219();
+		int[] var11 = var5.method1220();
+		int var12 = var5.method1221();
 		int var13 = var1;
 		int var14 = var2;
 		int var15 = var6 >> 1;
@@ -189,7 +189,7 @@ public class class234 {
 			int var22 = var13 - var4.xInset;
 			int var23 = var14 - var4.yInset;
 			if (var3.hasArrived(1, var13, var14, var4)) {
-				var5.method4520(var13, var14);
+				var5.method1212(var13, var14);
 				return true;
 			}
 
@@ -259,7 +259,7 @@ public class class234 {
 			}
 		}
 
-		var5.method4520(var13, var14);
+		var5.method1212(var13, var14);
 		return false;
 	}
 
@@ -268,14 +268,14 @@ public class class234 {
 		descriptor = "(IILih;Liz;Lid;B)Z",
 		garbageValue = "45"
 	)
-	final boolean method4574(int var1, int var2, RouteStrategy var3, CollisionMap var4, class232 var5) {
-		int var6 = var5.method4523();
-		int var7 = var5.method4524();
-		int[][] var8 = var5.method4526();
-		int[][] var9 = var5.method4546();
-		int[] var10 = var5.method4527();
-		int[] var11 = var5.method4528();
-		int var12 = var5.method4529();
+	final boolean method1229(int var1, int var2, RouteStrategy var3, CollisionMap var4, class232 var5) {
+		int var6 = var5.method1215();
+		int var7 = var5.method1216();
+		int[][] var8 = var5.method1218();
+		int[][] var9 = var5.method1217();
+		int[] var10 = var5.method1219();
+		int[] var11 = var5.method1220();
+		int var12 = var5.method1221();
 		int var13 = var1;
 		int var14 = var2;
 		int var15 = var6 >> 1;
@@ -301,7 +301,7 @@ public class class234 {
 			int var22 = var13 - var4.xInset;
 			int var23 = var14 - var4.yInset;
 			if (var3.hasArrived(2, var13, var14, var4)) {
-				var5.method4520(var13, var14);
+				var5.method1212(var13, var14);
 				return true;
 			}
 
@@ -371,7 +371,7 @@ public class class234 {
 			}
 		}
 
-		var5.method4520(var13, var14);
+		var5.method1212(var13, var14);
 		return false;
 	}
 
@@ -380,14 +380,14 @@ public class class234 {
 		descriptor = "(IIILih;Liz;Lid;B)Z",
 		garbageValue = "29"
 	)
-	final boolean method4583(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, class232 var6) {
-		int var7 = var6.method4523();
-		int var8 = var6.method4524();
-		int[][] var9 = var6.method4526();
-		int[][] var10 = var6.method4546();
-		int[] var11 = var6.method4527();
-		int[] var12 = var6.method4528();
-		int var13 = var6.method4529();
+	final boolean method1230(int var1, int var2, int var3, RouteStrategy var4, CollisionMap var5, class232 var6) {
+		int var7 = var6.method1215();
+		int var8 = var6.method1216();
+		int[][] var9 = var6.method1218();
+		int[][] var10 = var6.method1217();
+		int[] var11 = var6.method1219();
+		int[] var12 = var6.method1220();
+		int var13 = var6.method1221();
 		int var14 = var1;
 		int var15 = var2;
 		int var16 = var7 >> 1;
@@ -404,7 +404,7 @@ public class class234 {
 		int[][] var22 = var5.flags;
 
 		while (true) {
-			label303:
+			label265:
 			while (true) {
 				int var23;
 				int var24;
@@ -413,10 +413,10 @@ public class class234 {
 				do {
 					do {
 						do {
-							label280:
+							label242:
 							do {
 								if (var21 == var27) {
-									var6.method4520(var14, var15);
+									var6.method1212(var14, var15);
 									return false;
 								}
 
@@ -428,7 +428,7 @@ public class class234 {
 								var23 = var14 - var5.xInset;
 								var24 = var15 - var5.yInset;
 								if (var4.hasArrived(var3, var14, var15, var5)) {
-									var6.method4520(var14, var15);
+									var6.method1212(var14, var15);
 									return true;
 								}
 
@@ -562,7 +562,7 @@ public class class234 {
 								if (var16 > 0 && var17 < var8 - var3 && var10[var16 - 1][var17 + 1] == 0 && (var22[var23 - 1][var3 + var24] & 19136824) == 0) {
 									for (var26 = 1; var26 < var3; ++var26) {
 										if ((var22[var23 - 1][var24 + var26] & 19136830) != 0 || (var22[var26 + (var23 - 1)][var3 + var24] & 19137016) != 0) {
-											continue label280;
+											continue label242;
 										}
 									}
 
@@ -579,7 +579,7 @@ public class class234 {
 
 				for (var26 = 1; var26 < var3; ++var26) {
 					if ((var22[var26 + var23][var3 + var24] & 19137016) != 0 || (var22[var3 + var23][var24 + var26] & 19136995) != 0) {
-						continue label303;
+						continue label265;
 					}
 				}
 
@@ -597,9 +597,9 @@ public class class234 {
 		descriptor = "(Lof;Lof;I)I",
 		garbageValue = "919541402"
 	)
-	static int method4589(AbstractArchive var0, AbstractArchive var1) {
+	static int method1228(AbstractArchive var0, AbstractArchive var1) {
 		int var2 = 0;
-		String[] var3 = Login.field949;
+		String[] var3 = Login.field807;
 
 		int var4;
 		String var5;
@@ -610,7 +610,7 @@ public class class234 {
 			}
 		}
 
-		var3 = Login.field945;
+		var3 = Login.field806;
 
 		for (var4 = 0; var4 < var3.length; ++var4) {
 			var5 = var3[var4];
@@ -619,7 +619,7 @@ public class class234 {
 			}
 		}
 
-		var3 = Login.field946;
+		var3 = Login.field805;
 
 		for (var4 = 0; var4 < var3.length; ++var4) {
 			var5 = var3[var4];

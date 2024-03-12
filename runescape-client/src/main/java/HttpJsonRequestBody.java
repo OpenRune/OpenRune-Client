@@ -21,9 +21,6 @@ public class HttpJsonRequestBody implements HttpPayload {
 		this.bodyFromBytes(var1);
 	}
 
-	@ObfuscatedSignature(
-		descriptor = "(Lorg/json/JSONObject;)V"
-	)
 	public HttpJsonRequestBody(JSONObject var1) {
 		this.body = var1;
 	}

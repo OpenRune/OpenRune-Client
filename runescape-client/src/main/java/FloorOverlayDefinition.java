@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -20,60 +19,33 @@ public class FloorOverlayDefinition extends DualNode {
 	@Export("FloorOverlayDefinition_cached")
 	public static EvictingDualNodeHashTable FloorOverlayDefinition_cached;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -637887147
-	)
 	@Export("primaryRgb")
 	public int primaryRgb;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1858594123
-	)
 	@Export("texture")
 	public int texture;
 	@ObfuscatedName("ar")
 	@Export("hideUnderlay")
 	public boolean hideUnderlay;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -78383605
-	)
 	@Export("secondaryRgb")
 	public int secondaryRgb;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 2028574889
-	)
 	@Export("hue")
 	public int hue;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -532421459
-	)
 	@Export("saturation")
 	public int saturation;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -970004813
-	)
 	@Export("lightness")
 	public int lightness;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 916475103
-	)
 	@Export("secondaryHue")
 	public int secondaryHue;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = 957509085
-	)
 	@Export("secondarySaturation")
 	public int secondarySaturation;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = -1296969211
-	)
 	@Export("secondaryLightness")
 	public int secondaryLightness;
 
@@ -222,29 +194,29 @@ public class FloorOverlayDefinition extends DualNode {
 			int var3 = var0.getGroupId(var1);
 			int var4 = var0.getFileId(var3, var2);
 			IndexedSprite[] var5;
-			if (!class130.method3074(var0, var3, var4)) {
+			if (!class130.method720(var0, var3, var4)) {
 				var5 = null;
 			} else {
-				IndexedSprite[] var7 = new IndexedSprite[SpriteBufferProperties.SpriteBuffer_spriteCount];
+				IndexedSprite[] var7 = new IndexedSprite[class548.SpriteBuffer_spriteCount];
 
-				for (int var8 = 0; var8 < SpriteBufferProperties.SpriteBuffer_spriteCount; ++var8) {
+				for (int var8 = 0; var8 < class548.SpriteBuffer_spriteCount; ++var8) {
 					IndexedSprite var9 = var7[var8] = new IndexedSprite();
-					var9.width = SpriteBufferProperties.SpriteBuffer_spriteWidth;
-					var9.height = SpriteBufferProperties.SpriteBuffer_spriteHeight;
-					var9.xOffset = SpriteBufferProperties.SpriteBuffer_xOffsets[var8];
-					var9.yOffset = SpriteBufferProperties.SpriteBuffer_yOffsets[var8];
+					var9.width = class548.SpriteBuffer_spriteWidth;
+					var9.height = class548.SpriteBuffer_spriteHeight;
+					var9.xOffset = class548.SpriteBuffer_xOffsets[var8];
+					var9.yOffset = class548.SpriteBuffer_yOffsets[var8];
 					var9.subWidth = class235.SpriteBuffer_spriteWidths[var8];
-					var9.subHeight = SpriteBufferProperties.SpriteBuffer_spriteHeights[var8];
+					var9.subHeight = class548.SpriteBuffer_spriteHeights[var8];
 					var9.palette = AbstractSocket.SpriteBuffer_spritePalette;
-					var9.pixels = SpriteBufferProperties.SpriteBuffer_pixels[var8];
+					var9.pixels = class548.SpriteBuffer_pixels[var8];
 				}
 
-				SpriteBufferProperties.SpriteBuffer_xOffsets = null;
-				SpriteBufferProperties.SpriteBuffer_yOffsets = null;
+				class548.SpriteBuffer_xOffsets = null;
+				class548.SpriteBuffer_yOffsets = null;
 				class235.SpriteBuffer_spriteWidths = null;
-				SpriteBufferProperties.SpriteBuffer_spriteHeights = null;
+				class548.SpriteBuffer_spriteHeights = null;
 				AbstractSocket.SpriteBuffer_spritePalette = null;
-				SpriteBufferProperties.SpriteBuffer_pixels = null;
+				class548.SpriteBuffer_pixels = null;
 				var5 = var7;
 			}
 
@@ -257,7 +229,7 @@ public class FloorOverlayDefinition extends DualNode {
 		descriptor = "(ILdc;ZB)I",
 		garbageValue = "3"
 	)
-	static int method4052(int var0, Script var1, boolean var2) {
+	static int method1060(int var0, Script var1, boolean var2) {
 		return 2;
 	}
 
@@ -268,7 +240,7 @@ public class FloorOverlayDefinition extends DualNode {
 	)
 	@Export("setWindowedMode")
 	static void setWindowedMode(int var0) {
-		Client.field756 = 0L;
+		Client.field642 = 0L;
 		if (var0 >= 2) {
 			Client.isResizable = true;
 		} else {
@@ -310,7 +282,7 @@ public class FloorOverlayDefinition extends DualNode {
 			var8 = var7 >> 6 & 3;
 			var9 = var7 & 31;
 			var10 = var3;
-			boolean var11 = var5 != 0L && !class164.method3461(var5);
+			boolean var11 = var5 != 0L && !class164.method862(var5);
 			if (var11) {
 				var10 = var4;
 			}
@@ -405,7 +377,7 @@ public class FloorOverlayDefinition extends DualNode {
 				}
 			} else if (var9 == 9) {
 				int var20 = 15658734;
-				boolean var27 = var5 != 0L && !class164.method3461(var5);
+				boolean var27 = var5 != 0L && !class164.method862(var5);
 				if (var27) {
 					var20 = 15597568;
 				}

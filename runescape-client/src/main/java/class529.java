@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,179 +8,172 @@ public enum class529 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5186(1),
+	field4227(1),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5177(2),
+	field4228(2),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5160(4),
+	field4224(4),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5188(8),
+	field4222(8),
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5180(16),
+	field4242(16),
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5163(32),
+	field4243(32),
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5179(64, true),
+	field4232(64),
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5165(128),
+	field4249(128),
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5169(256, true),
+	field4225(256),
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5167(512),
+	field4245(512),
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5162(1024),
+	field4223(1024),
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5164(2048),
+	field4238(2048),
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5170(4096),
+	field4239(4096),
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5171(8192),
+	field4237(8192),
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5159(16384),
+	field4247(16384),
 	@ObfuscatedName("an")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5173(32768),
+	field4241(32768),
 	@ObfuscatedName("ag")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5174(65536),
+	field4221(65536),
 	@ObfuscatedName("am")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5175(131072),
+	field4240(131072),
 	@ObfuscatedName("ad")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5176(262144),
+	field4235(262144),
 	@ObfuscatedName("at")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5161(524288),
+	field4244(524288),
 	@ObfuscatedName("ay")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5178(1048576),
+	field4248(1048576),
 	@ObfuscatedName("ae")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5172(2097152),
+	field4236(2097152),
 	@ObfuscatedName("ac")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5166(4194304),
+	field4234(4194304),
 	@ObfuscatedName("ab")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5181(8388608),
+	field4233(8388608),
 	@ObfuscatedName("av")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5182(16777216),
+	field4246(16777216),
 	@ObfuscatedName("ap")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5183(33554432),
+	field4226(33554432),
 	@ObfuscatedName("bu")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5184(67108864, true),
+	field4252(67108864),
 	@ObfuscatedName("bo")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5185(134217728),
+	field4230(134217728),
 	@ObfuscatedName("bd")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5168(268435456),
+	field4251(268435456),
 	@ObfuscatedName("bi")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5187(536870912, true),
+	field4229(536870912),
 	@ObfuscatedName("bq")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5158(1073741824, true),
+	field4231(1073741824),
 	@ObfuscatedName("ba")
 	@ObfuscatedSignature(
 		descriptor = "Luu;"
 	)
-	field5189(Integer.MIN_VALUE);
+	field4250(Integer.MIN_VALUE);
 
 	@ObfuscatedName("bt")
-	@ObfuscatedGetter(
-		intValue = -1487374277
-	)
-	final int field5190;
-
-	class529(int var3) {
-		this(var3, false);
-	}
+	final int field4253;
 
 	@ObfuscatedSignature(
 		descriptor = "(IZ)V",
 		garbageValue = "1"
 	)
-	class529(int var3, boolean var4) {
-		this.field5190 = var3;
+	class529(int var3) {
+		this.field4253 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -191,7 +183,7 @@ public enum class529 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field5190;
+		return this.field4253;
 	}
 
 	@ObfuscatedName("au")
@@ -204,13 +196,13 @@ public enum class529 implements Enum {
 		if (var0 == null) {
 			return null;
 		} else {
-			Font var1 = new Font(var0, SpriteBufferProperties.SpriteBuffer_xOffsets, SpriteBufferProperties.SpriteBuffer_yOffsets, class235.SpriteBuffer_spriteWidths, SpriteBufferProperties.SpriteBuffer_spriteHeights, AbstractSocket.SpriteBuffer_spritePalette, SpriteBufferProperties.SpriteBuffer_pixels);
-			SpriteBufferProperties.SpriteBuffer_xOffsets = null;
-			SpriteBufferProperties.SpriteBuffer_yOffsets = null;
+			Font var1 = new Font(var0, class548.SpriteBuffer_xOffsets, class548.SpriteBuffer_yOffsets, class235.SpriteBuffer_spriteWidths, class548.SpriteBuffer_spriteHeights, AbstractSocket.SpriteBuffer_spritePalette, class548.SpriteBuffer_pixels);
+			class548.SpriteBuffer_xOffsets = null;
+			class548.SpriteBuffer_yOffsets = null;
 			class235.SpriteBuffer_spriteWidths = null;
-			SpriteBufferProperties.SpriteBuffer_spriteHeights = null;
+			class548.SpriteBuffer_spriteHeights = null;
 			AbstractSocket.SpriteBuffer_spritePalette = null;
-			SpriteBufferProperties.SpriteBuffer_pixels = null;
+			class548.SpriteBuffer_pixels = null;
 			return var1;
 		}
 	}

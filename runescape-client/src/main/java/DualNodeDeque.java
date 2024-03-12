@@ -23,7 +23,7 @@ public final class DualNodeDeque {
 	@ObfuscatedSignature(
 		descriptor = "(Lsm;)V"
 	)
-	public void method7379(DualNode var1) {
+	public void method2067(DualNode var1) {
 		if (var1.nextDual != null) {
 			var1.removeDual();
 		}
@@ -38,7 +38,7 @@ public final class DualNodeDeque {
 	@ObfuscatedSignature(
 		descriptor = "(Lsm;)V"
 	)
-	public void method7381(DualNode var1) {
+	public void method2068(DualNode var1) {
 		if (var1.nextDual != null) {
 			var1.removeDual();
 		}

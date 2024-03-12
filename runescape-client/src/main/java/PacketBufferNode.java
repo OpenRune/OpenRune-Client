@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,9 +13,6 @@ public class PacketBufferNode extends Node {
 	@Export("PacketBufferNode_packetBufferNodes")
 	static PacketBufferNode[] PacketBufferNode_packetBufferNodes;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 33397835
-	)
 	@Export("PacketBufferNode_packetBufferNodeCount")
 	static int PacketBufferNode_packetBufferNodeCount;
 	@ObfuscatedName("au")
@@ -32,9 +28,6 @@ public class PacketBufferNode extends Node {
 	@Export("clientPacket")
 	ClientPacket clientPacket;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1623400787
-	)
 	@Export("clientPacketLength")
 	int clientPacketLength;
 	@ObfuscatedName("al")
@@ -44,9 +37,6 @@ public class PacketBufferNode extends Node {
 	@Export("packetBuffer")
 	public PacketBuffer packetBuffer;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1772833165
-	)
 	@Export("index")
 	public int index;
 
@@ -75,37 +65,37 @@ public class PacketBufferNode extends Node {
 		descriptor = "([Ljava/lang/CharSequence;III)Ljava/lang/String;",
 		garbageValue = "897473801"
 	)
-	public static String method6049(CharSequence[] var0, int var1, int var2) {
+	public static String method1676(CharSequence[] var0, int var1, int var2) {
 		if (var2 == 0) {
 			return "";
 		} else if (var2 == 1) {
-			CharSequence var10 = var0[var1];
-			return var10 == null ? "null" : var10.toString();
+			CharSequence var3 = var0[var1];
+			return var3 == null ? "null" : var3.toString();
 		} else {
-			int var3 = var2 + var1;
+			int var8 = var2 + var1;
 			int var4 = 0;
 
-			for (int var5 = var1; var5 < var3; ++var5) {
-				CharSequence var9 = var0[var5];
-				if (var9 == null) {
+			for (int var5 = var1; var5 < var8; ++var5) {
+				CharSequence var6 = var0[var5];
+				if (var6 == null) {
 					var4 += 4;
 				} else {
-					var4 += var9.length();
+					var4 += var6.length();
 				}
 			}
 
-			StringBuilder var8 = new StringBuilder(var4);
+			StringBuilder var9 = new StringBuilder(var4);
 
-			for (int var6 = var1; var6 < var3; ++var6) {
-				CharSequence var7 = var0[var6];
+			for (int var10 = var1; var10 < var8; ++var10) {
+				CharSequence var7 = var0[var10];
 				if (var7 == null) {
-					var8.append("null");
+					var9.append("null");
 				} else {
-					var8.append(var7);
+					var9.append(var7);
 				}
 			}
 
-			return var8.toString();
+			return var9.toString();
 		}
 	}
 
@@ -114,16 +104,16 @@ public class PacketBufferNode extends Node {
 		descriptor = "(ZI)V",
 		garbageValue = "-179593591"
 	)
-	static void method6050(boolean var0) {
+	static void method1679(boolean var0) {
 		byte var1 = 0;
-		boolean var2 = class30.clientPreferences.method2539() >= Client.field688;
+		boolean var2 = class30.clientPreferences.method576() >= Client.field450;
 		if (!var2) {
 			var1 = 12;
-		} else if (class193.client.containsAccessAndRefreshToken() || class193.client.method1216() || class193.client.containsSessionAndCharacterId()) {
+		} else if (class193.client.containsAccessAndRefreshToken() || class193.client.method360() || class193.client.containsSessionAndCharacterId()) {
 			var1 = 10;
 		}
 
-		JagexCache.method4224(var1);
+		JagexCache.method1113(var1);
 		if (var0) {
 			Login.Login_username = "";
 			Login.Login_password = "";
@@ -131,8 +121,8 @@ public class PacketBufferNode extends Node {
 			MenuAction.otp = "";
 		}
 
-		LoginPacket.method3203();
-		Message.method1182();
+		LoginPacket.method767();
+		Message.method341();
 	}
 
 	@ObfuscatedName("gr")
@@ -140,7 +130,7 @@ public class PacketBufferNode extends Node {
 		descriptor = "(I)Liw;",
 		garbageValue = "-865577578"
 	)
-	public static class228 method6051() {
-		return Client.field792;
+	public static class228 method1678() {
+		return Client.field623;
 	}
 }

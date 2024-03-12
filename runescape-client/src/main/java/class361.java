@@ -8,7 +8,7 @@ public final class class361 {
 		descriptor = "([FIFB)F",
 		garbageValue = "118"
 	)
-	static float method6995(float[] var0, int var1, float var2) {
+	static float method1950(float[] var0, int var1, float var2) {
 		float var3 = var0[var1];
 
 		for (int var4 = var1 - 1; var4 >= 0; --var4) {
@@ -23,7 +23,7 @@ public final class class361 {
 		descriptor = "(Ljava/lang/String;B)Ljava/lang/String;",
 		garbageValue = "80"
 	)
-	public static String method6994(String var0) {
+	public static String method1949(String var0) {
 		return var0 != null && !var0.isEmpty() && var0.charAt(0) != '#' ? var0 : "";
 	}
 }

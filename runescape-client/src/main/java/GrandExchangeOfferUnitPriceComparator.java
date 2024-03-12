@@ -12,7 +12,7 @@ final class GrandExchangeOfferUnitPriceComparator implements Comparator {
 	@Export("javaVendor")
 	public static String javaVendor;
 	@ObfuscatedName("az")
-	static ThreadPoolExecutor field4467;
+	static ThreadPoolExecutor field3691;
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(

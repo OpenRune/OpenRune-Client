@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,26 +8,22 @@ public class class255 {
 	@ObfuscatedSignature(
 		descriptor = "Ljm;"
 	)
-	static final class255 field2655;
+	static final class255 field2132;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Ljm;"
 	)
-	static final class255 field2653;
+	static final class255 field2133;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1886188331
-	)
-	@Export("value")
-	final int value;
+	final int field2134;
 
 	static {
-		field2655 = new class255(0);
-		field2653 = new class255(1);
+		field2132 = new class255(0);
+		field2133 = new class255(1);
 	}
 
 	class255(int var1) {
-		this.value = var1;
+		this.field2134 = var1;
 	}
 
 	@ObfuscatedName("ku")

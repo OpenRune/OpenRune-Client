@@ -9,13 +9,19 @@ class class139 implements Callable {
 	@ObfuscatedSignature(
 		descriptor = "Lfc;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final class140 this$0;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Luq;"
 	)
+	@Export("val$p")
+	@ObfuscatedName("val$p")
 	final Buffer val$p;
 	// $FF: synthetic field
+	@Export("val$version")
+	@ObfuscatedName("val$version")
 	final int val$version;
 
 	@ObfuscatedSignature(
@@ -28,7 +34,7 @@ class class139 implements Callable {
 	}
 
 	public Object call() {
-		this.this$0.method3153(this.val$p, this.val$version);
+		this.this$0.method753(this.val$p, this.val$version);
 		return null;
 	}
 

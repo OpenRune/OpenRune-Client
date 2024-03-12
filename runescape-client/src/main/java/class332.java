@@ -13,12 +13,12 @@ public class class332 implements Comparator {
 		descriptor = "(Lmg;Lmg;B)I",
 		garbageValue = "60"
 	)
-	int method6387(class325 var1, class325 var2) {
-		return var1.field3540 - var2.field3540;
+	int method1774(class325 var1, class325 var2) {
+		return var1.field2905 - var2.field2905;
 	}
 
 	public int compare(Object var1, Object var2) {
-		return this.method6387((class325)var1, (class325)var2);
+		return this.method1774((class325)var1, (class325)var2);
 	}
 
 	public boolean equals(Object var1) {
@@ -65,7 +65,7 @@ public class class332 implements Comparator {
 		if (var1 != null) {
 			return var1;
 		} else {
-			var1 = class160.method3430(class135.SequenceDefinition_animationsArchive, class138.SequenceDefinition_skeletonsArchive, var0, false);
+			var1 = class160.method846(class135.SequenceDefinition_animationsArchive, class138.SequenceDefinition_skeletonsArchive, var0, false);
 			if (var1 != null) {
 				SequenceDefinition.SequenceDefinition_cachedFrames.put(var1, (long)var0);
 			}

@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -34,26 +33,14 @@ public class WorldMapLabelSize {
 	@Export("rightTitleSprite")
 	static SpritePixels rightTitleSprite;
 	@ObfuscatedName("pz")
-	@ObfuscatedGetter(
-		intValue = -1026433701
-	)
 	@Export("widgetDragDuration")
 	static int widgetDragDuration;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 912835647
-	)
-	final int field2493;
+	final int field2001;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 46594647
-	)
-	final int field2492;
+	final int field2002;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -13257785
-	)
-	final int field2490;
+	final int field2003;
 
 	static {
 		WorldMapLabelSize_small = new WorldMapLabelSize(2, 0, 4);
@@ -62,9 +49,9 @@ public class WorldMapLabelSize {
 	}
 
 	WorldMapLabelSize(int var1, int var2, int var3) {
-		this.field2493 = var1;
-		this.field2492 = var2;
-		this.field2490 = var3;
+		this.field2001 = var1;
+		this.field2002 = var2;
+		this.field2003 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -72,8 +59,8 @@ public class WorldMapLabelSize {
 		descriptor = "(FI)Z",
 		garbageValue = "166533408"
 	)
-	boolean method4620(float var1) {
-		return var1 >= (float)this.field2490;
+	boolean method1241(float var1) {
+		return var1 >= (float)this.field2003;
 	}
 
 	@ObfuscatedName("aq")
@@ -91,13 +78,13 @@ public class WorldMapLabelSize {
 		descriptor = "(II)Ljh;",
 		garbageValue = "-1654301488"
 	)
-	static WorldMapLabelSize method4621(int var0) {
+	static WorldMapLabelSize method1242(int var0) {
 		WorldMapLabelSize[] var1 = new WorldMapLabelSize[]{WorldMapLabelSize_large, WorldMapLabelSize_small, WorldMapLabelSize_medium};
 		WorldMapLabelSize[] var2 = var1;
 
 		for (int var3 = 0; var3 < var2.length; ++var3) {
 			WorldMapLabelSize var4 = var2[var3];
-			if (var0 == var4.field2492) {
+			if (var0 == var4.field2002) {
 				return var4;
 			}
 		}
@@ -110,7 +97,7 @@ public class WorldMapLabelSize {
 		descriptor = "(B)Ljava/util/ArrayList;",
 		garbageValue = "2"
 	)
-	static ArrayList method4627() {
+	static ArrayList method1243() {
 		ArrayList var0 = new ArrayList();
 		Iterator var1 = class321.musicSongs.iterator();
 
@@ -127,28 +114,28 @@ public class WorldMapLabelSize {
 		descriptor = "(Ldz;I)V",
 		garbageValue = "1431043748"
 	)
-	static final void method4623(Actor var0) {
+	static final void method1244(Actor var0) {
 		var0.movementSequence = var0.idleSequence;
 		if (var0.pathLength == 0) {
-			var0.field1279 = 0;
+			var0.field1059 = 0;
 		} else {
 			if (var0.sequence != -1 && var0.sequenceDelay == 0) {
 				SequenceDefinition var1 = MilliClock.SequenceDefinition_get(var0.sequence);
-				if (var0.field1280 > 0 && var1.field2271 == 0) {
-					++var0.field1279;
+				if (var0.field1057 > 0 && var1.field1838 == 0) {
+					++var0.field1059;
 					return;
 				}
 
-				if (var0.field1280 <= 0 && var1.field2273 == 0) {
-					++var0.field1279;
+				if (var0.field1057 <= 0 && var1.field1839 == 0) {
+					++var0.field1059;
 					return;
 				}
 			}
 
 			int var10 = var0.x;
 			int var2 = var0.y;
-			int var3 = var0.pathX[var0.pathLength - 1] * 128 + var0.field1212 * 64;
-			int var4 = var0.pathY[var0.pathLength - 1] * 128 + var0.field1212 * 64;
+			int var3 = var0.field1015 * 64 + var0.pathX[var0.pathLength - 1] * 128;
+			int var4 = var0.field1015 * 64 + var0.pathY[var0.pathLength - 1] * 128;
 			if (var10 < var3) {
 				if (var2 < var4) {
 					var0.orientation = 1280;
@@ -199,7 +186,7 @@ public class WorldMapLabelSize {
 				}
 
 				if (var9) {
-					if (var0.orientation != var0.rotation && var0.targetIndex == -1 && var0.field1249 != 0) {
+					if (var0.orientation != var0.rotation && var0.targetIndex == -1 && var0.field1039 != 0) {
 						var8 = 2;
 					}
 
@@ -211,9 +198,9 @@ public class WorldMapLabelSize {
 						var8 = 8;
 					}
 
-					if (var0.field1279 > 0 && var0.pathLength > 1) {
+					if (var0.field1059 > 0 && var0.pathLength > 1) {
 						var8 = 8;
-						--var0.field1279;
+						--var0.field1059;
 					}
 				} else {
 					if (var0.pathLength > 1) {
@@ -224,37 +211,37 @@ public class WorldMapLabelSize {
 						var8 = 8;
 					}
 
-					if (var0.field1279 > 0 && var0.pathLength > 1) {
+					if (var0.field1059 > 0 && var0.pathLength > 1) {
 						var8 = 8;
-						--var0.field1279;
+						--var0.field1059;
 					}
 				}
 
-				if (var5 == class233.field2472) {
+				if (var5 == class233.field1988) {
 					var8 <<= 1;
-				} else if (var5 == class233.field2469) {
+				} else if (var5 == class233.field1991) {
 					var8 >>= 1;
 				}
 
 				if (var8 >= 8) {
 					if (var0.movementSequence == var0.walkSequence && var0.runSequence != -1) {
 						var0.movementSequence = var0.runSequence;
-					} else if (var0.movementSequence == var0.walkBackSequence && var0.field1219 != -1) {
-						var0.movementSequence = var0.field1219;
-					} else if (var0.movementSequence == var0.walkLeftSequence && var0.field1220 != -1) {
-						var0.movementSequence = var0.field1220;
-					} else if (var0.walkRightSequence == var0.movementSequence && var0.field1221 != -1) {
-						var0.movementSequence = var0.field1221;
+					} else if (var0.movementSequence == var0.walkBackSequence && var0.field1008 != -1) {
+						var0.movementSequence = var0.field1008;
+					} else if (var0.movementSequence == var0.walkLeftSequence && var0.field1007 != -1) {
+						var0.movementSequence = var0.field1007;
+					} else if (var0.walkRightSequence == var0.movementSequence && var0.field1024 != -1) {
+						var0.movementSequence = var0.field1024;
 					}
 				} else if (var8 <= 2) {
-					if (var0.movementSequence == var0.walkSequence && var0.field1222 != -1) {
-						var0.movementSequence = var0.field1222;
-					} else if (var0.walkBackSequence == var0.movementSequence && var0.field1216 != -1) {
-						var0.movementSequence = var0.field1216;
-					} else if (var0.movementSequence == var0.walkLeftSequence && var0.field1224 != -1) {
-						var0.movementSequence = var0.field1224;
-					} else if (var0.walkRightSequence == var0.movementSequence && var0.field1225 != -1) {
-						var0.movementSequence = var0.field1225;
+					if (var0.movementSequence == var0.walkSequence && var0.field1011 != -1) {
+						var0.movementSequence = var0.field1011;
+					} else if (var0.walkBackSequence == var0.movementSequence && var0.field1019 != -1) {
+						var0.movementSequence = var0.field1019;
+					} else if (var0.movementSequence == var0.walkLeftSequence && var0.field1012 != -1) {
+						var0.movementSequence = var0.field1012;
+					} else if (var0.walkRightSequence == var0.movementSequence && var0.field1014 != -1) {
+						var0.movementSequence = var0.field1014;
 					}
 				}
 
@@ -286,8 +273,8 @@ public class WorldMapLabelSize {
 
 				if (var3 == var0.x && var4 == var0.y) {
 					--var0.pathLength;
-					if (var0.field1280 > 0) {
-						--var0.field1280;
+					if (var0.field1057 > 0) {
+						--var0.field1057;
 					}
 				}
 
@@ -295,8 +282,8 @@ public class WorldMapLabelSize {
 				var0.x = var3;
 				var0.y = var4;
 				--var0.pathLength;
-				if (var0.field1280 > 0) {
-					--var0.field1280;
+				if (var0.field1057 > 0) {
+					--var0.field1057;
 				}
 
 			}

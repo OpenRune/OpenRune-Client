@@ -11,7 +11,7 @@ public class UserComparator2 implements Comparator {
 	@ObfuscatedSignature(
 		descriptor = "Lvg;"
 	)
-	static IndexedSprite field5265;
+	static IndexedSprite field4312;
 	@ObfuscatedName("aq")
 	@Export("reversed")
 	final boolean reversed;
@@ -30,11 +30,11 @@ public class UserComparator2 implements Comparator {
 		return this.reversed ? var1.getUsername().compareToTyped(var2.getUsername()) : var2.getUsername().compareToTyped(var1.getUsername());
 	}
 
-	public boolean equals(Object var1) {
-		return super.equals(var1);
-	}
-
 	public int compare(Object var1, Object var2) {
 		return this.compare_bridged((User)var1, (User)var2);
+	}
+
+	public boolean equals(Object var1) {
+		return super.equals(var1);
 	}
 }

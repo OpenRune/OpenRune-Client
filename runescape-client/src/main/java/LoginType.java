@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,77 +16,74 @@ public class LoginType {
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5089;
+	static final LoginType field4169;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5086;
+	static final LoginType field4166;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5083;
+	static final LoginType field4165;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5087;
+	static final LoginType field4167;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5088;
+	static final LoginType field4168;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5090;
+	static final LoginType field4164;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	static final LoginType field5084;
+	static final LoginType field4170;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
 	)
-	public static final LoginType field5091;
+	public static final LoginType field4162;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1843158875
-	)
-	final int field5092;
+	final int field4171;
 	@ObfuscatedName("ak")
-	final String field5093;
+	final String field4172;
 
 	static {
 		oldscape = new LoginType(4, 0, "", "");
-		field5089 = new LoginType(2, 1, "", "");
-		field5086 = new LoginType(0, 2, "", "");
-		field5083 = new LoginType(6, 3, "", "");
-		field5087 = new LoginType(7, 4, "", "");
-		field5088 = new LoginType(5, 5, "", "");
-		field5090 = new LoginType(8, 6, "", "");
-		field5084 = new LoginType(3, 7, "", "");
-		field5091 = new LoginType(1, -1, "", "", true, new LoginType[]{oldscape, field5089, field5086, field5087, field5083});
+		field4169 = new LoginType(2, 1, "", "");
+		field4166 = new LoginType(0, 2, "", "");
+		field4165 = new LoginType(6, 3, "", "");
+		field4167 = new LoginType(7, 4, "", "");
+		field4168 = new LoginType(5, 5, "", "");
+		field4164 = new LoginType(8, 6, "", "");
+		field4170 = new LoginType(3, 7, "", "");
+		field4162 = new LoginType(1, -1, "", "", true, new LoginType[]{oldscape, field4169, field4166, field4167, field4165});
 	}
 
 	LoginType(int var1, int var2, String var3, String var4) {
-		this.field5092 = var1;
-		this.field5093 = var4;
+		this.field4171 = var1;
+		this.field4172 = var4;
 	}
 
 	@ObfuscatedSignature(
 		descriptor = "(IILjava/lang/String;Ljava/lang/String;Z[Lte;)V"
 	)
 	LoginType(int var1, int var2, String var3, String var4, boolean var5, LoginType[] var6) {
-		this.field5092 = var1;
-		this.field5093 = var4;
+		this.field4171 = var1;
+		this.field4172 = var4;
 	}
 
 	public String toString() {
-		return this.field5093;
+		return this.field4172;
 	}
 
 	@ObfuscatedName("aq")
@@ -95,8 +91,8 @@ public class LoginType {
 		descriptor = "(ILjava/lang/String;Lpe;II)Lmn;",
 		garbageValue = "2019210009"
 	)
-	public static PacketBufferNode method9200(int var0, String var1, Language var2, int var3) {
-		PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field3267, Client.packetWriter.isaacCipher);
+	public static PacketBufferNode method2541(int var0, String var1, Language var2, int var3) {
+		PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field2646, Client.packetWriter.isaacCipher);
 		var4.packetBuffer.writeByte(0);
 		int var5 = var4.packetBuffer.offset;
 		var4.packetBuffer.writeByte(var0);
@@ -222,8 +218,8 @@ public class LoginType {
 			}
 		}
 
-		TaskHandler.method4203(var4.packetBuffer, var1);
-		if (var0 == class357.field3907.rsOrdinal()) {
+		TaskHandler.method1104(var4.packetBuffer, var1);
+		if (var0 == class357.field3199.rsOrdinal()) {
 			var4.packetBuffer.writeByte(var3);
 		}
 

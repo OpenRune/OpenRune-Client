@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,9 +7,6 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("IsaacCipher")
 public final class IsaacCipher {
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1012218433
-	)
 	@Export("valuesRemaining")
 	int valuesRemaining;
 	@ObfuscatedName("ar")
@@ -20,21 +16,12 @@ public final class IsaacCipher {
 	@Export("mm")
 	int[] mm;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -409789617
-	)
 	@Export("aa")
 	int aa;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 886983623
-	)
 	@Export("bb")
 	int bb;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 188782803
-	)
 	@Export("cc")
 	int cc;
 
@@ -46,7 +33,7 @@ public final class IsaacCipher {
 			this.results[var2] = var1[var2];
 		}
 
-		this.method10052();
+		this.method2769();
 	}
 
 	@ObfuscatedName("aq")
@@ -69,7 +56,7 @@ public final class IsaacCipher {
 		descriptor = "(I)I",
 		garbageValue = "264064121"
 	)
-	public final int method10044() {
+	public final int method2767() {
 		if (this.valuesRemaining == 0) {
 			this.generateMoreResults();
 			this.valuesRemaining = 256;
@@ -114,7 +101,7 @@ public final class IsaacCipher {
 		descriptor = "(I)V",
 		garbageValue = "192224335"
 	)
-	final void method10052() {
+	final void method2769() {
 		int var9 = -1640531527;
 		int var8 = -1640531527;
 		int var7 = -1640531527;

@@ -19,7 +19,7 @@ public class RawSound extends AbstractSound {
 	@Export("end")
 	int end;
 	@ObfuscatedName("ar")
-	public boolean field266;
+	public boolean field169;
 
 	RawSound(int var1, byte[] var2, int var3, int var4) {
 		this.sampleRate = var1;
@@ -33,7 +33,7 @@ public class RawSound extends AbstractSound {
 		this.samples = var2;
 		this.start = var3;
 		this.end = var4;
-		this.field266 = var5;
+		this.field169 = var5;
 	}
 
 	@ObfuscatedName("aq")

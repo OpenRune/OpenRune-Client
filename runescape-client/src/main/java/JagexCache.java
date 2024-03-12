@@ -1,7 +1,6 @@
 import java.io.File;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,7 +8,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("JagexCache")
 public class JagexCache {
 	@ObfuscatedName("ai")
-	static File field2331;
+	static File field1886;
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Ltm;"
@@ -29,9 +28,6 @@ public class JagexCache {
 	@Export("JagexCache_idx255File")
 	public static BufferedFile JagexCache_idx255File;
 	@ObfuscatedName("an")
-	@ObfuscatedGetter(
-		intValue = -1691658533
-	)
 	@Export("cacheGamebuild")
 	static int cacheGamebuild;
 	@ObfuscatedName("em")
@@ -41,10 +37,7 @@ public class JagexCache {
 	@Export("archive9")
 	static Archive archive9;
 	@ObfuscatedName("jt")
-	@ObfuscatedGetter(
-		intValue = -462290629
-	)
-	static int field2329;
+	static int field1885;
 
 	static {
 		JagexCache_randomDat = null;
@@ -57,7 +50,7 @@ public class JagexCache {
 		descriptor = "(I)Lin;",
 		garbageValue = "-1812345915"
 	)
-	public static Clock method4223() {
+	public static Clock method1112() {
 		try {
 			return new NanoClock();
 		} catch (Throwable var1) {
@@ -68,9 +61,9 @@ public class JagexCache {
 	@ObfuscatedName("bo")
 	@ObfuscatedSignature(
 		descriptor = "(II)V",
-		garbageValue = "1275044390"
+		garbageValue = "2016364527"
 	)
-	static void method4224(int var0) {
+	static void method1113(int var0) {
 		if (var0 != Login.loginIndex) {
 			Login.loginIndex = var0;
 		}

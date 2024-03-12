@@ -6,7 +6,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @ObfuscatedName("gq")
 public class class173 extends DualNode {
 	@ObfuscatedName("vw")
-	static List field1847;
+	static List field1476;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lll;"
@@ -39,7 +39,7 @@ public class class173 extends DualNode {
 		} else {
 			int var3 = var0.getGroupId(var1);
 			int var4 = var0.getFileId(var3, var2);
-			return Huffman.method6973(var0, var3, var4);
+			return Huffman.method1939(var0, var3, var4);
 		}
 	}
 
@@ -48,7 +48,7 @@ public class class173 extends DualNode {
 		descriptor = "(II)I",
 		garbageValue = "252343269"
 	)
-	static final int method3545(int var0) {
+	static final int method894(int var0) {
 		return Math.abs(var0 - Script.cameraYaw) > 1024 ? 2048 * (var0 < Script.cameraYaw ? 1 : -1) + var0 : var0;
 	}
 
@@ -57,9 +57,9 @@ public class class173 extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "-1951363951"
 	)
-	static void method3543() {
+	static void method895() {
 		if (Client.oculusOrbState == 1) {
-			Client.field625 = true;
+			Client.field407 = true;
 		}
 
 	}

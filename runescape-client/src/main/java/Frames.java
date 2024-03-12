@@ -72,7 +72,7 @@ public class Frames extends DualNode {
 		descriptor = "(I)I",
 		garbageValue = "549876396"
 	)
-	static final int method5635() {
+	static final int method1562() {
 		float var0 = 200.0F * ((float)class30.clientPreferences.getBrightness() - 0.5F);
 		return 100 - Math.round(var0);
 	}

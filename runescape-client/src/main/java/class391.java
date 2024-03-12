@@ -12,10 +12,9 @@ public class class391 {
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
 	)
-	static Archive field4483;
+	static Archive field3703;
 	@ObfuscatedName("gp")
-	@Export("authServiceBaseUrl")
-	static String authServiceBaseUrl;
+	static String field3702;
 
 	static {
 		new HashMap();

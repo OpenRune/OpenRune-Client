@@ -95,14 +95,14 @@ public class class102 {
 			int[] var12 = Rasterizer2D.Rasterizer2D_pixels;
 			int var13 = Rasterizer2D.Rasterizer2D_width;
 			int var14 = Rasterizer2D.Rasterizer2D_height;
-			float[] var15 = Rasterizer2D.field5269;
+			float[] var15 = Rasterizer2D.field4316;
 			int[] var16 = new int[4];
 			Rasterizer2D.Rasterizer2D_getClipArray(var16);
 			var8 = new SpritePixels(36, 32);
-			Rasterizer3D.method5291(var8.pixels, 36, 32, (float[])null);
+			Rasterizer3D.method1465(var8.pixels, 36, 32, (float[])null);
 			Rasterizer2D.Rasterizer2D_clear();
 			Rasterizer3D.resetRasterClipping();
-			Rasterizer3D.method5277(16, 16);
+			Rasterizer3D.method1469(16, 16);
 			Rasterizer3D.clips.rasterGouraudLowRes = false;
 			if (var9.placeholderTemplate != -1) {
 				var21.drawTransBgAt(0, 0);
@@ -135,20 +135,20 @@ public class class102 {
 				var8.shadow(var3);
 			}
 
-			Rasterizer3D.method5291(var8.pixels, 36, 32, (float[])null);
+			Rasterizer3D.method1465(var8.pixels, 36, 32, (float[])null);
 			if (var9.noteTemplate != -1) {
 				var21.drawTransBgAt(0, 0);
 			}
 
 			if (var4 == 1 || var4 == 2 && var9.isStackable == 1) {
-				Decimator.ItemDefinition_fontPlain11.draw(class368.method7010(var1), 0, 9, 16776960, 1);
+				Decimator.ItemDefinition_fontPlain11.draw(class368.method1958(var1), 0, 9, 16776960, 1);
 			}
 
 			if (!var5) {
 				ItemComposition.ItemDefinition_cachedSprites.put(var8, var6);
 			}
 
-			Rasterizer3D.method5291(var12, var13, var14, var15);
+			Rasterizer3D.method1465(var12, var13, var14, var15);
 			Rasterizer2D.Rasterizer2D_setClipArray(var16);
 			Rasterizer3D.resetRasterClipping();
 			Rasterizer3D.clips.rasterGouraudLowRes = true;
@@ -163,7 +163,7 @@ public class class102 {
 	)
 	@Export("Clan_leaveChat")
 	static final void Clan_leaveChat() {
-		PacketBufferNode var0 = ViewportMouse.getPacketBufferNode(ClientPacket.field3233, Client.packetWriter.isaacCipher);
+		PacketBufferNode var0 = ViewportMouse.getPacketBufferNode(ClientPacket.field2625, Client.packetWriter.isaacCipher);
 		var0.packetBuffer.writeByte(0);
 		Client.packetWriter.addNode(var0);
 	}

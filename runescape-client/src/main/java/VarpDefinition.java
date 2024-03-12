@@ -2,10 +2,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.Reflection;
 
 @ObfuscatedName("gf")
 @Implements("VarpDefinition")
@@ -17,10 +15,7 @@ public class VarpDefinition extends DualNode {
 	@Export("VarpDefinition_archive")
 	static AbstractArchive VarpDefinition_archive;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -557566437
-	)
-	public static int field1855;
+	public static int field1479;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lll;"
@@ -28,10 +23,7 @@ public class VarpDefinition extends DualNode {
 	@Export("VarpDefinition_cached")
 	static EvictingDualNodeHashTable VarpDefinition_cached;
 	@ObfuscatedName("hb")
-	@ObfuscatedGetter(
-		longValue = -6930758296246254153L
-	)
-	static long field1862;
+	static long field1482;
 	@ObfuscatedName("mo")
 	@ObfuscatedSignature(
 		descriptor = "Ldj;"
@@ -39,9 +31,6 @@ public class VarpDefinition extends DualNode {
 	@Export("localPlayer")
 	static Player localPlayer;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 981213165
-	)
 	@Export("type")
 	public int type;
 
@@ -145,8 +134,8 @@ public class VarpDefinition extends DualNode {
 
 						for (int var15 = 0; var15 < var14.length; ++var15) {
 							Method var16 = var14[var15];
-							if (Reflection.getMethodName(var16).equals(var6)) {
-								Class[] var17 = Reflection.getParameterTypes(var16);
+							if (var16.getName().equals(var6)) {
+								Class[] var17 = var16.getParameterTypes();
 								if (var17.length == var21.length) {
 									boolean var18 = true;
 
@@ -180,7 +169,7 @@ public class VarpDefinition extends DualNode {
 						throw new SecurityException();
 					}
 
-					var2.fields[var3] = Reflection.findField(class131.loadClassFromDescriptor(var5), var6);
+					var2.fields[var3] = class131.loadClassFromDescriptor(var5).getDeclaredField(var6);
 				}
 			} catch (ClassNotFoundException var24) {
 				var2.creationErrors[var3] = -1;
@@ -203,7 +192,7 @@ public class VarpDefinition extends DualNode {
 		descriptor = "(IIIZB)V",
 		garbageValue = "123"
 	)
-	static final void method3551(int var0, int var1, int var2, boolean var3) {
+	static final void method903(int var0, int var1, int var2, boolean var3) {
 		if (ArchiveLoader.widgetDefinition.loadInterface(var0)) {
 			class343.resizeInterface(ArchiveLoader.widgetDefinition.Widget_interfaceComponents[var0], -1, var1, var2, var3);
 		}

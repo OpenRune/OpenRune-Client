@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,12 +8,12 @@ public class class363 {
 	@ObfuscatedSignature(
 		descriptor = "Lni;"
 	)
-	static final class363 field3967;
+	static final class363 field3236;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lni;"
 	)
-	static final class363 field3964;
+	static final class363 field3237;
 	@ObfuscatedName("ob")
 	@ObfuscatedSignature(
 		descriptor = "Lcb;"
@@ -22,23 +21,17 @@ public class class363 {
 	@Export("tempMenuAction")
 	static MenuAction tempMenuAction;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1670519837
-	)
-	final int field3965;
+	final int field3239;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 459864505
-	)
-	final int field3966;
+	final int field3238;
 
 	static {
-		field3967 = new class363(51, 27, 800, 0, 16, 16);
-		field3964 = new class363(25, 28, 800, 656, 40, 40);
+		field3236 = new class363(51, 27, 800, 0, 16, 16);
+		field3237 = new class363(25, 28, 800, 656, 40, 40);
 	}
 
 	class363(int var1, int var2, int var3, int var4, int var5, int var6) {
-		this.field3965 = var5;
-		this.field3966 = var6;
+		this.field3239 = var5;
+		this.field3238 = var6;
 	}
 }

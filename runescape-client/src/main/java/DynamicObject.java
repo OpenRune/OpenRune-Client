@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,39 +7,21 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("DynamicObject")
 public class DynamicObject extends Renderable {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 1498915709
-	)
 	@Export("id")
 	int id;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1466014013
-	)
 	@Export("type")
 	int type;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1669798811
-	)
 	@Export("orientation")
 	int orientation;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -261301853
-	)
 	@Export("plane")
 	int plane;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -1974606519
-	)
 	@Export("x")
 	int x;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 848916897
-	)
 	@Export("y")
 	int y;
 	@ObfuscatedName("aa")
@@ -50,15 +31,9 @@ public class DynamicObject extends Renderable {
 	@Export("sequenceDefinition")
 	SequenceDefinition sequenceDefinition;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 797720763
-	)
 	@Export("frame")
 	int frame;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1213585525
-	)
 	@Export("cycleStart")
 	int cycleStart;
 
@@ -90,7 +65,7 @@ public class DynamicObject extends Renderable {
 					this.frame = (int)(Math.random() * (double)this.sequenceDefinition.frameIds.length);
 					this.cycleStart -= (int)(Math.random() * (double)this.sequenceDefinition.frameLengths[this.frame]);
 				} else {
-					this.frame = (int)(Math.random() * (double)this.sequenceDefinition.method4065());
+					this.frame = (int)(Math.random() * (double)this.sequenceDefinition.method1073());
 				}
 			}
 		}
@@ -112,7 +87,7 @@ public class DynamicObject extends Renderable {
 			}
 
 			if (this.sequenceDefinition.isCachedModelIdSet()) {
-				var2 = this.sequenceDefinition.method4065();
+				var2 = this.sequenceDefinition.method1073();
 				this.frame += var1;
 				var1 = 0;
 				if (this.frame >= var2) {
@@ -122,11 +97,11 @@ public class DynamicObject extends Renderable {
 					}
 				}
 			} else {
-				label81: {
+				label70: {
 					do {
 						do {
 							if (var1 <= this.sequenceDefinition.frameLengths[this.frame]) {
-								break label81;
+								break label70;
 							}
 
 							var1 -= this.sequenceDefinition.frameLengths[this.frame];
@@ -177,7 +152,7 @@ public class DynamicObject extends Renderable {
 		descriptor = "(I)V",
 		garbageValue = "-172706412"
 	)
-	static final void method2248() {
+	static final void method458() {
 		Scene.Scene_isLowDetail = false;
 		Client.isLowDetail = false;
 	}

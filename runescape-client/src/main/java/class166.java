@@ -16,8 +16,8 @@ public class class166 {
 		descriptor = "(I)Lmn;",
 		garbageValue = "-676763677"
 	)
-	public static PacketBufferNode method3491() {
-		PacketBufferNode var0 = FadeOutTask.method8005();
+	public static PacketBufferNode method873() {
+		PacketBufferNode var0 = FadeOutTask.method2209();
 		var0.clientPacket = null;
 		var0.clientPacketLength = 0;
 		var0.packetBuffer = new PacketBuffer(5000);

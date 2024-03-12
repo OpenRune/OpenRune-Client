@@ -1,6 +1,5 @@
 import java.util.concurrent.Callable;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -13,23 +12,28 @@ class class135 implements Callable {
 	@Export("SequenceDefinition_animationsArchive")
 	public static AbstractArchive SequenceDefinition_animationsArchive;
 	@ObfuscatedName("uc")
-	@ObfuscatedGetter(
-		intValue = 87944983
-	)
-	static int field1618;
+	static int field1330;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfc;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final class140 this$0;
 	// $FF: synthetic field
+	@Export("val$workStart")
+	@ObfuscatedName("val$workStart")
 	final int val$workStart;
 	// $FF: synthetic field
+	@Export("val$workEnd")
+	@ObfuscatedName("val$workEnd")
 	final int val$workEnd;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "[Lfi;"
 	)
+	@Export("val$curveLoadJobs")
+	@ObfuscatedName("val$curveLoadJobs")
 	final class131[] val$curveLoadJobs;
 
 	@ObfuscatedSignature(
@@ -55,7 +59,7 @@ class class135 implements Callable {
 		descriptor = "(Ljava/lang/CharSequence;I)J",
 		garbageValue = "-739194429"
 	)
-	public static long method3138(CharSequence var0) {
+	public static long method743(CharSequence var0) {
 		long var1 = 0L;
 		int var3 = var0.length();
 

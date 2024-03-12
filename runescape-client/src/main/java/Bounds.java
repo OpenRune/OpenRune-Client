@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,27 +7,15 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Bounds")
 public class Bounds {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 925427607
-	)
 	@Export("lowX")
 	public int lowX;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1599578727
-	)
 	@Export("lowY")
 	public int lowY;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1406589711
-	)
 	@Export("highX")
 	public int highX;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 2012726795
-	)
 	@Export("highY")
 	public int highY;
 
@@ -68,7 +55,7 @@ public class Bounds {
 		descriptor = "(III)Z",
 		garbageValue = "-1999653892"
 	)
-	public boolean method8552(int var1, int var2) {
+	public boolean method2361(int var1, int var2) {
 		return var1 >= this.lowX && var1 < this.highX + this.lowX && var2 >= this.lowY && var2 < this.lowY + this.highY;
 	}
 
@@ -77,9 +64,9 @@ public class Bounds {
 		descriptor = "(Lrc;Lrc;I)V",
 		garbageValue = "1052007605"
 	)
-	public void method8550(Bounds var1, Bounds var2) {
-		this.method8555(var1, var2);
-		this.method8556(var1, var2);
+	public void method2362(Bounds var1, Bounds var2) {
+		this.method2363(var1, var2);
+		this.method2364(var1, var2);
 	}
 
 	@ObfuscatedName("ar")
@@ -87,16 +74,16 @@ public class Bounds {
 		descriptor = "(Lrc;Lrc;I)V",
 		garbageValue = "201826679"
 	)
-	void method8555(Bounds var1, Bounds var2) {
+	void method2363(Bounds var1, Bounds var2) {
 		var2.lowX = this.lowX;
 		var2.highX = this.highX;
 		if (this.lowX < var1.lowX) {
-			var2.highX -= var1.lowX - this.lowX;
+			var2.highX = (var2.highX * 618836975 - (var1.lowX * 618836975 - this.lowX * 618836975)) * 1406589711;
 			var2.lowX = var1.lowX;
 		}
 
-		if (var2.method8557() > var1.method8557()) {
-			var2.highX -= var2.method8557() - var1.method8557();
+		if (var2.method2365() > var1.method2365()) {
+			var2.highX -= var2.method2365() - var1.method2365();
 		}
 
 		if (var2.highX < 0) {
@@ -110,16 +97,16 @@ public class Bounds {
 		descriptor = "(Lrc;Lrc;I)V",
 		garbageValue = "1545253933"
 	)
-	void method8556(Bounds var1, Bounds var2) {
+	void method2364(Bounds var1, Bounds var2) {
 		var2.lowY = this.lowY;
 		var2.highY = this.highY;
 		if (this.lowY < var1.lowY) {
-			var2.highY -= var1.lowY - this.lowY;
+			var2.highY = (var2.highY * -222685789 - (var1.lowY * -222685789 - this.lowY * -222685789)) * 2012726795;
 			var2.lowY = var1.lowY;
 		}
 
-		if (var2.method8558() > var1.method8558()) {
-			var2.highY -= var2.method8558() - var1.method8558();
+		if (var2.method2366() > var1.method2366()) {
+			var2.highY -= var2.method2366() - var1.method2366();
 		}
 
 		if (var2.highY < 0) {
@@ -133,7 +120,7 @@ public class Bounds {
 		descriptor = "(I)I",
 		garbageValue = "2031947970"
 	)
-	int method8557() {
+	int method2365() {
 		return this.highX + this.lowX;
 	}
 
@@ -142,7 +129,7 @@ public class Bounds {
 		descriptor = "(I)I",
 		garbageValue = "-1810092175"
 	)
-	int method8558() {
+	int method2366() {
 		return this.lowY + this.highY;
 	}
 

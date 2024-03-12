@@ -132,12 +132,12 @@ public class class186 extends DualNode {
 		descriptor = "(IZZZZZB)Lom;",
 		garbageValue = "0"
 	)
-	static Archive method3684(int var0, boolean var1, boolean var2, boolean var3, boolean var4, boolean var5) {
+	static Archive method943(int var0, boolean var1, boolean var2, boolean var3, boolean var4, boolean var5) {
 		ArchiveDisk var6 = null;
 		if (JagexCache.JagexCache_dat2File != null) {
 			var6 = new ArchiveDisk(var0, JagexCache.JagexCache_dat2File, class173.JagexCache_idxFiles[var0], 1000000);
 		}
 
-		return new Archive(var6, class155.masterDisk, class356.field3897, var0, var1, var2, var3, var4, var5);
+		return new Archive(var6, class155.masterDisk, class356.field3198, var0, var1, var2, var3, var4, var5);
 	}
 }

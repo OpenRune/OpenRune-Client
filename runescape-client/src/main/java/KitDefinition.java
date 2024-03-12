@@ -1,7 +1,6 @@
 import java.io.IOException;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -15,9 +14,6 @@ public class KitDefinition extends DualNode {
 	@Export("KitDefinition_archive")
 	static AbstractArchive KitDefinition_archive;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1089558421
-	)
 	@Export("KitDefinition_fileCount")
 	public static int KitDefinition_fileCount;
 	@ObfuscatedName("ai")
@@ -27,9 +23,6 @@ public class KitDefinition extends DualNode {
 	@Export("KitDefinition_cached")
 	static EvictingDualNodeHashTable KitDefinition_cached;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -909118269
-	)
 	@Export("bodypartID")
 	public int bodypartID;
 	@ObfuscatedName("as")
@@ -194,7 +187,7 @@ public class KitDefinition extends DualNode {
 		descriptor = "(B)Z",
 		garbageValue = "104"
 	)
-	public boolean method3612() {
+	public boolean method924() {
 		boolean var1 = true;
 
 		for (int var2 = 0; var2 < 5; ++var2) {
@@ -244,7 +237,7 @@ public class KitDefinition extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "-321737502"
 	)
-	public static void method3630() {
+	public static void method921() {
 		DbRowType.DBRowType_cache.clear();
 	}
 

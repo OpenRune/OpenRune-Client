@@ -95,7 +95,7 @@ public class HealthBar extends Node {
 	)
 	@Export("isEmpty")
 	boolean isEmpty() {
-		return this.updates.method7456();
+		return this.updates.method2091();
 	}
 
 	@ObfuscatedName("ny")
@@ -103,11 +103,11 @@ public class HealthBar extends Node {
 		descriptor = "(IIZI)V",
 		garbageValue = "1444876368"
 	)
-	static final void method2653(int var0, int var1, boolean var2) {
+	static final void method587(int var0, int var1, boolean var2) {
 		if (Client.currentClanChannels[var0] != null) {
-			if (var1 >= 0 && var1 < Client.currentClanChannels[var0].method3481()) {
+			if (var1 >= 0 && var1 < Client.currentClanChannels[var0].method869()) {
 				ClanChannelMember var3 = (ClanChannelMember)Client.currentClanChannels[var0].members.get(var1);
-				PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field3183, Client.packetWriter.isaacCipher);
+				PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field2586, Client.packetWriter.isaacCipher);
 				var4.packetBuffer.writeByte(4 + class145.stringCp1252NullTerminatedByteSize(var3.username.getName()));
 				var4.packetBuffer.writeByte(var0);
 				var4.packetBuffer.writeShort(var1);

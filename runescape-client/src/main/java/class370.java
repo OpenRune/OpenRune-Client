@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,31 +8,28 @@ public enum class370 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Loz;"
 	)
-	field4326(-1),
+	field3570(-1),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Loz;"
 	)
-	field4320(0),
+	field3571(0),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Loz;"
 	)
-	field4321(1),
+	field3569(1),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Loz;"
 	)
-	field4322(2);
+	field3568(2);
 
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -1892902383
-	)
-	final int field4323;
+	final int field3572;
 
 	class370(int var3) {
-		this.field4323 = var3;
+		this.field3572 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -43,7 +39,7 @@ public enum class370 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field4323;
+		return this.field3572;
 	}
 
 	@ObfuscatedName("aw")

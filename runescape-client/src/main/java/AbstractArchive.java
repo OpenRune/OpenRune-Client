@@ -9,10 +9,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.Reflection;
 
 @ObfuscatedName("of")
 @Implements("AbstractArchive")
@@ -24,14 +22,8 @@ public abstract class AbstractArchive {
 	@Export("gzipDecompressor")
 	static GZipDecompressor gzipDecompressor;
 	@ObfuscatedName("bw")
-	@ObfuscatedGetter(
-		intValue = -1377156489
-	)
-	static int field4398;
+	static int field3627;
 	@ObfuscatedName("at")
-	@ObfuscatedGetter(
-		intValue = -218182883
-	)
 	@Export("groupCount")
 	int groupCount;
 	@ObfuscatedName("ay")
@@ -74,9 +66,6 @@ public abstract class AbstractArchive {
 	@Export("files")
 	Object[][] files;
 	@ObfuscatedName("bt")
-	@ObfuscatedGetter(
-		intValue = 1050579779
-	)
 	@Export("hash")
 	public int hash;
 	@ObfuscatedName("bk")
@@ -88,7 +77,7 @@ public abstract class AbstractArchive {
 
 	static {
 		gzipDecompressor = new GZipDecompressor();
-		field4398 = 0;
+		field3627 = 0;
 	}
 
 	AbstractArchive(boolean var1, boolean var2) {
@@ -132,7 +121,7 @@ public abstract class AbstractArchive {
 	@Export("decodeIndex")
 	void decodeIndex(byte[] var1) {
 		int var3 = var1.length;
-		int var2 = class409.method7646(var1, 0, var3);
+		int var2 = class409.method2110(var1, 0, var3);
 		this.hash = var2;
 		Buffer var4 = new Buffer(class311.decompressBytes(var1));
 		int var5 = var4.readUnsignedByte();
@@ -288,7 +277,7 @@ public abstract class AbstractArchive {
 				}
 			}
 
-			byte[] var5 = BoundaryObject.method5944(this.files[var1][var2], false);
+			byte[] var5 = BoundaryObject.method1643(this.files[var1][var2], false);
 			if (this.shallowFiles) {
 				this.files[var1][var2] = null;
 			}
@@ -325,7 +314,7 @@ public abstract class AbstractArchive {
 		descriptor = "(II)Z",
 		garbageValue = "110383370"
 	)
-	public boolean method7108(int var1) {
+	public boolean method1994(int var1) {
 		if (this.files.length == 1) {
 			return this.tryLoadFile(0, var1);
 		} else if (this.files[var1].length == 1) {
@@ -407,7 +396,7 @@ public abstract class AbstractArchive {
 				}
 			}
 
-			byte[] var4 = BoundaryObject.method5944(this.files[var1][var2], false);
+			byte[] var4 = BoundaryObject.method1643(this.files[var1][var2], false);
 			return var4;
 		} else {
 			return null;
@@ -529,12 +518,12 @@ public abstract class AbstractArchive {
 				return true;
 			} else {
 				byte[] var21;
-				if (var2 == null || var2[0] == 0 && var2[1] == 0 && var2[2] == 0 && var2[3] == 0) {
-					var21 = BoundaryObject.method5944(this.groups[var1], false);
-				} else {
-					var21 = BoundaryObject.method5944(this.groups[var1], true);
+				if (var2 != null && (var2[0] != 0 || var2[1] != 0 || var2[2] != 0 || var2[3] != 0)) {
+					var21 = BoundaryObject.method1643(this.groups[var1], true);
 					Buffer var8 = new Buffer(var21);
 					var8.xteaDecrypt(var2, 5, var8.array.length);
+				} else {
+					var21 = BoundaryObject.method1643(this.groups[var1], false);
 				}
 
 				byte[] var25 = class311.decompressBytes(var21);
@@ -544,13 +533,13 @@ public abstract class AbstractArchive {
 
 				int var10;
 				if (var3 > 1) {
-					int var22 = var25.length;
-					--var22;
-					var10 = var25[var22] & 255;
-					var22 -= var10 * var3 * 4;
+					int var9 = var25.length;
+					--var9;
+					var10 = var25[var9] & 255;
+					var9 -= var10 * var3 * 4;
 					Buffer var11 = new Buffer(var25);
 					int[] var12 = new int[var3];
-					var11.offset = var22;
+					var11.offset = var9;
 
 					int var14;
 					int var15;
@@ -570,18 +559,18 @@ public abstract class AbstractArchive {
 						var12[var14] = 0;
 					}
 
-					var11.offset = var22;
+					var11.offset = var9;
 					var14 = 0;
 
 					int var17;
 					for (var15 = 0; var15 < var10; ++var15) {
-						int var24 = 0;
+						int var16 = 0;
 
 						for (var17 = 0; var17 < var3; ++var17) {
-							var24 += var11.readInt();
-							System.arraycopy(var25, var14, var23[var17], var12[var17], var24);
-							var12[var17] += var24;
-							var14 += var24;
+							var16 += var11.readInt();
+							System.arraycopy(var25, var14, var23[var17], var12[var17], var16);
+							var12[var17] += var16;
+							var14 += var16;
 						}
 					}
 
@@ -631,7 +620,7 @@ public abstract class AbstractArchive {
 	@ObfuscatedName("cj")
 	@ObfuscatedSignature(
 		descriptor = "(Ljava/lang/String;B)I",
-		garbageValue = "-3"
+		garbageValue = "67"
 	)
 	@Export("getGroupId")
 	public int getGroupId(String var1) {
@@ -756,12 +745,12 @@ public abstract class AbstractArchive {
 						int var6;
 						if (var4 == 0) {
 							var5 = var1.fields[var3];
-							var6 = Reflection.getInt(var5, (Object)null);
+							var6 = var5.getInt((Object)null);
 							var0.writeByte(0);
 							var0.writeInt(var6);
 						} else if (var4 == 1) {
 							var5 = var1.fields[var3];
-							Reflection.setInt(var5, (Object)null, var1.intReplaceValues[var3]);
+							var5.setInt((Object)null, var1.intReplaceValues[var3]);
 							var0.writeByte(0);
 						} else if (var4 == 2) {
 							var5 = var1.fields[var3];
@@ -788,7 +777,7 @@ public abstract class AbstractArchive {
 								var7[var8] = var9.readObject();
 							}
 
-							Object var11 = Reflection.invoke(var25, (Object)null, var7);
+							Object var11 = var25.invoke((Object)null, var7);
 							if (var11 == null) {
 								var0.writeByte(0);
 							} else if (var11 instanceof Number) {

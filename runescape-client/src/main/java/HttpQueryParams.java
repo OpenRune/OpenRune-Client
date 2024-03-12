@@ -70,7 +70,7 @@ public class HttpQueryParams implements HttpPayload {
 		descriptor = "([BIIII[Liz;B)V",
 		garbageValue = "2"
 	)
-	static final void method8782(byte[] var0, int var1, int var2, int var3, int var4, CollisionMap[] var5) {
+	static final void method2420(byte[] var0, int var1, int var2, int var3, int var4, CollisionMap[] var5) {
 		int var7;
 		int var8;
 		for (int var6 = 0; var6 < 4; ++var6) {

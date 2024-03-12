@@ -3,7 +3,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,179 +10,95 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Widget")
 public class Widget extends Node {
 	@ObfuscatedName("ap")
-	public static boolean field3722;
+	public static boolean field3035;
 	@ObfuscatedName("bu")
 	@Export("isIf3")
 	public boolean isIf3;
 	@ObfuscatedName("bo")
-	@ObfuscatedGetter(
-		intValue = -917460645
-	)
 	@Export("id")
 	public int id;
 	@ObfuscatedName("bd")
-	@ObfuscatedGetter(
-		intValue = -1764737119
-	)
 	@Export("childIndex")
 	public int childIndex;
 	@ObfuscatedName("bi")
-	String field3846;
+	String field3040;
 	@ObfuscatedName("bq")
-	@ObfuscatedGetter(
-		intValue = 977562029
-	)
 	@Export("type")
 	public int type;
 	@ObfuscatedName("ba")
-	@ObfuscatedGetter(
-		intValue = -790461157
-	)
 	@Export("buttonType")
 	public int buttonType;
 	@ObfuscatedName("bt")
-	@ObfuscatedGetter(
-		intValue = 679311073
-	)
 	@Export("contentType")
 	public int contentType;
 	@ObfuscatedName("bk")
-	@ObfuscatedGetter(
-		intValue = -961347441
-	)
 	@Export("xAlignment")
 	public int xAlignment;
 	@ObfuscatedName("bm")
-	@ObfuscatedGetter(
-		intValue = 1875804249
-	)
 	@Export("yAlignment")
 	public int yAlignment;
 	@ObfuscatedName("bw")
-	@ObfuscatedGetter(
-		intValue = -62312661
-	)
 	@Export("widthAlignment")
 	public int widthAlignment;
 	@ObfuscatedName("bv")
-	@ObfuscatedGetter(
-		intValue = -1667328247
-	)
 	@Export("heightAlignment")
 	public int heightAlignment;
 	@ObfuscatedName("by")
-	@ObfuscatedGetter(
-		intValue = -529355443
-	)
 	@Export("rawX")
 	public int rawX;
 	@ObfuscatedName("bb")
-	@ObfuscatedGetter(
-		intValue = -261089931
-	)
 	@Export("rawY")
 	public int rawY;
 	@ObfuscatedName("bn")
-	@ObfuscatedGetter(
-		intValue = -1395939909
-	)
 	@Export("rawWidth")
 	public int rawWidth;
 	@ObfuscatedName("br")
-	@ObfuscatedGetter(
-		intValue = -2122425781
-	)
 	@Export("rawHeight")
 	public int rawHeight;
 	@ObfuscatedName("bp")
-	@ObfuscatedGetter(
-		intValue = 717289299
-	)
 	@Export("x")
 	public int x;
 	@ObfuscatedName("bf")
-	@ObfuscatedGetter(
-		intValue = 205750255
-	)
 	@Export("y")
 	public int y;
 	@ObfuscatedName("bg")
-	@ObfuscatedGetter(
-		intValue = 671919047
-	)
 	@Export("width")
 	public int width;
 	@ObfuscatedName("be")
-	@ObfuscatedGetter(
-		intValue = -119051865
-	)
 	@Export("height")
 	public int height;
 	@ObfuscatedName("bc")
-	@ObfuscatedGetter(
-		intValue = 261788723
-	)
-	public int field3843;
+	public int field3066;
 	@ObfuscatedName("bz")
-	@ObfuscatedGetter(
-		intValue = -839282761
-	)
-	public int field3732;
+	public int field3086;
 	@ObfuscatedName("bh")
-	@ObfuscatedGetter(
-		intValue = -573415813
-	)
 	@Export("parentId")
 	public int parentId;
 	@ObfuscatedName("bs")
 	@Export("isHidden")
 	public boolean isHidden;
 	@ObfuscatedName("bj")
-	@ObfuscatedGetter(
-		intValue = -2065058739
-	)
 	@Export("scrollX")
 	public int scrollX;
 	@ObfuscatedName("bl")
-	@ObfuscatedGetter(
-		intValue = 982634871
-	)
 	@Export("scrollY")
 	public int scrollY;
 	@ObfuscatedName("bx")
-	@ObfuscatedGetter(
-		intValue = 633921523
-	)
 	@Export("scrollWidth")
 	public int scrollWidth;
 	@ObfuscatedName("cs")
-	@ObfuscatedGetter(
-		intValue = 2008959905
-	)
 	@Export("scrollHeight")
 	public int scrollHeight;
 	@ObfuscatedName("ch")
-	@ObfuscatedGetter(
-		intValue = 1900478447
-	)
 	@Export("color")
 	public int color;
 	@ObfuscatedName("co")
-	@ObfuscatedGetter(
-		intValue = 1577261457
-	)
 	@Export("color2")
 	public int color2;
 	@ObfuscatedName("cd")
-	@ObfuscatedGetter(
-		intValue = -156786775
-	)
 	@Export("mouseOverColor")
 	public int mouseOverColor;
 	@ObfuscatedName("cg")
-	@ObfuscatedGetter(
-		intValue = 250967983
-	)
 	@Export("mouseOverColor2")
 	public int mouseOverColor2;
 	@ObfuscatedName("cn")
@@ -196,58 +111,34 @@ public class Widget extends Node {
 	@Export("fillMode")
 	public FillMode fillMode;
 	@ObfuscatedName("ci")
-	@ObfuscatedGetter(
-		intValue = 1725480751
-	)
 	@Export("transparencyTop")
 	public int transparencyTop;
 	@ObfuscatedName("cl")
-	@ObfuscatedGetter(
-		intValue = 1928836609
-	)
 	@Export("transparencyBot")
 	public int transparencyBot;
 	@ObfuscatedName("cm")
-	@ObfuscatedGetter(
-		intValue = -1508698367
-	)
 	@Export("lineWid")
 	public int lineWid;
 	@ObfuscatedName("cx")
-	public boolean field3759;
+	public boolean field3050;
 	@ObfuscatedName("cw")
-	@ObfuscatedGetter(
-		intValue = 433678453
-	)
 	@Export("spriteId2")
 	public int spriteId2;
 	@ObfuscatedName("cy")
-	@ObfuscatedGetter(
-		intValue = -1227003229
-	)
 	@Export("spriteId")
 	public int spriteId;
 	@ObfuscatedName("cu")
-	public String field3762;
+	public String field3176;
 	@ObfuscatedName("ce")
-	@ObfuscatedGetter(
-		intValue = 1383023963
-	)
 	@Export("spriteAngle")
 	public int spriteAngle;
 	@ObfuscatedName("cv")
 	@Export("spriteTiling")
 	public boolean spriteTiling;
 	@ObfuscatedName("cj")
-	@ObfuscatedGetter(
-		intValue = 168489719
-	)
 	@Export("outline")
 	public int outline;
 	@ObfuscatedName("ct")
-	@ObfuscatedGetter(
-		intValue = 1074151339
-	)
 	@Export("spriteShadow")
 	public int spriteShadow;
 	@ObfuscatedName("ck")
@@ -257,92 +148,50 @@ public class Widget extends Node {
 	@Export("spriteFlipH")
 	public boolean spriteFlipH;
 	@ObfuscatedName("cp")
-	@ObfuscatedGetter(
-		intValue = -1247373077
-	)
 	@Export("modelType")
 	public int modelType;
 	@ObfuscatedName("cc")
-	@ObfuscatedGetter(
-		intValue = 888768295
-	)
 	@Export("modelId")
 	public int modelId;
 	@ObfuscatedName("cb")
-	@ObfuscatedGetter(
-		intValue = -465503493
-	)
 	@Export("modelType2")
 	int modelType2;
 	@ObfuscatedName("cq")
-	@ObfuscatedGetter(
-		intValue = 1559029475
-	)
 	@Export("modelId2")
 	int modelId2;
 	@ObfuscatedName("cf")
-	@ObfuscatedGetter(
-		intValue = -2076594045
-	)
 	@Export("sequenceId")
 	public int sequenceId;
 	@ObfuscatedName("cr")
-	@ObfuscatedGetter(
-		intValue = 614571141
-	)
 	@Export("sequenceId2")
 	public int sequenceId2;
 	@ObfuscatedName("dg")
-	@ObfuscatedGetter(
-		intValue = 987320525
-	)
 	@Export("modelOffsetX")
 	public int modelOffsetX;
 	@ObfuscatedName("dc")
-	@ObfuscatedGetter(
-		intValue = -817061329
-	)
 	@Export("modelOffsetY")
 	public int modelOffsetY;
 	@ObfuscatedName("do")
-	@ObfuscatedGetter(
-		intValue = 1336385943
-	)
 	@Export("modelAngleX")
 	public int modelAngleX;
 	@ObfuscatedName("dv")
-	@ObfuscatedGetter(
-		intValue = -2105880485
-	)
 	@Export("modelAngleY")
 	public int modelAngleY;
 	@ObfuscatedName("dl")
-	@ObfuscatedGetter(
-		intValue = 39243971
-	)
 	@Export("modelAngleZ")
 	public int modelAngleZ;
 	@ObfuscatedName("dk")
-	@ObfuscatedGetter(
-		intValue = -149088277
-	)
 	@Export("modelZoom")
 	public int modelZoom;
 	@ObfuscatedName("dw")
-	@ObfuscatedGetter(
-		intValue = -1252270723
-	)
-	public int field3781;
+	public int field3116;
 	@ObfuscatedName("du")
-	@ObfuscatedGetter(
-		intValue = 2061122223
-	)
-	public int field3782;
+	public int field3114;
 	@ObfuscatedName("dt")
 	@ObfuscatedSignature(
 		descriptor = "Lnt;"
 	)
-	public PlayerComposition field3774;
+	public PlayerComposition field3186;
 	@ObfuscatedName("dm")
 	@Export("modelOrthog")
 	public boolean modelOrthog;
@@ -350,15 +199,9 @@ public class Widget extends Node {
 	@Export("modelTransparency")
 	public boolean modelTransparency;
 	@ObfuscatedName("dq")
-	@ObfuscatedGetter(
-		intValue = -1167605597
-	)
 	@Export("itemQuantityMode")
 	public int itemQuantityMode;
 	@ObfuscatedName("dd")
-	@ObfuscatedGetter(
-		intValue = -1100838897
-	)
 	@Export("fontId")
 	public int fontId;
 	@ObfuscatedName("dh")
@@ -368,21 +211,12 @@ public class Widget extends Node {
 	@Export("text2")
 	public String text2;
 	@ObfuscatedName("di")
-	@ObfuscatedGetter(
-		intValue = 639261355
-	)
 	@Export("textLineHeight")
 	public int textLineHeight;
 	@ObfuscatedName("ds")
-	@ObfuscatedGetter(
-		intValue = -1319573525
-	)
 	@Export("textXAlignment")
 	public int textXAlignment;
 	@ObfuscatedName("dy")
-	@ObfuscatedGetter(
-		intValue = 745676467
-	)
 	@Export("textYAlignment")
 	public int textYAlignment;
 	@ObfuscatedName("dz")
@@ -392,37 +226,31 @@ public class Widget extends Node {
 	@ObfuscatedSignature(
 		descriptor = "Lil;"
 	)
-	class210 field3794;
+	class210 field3036;
 	@ObfuscatedName("de")
-	@ObfuscatedGetter(
-		intValue = -82963177
-	)
-	int field3795;
+	int field3039;
 	@ObfuscatedName("df")
-	HashMap field3819;
+	HashMap field3042;
 	@ObfuscatedName("db")
-	HashMap field3731;
+	HashMap field3041;
 	@ObfuscatedName("dn")
 	@ObfuscatedSignature(
 		descriptor = "Lnn;"
 	)
-	class345 field3798;
+	class345 field3043;
 	@ObfuscatedName("dr")
-	@ObfuscatedGetter(
-		intValue = 962213457
-	)
 	@Export("flags")
 	public int flags;
 	@ObfuscatedName("ea")
-	public boolean field3808;
+	public boolean field3054;
 	@ObfuscatedName("ej")
-	public byte[][] field3739;
+	public byte[][] field3063;
 	@ObfuscatedName("ee")
-	public byte[][] field3806;
+	public byte[][] field3062;
 	@ObfuscatedName("ei")
-	public int[] field3820;
+	public int[] field3131;
 	@ObfuscatedName("ey")
-	public int[] field3804;
+	public int[] field3132;
 	@ObfuscatedName("el")
 	@Export("dataText")
 	public String dataText;
@@ -436,15 +264,9 @@ public class Widget extends Node {
 	@Export("parent")
 	public Widget parent;
 	@ObfuscatedName("ev")
-	@ObfuscatedGetter(
-		intValue = 698813995
-	)
 	@Export("dragZoneSize")
 	public int dragZoneSize;
 	@ObfuscatedName("ef")
-	@ObfuscatedGetter(
-		intValue = 900307939
-	)
 	@Export("dragThreshold")
 	public int dragThreshold;
 	@ObfuscatedName("er")
@@ -517,7 +339,7 @@ public class Widget extends Node {
 	@Export("onOp")
 	public Object[] onOp;
 	@ObfuscatedName("fm")
-	public Object[] field3833;
+	public Object[] field3162;
 	@ObfuscatedName("fy")
 	@Export("onScroll")
 	public Object[] onScroll;
@@ -528,9 +350,9 @@ public class Widget extends Node {
 	@Export("onKey")
 	public Object[] onKey;
 	@ObfuscatedName("fu")
-	public Object[] field3837;
+	public Object[] field3168;
 	@ObfuscatedName("ff")
-	public Object[] field3838;
+	public Object[] field3156;
 	@ObfuscatedName("fe")
 	@Export("onFriendTransmit")
 	public Object[] onFriendTransmit;
@@ -538,9 +360,9 @@ public class Widget extends Node {
 	@Export("onClanTransmit")
 	public Object[] onClanTransmit;
 	@ObfuscatedName("fs")
-	public Object[] field3841;
+	public Object[] field3166;
 	@ObfuscatedName("fw")
-	public Object[] field3730;
+	public Object[] field3170;
 	@ObfuscatedName("fb")
 	@Export("onMiscTransmit")
 	public Object[] onMiscTransmit;
@@ -557,9 +379,9 @@ public class Widget extends Node {
 	@Export("onStockTransmit")
 	public Object[] onStockTransmit;
 	@ObfuscatedName("gt")
-	public Object[] field3848;
+	public Object[] field3175;
 	@ObfuscatedName("gd")
-	public Object[] field3737;
+	public Object[] field3174;
 	@ObfuscatedName("gb")
 	@Export("cs1Instructions")
 	public int[][] cs1Instructions;
@@ -570,13 +392,10 @@ public class Widget extends Node {
 	@Export("cs1ComparisonValues")
 	public int[] cs1ComparisonValues;
 	@ObfuscatedName("gn")
-	@ObfuscatedGetter(
-		intValue = 1442276213
-	)
 	@Export("mouseOverRedirect")
 	public int mouseOverRedirect;
 	@ObfuscatedName("ga")
-	public String field3785;
+	public String field3181;
 	@ObfuscatedName("ge")
 	@Export("buttonText")
 	public String buttonText;
@@ -587,27 +406,15 @@ public class Widget extends Node {
 	@Export("itemQuantities")
 	public int[] itemQuantities;
 	@ObfuscatedName("gl")
-	@ObfuscatedGetter(
-		intValue = 826933799
-	)
 	@Export("itemId")
 	public int itemId;
 	@ObfuscatedName("go")
-	@ObfuscatedGetter(
-		intValue = -1060107107
-	)
 	@Export("itemQuantity")
 	public int itemQuantity;
 	@ObfuscatedName("gy")
-	@ObfuscatedGetter(
-		intValue = 1846968521
-	)
 	@Export("modelFrame")
 	public int modelFrame;
 	@ObfuscatedName("gr")
-	@ObfuscatedGetter(
-		intValue = -2111617423
-	)
 	@Export("modelFrameCycle")
 	public int modelFrameCycle;
 	@ObfuscatedName("gj")
@@ -617,43 +424,25 @@ public class Widget extends Node {
 	@Export("children")
 	public Widget[] children;
 	@ObfuscatedName("gk")
-	public boolean field3863;
+	public boolean field3058;
 	@ObfuscatedName("gs")
-	public boolean field3864;
+	public boolean field3059;
 	@ObfuscatedName("gq")
-	@ObfuscatedGetter(
-		intValue = -1359127199
-	)
-	public int field3865;
+	public int field3126;
 	@ObfuscatedName("gz")
-	@ObfuscatedGetter(
-		intValue = 581236711
-	)
-	public int field3866;
+	public int field3130;
 	@ObfuscatedName("gp")
-	@ObfuscatedGetter(
-		intValue = -1836213837
-	)
-	public int field3867;
+	public int field3125;
 	@ObfuscatedName("gf")
-	@ObfuscatedGetter(
-		intValue = -1679653655
-	)
-	public int field3831;
+	public int field3120;
 	@ObfuscatedName("gi")
-	@ObfuscatedGetter(
-		intValue = -54820285
-	)
 	@Export("rootIndex")
 	public int rootIndex;
 	@ObfuscatedName("gv")
-	@ObfuscatedGetter(
-		intValue = 1721708423
-	)
 	@Export("cycle")
 	public int cycle;
 	@ObfuscatedName("gu")
-	public int[] field3871;
+	public int[] field3139;
 	@ObfuscatedName("gc")
 	@Export("noClickThrough")
 	public boolean noClickThrough;
@@ -665,7 +454,7 @@ public class Widget extends Node {
 	public boolean prioritizeMenuEntry;
 
 	static {
-		field3722 = false;
+		field3035 = false;
 	}
 
 	public Widget() {
@@ -686,8 +475,8 @@ public class Widget extends Node {
 		this.y = 0;
 		this.width = 0;
 		this.height = 0;
-		this.field3843 = 1;
-		this.field3732 = 1;
+		this.field3066 = 1;
+		this.field3086 = 1;
 		this.parentId = -1;
 		this.isHidden = false;
 		this.scrollX = 0;
@@ -703,7 +492,7 @@ public class Widget extends Node {
 		this.transparencyTop = 0;
 		this.transparencyBot = 0;
 		this.lineWid = 1;
-		this.field3759 = false;
+		this.field3050 = false;
 		this.spriteId2 = -1;
 		this.spriteId = -1;
 		this.spriteAngle = 0;
@@ -722,8 +511,8 @@ public class Widget extends Node {
 		this.modelAngleY = 0;
 		this.modelAngleZ = 0;
 		this.modelZoom = 100;
-		this.field3781 = 0;
-		this.field3782 = 0;
+		this.field3116 = 0;
+		this.field3114 = 0;
 		this.modelOrthog = false;
 		this.modelTransparency = false;
 		this.itemQuantityMode = 2;
@@ -734,9 +523,9 @@ public class Widget extends Node {
 		this.textXAlignment = 0;
 		this.textYAlignment = 0;
 		this.textShadowed = false;
-		this.field3795 = -1;
+		this.field3039 = -1;
 		this.flags = 0;
-		this.field3808 = false;
+		this.field3054 = false;
 		this.dataText = "";
 		this.parent = null;
 		this.dragZoneSize = 0;
@@ -745,18 +534,18 @@ public class Widget extends Node {
 		this.spellActionName = "";
 		this.hasListener = false;
 		this.mouseOverRedirect = -1;
-		this.field3785 = "";
+		this.field3181 = "";
 		this.buttonText = "Ok";
 		this.itemId = -1;
 		this.itemQuantity = 0;
 		this.modelFrame = 0;
 		this.modelFrameCycle = 0;
-		this.field3863 = false;
-		this.field3864 = false;
-		this.field3865 = -1;
-		this.field3866 = 0;
-		this.field3867 = 0;
-		this.field3831 = 0;
+		this.field3058 = false;
+		this.field3059 = false;
+		this.field3126 = -1;
+		this.field3130 = 0;
+		this.field3125 = 0;
+		this.field3120 = 0;
 		this.rootIndex = -1;
 		this.cycle = -1;
 		this.noClickThrough = false;
@@ -902,7 +691,7 @@ public class Widget extends Node {
 
 		if (this.buttonType == 2) {
 			this.spellActionName = var1.readStringCp1252NullTerminated();
-			this.field3785 = var1.readStringCp1252NullTerminated();
+			this.field3181 = var1.readStringCp1252NullTerminated();
 			var4 = var1.readUnsignedShort() & 63;
 			this.flags |= var4 << 11;
 		}
@@ -1008,7 +797,7 @@ public class Widget extends Node {
 			this.modelOrthog = var1.readUnsignedByte() == 1;
 			var1.readUnsignedShort();
 			if (this.widthAlignment != 0) {
-				this.field3781 = var1.readUnsignedShort();
+				this.field3116 = var1.readUnsignedShort();
 			}
 
 			if (this.heightAlignment != 0) {
@@ -1039,7 +828,7 @@ public class Widget extends Node {
 		if (this.type == 9) {
 			this.lineWid = var1.readUnsignedByte();
 			this.color = var1.readInt();
-			this.field3759 = var1.readUnsignedByte() == 1;
+			this.field3050 = var1.readUnsignedByte() == 1;
 		}
 
 		this.flags = var1.readMedium();
@@ -1085,8 +874,8 @@ public class Widget extends Node {
 		descriptor = "(Luq;B)V",
 		garbageValue = "45"
 	)
-	void method6791(Buffer var1) {
-		this.field3846 = var1.readStringCp1252NullTerminated();
+	void method1891(Buffer var1) {
+		this.field3040 = var1.readStringCp1252NullTerminated();
 	}
 
 	@ObfuscatedName("ai")
@@ -1144,9 +933,9 @@ public class Widget extends Node {
 	)
 	@Export("getSprite")
 	public SpritePixels getSprite(WidgetDefinition var1, boolean var2, UrlRequester var3) {
-		field3722 = false;
-		if (this.field3762 != null) {
-			SpritePixels var4 = this.method6795(var1, var3);
+		field3035 = false;
+		if (this.field3176 != null) {
+			SpritePixels var4 = this.method1895(var1, var3);
 			if (var4 != null) {
 				return var4;
 			}
@@ -1167,12 +956,12 @@ public class Widget extends Node {
 			if (var7 != null) {
 				return var7;
 			} else {
-				var7 = FileSystem.SpriteBuffer_getSprite(var1.field3632, var8, 0);
+				var7 = FileSystem.SpriteBuffer_getSprite(var1.field2975, var8, 0);
 				if (var7 == null) {
-					field3722 = true;
+					field3035 = true;
 					return null;
 				} else {
-					this.method6798(var7);
+					this.method1898(var7);
 					var1.Widget_cachedSprites.put(var7, var5);
 					return var7;
 				}
@@ -1185,18 +974,18 @@ public class Widget extends Node {
 		descriptor = "(Lnd;Lel;I)Lvd;",
 		garbageValue = "168489719"
 	)
-	SpritePixels method6795(WidgetDefinition var1, UrlRequester var2) {
-		if (!this.method6797()) {
-			return this.method6796(var1, var2);
+	SpritePixels method1895(WidgetDefinition var1, UrlRequester var2) {
+		if (!this.method1897()) {
+			return this.method1896(var1, var2);
 		} else {
-			String var3 = this.field3762 + (this.spriteFlipV ? 1 : 0) + (this.spriteFlipH ? 1 : 0) + this.outline + this.spriteShadow;
-			SpritePixels var4 = (SpritePixels)var1.field3636.method8198(var3);
+			String var3 = this.field3176 + (this.spriteFlipV ? 1 : 0) + (this.spriteFlipH ? 1 : 0) + this.outline + this.spriteShadow;
+			SpritePixels var4 = (SpritePixels)var1.field2980.method2258(var3);
 			if (var4 == null) {
-				SpritePixels var5 = this.method6796(var1, var2);
+				SpritePixels var5 = this.method1896(var1, var2);
 				if (var5 != null) {
-					var4 = var5.method9900();
-					this.method6798(var4);
-					var1.field3636.method8201(var3, var4);
+					var4 = var5.method2733();
+					this.method1898(var4);
+					var1.field2980.method2259(var3, var4);
 				}
 			}
 
@@ -1209,15 +998,15 @@ public class Widget extends Node {
 		descriptor = "(Lnd;Lel;I)Lvd;",
 		garbageValue = "1911846999"
 	)
-	SpritePixels method6796(WidgetDefinition var1, UrlRequester var2) {
-		if (this.field3762 != null && var2 != null) {
-			class344 var3 = (class344)var1.field3635.method8198(this.field3762);
+	SpritePixels method1896(WidgetDefinition var1, UrlRequester var2) {
+		if (this.field3176 != null && var2 != null) {
+			class344 var3 = (class344)var1.field2981.method2258(this.field3176);
 			if (var3 == null) {
-				var3 = new class344(this.field3762, var2);
-				var1.field3635.method8201(this.field3762, var3);
+				var3 = new class344(this.field3176, var2);
+				var1.field2981.method2259(this.field3176, var3);
 			}
 
-			return var3.method6459();
+			return var3.method1793();
 		} else {
 			return null;
 		}
@@ -1228,7 +1017,7 @@ public class Widget extends Node {
 		descriptor = "(I)Z",
 		garbageValue = "1623659386"
 	)
-	boolean method6797() {
+	boolean method1897() {
 		return this.spriteFlipV || this.spriteFlipH || this.outline != 0 || this.spriteShadow != 0;
 	}
 
@@ -1237,7 +1026,7 @@ public class Widget extends Node {
 		descriptor = "(Lvd;I)V",
 		garbageValue = "871154866"
 	)
-	void method6798(SpritePixels var1) {
+	void method1898(SpritePixels var1) {
 		if (this.spriteFlipV) {
 			var1.flipVertically();
 		}
@@ -1271,7 +1060,7 @@ public class Widget extends Node {
 	)
 	@Export("getFont")
 	public Font getFont(WidgetDefinition var1) {
-		field3722 = false;
+		field3035 = false;
 		if (this.fontId == -1) {
 			return null;
 		} else {
@@ -1279,11 +1068,11 @@ public class Widget extends Node {
 			if (var2 != null) {
 				return var2;
 			} else {
-				AbstractArchive var4 = var1.field3632;
-				AbstractArchive var5 = var1.field3628;
+				AbstractArchive var4 = var1.field2975;
+				AbstractArchive var5 = var1.field2978;
 				int var6 = this.fontId;
 				Font var3;
-				if (!class130.method3074(var4, var6, 0)) {
+				if (!class130.method720(var4, var6, 0)) {
 					var3 = null;
 				} else {
 					var3 = class529.fontFromBytes(var5.takeFile(var6, 0));
@@ -1292,7 +1081,7 @@ public class Widget extends Node {
 				if (var3 != null) {
 					var1.Widget_cachedFonts.put(var3, (long)this.fontId);
 				} else {
-					field3722 = true;
+					field3035 = true;
 				}
 
 				return var3;
@@ -1307,7 +1096,7 @@ public class Widget extends Node {
 	)
 	@Export("getModel")
 	public Model getModel(WidgetDefinition var1, SequenceDefinition var2, int var3, boolean var4, PlayerComposition var5, NPCComposition var6, NpcOverrides var7) {
-		field3722 = false;
+		field3035 = false;
 		int var8;
 		int var9;
 		if (var4) {
@@ -1337,7 +1126,7 @@ public class Widget extends Node {
 
 			long var10 = (long)(var9 + (var8 << 16));
 			if (var7 != null) {
-				var10 |= var7.field1960 << 20;
+				var10 |= var7.field1564 << 20;
 			}
 
 			Model var12 = (Model)var1.Widget_cachedModels.get(var10);
@@ -1347,10 +1136,10 @@ public class Widget extends Node {
 				int var15 = 768;
 				switch(var8) {
 				case 1:
-					var13 = ModelData.ModelData_get(var1.field3626, var9, 0);
+					var13 = ModelData.ModelData_get(var1.field2976, var9, 0);
 					break;
 				case 2:
-					var13 = VarcInt.getNpcDefinition(var9).method3702((NpcOverrides)null);
+					var13 = VarcInt.getNpcDefinition(var9).method954((NpcOverrides)null);
 					break;
 				case 3:
 					var13 = var5 != null ? var5.getModelData() : null;
@@ -1359,16 +1148,16 @@ public class Widget extends Node {
 					ItemComposition var16 = ArchiveDiskActionHandler.ItemDefinition_get(var9);
 					var13 = var16.getModelData(10);
 					var14 += var16.ambient;
-					var15 += var16.contrast * 5;
+					var15 += var16.contrast;
 				case 5:
 				default:
 					break;
 				case 6:
-					var13 = VarcInt.getNpcDefinition(var9).method3702(var7);
+					var13 = VarcInt.getNpcDefinition(var9).method954(var7);
 				}
 
 				if (var13 == null) {
-					field3722 = true;
+					field3035 = true;
 					return null;
 				}
 
@@ -1389,12 +1178,12 @@ public class Widget extends Node {
 		descriptor = "(Lnd;ZI)Lmc;",
 		garbageValue = "-2042427108"
 	)
-	public SpriteMask method6801(WidgetDefinition var1, boolean var2) {
+	public SpriteMask method1901(WidgetDefinition var1, boolean var2) {
 		if (this.spriteId == -1) {
 			var2 = false;
 		}
 
-		int var3 = var2 ? this.spriteId : this.spriteId2;
+		int var3 = var2 ? this.spriteId * 1179359499 * -1227003229 : this.spriteId2 * 433678453 * 1508583389;
 		if (var3 == -1) {
 			return null;
 		} else {
@@ -1468,7 +1257,7 @@ public class Widget extends Node {
 		descriptor = "(I)Z",
 		garbageValue = "-1633146451"
 	)
-	public boolean method6803() {
+	public boolean method1903() {
 		return !this.isIf3 || this.type == 0 || this.type == 11 || this.hasListener || this.contentType == 1338 || this.type == 12;
 	}
 
@@ -1477,7 +1266,7 @@ public class Widget extends Node {
 		descriptor = "(B)Z",
 		garbageValue = "90"
 	)
-	public boolean method6831() {
+	public boolean method1904() {
 		return this.type == 11 || this.type == 12;
 	}
 
@@ -1485,15 +1274,15 @@ public class Widget extends Node {
 	@ObfuscatedSignature(
 		descriptor = "(Ljava/lang/String;Ljava/lang/String;Lel;J)V"
 	)
-	public void method6874(String var1, String var2, UrlRequester var3, long var4) {
+	public void method1905(String var1, String var2, UrlRequester var3, long var4) {
 		if (this.type == 11 && -1L != var4) {
 			var1 = var1.replaceAll("%userid%", Long.toString(var4));
-			this.field3794 = new class210();
-			if (!this.field3794.method4174(var1, var2, var3)) {
-				this.field3794 = null;
+			this.field3036 = new class210();
+			if (!this.field3036.method1087(var1, var2, var3)) {
+				this.field3036 = null;
 			} else {
-				if (this.field3819 == null || this.field3731 == null) {
-					this.method6808();
+				if (this.field3042 == null || this.field3041 == null) {
+					this.method1908();
 				}
 
 			}
@@ -1505,16 +1294,16 @@ public class Widget extends Node {
 		descriptor = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lel;I)V",
 		garbageValue = "2119717106"
 	)
-	public void method6788(String var1, String var2, String var3, String var4, String var5, UrlRequester var6) {
-		this.field3794 = new class210();
-		if (!this.field3794.method4174(var1, var3, var6)) {
-			this.field3794 = null;
+	public void method1906(String var1, String var2, String var3, String var4, String var5, UrlRequester var6) {
+		this.field3036 = new class210();
+		if (!this.field3036.method1087(var1, var3, var6)) {
+			this.field3036 = null;
 		} else {
-			if (this.field3819 == null || this.field3731 == null) {
-				this.method6808();
+			if (this.field3042 == null || this.field3041 == null) {
+				this.method1908();
 			}
 
-			this.field3794.method4129(var2, var4, var5);
+			this.field3036.method1088(var2, var4, var5);
 		}
 	}
 
@@ -1523,10 +1312,10 @@ public class Widget extends Node {
 		descriptor = "(Ljava/lang/String;Lel;B)V",
 		garbageValue = "22"
 	)
-	public void method6807(String var1, UrlRequester var2) {
+	public void method1907(String var1, UrlRequester var2) {
 		if (this.type == 11 && var1 != null) {
-			this.field3794 = new class210();
-			this.field3794.method4145(var1, var2);
+			this.field3036 = new class210();
+			this.field3036.method1102(var1, var2);
 		}
 	}
 
@@ -1535,9 +1324,9 @@ public class Widget extends Node {
 		descriptor = "(B)V",
 		garbageValue = "-67"
 	)
-	void method6808() {
-		this.field3819 = new HashMap();
-		this.field3731 = new HashMap();
+	void method1908() {
+		this.field3042 = new HashMap();
+		this.field3041 = new HashMap();
 	}
 
 	@ObfuscatedName("ay")
@@ -1545,13 +1334,13 @@ public class Widget extends Node {
 		descriptor = "(III)V",
 		garbageValue = "-174817967"
 	)
-	public void method6809(int var1, int var2) {
+	public void method1909(int var1, int var2) {
 		if (this.type == 11) {
-			if (this.field3819 == null) {
-				this.method6808();
+			if (this.field3042 == null) {
+				this.method1908();
 			}
 
-			this.field3819.put(var1, var2);
+			this.field3042.put(var1, var2);
 		}
 	}
 
@@ -1560,13 +1349,13 @@ public class Widget extends Node {
 		descriptor = "(Ljava/lang/String;II)V",
 		garbageValue = "-261500780"
 	)
-	public void method6810(String var1, int var2) {
+	public void method1910(String var1, int var2) {
 		if (this.type == 11) {
-			if (this.field3731 == null) {
-				this.method6808();
+			if (this.field3041 == null) {
+				this.method1908();
 			}
 
-			this.field3731.put(var1, var2);
+			this.field3041.put(var1, var2);
 		}
 	}
 
@@ -1575,14 +1364,14 @@ public class Widget extends Node {
 		descriptor = "(IIIII)Z",
 		garbageValue = "2143299562"
 	)
-	public boolean method6888(int var1, int var2, int var3, int var4) {
-		if (this.type == 11 && this.field3794 != null && this.method6895()) {
+	public boolean method1911(int var1, int var2, int var3, int var4) {
+		if (this.type == 11 && this.field3036 != null && this.method1912()) {
 			var1 -= var3;
 			var2 -= var4;
-			int var5 = (int)(this.field3794.method4140()[0] * (float)this.width);
-			int var6 = (int)(this.field3794.method4140()[1] * (float)this.height);
-			int var7 = var5 + (int)(this.field3794.method4140()[2] * (float)this.width);
-			int var8 = var6 + (int)(this.field3794.method4140()[3] * (float)this.height);
+			int var5 = (int)(this.field3036.method1097()[0] * (float)this.width);
+			int var6 = (int)(this.field3036.method1097()[1] * (float)this.height);
+			int var7 = var5 + (int)(this.field3036.method1097()[2] * (float)this.width);
+			int var8 = var6 + (int)(this.field3036.method1097()[3] * (float)this.height);
 			return var1 >= var5 && var2 >= var6 && var1 < var7 && var2 < var8;
 		} else {
 			return false;
@@ -1594,8 +1383,8 @@ public class Widget extends Node {
 		descriptor = "(I)Z",
 		garbageValue = "-106844895"
 	)
-	public boolean method6895() {
-		return this.field3795 == 2;
+	public boolean method1912() {
+		return this.field3039 == 2;
 	}
 
 	@ObfuscatedName("av")
@@ -1603,8 +1392,8 @@ public class Widget extends Node {
 		descriptor = "(Ljava/lang/String;I)I",
 		garbageValue = "1369768204"
 	)
-	public int method6813(String var1) {
-		return this.type == 11 && this.field3794 != null && this.method6895() ? this.field3794.method4134(var1) : -1;
+	public int method1913(String var1) {
+		return this.type == 11 && this.field3036 != null && this.method1912() ? this.field3036.method1091(var1) : -1;
 	}
 
 	@ObfuscatedName("ap")
@@ -1612,8 +1401,8 @@ public class Widget extends Node {
 		descriptor = "(Ljava/lang/String;I)Ljava/lang/String;",
 		garbageValue = "220125130"
 	)
-	public String method6814(String var1) {
-		return this.type == 11 && this.field3794 != null && this.method6895() ? this.field3794.method4135(var1) : null;
+	public String method1914(String var1) {
+		return this.type == 11 && this.field3036 != null && this.method1912() ? this.field3036.method1092(var1) : null;
 	}
 
 	@ObfuscatedName("bu")
@@ -1621,8 +1410,8 @@ public class Widget extends Node {
 		descriptor = "(I)I",
 		garbageValue = "1652857613"
 	)
-	public int method6815() {
-		return this.field3731 != null && this.field3731.size() > 0 ? 1 : 0;
+	public int method1915() {
+		return this.field3041 != null && this.field3041.size() > 0 ? 1 : 0;
 	}
 
 	@ObfuscatedName("bo")
@@ -1630,10 +1419,10 @@ public class Widget extends Node {
 		descriptor = "(I)I",
 		garbageValue = "860239195"
 	)
-	public int method6816() {
-		if (this.type == 11 && this.field3794 != null && this.field3731 != null && !this.field3731.isEmpty()) {
-			String var1 = this.field3794.method4139();
-			return var1 != null && this.field3731.containsKey(this.field3794.method4139()) ? (Integer)this.field3731.get(var1) : -1;
+	public int method1916() {
+		if (this.type == 11 && this.field3036 != null && this.field3041 != null && !this.field3041.isEmpty()) {
+			String var1 = this.field3036.method1096();
+			return var1 != null && this.field3041.containsKey(this.field3036.method1096()) ? (Integer)this.field3041.get(var1) : -1;
 		} else {
 			return -1;
 		}
@@ -1644,14 +1433,14 @@ public class Widget extends Node {
 		descriptor = "(I)Ljava/lang/String;",
 		garbageValue = "-2039365126"
 	)
-	public String method6817() {
-		if (this.type == 11 && this.field3794 != null) {
-			String var1 = this.field3794.method4139();
-			Iterator var2 = this.field3794.method4163().iterator();
+	public String method1917() {
+		if (this.type == 11 && this.field3036 != null) {
+			String var1 = this.field3036.method1096();
+			Iterator var2 = this.field3036.method1095().iterator();
 
 			while (var2.hasNext()) {
 				class224 var3 = (class224)var2.next();
-				String var4 = String.format("%%%S%%", var3.method4365());
+				String var4 = String.format("%%%S%%", var3.method1158());
 				if (var3.vmethod4366() == 0) {
 					var1.replaceAll(var4, Integer.toString(var3.vmethod4368()));
 				} else {
@@ -1670,15 +1459,15 @@ public class Widget extends Node {
 		descriptor = "(I)[I",
 		garbageValue = "-1931923105"
 	)
-	public int[] method6824() {
-		if (this.type == 11 && this.field3794 != null) {
+	public int[] method1918() {
+		if (this.type == 11 && this.field3036 != null) {
 			int[] var1 = new int[3];
 			int var2 = 0;
-			Iterator var3 = this.field3794.method4163().iterator();
+			Iterator var3 = this.field3036.method1095().iterator();
 
 			while (var3.hasNext()) {
 				class224 var4 = (class224)var3.next();
-				if (!var4.method4365().equals("user_id")) {
+				if (!var4.method1158().equals("user_id")) {
 					if (var4.vmethod4366() != 0) {
 						return null;
 					}
@@ -1701,8 +1490,8 @@ public class Widget extends Node {
 		descriptor = "(I)Lil;",
 		garbageValue = "2081980592"
 	)
-	public class210 method6819() {
-		return this.field3794;
+	public class210 method1919() {
+		return this.field3036;
 	}
 
 	@ObfuscatedName("ba")
@@ -1710,17 +1499,17 @@ public class Widget extends Node {
 		descriptor = "(Lnd;Lel;I)Z",
 		garbageValue = "-347360869"
 	)
-	public boolean method6820(WidgetDefinition var1, UrlRequester var2) {
-		if (this.type == 11 && this.field3794 != null) {
-			this.field3794.method4132(var2);
-			if (this.field3794.method4162() != this.field3795) {
-				this.field3795 = this.field3794.method4162();
-				if (this.field3795 >= 3) {
+	public boolean method1920(WidgetDefinition var1, UrlRequester var2) {
+		if (this.type == 11 && this.field3036 != null) {
+			this.field3036.method1089(var2);
+			if (this.field3036.method1090() != this.field3039) {
+				this.field3039 = this.field3036.method1090();
+				if (this.field3039 >= 3) {
 					return true;
 				}
 
-				if (this.field3795 == 2) {
-					this.method6848(var1);
+				if (this.field3039 == 2) {
+					this.method1921(var1);
 					return true;
 				}
 			}
@@ -1736,10 +1525,10 @@ public class Widget extends Node {
 		descriptor = "(Lnd;B)V",
 		garbageValue = "23"
 	)
-	void method6848(WidgetDefinition var1) {
+	void method1921(WidgetDefinition var1) {
 		this.noClickThrough = true;
-		ArrayList var2 = this.field3794.method4136();
-		ArrayList var3 = this.field3794.method4146();
+		ArrayList var2 = this.field3036.method1093();
+		ArrayList var3 = this.field3036.method1094();
 		int var4 = var2.size() + var3.size();
 		this.children = new Widget[var4];
 		int var5 = 0;
@@ -1748,19 +1537,19 @@ public class Widget extends Node {
 		Widget var8;
 		for (var6 = var2.iterator(); var6.hasNext(); this.children[var5++] = var8) {
 			class211 var7 = (class211)var6.next();
-			var8 = Skeleton.method5418(5, this, var5, 0, 0, 0, 0, var7.field2309);
-			var8.field3762 = var7.field2311.method2921();
-			class344 var9 = new class344(var7.field2311);
-			var1.field3635.method8201(var8.field3762, var9);
+			var8 = Skeleton.method1499(5, this, var5, 0, 0, 0, 0, var7.field1874);
+			var8.field3176 = var7.field1873.method668();
+			class344 var9 = new class344(var7.field1873);
+			var1.field2981.method2259(var8.field3176, var9);
 		}
 
 		for (var6 = var3.iterator(); var6.hasNext(); this.children[var5++] = var8) {
 			class222 var10 = (class222)var6.next();
-			var8 = Skeleton.method5418(4, this, var5, 0, 0, 0, 0, var10.field2399);
-			var8.text = var10.field2394;
-			var8.fontId = (Integer)this.field3819.get(var10.field2397);
-			var8.textXAlignment = var10.field2395;
-			var8.textYAlignment = var10.field2396;
+			var8 = Skeleton.method1499(4, this, var5, 0, 0, 0, 0, var10.field1930);
+			var8.text = var10.field1934;
+			var8.fontId = (Integer)this.field3042.get(var10.field1933);
+			var8.textXAlignment = var10.field1932;
+			var8.textYAlignment = var10.field1931;
 		}
 
 	}
@@ -1770,21 +1559,21 @@ public class Widget extends Node {
 		descriptor = "(B)V",
 		garbageValue = "55"
 	)
-	public void method6854() {
-		this.field3798 = new class345();
+	public void method1922() {
+		this.field3043 = new class345();
 
 		for (int var1 = 1; var1 <= 12; ++var1) {
-			this.field3798.field3657.method359(var1, 0);
+			this.field3043.field2988.method92(var1, 0);
 		}
 
 		for (char var2 = 0; var2 < ' '; ++var2) {
-			this.field3798.field3657.method360(var2, 0);
+			this.field3043.field2988.method93(var2, 0);
 		}
 
-		this.field3798.field3657.method360('\u0080', 0);
-		this.field3798.field3657.method359(82, 2);
-		this.field3798.field3657.method359(81, 2);
-		this.field3798.field3657.method359(86, 2);
+		this.field3043.field2988.method93('\u0080', 0);
+		this.field3043.field2988.method92(82, 2);
+		this.field3043.field2988.method92(81, 2);
+		this.field3043.field2988.method92(86, 2);
 	}
 
 	@ObfuscatedName("bw")
@@ -1792,8 +1581,8 @@ public class Widget extends Node {
 		descriptor = "(I)Lnf;",
 		garbageValue = "1032791719"
 	)
-	public class347 method6806() {
-		return this.field3798 != null ? this.field3798.field3656 : null;
+	public class347 method1923() {
+		return this.field3043 != null ? this.field3043.field2994 : null;
 	}
 
 	@ObfuscatedName("bv")
@@ -1801,8 +1590,8 @@ public class Widget extends Node {
 		descriptor = "(I)Lnv;",
 		garbageValue = "-926941640"
 	)
-	public class341 method6823() {
-		return this.field3798 != null ? this.field3798.field3655 : null;
+	public class341 method1924() {
+		return this.field3043 != null ? this.field3043.field2989 : null;
 	}
 
 	@ObfuscatedName("by")
@@ -1810,8 +1599,8 @@ public class Widget extends Node {
 		descriptor = "(I)Lbo;",
 		garbageValue = "-2133258203"
 	)
-	public class27 method6825() {
-		return this.field3798 != null ? this.field3798.field3657 : null;
+	public class27 method1925() {
+		return this.field3043 != null ? this.field3043.field2988 : null;
 	}
 
 	@ObfuscatedName("bb")
@@ -1819,8 +1608,8 @@ public class Widget extends Node {
 		descriptor = "(B)Lnn;",
 		garbageValue = "15"
 	)
-	public class345 method6841() {
-		return this.field3798;
+	public class345 method1926() {
+		return this.field3043;
 	}
 
 	@ObfuscatedName("bn")
@@ -1828,7 +1617,7 @@ public class Widget extends Node {
 		descriptor = "(Lnf;I)Z",
 		garbageValue = "-1645217279"
 	)
-	boolean method6827(class347 var1) {
+	boolean method1927(class347 var1) {
 		boolean var2 = false;
 		String var5;
 		String var6;
@@ -1869,7 +1658,7 @@ public class Widget extends Node {
 			}
 
 			var5 = var7.toString();
-			var2 |= var1.method6551(var5);
+			var2 |= var1.method1811(var5);
 			this.text = "";
 		}
 
@@ -1904,7 +1693,7 @@ public class Widget extends Node {
 			}
 
 			var5 = var7.toString();
-			var2 |= var1.method6510(var5);
+			var2 |= var1.method1812(var5);
 			this.text2 = "";
 		}
 
@@ -1916,29 +1705,29 @@ public class Widget extends Node {
 		descriptor = "(Lnd;I)Z",
 		garbageValue = "-1516469261"
 	)
-	public boolean method6828(WidgetDefinition var1) {
-		class347 var2 = this.method6806();
+	public boolean method1928(WidgetDefinition var1) {
+		class347 var2 = this.method1923();
 		if (var2 == null) {
 			return false;
 		} else {
 			boolean var3 = false;
-			if (!var2.method6562() && this.fontId != -1) {
-				int var4 = var2.method6507();
-				int var5 = var2.method6564();
-				int var6 = var2.method6561();
-				int var7 = var2.method6560();
+			if (!var2.method1865() && this.fontId != -1) {
+				int var4 = var2.method1866();
+				int var5 = var2.method1867();
+				int var6 = var2.method1864();
+				int var7 = var2.method1863();
 				Font var8 = this.getFont(var1);
 				if (var8 != null) {
-					var3 |= var2.method6511(var8);
-					var3 |= this.method6827(var2);
-					var3 |= var2.method6516(var4, var5);
-					var3 |= var2.method6530(var6, var7);
+					var3 |= var2.method1813(var8);
+					var3 |= this.method1927(var2);
+					var3 |= var2.method1818(var4, var5);
+					var3 |= var2.method1833(var6, var7);
 				}
-			} else if (var2.method6562()) {
-				var3 |= this.method6827(var2);
+			} else if (var2.method1865()) {
+				var3 |= this.method1927(var2);
 			}
 
-			var2.method6681();
+			var2.method1808();
 			return var3;
 		}
 	}

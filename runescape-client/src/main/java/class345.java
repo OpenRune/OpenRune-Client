@@ -7,29 +7,29 @@ public class class345 {
 	@ObfuscatedSignature(
 		descriptor = "Lnf;"
 	)
-	public class347 field3656;
+	public class347 field2994;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lnv;"
 	)
-	class341 field3655;
+	class341 field2989;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lbo;"
 	)
-	class27 field3657;
+	class27 field2988;
 	@ObfuscatedName("ai")
-	public Object[] field3658;
+	public Object[] field2991;
 	@ObfuscatedName("ar")
-	public Object[] field3659;
+	public Object[] field2992;
 	@ObfuscatedName("as")
-	public Object[] field3654;
+	public Object[] field2993;
 	@ObfuscatedName("aa")
-	public Object[] field3660;
+	public Object[] field2990;
 
 	class345() {
-		this.field3656 = new class347();
-		this.field3655 = new class341();
-		this.field3657 = new class27();
+		this.field2994 = new class347();
+		this.field2989 = new class341();
+		this.field2988 = new class27();
 	}
 }

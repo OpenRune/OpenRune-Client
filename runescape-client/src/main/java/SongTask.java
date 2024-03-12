@@ -13,13 +13,13 @@ public abstract class SongTask {
 	@Export("songTask")
 	SongTask songTask;
 	@ObfuscatedName("ai")
-	String field4626;
+	String field3817;
 	@ObfuscatedName("ar")
-	String field4627;
+	String field3818;
 	@ObfuscatedName("as")
-	boolean field4629;
+	boolean field3816;
 	@ObfuscatedName("aa")
-	boolean field4630;
+	boolean field3815;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lqe;)V"
@@ -33,6 +33,7 @@ public abstract class SongTask {
 		descriptor = "(I)Z",
 		garbageValue = "-2024199564"
 	)
+	@Export("vmethod8043")
 	public abstract boolean vmethod8043();
 
 	@ObfuscatedName("as")
@@ -40,8 +41,8 @@ public abstract class SongTask {
 		descriptor = "(B)Z",
 		garbageValue = "1"
 	)
-	public boolean method8013() {
-		return this.field4629;
+	public boolean method2214() {
+		return this.field3816;
 	}
 
 	@ObfuscatedName("aa")
@@ -49,8 +50,8 @@ public abstract class SongTask {
 		descriptor = "(B)Z",
 		garbageValue = "105"
 	)
-	public boolean method8038() {
-		return this.field4630;
+	public boolean method2215() {
+		return this.field3815;
 	}
 
 	@ObfuscatedName("az")
@@ -58,8 +59,8 @@ public abstract class SongTask {
 		descriptor = "(I)Ljava/lang/String;",
 		garbageValue = "404483720"
 	)
-	public String method8015() {
-		return "Error in task: " + this.field4627 + ", Error message: " + this.field4626;
+	public String method2216() {
+		return "Error in task: " + this.field3818 + ", Error message: " + this.field3817;
 	}
 
 	@ObfuscatedName("ao")
@@ -67,7 +68,7 @@ public abstract class SongTask {
 		descriptor = "(I)Lqe;",
 		garbageValue = "1254351439"
 	)
-	public SongTask method8016() {
+	public SongTask method2217() {
 		return this.songTask;
 	}
 
@@ -76,9 +77,9 @@ public abstract class SongTask {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "665644567"
 	)
-	void method8017(String var1) {
-		this.field4629 = true;
-		this.field4626 = var1;
+	void method2218(String var1) {
+		this.field3816 = true;
+		this.field3817 = var1;
 	}
 
 	@ObfuscatedName("aw")
@@ -92,11 +93,11 @@ public abstract class SongTask {
 		Script var4;
 		if (WorldMapLabelSize.isWorldMapEvent(var0.type)) {
 			class429.worldMapEvent = (WorldMapEvent)var3[0];
-			WorldMapElement var6 = class139.WorldMapElement_get(class429.worldMapEvent.mapElement);
-			var4 = class223.getWorldMapScript(var0.type, var6.objectId, var6.category);
+			WorldMapElement var5 = class139.WorldMapElement_get(class429.worldMapEvent.mapElement);
+			var4 = class223.getWorldMapScript(var0.type, var5.objectId, var5.category);
 		} else {
-			int var5 = (Integer)var3[0];
-			var4 = GrandExchangeOfferOwnWorldComparator.getScript(var5);
+			int var6 = (Integer)var3[0];
+			var4 = GrandExchangeOfferOwnWorldComparator.getScript(var6);
 		}
 
 		if (var4 != null) {

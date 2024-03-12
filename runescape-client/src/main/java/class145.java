@@ -12,6 +12,7 @@ public abstract class class145 extends Node {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	abstract void vmethod3512(Buffer var1);
 
 	@ObfuscatedName("aw")
@@ -19,6 +20,7 @@ public abstract class class145 extends Node {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	abstract void vmethod3513(ClanSettings var1);
 
 	@ObfuscatedName("aw")
@@ -26,7 +28,7 @@ public abstract class class145 extends Node {
 		descriptor = "(IB)Lgu;",
 		garbageValue = "-66"
 	)
-	public static VarcInt method3229(int var0) {
+	public static VarcInt method774(int var0) {
 		VarcInt var1 = (VarcInt)VarcInt.VarcInt_cached.get((long)var0);
 		if (var1 != null) {
 			return var1;
@@ -34,7 +36,7 @@ public abstract class class145 extends Node {
 			byte[] var2 = class528.VarcInt_archive.takeFile(19, var0);
 			var1 = new VarcInt();
 			if (var2 != null) {
-				var1.method3593(new Buffer(var2));
+				var1.method913(new Buffer(var2));
 			}
 
 			VarcInt.VarcInt_cached.put(var1, (long)var0);

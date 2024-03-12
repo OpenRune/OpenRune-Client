@@ -6,7 +6,6 @@ import java.net.HttpURLConnection;
 import java.util.Map;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,9 +13,6 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("HttpResponse")
 public class HttpResponse {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -675538159
-	)
 	@Export("responseCode")
 	final int responseCode;
 	@ObfuscatedName("aw")
@@ -88,7 +84,7 @@ public class HttpResponse {
 		descriptor = "([BIIIIIIIII[Liz;I)V",
 		garbageValue = "-1054610532"
 	)
-	static final void method269(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, CollisionMap[] var10) {
+	static final void method65(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, CollisionMap[] var10) {
 		int var12;
 		for (int var11 = 0; var11 < 8; ++var11) {
 			for (var12 = 0; var12 < 8; ++var12) {
@@ -105,7 +101,7 @@ public class HttpResponse {
 			for (int var13 = 0; var13 < 64; ++var13) {
 				for (int var14 = 0; var14 < 64; ++var14) {
 					if (var12 == var4 && var13 >= var5 && var13 < var5 + 8 && var14 >= var6 && var14 < var6 + 8) {
-						int var15 = var2 + Login.method2197(var13 & 7, var14 & 7, var7);
+						int var15 = var2 + Login.method433(var13 & 7, var14 & 7, var7);
 						int var18 = var13 & 7;
 						int var19 = var14 & 7;
 						int var20 = var7 & 3;
@@ -138,18 +134,18 @@ public class HttpResponse {
 		descriptor = "(IIII)I",
 		garbageValue = "543294315"
 	)
-	static final int method270(int var0, int var1, int var2) {
+	static final int method66(int var0, int var1, int var2) {
 		int var3 = var0 / var2;
 		int var4 = var0 & var2 - 1;
 		int var5 = var1 / var2;
 		int var6 = var1 & var2 - 1;
-		int var7 = Decimator.method1104(var3, var5);
-		int var8 = Decimator.method1104(var3 + 1, var5);
-		int var9 = Decimator.method1104(var3, var5 + 1);
-		int var10 = Decimator.method1104(var3 + 1, var5 + 1);
-		int var11 = class128.method3011(var7, var8, var4, var2);
-		int var12 = class128.method3011(var9, var10, var4, var2);
-		return class128.method3011(var11, var12, var6, var2);
+		int var7 = Decimator.method305(var3, var5);
+		int var8 = Decimator.method305(var3 + 1, var5);
+		int var9 = Decimator.method305(var3, var5 + 1);
+		int var10 = Decimator.method305(var3 + 1, var5 + 1);
+		int var11 = class128.method700(var7, var8, var4, var2);
+		int var12 = class128.method700(var9, var10, var4, var2);
+		return class128.method700(var11, var12, var6, var2);
 	}
 
 	@ObfuscatedName("nt")
@@ -171,7 +167,7 @@ public class HttpResponse {
 			int var15 = (int)(Math.sin(var12) * (double)var14);
 			int var16 = (int)(Math.cos(var12) * (double)var14);
 			byte var17 = 20;
-			ItemComposition.redHintArrowSprite.method9928(var15 + (var0 + var5.width / 2 - var17 / 2), var5.height / 2 + var1 - var17 / 2 - var16 - 10, var17, var17, 15, 15, var12, 256);
+			ItemComposition.redHintArrowSprite.method2762(var15 + (var0 + var5.width / 2 - var17 / 2), var5.height / 2 + var1 - var17 / 2 - var16 - 10, var17, var17, 15, 15, var12, 256);
 		} else {
 			class11.drawSpriteOnMinimap(var0, var1, var2, var3, var4, var5);
 		}

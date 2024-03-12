@@ -9,19 +9,19 @@ public class class366 {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1754226121"
 	)
-	static int method7007(int var0, Script var1, boolean var2) {
+	static int method1953(int var0, Script var1, boolean var2) {
 		int var3;
 		if (var0 == 3500) {
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field792.method4466(var3) ? 1 : 0;
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field623.method1186(var3) ? 1 : 0;
 			return 1;
 		} else if (var0 == 3501) {
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field792.method4450(var3) ? 1 : 0;
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field623.method1185(var3) ? 1 : 0;
 			return 1;
 		} else if (var0 == 3502) {
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field792.method4440(var3) ? 1 : 0;
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.field623.method1187(var3) ? 1 : 0;
 			return 1;
 		} else {
 			return 2;
@@ -36,9 +36,9 @@ public class class366 {
 	@Export("drawEntities")
 	static final void drawEntities(int var0, int var1, int var2, int var3) {
 		++Client.viewportDrawCount;
-		FontName.method9111();
-		KeyHandler.method342();
-		class442.method8216();
+		FontName.method2523();
+		KeyHandler.method90();
+		class442.method2263();
 		GameObject.addNpcsToScene(true);
 		int var4 = Players.Players_count;
 		int[] var5 = Players.Players_indices;
@@ -57,16 +57,16 @@ public class class366 {
 				if (Client.cycle >= var17.cycleStart) {
 					NPC var19;
 					Player var20;
-					if (!var17.isMoving && var17.field993 != 0) {
-						if (var17.field993 > 0) {
-							var19 = Client.npcs[var17.field993 - 1];
+					if (!var17.isMoving && var17.field828 != 0) {
+						if (var17.field828 > 0) {
+							var19 = Client.npcs[var17.field828 - 1];
 							if (var19 != null && var19.x >= 0 && var19.x < 13312 && var19.y >= 0 && var19.y < 13312) {
 								var17.sourceX = var19.x;
 								var17.sourceY = var19.y;
-								var17.setDestination(var17.field1008, var17.field987, var17.field988, Client.cycle);
+								var17.setDestination(var17.field827, var17.field843, var17.field834, Client.cycle);
 							}
 						} else {
-							var6 = -var17.field993 - 1;
+							var6 = -var17.field828 - 1;
 							if (var6 == Client.localPlayerIndex) {
 								var20 = VarpDefinition.localPlayer;
 							} else {
@@ -76,7 +76,7 @@ public class class366 {
 							if (var20 != null && var20.x >= 0 && var20.x < 13312 && var20.y >= 0 && var20.y < 13312) {
 								var17.sourceX = var20.x;
 								var17.sourceY = var20.y;
-								var17.setDestination(var17.field1008, var17.field987, var17.field988, Client.cycle);
+								var17.setDestination(var17.field827, var17.field843, var17.field834, Client.cycle);
 							}
 						}
 					}
@@ -131,18 +131,18 @@ public class class366 {
 		var3 = Client.viewportHeight;
 		Rasterizer2D.Rasterizer2D_setClip(var0, var1, var0 + var2, var3 + var1);
 		Rasterizer3D.resetRasterClipping();
-		Rasterizer2D.method9801();
+		Rasterizer2D.method2719();
 		var4 = Client.camAngleX;
-		if (Client.field795 / 256 > var4) {
-			var4 = Client.field795 / 256;
+		if (Client.field508 / 256 > var4) {
+			var4 = Client.field508 / 256;
 		}
 
-		if (Client.field797[4] && Client.field799[4] + 128 > var4) {
-			var4 = Client.field799[4] + 128;
+		if (Client.field433[4] && Client.field613[4] + 128 > var4) {
+			var4 = Client.field613[4] + 128;
 		}
 
 		int var18 = Client.camAngleY & 2047;
-		FadeInTask.method8010(Friend.oculusOrbFocalPointX, GrandExchangeOfferWorldComparator.field4449, class59.oculusOrbFocalPointY, var4, var18, WorldMapCacheName.method5111(var4), var3);
+		FadeInTask.method2213(Friend.oculusOrbFocalPointX, GrandExchangeOfferWorldComparator.field3676, class59.oculusOrbFocalPointY, var4, var18, WorldMapCacheName.method1397(var4), var3);
 		int var7;
 		int var8;
 		int var9;
@@ -155,114 +155,105 @@ public class class366 {
 			if (class30.clientPreferences.isRoofsHidden()) {
 				var7 = class473.Client_plane;
 			} else {
-				label468: {
+				label401: {
 					var8 = 3;
 					if (FriendSystem.cameraPitch < 310) {
-						label465: {
-							if (Client.oculusOrbState == 1) {
-								var9 = Friend.oculusOrbFocalPointX >> 7;
-								var10 = class59.oculusOrbFocalPointY >> 7;
-							} else {
-								var9 = VarpDefinition.localPlayer.x >> 7;
-								var10 = VarpDefinition.localPlayer.y >> 7;
-							}
+						if (Client.oculusOrbState == 1) {
+							var9 = Friend.oculusOrbFocalPointX >> 7;
+							var10 = class59.oculusOrbFocalPointY >> 7;
+						} else {
+							var9 = VarpDefinition.localPlayer.x >> 7;
+							var10 = VarpDefinition.localPlayer.y >> 7;
+						}
 
-							var11 = ClanMate.cameraX >> 7;
-							var12 = class317.cameraZ >> 7;
-							if (var11 >= 0 && var12 >= 0 && var11 < 104 && var12 < 104) {
-								if (var9 >= 0 && var10 >= 0 && var9 < 104 && var10 < 104) {
+						var11 = ClanMate.cameraX >> 7;
+						var12 = class317.cameraZ >> 7;
+						if (var11 < 0 || var12 < 0 || var11 >= 104 || var12 >= 104) {
+							var7 = class473.Client_plane;
+							break label401;
+						}
+
+						if (var9 < 0 || var10 < 0 || var9 >= 104 || var10 >= 104) {
+							var7 = class473.Client_plane;
+							break label401;
+						}
+
+						if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
+							var8 = class473.Client_plane;
+						}
+
+						if (var9 > var11) {
+							var13 = var9 - var11;
+						} else {
+							var13 = var11 - var9;
+						}
+
+						if (var10 > var12) {
+							var14 = var10 - var12;
+						} else {
+							var14 = var12 - var10;
+						}
+
+						int var15;
+						int var16;
+						if (var13 > var14) {
+							var15 = var14 * 65536 / var13;
+							var16 = 32768;
+
+							while (var11 != var9) {
+								if (var11 < var9) {
+									++var11;
+								} else if (var11 > var9) {
+									--var11;
+								}
+
+								if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
+									var8 = class473.Client_plane;
+								}
+
+								var16 += var15;
+								if (var16 >= 65536) {
+									var16 -= 65536;
+									if (var12 < var10) {
+										++var12;
+									} else if (var12 > var10) {
+										--var12;
+									}
+
 									if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
 										var8 = class473.Client_plane;
 									}
+								}
+							}
+						} else if (var14 > 0) {
+							var15 = var13 * 65536 / var14;
+							var16 = 32768;
 
-									if (var9 > var11) {
-										var13 = var9 - var11;
-									} else {
-										var13 = var11 - var9;
-									}
-
-									if (var10 > var12) {
-										var14 = var10 - var12;
-									} else {
-										var14 = var12 - var10;
-									}
-
-									int var15;
-									int var16;
-									if (var13 > var14) {
-										var15 = var14 * 65536 / var13;
-										var16 = 32768;
-
-										while (true) {
-											if (var11 == var9) {
-												break label465;
-											}
-
-											if (var11 < var9) {
-												++var11;
-											} else if (var11 > var9) {
-												--var11;
-											}
-
-											if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
-												var8 = class473.Client_plane;
-											}
-
-											var16 += var15;
-											if (var16 >= 65536) {
-												var16 -= 65536;
-												if (var12 < var10) {
-													++var12;
-												} else if (var12 > var10) {
-													--var12;
-												}
-
-												if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
-													var8 = class473.Client_plane;
-												}
-											}
-										}
-									} else {
-										if (var14 > 0) {
-											var15 = var13 * 65536 / var14;
-											var16 = 32768;
-
-											while (var12 != var10) {
-												if (var12 < var10) {
-													++var12;
-												} else if (var12 > var10) {
-													--var12;
-												}
-
-												if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
-													var8 = class473.Client_plane;
-												}
-
-												var16 += var15;
-												if (var16 >= 65536) {
-													var16 -= 65536;
-													if (var11 < var9) {
-														++var11;
-													} else if (var11 > var9) {
-														--var11;
-													}
-
-													if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
-														var8 = class473.Client_plane;
-													}
-												}
-											}
-										}
-										break label465;
-									}
+							while (var12 != var10) {
+								if (var12 < var10) {
+									++var12;
+								} else if (var12 > var10) {
+									--var12;
 								}
 
-								var7 = class473.Client_plane;
-								break label468;
-							}
+								if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
+									var8 = class473.Client_plane;
+								}
 
-							var7 = class473.Client_plane;
-							break label468;
+								var16 += var15;
+								if (var16 >= 65536) {
+									var16 -= 65536;
+									if (var11 < var9) {
+										++var11;
+									} else if (var11 > var9) {
+										--var11;
+									}
+
+									if ((Tiles.Tiles_renderFlags[class473.Client_plane][var11][var12] & 4) != 0) {
+										var8 = class473.Client_plane;
+									}
+								}
+							}
 						}
 					}
 
@@ -301,8 +292,8 @@ public class class366 {
 		var11 = Script.cameraYaw;
 
 		for (var12 = 0; var12 < 5; ++var12) {
-			if (Client.field797[var12]) {
-				var13 = (int)(Math.random() * (double)(Client.field798[var12] * 2 + 1) - (double)Client.field798[var12] + Math.sin((double)Client.field754[var12] * ((double)Client.field800[var12] / 100.0D)) * (double)Client.field799[var12]);
+			if (Client.field433[var12]) {
+				var13 = (int)(Math.random() * (double)(Client.field615[var12] * 2 + 1) - (double)Client.field615[var12] + Math.sin((double)Client.field616[var12] * ((double)Client.field614[var12] / 100.0D)) * (double)Client.field613[var12]);
 				if (var12 == 0) {
 					ClanMate.cameraX += var13;
 				}
@@ -340,43 +331,43 @@ public class class366 {
 		}
 
 		if (var12 >= var0 && var12 < var0 + var2 && var13 >= var1 && var13 < var3 + var1) {
-			class164.method3467(var12 - var0, var13 - var1);
+			class164.method863(var12 - var0, var13 - var1);
 		} else {
 			ViewportMouse.ViewportMouse_isInViewport = false;
 			ViewportMouse.ViewportMouse_entityCount = 0;
 		}
 
-		class190.method3774();
+		class190.method968();
 		Rasterizer2D.Rasterizer2D_fillRectangle(var0, var1, var2, var3, 0);
-		class190.method3774();
+		class190.method968();
 		var14 = Rasterizer3D.get3dZoom();
-		Rasterizer3D.method5278(class193.client.field200);
-		Rasterizer3D.clips.field3089 = Client.viewportZoom;
+		Rasterizer3D.method1452(class193.client.field126);
+		Rasterizer3D.clips.field2512 = Client.viewportZoom;
 		Actor.scene.draw(ClanMate.cameraX, AsyncHttpResponse.cameraY, class317.cameraZ, FriendSystem.cameraPitch, Script.cameraYaw, var6);
-		Rasterizer3D.method5278(false);
+		Rasterizer3D.method1452(false);
 		if (Client.z) {
-			Rasterizer2D.method9802();
+			Rasterizer2D.method2720();
 		}
 
-		Rasterizer3D.clips.field3089 = var14;
-		class190.method3774();
+		Rasterizer3D.clips.field2512 = var14;
+		class190.method968();
 		Actor.scene.clearTempGameObjects();
-		class317.method6071(var0, var1, var2, var3);
+		class317.method1689(var0, var1, var2, var3);
 		if (Client.hintArrowType == 2) {
-			ClanChannelMember.worldToScreen(Client.hintArrowSubX * 64 + (Client.hintArrowX - Projectile.baseX * 64 << 7), Client.hintArrowSubY * 64 + (Client.hintArrowY - GameEngine.baseY * 64 << 7), Client.hintArrowHeight * 4);
+			ClanChannelMember.worldToScreen((Client.hintArrowX - Projectile.baseX << 7) + Client.hintArrowSubX, (Client.hintArrowY - GameEngine.baseY << 7) + Client.hintArrowSubY, Client.hintArrowHeight * 2);
 			if (Client.viewportTempX > -1 && Client.cycle % 20 < 10) {
 				ChatChannel.headIconHintSprites[0].drawTransBgAt(var0 + Client.viewportTempX - 12, Client.viewportTempY + var1 - 28);
 			}
 		}
 
 		((TextureProvider)Rasterizer3D.clips.Rasterizer3D_textureLoader).animate(Client.graphicsCycle);
-		class407.method7643();
+		class407.method2106();
 		ClanMate.cameraX = var7;
 		AsyncHttpResponse.cameraY = var8;
 		class317.cameraZ = var9;
 		FriendSystem.cameraPitch = var10;
 		Script.cameraYaw = var11;
-		if (Client.isLoading && class356.field3897.method7211(true, false) == 0) {
+		if (Client.isLoading && class356.field3198.method2025(true, false) == 0) {
 			Client.isLoading = false;
 		}
 

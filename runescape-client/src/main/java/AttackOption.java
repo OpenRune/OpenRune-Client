@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -23,7 +22,7 @@ public enum AttackOption implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lea;"
 	)
-	field1364(2),
+	field1131(2),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lea;"
@@ -34,12 +33,9 @@ public enum AttackOption implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lea;"
 	)
-	field1362(4);
+	field1133(4);
 
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1735123761
-	)
 	@Export("id")
 	final int id;
 

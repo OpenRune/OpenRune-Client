@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,63 +11,51 @@ public class class321 {
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	public static AbstractArchive field3480;
+	public static AbstractArchive field2851;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	public static AbstractArchive field3475;
+	public static AbstractArchive field2852;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	public static AbstractArchive field3477;
+	public static AbstractArchive field2850;
 	@ObfuscatedName("ai")
-	public static ArrayList field3479;
+	public static ArrayList field2846;
 	@ObfuscatedName("ar")
-	public static LinkedList field3478;
+	public static LinkedList field2849;
 	@ObfuscatedName("as")
 	@Export("musicSongs")
 	public static ArrayList musicSongs;
 	@ObfuscatedName("aa")
-	static ArrayList field3484;
+	static ArrayList field2858;
 	@ObfuscatedName("az")
-	public static ArrayList field3481;
+	public static ArrayList field2848;
 	@ObfuscatedName("ao")
-	public static final List field3482;
+	public static final List field2853;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 160371303
-	)
 	@Export("musicPlayerStatus")
 	static int musicPlayerStatus;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -351242133
-	)
-	static int field3476;
+	static int field2856;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 540034119
-	)
-	static int field3485;
+	static int field2854;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = 282906921
-	)
-	static int field3486;
+	static int field2855;
 
 	static {
-		field3479 = null;
-		field3478 = new LinkedList();
+		field2846 = null;
+		field2849 = new LinkedList();
 		musicSongs = new ArrayList(3);
-		field3484 = new ArrayList(3);
-		field3481 = new ArrayList();
-		field3482 = new ArrayList();
+		field2858 = new ArrayList(3);
+		field2848 = new ArrayList();
+		field2853 = new ArrayList();
 		musicPlayerStatus = 0;
-		field3476 = 0;
-		field3485 = 0;
-		field3486 = 0;
+		field2856 = 0;
+		field2854 = 0;
+		field2855 = 0;
 	}
 
 	@ObfuscatedName("aq")
@@ -76,7 +63,7 @@ public class class321 {
 		descriptor = "(I[BLrl;B)V",
 		garbageValue = "0"
 	)
-	static void method6113(int var0, byte[] var1, ArchiveDisk var2) {
+	static void method1696(int var0, byte[] var1, ArchiveDisk var2) {
 		ArchiveDiskAction var3 = new ArchiveDiskAction();
 		var3.type = 0;
 		var3.key = (long)var0;
@@ -86,16 +73,16 @@ public class class321 {
 			ArchiveDiskActionHandler.ArchiveDiskActionHandler_requestQueue.addFirst(var3);
 		}
 
-		synchronized(ArchiveDiskActionHandler.field4365) {
-			if (ArchiveDiskActionHandler.field4362 == 0) {
+		synchronized(ArchiveDiskActionHandler.field3606) {
+			if (ArchiveDiskActionHandler.field3605 == 0) {
 				ArchiveDiskActionHandler.ArchiveDiskActionHandler_thread = new Thread(new ArchiveDiskActionHandler());
 				ArchiveDiskActionHandler.ArchiveDiskActionHandler_thread.setDaemon(true);
 				ArchiveDiskActionHandler.ArchiveDiskActionHandler_thread.start();
 				ArchiveDiskActionHandler.ArchiveDiskActionHandler_thread.setPriority(5);
 			}
 
-			ArchiveDiskActionHandler.field4362 = 600;
-			ArchiveDiskActionHandler.field4363 = false;
+			ArchiveDiskActionHandler.field3605 = 600;
+			ArchiveDiskActionHandler.field3604 = false;
 		}
 	}
 
@@ -104,16 +91,16 @@ public class class321 {
 		descriptor = "([BB)[I",
 		garbageValue = "-79"
 	)
-	public static int[] method6147(byte[] var0) {
+	public static int[] method1697(byte[] var0) {
 		if (var0 != null && var0.length != 0 && var0.length <= 8) {
 			int[] var1 = new int[var0.length];
 
 			for (int var2 = 0; var2 < var0.length; ++var2) {
-				if (var0[var2] < 0 || var0[var2] > class557.field5359.length) {
+				if (var0[var2] < 0 || var0[var2] > class557.field4388.length) {
 					return null;
 				}
 
-				var1[var2] = class557.field5359[var0[var2]];
+				var1[var2] = class557.field4388[var0[var2]];
 			}
 
 			return var1;
@@ -127,7 +114,7 @@ public class class321 {
 		descriptor = "(B)V",
 		garbageValue = "-28"
 	)
-	protected static final void method6145() {
+	protected static final void method1698() {
 		SecureRandomSSLSocket.clock.mark();
 
 		int var0;

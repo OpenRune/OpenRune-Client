@@ -5,20 +5,20 @@ import net.runelite.mapping.ObfuscatedSignature;
 @ObfuscatedName("nc")
 public class class350 {
 	@ObfuscatedName("aa")
-	static byte[][][] field3876;
+	static byte[][][] field3188;
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "(I)Lsf;",
 		garbageValue = "1898243774"
 	)
-	public static class468 method6940() {
-		synchronized(class468.field4833) {
-			if (class468.field4834 == 0) {
+	public static class468 method1929() {
+		synchronized(class468.field3967) {
+			if (class468.field3965 == 0) {
 				return new class468();
 			} else {
-				class468.field4833[--class468.field4834].method8593();
-				return class468.field4833[class468.field4834];
+				class468.field3967[--class468.field3965].method2371();
+				return class468.field3967[class468.field3965];
 			}
 		}
 	}

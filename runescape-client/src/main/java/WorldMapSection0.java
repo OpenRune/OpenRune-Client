@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,87 +7,45 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapSection0")
 public class WorldMapSection0 implements WorldMapSection {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1603363727
-	)
 	@Export("oldZ")
 	int oldZ;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 52143871
-	)
 	@Export("newZ")
 	int newZ;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 35983567
-	)
 	@Export("oldX")
 	int oldX;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 2138182213
-	)
 	@Export("oldY")
 	int oldY;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1325282103
-	)
 	@Export("newX")
 	int newX;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1674682141
-	)
 	@Export("newY")
 	int newY;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -684404227
-	)
 	@Export("oldChunkXLow")
 	int oldChunkXLow;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -1334417413
-	)
 	@Export("oldChunkYLow")
 	int oldChunkYLow;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1935687653
-	)
 	@Export("oldChunkXHigh")
 	int oldChunkXHigh;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = -837139765
-	)
 	@Export("oldChunkYHigh")
 	int oldChunkYHigh;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -2030409759
-	)
 	@Export("newChunkXLow")
 	int newChunkXLow;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 1740605253
-	)
 	@Export("newChunkYLow")
 	int newChunkYLow;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -1353682057
-	)
 	@Export("newChunkXHigh")
 	int newChunkXHigh;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = -2027548335
-	)
 	@Export("newChunkYHigh")
 	int newChunkYHigh;
 
@@ -154,7 +111,7 @@ public class WorldMapSection0 implements WorldMapSection {
 		if (!this.containsCoord(var1, var2, var3)) {
 			return null;
 		} else {
-			int[] var4 = new int[]{this.newX * 64 - this.oldX * 64 + var2 + (this.newChunkXLow * 8 - this.oldChunkXLow * 8), var3 + (this.newY * 64 - this.oldY * 64) + (this.newChunkYLow * 8 - this.oldChunkYLow * 8)};
+			int[] var4 = new int[]{var2 + (this.newX * 64 - this.oldX * 64) + (this.newChunkXLow * 8 - this.oldChunkXLow * 8), var3 + (this.newY * 64 - this.oldY * 64) + (this.newChunkYLow * 8 - this.oldChunkYLow * 8)};
 			return var4;
 		}
 	}
@@ -170,7 +127,7 @@ public class WorldMapSection0 implements WorldMapSection {
 			return null;
 		} else {
 			int var3 = this.oldX * 64 - this.newX * 64 + (this.oldChunkXLow * 8 - this.newChunkXLow * 8) + var1;
-			int var4 = this.oldY * 64 - this.newY * 64 + var2 + (this.oldChunkYLow * 8 - this.newChunkYLow * 8);
+			int var4 = var2 + (this.oldY * 64 - this.newY * 64) + (this.oldChunkYLow * 8 - this.newChunkYLow * 8);
 			return new Coord(this.oldZ, var3, var4);
 		}
 	}

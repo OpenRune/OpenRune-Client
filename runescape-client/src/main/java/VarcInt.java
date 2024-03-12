@@ -31,14 +31,14 @@ public class VarcInt extends DualNode {
 		descriptor = "(Luq;I)V",
 		garbageValue = "-1598158199"
 	)
-	void method3593(Buffer var1) {
+	void method913(Buffer var1) {
 		while (true) {
 			int var2 = var1.readUnsignedByte();
 			if (var2 == 0) {
 				return;
 			}
 
-			this.method3592(var1, var2);
+			this.method915(var1, var2);
 		}
 	}
 
@@ -47,7 +47,7 @@ public class VarcInt extends DualNode {
 		descriptor = "(Luq;IS)V",
 		garbageValue = "13984"
 	)
-	void method3592(Buffer var1, int var2) {
+	void method915(Buffer var1, int var2) {
 		if (var2 == 2) {
 			this.persist = true;
 		}
@@ -59,14 +59,14 @@ public class VarcInt extends DualNode {
 		descriptor = "(II)Lgx;",
 		garbageValue = "140098528"
 	)
-	public static HealthBarDefinition method3595(int var0) {
+	public static HealthBarDefinition method914(int var0) {
 		HealthBarDefinition var1 = (HealthBarDefinition)HealthBarDefinition.HealthBarDefinition_cached.get((long)var0);
 		if (var1 != null) {
 			return var1;
 		} else {
 			byte[] var2 = HealthBarDefinition.HealthBarDefinition_archive.takeFile(33, var0);
 			var1 = new HealthBarDefinition();
-			var1.field1918 = var0;
+			var1.field1534 = var0;
 			if (var2 != null) {
 				var1.decode(new Buffer(var2));
 			}
@@ -146,7 +146,7 @@ public class VarcInt extends DualNode {
 		descriptor = "([BIILkq;[Liz;I)V",
 		garbageValue = "-1433547236"
 	)
-	static final void method3606(byte[] var0, int var1, int var2, Scene var3, CollisionMap[] var4) {
+	static final void method918(byte[] var0, int var1, int var2, Scene var3, CollisionMap[] var4) {
 		Buffer var5 = new Buffer(var0);
 		int var6 = -1;
 

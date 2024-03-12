@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,29 +10,17 @@ public class ViewportMouse {
 	@Export("ViewportMouse_isInViewport")
 	public static boolean ViewportMouse_isInViewport;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1768867345
-	)
 	@Export("ViewportMouse_x")
 	static int ViewportMouse_x;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -733509695
-	)
 	@Export("ViewportMouse_y")
 	static int ViewportMouse_y;
 	@ObfuscatedName("ai")
 	@Export("ViewportMouse_false0")
 	static boolean ViewportMouse_false0;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1245969745
-	)
-	static int field3064;
+	static int field2486;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = -782662017
-	)
 	@Export("ViewportMouse_entityCount")
 	public static int ViewportMouse_entityCount;
 	@ObfuscatedName("ax")
@@ -56,7 +43,7 @@ public class ViewportMouse {
 	)
 	@Export("getPacketBufferNode")
 	public static PacketBufferNode getPacketBufferNode(ClientPacket var0, IsaacCipher var1) {
-		PacketBufferNode var2 = FadeOutTask.method8005();
+		PacketBufferNode var2 = FadeOutTask.method2209();
 		var2.clientPacket = var0;
 		var2.clientPacketLength = var0.length;
 		if (var2.clientPacketLength == -1) {

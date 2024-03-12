@@ -29,7 +29,7 @@ public final class RasterProvider extends AbstractRasterProvider {
 		super.height = var2;
 		super.pixels = new int[var2 * var1 + 1];
 		if (var4) {
-			super.field5280 = new float[var2 * var1 + 1];
+			super.field4324 = new float[var2 * var1 + 1];
 		}
 
 		DataBufferInt var5 = new DataBufferInt(super.pixels, super.pixels.length);

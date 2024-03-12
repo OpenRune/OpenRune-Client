@@ -8,7 +8,7 @@ public class class431 {
 		descriptor = "(I)I",
 		garbageValue = "-1409060170"
 	)
-	protected static final int method8099() {
-		return GameEngine.keyHandler.method323();
+	protected static final int method2229() {
+		return GameEngine.keyHandler.method85();
 	}
 }

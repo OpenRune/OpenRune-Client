@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -48,9 +47,6 @@ public enum StudioGame implements Enum {
 	@Export("name")
 	public final String name;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -882546409
-	)
 	@Export("id")
 	final int id;
 

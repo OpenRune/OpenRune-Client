@@ -1,24 +1,17 @@
 import java.io.IOException;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("go")
 public class class167 extends class145 {
 	@ObfuscatedName("nc")
-	@ObfuscatedGetter(
-		intValue = -575111985
-	)
 	@Export("menuHeight")
 	static int menuHeight;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = -3903049656232214041L
-	)
-	long field1814;
+	long field1457;
 	@ObfuscatedName("aw")
-	String field1819;
+	String field1456;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -30,8 +23,8 @@ public class class167 extends class145 {
 	)
 	class167(class148 var1) {
 		this.this$0 = var1;
-		this.field1814 = -1L;
-		this.field1819 = null;
+		this.field1457 = -1L;
+		this.field1456 = null;
 	}
 
 	@ObfuscatedName("aq")
@@ -39,13 +32,14 @@ public class class167 extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
 		if (var1.readUnsignedByte() != 255) {
 			--var1.offset;
-			this.field1814 = var1.readLong();
+			this.field1457 = var1.readLong();
 		}
 
-		this.field1819 = var1.readStringCp1252NullTerminatedOrNull();
+		this.field1456 = var1.readStringCp1252NullTerminatedOrNull();
 	}
 
 	@ObfuscatedName("aw")
@@ -53,8 +47,9 @@ public class class167 extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.method3334(this.field1814, this.field1819);
+		var1.method823(this.field1457, this.field1456);
 	}
 
 	@ObfuscatedName("al")
@@ -62,12 +57,12 @@ public class class167 extends class145 {
 		descriptor = "(S)Ldf;",
 		garbageValue = "1422"
 	)
-	static ClientPreferences method3498() {
+	static ClientPreferences method875() {
 		AccessFile var0 = null;
 		ClientPreferences var1 = new ClientPreferences();
 
 		try {
-			var0 = VarcInt.getPreferencesFile("", class28.field151.name, false);
+			var0 = VarcInt.getPreferencesFile("", class28.field84.name, false);
 			byte[] var2 = new byte[(int)var0.length()];
 
 			int var4;
@@ -97,8 +92,8 @@ public class class167 extends class145 {
 		descriptor = "(II)I",
 		garbageValue = "441714061"
 	)
-	public static int method3503(int var0) {
-		return (var0 & class527.field5152) - 1;
+	public static int method874(int var0) {
+		return (var0 & class527.field4219) - 1;
 	}
 
 	@ObfuscatedName("ld")
@@ -108,8 +103,8 @@ public class class167 extends class145 {
 	)
 	@Export("revalidateWidgetScroll")
 	static void revalidateWidgetScroll(Widget[] var0, Widget var1, boolean var2) {
-		int var3 = var1.scrollWidth != 0 ? var1.scrollWidth : var1.width;
-		int var4 = var1.scrollHeight != 0 ? var1.scrollHeight : var1.height;
+		int var3 = var1.scrollWidth != 0 ? var1.scrollWidth * -1956261573 * 633921523 : var1.width * 7972343 * 671919047;
+		int var4 = var1.scrollHeight != 0 ? var1.scrollHeight * -584689567 * 2008959905 : var1.height * -119051865 * 1546300951;
 		class343.resizeInterface(var0, var1.id, var3, var4, var2);
 		if (var1.children != null) {
 			class343.resizeInterface(var1.children, var1.id, var3, var4, var2);
@@ -117,7 +112,7 @@ public class class167 extends class145 {
 
 		InterfaceParent var5 = (InterfaceParent)Client.interfaceParents.get((long)var1.id);
 		if (var5 != null) {
-			VarpDefinition.method3551(var5.group, var3, var4, var2);
+			VarpDefinition.method903(var5.group, var3, var4, var2);
 		}
 
 		if (var1.contentType == 1337) {

@@ -86,7 +86,7 @@ public class HttpHeaders {
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "(Lqn;Ljava/lang/String;I)V",
-		garbageValue = "-662923695"
+		garbageValue = "-1774728722"
 	)
 	@Export("authenticationHeader")
 	void authenticationHeader(HttpAuthenticationHeader var1, String var2) {
@@ -99,9 +99,8 @@ public class HttpHeaders {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "-1161058155"
 	)
-	@Export("basicAuthentication")
-	public void basicAuthentication(String var1) {
-		this.authenticationHeader(HttpAuthenticationHeader.BASIC, var1);
+	public void method2245(String var1) {
+		this.authenticationHeader(HttpAuthenticationHeader.field3857, var1);
 	}
 
 	@ObfuscatedName("aa")

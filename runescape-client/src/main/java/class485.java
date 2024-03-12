@@ -5,19 +5,19 @@ import net.runelite.mapping.ObfuscatedSignature;
 @ObfuscatedName("sl")
 public class class485 {
 	@ObfuscatedName("as")
-	static int[] field4908;
+	static int[] field4012;
 	@ObfuscatedName("aa")
-	public static int[] field4904;
+	public static int[] field4011;
 
 	static {
-		field4908 = new int[32768];
+		field4012 = new int[32768];
 
 		for (int var0 = 0; var0 < 32768; ++var0) {
-			field4908[var0] = method8807(var0);
+			field4012[var0] = method2421(var0);
 		}
 
-		if (field4904 == null) {
-			field4904 = new int[65536];
+		if (field4011 == null) {
+			field4011 = new int[65536];
 			double var25 = 0.949999988079071D;
 
 			for (int var2 = 0; var2 < 65536; ++var2) {
@@ -84,7 +84,7 @@ public class class485 {
 				int var16 = (int)(256.0D * var11);
 				int var28 = (int)(256.0D * var13);
 				int var18 = var28 + (var16 << 8) + (var27 << 16);
-				field4904[var2] = var18 & 16777215;
+				field4011[var2] = var18 & 16777215;
 			}
 		}
 
@@ -95,7 +95,7 @@ public class class485 {
 		descriptor = "(IB)I",
 		garbageValue = "67"
 	)
-	static final int method8807(int var0) {
+	static final int method2421(int var0) {
 		double var1 = (double)(var0 >> 10 & 31) / 31.0D;
 		double var3 = (double)(var0 >> 5 & 31) / 31.0D;
 		double var5 = (double)(var0 & 31) / 31.0D;
@@ -180,7 +180,7 @@ public class class485 {
 		descriptor = "(IB)I",
 		garbageValue = "43"
 	)
-	public static int method8809(int var0) {
+	public static int method2422(int var0) {
 		return 255 - (var0 & 255);
 	}
 
@@ -189,16 +189,16 @@ public class class485 {
 		descriptor = "(I)V",
 		garbageValue = "100962176"
 	)
-	static void method8806() {
-		if ((Client.worldProperties & class529.field5183.rsOrdinal()) != 0) {
+	static void method2425() {
+		if ((Client.worldProperties & class529.field4226.rsOrdinal()) != 0) {
 			Login.Login_response0 = "";
 			Login.Login_response1 = "This is a <col=00ffff>Beta<col=ffffff> world.";
 			Login.Login_response2 = "Your normal account will not be affected.";
 			Login.Login_response3 = "";
-			JagexCache.method4224(1);
-			Message.method1182();
-		} else if ((Client.worldProperties & class529.field5160.rsOrdinal()) != 0) {
-			if ((Client.worldProperties & class529.field5162.rsOrdinal()) != 0) {
+			JagexCache.method1113(1);
+			Message.method341();
+		} else if ((Client.worldProperties & class529.field4224.rsOrdinal()) != 0) {
+			if ((Client.worldProperties & class529.field4223.rsOrdinal()) != 0) {
 				Login.Login_response1 = "This is a <col=ffff00>High Risk <col=ff0000>PvP<col=ffffff> world.";
 				Login.Login_response2 = "Players can attack each other almost everywhere";
 				Login.Login_response3 = "and the Protect Item prayer won't work.";
@@ -209,15 +209,15 @@ public class class485 {
 			}
 
 			Login.Login_response0 = "Warning!";
-			JagexCache.method4224(1);
-			Message.method1182();
-		} else if ((Client.worldProperties & class529.field5162.rsOrdinal()) != 0) {
+			JagexCache.method1113(1);
+			Message.method341();
+		} else if ((Client.worldProperties & class529.field4223.rsOrdinal()) != 0) {
 			Login.Login_response1 = "This is a <col=ffff00>High Risk<col=ffffff> world.";
 			Login.Login_response2 = "The Protect Item prayer will";
 			Login.Login_response3 = "not work on this world.";
 			Login.Login_response0 = "Warning!";
-			JagexCache.method4224(1);
-			Message.method1182();
+			JagexCache.method1113(1);
+			Message.method341();
 		} else {
 			class148.Login_promptCredentials(false);
 		}
@@ -229,7 +229,7 @@ public class class485 {
 		descriptor = "(III)I",
 		garbageValue = "28265915"
 	)
-	static final int method8808(int var0, int var1) {
+	static final int method2424(int var0, int var1) {
 		if (var0 == -2) {
 			return 12345678;
 		} else if (var0 == -1) {
@@ -265,7 +265,7 @@ public class class485 {
 	@ObfuscatedName("hm")
 	@ObfuscatedSignature(
 		descriptor = "(B)V",
-		garbageValue = "42"
+		garbageValue = "99"
 	)
 	@Export("logOut")
 	static final void logOut() {
@@ -277,15 +277,15 @@ public class class485 {
 			Client.collisionMaps[var0].clear();
 		}
 
-		Client.field737.method4394();
+		Client.field622.method1168();
 		System.gc();
-		class169.method3521(0, 0);
-		GrandExchangeOfferOwnWorldComparator.method1192();
+		class169.method882(0, 0);
+		GrandExchangeOfferOwnWorldComparator.method350();
 		Client.playingJingle = false;
-		InterfaceParent.method2350();
+		InterfaceParent.method475();
 		Interpreter.updateGameState(10);
-		VarbitComposition.method3830().method4265();
-		VarbitComposition.method3830().method4266();
+		VarbitComposition.method990().method1132();
+		VarbitComposition.method990().method1133();
 	}
 
 	@ObfuscatedName("iu")
@@ -301,19 +301,19 @@ public class class485 {
 				var0.sequenceFrame = 0;
 				var0.sequenceFrameCycle = 0;
 				var0.sequenceDelay = var2;
-				var0.field1254 = 0;
+				var0.field1051 = 0;
 			}
 
 			if (var3 == 2) {
-				var0.field1254 = 0;
+				var0.field1051 = 0;
 			}
-		} else if (var1 == -1 || var0.sequence == -1 || MilliClock.SequenceDefinition_get(var1).field2266 >= MilliClock.SequenceDefinition_get(var0.sequence).field2266) {
+		} else if (var1 == -1 || var0.sequence == -1 || MilliClock.SequenceDefinition_get(var1).field1833 >= MilliClock.SequenceDefinition_get(var0.sequence).field1833) {
 			var0.sequence = var1;
 			var0.sequenceFrame = 0;
 			var0.sequenceFrameCycle = 0;
 			var0.sequenceDelay = var2;
-			var0.field1254 = 0;
-			var0.field1280 = var0.pathLength;
+			var0.field1051 = 0;
+			var0.field1057 = var0.pathLength;
 		}
 
 	}

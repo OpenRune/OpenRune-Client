@@ -27,7 +27,7 @@ public class class315 {
 					String var5;
 					if (var1 instanceof RunException) {
 						RunException var6 = (RunException)var1;
-						var5 = var6.message + " | ";
+						var5 = var6.field4394 + " | ";
 						var4 = var6.throwable;
 					} else {
 						var5 = "";
@@ -41,14 +41,14 @@ public class class315 {
 					BufferedReader var9 = new BufferedReader(new StringReader(var8));
 					String var10 = var9.readLine();
 
-					label63:
+					label55:
 					while (true) {
 						while (true) {
 							String var11 = var9.readLine();
 							if (var11 == null) {
 								var5 = var5 + "| " + var10;
 								var2 = var5;
-								break label63;
+								break label55;
 							}
 
 							int var12 = var11.indexOf(40);
@@ -90,7 +90,7 @@ public class class315 {
 					return;
 				}
 
-				URL var3 = new URL(RunException.RunException_applet.getCodeBase(), "clienterror.ws?cv=" + RunException.RunException_revision + "&cs=" + RunException.field5366 + "&u=" + RunException.field5364 + "&v1=" + GrandExchangeOfferUnitPriceComparator.javaVendor + "&v2=" + TaskHandler.javaVersion + "&ct=" + RunException.field5367 + "&e=" + var2);
+				URL var3 = new URL(RunException.RunException_applet.getCodeBase(), "clienterror.ws?cv=" + RunException.RunException_revision + "&cs=" + RunException.field4389 + "&u=" + RunException.field4393 + "&v1=" + GrandExchangeOfferUnitPriceComparator.javaVendor + "&v2=" + TaskHandler.javaVersion + "&ct=" + RunException.field4391 + "&e=" + var2);
 				DataInputStream var17 = new DataInputStream(var3.openStream());
 				var17.read();
 				var17.close();
@@ -105,8 +105,8 @@ public class class315 {
 		descriptor = "(II)I",
 		garbageValue = "-993663836"
 	)
-	public static int method6060(int var0) {
-		return class319.field3463[var0];
+	public static int method1685(int var0) {
+		return class319.field2836[var0];
 	}
 
 	@ObfuscatedName("as")
@@ -125,7 +125,7 @@ public class class315 {
 		descriptor = "(I)V",
 		garbageValue = "1036586879"
 	)
-	static final void method6061() {
+	static final void method1686() {
 		int var0;
 		int var1;
 		int var2;
@@ -178,23 +178,23 @@ public class class315 {
 				var6 = 32768;
 			}
 
-			if (var6 > Client.field795) {
-				Client.field795 += (var6 - Client.field795) / 24;
-			} else if (var6 < Client.field795) {
-				Client.field795 += (var6 - Client.field795) / 80;
+			if (var6 > Client.field508) {
+				Client.field508 += (var6 - Client.field508) / 24;
+			} else if (var6 < Client.field508) {
+				Client.field508 += (var6 - Client.field508) / 80;
 			}
 
-			GrandExchangeOfferWorldComparator.field4449 = class272.getTileHeight(VarpDefinition.localPlayer.x, VarpDefinition.localPlayer.y, class473.Client_plane) - Client.camFollowHeight;
+			GrandExchangeOfferWorldComparator.field3676 = class272.getTileHeight(VarpDefinition.localPlayer.x, VarpDefinition.localPlayer.y, class473.Client_plane) - Client.camFollowHeight;
 		} else if (Client.oculusOrbState == 1) {
-			class518.method9298();
+			class518.method2564();
 			short var10 = -1;
-			if (Client.field792.method4466(33)) {
+			if (Client.field623.method1186(33)) {
 				var10 = 0;
-			} else if (Client.field792.method4466(49)) {
+			} else if (Client.field623.method1186(49)) {
 				var10 = 1024;
 			}
 
-			if (Client.field792.method4466(48)) {
+			if (Client.field623.method1186(48)) {
 				if (var10 == 0) {
 					var10 = 1792;
 				} else if (var10 == 1024) {
@@ -202,7 +202,7 @@ public class class315 {
 				} else {
 					var10 = 1536;
 				}
-			} else if (Client.field792.method4466(50)) {
+			} else if (Client.field623.method1186(50)) {
 				if (var10 == 0) {
 					var10 = 256;
 				} else if (var10 == 1024) {
@@ -213,51 +213,51 @@ public class class315 {
 			}
 
 			byte var11 = 0;
-			if (Client.field792.method4466(35)) {
+			if (Client.field623.method1186(35)) {
 				var11 = -1;
-			} else if (Client.field792.method4466(51)) {
+			} else if (Client.field623.method1186(51)) {
 				var11 = 1;
 			}
 
 			var2 = 0;
 			if (var10 >= 0 || var11 != 0) {
-				var2 = Client.field792.method4466(81) ? Client.oculusOrbSlowedSpeed : Client.oculusOrbNormalSpeed;
+				var2 = Client.field623.method1186(81) ? Client.oculusOrbSlowedSpeed * -1047281203 * 614929157 : Client.oculusOrbNormalSpeed * -1687770521 * -1504521897;
 				var2 *= 16;
-				Client.field620 = var10;
-				Client.field577 = var11;
+				Client.field486 = var10;
+				Client.field491 = var11;
 			}
 
-			if (Client.field619 < var2) {
-				Client.field619 += var2 / 8;
-				if (Client.field619 > var2) {
-					Client.field619 = var2;
+			if (Client.field484 < var2) {
+				Client.field484 += var2 / 8;
+				if (Client.field484 > var2) {
+					Client.field484 = var2;
 				}
-			} else if (Client.field619 > var2) {
-				Client.field619 = Client.field619 * 9 / 10;
+			} else if (Client.field484 > var2) {
+				Client.field484 = Client.field484 * 9 / 10;
 			}
 
-			if (Client.field619 > 0) {
-				var3 = Client.field619 / 16;
-				if (Client.field620 >= 0) {
-					var0 = Client.field620 - Script.cameraYaw & 2047;
+			if (Client.field484 > 0) {
+				var3 = Client.field484 / 16;
+				if (Client.field486 >= 0) {
+					var0 = Client.field486 - Script.cameraYaw & 2047;
 					var4 = Rasterizer3D.Rasterizer3D_sine[var0];
 					var5 = Rasterizer3D.Rasterizer3D_cosine[var0];
 					Friend.oculusOrbFocalPointX += var3 * var4 / 65536;
 					class59.oculusOrbFocalPointY += var3 * var5 / 65536;
 				}
 
-				if (Client.field577 != 0) {
-					GrandExchangeOfferWorldComparator.field4449 += var3 * Client.field577;
-					if (GrandExchangeOfferWorldComparator.field4449 > 0) {
-						GrandExchangeOfferWorldComparator.field4449 = 0;
+				if (Client.field491 != 0) {
+					GrandExchangeOfferWorldComparator.field3676 += var3 * Client.field491;
+					if (GrandExchangeOfferWorldComparator.field3676 > 0) {
+						GrandExchangeOfferWorldComparator.field3676 = 0;
 					}
 				}
 			} else {
-				Client.field620 = -1;
-				Client.field577 = -1;
+				Client.field486 = -1;
+				Client.field491 = -1;
 			}
 
-			if (Client.field792.method4466(13)) {
+			if (Client.field623.method1186(13)) {
 				Client.packetWriter.addNode(ViewportMouse.getPacketBufferNode(ClientPacket.FREECAM_EXIT, Client.packetWriter.isaacCipher));
 				Client.oculusOrbState = 0;
 			}
@@ -266,29 +266,29 @@ public class class315 {
 		if (MouseHandler.MouseHandler_currentButton == 4 && DbTableType.mouseCam) {
 			var0 = MouseHandler.MouseHandler_y - Client.mouseCamClickedY;
 			Client.camAngleDX = var0 * 2;
-			Client.mouseCamClickedY = var0 != -1 && var0 != 1 ? (Client.mouseCamClickedY + MouseHandler.MouseHandler_y) / 2 : MouseHandler.MouseHandler_y;
-			var1 = Client.field615 - MouseHandler.MouseHandler_x;
+			Client.mouseCamClickedY = var0 != -1 && var0 != 1 ? (Client.mouseCamClickedY + MouseHandler.MouseHandler_y) / 2 : MouseHandler.MouseHandler_y * 1447322039 * -1780921337;
+			var1 = Client.field495 - MouseHandler.MouseHandler_x;
 			Client.camAngleDY = var1 * 2;
-			Client.field615 = var1 != -1 && var1 != 1 ? (Client.field615 + MouseHandler.MouseHandler_x) / 2 : MouseHandler.MouseHandler_x;
+			Client.field495 = var1 != -1 && var1 != 1 ? (Client.field495 + MouseHandler.MouseHandler_x) / 2 : MouseHandler.MouseHandler_x * 1745816793 * -1550273687;
 		} else {
-			if (Client.field792.method4466(96)) {
+			if (Client.field623.method1186(96)) {
 				Client.camAngleDY += (-24 - Client.camAngleDY) / 2;
-			} else if (Client.field792.method4466(97)) {
+			} else if (Client.field623.method1186(97)) {
 				Client.camAngleDY += (24 - Client.camAngleDY) / 2;
 			} else {
 				Client.camAngleDY /= 2;
 			}
 
-			if (Client.field792.method4466(98)) {
+			if (Client.field623.method1186(98)) {
 				Client.camAngleDX += (12 - Client.camAngleDX) / 2;
-			} else if (Client.field792.method4466(99)) {
+			} else if (Client.field623.method1186(99)) {
 				Client.camAngleDX += (-12 - Client.camAngleDX) / 2;
 			} else {
 				Client.camAngleDX /= 2;
 			}
 
 			Client.mouseCamClickedY = MouseHandler.MouseHandler_y;
-			Client.field615 = MouseHandler.MouseHandler_x;
+			Client.field495 = MouseHandler.MouseHandler_x;
 		}
 
 		Client.camAngleY = Client.camAngleDY / 2 + Client.camAngleY & 2047;

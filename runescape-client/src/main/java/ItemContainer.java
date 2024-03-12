@@ -33,7 +33,7 @@ public class ItemContainer extends Node {
 		descriptor = "(I)V",
 		garbageValue = "1803810767"
 	)
-	public static void method2347() {
+	public static void method471() {
 		class186.field2026.clear();
 	}
 

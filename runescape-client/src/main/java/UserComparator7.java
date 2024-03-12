@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,10 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("UserComparator7")
 public class UserComparator7 extends AbstractUserComparator {
 	@ObfuscatedName("tm")
-	@ObfuscatedGetter(
-		intValue = -803127296
-	)
-	static int field1462;
+	static int field1212;
 	@ObfuscatedName("aq")
 	@Export("reversed")
 	final boolean reversed;
@@ -43,7 +39,7 @@ public class UserComparator7 extends AbstractUserComparator {
 		descriptor = "(B)[Lea;",
 		garbageValue = "-24"
 	)
-	static AttackOption[] method2951() {
-		return new AttackOption[]{AttackOption.field1362, AttackOption.field1364, AttackOption.AttackOption_dependsOnCombatLevels, AttackOption.AttackOption_hidden, AttackOption.AttackOption_alwaysRightClick};
+	static AttackOption[] method678() {
+		return new AttackOption[]{AttackOption.field1133, AttackOption.field1131, AttackOption.AttackOption_dependsOnCombatLevels, AttackOption.AttackOption_hidden, AttackOption.AttackOption_alwaysRightClick};
 	}
 }

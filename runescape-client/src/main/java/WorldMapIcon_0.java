@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,9 +7,6 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapIcon_0")
 public class WorldMapIcon_0 extends AbstractWorldMapIcon {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -541619365
-	)
 	@Export("element")
 	final int element;
 	@ObfuscatedName("aw")
@@ -20,15 +16,9 @@ public class WorldMapIcon_0 extends AbstractWorldMapIcon {
 	@Export("label")
 	final WorldMapLabel label;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1774804171
-	)
 	@Export("subWidth")
 	final int subWidth;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1174408121
-	)
 	@Export("subHeight")
 	final int subHeight;
 

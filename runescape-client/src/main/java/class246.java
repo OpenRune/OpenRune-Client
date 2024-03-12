@@ -8,7 +8,7 @@ public class class246 {
 	@ObfuscatedSignature(
 		descriptor = "[Lvd;"
 	)
-	static SpritePixels[] field2581;
+	static SpritePixels[] field2076;
 
 	@ObfuscatedName("ab")
 	@ObfuscatedSignature(
@@ -21,19 +21,19 @@ public class class246 {
 			Client.isMembersWorld = var0.isMembersOnly();
 			boolean var1 = var0.isMembersOnly();
 			if (var1 != HealthBarUpdate.ItemDefinition_inMembersWorld) {
-				class190.method3773();
+				class190.method967();
 				HealthBarUpdate.ItemDefinition_inMembersWorld = var1;
 			}
 		}
 
 		if (var0.properties != Client.worldProperties) {
-			class213.method4205(class311.archive8, var0.properties);
+			class213.method1111(class311.archive8, var0.properties);
 		}
 
 		class183.worldHost = var0.host;
 		Client.worldId = var0.id;
 		Client.worldProperties = var0.properties;
-		class28.field152 = var0.field850;
+		class28.field83 = var0.field709;
 		class211.worldPort = Client.gameBuild == 0 ? 43594 : var0.id + 40000;
 		class150.js5Port = Client.gameBuild == 0 ? 443 : var0.id + 50000;
 		class316.currentPort = class211.worldPort;

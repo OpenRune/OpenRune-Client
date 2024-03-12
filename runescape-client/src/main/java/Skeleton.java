@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,15 +7,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Skeleton")
 public class Skeleton extends Node {
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -761555779
-	)
 	@Export("id")
 	int id;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 1093331411
-	)
 	@Export("count")
 	int count;
 	@ObfuscatedName("az")
@@ -29,7 +22,7 @@ public class Skeleton extends Node {
 	@ObfuscatedSignature(
 		descriptor = "Lkn;"
 	)
-	class272 field2844;
+	class272 field2288;
 
 	public Skeleton(int var1, byte[] var2) {
 		this.id = var1;
@@ -56,7 +49,7 @@ public class Skeleton extends Node {
 		if (var3.offset < var3.array.length) {
 			var4 = var3.readUnsignedShort();
 			if (var4 > 0) {
-				this.field2844 = new class272(var3, var4);
+				this.field2288 = new class272(var3, var4);
 			}
 		}
 
@@ -67,7 +60,7 @@ public class Skeleton extends Node {
 		descriptor = "(I)I",
 		garbageValue = "-1917649997"
 	)
-	public int method5411() {
+	public int method1497() {
 		return this.count;
 	}
 
@@ -76,8 +69,8 @@ public class Skeleton extends Node {
 		descriptor = "(I)Lkn;",
 		garbageValue = "1746723062"
 	)
-	public class272 method5414() {
-		return this.field2844;
+	public class272 method1498() {
+		return this.field2288;
 	}
 
 	@ObfuscatedName("aq")
@@ -85,9 +78,9 @@ public class Skeleton extends Node {
 		descriptor = "(Lmx;B)V",
 		garbageValue = "49"
 	)
-	public static void method5417(class327 var0) {
-		if (!class321.field3482.contains(var0)) {
-			class321.field3482.add(var0);
+	public static void method1496(class327 var0) {
+		if (!class321.field2853.contains(var0)) {
+			class321.field2853.add(var0);
 		}
 
 	}
@@ -97,7 +90,7 @@ public class Skeleton extends Node {
 		descriptor = "(ILng;IIIII[FI)Lng;",
 		garbageValue = "148959513"
 	)
-	static Widget method5418(int var0, Widget var1, int var2, int var3, int var4, int var5, int var6, float[] var7) {
+	static Widget method1499(int var0, Widget var1, int var2, int var3, int var4, int var5, int var6, float[] var7) {
 		Widget var8 = new Widget();
 		var8.type = var0;
 		var8.parentId = var1.id;
@@ -119,14 +112,14 @@ public class Skeleton extends Node {
 		descriptor = "(II)I",
 		garbageValue = "1024699735"
 	)
-	static int method5416(int var0) {
+	static int method1500(int var0) {
 		return (int)Math.pow(2.0D, (double)(7.0F + (float)var0 / 256.0F));
 	}
 
 	@ObfuscatedName("ln")
 	@ObfuscatedSignature(
 		descriptor = "(Ldx;IIII)V",
-		garbageValue = "187746341"
+		garbageValue = "697254086"
 	)
 	@Export("addNpcToMenu")
 	static final void addNpcToMenu(NPC var0, int var1, int var2, int var3) {
@@ -138,12 +131,12 @@ public class Skeleton extends Node {
 
 			if (var4 != null) {
 				if (var4.isInteractable) {
-					if (!var4.field2005 || Client.followerIndex == var1) {
-						String var5 = var0.method2670();
+					if (!var4.field1584 || Client.followerIndex == var1) {
+						String var5 = var0.method591();
 						int var6;
 						int var9;
-						if (var4.combatLevel != 0 && var0.field1270 != 0) {
-							var6 = var0.field1270 != -1 ? var0.field1270 : var4.combatLevel;
+						if (var4.combatLevel != 0 && var0.field1058 != 0) {
+							var6 = var0.field1058 != -1 ? var0.field1058 * 284413043 * -764561221 : var4.combatLevel * -1839146001 * -1490701553;
 							var9 = VarpDefinition.localPlayer.combatLevel;
 							int var10 = var9 - var6;
 							String var8;
@@ -175,7 +168,7 @@ public class Skeleton extends Node {
 						}
 
 						if (Client.isItemSelected == 1) {
-							UrlRequest.insertMenuItemNoShift("Use", Client.field822 + " " + "->" + " " + class370.colorStartTag(16776960) + var5, 7, var1, var2, var3);
+							UrlRequest.insertMenuItemNoShift("Use", Client.field625 + " " + "->" + " " + class370.colorStartTag(16776960) + var5, 7, var1, var2, var3);
 						} else if (Client.isSpellSelected) {
 							if ((class128.selectedSpellFlags & 2) == 2) {
 								UrlRequest.insertMenuItemNoShift(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + class370.colorStartTag(16776960) + var5, 8, var1, var2, var3);
@@ -186,7 +179,7 @@ public class Skeleton extends Node {
 							int var11;
 							if (var7 != null) {
 								for (var11 = 4; var11 >= 0; --var11) {
-									if (var0.method2663(var11) && var7[var11] != null && !var7[var11].equalsIgnoreCase("Attack")) {
+									if (var0.method590(var11) && var7[var11] != null && !var7[var11].equalsIgnoreCase("Attack")) {
 										var9 = 0;
 										if (var11 == 0) {
 											var9 = var6 + 9;
@@ -215,7 +208,7 @@ public class Skeleton extends Node {
 
 							if (var7 != null) {
 								for (var11 = 4; var11 >= 0; --var11) {
-									if (var0.method2663(var11) && var7[var11] != null && var7[var11].equalsIgnoreCase("Attack")) {
+									if (var0.method590(var11) && var7[var11] != null && var7[var11].equalsIgnoreCase("Attack")) {
 										short var12 = 0;
 										if (AttackOption.AttackOption_hidden != Client.npcAttackOption) {
 											if (AttackOption.AttackOption_alwaysRightClick == Client.npcAttackOption || AttackOption.AttackOption_dependsOnCombatLevels == Client.npcAttackOption && var4.combatLevel > VarpDefinition.localPlayer.combatLevel) {

@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,39 +7,21 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapSection1")
 public class WorldMapSection1 implements WorldMapSection {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -122563265
-	)
 	@Export("minPlane")
 	int minPlane;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -570138147
-	)
 	@Export("planes")
 	int planes;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1774405817
-	)
 	@Export("regionStartX")
 	int regionStartX;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -1611275883
-	)
 	@Export("regionStartY")
 	int regionStartY;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 370098425
-	)
 	@Export("regionEndX")
 	int regionEndX;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1903102761
-	)
 	@Export("regionEndY")
 	int regionEndY;
 
@@ -106,7 +87,7 @@ public class WorldMapSection1 implements WorldMapSection {
 		if (!this.containsCoord(var1, var2, var3)) {
 			return null;
 		} else {
-			int[] var4 = new int[]{this.regionEndX * 64 - this.regionStartX * 64 + var2, var3 + (this.regionEndY * 64 - this.regionStartY * 64)};
+			int[] var4 = new int[]{var2 + (this.regionEndX * 64 - this.regionStartX * 64), var3 + (this.regionEndY * 64 - this.regionStartY * 64)};
 			return var4;
 		}
 	}
@@ -122,7 +103,7 @@ public class WorldMapSection1 implements WorldMapSection {
 			return null;
 		} else {
 			int var3 = this.regionStartX * 64 - this.regionEndX * 64 + var1;
-			int var4 = this.regionStartY * 64 - this.regionEndY * 64 + var2;
+			int var4 = var2 + (this.regionStartY * 64 - this.regionEndY * 64);
 			return new Coord(this.minPlane, var3, var4);
 		}
 	}

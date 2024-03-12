@@ -306,8 +306,8 @@ public class Huffman {
 		descriptor = "(Lof;III)Lvg;",
 		garbageValue = "1477494345"
 	)
-	static IndexedSprite method6973(AbstractArchive var0, int var1, int var2) {
-		return !class130.method3074(var0, var1, var2) ? null : Interpreter.method2107();
+	static IndexedSprite method1939(AbstractArchive var0, int var1, int var2) {
+		return !class130.method720(var0, var1, var2) ? null : Interpreter.method421();
 	}
 
 	@ObfuscatedName("ha")
@@ -315,13 +315,13 @@ public class Huffman {
 		descriptor = "(B)V",
 		garbageValue = "33"
 	)
-	static final void method6966() {
+	static final void method1942() {
 		if (Client.logoutTimer > 0) {
 			class485.logOut();
 		} else {
-			Client.timer.method8102();
+			Client.timer.method2231();
 			Interpreter.updateGameState(40);
-			class324.field3539 = Client.packetWriter.getSocket();
+			class324.field2902 = Client.packetWriter.getSocket();
 			Client.packetWriter.removeSocket();
 		}
 	}

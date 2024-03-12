@@ -1,4 +1,3 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,24 +7,21 @@ public class class440 {
 	@ObfuscatedSignature(
 		descriptor = "Lqb;"
 	)
-	public static final class440 field4712;
+	public static final class440 field3863;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lqb;"
 	)
-	static final class440 field4710;
+	static final class440 field3864;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -393093411
-	)
-	final int field4711;
+	final int field3865;
 
 	static {
-		field4712 = new class440(0);
-		field4710 = new class440(1);
+		field3863 = new class440(0);
+		field3864 = new class440(1);
 	}
 
 	class440(int var1) {
-		this.field4711 = var1;
+		this.field3865 = var1;
 	}
 }

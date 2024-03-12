@@ -1,7 +1,6 @@
 import java.util.Iterator;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,17 +11,11 @@ public class SpriteMask extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Lrc;"
 	)
-	static Bounds field3613;
+	static Bounds field2958;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 2078688393
-	)
 	@Export("width")
 	public final int width;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -527389665
-	)
 	@Export("height")
 	public final int height;
 	@ObfuscatedName("al")
@@ -59,17 +52,17 @@ public class SpriteMask extends DualNode {
 	@ObfuscatedName("ma")
 	@ObfuscatedSignature(
 		descriptor = "(II)V",
-		garbageValue = "1762638973"
+		garbageValue = "1768100714"
 	)
 	@Export("setMusicVolume")
 	static final void setMusicVolume(int var0) {
 		var0 = Math.min(Math.max(var0, 0), 255);
 		if (var0 != class30.clientPreferences.getMusicVolume()) {
-			if (class30.clientPreferences.getMusicVolume() == 0 && VarbitComposition.method3831()) {
-				Interpreter.method2056(Renderable.archive6, var0);
+			if (class30.clientPreferences.getMusicVolume() == 0 && VarbitComposition.method992()) {
+				Interpreter.method422(Renderable.archive6, var0);
 				Client.playingJingle = false;
 			} else if (var0 == 0) {
-				class169.method3521(0, 0);
+				class169.method882(0, 0);
 				Client.playingJingle = false;
 			} else if (!class321.musicSongs.isEmpty()) {
 				Iterator var1 = class321.musicSongs.iterator();
@@ -82,9 +75,9 @@ public class SpriteMask extends DualNode {
 				}
 
 				MusicSong var3 = (MusicSong)class321.musicSongs.get(0);
-				if (var3 != null && var3.midiPcmStream != null && var3.midiPcmStream.isReady() && !var3.field3597) {
+				if (var3 != null && var3.midiPcmStream != null && var3.midiPcmStream.isReady() && !var3.field2944) {
 					var3.midiPcmStream.setPcmStreamVolume(var0);
-					var3.field3602 = (float)var0;
+					var3.field2947 = (float)var0;
 				}
 			}
 

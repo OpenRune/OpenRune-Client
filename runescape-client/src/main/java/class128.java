@@ -1,18 +1,17 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("eq")
 public class class128 {
 	@ObfuscatedName("ai")
-	public static final float field1512;
+	public static final float field1237;
 	@ObfuscatedName("ar")
-	public static final float field1519;
+	public static final float field1238;
 	@ObfuscatedName("as")
-	static float[] field1511;
+	static float[] field1240;
 	@ObfuscatedName("aa")
-	static float[] field1510;
+	static float[] field1239;
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Lvg;"
@@ -23,24 +22,18 @@ public class class128 {
 	@ObfuscatedSignature(
 		descriptor = "Lrp;"
 	)
-	static GraphicsDefaults field1514;
+	static GraphicsDefaults field1243;
 	@ObfuscatedName("oh")
-	@ObfuscatedGetter(
-		intValue = -45116601
-	)
-	static int field1513;
+	static int field1241;
 	@ObfuscatedName("ot")
-	@ObfuscatedGetter(
-		intValue = -1097261913
-	)
 	@Export("selectedSpellFlags")
 	static int selectedSpellFlags;
 
 	static {
-		field1512 = Math.ulp(1.0F);
-		field1519 = field1512 * 2.0F;
-		field1511 = new float[4];
-		field1510 = new float[5];
+		field1237 = Math.ulp(1.0F);
+		field1238 = field1237 * 2.0F;
+		field1240 = new float[4];
+		field1239 = new float[5];
 	}
 
 	@ObfuscatedName("ao")
@@ -48,7 +41,7 @@ public class class128 {
 		descriptor = "(III)I",
 		garbageValue = "552143229"
 	)
-	public static int method3013(int var0, int var1) {
+	public static int method699(int var0, int var1) {
 		int var2 = var0 >>> 31;
 		return (var0 + var2) / var1 - var2;
 	}
@@ -58,7 +51,7 @@ public class class128 {
 		descriptor = "(IIIIB)I",
 		garbageValue = "64"
 	)
-	static final int method3011(int var0, int var1, int var2, int var3) {
+	static final int method700(int var0, int var1, int var2, int var3) {
 		int var4 = 65536 - Rasterizer3D.Rasterizer3D_cosine[var2 * 1024 / var3] >> 1;
 		return ((65536 - var4) * var0 >> 16) + (var4 * var1 >> 16);
 	}
@@ -68,7 +61,7 @@ public class class128 {
 		descriptor = "(ILjava/lang/String;B)V",
 		garbageValue = "38"
 	)
-	static void method3018(int var0, String var1) {
+	static void method701(int var0, String var1) {
 		Login.Login_loadingText = var1;
 		Login.Login_loadingPercent = var0;
 	}
@@ -104,7 +97,7 @@ public class class128 {
 
 				if (var1 == 1 && var3.onSubChange != null) {
 					if (var3.childIndex >= 0) {
-						Widget var6 = ArchiveLoader.widgetDefinition.method6431(var3.id);
+						Widget var6 = ArchiveLoader.widgetDefinition.method1785(var3.id);
 						if (var6 == null || var6.children == null || var3.childIndex >= var6.children.length || var3 != var6.children[var3.childIndex]) {
 							continue;
 						}

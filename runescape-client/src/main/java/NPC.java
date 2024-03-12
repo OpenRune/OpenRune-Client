@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,15 +7,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("NPC")
 public final class NPC extends Actor {
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 1907913849
-	)
-	static int field1336;
+	static int field1109;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -1186841139
-	)
-	static int field1338;
+	static int field1110;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lho;"
@@ -24,17 +17,15 @@ public final class NPC extends Actor {
 	@Export("definition")
 	NPCComposition definition;
 	@ObfuscatedName("aw")
-	String field1331;
+	String field1115;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1087694615
-	)
-	int field1333;
+	@Export("radius")
+	int radius;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lub;"
 	)
-	class534 field1335;
+	class534 field1116;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lht;"
@@ -49,13 +40,13 @@ public final class NPC extends Actor {
 	NpcOverrides chatheadOverrides;
 
 	static {
-		field1336 = 1;
-		field1338 = 1;
+		field1109 = 1;
+		field1110 = 1;
 	}
 
 	NPC() {
-		this.field1331 = "";
-		this.field1333 = 31;
+		this.field1115 = "";
+		this.radius = 31;
 	}
 
 	@ObfuscatedName("aq")
@@ -63,8 +54,8 @@ public final class NPC extends Actor {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "-1862297226"
 	)
-	void method2655(String var1) {
-		this.field1331 = var1 == null ? "" : var1;
+	void method588(String var1) {
+		this.field1115 = var1 == null ? "" : var1;
 	}
 
 	@ObfuscatedName("aw")
@@ -92,17 +83,17 @@ public final class NPC extends Actor {
 				var3.calculateBoundsCylinder();
 				super.defaultHeight = var3.height;
 				int var4 = var3.indicesCount;
-				var3 = this.method2469(var3);
+				var3 = this.method534(var3);
 				if (this.definition.size == 1) {
 					var3.isSingleTile = true;
 				}
 
-				if (super.field1255 != 0 && Client.cycle >= super.field1262 && Client.cycle < super.field1278) {
-					var3.overrideHue = super.field1268;
-					var3.overrideSaturation = super.field1269;
-					var3.overrideLuminance = super.field1276;
-					var3.overrideAmount = super.field1255;
-					var3.field3059 = (short)var4;
+				if (super.field1001 != 0 && Client.cycle >= super.field1047 && Client.cycle < super.field1046) {
+					var3.overrideHue = super.field1002;
+					var3.overrideSaturation = super.field1003;
+					var3.overrideLuminance = super.field1004;
+					var3.overrideAmount = super.field1001;
+					var3.field2480 = (short)var4;
 				} else {
 					var3.overrideAmount = 0;
 				}
@@ -117,8 +108,8 @@ public final class NPC extends Actor {
 		descriptor = "(IB)V",
 		garbageValue = "10"
 	)
-	void method2656(int var1) {
-		this.field1333 = var1;
+	void method589(int var1) {
+		this.radius = var1;
 	}
 
 	@ObfuscatedName("ai")
@@ -126,9 +117,9 @@ public final class NPC extends Actor {
 		descriptor = "(II)Z",
 		garbageValue = "-1259360590"
 	)
-	boolean method2663(int var1) {
+	boolean method590(int var1) {
 		if (var1 >= 0 && var1 <= 4) {
-			return (this.field1333 & 1 << var1) != 0;
+			return (this.radius & 1 << var1) != 0;
 		} else {
 			return true;
 		}
@@ -139,9 +130,9 @@ public final class NPC extends Actor {
 		descriptor = "(S)Ljava/lang/String;",
 		garbageValue = "-10354"
 	)
-	final String method2670() {
-		if (!this.field1331.isEmpty()) {
-			return this.field1331;
+	final String method591() {
+		if (!this.field1115.isEmpty()) {
+			return this.field1115;
 		} else {
 			NPCComposition var1 = this.definition;
 			if (var1.transforms != null) {
@@ -160,7 +151,7 @@ public final class NPC extends Actor {
 		descriptor = "(ILip;B)V",
 		garbageValue = "-37"
 	)
-	final void method2659(int var1, class233 var2) {
+	final void method592(int var1, class233 var2) {
 		int var3 = super.pathX[0];
 		int var4 = super.pathY[0];
 		if (var1 == 0) {
@@ -199,7 +190,7 @@ public final class NPC extends Actor {
 			--var4;
 		}
 
-		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field2273 == 1) {
+		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field1839 == 1) {
 			super.sequence = -1;
 		}
 
@@ -223,8 +214,8 @@ public final class NPC extends Actor {
 		descriptor = "(IIZB)V",
 		garbageValue = "-36"
 	)
-	final void method2654(int var1, int var2, boolean var3) {
-		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field2273 == 1) {
+	final void method593(int var1, int var2, boolean var3) {
+		if (super.sequence != -1 && MilliClock.SequenceDefinition_get(super.sequence).field1839 == 1) {
 			super.sequence = -1;
 		}
 
@@ -244,18 +235,18 @@ public final class NPC extends Actor {
 
 				super.pathX[0] = var1;
 				super.pathY[0] = var2;
-				super.pathTraversed[0] = class233.field2470;
+				super.pathTraversed[0] = class233.field1989;
 				return;
 			}
 		}
 
 		super.pathLength = 0;
-		super.field1280 = 0;
-		super.field1279 = 0;
+		super.field1057 = 0;
+		super.field1059 = 0;
 		super.pathX[0] = var1;
 		super.pathY[0] = var2;
-		super.x = super.field1212 * 64 + super.pathX[0] * 128;
-		super.y = super.field1212 * 64 + super.pathY[0] * 128;
+		super.x = super.field1015 * 64 + super.pathX[0] * 128;
+		super.y = super.field1015 * 64 + super.pathY[0] * 128;
 	}
 
 	@ObfuscatedName("ak")
@@ -263,8 +254,8 @@ public final class NPC extends Actor {
 		descriptor = "(I)[I",
 		garbageValue = "1562647560"
 	)
-	int[] method2715() {
-		return this.field1335 != null ? this.field1335.method9715() : this.definition.method3700();
+	int[] method596() {
+		return this.field1116 != null ? this.field1116.method2676() : this.definition.method962();
 	}
 
 	@ObfuscatedName("ah")
@@ -272,8 +263,8 @@ public final class NPC extends Actor {
 		descriptor = "(I)[S",
 		garbageValue = "-1297485115"
 	)
-	short[] method2722() {
-		return this.field1335 != null ? this.field1335.method9708() : this.definition.method3743();
+	short[] method597() {
+		return this.field1116 != null ? this.field1116.method2677() : this.definition.method964();
 	}
 
 	@ObfuscatedName("aj")
@@ -281,12 +272,12 @@ public final class NPC extends Actor {
 		descriptor = "(IISI)V",
 		garbageValue = "-475468119"
 	)
-	void method2665(int var1, int var2, short var3) {
-		if (this.field1335 == null) {
-			this.field1335 = new class534(this.definition);
+	void method598(int var1, int var2, short var3) {
+		if (this.field1116 == null) {
+			this.field1116 = new class534(this.definition);
 		}
 
-		this.field1335.method9709(var1, var2, var3);
+		this.field1116.method2678(var1, var2, var3);
 	}
 
 	@ObfuscatedName("af")
@@ -294,12 +285,12 @@ public final class NPC extends Actor {
 		descriptor = "([I[SI)V",
 		garbageValue = "-1715910336"
 	)
-	void method2666(int[] var1, short[] var2) {
-		if (this.field1335 == null) {
-			this.field1335 = new class534(this.definition);
+	void method599(int[] var1, short[] var2) {
+		if (this.field1116 == null) {
+			this.field1116 = new class534(this.definition);
 		}
 
-		this.field1335.method9710(var1, var2);
+		this.field1116.method2679(var1, var2);
 	}
 
 	@ObfuscatedName("ax")
@@ -307,8 +298,8 @@ public final class NPC extends Actor {
 		descriptor = "(I)V",
 		garbageValue = "-733260413"
 	)
-	void method2667() {
-		this.field1335 = null;
+	void method601() {
+		this.field1116 = null;
 	}
 
 	@ObfuscatedName("an")
@@ -316,7 +307,7 @@ public final class NPC extends Actor {
 		descriptor = "(Lht;I)V",
 		garbageValue = "1917572256"
 	)
-	void method2713(NpcOverrides var1) {
+	void method602(NpcOverrides var1) {
 		this.chatheadOverrides = var1;
 	}
 
@@ -325,7 +316,7 @@ public final class NPC extends Actor {
 		descriptor = "(B)Lht;",
 		garbageValue = "0"
 	)
-	NpcOverrides method2669() {
+	NpcOverrides method603() {
 		return this.chatheadOverrides;
 	}
 
@@ -334,7 +325,7 @@ public final class NPC extends Actor {
 		descriptor = "(Lht;B)V",
 		garbageValue = "-29"
 	)
-	void method2703(NpcOverrides var1) {
+	void method604(NpcOverrides var1) {
 		this.modelOverrides = var1;
 	}
 
@@ -353,7 +344,7 @@ public final class NPC extends Actor {
 		descriptor = "(I)V",
 		garbageValue = "-661178984"
 	)
-	void method2671() {
+	void method605() {
 		this.chatheadOverrides = null;
 	}
 
@@ -362,7 +353,7 @@ public final class NPC extends Actor {
 		descriptor = "(I)V",
 		garbageValue = "1024972526"
 	)
-	void method2672() {
+	void method606() {
 		this.modelOverrides = null;
 	}
 
@@ -371,8 +362,8 @@ public final class NPC extends Actor {
 		descriptor = "(B)V",
 		garbageValue = "-7"
 	)
-	static final void method2711() {
-		SecureRandomCallable.method2319("You can't add yourself to your own ignore list");
+	static final void method600() {
+		SecureRandomCallable.method466("You can't add yourself to your own ignore list");
 	}
 
 	@ObfuscatedName("if")
@@ -392,9 +383,9 @@ public final class NPC extends Actor {
 		}
 
 		if (var0.startsWith("zbuf")) {
-			boolean var1 = class129.method3066(var0.substring(5).trim()) == 1;
-			class193.client.method471(var1);
-			Rasterizer3D.method5278(var1);
+			boolean var1 = class129.method707(var0.substring(5).trim()) == 1;
+			class193.client.method139(var1);
+			Rasterizer3D.method1452(var1);
 		}
 
 		if (var0.equalsIgnoreCase("z")) {
@@ -435,7 +426,7 @@ public final class NPC extends Actor {
 			}
 
 			if (var0.equalsIgnoreCase("clientdrop")) {
-				Huffman.method6966();
+				Huffman.method1942();
 			}
 		}
 

@@ -65,7 +65,7 @@ public final class NodeHashTable {
 	}
 
 	@ObfuscatedName("aw")
-	public int method9165() {
+	public int method2533() {
 		int var1 = 0;
 
 		for (int var2 = 0; var2 < this.size; ++var2) {

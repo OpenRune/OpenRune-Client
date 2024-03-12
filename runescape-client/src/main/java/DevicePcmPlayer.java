@@ -5,7 +5,6 @@ import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.DataLine.Info;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -19,9 +18,6 @@ public class DevicePcmPlayer extends PcmPlayer {
 	@Export("line")
 	SourceDataLine line;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -646379339
-	)
 	@Export("capacity2")
 	int capacity2;
 	@ObfuscatedName("ai")
@@ -38,14 +34,14 @@ public class DevicePcmPlayer extends PcmPlayer {
 	)
 	@Export("init")
 	protected void init() {
-		this.format = new AudioFormat((float)PcmPlayer.field295, 16, PcmPlayer.PcmPlayer_stereo ? 2 : 1, true, false);
+		this.format = new AudioFormat((float)PcmPlayer.field183, 16, PcmPlayer.PcmPlayer_stereo ? 2 : 1, true, false);
 		this.byteSamples = new byte[256 << (PcmPlayer.PcmPlayer_stereo ? 2 : 1)];
 	}
 
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "(IB)V",
-		garbageValue = "-51"
+		garbageValue = "41"
 	)
 	@Export("open")
 	protected void open(int var1) throws LineUnavailableException {
@@ -56,8 +52,8 @@ public class DevicePcmPlayer extends PcmPlayer {
 			this.line.start();
 			this.capacity2 = var1;
 		} catch (LineUnavailableException var3) {
-			if (MusicSong.method6389(var1) != 1) {
-				this.open(class318.method6083(var1));
+			if (MusicSong.method1776(var1) != 1) {
+				this.open(class318.method1693(var1));
 			} else {
 				this.line = null;
 				throw var3;

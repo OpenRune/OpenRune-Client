@@ -26,7 +26,7 @@ public class class196 extends DualNode {
 		descriptor = "(JLjava/lang/String;I)I",
 		garbageValue = "-776452670"
 	)
-	static final int method3817(long var0, String var2) {
+	static final int method987(long var0, String var2) {
 		Random var3 = new Random();
 		Buffer var4 = new Buffer(128);
 		Buffer var5 = new Buffer(128);
@@ -47,7 +47,7 @@ public class class196 extends DualNode {
 			var4.writeInt(var3.nextInt());
 		}
 
-		var4.encryptRsa(class73.field912, class73.field916);
+		var4.encryptRsa(class73.field765, class73.field766);
 		var5.writeByte(10);
 
 		for (var7 = 0; var7 < 3; ++var7) {
@@ -58,7 +58,7 @@ public class class196 extends DualNode {
 		var5.writeLongMedium(var3.nextLong());
 		KitDefinition.randomDatData2(var5);
 		var5.writeLong(var3.nextLong());
-		var5.encryptRsa(class73.field912, class73.field916);
+		var5.encryptRsa(class73.field765, class73.field766);
 		var7 = class145.stringCp1252NullTerminatedByteSize(var2);
 		if (var7 % 8 != 0) {
 			var7 += 8 - var7 % 8;
@@ -79,13 +79,13 @@ public class class196 extends DualNode {
 		String var10 = class371.base64Encode(var9.array);
 
 		try {
-			URL var11 = new URL(class317.method6073("services", false) + "m=accountappeal/login.ws");
+			URL var11 = new URL(class317.method1691("services", false) + "m=accountappeal/login.ws");
 			URLConnection var12 = var11.openConnection();
 			var12.setDoInput(true);
 			var12.setDoOutput(true);
 			var12.setConnectTimeout(5000);
 			OutputStreamWriter var13 = new OutputStreamWriter(var12.getOutputStream());
-			var13.write("data2=" + class183.method3663(var10) + "&dest=" + class183.method3663("passwordchoice.ws"));
+			var13.write("data2=" + class183.method937(var10) + "&dest=" + class183.method937("passwordchoice.ws"));
 			var13.flush();
 			InputStream var14 = var12.getInputStream();
 			var9 = new Buffer(new byte[1000]);
@@ -116,12 +116,12 @@ public class class196 extends DualNode {
 						if (var18 == null) {
 							var16 = false;
 						} else {
-							label85: {
+							label73: {
 								try {
 									new URL(var18);
 								} catch (MalformedURLException var19) {
 									var16 = false;
-									break label85;
+									break label73;
 								}
 
 								var16 = true;

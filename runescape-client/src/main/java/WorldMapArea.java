@@ -2,7 +2,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -10,20 +9,11 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapArea")
 public class WorldMapArea {
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = -742669757
-	)
 	@Export("canvasHeight")
 	public static int canvasHeight;
 	@ObfuscatedName("tf")
-	@ObfuscatedGetter(
-		intValue = 286122368
-	)
-	static int field2529;
+	static int field2021;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1126254039
-	)
 	@Export("id")
 	int id;
 	@ObfuscatedName("aw")
@@ -33,19 +23,10 @@ public class WorldMapArea {
 	@Export("externalName")
 	String externalName;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1068589839
-	)
-	int field2518;
+	int field2023;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 931249201
-	)
-	int field2519;
+	int field2027;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 861571211
-	)
 	@Export("zoom")
 	int zoom;
 	@ObfuscatedName("aa")
@@ -55,27 +36,15 @@ public class WorldMapArea {
 	@Export("origin")
 	Coord origin;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -383105749
-	)
 	@Export("regionLowX")
 	int regionLowX;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -1166465137
-	)
 	@Export("regionHighX")
 	int regionHighX;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = -1938615999
-	)
 	@Export("regionLowY")
 	int regionLowY;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -232622987
-	)
 	@Export("regionHighY")
 	int regionHighY;
 	@ObfuscatedName("ah")
@@ -87,8 +56,8 @@ public class WorldMapArea {
 
 	public WorldMapArea() {
 		this.id = -1;
-		this.field2518 = -1;
-		this.field2519 = -16777216;
+		this.field2023 = -1;
+		this.field2027 = -16777216;
 		this.zoom = -1;
 		this.origin = null;
 		this.regionLowX = Integer.MAX_VALUE;
@@ -103,13 +72,13 @@ public class WorldMapArea {
 		descriptor = "(Luq;IB)V",
 		garbageValue = "-18"
 	)
-	public void method4668(Buffer var1, int var2) {
+	public void method1258(Buffer var1, int var2) {
 		this.id = var2;
 		this.internalName = var1.readStringCp1252NullTerminated();
 		this.externalName = var1.readStringCp1252NullTerminated();
 		this.origin = new Coord(var1.readInt());
-		this.field2518 = var1.readInt();
-		this.field2519 = var1.readInt();
+		this.field2023 = var1.readInt();
+		this.field2027 = var1.readInt();
 		var1.readUnsignedByte();
 		this.isMain = var1.readUnsignedByte() == 1;
 		this.zoom = var1.readUnsignedByte();
@@ -131,7 +100,7 @@ public class WorldMapArea {
 	@Export("readWorldMapSection")
 	WorldMapSection readWorldMapSection(Buffer var1) {
 		int var2 = var1.readUnsignedByte();
-		WorldMapSectionType var3 = (WorldMapSectionType)class356.findEnumerated(WorldMapSectionType.method4994(), var2);
+		WorldMapSectionType var3 = (WorldMapSectionType)class356.findEnumerated(WorldMapSectionType.method1356(), var2);
 		Object var4 = null;
 		switch(var3.type) {
 		case 0:
@@ -309,8 +278,8 @@ public class WorldMapArea {
 		descriptor = "(I)I",
 		garbageValue = "-750004589"
 	)
-	int method4680() {
-		return this.field2518;
+	int method1269() {
+		return this.field2023;
 	}
 
 	@ObfuscatedName("aj")
@@ -318,8 +287,8 @@ public class WorldMapArea {
 		descriptor = "(B)I",
 		garbageValue = "3"
 	)
-	int method4707() {
-		return this.field2519;
+	int method1270() {
+		return this.field2027;
 	}
 
 	@ObfuscatedName("af")

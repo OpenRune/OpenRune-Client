@@ -1,41 +1,31 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("id")
 public class class232 {
 	@ObfuscatedName("aq")
-	final int[][] field2462;
+	final int[][] field1986;
 	@ObfuscatedName("aw")
-	final int[][] field2468;
+	final int[][] field1987;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 301048157
-	)
-	int field2461;
+	int field1982;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -921590971
-	)
-	int field2464;
+	int field1981;
 	@ObfuscatedName("ar")
-	final int[] field2463;
+	final int[] field1984;
 	@ObfuscatedName("as")
-	final int[] field2466;
+	final int[] field1985;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 748486583
-	)
-	final int field2467;
+	final int field1983;
 
 	class232(int var1, int var2) {
-		this.field2462 = new int[var1][var2];
-		this.field2468 = new int[var1][var2];
+		this.field1986 = new int[var1][var2];
+		this.field1987 = new int[var1][var2];
 		int var3 = var2 * var1;
-		int var4 = class318.method6083(var3 / 4);
-		this.field2463 = new int[var4];
-		this.field2466 = new int[var4];
-		this.field2467 = var4 - 1;
+		int var4 = class318.method1693(var3 / 4);
+		this.field1984 = new int[var4];
+		this.field1985 = new int[var4];
+		this.field1983 = var4 - 1;
 	}
 
 	@ObfuscatedName("aq")
@@ -43,11 +33,11 @@ public class class232 {
 		descriptor = "(I)V",
 		garbageValue = "1608928141"
 	)
-	void method4519() {
-		for (int var1 = 0; var1 < this.field2462.length; ++var1) {
-			for (int var2 = 0; var2 < this.field2462[var1].length; ++var2) {
-				this.field2462[var1][var2] = 0;
-				this.field2468[var1][var2] = 99999999;
+	void method1211() {
+		for (int var1 = 0; var1 < this.field1986.length; ++var1) {
+			for (int var2 = 0; var2 < this.field1986[var1].length; ++var2) {
+				this.field1986[var1][var2] = 0;
+				this.field1987[var1][var2] = 99999999;
 			}
 		}
 
@@ -58,9 +48,9 @@ public class class232 {
 		descriptor = "(III)V",
 		garbageValue = "-568406997"
 	)
-	void method4520(int var1, int var2) {
-		this.field2461 = var1;
-		this.field2464 = var2;
+	void method1212(int var1, int var2) {
+		this.field1982 = var1;
+		this.field1981 = var2;
 	}
 
 	@ObfuscatedName("al")
@@ -68,8 +58,8 @@ public class class232 {
 		descriptor = "(B)I",
 		garbageValue = "56"
 	)
-	int method4552() {
-		return this.field2461;
+	int method1213() {
+		return this.field1982;
 	}
 
 	@ObfuscatedName("ai")
@@ -77,8 +67,8 @@ public class class232 {
 		descriptor = "(B)I",
 		garbageValue = "1"
 	)
-	int method4557() {
-		return this.field2464;
+	int method1214() {
+		return this.field1981;
 	}
 
 	@ObfuscatedName("ar")
@@ -86,8 +76,8 @@ public class class232 {
 		descriptor = "(B)I",
 		garbageValue = "115"
 	)
-	int method4523() {
-		return this.field2462.length;
+	int method1215() {
+		return this.field1986.length;
 	}
 
 	@ObfuscatedName("as")
@@ -95,8 +85,8 @@ public class class232 {
 		descriptor = "(I)I",
 		garbageValue = "-1744860747"
 	)
-	int method4524() {
-		return this.field2462[0].length;
+	int method1216() {
+		return this.field1986[0].length;
 	}
 
 	@ObfuscatedName("aa")
@@ -104,8 +94,8 @@ public class class232 {
 		descriptor = "(I)[[I",
 		garbageValue = "1119637625"
 	)
-	int[][] method4546() {
-		return this.field2462;
+	int[][] method1217() {
+		return this.field1986;
 	}
 
 	@ObfuscatedName("az")
@@ -113,8 +103,8 @@ public class class232 {
 		descriptor = "(I)[[I",
 		garbageValue = "1174942864"
 	)
-	int[][] method4526() {
-		return this.field2468;
+	int[][] method1218() {
+		return this.field1987;
 	}
 
 	@ObfuscatedName("ao")
@@ -122,8 +112,8 @@ public class class232 {
 		descriptor = "(I)[I",
 		garbageValue = "-1882943904"
 	)
-	int[] method4527() {
-		return this.field2463;
+	int[] method1219() {
+		return this.field1984;
 	}
 
 	@ObfuscatedName("au")
@@ -131,8 +121,8 @@ public class class232 {
 		descriptor = "(I)[I",
 		garbageValue = "-1914104479"
 	)
-	int[] method4528() {
-		return this.field2466;
+	int[] method1220() {
+		return this.field1985;
 	}
 
 	@ObfuscatedName("ak")
@@ -140,7 +130,7 @@ public class class232 {
 		descriptor = "(I)I",
 		garbageValue = "-43299646"
 	)
-	int method4529() {
-		return this.field2467;
+	int method1221() {
+		return this.field1983;
 	}
 }

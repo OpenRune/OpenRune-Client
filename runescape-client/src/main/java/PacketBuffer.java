@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,7 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("PacketBuffer")
 public class PacketBuffer extends Buffer {
 	@ObfuscatedName("aw")
-	static final int[] field5195;
+	static final int[] field4254;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lvk;"
@@ -16,14 +15,11 @@ public class PacketBuffer extends Buffer {
 	@Export("isaacCipher")
 	IsaacCipher isaacCipher;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 915272781
-	)
 	@Export("bitIndex")
 	int bitIndex;
 
 	static {
-		field5195 = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1};
+		field4254 = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1};
 	}
 
 	public PacketBuffer(int var1) {
@@ -75,8 +71,8 @@ public class PacketBuffer extends Buffer {
 		descriptor = "(B)Z",
 		garbageValue = "-27"
 	)
-	public boolean method9431() {
-		int var1 = super.array[super.offset] - this.isaacCipher.method10044() & 255;
+	public boolean method2591() {
+		int var1 = super.array[super.offset] - this.isaacCipher.method2767() & 255;
 		return var1 >= 128;
 	}
 
@@ -96,7 +92,7 @@ public class PacketBuffer extends Buffer {
 		descriptor = "([BIII)V",
 		garbageValue = "-1100838897"
 	)
-	public void method9440(byte[] var1, int var2, int var3) {
+	public void method2593(byte[] var1, int var2, int var3) {
 		for (int var4 = 0; var4 < var3; ++var4) {
 			var1[var4 + var2] = (byte)(super.array[++super.offset - 1] - this.isaacCipher.nextInt());
 		}
@@ -125,14 +121,14 @@ public class PacketBuffer extends Buffer {
 		int var4 = 0;
 
 		for (this.bitIndex += var1; var1 > var3; var3 = 8) {
-			var4 += (super.array[var2++] & field5195[var3]) << var1 - var3;
+			var4 += (super.array[var2++] & field4254[var3]) << var1 - var3;
 			var1 -= var3;
 		}
 
 		if (var3 == var1) {
-			var4 += super.array[var2] & field5195[var3];
+			var4 += super.array[var2] & field4254[var3];
 		} else {
-			var4 += super.array[var2] >> var3 - var1 & field5195[var1];
+			var4 += super.array[var2] >> var3 - var1 & field4254[var1];
 		}
 
 		return var4;

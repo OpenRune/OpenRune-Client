@@ -20,7 +20,7 @@ public class class174 extends DualNode {
 		descriptor = "(Ljava/lang/String;I)I",
 		garbageValue = "235599457"
 	)
-	public static int method3546(String var0) {
+	public static int method896(String var0) {
 		return var0.length() + 2;
 	}
 }

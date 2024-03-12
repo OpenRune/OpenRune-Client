@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,6 +9,8 @@ class class441 implements Comparator {
 	@ObfuscatedSignature(
 		descriptor = "Lrw;"
 	)
+	@Export("this$0")
+	@ObfuscatedName("this$0")
 	final class442 this$0;
 
 	@ObfuscatedSignature(
@@ -22,19 +25,19 @@ class class441 implements Comparator {
 		descriptor = "(Lrq;Lrq;I)I",
 		garbageValue = "-2103454061"
 	)
-	int method8191(class443 var1, class443 var2) {
-		if (var1.field4723 > var2.field4723) {
+	int method2256(class443 var1, class443 var2) {
+		if (var1.field3876 > var2.field3876) {
 			return 1;
 		} else {
-			return var1.field4723 < var2.field4723 ? -1 : 0;
+			return var1.field3876 < var2.field3876 ? -1 : 0;
 		}
+	}
+
+	public int compare(Object var1, Object var2) {
+		return this.method2256((class443)var1, (class443)var2);
 	}
 
 	public boolean equals(Object var1) {
 		return super.equals(var1);
-	}
-
-	public int compare(Object var1, Object var2) {
-		return this.method8191((class443)var1, (class443)var2);
 	}
 }

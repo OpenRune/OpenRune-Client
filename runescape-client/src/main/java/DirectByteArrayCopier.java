@@ -41,8 +41,8 @@ public class DirectByteArrayCopier extends AbstractByteArrayCopier {
 		descriptor = "(I)[Lic;",
 		garbageValue = "772879827"
 	)
-	static class230[] method6962() {
-		return new class230[]{class230.field2450, class230.field2448, class230.field2449, class230.field2447, class230.field2445, class230.field2451, class230.field2446};
+	static class230[] method1937() {
+		return new class230[]{class230.field1969, class230.field1967, class230.field1970, class230.field1968, class230.field1971, class230.field1966, class230.field1972};
 	}
 
 	@ObfuscatedName("jz")
@@ -50,7 +50,7 @@ public class DirectByteArrayCopier extends AbstractByteArrayCopier {
 		descriptor = "(I)Lpr;",
 		garbageValue = "1514000923"
 	)
-	public static NodeDeque method6959() {
+	public static NodeDeque method1938() {
 		return Client.scriptEvents;
 	}
 }

@@ -1,9 +1,7 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("kd")
 @Implements("TextureProvider")
@@ -21,24 +19,15 @@ public class TextureProvider implements TextureLoader {
 	@Export("deque")
 	NodeDeque deque;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 11758587
-	)
 	@Export("capacity")
 	int capacity;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 761958553
-	)
 	@Export("remaining")
 	int remaining;
 	@ObfuscatedName("ar")
 	@Export("brightness")
 	double brightness;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1755815021
-	)
 	@Export("textureSize")
 	int textureSize;
 	@ObfuscatedName("aa")
@@ -98,7 +87,7 @@ public class TextureProvider implements TextureLoader {
 
 					for (int var7 = 0; var7 < var6.length; ++var7) {
 						int var8 = var6[var7];
-						if (this.archive.method7108(var8)) {
+						if (this.archive.method1994(var8)) {
 							++var2;
 						}
 					}
@@ -168,8 +157,9 @@ public class TextureProvider implements TextureLoader {
 		descriptor = "(II)Z",
 		garbageValue = "995906382"
 	)
+	@Export("vmethod5948")
 	public boolean vmethod5948(int var1) {
-		return this.textures[var1].field2767;
+		return this.textures[var1].field2226;
 	}
 
 	@ObfuscatedName("as")
@@ -231,23 +221,23 @@ public class TextureProvider implements TextureLoader {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-1434044569"
 	)
-	static int method5671(int var0, Script var1, boolean var2) {
-		if (var0 == ScriptOpcodes.GETWINDOWMODE) {
+	static int method1574(int var0, Script var1, boolean var2) {
+		if (var0 == 5306) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = AbstractUserComparator.getWindowedMode();
 			return 1;
 		} else {
 			int var3;
-			if (var0 == ScriptOpcodes.SETWINDOWMODE) {
+			if (var0 == 5307) {
 				var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				if (var3 == 1 || var3 == 2) {
 					FloorOverlayDefinition.setWindowedMode(var3);
 				}
 
 				return 1;
-			} else if (var0 == ScriptOpcodes.GETDEFAULTWINDOWMODE) {
+			} else if (var0 == 5308) {
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class30.clientPreferences.getWindowMode();
 				return 1;
-			} else if (var0 != ScriptOpcodes.SETDEFAULTWINDOWMODE) {
+			} else if (var0 != 5309) {
 				if (var0 == 5310) {
 					--Interpreter.Interpreter_intStackSize;
 					return 1;
@@ -270,7 +260,7 @@ public class TextureProvider implements TextureLoader {
 		descriptor = "(IB)V",
 		garbageValue = "-8"
 	)
-	static void method5672(int var0) {
+	static void method1575(int var0) {
 		Client.oculusOrbState = var0;
 	}
 }

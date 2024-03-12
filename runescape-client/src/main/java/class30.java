@@ -23,12 +23,12 @@ public class class30 {
 		descriptor = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V",
 		garbageValue = "1496145760"
 	)
-	public static void method422(String var0, String var1, String var2, int var3, int var4) throws IOException {
+	public static void method110(String var0, String var1, String var2, int var3, int var4) throws IOException {
 		if (var1 != null && !var1.isEmpty()) {
 			var0 = var0 + "-" + var1;
 		}
 
-		class33.field169 = var4;
+		class33.field92 = var4;
 		JagexCache.cacheGamebuild = var3;
 
 		try {
@@ -75,22 +75,22 @@ public class class30 {
 			class334.userHomeDirectory = "~/";
 		}
 
-		HttpRequest.field43 = new String[]{"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", class334.userHomeDirectory, "/tmp/", ""};
-		class136.field1621 = new String[]{".jagex_cache_" + JagexCache.cacheGamebuild, ".file_store_" + JagexCache.cacheGamebuild};
+		HttpRequest.field27 = new String[]{"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", class334.userHomeDirectory, "/tmp/", ""};
+		class136.field1331 = new String[]{".jagex_cache_" + JagexCache.cacheGamebuild, ".file_store_" + JagexCache.cacheGamebuild};
 		int var19 = 0;
 
-		label276:
+		label240:
 		while (var19 < 4) {
 			String var7 = var19 == 0 ? "" : "" + var19;
-			JagexCache.field2331 = new File(class334.userHomeDirectory, "jagex_cl_" + var0 + "_" + var2 + var7 + ".dat");
+			JagexCache.field1886 = new File(class334.userHomeDirectory, "jagex_cl_" + var0 + "_" + var2 + var7 + ".dat");
 			String var8 = null;
 			String var9 = null;
 			boolean var10 = false;
 			Buffer var12;
 			File var36;
-			if (JagexCache.field2331.exists()) {
+			if (JagexCache.field1886.exists()) {
 				try {
-					AccessFile var11 = new AccessFile(JagexCache.field2331, "rw", 10000L);
+					AccessFile var11 = new AccessFile(JagexCache.field1886, "rw", 10000L);
 
 					int var13;
 					for (var12 = new Buffer((int)var11.length()); var12.offset < var12.array.length; var12.offset += var13) {
@@ -137,21 +137,21 @@ public class class30 {
 
 				if (var8 != null) {
 					var36 = new File(var8, "test.dat");
-					if (!HealthBarUpdate.method2494(var36, true)) {
+					if (!HealthBarUpdate.method538(var36, true)) {
 						var8 = null;
 					}
 				}
 			}
 
 			if (var8 == null && var19 == 0) {
-				label250:
-				for (int var20 = 0; var20 < class136.field1621.length; ++var20) {
-					for (int var21 = 0; var21 < HttpRequest.field43.length; ++var21) {
-						File var22 = new File(HttpRequest.field43[var21] + class136.field1621[var20] + File.separatorChar + var0 + File.separatorChar);
-						if (var22.exists() && HealthBarUpdate.method2494(new File(var22, "test.dat"), true)) {
+				label215:
+				for (int var20 = 0; var20 < class136.field1331.length; ++var20) {
+					for (int var21 = 0; var21 < HttpRequest.field27.length; ++var21) {
+						File var22 = new File(HttpRequest.field27[var21] + class136.field1331[var20] + File.separatorChar + var0 + File.separatorChar);
+						if (var22.exists() && HealthBarUpdate.method538(new File(var22, "test.dat"), true)) {
 							var8 = var22.toString();
 							var10 = true;
-							break label250;
+							break label215;
 						}
 					}
 				}
@@ -191,7 +191,7 @@ public class class30 {
 				var12 = null;
 
 				try {
-					AccessFile var39 = new AccessFile(JagexCache.field2331, "rw", 10000L);
+					AccessFile var39 = new AccessFile(JagexCache.field1886, "rw", 10000L);
 					Buffer var40 = new Buffer(500);
 					var40.writeByte(3);
 					var40.writeByte(var12 != null ? 1 : 0);
@@ -219,9 +219,9 @@ public class class30 {
 
 				for (int var24 = 0; var24 < var37.length; ++var24) {
 					File var25 = var37[var24];
-					if (!HealthBarUpdate.method2494(var25, false)) {
+					if (!HealthBarUpdate.method538(var25, false)) {
 						++var19;
-						continue label276;
+						continue label240;
 					}
 				}
 			}
@@ -234,12 +234,12 @@ public class class30 {
 			throw new RuntimeException("");
 		} else {
 			FileSystem.FileSystem_hasPermissions = true;
-			NPCComposition.method3708();
+			NPCComposition.method956();
 			JagexCache.JagexCache_dat2File = new BufferedFile(new AccessFile(ClanSettings.getFile("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
 			JagexCache.JagexCache_idx255File = new BufferedFile(new AccessFile(ClanSettings.getFile("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
-			class173.JagexCache_idxFiles = new BufferedFile[class33.field169];
+			class173.JagexCache_idxFiles = new BufferedFile[class33.field92];
 
-			for (int var26 = 0; var26 < class33.field169; ++var26) {
+			for (int var26 = 0; var26 < class33.field92; ++var26) {
 				class173.JagexCache_idxFiles[var26] = new BufferedFile(new AccessFile(ClanSettings.getFile("main_file_cache.idx" + var26), "rw", 1048576L), 6000, 0);
 			}
 
@@ -251,7 +251,7 @@ public class class30 {
 		descriptor = "(I)V",
 		garbageValue = "-408994455"
 	)
-	public static void method420() {
+	public static void method112() {
 		WorldMapElement.HitSplatDefinition_cached.clear();
 	}
 
@@ -260,7 +260,7 @@ public class class30 {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "468440439"
 	)
-	static final void method416(String var0) {
-		SecureRandomCallable.method2319(var0 + " is already on your friend list");
+	static final void method111(String var0) {
+		SecureRandomCallable.method466(var0 + " is already on your friend list");
 	}
 }

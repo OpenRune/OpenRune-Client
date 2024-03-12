@@ -1,20 +1,16 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("lg")
 public abstract class class297 implements class299 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -27562183
-	)
-	protected int field3147;
+	protected int field2552;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lox;Lpe;I)V"
 	)
 	protected class297(StudioGame var1, Language var2, int var3) {
-		this.field3147 = var3;
+		this.field2552 = var3;
 	}
 
 	@ObfuscatedName("aw")
@@ -22,14 +18,14 @@ public abstract class class297 implements class299 {
 		descriptor = "(IB)Luh;",
 		garbageValue = "-113"
 	)
-	public static class521 method5966(int var0) {
-		int var1 = class519.field5119[var0];
+	public static class521 method1653(int var0) {
+		int var1 = class519.field4195[var0];
 		if (var1 == 1) {
-			return class521.field5125;
+			return class521.field4199;
 		} else if (var1 == 2) {
-			return class521.field5126;
+			return class521.field4198;
 		} else {
-			return var1 == 3 ? class521.field5128 : null;
+			return var1 == 3 ? class521.field4200 : null;
 		}
 	}
 
@@ -38,14 +34,14 @@ public abstract class class297 implements class299 {
 		descriptor = "(Lfr;FZI)F",
 		garbageValue = "587235743"
 	)
-	static float method5965(class132 var0, float var1, boolean var2) {
+	static float method1654(class132 var0, float var1, boolean var2) {
 		float var3 = 0.0F;
-		if (var0 != null && var0.method3091() != 0) {
-			float var4 = (float)var0.field1559[0].field1501;
-			float var5 = (float)var0.field1559[var0.method3091() - 1].field1501;
+		if (var0 != null && var0.method733() != 0) {
+			float var4 = (float)var0.field1277[0].field1236;
+			float var5 = (float)var0.field1277[var0.method733() - 1].field1236;
 			float var6 = var5 - var4;
 			if ((double)var6 == 0.0D) {
-				return var0.field1559[0].field1500;
+				return var0.field1277[0].field1235;
 			} else {
 				float var7 = 0.0F;
 				if (var1 > var5) {
@@ -64,18 +60,18 @@ public abstract class class297 implements class299 {
 				float var16;
 				float var17;
 				if (var2) {
-					if (var0.field1557 == class130.field1544) {
+					if (var0.field1279 == class130.field1264) {
 						if (0.0D != (double)var10) {
 							var11 += var4;
 						} else {
 							var11 = var5 - var11;
 						}
-					} else if (var0.field1557 != class130.field1540 && var0.field1557 != class130.field1541) {
-						if (var0.field1557 == class130.field1539) {
+					} else if (var0.field1279 != class130.field1262 && var0.field1279 != class130.field1261) {
+						if (var0.field1279 == class130.field1265) {
 							var11 = var4 - var1;
-							var16 = var0.field1559[0].field1503;
-							var17 = var0.field1559[0].field1502;
-							var3 = var0.field1559[0].field1500;
+							var16 = var0.field1277[0].field1232;
+							var17 = var0.field1277[0].field1231;
+							var3 = var0.field1277[0].field1235;
 							if ((double)var16 != 0.0D) {
 								var3 -= var17 * var11 / var16;
 							}
@@ -85,18 +81,18 @@ public abstract class class297 implements class299 {
 					} else {
 						var11 = var5 - var11;
 					}
-				} else if (var0.field1574 == class130.field1544) {
+				} else if (var0.field1278 == class130.field1264) {
 					if (0.0D != (double)var10) {
 						var11 = var5 - var11;
 					} else {
 						var11 += var4;
 					}
-				} else if (var0.field1574 != class130.field1540 && var0.field1574 != class130.field1541) {
-					if (var0.field1574 == class130.field1539) {
+				} else if (var0.field1278 != class130.field1262 && var0.field1278 != class130.field1261) {
+					if (var0.field1278 == class130.field1265) {
 						var11 = var1 - var5;
-						var16 = var0.field1559[var0.method3091() - 1].field1499;
-						var17 = var0.field1559[var0.method3091() - 1].field1506;
-						var3 = var0.field1559[var0.method3091() - 1].field1500;
+						var16 = var0.field1277[var0.method733() - 1].field1233;
+						var17 = var0.field1277[var0.method733() - 1].field1234;
+						var3 = var0.field1277[var0.method733() - 1].field1235;
 						if ((double)var16 != 0.0D) {
 							var3 += var11 * var17 / var16;
 						}
@@ -107,13 +103,13 @@ public abstract class class297 implements class299 {
 					var11 += var4;
 				}
 
-				var3 = Tile.method5276(var0, var11);
+				var3 = Tile.method1451(var0, var11);
 				float var18;
-				if (var2 && var0.field1557 == class130.field1541) {
-					var18 = var0.field1559[var0.method3091() - 1].field1500 - var0.field1559[0].field1500;
+				if (var2 && var0.field1279 == class130.field1261) {
+					var18 = var0.field1277[var0.method733() - 1].field1235 - var0.field1277[0].field1235;
 					var3 = (float)((double)var3 - (double)var18 * var8);
-				} else if (!var2 && var0.field1574 == class130.field1541) {
-					var18 = var0.field1559[var0.method3091() - 1].field1500 - var0.field1559[0].field1500;
+				} else if (!var2 && var0.field1278 == class130.field1261) {
+					var18 = var0.field1277[var0.method733() - 1].field1235 - var0.field1277[0].field1235;
 					var3 = (float)((double)var3 + var8 * (double)var18);
 				}
 

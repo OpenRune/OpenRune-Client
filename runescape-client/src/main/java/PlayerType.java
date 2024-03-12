@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -47,68 +46,62 @@ public enum PlayerType implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4349(6, 22, false, false, true),
+	field3578(6, 22, false, false, true),
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4341(7, 41, false, false, true),
+	field3594(7, 41, false, false, true),
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4342(8, 42, false, false, true),
+	field3587(8, 42, false, false, true),
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4343(9, 43, false, false, true),
+	field3591(9, 43, false, false, true),
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4340(10, 44, false, false, true),
+	field3584(10, 44, false, false, true),
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4346(11, 45, false, false, true),
+	field3581(11, 45, false, false, true),
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4344(12, 46, false, false, true),
+	field3583(12, 46, false, false, true),
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4347(13, 47, false, false, true),
+	field3579(13, 47, false, false, true),
 	@ObfuscatedName("ax")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4348(14, 48, false, false, true),
+	field3593(14, 48, false, false, true),
 	@ObfuscatedName("an")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4336(15, 49, false, false, true),
+	field3586(15, 49, false, false, true),
 	@ObfuscatedName("ag")
 	@ObfuscatedSignature(
 		descriptor = "Loo;"
 	)
-	field4345(16, 52, false, false, true);
+	field3580(16, 52, false, false, true);
 
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = -1017500747
-	)
 	@Export("id")
 	final int id;
 	@ObfuscatedName("ad")
-	@ObfuscatedGetter(
-		intValue = 1041281843
-	)
 	@Export("modIcon")
 	public final int modIcon;
 	@ObfuscatedName("at")
@@ -174,8 +167,8 @@ public enum PlayerType implements Enum {
 				var10 = var1.charAt(var6++);
 			}
 
-			var7 = AABB.method5618(var9);
-			var8 = AABB.method5618(var10);
+			var7 = AABB.method1557(var9);
+			var8 = AABB.method1557(var10);
 			var9 = class383.standardizeChar(var9, var2);
 			var10 = class383.standardizeChar(var10, var2);
 			if (var9 != var10 && Character.toUpperCase(var9) != Character.toUpperCase(var10)) {

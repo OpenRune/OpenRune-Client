@@ -3,7 +3,6 @@ import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("ev")
 @Implements("UserComparator4")
@@ -62,28 +61,28 @@ public class UserComparator4 implements Comparator {
 		descriptor = "(ILdc;ZB)I",
 		garbageValue = "23"
 	)
-	static int method2936(int var0, Script var1, boolean var2) {
-		Widget var7;
-		if (var0 != ScriptOpcodes.CC_CALLONRESIZE && var0 != ScriptOpcodes.IF_CALLONRESIZE) {
+	static int method672(int var0, Script var1, boolean var2) {
+		Widget var3;
+		if (var0 != 1927 && var0 != 2927) {
 			int var4;
-			if (var0 == ScriptOpcodes.CC_TRIGGEROP) {
-				var7 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
+			if (var0 == 1928) {
+				var3 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
 				var4 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 				if (var4 >= 1 && var4 <= 10) {
-					class103 var8 = new class103(var4, var7.id, var7.childIndex, var7.itemId);
-					Interpreter.field895.add(var8);
+					class103 var5 = new class103(var4, var3.id, var3.childIndex, var3.itemId);
+					Interpreter.field745.add(var5);
 					return 1;
 				} else {
 					throw new RuntimeException();
 				}
-			} else if (var0 == ScriptOpcodes.IF_TRIGGEROP) {
+			} else if (var0 == 2928) {
 				Interpreter.Interpreter_intStackSize -= 3;
-				int var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
+				int var7 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 				var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-				int var5 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 2];
-				if (var5 >= 1 && var5 <= 10) {
-					class103 var6 = new class103(var5, var3, var4, ArchiveLoader.widgetDefinition.method6431(var3).itemId);
-					Interpreter.field895.add(var6);
+				int var8 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 2];
+				if (var8 >= 1 && var8 <= 10) {
+					class103 var6 = new class103(var8, var7, var4, ArchiveLoader.widgetDefinition.method1785(var7).itemId);
+					Interpreter.field745.add(var6);
 					return 1;
 				} else {
 					throw new RuntimeException();
@@ -91,22 +90,22 @@ public class UserComparator4 implements Comparator {
 			} else {
 				return 2;
 			}
-		} else if (Interpreter.field896 >= 10) {
+		} else if (Interpreter.field739 >= 10) {
 			throw new RuntimeException();
 		} else {
 			if (var0 >= 2000) {
-				var7 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+				var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
 			} else {
-				var7 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
+				var3 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
 			}
 
-			if (var7.onResize == null) {
+			if (var3.onResize == null) {
 				return 0;
 			} else {
 				ScriptEvent var9 = new ScriptEvent();
-				var9.widget = var7;
-				var9.args = var7.onResize;
-				var9.field1102 = Interpreter.field896 + 1;
+				var9.widget = var3;
+				var9.args = var3.onResize;
+				var9.field901 = Interpreter.field739 + 1;
 				Client.scriptEvents.addFirst(var9);
 				return 1;
 			}

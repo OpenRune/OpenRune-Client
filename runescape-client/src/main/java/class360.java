@@ -8,7 +8,7 @@ public class class360 {
 		descriptor = "(IIIIIB)V",
 		garbageValue = "0"
 	)
-	static void method6993(int var0, int var1, int var2, int var3, int var4) {
+	static void method1948(int var0, int var1, int var2, int var3, int var4) {
 		NodeDeque var5 = Client.groundItems[var0][var1][var2];
 		if (var5 != null) {
 			for (TileItem var6 = (TileItem)var5.last(); var6 != null; var6 = (TileItem)var5.previous()) {

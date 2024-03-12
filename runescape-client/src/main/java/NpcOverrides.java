@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,10 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("NpcOverrides")
 public class NpcOverrides {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		longValue = -5178930276951482385L
-	)
-	public long field1960;
+	public long field1564;
 	@ObfuscatedName("aw")
 	@Export("modelIds")
 	int[] modelIds;
@@ -27,7 +23,7 @@ public class NpcOverrides {
 
 	public NpcOverrides(long var1, int[] var3, short[] var4, short[] var5, boolean var6) {
 		this.useLocalPlayer = false;
-		this.field1960 = var1;
+		this.field1564 = var1;
 		this.modelIds = var3;
 		this.recolorTo = var4;
 		this.retextureTo = var5;
@@ -39,7 +35,7 @@ public class NpcOverrides {
 		descriptor = "(B)Z",
 		garbageValue = "-80"
 	)
-	static boolean method3696() {
+	static boolean method947() {
 		return (Client.drawPlayerNames & 1) != 0;
 	}
 
@@ -51,14 +47,14 @@ public class NpcOverrides {
 	@Export("Widget_addToMenu")
 	static final void Widget_addToMenu(Widget var0) {
 		if (var0.buttonType == 1) {
-			class106.method2775(var0.buttonText, "", 24, 0, 0, var0.id, var0.itemId);
+			class106.method627(var0.buttonText, "", 24, 0, 0, var0.id, var0.itemId);
 		}
 
 		String var1;
 		if (var0.buttonType == 2 && !Client.isSpellSelected) {
 			var1 = UserComparator9.Widget_getSpellActionName(var0);
 			if (var1 != null) {
-				class106.method2775(var1, class370.colorStartTag(65280) + var0.field3785, 25, 0, -1, var0.id, var0.itemId);
+				class106.method627(var1, class370.colorStartTag(65280) + var0.field3181, 25, 0, -1, var0.id, var0.itemId);
 			}
 		}
 
@@ -80,8 +76,8 @@ public class NpcOverrides {
 
 		if (var0.isIf3) {
 			if (Client.isSpellSelected) {
-				if (class175.method3550(class429.getWidgetFlags(var0)) && (class128.selectedSpellFlags & 32) == 32) {
-					class106.method2775(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + var0.dataText, 58, 0, var0.childIndex, var0.id, var0.itemId);
+				if (class175.method897(class429.getWidgetFlags(var0)) && (class128.selectedSpellFlags & 32) == 32) {
+					class106.method627(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + var0.dataText, 58, 0, var0.childIndex, var0.id, var0.itemId);
 				}
 			} else {
 				for (int var6 = 9; var6 >= 5; --var6) {
@@ -97,13 +93,13 @@ public class NpcOverrides {
 					}
 
 					if (var9 != null) {
-						class106.method2775(var9, var0.dataText, 1007, var6 + 1, var0.childIndex, var0.id, var0.itemId);
+						class106.method627(var9, var0.dataText, 1007, var6 + 1, var0.childIndex, var0.id, var0.itemId);
 					}
 				}
 
 				var1 = UserComparator9.Widget_getSpellActionName(var0);
 				if (var1 != null) {
-					class106.method2775(var1, var0.dataText, 25, 0, var0.childIndex, var0.id, var0.itemId);
+					class106.method627(var1, var0.dataText, 25, 0, var0.childIndex, var0.id, var0.itemId);
 				}
 
 				for (int var2 = 4; var2 >= 0; --var2) {
@@ -123,7 +119,7 @@ public class NpcOverrides {
 					}
 				}
 
-				if (MusicPatch.method6335(class429.getWidgetFlags(var0))) {
+				if (MusicPatch.method1754(class429.getWidgetFlags(var0))) {
 					UrlRequest.insertMenuItemNoShift("Continue", "", 30, 0, var0.childIndex, var0.id);
 				}
 			}

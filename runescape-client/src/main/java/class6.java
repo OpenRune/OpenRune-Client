@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,22 +8,16 @@ public enum class6 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Laa;"
 	)
-	field12(0, 0);
+	field6(0, 0);
 
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -192586663
-	)
-	final int field10;
+	final int field8;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1555852815
-	)
-	final int field11;
+	final int field7;
 
 	class6(int var3, int var4) {
-		this.field10 = var3;
-		this.field11 = var4;
+		this.field8 = var3;
+		this.field7 = var4;
 	}
 
 	@ObfuscatedName("aq")
@@ -34,6 +27,6 @@ public enum class6 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field11;
+		return this.field7;
 	}
 }

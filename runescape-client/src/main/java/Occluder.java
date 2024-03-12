@@ -1,114 +1,58 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("ke")
 @Implements("Occluder")
 public final class Occluder {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -103174417
-	)
 	@Export("minTileX")
 	int minTileX;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1006037985
-	)
 	@Export("maxTileX")
 	int maxTileX;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -2135927327
-	)
 	@Export("minTileY")
 	int minTileY;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 514582153
-	)
 	@Export("maxTileY")
 	int maxTileY;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 1945820401
-	)
 	@Export("type")
 	int type;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1573918785
-	)
 	@Export("minX")
 	int minX;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -266623797
-	)
 	@Export("maxX")
 	int maxX;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 373914063
-	)
 	@Export("minZ")
 	int minZ;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -632899747
-	)
 	@Export("maxZ")
 	int maxZ;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1480224713
-	)
 	@Export("minY")
 	int minY;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -242515549
-	)
 	@Export("maxY")
 	int maxY;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = -225533837
-	)
-	int field2942;
+	int field2364;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -1155392615
-	)
-	int field2937;
+	int field2366;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = -910623109
-	)
-	int field2946;
+	int field2362;
 	@ObfuscatedName("ax")
-	@ObfuscatedGetter(
-		intValue = 2123943263
-	)
-	int field2941;
+	int field2377;
 	@ObfuscatedName("an")
-	@ObfuscatedGetter(
-		intValue = 1524963301
-	)
-	int field2945;
+	int field2370;
 	@ObfuscatedName("ag")
-	@ObfuscatedGetter(
-		intValue = 1245318489
-	)
-	int field2947;
+	int field2363;
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = -84973589
-	)
-	int field2943;
+	int field2369;
 
 	Occluder() {
 	}
@@ -118,24 +62,24 @@ public final class Occluder {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1558434695"
 	)
-	static int method5636(int var0, Script var1, boolean var2) {
-		Widget var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-		if (var0 == ScriptOpcodes.IF_GETX) {
+	static int method1563(int var0, Script var1, boolean var2) {
+		Widget var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+		if (var0 == 2500) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.x;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETY) {
+		} else if (var0 == 2501) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.y;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETWIDTH) {
+		} else if (var0 == 2502) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.width;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETHEIGHT) {
+		} else if (var0 == 2503) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.height;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETHIDE) {
+		} else if (var0 == 2504) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.isHidden ? 1 : 0;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETLAYER) {
+		} else if (var0 == 2505) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.parentId;
 			return 1;
 		} else {
@@ -146,7 +90,7 @@ public final class Occluder {
 	@ObfuscatedName("jr")
 	@ObfuscatedSignature(
 		descriptor = "(Ldz;IIIIII)V",
-		garbageValue = "613641165"
+		garbageValue = "1557072939"
 	)
 	@Export("drawActor2d")
 	static final void drawActor2d(Actor var0, int var1, int var2, int var3, int var4, int var5) {
@@ -166,17 +110,17 @@ public final class Occluder {
 			int[] var7 = Players.Players_indices;
 			boolean var8 = var1 < var75;
 			int var9 = -2;
-			if (var0.overheadText != null && (!var8 || !var0.field1205 && (Client.publicChatMode == 4 || !var0.field1228 && (Client.publicChatMode == 0 || Client.publicChatMode == 3 || Client.publicChatMode == 1 && ((Player)var0).isFriend())))) {
-				ClientPreferences.method2639(var0, var0.defaultHeight);
+			if (var0.overheadText != null && (!var8 || !var0.field997 && (Client.publicChatMode == 4 || !var0.field998 && (Client.publicChatMode == 0 || Client.publicChatMode == 3 || Client.publicChatMode == 1 && ((Player)var0).isFriend())))) {
+				ClientPreferences.method583(var0, var0.defaultHeight);
 				if (Client.viewportTempX > -1 && Client.overheadTextCount < Client.overheadTextLimit) {
 					Client.overheadTextXOffsets[Client.overheadTextCount] = class166.fontBold12.stringWidth(var0.overheadText) / 2;
 					Client.overheadTextAscents[Client.overheadTextCount] = class166.fontBold12.ascent;
 					Client.overheadTextXs[Client.overheadTextCount] = Client.viewportTempX;
 					Client.overheadTextYs[Client.overheadTextCount] = Client.viewportTempY - var9;
-					Client.overheadTextColors[Client.overheadTextCount] = var0.field1208;
-					Client.overheadTextEffects[Client.overheadTextCount] = var0.field1231;
+					Client.overheadTextColors[Client.overheadTextCount] = var0.field1027;
+					Client.overheadTextEffects[Client.overheadTextCount] = var0.field1030;
 					Client.overheadTextCyclesRemaining[Client.overheadTextCount] = var0.overheadTextCyclesRemaining;
-					Client.field637[Client.overheadTextCount] = var0.field1226;
+					Client.field620[Client.overheadTextCount] = var0.field1062;
 					Client.overheadText[Client.overheadTextCount] = var0.overheadText;
 					++Client.overheadTextCount;
 					var9 += 12;
@@ -186,8 +130,8 @@ public final class Occluder {
 			int var15;
 			int var22;
 			int var23;
-			if (!var0.healthBars.method7456()) {
-				ClientPreferences.method2639(var0, var0.defaultHeight + 15);
+			if (!var0.healthBars.method2091()) {
+				ClientPreferences.method583(var0, var0.defaultHeight + 15);
 
 				for (HealthBar var10 = (HealthBar)var0.healthBars.last(); var10 != null; var10 = (HealthBar)var0.healthBars.previous()) {
 					HealthBarUpdate var11 = var10.get(Client.cycle);
@@ -197,61 +141,61 @@ public final class Occluder {
 						}
 					} else {
 						HealthBarDefinition var12 = var10.definition;
-						SpritePixels var79 = var12.getBackSprite();
-						SpritePixels var83 = var12.getFrontSprite();
-						int var84 = 0;
-						if (var79 != null && var83 != null) {
-							if (var12.widthPadding * 2 < var83.subWidth) {
-								var84 = var12.widthPadding;
+						SpritePixels var13 = var12.getBackSprite();
+						SpritePixels var14 = var12.getFrontSprite();
+						int var16 = 0;
+						if (var13 != null && var14 != null) {
+							if (var12.widthPadding * 2 < var14.subWidth) {
+								var16 = var12.widthPadding;
 							}
 
-							var15 = var83.subWidth - var84 * 2;
+							var15 = var14.subWidth - var16 * 2;
 						} else {
 							var15 = var12.width;
 						}
 
-						int var81 = 255;
-						boolean var85 = true;
-						int var86 = Client.cycle - var11.cycle;
-						int var87 = var15 * var11.health2 / var12.width;
-						int var88;
-						int var98;
-						if (var11.cycleOffset > var86) {
-							var88 = var12.field1916 == 0 ? 0 : var12.field1916 * (var86 / var12.field1916);
+						int var84 = 255;
+						boolean var86 = true;
+						int var87 = Client.cycle - var11.cycle;
+						int var88 = var15 * var11.health2 / var12.width;
+						int var89;
+						int var99;
+						if (var11.cycleOffset > var87) {
+							var89 = var12.field1531 == 0 ? 0 : var12.field1531 * (var87 / var12.field1531);
 							var22 = var15 * var11.health / var12.width;
-							var98 = var88 * (var87 - var22) / var11.cycleOffset + var22;
+							var99 = var89 * (var88 - var22) / var11.cycleOffset + var22;
 						} else {
-							var98 = var87;
-							var88 = var12.int5 + var11.cycleOffset - var86;
+							var99 = var88;
+							var89 = var12.int5 + var11.cycleOffset - var87;
 							if (var12.int3 >= 0) {
-								var81 = (var88 << 8) / (var12.int5 - var12.int3);
+								var84 = (var89 << 8) / (var12.int5 - var12.int3);
 							}
 						}
 
-						if (var11.health2 > 0 && var98 < 1) {
-							var98 = 1;
+						if (var11.health2 > 0 && var99 < 1) {
+							var99 = 1;
 						}
 
-						if (var79 != null && var83 != null) {
-							if (var98 == var15) {
-								var98 += var84 * 2;
+						if (var13 != null && var14 != null) {
+							if (var99 == var15) {
+								var99 += var16 * 2;
 							} else {
-								var98 += var84;
+								var99 += var16;
 							}
 
-							var88 = var79.subHeight;
-							var9 += var88;
+							var89 = var13.subHeight;
+							var9 += var89;
 							var22 = var2 + Client.viewportTempX - (var15 >> 1);
 							var23 = var3 + Client.viewportTempY - var9;
-							var22 -= var84;
-							if (var81 >= 0 && var81 < 255) {
-								var79.drawTransAt(var22, var23, var81);
-								Rasterizer2D.Rasterizer2D_expandClip(var22, var23, var98 + var22, var23 + var88);
-								var83.drawTransAt(var22, var23, var81);
+							var22 -= var16;
+							if (var84 >= 0 && var84 < 255) {
+								var13.drawTransAt(var22, var23, var84);
+								Rasterizer2D.Rasterizer2D_expandClip(var22, var23, var99 + var22, var23 + var89);
+								var14.drawTransAt(var22, var23, var84);
 							} else {
-								var79.drawTransBgAt(var22, var23);
-								Rasterizer2D.Rasterizer2D_expandClip(var22, var23, var98 + var22, var23 + var88);
-								var83.drawTransBgAt(var22, var23);
+								var13.drawTransBgAt(var22, var23);
+								Rasterizer2D.Rasterizer2D_expandClip(var22, var23, var99 + var22, var23 + var89);
+								var14.drawTransBgAt(var22, var23);
 							}
 
 							Rasterizer2D.Rasterizer2D_setClip(var2, var3, var2 + var4, var3 + var5);
@@ -259,10 +203,10 @@ public final class Occluder {
 						} else {
 							var9 += 5;
 							if (Client.viewportTempX > -1) {
-								var88 = var2 + Client.viewportTempX - (var15 >> 1);
+								var89 = var2 + Client.viewportTempX - (var15 >> 1);
 								var22 = var3 + Client.viewportTempY - var9;
-								Rasterizer2D.Rasterizer2D_fillRectangle(var88, var22, var98, 5, 65280);
-								Rasterizer2D.Rasterizer2D_fillRectangle(var98 + var88, var22, var15 - var98, 5, 16711680);
+								Rasterizer2D.Rasterizer2D_fillRectangle(var89, var22, var99, 5, 65280);
+								Rasterizer2D.Rasterizer2D_fillRectangle(var99 + var89, var22, var15 - var99, 5, 16711680);
 							}
 
 							var9 += 2;
@@ -275,67 +219,67 @@ public final class Occluder {
 				var9 += 7;
 			}
 
-			Player var89;
-			if (var8 && var0.playerCycle == Client.cycle && SpotAnimationDefinition.method3798((Player)var0)) {
-				var89 = (Player)var0;
+			Player var90;
+			if (var8 && var0.playerCycle == Client.cycle && SpotAnimationDefinition.method980((Player)var0)) {
+				var90 = (Player)var0;
 				if (var8) {
-					ClientPreferences.method2639(var0, var0.defaultHeight + 15);
-					AbstractFont var90 = (AbstractFont)Client.fontsMap.get(FontName.FontName_plain12);
+					ClientPreferences.method583(var0, var0.defaultHeight + 15);
+					AbstractFont var91 = (AbstractFont)Client.fontsMap.get(FontName.FontName_plain12);
 					var9 += 4;
-					var90.drawCentered(var89.username.getName(), var2 + Client.viewportTempX, var3 + Client.viewportTempY - var9, 16777215, 0);
+					var91.drawCentered(var90.username.getName(), var2 + Client.viewportTempX, var3 + Client.viewportTempY - var9, 16777215, 0);
 					var9 += 18;
 				}
 			}
 
 			if (var8) {
-				var89 = (Player)var0;
-				if (var89.isHidden) {
+				var90 = (Player)var0;
+				if (var90.isHidden) {
 					return;
 				}
 
-				if (var89.headIconPk != -1 || var89.headIconPrayer != -1) {
-					ClientPreferences.method2639(var0, var0.defaultHeight + 15);
+				if (var90.headIconPk != -1 || var90.headIconPrayer != -1) {
+					ClientPreferences.method583(var0, var0.defaultHeight + 15);
 					if (Client.viewportTempX > -1) {
-						if (var89.headIconPk != -1) {
+						if (var90.headIconPk != -1) {
 							var9 += 25;
-							class13.headIconPkSprites[var89.headIconPk].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - var9);
+							class13.headIconPkSprites[var90.headIconPk].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - var9);
 						}
 
-						if (var89.headIconPrayer != -1) {
+						if (var90.headIconPrayer != -1) {
 							var9 += 25;
-							class168.headIconPrayerSprites[var89.headIconPrayer].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - var9);
+							class168.headIconPrayerSprites[var90.headIconPrayer].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - var9);
 						}
 					}
 				}
 
 				if (var1 >= 0 && Client.hintArrowType == 10 && var7[var1] == Client.hintArrowPlayerIndex) {
-					ClientPreferences.method2639(var0, var0.defaultHeight + 15);
+					ClientPreferences.method583(var0, var0.defaultHeight + 15);
 					if (Client.viewportTempX > -1) {
 						var9 += ChatChannel.headIconHintSprites[1].subHeight;
 						ChatChannel.headIconHintSprites[1].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - var9);
 					}
 				}
 			} else {
-				NPC var91 = (NPC)var0;
-				int[] var92 = var91.method2715();
-				short[] var93 = var91.method2722();
-				if (var93 != null && var92 != null) {
-					for (int var13 = 0; var13 < var93.length; ++var13) {
-						if (var93[var13] >= 0 && var92[var13] >= 0) {
-							long var14 = (long)var92[var13] << 8 | (long)var93[var13];
-							SpritePixels var16 = (SpritePixels)Client.field821.method8198(var14);
-							if (var16 == null) {
-								SpritePixels[] var17 = class138.method3146(class311.archive8, var92[var13], 0);
-								if (var17 != null && var93[var13] < var17.length) {
-									var16 = var17[var93[var13]];
-									Client.field821.method8201(var14, var16);
+				NPC var92 = (NPC)var0;
+				int[] var93 = var92.method596();
+				short[] var94 = var92.method597();
+				if (var94 != null && var93 != null) {
+					for (int var76 = 0; var76 < var94.length; ++var76) {
+						if (var94[var76] >= 0 && var93[var76] >= 0) {
+							long var77 = (long)var93[var76] << 8 | (long)var94[var76];
+							SpritePixels var79 = (SpritePixels)Client.field661.method2258(var77);
+							if (var79 == null) {
+								SpritePixels[] var17 = class138.method750(class311.archive8, var93[var76], 0);
+								if (var17 != null && var94[var76] < var17.length) {
+									var79 = var17[var94[var76]];
+									Client.field661.method2259(var77, var79);
 								}
 							}
 
-							if (var16 != null) {
-								ClientPreferences.method2639(var0, var0.defaultHeight + 15);
+							if (var79 != null) {
+								ClientPreferences.method583(var0, var0.defaultHeight + 15);
 								if (Client.viewportTempX > -1) {
-									var16.drawTransBgAt(var2 + Client.viewportTempX - (var16.subWidth >> 1), Client.viewportTempY + (var3 - var16.subHeight) - 4);
+									var79.drawTransBgAt(var2 + Client.viewportTempX - (var79.subWidth >> 1), Client.viewportTempY + (var3 - var79.subHeight) - 4);
 								}
 							}
 						}
@@ -343,62 +287,62 @@ public final class Occluder {
 				}
 
 				if (Client.hintArrowType == 1 && Client.npcIndices[var1 - var75] == Client.hintArrowNpcIndex && Client.cycle % 20 < 10) {
-					ClientPreferences.method2639(var0, var0.defaultHeight + 15);
+					ClientPreferences.method583(var0, var0.defaultHeight + 15);
 					if (Client.viewportTempX > -1) {
 						ChatChannel.headIconHintSprites[0].drawTransBgAt(var2 + Client.viewportTempX - 12, var3 + Client.viewportTempY - 28);
 					}
 				}
 			}
 
-			for (int var76 = 0; var76 < 4; ++var76) {
-				int var77 = var0.hitSplatCycles[var76];
-				int var78 = var0.hitSplatTypes[var76];
-				HitSplatDefinition var96 = null;
-				int var80 = 0;
-				if (var78 >= 0) {
-					if (var77 <= Client.cycle) {
+			for (int var80 = 0; var80 < 4; ++var80) {
+				int var81 = var0.hitSplatCycles[var80];
+				int var82 = var0.hitSplatTypes[var80];
+				HitSplatDefinition var95 = null;
+				int var83 = 0;
+				if (var82 >= 0) {
+					if (var81 <= Client.cycle) {
 						continue;
 					}
 
-					var96 = Language.method7357(var0.hitSplatTypes[var76]);
-					var80 = var96.field2092;
-					if (var96 != null && var96.transforms != null) {
-						var96 = var96.transform();
-						if (var96 == null) {
-							var0.hitSplatCycles[var76] = -1;
+					var95 = Language.method2058(var0.hitSplatTypes[var80]);
+					var83 = var95.field1687;
+					if (var95 != null && var95.transforms != null) {
+						var95 = var95.transform();
+						if (var95 == null) {
+							var0.hitSplatCycles[var80] = -1;
 							continue;
 						}
 					}
-				} else if (var77 < 0) {
+				} else if (var81 < 0) {
 					continue;
 				}
 
-				var15 = var0.hitSplatTypes2[var76];
-				HitSplatDefinition var94 = null;
+				var15 = var0.hitSplatTypes2[var80];
+				HitSplatDefinition var97 = null;
 				if (var15 >= 0) {
-					var94 = Language.method7357(var15);
-					if (var94 != null && var94.transforms != null) {
-						var94 = var94.transform();
+					var97 = Language.method2058(var15);
+					if (var97 != null && var97.transforms != null) {
+						var97 = var97.transform();
 					}
 				}
 
-				if (var77 - var80 <= Client.cycle) {
-					if (var96 == null) {
-						var0.hitSplatCycles[var76] = -1;
+				if (var81 - var83 <= Client.cycle) {
+					if (var95 == null) {
+						var0.hitSplatCycles[var80] = -1;
 					} else {
-						ClientPreferences.method2639(var0, var0.defaultHeight / 2);
+						ClientPreferences.method583(var0, var0.defaultHeight / 2);
 						if (Client.viewportTempX > -1) {
-							boolean var97 = true;
-							if (var76 == 1) {
+							boolean var98 = true;
+							if (var80 == 1) {
 								Client.viewportTempY -= 20;
 							}
 
-							if (var76 == 2) {
+							if (var80 == 2) {
 								Client.viewportTempX -= 15;
 								Client.viewportTempY -= 10;
 							}
 
-							if (var76 == 3) {
+							if (var80 == 3) {
 								Client.viewportTempX += 15;
 								Client.viewportTempY -= 10;
 							}
@@ -428,7 +372,7 @@ public final class Occluder {
 							int var40 = 0;
 							int var41 = 0;
 							int var42 = 0;
-							var18 = var96.method3914();
+							var18 = var95.method1012();
 							int var43;
 							if (var18 != null) {
 								var22 = var18.subWidth;
@@ -440,7 +384,7 @@ public final class Occluder {
 								var26 = var18.xOffset;
 							}
 
-							var19 = var96.method3884();
+							var19 = var95.method1013();
 							if (var19 != null) {
 								var23 = var19.subWidth;
 								var43 = var19.subHeight;
@@ -451,7 +395,7 @@ public final class Occluder {
 								var27 = var19.xOffset;
 							}
 
-							var20 = var96.method3904();
+							var20 = var95.method1014();
 							if (var20 != null) {
 								var24 = var20.subWidth;
 								var43 = var20.subHeight;
@@ -462,7 +406,7 @@ public final class Occluder {
 								var28 = var20.xOffset;
 							}
 
-							var21 = var96.method3886();
+							var21 = var95.method1015();
 							if (var21 != null) {
 								var25 = var21.subWidth;
 								var43 = var21.subHeight;
@@ -473,8 +417,8 @@ public final class Occluder {
 								var29 = var21.xOffset;
 							}
 
-							if (var94 != null) {
-								var30 = var94.method3914();
+							if (var97 != null) {
+								var30 = var97.method1012();
 								if (var30 != null) {
 									var34 = var30.subWidth;
 									var43 = var30.subHeight;
@@ -485,7 +429,7 @@ public final class Occluder {
 									var38 = var30.xOffset;
 								}
 
-								var31 = var94.method3884();
+								var31 = var97.method1013();
 								if (var31 != null) {
 									var35 = var31.subWidth;
 									var43 = var31.subHeight;
@@ -496,7 +440,7 @@ public final class Occluder {
 									var39 = var31.xOffset;
 								}
 
-								var32 = var94.method3904();
+								var32 = var97.method1014();
 								if (var32 != null) {
 									var36 = var32.subWidth;
 									var43 = var32.subHeight;
@@ -507,7 +451,7 @@ public final class Occluder {
 									var40 = var32.xOffset;
 								}
 
-								var33 = var94.method3886();
+								var33 = var97.method1015();
 								if (var33 != null) {
 									var37 = var33.subWidth;
 									var43 = var33.subHeight;
@@ -519,14 +463,14 @@ public final class Occluder {
 								}
 							}
 
-							Font var82 = var96.getFont();
-							if (var82 == null) {
-								var82 = class60.fontPlain11;
+							Font var85 = var95.getFont();
+							if (var85 == null) {
+								var85 = class60.fontPlain11;
 							}
 
 							Font var44;
-							if (var94 != null) {
-								var44 = var94.getFont();
+							if (var97 != null) {
+								var44 = var97.getFont();
 								if (var44 == null) {
 									var44 = class60.fontPlain11;
 								}
@@ -538,10 +482,10 @@ public final class Occluder {
 							String var46 = null;
 							boolean var47 = false;
 							int var48 = 0;
-							var45 = var96.getString(var0.hitSplatValues[var76]);
-							int var95 = var82.stringWidth(var45);
-							if (var94 != null) {
-								var46 = var94.getString(var0.hitSplatValues2[var76]);
+							var45 = var95.getString(var0.hitSplatValues[var80]);
+							int var96 = var85.stringWidth(var45);
+							if (var97 != null) {
+								var46 = var97.getString(var0.hitSplatValues2[var80]);
 								var48 = var44.stringWidth(var46);
 							}
 
@@ -551,11 +495,11 @@ public final class Occluder {
 								if (var20 == null && var21 == null) {
 									var49 = 1;
 								} else {
-									var49 = var95 / var23 + 1;
+									var49 = var96 / var23 + 1;
 								}
 							}
 
-							if (var94 != null && var35 > 0) {
+							if (var97 != null && var35 > 0) {
 								if (var32 == null && var33 == null) {
 									var50 = 1;
 								} else {
@@ -581,9 +525,9 @@ public final class Occluder {
 							if (var23 > 0) {
 								var56 = var49 * var23;
 								var51 += var56;
-								var55 += (var56 - var95) / 2;
+								var55 += (var56 - var96) / 2;
 							} else {
-								var51 += var95;
+								var51 += var96;
 							}
 
 							var56 = var51;
@@ -597,7 +541,7 @@ public final class Occluder {
 							int var60 = 0;
 							int var61 = 0;
 							int var62;
-							if (var94 != null) {
+							if (var97 != null) {
 								var51 += 2;
 								var57 = var51;
 								if (var34 > 0) {
@@ -626,16 +570,16 @@ public final class Occluder {
 								}
 							}
 
-							var62 = var0.hitSplatCycles[var76] - Client.cycle;
-							int var63 = var96.field2100 - var62 * var96.field2100 / var96.field2092;
-							int var64 = var62 * var96.field2098 / var96.field2092 + -var96.field2098;
+							var62 = var0.hitSplatCycles[var80] - Client.cycle;
+							int var63 = var95.field1686 - var62 * var95.field1686 / var95.field1687;
+							int var64 = var62 * var95.field1689 / var95.field1687 + -var95.field1689;
 							int var65 = var63 + (var2 + Client.viewportTempX - (var51 >> 1));
 							int var66 = var3 + Client.viewportTempY - 12 + var64;
 							int var67 = var66;
 							int var68 = var66 + var42;
-							int var69 = var66 + var96.field2090 + 15;
-							int var70 = var69 - var82.maxAscent;
-							int var71 = var69 + var82.maxDescent;
+							int var69 = var66 + var95.field1684 + 15;
+							int var70 = var69 - var85.maxAscent;
+							int var71 = var69 + var85.maxDescent;
 							if (var70 < var66) {
 								var67 = var70;
 							}
@@ -647,8 +591,8 @@ public final class Occluder {
 							int var72 = 0;
 							int var73;
 							int var74;
-							if (var94 != null) {
-								var72 = var66 + var94.field2090 + 15;
+							if (var97 != null) {
+								var72 = var66 + var97.field1684 + 15;
 								var73 = var72 - var44.maxAscent;
 								var74 = var72 + var44.maxDescent;
 								if (var73 < var67) {
@@ -661,8 +605,8 @@ public final class Occluder {
 							}
 
 							var73 = 255;
-							if (var96.field2099 >= 0) {
-								var73 = (var62 << 8) / (var96.field2092 - var96.field2099);
+							if (var95.field1690 >= 0) {
+								var73 = (var62 << 8) / (var95.field1687 - var95.field1690);
 							}
 
 							if (var73 >= 0 && var73 < 255) {
@@ -684,8 +628,8 @@ public final class Occluder {
 									var21.drawTransAt(var65 + var56 - var29, var66, var73);
 								}
 
-								var82.drawAlpha(var45, var65 + var55, var69, var96.textColor, 0, var73);
-								if (var94 != null) {
+								var85.drawAlpha(var45, var65 + var55, var69, var95.textColor, 0, var73);
+								if (var97 != null) {
 									if (var30 != null) {
 										var30.drawTransAt(var57 + var65 - var38, var66, var73);
 									}
@@ -704,7 +648,7 @@ public final class Occluder {
 										var33.drawTransAt(var65 + var60 - var41, var66, var73);
 									}
 
-									var44.drawAlpha(var46, var65 + var61, var72, var94.textColor, 0, var73);
+									var44.drawAlpha(var46, var65 + var61, var72, var97.textColor, 0, var73);
 								}
 							} else {
 								if (var18 != null) {
@@ -725,8 +669,8 @@ public final class Occluder {
 									var21.drawTransBgAt(var65 + var56 - var29, var66);
 								}
 
-								var82.draw(var45, var65 + var55, var69, var96.textColor | -16777216, 0);
-								if (var94 != null) {
+								var85.draw(var45, var65 + var55, var69, var95.textColor | -16777216, 0);
+								if (var97 != null) {
 									if (var30 != null) {
 										var30.drawTransBgAt(var65 + var57 - var38, var66);
 									}
@@ -745,7 +689,7 @@ public final class Occluder {
 										var33.drawTransBgAt(var60 + var65 - var41, var66);
 									}
 
-									var44.draw(var46, var65 + var61, var72, var94.textColor | -16777216, 0);
+									var44.draw(var46, var65 + var61, var72, var97.textColor | -16777216, 0);
 								}
 							}
 						}

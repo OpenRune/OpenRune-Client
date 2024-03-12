@@ -7,7 +7,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -15,10 +14,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("UrlRequester")
 public abstract class UrlRequester implements Runnable {
 	@ObfuscatedName("fl")
-	@ObfuscatedGetter(
-		intValue = 1230446191
-	)
-	static int field1442;
+	static int field1197;
 	@ObfuscatedName("aq")
 	@Export("requestThread")
 	final Thread requestThread;
@@ -29,9 +25,6 @@ public abstract class UrlRequester implements Runnable {
 	@Export("requests")
 	Queue requests;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 850496283
-	)
 	@Export("clientRevision")
 	int clientRevision;
 
@@ -56,8 +49,8 @@ public abstract class UrlRequester implements Runnable {
 		descriptor = "(Ljava/net/URLConnection;B)I",
 		garbageValue = "14"
 	)
-	int method2896(URLConnection var1) {
-		int var2 = UrlRequest.field1445;
+	int method656(URLConnection var1) {
+		int var2 = UrlRequest.field1203;
 		if (var1 != null) {
 			try {
 				if (var1 instanceof HttpURLConnection) {
@@ -89,7 +82,7 @@ public abstract class UrlRequester implements Runnable {
 		descriptor = "(Ljava/net/URLConnection;Leb;B)V",
 		garbageValue = "14"
 	)
-	void method2897(URLConnection var1, UrlRequest var2) {
+	void method658(URLConnection var1, UrlRequest var2) {
 		DataInputStream var3 = null;
 
 		try {
@@ -117,7 +110,7 @@ public abstract class UrlRequester implements Runnable {
 		} catch (IOException var14) {
 			var2.response0 = null;
 		} finally {
-			var2.field1448 = this.method2896(var1);
+			var2.field1207 = this.method656(var1);
 		}
 
 		if (var3 != null) {
@@ -164,6 +157,8 @@ public abstract class UrlRequester implements Runnable {
 
 	}
 
+//	@Export("run")
+//	@ObfuscatedName("run")
 	public void run() {
 		while (!this.isClosed) {
 			try {

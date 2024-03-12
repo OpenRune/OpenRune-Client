@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -20,7 +19,7 @@ public class NPCComposition extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	public static AbstractArchive field1964;
+	public static AbstractArchive field1565;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lll;"
@@ -34,107 +33,56 @@ public class NPCComposition extends DualNode {
 	@Export("NpcDefinition_cachedModels")
 	static EvictingDualNodeHashTable NpcDefinition_cachedModels;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 1649526313
-	)
 	@Export("id")
 	public int id;
 	@ObfuscatedName("aa")
 	@Export("name")
 	public String name;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -1200322013
-	)
 	@Export("size")
 	public int size;
 	@ObfuscatedName("ao")
 	@Export("models")
 	int[] models;
 	@ObfuscatedName("au")
-	int[] field1994;
+	int[] field1576;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -641444085
-	)
 	@Export("idleSequence")
 	public int idleSequence;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 1730976877
-	)
 	@Export("turnLeftSequence")
 	public int turnLeftSequence;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -369839719
-	)
 	@Export("turnRightSequence")
 	public int turnRightSequence;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = -1810055459
-	)
 	@Export("walkSequence")
 	public int walkSequence;
 	@ObfuscatedName("ax")
-	@ObfuscatedGetter(
-		intValue = -964079029
-	)
 	@Export("walkBackSequence")
 	public int walkBackSequence;
 	@ObfuscatedName("an")
-	@ObfuscatedGetter(
-		intValue = 1604087399
-	)
 	@Export("walkLeftSequence")
 	public int walkLeftSequence;
 	@ObfuscatedName("ag")
-	@ObfuscatedGetter(
-		intValue = -213186797
-	)
 	@Export("walkRightSequence")
 	public int walkRightSequence;
 	@ObfuscatedName("am")
-	@ObfuscatedGetter(
-		intValue = -739363907
-	)
-	public int field1979;
+	public int field1597;
 	@ObfuscatedName("ad")
-	@ObfuscatedGetter(
-		intValue = -1035998327
-	)
-	public int field1980;
+	public int field1590;
 	@ObfuscatedName("at")
-	@ObfuscatedGetter(
-		intValue = -1836325165
-	)
-	public int field1987;
+	public int field1600;
 	@ObfuscatedName("ay")
-	@ObfuscatedGetter(
-		intValue = 2060153769
-	)
-	public int field1982;
+	public int field1603;
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = 1208452197
-	)
-	public int field1983;
+	public int field1591;
 	@ObfuscatedName("ac")
-	@ObfuscatedGetter(
-		intValue = 1090622731
-	)
-	public int field1966;
+	public int field1589;
 	@ObfuscatedName("ab")
-	@ObfuscatedGetter(
-		intValue = 1033123305
-	)
-	public int field1984;
+	public int field1588;
 	@ObfuscatedName("av")
-	@ObfuscatedGetter(
-		intValue = -905258827
-	)
-	public int field1986;
+	public int field1601;
 	@ObfuscatedName("ap")
 	@Export("recolorFrom")
 	short[] recolorFrom;
@@ -154,57 +102,33 @@ public class NPCComposition extends DualNode {
 	@Export("drawMapDot")
 	public boolean drawMapDot;
 	@ObfuscatedName("ba")
-	@ObfuscatedGetter(
-		intValue = -1490701553
-	)
 	@Export("combatLevel")
 	public int combatLevel;
 	@ObfuscatedName("bt")
-	@ObfuscatedGetter(
-		intValue = -2079367309
-	)
 	@Export("widthScale")
 	int widthScale;
 	@ObfuscatedName("bk")
-	@ObfuscatedGetter(
-		intValue = -1633013487
-	)
 	@Export("heightScale")
 	int heightScale;
 	@ObfuscatedName("bm")
 	@Export("isVisible")
 	public boolean isVisible;
 	@ObfuscatedName("bw")
-	@ObfuscatedGetter(
-		intValue = -299076281
-	)
 	@Export("ambient")
 	int ambient;
 	@ObfuscatedName("bv")
-	@ObfuscatedGetter(
-		intValue = 335416247
-	)
 	@Export("contrast")
 	int contrast;
 	@ObfuscatedName("by")
-	@ObfuscatedGetter(
-		intValue = 358183959
-	)
 	@Export("rotation")
 	public int rotation;
 	@ObfuscatedName("bb")
 	@Export("transforms")
 	public int[] transforms;
 	@ObfuscatedName("bn")
-	@ObfuscatedGetter(
-		intValue = -1059260067
-	)
 	@Export("transformVarbit")
 	int transformVarbit;
 	@ObfuscatedName("br")
-	@ObfuscatedGetter(
-		intValue = 208627683
-	)
 	@Export("transformVarp")
 	int transformVarp;
 	@ObfuscatedName("bp")
@@ -214,7 +138,7 @@ public class NPCComposition extends DualNode {
 	@Export("isClipped")
 	public boolean isClipped;
 	@ObfuscatedName("bg")
-	public boolean field2005;
+	public boolean field1584;
 	@ObfuscatedName("be")
 	@Export("isFollower")
 	public boolean isFollower;
@@ -246,14 +170,14 @@ public class NPCComposition extends DualNode {
 		this.walkBackSequence = -1;
 		this.walkLeftSequence = -1;
 		this.walkRightSequence = -1;
-		this.field1979 = -1;
-		this.field1980 = -1;
-		this.field1987 = -1;
-		this.field1982 = -1;
-		this.field1983 = -1;
-		this.field1966 = -1;
-		this.field1984 = -1;
-		this.field1986 = -1;
+		this.field1597 = -1;
+		this.field1590 = -1;
+		this.field1600 = -1;
+		this.field1603 = -1;
+		this.field1591 = -1;
+		this.field1589 = -1;
+		this.field1588 = -1;
+		this.field1601 = -1;
 		this.actions = new String[5];
 		this.drawMapDot = true;
 		this.combatLevel = -1;
@@ -267,7 +191,7 @@ public class NPCComposition extends DualNode {
 		this.transformVarp = -1;
 		this.isInteractable = true;
 		this.isClipped = true;
-		this.field2005 = false;
+		this.field1584 = false;
 		this.isFollower = false;
 		this.headIconArchiveIds = null;
 		this.headIconSpriteIndex = null;
@@ -359,10 +283,10 @@ public class NPCComposition extends DualNode {
 			}
 		} else if (var2 == 60) {
 			var3 = var1.readUnsignedByte();
-			this.field1994 = new int[var3];
+			this.field1576 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				this.field1994[var4] = var1.readUnsignedShort();
+				this.field1576[var4] = var1.readUnsignedShort();
 			}
 		} else if (var2 == 93) {
 			this.drawMapDot = false;
@@ -408,21 +332,21 @@ public class NPCComposition extends DualNode {
 				} else if (var2 == 109) {
 					this.isClipped = false;
 				} else if (var2 == 114) {
-					this.field1979 = var1.readUnsignedShort();
+					this.field1597 = var1.readUnsignedShort();
 				} else if (var2 == 115) {
-					this.field1979 = var1.readUnsignedShort();
-					this.field1980 = var1.readUnsignedShort();
-					this.field1987 = var1.readUnsignedShort();
-					this.field1982 = var1.readUnsignedShort();
+					this.field1597 = var1.readUnsignedShort();
+					this.field1590 = var1.readUnsignedShort();
+					this.field1600 = var1.readUnsignedShort();
+					this.field1603 = var1.readUnsignedShort();
 				} else if (var2 == 116) {
-					this.field1983 = var1.readUnsignedShort();
+					this.field1591 = var1.readUnsignedShort();
 				} else if (var2 == 117) {
-					this.field1983 = var1.readUnsignedShort();
-					this.field1966 = var1.readUnsignedShort();
-					this.field1984 = var1.readUnsignedShort();
-					this.field1986 = var1.readUnsignedShort();
+					this.field1591 = var1.readUnsignedShort();
+					this.field1589 = var1.readUnsignedShort();
+					this.field1588 = var1.readUnsignedShort();
+					this.field1601 = var1.readUnsignedShort();
 				} else if (var2 == 122) {
-					this.field2005 = true;
+					this.field1584 = true;
 				} else if (var2 == 123) {
 					this.isFollower = true;
 				} else if (var2 == 249) {
@@ -471,15 +395,15 @@ public class NPCComposition extends DualNode {
 	@Export("getModel")
 	public final Model getModel(SequenceDefinition var1, int var2, SequenceDefinition var3, int var4, NpcOverrides var5) {
 		if (this.transforms != null) {
-			NPCComposition var10 = this.transform();
-			return var10 == null ? null : var10.getModel(var1, var2, var3, var4, var5);
+			NPCComposition var6 = this.transform();
+			return var6 == null ? null : var6.getModel(var1, var2, var3, var4, var5);
 		} else {
-			long var6 = (long)this.id;
+			long var10 = (long)this.id;
 			if (var5 != null) {
-				var6 |= var5.field1960 << 16;
+				var10 |= var5.field1564 << 16;
 			}
 
-			Model var8 = (Model)NpcDefinition_cachedModels.get(var6);
+			Model var8 = (Model)NpcDefinition_cachedModels.get(var10);
 			if (var8 == null) {
 				ModelData var9 = this.getModelData(this.models, var5);
 				if (var9 == null) {
@@ -487,25 +411,25 @@ public class NPCComposition extends DualNode {
 				}
 
 				var8 = var9.toModel(this.ambient + 64, this.contrast + 850, -30, -50, -30);
-				NpcDefinition_cachedModels.put(var8, var6);
+				NpcDefinition_cachedModels.put(var8, var10);
 			}
 
-			Model var11;
+			Model var12;
 			if (var1 != null && var3 != null) {
-				var11 = var1.applyTransformations(var8, var2, var3, var4);
+				var12 = var1.applyTransformations(var8, var2, var3, var4);
 			} else if (var1 != null) {
-				var11 = var1.transformActorModel(var8, var2);
+				var12 = var1.transformActorModel(var8, var2);
 			} else if (var3 != null) {
-				var11 = var3.transformActorModel(var8, var4);
+				var12 = var3.transformActorModel(var8, var4);
 			} else {
-				var11 = var8.toSharedSequenceModel(true);
+				var12 = var8.toSharedSequenceModel(true);
 			}
 
 			if (this.widthScale != 128 || this.heightScale != 128) {
-				var11.scale(this.widthScale, this.heightScale, this.widthScale);
+				var12.scale(this.widthScale, this.heightScale, this.widthScale);
 			}
 
-			return var11;
+			return var12;
 		}
 	}
 
@@ -514,12 +438,12 @@ public class NPCComposition extends DualNode {
 		descriptor = "(Lht;B)Lkf;",
 		garbageValue = "3"
 	)
-	public final ModelData method3702(NpcOverrides var1) {
+	public final ModelData method954(NpcOverrides var1) {
 		if (this.transforms != null) {
 			NPCComposition var2 = this.transform();
-			return var2 == null ? null : var2.method3702(var1);
+			return var2 == null ? null : var2.method954(var1);
 		} else {
-			return this.getModelData(this.field1994, var1);
+			return this.getModelData(this.field1576, var1);
 		}
 	}
 
@@ -541,7 +465,7 @@ public class NPCComposition extends DualNode {
 			boolean var4 = false;
 
 			for (int var5 = 0; var5 < var3.length; ++var5) {
-				if (var3[var5] != -1 && !field1964.tryLoadFile(var3[var5], 0)) {
+				if (var3[var5] != -1 && !field1565.tryLoadFile(var3[var5], 0)) {
 					var4 = true;
 				}
 			}
@@ -552,7 +476,7 @@ public class NPCComposition extends DualNode {
 				ModelData[] var9 = new ModelData[var3.length];
 
 				for (int var6 = 0; var6 < var3.length; ++var6) {
-					var9[var6] = ModelData.ModelData_get(field1964, var3[var6], 0);
+					var9[var6] = ModelData.ModelData_get(field1565, var3[var6], 0);
 				}
 
 				ModelData var10;
@@ -694,7 +618,7 @@ public class NPCComposition extends DualNode {
 		descriptor = "(I)Z",
 		garbageValue = "-1591783850"
 	)
-	public boolean method3709() {
+	public boolean method961() {
 		return this.headIconArchiveIds != null && this.headIconSpriteIndex != null;
 	}
 
@@ -703,7 +627,7 @@ public class NPCComposition extends DualNode {
 		descriptor = "(I)[I",
 		garbageValue = "-692020245"
 	)
-	public int[] method3700() {
+	public int[] method962() {
 		return this.headIconArchiveIds;
 	}
 
@@ -712,7 +636,7 @@ public class NPCComposition extends DualNode {
 		descriptor = "(II)I",
 		garbageValue = "-466777872"
 	)
-	public int method3703(int var1) {
+	public int method963(int var1) {
 		return this.headIconArchiveIds != null && var1 < this.headIconArchiveIds.length ? this.headIconArchiveIds[var1] : -1;
 	}
 
@@ -721,7 +645,7 @@ public class NPCComposition extends DualNode {
 		descriptor = "(I)[S",
 		garbageValue = "-2092456263"
 	)
-	public short[] method3743() {
+	public short[] method964() {
 		return this.headIconSpriteIndex;
 	}
 
@@ -730,7 +654,7 @@ public class NPCComposition extends DualNode {
 		descriptor = "(IS)S",
 		garbageValue = "256"
 	)
-	public short method3712(int var1) {
+	public short method965(int var1) {
 		return this.headIconSpriteIndex != null && var1 < this.headIconSpriteIndex.length ? this.headIconSpriteIndex[var1] : -1;
 	}
 
@@ -741,7 +665,7 @@ public class NPCComposition extends DualNode {
 	)
 	@Export("ServerPacket_values")
 	public static ServerPacket[] ServerPacket_values() {
-		return new ServerPacket[]{ServerPacket.field3344, ServerPacket.EVENT_WORLDHOP, ServerPacket.field3298, ServerPacket.field3299, ServerPacket.PING_STATISTICS_REQUEST, ServerPacket.UPDATE_STOCKMARKET_SLOT, ServerPacket.field3402, ServerPacket.REBUILD_REGION, ServerPacket.field3304, ServerPacket.field3305, ServerPacket.GRAPHICSOBJECT_SPAWN, ServerPacket.PROJECTILE_SPAWN, ServerPacket.field3308, ServerPacket.field3394, ServerPacket.field3310, ServerPacket.field3311, ServerPacket.URL_OPEN, ServerPacket.field3313, ServerPacket.MESSAGE_PRIVATE_ECHO, ServerPacket.UPDATE_INV_CLEAR, ServerPacket.MINIMAP_FLAG_SET, ServerPacket.field3317, ServerPacket.field3318, ServerPacket.PLAYER_INFO, ServerPacket.field3320, ServerPacket.field3321, ServerPacket.IF_SETSCROLLPOS, ServerPacket.field3323, ServerPacket.RESET_CLIENT_VARCACHE, ServerPacket.MESSAGE_PRIVATE, ServerPacket.IF_SETCOLOUR, ServerPacket.NPC_INFO_LARGE_VIEWPORT_2, ServerPacket.field3392, ServerPacket.IF_SETOBJECT, ServerPacket.IF_CLOSESUB, ServerPacket.field3331, ServerPacket.field3297, ServerPacket.field3333, ServerPacket.field3334, ServerPacket.MIDI_SONG, ServerPacket.CAM_LOOKAT, ServerPacket.UPDATE_ZONE_FULL_FOLLOWS, ServerPacket.field3338, ServerPacket.LOGOUT, ServerPacket.field3340, ServerPacket.field3408, ServerPacket.field3342, ServerPacket.field3343, ServerPacket.field3363, ServerPacket.field3345, ServerPacket.field3418, ServerPacket.field3347, ServerPacket.field3325, ServerPacket.UPDATE_INV_STOP_TRANSIT, ServerPacket.IF_SETPOSITION, ServerPacket.IF_SETMODEL, ServerPacket.NPC_SET_SEQUENCE, ServerPacket.IF_MOVESUB, ServerPacket.CHAT_FILTER_SETTINGS, ServerPacket.field3386, ServerPacket.LOGOUT_FULL, ServerPacket.DYNAMICOBJECT_SPAWN, ServerPacket.field3358, ServerPacket.field3359, ServerPacket.REFLECTION_CHECKER, ServerPacket.IF_SETPLAYERHEAD, ServerPacket.field3362, ServerPacket.NPC_INFO_SMALL_VIEWPORT_1, ServerPacket.field3364, ServerPacket.field3365, ServerPacket.UPDATE_INV_FULL, ServerPacket.HINT_ARROW, ServerPacket.field3368, ServerPacket.TRIGGER_ONDIALOG_ABORT, ServerPacket.field3370, ServerPacket.field3371, ServerPacket.MESSAGE_FRIENDS_CHAT, ServerPacket.field3373, ServerPacket.NPC_SPOTANIM, ServerPacket.field3375, ServerPacket.field3376, ServerPacket.field3385, ServerPacket.field3378, ServerPacket.SET_PRIVCHATMODE, ServerPacket.SYNC_CLIENT_VARCACHE, ServerPacket.field3381, ServerPacket.field3382, ServerPacket.field3383, ServerPacket.field3384, ServerPacket.CAM_RESET, ServerPacket.REBUILD_NORMAL, ServerPacket.field3387, ServerPacket.field3388, ServerPacket.UPDATE_UID192, ServerPacket.field3390, ServerPacket.field3326, ServerPacket.MINIMAP_TOGGLE, ServerPacket.field3393, ServerPacket.CAM_SETANGLE, ServerPacket.IF_SETHIDE, ServerPacket.field3336, ServerPacket.VARP_SMALL, ServerPacket.field3398, ServerPacket.UPDATE_REBOOT_TIMER, ServerPacket.field3306, ServerPacket.RUNCLIENTSCRIPT, ServerPacket.VARP_LARGE, ServerPacket.MESSAGE_GAME, ServerPacket.field3404, ServerPacket.PLAYER_SPOTANIM, ServerPacket.field3406, ServerPacket.UPDATE_INV_PARTIAL, ServerPacket.UPDATE_ZONE_PARTIAL_ENCLOSED, ServerPacket.IF_SETNPCHEAD, ServerPacket.field3316, ServerPacket.field3411, ServerPacket.UPDATE_FRIENDLIST, ServerPacket.field3350, ServerPacket.UPDATE_STAT, ServerPacket.UPDATE_IGNORELIST, ServerPacket.SET_PLAYER_OP, ServerPacket.field3417, ServerPacket.field3302, ServerPacket.field3419, ServerPacket.IF_SETANGLE};
+		return new ServerPacket[]{ServerPacket.field2703, ServerPacket.EVENT_WORLDHOP, ServerPacket.field2698, ServerPacket.field2695, ServerPacket.PING_STATISTICS_REQUEST, ServerPacket.UPDATE_STOCKMARKET_SLOT, ServerPacket.field2687, ServerPacket.REBUILD_REGION, ServerPacket.field2701, ServerPacket.field2707, ServerPacket.GRAPHICSOBJECT_SPAWN, ServerPacket.PROJECTILE_SPAWN, ServerPacket.field2696, ServerPacket.field2692, ServerPacket.field2710, ServerPacket.field2700, ServerPacket.URL_OPEN, ServerPacket.field2699, ServerPacket.MESSAGE_PRIVATE_ECHO, ServerPacket.UPDATE_INV_CLEAR, ServerPacket.MINIMAP_FLAG_SET, ServerPacket.field2691, ServerPacket.field2689, ServerPacket.PLAYER_INFO, ServerPacket.field2708, ServerPacket.field2702, ServerPacket.IF_SETSCROLLPOS, ServerPacket.field2727, ServerPacket.RESET_CLIENT_VARCACHE, ServerPacket.MESSAGE_PRIVATE, ServerPacket.IF_SETCOLOUR, ServerPacket.NPC_INFO_LARGE_VIEWPORT_2, ServerPacket.field2732, ServerPacket.IF_SETOBJECT, ServerPacket.IF_CLOSESUB, ServerPacket.field2735, ServerPacket.field2734, ServerPacket.field2737, ServerPacket.field2714, ServerPacket.MIDI_SONG, ServerPacket.CAM_LOOKAT, ServerPacket.UPDATE_ZONE_FULL_FOLLOWS, ServerPacket.field2718, ServerPacket.LOGOUT, ServerPacket.field2717, ServerPacket.field2715, ServerPacket.field2738, ServerPacket.field2720, ServerPacket.field2731, ServerPacket.field2722, ServerPacket.field2724, ServerPacket.field2736, ServerPacket.field2757, ServerPacket.UPDATE_INV_STOP_TRANSIT, ServerPacket.IF_SETPOSITION, ServerPacket.IF_SETMODEL, ServerPacket.NPC_SET_SEQUENCE, ServerPacket.IF_MOVESUB, ServerPacket.CHAT_FILTER_SETTINGS, ServerPacket.field2747, ServerPacket.LOGOUT_FULL, ServerPacket.DYNAMICOBJECT_SPAWN, ServerPacket.field2762, ServerPacket.field2761, ServerPacket.REFLECTION_CHECKER, ServerPacket.IF_SETPLAYERHEAD, ServerPacket.field2743, ServerPacket.NPC_INFO_SMALL_VIEWPORT_1, ServerPacket.field2748, ServerPacket.field2758, ServerPacket.UPDATE_INV_FULL, ServerPacket.HINT_ARROW, ServerPacket.field2754, ServerPacket.TRIGGER_ONDIALOG_ABORT, ServerPacket.field2740, ServerPacket.field2755, ServerPacket.MESSAGE_FRIENDS_CHAT, ServerPacket.field2756, ServerPacket.NPC_SPOTANIM, ServerPacket.field2767, ServerPacket.field2779, ServerPacket.field2811, ServerPacket.field2776, ServerPacket.SET_PRIVCHATMODE, ServerPacket.SYNC_CLIENT_VARCACHE, ServerPacket.field2785, ServerPacket.field2784, ServerPacket.field2777, ServerPacket.field2765, ServerPacket.CAM_RESET, ServerPacket.REBUILD_NORMAL, ServerPacket.field2772, ServerPacket.field2774, ServerPacket.UPDATE_UID192, ServerPacket.field2783, ServerPacket.field2788, ServerPacket.MINIMAP_TOGGLE, ServerPacket.field2780, ServerPacket.CAM_SETANGLE, ServerPacket.IF_SETHIDE, ServerPacket.field2766, ServerPacket.VARP_SMALL, ServerPacket.field2778, ServerPacket.UPDATE_REBOOT_TIMER, ServerPacket.field2790, ServerPacket.RUNCLIENTSCRIPT, ServerPacket.VARP_LARGE, ServerPacket.MESSAGE_GAME, ServerPacket.field2809, ServerPacket.PLAYER_SPOTANIM, ServerPacket.field2806, ServerPacket.UPDATE_INV_PARTIAL, ServerPacket.UPDATE_ZONE_PARTIAL_ENCLOSED, ServerPacket.IF_SETNPCHEAD, ServerPacket.field2795, ServerPacket.field2812, ServerPacket.UPDATE_FRIENDLIST, ServerPacket.field2794, ServerPacket.UPDATE_STAT, ServerPacket.UPDATE_IGNORELIST, ServerPacket.SET_PLAYER_OP, ServerPacket.field2804, ServerPacket.field2805, ServerPacket.field2801, ServerPacket.IF_SETANGLE};
 	}
 
 	@ObfuscatedName("ai")
@@ -749,20 +673,20 @@ public class NPCComposition extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "1209928476"
 	)
-	static void method3708() {
+	static void method956() {
 		try {
 			File var0 = new File(class334.userHomeDirectory, "random.dat");
 			int var2;
 			if (var0.exists()) {
 				JagexCache.JagexCache_randomDat = new BufferedFile(new AccessFile(var0, "rw", 25L), 24, 0);
 			} else {
-				label38:
-				for (int var1 = 0; var1 < class136.field1621.length; ++var1) {
-					for (var2 = 0; var2 < HttpRequest.field43.length; ++var2) {
-						File var3 = new File(HttpRequest.field43[var2] + class136.field1621[var1] + File.separatorChar + "random.dat");
+				label34:
+				for (int var1 = 0; var1 < class136.field1331.length; ++var1) {
+					for (var2 = 0; var2 < HttpRequest.field27.length; ++var2) {
+						File var3 = new File(HttpRequest.field27[var2] + class136.field1331[var1] + File.separatorChar + "random.dat");
 						if (var3.exists()) {
 							JagexCache.JagexCache_randomDat = new BufferedFile(new AccessFile(var3, "rw", 25L), 24, 0);
-							break label38;
+							break label34;
 						}
 					}
 				}

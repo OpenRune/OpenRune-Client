@@ -1,27 +1,21 @@
-import net.runelite.mapping.ObfuscatedGetter;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("rq")
 public final class class443 implements Comparable {
 	@ObfuscatedName("aq")
-	Object field4722;
+	Object field3873;
 	@ObfuscatedName("aw")
-	Object field4721;
+	Object field3874;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		longValue = -8486235404290202371L
-	)
-	long field4723;
+	long field3876;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		longValue = 3666353477532767515L
-	)
-	long field4724;
+	long field3875;
 
 	class443(Object var1, Object var2) {
-		this.field4722 = var1;
-		this.field4721 = var2;
+		this.field3873 = var1;
+		this.field3874 = var2;
 	}
 
 	@ObfuscatedName("aq")
@@ -29,27 +23,27 @@ public final class class443 implements Comparable {
 		descriptor = "(Lrq;B)I",
 		garbageValue = "86"
 	)
-	int method8218(class443 var1) {
-		if (this.field4724 < var1.field4724) {
+	int method2264(class443 var1) {
+		if (this.field3875 < var1.field3875) {
 			return -1;
 		} else {
-			return this.field4724 > var1.field4724 ? 1 : 0;
+			return this.field3875 > var1.field3875 ? 1 : 0;
 		}
-	}
-
-	public int hashCode() {
-		return this.field4721.hashCode();
-	}
-
-	public int compareTo(Object var1) {
-		return this.method8218((class443)var1);
 	}
 
 	public boolean equals(Object var1) {
 		if (var1 instanceof class443) {
-			return this.field4721.equals(((class443)var1).field4721);
+			return this.field3874.equals(((class443)var1).field3874);
 		} else {
 			throw new IllegalArgumentException();
 		}
+	}
+
+	public int hashCode() {
+		return this.field3874.hashCode();
+	}
+
+	public int compareTo(Object var1) {
+		return this.method2264((class443)var1);
 	}
 }

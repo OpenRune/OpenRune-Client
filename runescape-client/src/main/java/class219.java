@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.net.URL;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 import org.json.JSONObject;
@@ -11,63 +10,54 @@ public class class219 {
 	@ObfuscatedSignature(
 		descriptor = "Lim;"
 	)
-	static final class219 field2371;
+	static final class219 field1901;
 	@ObfuscatedName("aq")
-	String field2367;
+	String field1910;
 	@ObfuscatedName("aw")
-	String field2360;
+	String field1911;
 	@ObfuscatedName("al")
-	String field2365;
+	String field1908;
 	@ObfuscatedName("ai")
-	String field2358;
+	String field1907;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		longValue = -1510457450721933301L
-	)
-	long field2362;
+	long field1912;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lax;"
 	)
-	AsyncRestClient field2363;
+	AsyncRestClient field1903;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lad;"
 	)
-	AsyncHttpResponse field2364;
+	AsyncHttpResponse field1902;
 	@ObfuscatedName("az")
-	final int field2368;
+	final int field1914;
 	@ObfuscatedName("ao")
-	final int field2359;
+	final int field1913;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 597965763
-	)
-	int field2366;
+	int field1905;
 	@ObfuscatedName("ax")
-	@ObfuscatedGetter(
-		intValue = -1018674229
-	)
-	int field2369;
+	int field1906;
 	@ObfuscatedName("an")
-	String field2370;
+	String field1909;
 	@ObfuscatedName("am")
-	boolean field2372;
+	boolean field1904;
 
 	static {
-		field2371 = new class219();
+		field1901 = new class219();
 	}
 
 	class219() {
-		this.field2367 = "";
-		this.field2360 = "";
-		this.field2365 = "";
-		this.field2358 = "";
-		this.field2362 = -1L;
-		this.field2368 = 1;
-		this.field2359 = 2;
-		this.field2366 = 1;
-		this.field2369 = 0;
+		this.field1910 = "";
+		this.field1911 = "";
+		this.field1908 = "";
+		this.field1907 = "";
+		this.field1912 = -1L;
+		this.field1914 = 1;
+		this.field1913 = 2;
+		this.field1905 = 1;
+		this.field1906 = 0;
 	}
 
 	@ObfuscatedName("aw")
@@ -75,9 +65,9 @@ public class class219 {
 		descriptor = "(ILjava/lang/String;I)V",
 		garbageValue = "1018900511"
 	)
-	public void method4262(int var1, String var2) {
-		this.field2369 = var1;
-		this.field2370 = var2;
+	public void method1128(int var1, String var2) {
+		this.field1906 = var1;
+		this.field1909 = var2;
 	}
 
 	@ObfuscatedName("al")
@@ -85,9 +75,9 @@ public class class219 {
 		descriptor = "(ZI)V",
 		garbageValue = "1351678430"
 	)
-	public void method4263(boolean var1) {
-		this.field2372 = var1;
-		this.field2363 = new AsyncRestClient("crmsession", 1, 1);
+	public void method1129(boolean var1) {
+		this.field1904 = var1;
+		this.field1903 = new AsyncRestClient("crmsession", 1, 1);
 	}
 
 	@ObfuscatedName("ai")
@@ -95,30 +85,30 @@ public class class219 {
 		descriptor = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V",
 		garbageValue = "-1191721460"
 	)
-	void method4264(String var1, String var2, String var3) {
-		if (this.field2366 != 2) {
-			this.field2367 = var1;
-			this.field2360 = var2;
-			this.field2365 = var3;
-			if (!this.field2367.endsWith("/")) {
-				this.field2367 = this.field2367 + "/";
+	void method1130(String var1, String var2, String var3) {
+		if (this.field1905 != 2) {
+			this.field1910 = var1;
+			this.field1911 = var2;
+			this.field1908 = var3;
+			if (!this.field1910.endsWith("/")) {
+				this.field1910 = this.field1910 + "/";
 			}
 
-			if (!this.field2360.equals("")) {
-				String var4 = this.field2367;
-				var4 = var4 + "session/open/" + this.field2360;
-				if (this.field2365.equals("")) {
+			if (!this.field1911.equals("")) {
+				String var4 = this.field1910;
+				var4 = var4 + "session/open/" + this.field1911;
+				if (this.field1908.equals("")) {
 				}
 
-				var4 = var4 + "?userHash=" + this.field2365;
+				var4 = var4 + "?userHash=" + this.field1908;
 
 				try {
-					this.field2364 = this.method4277(var4);
-					this.field2362 = SecureRandomCallable.method2320();
+					this.field1902 = this.method1137(var4);
+					this.field1912 = SecureRandomCallable.method465();
 				} catch (IOException var6) {
-					this.field2364 = null;
-					this.field2360 = "";
-					this.field2365 = "";
+					this.field1902 = null;
+					this.field1911 = "";
+					this.field1908 = "";
 				}
 
 			}
@@ -130,23 +120,23 @@ public class class219 {
 		descriptor = "(I)V",
 		garbageValue = "1886033696"
 	)
-	public void method4265() {
-		if (this.field2364 == null) {
-			if (!this.field2358.isEmpty() && this.field2366 == 1) {
-				long var1 = SecureRandomCallable.method2320();
-				long var3 = var1 - this.field2362;
-				String var5 = this.field2367;
-				var5 = var5 + "session/close/" + this.field2360 + "/" + this.field2358;
-				if (this.field2365.isEmpty()) {
+	public void method1132() {
+		if (this.field1902 == null) {
+			if (!this.field1907.isEmpty() && this.field1905 == 1) {
+				long var1 = SecureRandomCallable.method465();
+				long var3 = var1 - this.field1912;
+				String var5 = this.field1910;
+				var5 = var5 + "session/close/" + this.field1911 + "/" + this.field1907;
+				if (this.field1908.isEmpty()) {
 					var5 = var5 + "?sessionDuration=" + var3;
 				} else {
-					var5 = var5 + "?userHash=" + this.field2365 + "&sessionDuration=" + var3;
+					var5 = var5 + "?userHash=" + this.field1908 + "&sessionDuration=" + var3;
 				}
 
 				try {
-					this.field2364 = this.method4277(var5);
+					this.field1902 = this.method1137(var5);
 				} catch (IOException var7) {
-					this.field2366 = 1;
+					this.field1905 = 1;
 				}
 			}
 
@@ -158,9 +148,9 @@ public class class219 {
 		descriptor = "(B)V",
 		garbageValue = "1"
 	)
-	public void method4266() {
-		if (this.field2363 != null) {
-			this.field2363.shutdown();
+	public void method1133() {
+		if (this.field1903 != null) {
+			this.field1903.shutdown();
 		}
 
 	}
@@ -170,10 +160,10 @@ public class class219 {
 		descriptor = "(I)V",
 		garbageValue = "-1756755184"
 	)
-	void method4289() {
-		if (!this.field2358.isEmpty()) {
+	void method1134() {
+		if (!this.field1907.isEmpty()) {
 			String var1 = "";
-			switch(this.field2369) {
+			switch(this.field1906) {
 			case 1:
 				var1 = "events/click";
 				break;
@@ -184,18 +174,18 @@ public class class219 {
 				var1 = "events/impression";
 			}
 
-			if (!this.field2370.isEmpty()) {
-				String var2 = this.field2367;
-				var2 = var2 + var1 + "/" + this.field2360 + "/" + this.field2358 + "/" + this.field2370 + "?userHash=" + this.field2365;
+			if (!this.field1909.isEmpty()) {
+				String var2 = this.field1910;
+				var2 = var2 + var1 + "/" + this.field1911 + "/" + this.field1907 + "/" + this.field1909 + "?userHash=" + this.field1908;
 
 				try {
-					this.field2364 = this.method4277(var2);
+					this.field1902 = this.method1137(var2);
 				} catch (IOException var4) {
-					this.field2366 = 1;
+					this.field1905 = 1;
 				}
 
-				this.field2366 = 1;
-				this.field2369 = 0;
+				this.field1905 = 1;
+				this.field1906 = 0;
 			}
 		}
 	}
@@ -205,19 +195,19 @@ public class class219 {
 		descriptor = "(I)V",
 		garbageValue = "996137810"
 	)
-	public void method4268() {
-		if (this.field2364 != null && this.field2364.hasFinished()) {
-			if (this.field2364.hasFinished() && this.field2364.await().getResponseCode() == 200 && this.field2358.isEmpty()) {
-				String var1 = this.field2364.await().getResponseBody();
+	public void method1135() {
+		if (this.field1902 != null && this.field1902.hasFinished()) {
+			if (this.field1902.hasFinished() && this.field1902.await().getResponseCode() == 200 && this.field1907.isEmpty()) {
+				String var1 = this.field1902.await().getResponseBody();
 				if (var1.isEmpty()) {
 					return;
 				}
 
-				this.field2358 = var1;
+				this.field1907 = var1;
 			}
 
-			if (this.field2369 != 0) {
-				this.method4289();
+			if (this.field1906 != 0) {
+				this.method1134();
 			}
 
 		}
@@ -228,8 +218,8 @@ public class class219 {
 		descriptor = "(Ljava/lang/String;I)Z",
 		garbageValue = "1524563464"
 	)
-	public boolean method4274(String var1) {
-		this.method4262(2, var1);
+	public boolean method1136(String var1) {
+		this.method1128(2, var1);
 		return true;
 	}
 
@@ -238,9 +228,9 @@ public class class219 {
 		descriptor = "(Ljava/lang/String;B)Lad;",
 		garbageValue = "-25"
 	)
-	AsyncHttpResponse method4277(String var1) throws IOException {
+	AsyncHttpResponse method1137(String var1) throws IOException {
 		URL var2 = new URL(var1);
-		HttpRequest var3 = new HttpRequest(var2, HttpMethod.POST, this.field2372);
+		HttpRequest var3 = new HttpRequest(var2, HttpMethod.POST, this.field1904);
 
 		try {
 			JSONObject var4 = new JSONObject();
@@ -248,7 +238,7 @@ public class class219 {
 		} catch (Exception var5) {
 		}
 
-		return this.field2363.submitRequest(var3);
+		return this.field1903.submitRequest(var3);
 	}
 
 	@ObfuscatedName("aw")
@@ -256,7 +246,7 @@ public class class219 {
 		descriptor = "(III)I",
 		garbageValue = "-2011298012"
 	)
-	static int method4299(int var0, int var1) {
+	static int method1131(int var0, int var1) {
 		if (var0 == -2) {
 			return 12345678;
 		} else if (var0 == -1) {

@@ -1,15 +1,11 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("bk")
 public class class33 {
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -1734703071
-	)
-	static int field169;
+	static int field92;
 	@ObfuscatedName("aj")
 	@ObfuscatedSignature(
 		descriptor = "Lbx;"
@@ -17,19 +13,13 @@ public class class33 {
 	@Export("pcmPlayerProvider")
 	public static class51 pcmPlayerProvider;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -1834111139
-	)
-	int field172;
+	int field93;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 820707187
-	)
-	int field168;
+	int field94;
 
 	class33(int var1, int var2) {
-		this.field172 = var1;
-		this.field168 = var2;
+		this.field93 = var1;
+		this.field94 = var2;
 	}
 
 	@ObfuscatedName("aq")
@@ -37,19 +27,19 @@ public class class33 {
 		descriptor = "(Lbi;I)Z",
 		garbageValue = "1764946548"
 	)
-	boolean method451(class29 var1) {
+	boolean method120(class29 var1) {
 		if (var1 == null) {
 			return false;
 		} else {
-			switch(this.field172) {
+			switch(this.field93) {
 			case 1:
-				return var1.vmethod4425(this.field168);
+				return var1.vmethod4425(this.field94);
 			case 2:
-				return var1.vmethod4442(this.field168);
+				return var1.vmethod4442(this.field94);
 			case 3:
-				return var1.vmethod4427((char)this.field168);
+				return var1.vmethod4427((char)this.field94);
 			case 4:
-				return var1.vmethod4467(this.field168 == 1);
+				return var1.vmethod4467(this.field94 == 1);
 			default:
 				return false;
 			}
@@ -61,7 +51,7 @@ public class class33 {
 		descriptor = "(IB)Loy;",
 		garbageValue = "-78"
 	)
-	public static GameBuild method450(int var0) {
+	public static GameBuild method121(int var0) {
 		GameBuild[] var1 = new GameBuild[]{GameBuild.RC, GameBuild.BUILDLIVE, GameBuild.WIP, GameBuild.LIVE};
 		GameBuild[] var2 = var1;
 
@@ -80,7 +70,7 @@ public class class33 {
 		descriptor = "(IIII)V",
 		garbageValue = "-839206131"
 	)
-	static final void method454(int var0, int var1, int var2) {
+	static final void method122(int var0, int var1, int var2) {
 		int var3;
 		for (var3 = 0; var3 < 8; ++var3) {
 			for (int var4 = 0; var4 < 8; ++var4) {

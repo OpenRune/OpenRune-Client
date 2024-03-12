@@ -2,7 +2,6 @@ import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("cv")
 @Implements("LoginState")
@@ -194,9 +193,9 @@ public class LoginState {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1635168506"
 	)
-	static int method1207(int var0, Script var1, boolean var2) {
+	static int method353(int var0, Script var1, boolean var2) {
 		int var3;
-		if (var0 == ScriptOpcodes.CAM_FORCEANGLE) {
+		if (var0 == 5504) {
 			Interpreter.Interpreter_intStackSize -= 2;
 			var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 			int var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
@@ -206,13 +205,13 @@ public class LoginState {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.CAM_GETANGLE_XA) {
+		} else if (var0 == 5505) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.camAngleX;
 			return 1;
-		} else if (var0 == ScriptOpcodes.CAM_GETANGLE_YA) {
+		} else if (var0 == 5506) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.camAngleY;
 			return 1;
-		} else if (var0 == ScriptOpcodes.CAM_SETFOLLOWHEIGHT) {
+		} else if (var0 == 5530) {
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 			if (var3 < 0) {
 				var3 = 0;
@@ -220,7 +219,7 @@ public class LoginState {
 
 			Client.camFollowHeight = var3;
 			return 1;
-		} else if (var0 == ScriptOpcodes.CAM_GETFOLLOWHEIGHT) {
+		} else if (var0 == 5531) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.camFollowHeight;
 			return 1;
 		} else {
@@ -233,7 +232,7 @@ public class LoginState {
 		descriptor = "(I)V",
 		garbageValue = "689752090"
 	)
-	static void method1206() {
+	static void method354() {
 		for (InterfaceParent var0 = (InterfaceParent)Client.interfaceParents.first(); var0 != null; var0 = (InterfaceParent)Client.interfaceParents.next()) {
 			int var1 = var0.group;
 			if (ArchiveLoader.widgetDefinition.loadInterface(var1)) {
@@ -250,7 +249,7 @@ public class LoginState {
 
 				if (!var2) {
 					var4 = (int)var0.key;
-					Widget var5 = ArchiveLoader.widgetDefinition.method6431(var4);
+					Widget var5 = ArchiveLoader.widgetDefinition.method1785(var4);
 					if (var5 != null) {
 						UserComparator5.invalidateWidget(var5);
 					}

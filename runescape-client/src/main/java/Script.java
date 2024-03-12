@@ -1,7 +1,6 @@
 import java.util.Iterator;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -15,13 +14,10 @@ public class Script extends DualNode {
 	@Export("Script_cached")
 	static EvictingDualNodeHashTable Script_cached;
 	@ObfuscatedName("kb")
-	@ObfuscatedGetter(
-		intValue = -60125901
-	)
 	@Export("cameraYaw")
 	static int cameraYaw;
 	@ObfuscatedName("aw")
-	String field1028;
+	String field856;
 	@ObfuscatedName("al")
 	@Export("opcodes")
 	int[] opcodes;
@@ -32,27 +28,15 @@ public class Script extends DualNode {
 	@Export("stringOperands")
 	String[] stringOperands;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 975929733
-	)
 	@Export("localIntCount")
 	int localIntCount;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -1886750317
-	)
 	@Export("localStringCount")
 	int localStringCount;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -107184905
-	)
 	@Export("intArgumentCount")
 	int intArgumentCount;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -1363295215
-	)
 	@Export("stringArgumentCount")
 	int stringArgumentCount;
 	@ObfuscatedName("au")
@@ -122,7 +106,7 @@ public class Script extends DualNode {
 		descriptor = "(Ljava/lang/CharSequence;IZB)I",
 		garbageValue = "-22"
 	)
-	static int method2242(CharSequence var0, int var1, boolean var2) {
+	static int method455(CharSequence var0, int var1, boolean var2) {
 		if (var1 >= 2 && var1 <= 36) {
 			boolean var3 = false;
 			boolean var4 = false;
@@ -187,7 +171,7 @@ public class Script extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "63250644"
 	)
-	static void method2240() {
+	static void method454() {
 		Iterator var0 = Messages.Messages_hashTable.iterator();
 
 		while (var0.hasNext()) {

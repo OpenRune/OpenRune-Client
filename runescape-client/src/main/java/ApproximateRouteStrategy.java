@@ -11,12 +11,12 @@ public class ApproximateRouteStrategy extends RouteStrategy {
 	@Export("Tiles_lightness")
 	static int[] Tiles_lightness;
 	@ObfuscatedName("hm")
-	static SecureRandom field489;
+	static SecureRandom field358;
 	@ObfuscatedName("qs")
 	@ObfuscatedSignature(
 		descriptor = "Ltx;"
 	)
-	static class516 field488;
+	static class516 field359;
 
 	ApproximateRouteStrategy() {
 	}
@@ -36,12 +36,12 @@ public class ApproximateRouteStrategy extends RouteStrategy {
 		descriptor = "(IIIIIB)V",
 		garbageValue = "64"
 	)
-	static void method1185(int var0, int var1, int var2, int var3, int var4) {
+	static void method343(int var0, int var1, int var2, int var3, int var4) {
 		NodeDeque var5 = Client.groundItems[var0][var1][var2];
 		if (var5 != null) {
 			for (TileItem var6 = (TileItem)var5.last(); var6 != null; var6 = (TileItem)var5.previous()) {
 				if ((var3 & 32767) == var6.id) {
-					var6.method2758(var4);
+					var6.method621(var4);
 					break;
 				}
 			}
@@ -57,7 +57,7 @@ public class ApproximateRouteStrategy extends RouteStrategy {
 	@Export("Clan_joinChat")
 	static final void Clan_joinChat(String var0) {
 		if (!var0.equals("")) {
-			PacketBufferNode var1 = ViewportMouse.getPacketBufferNode(ClientPacket.field3233, Client.packetWriter.isaacCipher);
+			PacketBufferNode var1 = ViewportMouse.getPacketBufferNode(ClientPacket.field2625, Client.packetWriter.isaacCipher);
 			var1.packetBuffer.writeByte(class145.stringCp1252NullTerminatedByteSize(var0));
 			var1.packetBuffer.writeStringCp1252NullTerminated(var0);
 			Client.packetWriter.addNode(var1);

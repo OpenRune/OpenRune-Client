@@ -1,8 +1,6 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 
 @ObfuscatedName("nk")
 public enum class357 implements Enum {
@@ -10,39 +8,36 @@ public enum class357 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lnk;"
 	)
-	field3903(0),
+	field3202(0),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lnk;"
 	)
-	field3902(1),
+	field3204(1),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lnk;"
 	)
-	field3905(2),
+	field3201(2),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lnk;"
 	)
-	field3907(3),
+	field3199(3),
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lnk;"
 	)
-	field3904(4);
+	field3203(4);
 
 	@ObfuscatedName("gn")
 	@Export("sessionId")
 	static String sessionId;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -2018279927
-	)
-	final int field3906;
+	final int field3205;
 
 	class357(int var3) {
-		this.field3906 = var3;
+		this.field3205 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -52,7 +47,7 @@ public enum class357 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field3906;
+		return this.field3205;
 	}
 
 	@ObfuscatedName("as")
@@ -60,18 +55,18 @@ public enum class357 implements Enum {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1942157821"
 	)
-	static int method6983(int var0, Script var1, boolean var2) {
+	static int method1945(int var0, Script var1, boolean var2) {
 		int var3 = -1;
 		Widget var4;
 		if (var0 >= 2000) {
 			var0 -= 1000;
 			var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			var4 = ArchiveLoader.widgetDefinition.method6431(var3);
+			var4 = ArchiveLoader.widgetDefinition.method1785(var3);
 		} else {
 			var4 = var2 ? Interpreter.scriptDotWidget : class141.scriptActiveWidget;
 		}
 
-		if (var0 == ScriptOpcodes.CC_SETPOSITION) {
+		if (var0 == 1000) {
 			Interpreter.Interpreter_intStackSize -= 4;
 			var4.rawX = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 			var4.rawY = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
@@ -84,7 +79,7 @@ public enum class357 implements Enum {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.CC_SETSIZE) {
+		} else if (var0 == 1001) {
 			Interpreter.Interpreter_intStackSize -= 4;
 			var4.rawWidth = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 			var4.rawHeight = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
@@ -97,7 +92,7 @@ public enum class357 implements Enum {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.CC_SETHIDE) {
+		} else if (var0 == 1003) {
 			boolean var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize] == 1;
 			if (var5 != var4.isHidden) {
 				var4.isHidden = var5;
@@ -105,10 +100,10 @@ public enum class357 implements Enum {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.CC_SETNOCLICKTHROUGH) {
+		} else if (var0 == 1005) {
 			var4.noClickThrough = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize] == 1;
 			return 1;
-		} else if (var0 == ScriptOpcodes.CC_SETNOSCROLLTHROUGH) {
+		} else if (var0 == 1006) {
 			var4.noScrollThrough = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize] == 1;
 			return 1;
 		} else {

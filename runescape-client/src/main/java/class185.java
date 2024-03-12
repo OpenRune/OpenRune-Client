@@ -35,7 +35,7 @@ public class class185 extends DualNode {
 
 			boolean var11 = true;
 			if (var5.contentType > 0) {
-				var11 = SoundSystem.method807(var5);
+				var11 = SoundSystem.method212(var5);
 			}
 
 			if (var11) {

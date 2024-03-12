@@ -1,15 +1,11 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("ft")
 public class class144 extends class145 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -333309593
-	)
-	int field1670;
+	int field1361;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -21,7 +17,7 @@ public class class144 extends class145 {
 	)
 	class144(class148 var1) {
 		this.this$0 = var1;
-		this.field1670 = -1;
+		this.field1361 = -1;
 	}
 
 	@ObfuscatedName("aq")
@@ -29,8 +25,9 @@ public class class144 extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
-		this.field1670 = var1.readUnsignedShort();
+		this.field1361 = var1.readUnsignedShort();
 	}
 
 	@ObfuscatedName("aw")
@@ -38,8 +35,9 @@ public class class144 extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.method3327(this.field1670);
+		var1.method821(this.field1361);
 	}
 
 	@ObfuscatedName("aq")

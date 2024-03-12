@@ -8,62 +8,62 @@ public class class311 {
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3284;
+	public static final class311 field2673;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3275;
+	public static final class311 field2677;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3276;
+	public static final class311 field2671;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3277;
+	public static final class311 field2669;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3278;
+	public static final class311 field2674;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3279;
+	public static final class311 field2675;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3286;
+	public static final class311 field2667;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3285;
+	public static final class311 field2678;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3282;
+	public static final class311 field2672;
 	@ObfuscatedName("au")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3281;
+	public static final class311 field2676;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3287;
+	public static final class311 field2670;
 	@ObfuscatedName("ah")
 	@ObfuscatedSignature(
 		descriptor = "Llq;"
 	)
-	public static final class311 field3280;
+	public static final class311 field2668;
 	@ObfuscatedName("eq")
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
@@ -72,18 +72,18 @@ public class class311 {
 	static Archive archive8;
 
 	static {
-		field3284 = new class311(4);
-		field3275 = new class311(4);
-		field3276 = new class311(6);
-		field3277 = new class311(7);
-		field3278 = new class311(2);
-		field3279 = new class311(11);
-		field3286 = new class311(5);
-		field3285 = new class311(14);
-		field3282 = new class311(20);
-		field3281 = new class311(14);
-		field3287 = new class311(7);
-		field3280 = new class311(5);
+		field2673 = new class311(4);
+		field2677 = new class311(4);
+		field2671 = new class311(6);
+		field2669 = new class311(7);
+		field2674 = new class311(2);
+		field2675 = new class311(11);
+		field2667 = new class311(5);
+		field2678 = new class311(14);
+		field2672 = new class311(20);
+		field2676 = new class311(14);
+		field2670 = new class311(7);
+		field2668 = new class311(5);
 	}
 
 	@ObfuscatedSignature(
@@ -103,26 +103,28 @@ public class class311 {
 		Buffer var1 = new Buffer(var0);
 		int var2 = var1.readUnsignedByte();
 		int var3 = var1.readInt();
-		if (var3 < 0 || AbstractArchive.field4398 != 0 && var3 > AbstractArchive.field4398) {
-			throw new RuntimeException();
-		} else if (var2 == 0) {
-			byte[] var6 = new byte[var3];
-			var1.readBytes(var6, 0, var3);
-			return var6;
-		} else {
-			int var4 = var1.readInt();
-			if (var4 >= 0 && (AbstractArchive.field4398 == 0 || var4 <= AbstractArchive.field4398)) {
-				byte[] var5 = new byte[var4];
-				if (var2 == 1) {
-					BZip2Decompressor.BZip2Decompressor_decompress(var5, var4, var0, var3, 9);
-				} else {
-					AbstractArchive.gzipDecompressor.decompress(var1, var5);
-				}
-
-				return var5;
+		if (var3 >= 0 && (AbstractArchive.field3627 == 0 || var3 <= AbstractArchive.field3627)) {
+			if (var2 == 0) {
+				byte[] var4 = new byte[var3];
+				var1.readBytes(var4, 0, var3);
+				return var4;
 			} else {
-				throw new RuntimeException();
+				int var6 = var1.readInt();
+				if (var6 < 0 || AbstractArchive.field3627 != 0 && var6 > AbstractArchive.field3627) {
+					throw new RuntimeException();
+				} else {
+					byte[] var5 = new byte[var6];
+					if (var2 == 1) {
+						BZip2Decompressor.BZip2Decompressor_decompress(var5, var6, var0, var3, 9);
+					} else {
+						AbstractArchive.gzipDecompressor.decompress(var1, var5);
+					}
+
+					return var5;
+				}
 			}
+		} else {
+			throw new RuntimeException();
 		}
 	}
 }

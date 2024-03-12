@@ -1,27 +1,15 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 
 @ObfuscatedName("vp")
-@Implements("SpriteBufferProperties")
-public class SpriteBufferProperties {
+public class class548 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1000195101
-	)
 	@Export("SpriteBuffer_spriteCount")
 	public static int SpriteBuffer_spriteCount;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1320710959
-	)
 	@Export("SpriteBuffer_spriteWidth")
 	public static int SpriteBuffer_spriteWidth;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -234468659
-	)
 	@Export("SpriteBuffer_spriteHeight")
 	public static int SpriteBuffer_spriteHeight;
 	@ObfuscatedName("ai")

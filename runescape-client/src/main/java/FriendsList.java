@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,10 +13,7 @@ public class FriendsList extends UserList {
 	@Export("loginType")
 	final LoginType loginType;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = 1599785051
-	)
-	int field4734;
+	int field3878;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lpy;"
@@ -30,7 +26,7 @@ public class FriendsList extends UserList {
 	)
 	public FriendsList(LoginType var1) {
 		super(400);
-		this.field4734 = 1;
+		this.field3878 = 1;
 		this.friendLoginUpdates = new LinkDeque();
 		this.loginType = var1;
 	}
@@ -137,7 +133,7 @@ public class FriendsList extends UserList {
 					}
 
 					if (var6 != var11.world) {
-						var11.int2 = ++this.field4734 - 1;
+						var11.int2 = ++this.field3878 - 1;
 						if (var11.world == -1 && var6 == 0) {
 							var11.int2 = -(var11.int2 * -2090324989) * 1270931115;
 						}
@@ -146,8 +142,8 @@ public class FriendsList extends UserList {
 					}
 
 					var11.rank = var7;
-					var11.field4745 = var9;
-					var11.field4748 = var10;
+					var11.field3890 = var9;
+					var11.field3891 = var10;
 					continue;
 				}
 

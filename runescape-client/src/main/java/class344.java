@@ -10,21 +10,21 @@ public class class344 {
 	@ObfuscatedSignature(
 		descriptor = "Leb;"
 	)
-	UrlRequest field3651;
+	UrlRequest field2986;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lvd;"
 	)
-	SpritePixels field3650;
+	SpritePixels field2987;
 
 	@ObfuscatedSignature(
 		descriptor = "(Ljava/lang/String;Lel;)V"
 	)
 	class344(String var1, UrlRequester var2) {
 		try {
-			this.field3651 = var2.request(new URL(var1));
+			this.field2986 = var2.request(new URL(var1));
 		} catch (MalformedURLException var4) {
-			this.field3651 = null;
+			this.field2986 = null;
 		}
 
 	}
@@ -33,7 +33,7 @@ public class class344 {
 		descriptor = "(Leb;)V"
 	)
 	class344(UrlRequest var1) {
-		this.field3651 = var1;
+		this.field2986 = var1;
 	}
 
 	@ObfuscatedName("aq")
@@ -41,24 +41,24 @@ public class class344 {
 		descriptor = "(I)Lvd;",
 		garbageValue = "-750205083"
 	)
-	SpritePixels method6459() {
-		if (this.field3650 == null && this.field3651 != null && this.field3651.isDone()) {
-			if (this.field3651.getResponse() != null) {
-				this.field3650 = class202.method3920(this.field3651.getResponse());
+	SpritePixels method1793() {
+		if (this.field2987 == null && this.field2986 != null && this.field2986.isDone()) {
+			if (this.field2986.getResponse() != null) {
+				this.field2987 = class202.method1018(this.field2986.getResponse());
 			}
 
-			this.field3651 = null;
+			this.field2986 = null;
 		}
 
-		return this.field3650;
+		return this.field2987;
 	}
 
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "(CI)Z",
-		garbageValue = "-283741013"
+		garbageValue = "335968278"
 	)
-	public static boolean method6465(char var0) {
+	public static boolean method1794(char var0) {
 		if (var0 >= ' ' && var0 < 127 || var0 > 127 && var0 < 160 || var0 > 160 && var0 <= 255) {
 			return true;
 		} else {
@@ -80,45 +80,45 @@ public class class344 {
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "(Lof;Lof;ZII)V",
-		garbageValue = "2137737759"
+		garbageValue = "-1416277523"
 	)
-	static void method6458(AbstractArchive var0, AbstractArchive var1, boolean var2, int var3) {
+	static void method1795(AbstractArchive var0, AbstractArchive var1, boolean var2, int var3) {
 		if (Login.clearLoginScreen) {
 			if (var3 == 4) {
-				JagexCache.method4224(4);
+				JagexCache.method1113(4);
 			}
 
 		} else {
 			if (var3 == 0) {
-				PacketBufferNode.method6050(var2);
+				PacketBufferNode.method1679(var2);
 			} else {
-				JagexCache.method4224(var3);
+				JagexCache.method1113(var3);
 			}
 
 			Rasterizer2D.Rasterizer2D_clear();
 			byte[] var4 = var0.takeFileByNames("title.jpg", "");
-			Login.leftTitleSprite = class202.method3920(var4);
+			Login.leftTitleSprite = class202.method1018(var4);
 			WorldMapLabelSize.rightTitleSprite = Login.leftTitleSprite.mirrorHorizontally();
-			class213.method4205(var1, Client.worldProperties);
+			class213.method1111(var1, Client.worldProperties);
 			class155.titleboxSprite = class173.SpriteBuffer_getIndexedSpriteByName(var1, "titlebox", "");
 			Login.titlebuttonSprite = class173.SpriteBuffer_getIndexedSpriteByName(var1, "titlebutton", "");
-			Login.field944 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "titlebutton_large", "");
-			class90.field1121 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "play_now_text", "");
+			Login.field811 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "titlebutton_large", "");
+			class90.field916 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "play_now_text", "");
 			class173.SpriteBuffer_getIndexedSpriteByName(var1, "titlebutton_wide42,1", "");
 			Login.runesSprite = FloorOverlayDefinition.getFont(var1, "runes", "");
 			class169.title_muteSprite = FloorOverlayDefinition.getFont(var1, "title_mute", "");
 			class128.options_buttons_0Sprite = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,0", "");
-			UserComparator2.field5265 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,4", "");
+			UserComparator2.field4312 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,4", "");
 			class472.options_buttons_2Sprite = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,2", "");
-			class557.field5358 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,6", "");
-			FriendSystem.field859 = class128.options_buttons_0Sprite.subWidth;
-			class316.field3448 = class128.options_buttons_0Sprite.subHeight;
+			class557.field4387 = class173.SpriteBuffer_getIndexedSpriteByName(var1, "options_radio_buttons,6", "");
+			FriendSystem.field711 = class128.options_buttons_0Sprite.subWidth;
+			class316.field2827 = class128.options_buttons_0Sprite.subHeight;
 			class325.loginScreenRunesAnimation = new LoginScreenAnimation(Login.runesSprite);
 			if (var2) {
 				Login.Login_username = "";
 				Login.Login_password = "";
-				Login.field962 = new String[8];
-				Login.field961 = 0;
+				Login.field804 = new String[8];
+				Login.field788 = 0;
 			}
 
 			class36.otpMedium = 0;
@@ -128,13 +128,13 @@ public class class344 {
 			if (!class30.clientPreferences.isTitleMusicDisabled()) {
 				ArrayList var5 = new ArrayList();
 				var5.add(new MusicSong(Renderable.archive6, "scape main", "", 255, false));
-				PacketWriter.method2891(var5, 0, 0, 0, 100, false);
+				PacketWriter.method648(var5, 0, 0, 0, 100, false);
 			} else {
-				class169.method3521(0, 0);
+				class169.method882(0, 0);
 			}
 
-			GrandExchangeOfferOwnWorldComparator.method1192();
-			Fonts.method9109().method7212(false);
+			GrandExchangeOfferOwnWorldComparator.method350();
+			Fonts.method2519().method2018(false);
 			Login.clearLoginScreen = true;
 			Login.xPadding = (GameEngine.canvasWidth - 765) / 2;
 			Login.loginBoxX = Login.xPadding + 202;

@@ -29,33 +29,30 @@ public class SecureUrlRequester extends UrlRequester {
 		URLConnection var2 = null;
 		boolean var9 = false;
 
-		HttpURLConnection var12;
-		label139: {
-			label131: {
+		label124: {
+			HttpURLConnection var12;
+			label125: {
 				try {
-					label134: {
-						var9 = true;
-						String var3 = var1.field1447.getProtocol();
-						if (var3.equals("http")) {
-							var2 = this.openHttpConnection(var1);
-						} else {
-							if (!var3.equals("https")) {
-								var1.field1448 = UrlRequest.field1445;
-								var9 = false;
-								break label134;
-							}
-
-							var2 = this.openHttpsConnection(var1);
+					var9 = true;
+					String var3 = var1.field1205.getProtocol();
+					if (var3.equals("http")) {
+						var2 = this.openHttpConnection(var1);
+					} else {
+						if (!var3.equals("https")) {
+							var1.field1207 = UrlRequest.field1203;
+							var9 = false;
+							break label124;
 						}
 
-						this.method2897(var2, var1);
-						var9 = false;
-						break label139;
+						var2 = this.openHttpsConnection(var1);
 					}
-				} catch (IOException var10) {
-					var1.field1448 = UrlRequest.field1445;
+
+					this.method658(var2, var1);
 					var9 = false;
-					break label131;
+					break label125;
+				} catch (IOException var10) {
+					var1.field1207 = UrlRequest.field1203;
+					var9 = false;
 				} finally {
 					if (var9) {
 						if (var2 != null && var2 instanceof HttpURLConnection) {
@@ -67,8 +64,8 @@ public class SecureUrlRequester extends UrlRequester {
 				}
 
 				if (var2 != null && var2 instanceof HttpURLConnection) {
-					HttpURLConnection var4 = (HttpURLConnection)var2;
-					var4.disconnect();
+					var12 = (HttpURLConnection)var2;
+					var12.disconnect();
 				}
 
 				return;
@@ -83,8 +80,8 @@ public class SecureUrlRequester extends UrlRequester {
 		}
 
 		if (var2 != null && var2 instanceof HttpURLConnection) {
-			var12 = (HttpURLConnection)var2;
-			var12.disconnect();
+			HttpURLConnection var4 = (HttpURLConnection)var2;
+			var4.disconnect();
 		}
 
 	}
@@ -96,7 +93,7 @@ public class SecureUrlRequester extends UrlRequester {
 	)
 	@Export("openHttpConnection")
 	URLConnection openHttpConnection(UrlRequest var1) throws IOException {
-		URLConnection var2 = var1.field1447.openConnection();
+		URLConnection var2 = var1.field1205.openConnection();
 		this.setDefaultRequestProperties(var2);
 		return var2;
 	}
@@ -108,9 +105,9 @@ public class SecureUrlRequester extends UrlRequester {
 	)
 	@Export("openHttpsConnection")
 	URLConnection openHttpsConnection(UrlRequest var1) throws IOException {
-		HttpsURLConnection var2 = (HttpsURLConnection)var1.field1447.openConnection();
+		HttpsURLConnection var2 = (HttpsURLConnection)var1.field1205.openConnection();
 		if (!this.secureHttps) {
-			var2.setSSLSocketFactory(SecureRandomSSLSocketFactory.method167());
+			var2.setSSLSocketFactory(SecureRandomSSLSocketFactory.method48());
 		}
 
 		this.setDefaultRequestProperties(var2);

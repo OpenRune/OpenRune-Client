@@ -7,5 +7,5 @@ public interface class537 {
 	@ObfuscatedSignature(
 		descriptor = "(Luq;I)V"
 	)
-	void method9744(Buffer var1);
+	void method2689(Buffer var1);
 }

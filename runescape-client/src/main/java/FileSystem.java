@@ -2,7 +2,6 @@ import java.net.URL;
 import java.util.Hashtable;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -22,10 +21,7 @@ public class FileSystem {
 	@Export("FileSystem_cacheFiles")
 	static Hashtable FileSystem_cacheFiles;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = 271657219
-	)
-	static int field2340;
+	static int field1889;
 
 	static {
 		FileSystem_hasPermissions = false;
@@ -41,17 +37,17 @@ public class FileSystem {
 	static boolean loadWorlds() {
 		try {
 			if (PacketBufferNode.World_request == null) {
-				PacketBufferNode.World_request = InvDefinition.urlRequester.request(new URL(HealthBarDefinition.field1922));
+				PacketBufferNode.World_request = InvDefinition.urlRequester.request(new URL(HealthBarDefinition.field1525));
 			} else if (PacketBufferNode.World_request.isDone()) {
 				byte[] var0 = PacketBufferNode.World_request.getResponse();
 				Buffer var1 = new Buffer(var0);
 				var1.readInt();
 				World.World_count = var1.readUnsignedShort();
-				WorldMapID.World_worlds = new World[World.World_count];
+				class256.World_worlds = new World[World.World_count];
 
 				World var3;
 				for (int var2 = 0; var2 < World.World_count; var3.index = var2++) {
-					var3 = WorldMapID.World_worlds[var2] = new World();
+					var3 = class256.World_worlds[var2] = new World();
 					var3.id = var1.readUnsignedShort();
 					var3.properties = var1.readInt();
 					var3.host = var1.readStringCp1252NullTerminated();
@@ -60,7 +56,7 @@ public class FileSystem {
 					var3.population = var1.readShort();
 				}
 
-				class186.sortWorlds(WorldMapID.World_worlds, 0, WorldMapID.World_worlds.length - 1, World.World_sortOption1, World.World_sortOption2);
+				class186.sortWorlds(class256.World_worlds, 0, class256.World_worlds.length - 1, World.World_sortOption1, World.World_sortOption2);
 				PacketBufferNode.World_request = null;
 				return true;
 			}
@@ -79,6 +75,6 @@ public class FileSystem {
 	)
 	@Export("SpriteBuffer_getSprite")
 	public static SpritePixels SpriteBuffer_getSprite(AbstractArchive var0, int var1, int var2) {
-		return !class130.method3074(var0, var1, var2) ? null : Projectile.method2214();
+		return !class130.method720(var0, var1, var2) ? null : Projectile.method446();
 	}
 }

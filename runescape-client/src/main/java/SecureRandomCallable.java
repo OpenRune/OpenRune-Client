@@ -20,16 +20,16 @@ public class SecureRandomCallable implements Callable {
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "(I)J",
-		garbageValue = "-1949956925"
+		garbageValue = "-1675469054"
 	)
-	public static final synchronized long method2320() {
+	public static final synchronized long method465() {
 		long var0 = System.currentTimeMillis();
-		if (var0 < class317.field3452) {
-			class317.field3451 += class317.field3452 - var0;
+		if (var0 < class317.field2832) {
+			class317.field2833 += class317.field2832 - var0;
 		}
 
-		class317.field3452 = var0;
-		return var0 + class317.field3451;
+		class317.field2832 = var0;
+		return var0 + class317.field2833;
 	}
 
 	@ObfuscatedName("ao")
@@ -37,7 +37,7 @@ public class SecureRandomCallable implements Callable {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "15"
 	)
-	static final void method2319(String var0) {
+	static final void method466(String var0) {
 		class209.addGameMessage(30, "", var0);
 	}
 
@@ -46,7 +46,7 @@ public class SecureRandomCallable implements Callable {
 		descriptor = "(ILjava/lang/String;I)V",
 		garbageValue = "1186987746"
 	)
-	static void method2318(int var0, String var1) {
+	static void method467(int var0, String var1) {
 		int var2 = Players.Players_count;
 		int[] var3 = Players.Players_indices;
 		boolean var4 = false;
@@ -115,11 +115,11 @@ public class SecureRandomCallable implements Callable {
 		}
 
 		if (var0.widthAlignment == 4) {
-			var0.width = var0.field3843 * var0.height / var0.field3732;
+			var0.width = var0.field3066 * var0.height / var0.field3086;
 		}
 
 		if (var0.heightAlignment == 4) {
-			var0.height = var0.field3732 * var0.width / var0.field3843;
+			var0.height = var0.field3086 * var0.width / var0.field3066;
 		}
 
 		if (var0.contentType == 1337) {
@@ -127,7 +127,7 @@ public class SecureRandomCallable implements Callable {
 		}
 
 		if (var0.type == 12) {
-			var0.method6806().method6512(var0.width, var0.height);
+			var0.method1923().method1814(var0.width, var0.height);
 		}
 
 		if (var3 && var0.onResize != null && (var4 != var0.width || var5 != var0.height)) {

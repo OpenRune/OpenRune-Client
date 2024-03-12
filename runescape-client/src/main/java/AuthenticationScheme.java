@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -35,7 +34,7 @@ public enum AuthenticationScheme implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lem;"
 	)
-	field1493(1, 4);
+	field1225(1, 4);
 
 	@ObfuscatedName("tv")
 	@ObfuscatedSignature(
@@ -44,15 +43,9 @@ public enum AuthenticationScheme implements Enum {
 	@Export("pcmPlayer1")
 	static PcmPlayer pcmPlayer1;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -978634339
-	)
 	@Export("schemeId")
 	public final int schemeId;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -761276969
-	)
 	@Export("packetId")
 	final int packetId;
 
@@ -78,14 +71,14 @@ public enum AuthenticationScheme implements Enum {
 	)
 	@Export("Widget_setKeyIgnoreHeld")
 	static final void Widget_setKeyIgnoreHeld(Widget var0, int var1) {
-		if (var0.field3739 == null) {
+		if (var0.field3063 == null) {
 			throw new RuntimeException();
 		} else {
-			if (var0.field3871 == null) {
-				var0.field3871 = new int[var0.field3739.length];
+			if (var0.field3139 == null) {
+				var0.field3139 = new int[var0.field3063.length];
 			}
 
-			var0.field3871[var1] = Integer.MAX_VALUE;
+			var0.field3139[var1] = Integer.MAX_VALUE;
 		}
 	}
 }

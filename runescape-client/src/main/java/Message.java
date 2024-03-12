@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,21 +8,12 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Message")
 public class Message extends DualNode {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 1514907991
-	)
 	@Export("count")
 	int count;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1401588309
-	)
 	@Export("cycle")
 	int cycle;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 998416035
-	)
 	@Export("type")
 	int type;
 	@ObfuscatedName("ai")
@@ -67,7 +57,7 @@ public class Message extends DualNode {
 	)
 	@Export("set")
 	void set(int var1, String var2, String var3, String var4) {
-		this.count = Canvas.method297();
+		this.count = Canvas.method73();
 		this.cycle = Client.cycle;
 		this.type = var1;
 		this.sender = var2;
@@ -154,7 +144,7 @@ public class Message extends DualNode {
 	@Export("fillSenderUsername")
 	final void fillSenderUsername() {
 		if (this.sender != null) {
-			this.senderUsername = new Username(class433.method8127(this.sender), FriendLoginUpdate.loginType);
+			this.senderUsername = new Username(class433.method2238(this.sender), FriendLoginUpdate.loginType);
 		} else {
 			this.senderUsername = null;
 		}
@@ -166,12 +156,12 @@ public class Message extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "-1995268723"
 	)
-	public static void method1184() {
-		ByteArrayPool.field4646.clear();
-		ByteArrayPool.field4646.add(100);
-		ByteArrayPool.field4646.add(5000);
-		ByteArrayPool.field4646.add(10000);
-		ByteArrayPool.field4646.add(30000);
+	public static void method334() {
+		ByteArrayPool.field3830.clear();
+		ByteArrayPool.field3830.add(100);
+		ByteArrayPool.field3830.add(5000);
+		ByteArrayPool.field3830.add(10000);
+		ByteArrayPool.field3830.add(30000);
 	}
 
 	@ObfuscatedName("al")
@@ -204,7 +194,7 @@ public class Message extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "-215564897"
 	)
-	static void method1182() {
+	static void method341() {
 		if (Client.Login_isUsernameRemembered && Login.Login_username != null && Login.Login_username.length() > 0) {
 			Login.currentLoginField = 1;
 		} else {
@@ -218,7 +208,7 @@ public class Message extends DualNode {
 		descriptor = "(B)V",
 		garbageValue = "14"
 	)
-	static void method1173() {
+	static void method342() {
 		Client.mouseLastLastPressedTimeMillis = -1L;
 		if (ByteArrayPool.mouseRecorder != null) {
 			ByteArrayPool.mouseRecorder.index = 0;
@@ -226,37 +216,37 @@ public class Message extends DualNode {
 
 		FadeOutTask.hasFocus = true;
 		Client.hadFocus = true;
-		Client.field583 = -1L;
+		Client.field643 = -1L;
 		class36.reflectionChecks = new IterableNodeDeque();
 		Client.packetWriter.clearBuffer();
 		Client.packetWriter.packetBuffer.offset = 0;
 		Client.packetWriter.serverPacket = null;
 		Client.packetWriter.field1423 = null;
-		Client.packetWriter.field1435 = null;
-		Client.packetWriter.field1424 = null;
+		Client.packetWriter.field1191 = null;
+		Client.packetWriter.field1189 = null;
 		Client.packetWriter.serverPacketLength = 0;
-		Client.packetWriter.field1432 = 0;
+		Client.packetWriter.field1186 = 0;
 		Client.rebootTimer = 0;
 		Client.logoutTimer = 0;
 		Client.hintArrowType = 0;
 		Client.menuOptionsCount = 0;
 		Client.isMenuOpen = false;
-		Archive.method7069(0);
-		ClientPreferences.method2638();
+		Archive.method1974(0);
+		ClientPreferences.method550();
 		Client.isItemSelected = 0;
 		Client.isSpellSelected = false;
 		Client.soundEffectCount = 0;
 		Client.camAngleY = 0;
 		Client.oculusOrbState = 0;
-		MilliClock.field2352 = null;
+		MilliClock.field1892 = null;
 		Client.minimapState = 0;
-		Client.field772 = -1;
+		Client.field559 = -1;
 		Client.destinationX = 0;
 		Client.destinationY = 0;
 		Client.playerAttackOption = AttackOption.AttackOption_hidden;
 		Client.npcAttackOption = AttackOption.AttackOption_hidden;
 		Client.npcCount = 0;
-		class94.method2450();
+		class94.method519();
 
 		int var0;
 		for (var0 = 0; var0 < 2048; ++var0) {
@@ -272,24 +262,24 @@ public class Message extends DualNode {
 		Client.graphicsObjects.clear();
 
 		for (var0 = 0; var0 < 4; ++var0) {
-			for (int var4 = 0; var4 < 104; ++var4) {
+			for (int var1 = 0; var1 < 104; ++var1) {
 				for (int var2 = 0; var2 < 104; ++var2) {
-					Client.groundItems[var0][var4][var2] = null;
+					Client.groundItems[var0][var1][var2] = null;
 				}
 			}
 		}
 
 		Client.pendingSpawns = new NodeDeque();
 		InterfaceParent.friendSystem.clear();
-		if (VarpDefinition.field1855 > 5000) {
+		if (VarpDefinition.field1479 > 5000) {
 		}
 
-		if (Client.field718) {
-			TaskHandler.method4204();
+		if (Client.field399) {
+			TaskHandler.method1106();
 		} else {
-			for (var0 = 0; var0 < VarpDefinition.field1855; ++var0) {
-				VarpDefinition var1 = class148.VarpDefinition_get(var0);
-				if (var1 != null) {
+			for (var0 = 0; var0 < VarpDefinition.field1479; ++var0) {
+				VarpDefinition var3 = class148.VarpDefinition_get(var0);
+				if (var3 != null) {
 					Varps.Varps_temp[var0] = 0;
 					Varps.Varps_main[var0] = 0;
 				}
@@ -302,11 +292,11 @@ public class Message extends DualNode {
 
 		Client.followerIndex = -1;
 		if (Client.rootInterface != -1) {
-			ArchiveLoader.widgetDefinition.method6434(Client.rootInterface);
+			ArchiveLoader.widgetDefinition.method1788(Client.rootInterface);
 		}
 
-		for (InterfaceParent var3 = (InterfaceParent)Client.interfaceParents.first(); var3 != null; var3 = (InterfaceParent)Client.interfaceParents.next()) {
-			SecureRandomFuture.closeInterface(var3, true);
+		for (InterfaceParent var4 = (InterfaceParent)Client.interfaceParents.first(); var4 != null; var4 = (InterfaceParent)Client.interfaceParents.next()) {
+			SecureRandomFuture.closeInterface(var4, true);
 		}
 
 		Client.rootInterface = -1;
@@ -314,14 +304,14 @@ public class Message extends DualNode {
 		Client.meslayerContinueWidget = null;
 		Client.menuOptionsCount = 0;
 		Client.isMenuOpen = false;
-		Client.playerAppearance.method6468((int[])null, (int[])null, new int[]{0, 0, 0, 0, 0}, 0, -1);
+		Client.playerAppearance.method1797((int[])null, (int[])null, new int[]{0, 0, 0, 0, 0}, 0, -1);
 
 		for (var0 = 0; var0 < 8; ++var0) {
 			Client.playerMenuActions[var0] = null;
 			Client.playerOptionsPriorities[var0] = false;
 		}
 
-		PendingSpawn.method2459();
+		PendingSpawn.method524();
 		Client.isLoading = true;
 
 		for (var0 = 0; var0 < 100; ++var0) {

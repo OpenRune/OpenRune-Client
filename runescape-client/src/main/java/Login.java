@@ -1,7 +1,6 @@
 import java.text.DecimalFormat;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,9 +11,6 @@ public class Login {
 	@Export("clearLoginScreen")
 	static boolean clearLoginScreen;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -391415083
-	)
 	@Export("xPadding")
 	static int xPadding;
 	@ObfuscatedName("ai")
@@ -33,7 +29,7 @@ public class Login {
 	@ObfuscatedSignature(
 		descriptor = "Lvg;"
 	)
-	static IndexedSprite field944;
+	static IndexedSprite field811;
 	@ObfuscatedName("ao")
 	@ObfuscatedSignature(
 		descriptor = "Lvd;"
@@ -47,41 +43,23 @@ public class Login {
 	@Export("logoSprite")
 	static IndexedSprite logoSprite;
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = 233350583
-	)
 	@Export("loginBoxX")
 	static int loginBoxX;
 	@ObfuscatedName("ac")
-	@ObfuscatedGetter(
-		intValue = 447660439
-	)
 	@Export("loginBoxCenter")
 	static int loginBoxCenter;
 	@ObfuscatedName("ab")
-	@ObfuscatedGetter(
-		intValue = 184651103
-	)
 	@Export("Login_loadingPercent")
 	static int Login_loadingPercent;
 	@ObfuscatedName("av")
 	@Export("Login_loadingText")
 	static String Login_loadingText;
 	@ObfuscatedName("bc")
-	@ObfuscatedGetter(
-		intValue = 1159528191
-	)
 	@Export("Login_banType")
 	static int Login_banType;
 	@ObfuscatedName("bs")
-	@ObfuscatedGetter(
-		intValue = -55208961
-	)
-	static int field977;
+	static int field787;
 	@ObfuscatedName("cs")
-	@ObfuscatedGetter(
-		intValue = -944531309
-	)
 	@Export("loginIndex")
 	static int loginIndex;
 	@ObfuscatedName("ch")
@@ -103,65 +81,44 @@ public class Login {
 	@Export("Login_password")
 	static String Login_password;
 	@ObfuscatedName("cl")
-	@ObfuscatedGetter(
-		intValue = 2098794601
-	)
-	static int field961;
+	static int field788;
 	@ObfuscatedName("cm")
-	static String[] field962;
+	static String[] field804;
 	@ObfuscatedName("ce")
 	@Export("displayName")
 	static String displayName;
 	@ObfuscatedName("cc")
-	static boolean field979;
+	static boolean field779;
 	@ObfuscatedName("cb")
-	static boolean field965;
+	static boolean field778;
 	@ObfuscatedName("cr")
 	@Export("rememberUsername")
 	static boolean rememberUsername;
 	@ObfuscatedName("dg")
-	@ObfuscatedGetter(
-		intValue = 533840019
-	)
 	@Export("currentLoginField")
 	static int currentLoginField;
 	@ObfuscatedName("dl")
 	@Export("worldSelectOpen")
 	static boolean worldSelectOpen;
 	@ObfuscatedName("dd")
-	@ObfuscatedGetter(
-		intValue = -580995681
-	)
 	@Export("hoveredWorldIndex")
 	static int hoveredWorldIndex;
 	@ObfuscatedName("dh")
-	@ObfuscatedGetter(
-		intValue = -1532341797
-	)
 	@Export("worldSelectPage")
 	static int worldSelectPage;
 	@ObfuscatedName("dj")
-	@ObfuscatedGetter(
-		intValue = 158374319
-	)
 	@Export("worldSelectPagesCount")
 	static int worldSelectPagesCount;
 	@ObfuscatedName("ds")
-	@ObfuscatedGetter(
-		longValue = 4637828618921795853L
-	)
-	static long field974;
+	static long field808;
 	@ObfuscatedName("dy")
-	@ObfuscatedGetter(
-		longValue = 644186663484815623L
-	)
-	static long field975;
+	static long field809;
 	@ObfuscatedName("dz")
-	static String[] field949;
+	static String[] field807;
 	@ObfuscatedName("dp")
-	static String[] field945;
+	static String[] field806;
 	@ObfuscatedName("de")
-	static String[] field946;
+	static String[] field805;
 
 	static {
 		xPadding = 0;
@@ -169,7 +126,7 @@ public class Login {
 		Login_loadingPercent = 10;
 		Login_loadingText = "";
 		Login_banType = -1;
-		field977 = 1;
+		field787 = 1;
 		loginIndex = 0;
 		Login_response0 = "";
 		Login_response1 = "";
@@ -177,11 +134,11 @@ public class Login {
 		Login_response3 = "";
 		Login_username = "";
 		Login_password = "";
-		field961 = 0;
-		field962 = new String[8];
+		field788 = 0;
+		field804 = new String[8];
 		displayName = "";
-		field979 = false;
-		field965 = false;
+		field779 = false;
+		field778 = false;
 		rememberUsername = true;
 		currentLoginField = 0;
 		worldSelectOpen = false;
@@ -190,11 +147,11 @@ public class Login {
 		worldSelectPagesCount = 0;
 		new DecimalFormat("##0.00");
 		new class136();
-		field974 = -1L;
-		field975 = -1L;
-		field949 = new String[]{"title.jpg"};
-		field945 = new String[]{"logo", "logo_deadman_mode", "logo_seasonal_mode", "titlebox", "titlebutton", "titlebutton_large", "play_now_text", "titlebutton_wide42,1", "runes", "title_mute", "options_radio_buttons,0", "options_radio_buttons,2", "options_radio_buttons,4", "options_radio_buttons,6", "sl_back", "sl_flags", "sl_arrows", "sl_stars", "sl_button"};
-		field946 = new String[]{"logo_speedrunning"};
+		field808 = -1L;
+		field809 = -1L;
+		field807 = new String[]{"title.jpg"};
+		field806 = new String[]{"logo", "logo_deadman_mode", "logo_seasonal_mode", "titlebox", "titlebutton", "titlebutton_large", "play_now_text", "titlebutton_wide42,1", "runes", "title_mute", "options_radio_buttons,0", "options_radio_buttons,2", "options_radio_buttons,4", "options_radio_buttons,6", "sl_back", "sl_flags", "sl_arrows", "sl_stars", "sl_button"};
+		field805 = new String[]{"logo_speedrunning"};
 	}
 
 	@ObfuscatedName("aq")
@@ -202,9 +159,9 @@ public class Login {
 		descriptor = "(Lof;I)V",
 		garbageValue = "-276917317"
 	)
-	public static void method2192(AbstractArchive var0) {
+	public static void method434(AbstractArchive var0) {
 		VarpDefinition.VarpDefinition_archive = var0;
-		VarpDefinition.field1855 = VarpDefinition.VarpDefinition_archive.getGroupFileCount(16);
+		VarpDefinition.field1479 = VarpDefinition.VarpDefinition_archive.getGroupFileCount(16);
 	}
 
 	@ObfuscatedName("aq")
@@ -212,7 +169,7 @@ public class Login {
 		descriptor = "(IIII)I",
 		garbageValue = "1394204204"
 	)
-	public static int method2197(int var0, int var1, int var2) {
+	public static int method433(int var0, int var1, int var2) {
 		var2 &= 3;
 		if (var2 == 0) {
 			return var0;
@@ -228,7 +185,7 @@ public class Login {
 		descriptor = "(IIIIB)V",
 		garbageValue = "2"
 	)
-	static final void method2200(int var0, int var1, int var2, int var3) {
+	static final void method435(int var0, int var1, int var2, int var3) {
 		for (int var4 = var1; var4 <= var3 + var1; ++var4) {
 			for (int var5 = var0; var5 <= var0 + var2; ++var5) {
 				if (var5 >= 0 && var5 < 104 && var4 >= 0 && var4 < 104) {
@@ -273,7 +230,7 @@ public class Login {
 		int var38;
 		if (worldSelectOpen) {
 			if (Timer.worldSelectBackSprites == null) {
-				Timer.worldSelectBackSprites = StructComposition.method3877(class311.archive8, "sl_back", "");
+				Timer.worldSelectBackSprites = StructComposition.method1006(class311.archive8, "sl_back", "");
 			}
 
 			if (class162.worldSelectFlagSprites == null) {
@@ -422,7 +379,7 @@ public class Login {
 
 				int var17;
 				for (var17 = var25 * var16; var17 < World.World_count && var16 - worldSelectPage < var38; ++var17) {
-					World var18 = WorldMapID.World_worlds[var17];
+					World var18 = class256.World_worlds[var17];
 					boolean var19 = true;
 					String var20 = Integer.toString(var18.population);
 					if (var18.population == -1) {
@@ -436,32 +393,32 @@ public class Login {
 					class109 var21 = null;
 					int var22 = 0;
 					if (var18.isBeta()) {
-						var21 = var18.isMembersOnly() ? class109.field1404 : class109.field1397;
+						var21 = var18.isMembersOnly() ? class109.field1169 : class109.field1154;
 					} else if (var18.isDeadman()) {
-						var21 = var18.isMembersOnly() ? class109.field1406 : class109.field1405;
-					} else if (var18.method1829()) {
+						var21 = var18.isMembersOnly() ? class109.field1161 : class109.field1168;
+					} else if (var18.method396()) {
 						var22 = 16711680;
-						var21 = var18.isMembersOnly() ? class109.field1396 : class109.field1395;
-					} else if (var18.method1819()) {
-						var21 = var18.isMembersOnly() ? class109.field1401 : class109.field1399;
+						var21 = var18.isMembersOnly() ? class109.field1165 : class109.field1164;
+					} else if (var18.method398()) {
+						var21 = var18.isMembersOnly() ? class109.field1166 : class109.field1162;
 					} else if (var18.isPvp()) {
-						var21 = var18.isMembersOnly() ? class109.field1394 : class109.field1393;
-					} else if (var18.method1820()) {
-						var21 = var18.isMembersOnly() ? class109.field1400 : class109.field1402;
-					} else if (var18.method1838()) {
-						var21 = var18.isMembersOnly() ? class109.field1390 : class109.field1403;
+						var21 = var18.isMembersOnly() ? class109.field1157 : class109.field1160;
+					} else if (var18.method399()) {
+						var21 = var18.isMembersOnly() ? class109.field1156 : class109.field1159;
+					} else if (var18.method400()) {
+						var21 = var18.isMembersOnly() ? class109.field1390 : class109.field1158;
 					}
 
-					if (var21 == null || var21.field1407 >= Timer.worldSelectBackSprites.length) {
-						var21 = var18.isMembersOnly() ? class109.field1392 : class109.field1391;
+					if (var21 == null || var21.field1170 >= Timer.worldSelectBackSprites.length) {
+						var21 = var18.isMembersOnly() ? class109.field1167 : class109.field1163;
 					}
 
 					if (MouseHandler.MouseHandler_x >= var13 && MouseHandler.MouseHandler_y >= var12 && MouseHandler.MouseHandler_x < var13 + var3 && MouseHandler.MouseHandler_y < var36 + var12 && var19) {
 						hoveredWorldIndex = var17;
-						Timer.worldSelectBackSprites[var21.field1407].drawTransOverlayAt(var13, var12, 128, 16777215);
+						Timer.worldSelectBackSprites[var21.field1170].drawTransOverlayAt(var13, var12, 128, 16777215);
 						var15 = true;
 					} else {
-						Timer.worldSelectBackSprites[var21.field1407].drawAt(var13, var12);
+						Timer.worldSelectBackSprites[var21.field1170].drawAt(var13, var12);
 					}
 
 					if (class162.worldSelectFlagSprites != null) {
@@ -481,7 +438,7 @@ public class Login {
 				}
 
 				if (var15) {
-					var17 = var1.stringWidth(WorldMapID.World_worlds[hoveredWorldIndex].activity) + 6;
+					var17 = var1.stringWidth(class256.World_worlds[hoveredWorldIndex].activity) + 6;
 					int var28 = var1.ascent + 8;
 					int var37 = MouseHandler.MouseHandler_y + 25;
 					if (var37 + var28 > 480) {
@@ -490,7 +447,7 @@ public class Login {
 
 					Rasterizer2D.Rasterizer2D_fillRectangle(MouseHandler.MouseHandler_x - var17 / 2, var37, var17, var28, 16777120);
 					Rasterizer2D.Rasterizer2D_drawRectangle(MouseHandler.MouseHandler_x - var17 / 2, var37, var17, var28, 0);
-					var1.drawCentered(WorldMapID.World_worlds[hoveredWorldIndex].activity, MouseHandler.MouseHandler_x, var37 + var1.ascent + 4, 0, -1);
+					var1.drawCentered(class256.World_worlds[hoveredWorldIndex].activity, MouseHandler.MouseHandler_x, var37 + var1.ascent + 4, 0, -1);
 				}
 			}
 
@@ -527,13 +484,13 @@ public class Login {
 					var0.draw("Login: ", loginBoxX + 180 - 110, var30, 16777215, 0);
 					var31 = 200;
 
-					for (var5 = class207.method4107(); var0.stringWidth(var5) > var31; var5 = var5.substring(0, var5.length() - 1)) {
+					for (var5 = class207.method1077(); var0.stringWidth(var5) > var31; var5 = var5.substring(0, var5.length() - 1)) {
 					}
 
 					var0.draw(AbstractFont.escapeBrackets(var5), loginBoxX + 180 - 70, var30, 16777215, 0);
 					var30 += 15;
 
-					for (var6 = class368.method7012(Login_password); var0.stringWidth(var6) > var31; var6 = var6.substring(1)) {
+					for (var6 = class368.method1957(Login_password); var0.stringWidth(var6) > var31; var6 = var6.substring(1)) {
 					}
 
 					var0.draw("Password: " + var6, loginBoxX + 180 - 108, var30, 16777215, 0);
@@ -583,25 +540,25 @@ public class Login {
 					var0.draw("Login: ", loginBoxCenter - 110, var30, 16777215, 0);
 					var31 = 200;
 
-					for (var5 = class207.method4107(); var0.stringWidth(var5) > var31; var5 = var5.substring(1)) {
+					for (var5 = class207.method1077(); var0.stringWidth(var5) > var31; var5 = var5.substring(1)) {
 					}
 
 					var0.draw(AbstractFont.escapeBrackets(var5) + (currentLoginField == 0 & Client.cycle % 40 < 20 ? class370.colorStartTag(16776960) + "|" : ""), loginBoxCenter - 70, var30, 16777215, 0);
 					var30 += 15;
 
-					for (var6 = class368.method7012(Login_password); var0.stringWidth(var6) > var31; var6 = var6.substring(1)) {
+					for (var6 = class368.method1957(Login_password); var0.stringWidth(var6) > var31; var6 = var6.substring(1)) {
 					}
 
 					var0.draw("Password: " + var6 + (currentLoginField == 1 & Client.cycle % 40 < 20 ? class370.colorStartTag(16776960) + "|" : ""), loginBoxCenter - 108, var30, 16777215, 0);
 					var30 += 15;
 					var29 = 277;
 					var7 = loginBoxCenter + -117;
-					IndexedSprite var26 = Players.method2785(Client.Login_isUsernameRemembered, field979);
+					IndexedSprite var26 = Players.method630(Client.Login_isUsernameRemembered, field779);
 					var26.drawAt(var7, var29);
 					var7 = var7 + var26.subWidth + 5;
 					var1.draw("Remember username", var7, var29 + 13, 16776960, 0);
 					var7 = loginBoxCenter + 24;
-					var26 = Players.method2785(class30.clientPreferences.isUsernameHidden(), field965);
+					var26 = Players.method630(class30.clientPreferences.isUsernameHidden(), field778);
 					var26.drawAt(var7, var29);
 					var7 = var7 + var26.subWidth + 5;
 					var1.draw("Hide username", var7, var29 + 13, 16776960, 0);
@@ -614,17 +571,17 @@ public class Login {
 					titlebuttonSprite.drawAt(var9 - 73, var10 - 20);
 					var0.drawCentered("Cancel", var9, var10 + 5, 16777215, 0);
 					var29 = 357;
-					switch(field977) {
+					switch(field787) {
 					case 2:
-						GameEngine.field217 = "Having trouble logging in?";
+						GameEngine.field106 = "Having trouble logging in?";
 						break;
 					default:
-						GameEngine.field217 = "Can't login? Click here.";
+						GameEngine.field106 = "Can't login? Click here.";
 					}
 
-					HttpMethod.field35 = new Bounds(loginBoxCenter, var29, var1.stringWidth(GameEngine.field217), 11);
-					SpriteMask.field3613 = new Bounds(loginBoxCenter, var29, var1.stringWidth("Still having trouble logging in?"), 11);
-					var1.drawCentered(GameEngine.field217, loginBoxCenter, var29, 16777215, 0);
+					HttpMethod.field19 = new Bounds(loginBoxCenter, var29, var1.stringWidth(GameEngine.field106), 11);
+					SpriteMask.field2958 = new Bounds(loginBoxCenter, var29, var1.stringWidth("Still having trouble logging in?"), 11);
+					var1.drawCentered(GameEngine.field106, loginBoxCenter, var29, 16777215, 0);
 				} else if (loginIndex == 3) {
 					var29 = 201;
 					var0.drawCentered("Incorrect username or password.", loginBoxX + 180, var29, 16776960, 0);
@@ -652,7 +609,7 @@ public class Login {
 						var30 += 15;
 						var0.drawCentered(Login_response3, loginBoxX + 180, var30, 16777215, 0);
 						var30 += 15;
-						var0.draw("PIN: " + class368.method7012(MenuAction.otp) + (Client.cycle % 40 < 20 ? class370.colorStartTag(16776960) + "|" : ""), loginBoxX + 180 - 108, var30, 16777215, 0);
+						var0.draw("PIN: " + class368.method1957(MenuAction.otp) + (Client.cycle % 40 < 20 ? class370.colorStartTag(16776960) + "|" : ""), loginBoxX + 180 - 108, var30, 16777215, 0);
 						var30 -= 8;
 						var0.draw("Trust this computer", loginBoxX + 180 - 9, var30, 16776960, 0);
 						var30 += 15;
@@ -689,7 +646,7 @@ public class Login {
 						var0.draw("Username/email: ", loginBoxX + 180 - 145, var30, 16777215, 0);
 						var31 = 174;
 
-						for (var5 = class207.method4107(); var0.stringWidth(var5) > var31; var5 = var5.substring(1)) {
+						for (var5 = class207.method1077(); var0.stringWidth(var5) > var31; var5 = var5.substring(1)) {
 						}
 
 						var0.draw(AbstractFont.escapeBrackets(var5) + (Client.cycle % 40 < 20 ? class370.colorStartTag(16776960) + "|" : ""), loginBoxX + 180 - 34, var30, 16777215, 0);
@@ -716,7 +673,7 @@ public class Login {
 						titlebuttonSprite.drawAt(var4 - 73, var23 - 20);
 						var0.drawCentered("Back", var4, var23 + 5, 16777215, 0);
 					} else if (loginIndex == 7) {
-						if (GameObject.field3131 && !Client.onMobile) {
+						if (GameObject.field2536 && !Client.onMobile) {
 							var29 = 201;
 							var0.drawCentered(Login_response1, loginBoxCenter, var29, 16776960, 0);
 							var30 = var29 + 15;
@@ -727,9 +684,9 @@ public class Login {
 							var30 += 10;
 
 							for (var38 = 0; var38 < 8; ++var38) {
-								titlebuttonSprite.method9884(var4, var30, 30, 40);
-								boolean var39 = var38 == field961 & Client.cycle % 40 < 20;
-								var0.draw((field962[var38] == null ? "" : field962[var38]) + (var39 ? class370.colorStartTag(16776960) + "|" : ""), var4 + 10, var30 + 27, 16777215, 0);
+								titlebuttonSprite.method2730(var4, var30, 30, 40);
+								boolean var39 = var38 == field788 & Client.cycle % 40 < 20;
+								var0.draw((field804[var38] == null ? "" : field804[var38]) + (var39 ? class370.colorStartTag(16776960) + "|" : ""), var4 + 10, var30 + 27, 16777215, 0);
 								if (var38 != 1 && var38 != 3) {
 									var4 += 35;
 								} else {
@@ -792,11 +749,11 @@ public class Login {
 						var31 = 209;
 						var0.drawCentered("Welcome to RuneScape", loginBoxX + 180, var31, 16776960, 0);
 						var4 = var31 + 20;
-						field944.drawAt(var30 - 109, var4);
+						field811.drawAt(var30 - 109, var4);
 						if (displayName.isEmpty()) {
-							class90.field1121.drawAt(var30 - 48, var4 + 18);
+							class90.field916.drawAt(var30 - 48, var4 + 18);
 						} else {
-							class90.field1121.drawAt(var30 - 48, var4 + 5);
+							class90.field916.drawAt(var30 - 48, var4 + 5);
 							var0.drawCentered(displayName, var30, var4 + 68 - 15, 16776960, 0);
 						}
 					} else if (loginIndex == 12) {
@@ -844,7 +801,7 @@ public class Login {
 						case 2:
 							var24 = "The unpaid balance on your account needs";
 							var5 = "to be resolved before you can play.";
-							var6 = Strings.field4010;
+							var6 = Strings.field3392;
 							break;
 						default:
 							class148.Login_promptCredentials(false);
@@ -919,19 +876,19 @@ public class Login {
 				int[] var27 = new int[4];
 				Rasterizer2D.Rasterizer2D_getClipArray(var27);
 				Rasterizer2D.Rasterizer2D_setClip(xPadding, 0, xPadding + 765, WorldMapArea.canvasHeight);
-//				class325.loginScreenRunesAnimation.draw(xPadding - 22, Client.cycle);
-//				class325.loginScreenRunesAnimation.draw(xPadding + 22 + 765 - 128, Client.cycle);
+				class325.loginScreenRunesAnimation.draw(xPadding - 22, Client.cycle);
+				class325.loginScreenRunesAnimation.draw(xPadding + 22 + 765 - 128, Client.cycle);
 				Rasterizer2D.Rasterizer2D_setClipArray(var27);
 			}
 
 			class169.title_muteSprite[class30.clientPreferences.isTitleMusicDisabled() ? 1 : 0].drawAt(xPadding + 765 - 40, 463);
 			if (Client.gameState > 5 && Language.Language_EN == WorldMapCacheName.clientLanguage) {
-				if (ModeWhere.field4514 != null) {
+				if (ModeWhere.field3715 != null) {
 					var30 = xPadding + 5;
 					var31 = 463;
 					byte var42 = 100;
 					byte var41 = 35;
-					ModeWhere.field4514.drawAt(var30, var31);
+					ModeWhere.field3715.drawAt(var30, var31);
 					var0.drawCentered("World" + " " + Client.worldId, var42 / 2 + var30, var41 / 2 + var31 - 2, 16777215, 0);
 					if (PacketBufferNode.World_request != null) {
 						var1.drawCentered("Loading...", var42 / 2 + var30, var41 / 2 + var31 + 12, 16777215, 0);
@@ -939,7 +896,7 @@ public class Login {
 						var1.drawCentered("Click to switch", var42 / 2 + var30, var41 / 2 + var31 + 12, 16777215, 0);
 					}
 				} else {
-					ModeWhere.field4514 = class173.SpriteBuffer_getIndexedSpriteByName(class311.archive8, "sl_button", "");
+					ModeWhere.field3715 = class173.SpriteBuffer_getIndexedSpriteByName(class311.archive8, "sl_button", "");
 				}
 			}
 
@@ -951,24 +908,24 @@ public class Login {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-771978879"
 	)
-	static int method2199(int var0, Script var1, boolean var2) {
+	static int method439(int var0, Script var1, boolean var2) {
 		if (var0 == 6754) {
-			int var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
-			NPCComposition var6 = VarcInt.getNpcDefinition(var5);
-			Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = var6 != null ? var6.name : "";
+			int var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
+			NPCComposition var4 = VarcInt.getNpcDefinition(var3);
+			Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = var4 != null ? var4.name : "";
 			return 1;
 		} else {
-			NPCComposition var3;
+			NPCComposition var5;
 			if (var0 == 6764) {
 				Interpreter.Interpreter_intStackSize -= 2;
-				var3 = VarcInt.getNpcDefinition(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize]);
-				int var4 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
-				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.method3703(var4);
-				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.method3712(var4);
+				var5 = VarcInt.getNpcDefinition(Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize]);
+				int var6 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1];
+				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var5.method963(var6);
+				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var5.method965(var6);
 				return 1;
 			} else if (var0 == 6765) {
-				var3 = VarcInt.getNpcDefinition(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3 != null ? var3.combatLevel : 0;
+				var5 = VarcInt.getNpcDefinition(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var5 != null ? var5.combatLevel * -1839146001 * -1490701553 : 0;
 				return 1;
 			} else {
 				return 2;
@@ -981,10 +938,10 @@ public class Login {
 		descriptor = "(Lom;Ljava/lang/String;I)V",
 		garbageValue = "825713592"
 	)
-	static void method2168(Archive var0, String var1) {
+	static void method437(Archive var0, String var1) {
 		ArchiveLoader var2 = new ArchiveLoader(var0, var1);
 		Client.archiveLoaders.add(var2);
-		Client.field786 += var2.groupCount;
+		Client.field574 += var2.groupCount;
 	}
 
 	@ObfuscatedName("io")
@@ -992,7 +949,7 @@ public class Login {
 		descriptor = "(I)V",
 		garbageValue = "-1626097121"
 	)
-	static final void method2178() {
+	static final void method438() {
 		for (int var0 = 0; var0 < Client.npcCount; ++var0) {
 			int var1 = Client.npcIndices[var0];
 			NPC var2 = Client.npcs[var1];
@@ -1008,14 +965,14 @@ public class Login {
 		descriptor = "(Lng;IIIIIII)V",
 		garbageValue = "301311770"
 	)
-	static final void method2201(Widget var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-		if (Client.field717) {
+	static final void method440(Widget var0, int var1, int var2, int var3, int var4, int var5, int var6) {
+		if (Client.field405) {
 			Client.alternativeScrollbarWidth = 32;
 		} else {
 			Client.alternativeScrollbarWidth = 0;
 		}
 
-		Client.field717 = false;
+		Client.field405 = false;
 		int var7;
 		if (MouseHandler.MouseHandler_currentButton == 1 || !DbTableType.mouseCam && MouseHandler.MouseHandler_currentButton == 4) {
 			if (var5 >= var1 && var5 < var1 + 16 && var6 >= var2 && var6 < var2 + 16) {
@@ -1034,7 +991,7 @@ public class Login {
 				int var9 = var3 - 32 - var7;
 				var0.scrollY = var8 * (var4 - var3) / var9;
 				UserComparator5.invalidateWidget(var0);
-				Client.field717 = true;
+				Client.field405 = true;
 			}
 		}
 
@@ -1053,9 +1010,9 @@ public class Login {
 		descriptor = "(IB)Z",
 		garbageValue = "-70"
 	)
-	static boolean method2193(int var0) {
-		for (int var1 = 0; var1 < Client.field706; ++var1) {
-			if (Client.field768[var1] == var0) {
+	static boolean method441(int var0) {
+		for (int var1 = 0; var1 < Client.field560; ++var1) {
+			if (Client.field607[var1] == var0) {
 				return true;
 			}
 		}
@@ -1068,11 +1025,11 @@ public class Login {
 		descriptor = "(IIIZB)V",
 		garbageValue = "-47"
 	)
-	public static void method2195(int var0, int var1, int var2, boolean var3) {
-		PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field3257, Client.packetWriter.isaacCipher);
+	public static void method442(int var0, int var1, int var2, boolean var3) {
+		PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field2628, Client.packetWriter.isaacCipher);
 		var4.packetBuffer.writeShort(var1);
 		var4.packetBuffer.writeShort(var0);
-		var4.packetBuffer.writeIntLE(var3 ? Client.revision : 0);
+		var4.packetBuffer.writeIntLE(var3 ? Client.revision * 48430203 * -1471577421 : 0);
 		var4.packetBuffer.writeByte(var2);
 		Client.packetWriter.addNode(var4);
 	}

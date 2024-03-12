@@ -20,7 +20,7 @@ public class class190 extends DualNode {
 		descriptor = "(IIIIIIB)I",
 		garbageValue = "-105"
 	)
-	public static int method3772(int var0, int var1, int var2, int var3, int var4, int var5) {
+	public static int method966(int var0, int var1, int var2, int var3, int var4, int var5) {
 		if ((var5 & 1) == 1) {
 			int var6 = var3;
 			var3 = var4;
@@ -42,7 +42,7 @@ public class class190 extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "-1968515161"
 	)
-	public static void method3773() {
+	public static void method967() {
 		ItemComposition.ItemDefinition_cached.clear();
 		ItemComposition.ItemDefinition_cachedModels.clear();
 		ItemComposition.ItemDefinition_cachedSprites.clear();
@@ -53,7 +53,7 @@ public class class190 extends DualNode {
 		descriptor = "(I)V",
 		garbageValue = "1019496566"
 	)
-	static final void method3774() {
+	static final void method968() {
 		if (AuthenticationScheme.pcmPlayer1 != null) {
 			AuthenticationScheme.pcmPlayer1.run();
 		}
@@ -65,7 +65,7 @@ public class class190 extends DualNode {
 		descriptor = "(II)I",
 		garbageValue = "1572187025"
 	)
-	static final int method3768(int var0) {
+	static final int method969(int var0) {
 		return Math.min(Math.max(var0, 128), 383);
 	}
 }

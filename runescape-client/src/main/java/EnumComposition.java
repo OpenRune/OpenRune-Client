@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,7 +16,7 @@ public class EnumComposition extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Ltx;"
 	)
-	static class516 field1931;
+	static class516 field1543;
 	@ObfuscatedName("al")
 	@Export("inputType")
 	public char inputType;
@@ -28,15 +27,9 @@ public class EnumComposition extends DualNode {
 	@Export("defaultStr")
 	public String defaultStr;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = 117030055
-	)
 	@Export("defaultInt")
 	public int defaultInt;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = -1901100175
-	)
 	@Export("outputCount")
 	public int outputCount;
 	@ObfuscatedName("az")

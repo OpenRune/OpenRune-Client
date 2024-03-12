@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -19,7 +18,7 @@ public class Varcs {
 	@ObfuscatedSignature(
 		descriptor = "Lom;"
 	)
-	static Archive field1417;
+	static Archive field1172;
 	@ObfuscatedName("al")
 	@Export("intsPersistence")
 	boolean[] intsPersistence;
@@ -35,10 +34,7 @@ public class Varcs {
 	@Export("unwrittenChanges")
 	boolean unwrittenChanges;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		longValue = 7269891442893699467L
-	)
-	long field1414;
+	long field1177;
 
 	Varcs() {
 		this.unwrittenChanges = false;
@@ -48,12 +44,12 @@ public class Varcs {
 
 		int var2;
 		for (var2 = 0; var2 < var1; ++var2) {
-			VarcInt var3 = class145.method3229(var2);
+			VarcInt var3 = class145.method774(var2);
 			this.intsPersistence[var2] = var3.persist;
 		}
 
 		var2 = 0;
-		if (HttpRequestTask.archive2.method7060(15)) {
+		if (HttpRequestTask.archive2.method1984(15)) {
 			var2 = HttpRequestTask.archive2.getGroupFileCount(15);
 		}
 
@@ -158,7 +154,7 @@ public class Varcs {
 	)
 	@Export("getPreferencesFile")
 	AccessFile getPreferencesFile(boolean var1) {
-		return VarcInt.getPreferencesFile("2", class28.field151.name, var1);
+		return VarcInt.getPreferencesFile("2", class28.field84.name, var1);
 	}
 
 	@ObfuscatedName("ao")
@@ -202,9 +198,9 @@ public class Varcs {
 				if (this.intsPersistence[var14]) {
 					var24.writeShort(var14);
 					Object var8 = var13.getValue();
-					class521 var9 = class521.method9334(var8.getClass());
-					var24.writeByte(var9.field5124);
-					class517 var10 = class521.method9321(var8.getClass());
+					class521 var9 = class521.method2569(var8.getClass());
+					var24.writeByte(var9.field4204);
+					class517 var10 = class521.method2570(var8.getClass());
 					var10.vmethod9339(var8, var24);
 				}
 			}
@@ -220,7 +216,7 @@ public class Varcs {
 		}
 
 		this.unwrittenChanges = false;
-		this.field1414 = SecureRandomCallable.method2320();
+		this.field1177 = SecureRandomCallable.method465();
 	}
 
 	@ObfuscatedName("au")
@@ -232,7 +228,7 @@ public class Varcs {
 	void read() {
 		AccessFile var1 = this.getPreferencesFile(false);
 
-		label244: {
+		label220: {
 			try {
 				byte[] var2 = new byte[(int)var1.length()];
 
@@ -245,12 +241,12 @@ public class Varcs {
 				}
 
 				Buffer var14 = new Buffer(var2);
-				if (var14.array.length - var14.offset < 1) {
-					return;
-				}
+				if (var14.array.length - var14.offset >= 1) {
+					int var15 = var14.readUnsignedByte();
+					if (var15 < 0 || var15 > 2) {
+						return;
+					}
 
-				int var15 = var14.readUnsignedByte();
-				if (var15 >= 0 && var15 <= 2) {
 					int var7;
 					int var8;
 					int var9;
@@ -261,13 +257,13 @@ public class Varcs {
 
 						while (true) {
 							if (var7 >= var16) {
-								break label244;
+								break label220;
 							}
 
 							var8 = var14.readUnsignedShort();
 							var9 = var14.readUnsignedByte();
-							class521 var10 = (class521)class356.findEnumerated(class521.method9335(), var9);
-							Object var11 = var10.method9323(var14);
+							class521 var10 = (class521)class356.findEnumerated(class521.method2568(), var9);
+							Object var11 = var10.method2572(var14);
 							if (var8 >= 0 && var8 < this.intsPersistence.length && this.intsPersistence[var8]) {
 								this.map.put(var8, var11);
 							}
@@ -290,7 +286,7 @@ public class Varcs {
 
 						while (true) {
 							if (var8 >= var7) {
-								break label244;
+								break label220;
 							}
 
 							var14.readUnsignedShort();
@@ -300,7 +296,7 @@ public class Varcs {
 					}
 				}
 			} catch (Exception var25) {
-				break label244;
+				break label220;
 			} finally {
 				try {
 					var1.close();
@@ -322,7 +318,7 @@ public class Varcs {
 	)
 	@Export("tryWrite")
 	void tryWrite() {
-		if (this.unwrittenChanges && this.field1414 < SecureRandomCallable.method2320() - 60000L) {
+		if (this.unwrittenChanges && this.field1177 < SecureRandomCallable.method465() - 60000L) {
 			this.write();
 		}
 
@@ -343,7 +339,7 @@ public class Varcs {
 		descriptor = "(I)[Lox;",
 		garbageValue = "1981251005"
 	)
-	public static StudioGame[] method2838() {
+	public static StudioGame[] method632() {
 		return new StudioGame[]{StudioGame.game5, StudioGame.game4, StudioGame.runescape, StudioGame.stellardawn, StudioGame.oldscape, StudioGame.game3};
 	}
 }

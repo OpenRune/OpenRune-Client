@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -15,7 +14,7 @@ public class ClientPreferences {
 	@ObfuscatedSignature(
 		descriptor = "Lii;"
 	)
-	static Task field1324;
+	static Task field1093;
 	@ObfuscatedName("ar")
 	@Export("roofsHidden")
 	boolean roofsHidden;
@@ -29,43 +28,25 @@ public class ClientPreferences {
 	@Export("displayFps")
 	boolean displayFps;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1866097351
-	)
-	int field1315;
+	int field1104;
 	@ObfuscatedName("au")
 	@Export("brightness")
 	double brightness;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = 736040543
-	)
 	@Export("musicVolume")
 	int musicVolume;
 	@ObfuscatedName("ah")
-	@ObfuscatedGetter(
-		intValue = -1932975703
-	)
 	@Export("soundEffectsVolume")
 	int soundEffectsVolume;
 	@ObfuscatedName("aj")
-	@ObfuscatedGetter(
-		intValue = -375148259
-	)
 	@Export("areaSoundEffectsVolume")
 	int areaSoundEffectsVolume;
 	@ObfuscatedName("af")
-	@ObfuscatedGetter(
-		intValue = -1759293937
-	)
-	int field1320;
+	int field1099;
 	@ObfuscatedName("ax")
 	@Export("rememberedUsername")
 	String rememberedUsername;
 	@ObfuscatedName("an")
-	@ObfuscatedGetter(
-		intValue = -1287239755
-	)
 	@Export("windowMode")
 	int windowMode;
 	@ObfuscatedName("ag")
@@ -79,11 +60,11 @@ public class ClientPreferences {
 		this.musicVolume = 127;
 		this.soundEffectsVolume = 127;
 		this.areaSoundEffectsVolume = 127;
-		this.field1320 = -1;
+		this.field1099 = -1;
 		this.rememberedUsername = null;
 		this.windowMode = 1;
 		this.parameters = new LinkedHashMap();
-		this.method2551(true);
+		this.method552(true);
 	}
 
 	@ObfuscatedSignature(
@@ -96,7 +77,7 @@ public class ClientPreferences {
 		this.musicVolume = 127;
 		this.soundEffectsVolume = 127;
 		this.areaSoundEffectsVolume = 127;
-		this.field1320 = -1;
+		this.field1099 = -1;
 		this.rememberedUsername = null;
 		this.windowMode = 1;
 		this.parameters = new LinkedHashMap();
@@ -141,7 +122,7 @@ public class ClientPreferences {
 				}
 
 				if (var2 > 7) {
-					this.field1320 = var1.readUnsignedByte();
+					this.field1099 = var1.readUnsignedByte();
 				}
 
 				if (var2 > 8) {
@@ -149,13 +130,13 @@ public class ClientPreferences {
 				}
 
 				if (var2 > 9) {
-					this.field1315 = var1.readInt();
+					this.field1104 = var1.readInt();
 				}
 			} else {
-				this.method2551(true);
+				this.method552(true);
 			}
 		} else {
-			this.method2551(true);
+			this.method552(true);
 		}
 
 	}
@@ -165,7 +146,7 @@ public class ClientPreferences {
 		descriptor = "(ZI)V",
 		garbageValue = "-1072051283"
 	)
-	void method2551(boolean var1) {
+	void method552(boolean var1) {
 	}
 
 	@ObfuscatedName("aw")
@@ -195,9 +176,9 @@ public class ClientPreferences {
 		var1.writeByte(this.musicVolume);
 		var1.writeByte(this.soundEffectsVolume);
 		var1.writeByte(this.areaSoundEffectsVolume);
-		var1.writeByte(this.field1320);
+		var1.writeByte(this.field1099);
 		var1.writeByte(this.displayFps ? 1 : 0);
-		var1.writeInt(this.field1315);
+		var1.writeInt(this.field1104);
 		return var1;
 	}
 
@@ -300,8 +281,8 @@ public class ClientPreferences {
 		descriptor = "(IB)V",
 		garbageValue = "53"
 	)
-	void method2564(int var1) {
-		this.field1315 = var1;
+	void method563(int var1) {
+		this.field1104 = var1;
 		class160.savePreferences();
 	}
 
@@ -310,8 +291,8 @@ public class ClientPreferences {
 		descriptor = "(I)I",
 		garbageValue = "997972984"
 	)
-	int method2526() {
-		return this.field1315;
+	int method564() {
+		return this.field1104;
 	}
 
 	@ObfuscatedName("an")
@@ -345,7 +326,7 @@ public class ClientPreferences {
 	@ObfuscatedName("ad")
 	@ObfuscatedSignature(
 		descriptor = "(I)I",
-		garbageValue = "-1645311515"
+		garbageValue = "-373537342"
 	)
 	@Export("getMusicVolume")
 	int getMusicVolume() {
@@ -420,8 +401,8 @@ public class ClientPreferences {
 		descriptor = "(II)V",
 		garbageValue = "1245445754"
 	)
-	void method2550(int var1) {
-		this.field1320 = var1;
+	void method575(int var1) {
+		this.field1099 = var1;
 		class160.savePreferences();
 	}
 
@@ -430,8 +411,8 @@ public class ClientPreferences {
 		descriptor = "(I)I",
 		garbageValue = "-1822932671"
 	)
-	int method2539() {
-		return this.field1320;
+	int method576() {
+		return this.field1099;
 	}
 
 	@ObfuscatedName("bo")
@@ -502,7 +483,7 @@ public class ClientPreferences {
 	)
 	@Export("getParameterKey")
 	int getParameterKey(String var1) {
-		return class130.method3069(var1.toLowerCase());
+		return class130.method719(var1.toLowerCase());
 	}
 
 	@ObfuscatedName("al")
@@ -510,7 +491,7 @@ public class ClientPreferences {
 		descriptor = "(IIIB)I",
 		garbageValue = "8"
 	)
-	static int method2540(int var0, int var1, int var2) {
+	static int method551(int var0, int var1, int var2) {
 		if (var2 > 179) {
 			var1 /= 2;
 		}
@@ -536,7 +517,7 @@ public class ClientPreferences {
 		descriptor = "(I)V",
 		garbageValue = "-1154508453"
 	)
-	static void method2638() {
+	static void method550() {
 		Messages.Messages_channels.clear();
 		Messages.Messages_hashTable.clear();
 		Messages.Messages_queue.clear();
@@ -546,9 +527,9 @@ public class ClientPreferences {
 	@ObfuscatedName("jt")
 	@ObfuscatedSignature(
 		descriptor = "(Ldz;IB)V",
-		garbageValue = "-3"
+		garbageValue = "6"
 	)
-	static final void method2639(Actor var0, int var1) {
+	static final void method583(Actor var0, int var1) {
 		ClanChannelMember.worldToScreen(var0.x, var0.y, var1);
 	}
 }

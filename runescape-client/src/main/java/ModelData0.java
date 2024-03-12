@@ -10,7 +10,7 @@ public class ModelData0 {
 	@ObfuscatedSignature(
 		descriptor = "[Lng;"
 	)
-	static Widget[] field3105;
+	static Widget[] field2514;
 
 	ModelData0() {
 	}
@@ -24,7 +24,7 @@ public class ModelData0 {
 	static DbTable getDbTable(int var0) {
 		DbTable var1 = (DbTable)Client.DBTableIndex_cache.get((long)var0);
 		if (var1 == null) {
-			var1 = new DbTable(class150.field1703, class133.method3115(var0), class227.method4423(var0));
+			var1 = new DbTable(class150.field1376, class133.method734(var0), class227.method1176(var0));
 			Client.DBTableIndex_cache.put(var1, (long)var0);
 		}
 

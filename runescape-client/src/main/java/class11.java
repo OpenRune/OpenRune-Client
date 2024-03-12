@@ -5,10 +5,8 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.util.LinkedList;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
-import net.runelite.rs.ScriptOpcodes;
 import org.bouncycastle.crypto.tls.Certificate;
 import org.bouncycastle.crypto.tls.CertificateRequest;
 import org.bouncycastle.crypto.tls.TlsAuthentication;
@@ -20,14 +18,13 @@ class class11 implements TlsAuthentication {
 	@Export("cacheDir")
 	static File cacheDir;
 	@ObfuscatedName("uo")
-	@ObfuscatedGetter(
-		intValue = 1485127680
-	)
-	static int field46;
+	static int field35;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Laf;"
 	)
+	@Export("this$2")
+	@ObfuscatedName("this$2")
 	final class13 this$2;
 
 	@ObfuscatedSignature(
@@ -48,7 +45,7 @@ class class11 implements TlsAuthentication {
 				var3.add(var2.generateCertificate(new ByteArrayInputStream(var6.getEncoded())));
 			}
 
-			this.this$2.this$1.field55 = (java.security.cert.Certificate[])((java.security.cert.Certificate[])var3.toArray(new java.security.cert.Certificate[0]));
+			this.this$2.this$1.field41 = (java.security.cert.Certificate[])((java.security.cert.Certificate[])var3.toArray(new java.security.cert.Certificate[0]));
 		} catch (CertificateException var7) {
 			throw new IOException(var7);
 		}
@@ -63,14 +60,14 @@ class class11 implements TlsAuthentication {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-133285941"
 	)
-	static int method106(int var0, Script var1, boolean var2) {
+	static int method38(int var0, Script var1, boolean var2) {
 		Widget var3;
-		if (var0 == ScriptOpcodes.IF_GETINVOBJECT) {
-			var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+		if (var0 == 2700) {
+			var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.itemId;
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETINVCOUNT) {
-			var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+		} else if (var0 == 2701) {
+			var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
 			if (var3.itemId != -1) {
 				Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.itemQuantity;
 			} else {
@@ -78,7 +75,7 @@ class class11 implements TlsAuthentication {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_HASSUB) {
+		} else if (var0 == 2702) {
 			int var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize];
 			InterfaceParent var4 = (InterfaceParent)Client.interfaceParents.get((long)var5);
 			if (var4 != null) {
@@ -88,19 +85,19 @@ class class11 implements TlsAuthentication {
 			}
 
 			return 1;
-		} else if (var0 == ScriptOpcodes.IF_GETTOP) {
+		} else if (var0 == 2706) {
 			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = Client.rootInterface;
 			return 1;
 		} else if (var0 == 2707) {
-			var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.method6895() ? 1 : 0;
+			var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+			Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = var3.method1912() ? 1 : 0;
 			return 1;
 		} else if (var0 == 2708) {
-			var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-			return HttpRequestTask.method258(var3);
+			var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+			return HttpRequestTask.method59(var3);
 		} else if (var0 == 2709) {
-			var3 = ArchiveLoader.widgetDefinition.method6431(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
-			return class371.method7024(var3);
+			var3 = ArchiveLoader.widgetDefinition.method1785(Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+			return class371.method1965(var3);
 		} else {
 			return 2;
 		}
@@ -111,10 +108,10 @@ class class11 implements TlsAuthentication {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-2113853015"
 	)
-	static int method100(int var0, Script var1, boolean var2) {
+	static int method39(int var0, Script var1, boolean var2) {
 		if (var0 == 7463) {
 			boolean var3 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize] == 1;
-			class157.method3399(var3);
+			class157.method837(var3);
 			return 1;
 		} else {
 			return 2;
@@ -137,7 +134,7 @@ class class11 implements TlsAuthentication {
 				int var10 = var9 * var2 + var3 * var8 >> 16;
 				int var11 = var3 * var9 - var8 * var2 >> 16;
 				if (var7 > 2500) {
-					var4.method9926(var10 + var5.width / 2 - var4.width / 2, var5.height / 2 - var11 - var4.height / 2, var0, var1, var5.width, var5.height, var5.xStarts, var5.xWidths);
+					var4.method2760(var10 + var5.width / 2 - var4.width / 2, var5.height / 2 - var11 - var4.height / 2, var0, var1, var5.width, var5.height, var5.xStarts, var5.xWidths);
 				} else {
 					var4.drawTransBgAt(var0 + var10 + var5.width / 2 - var4.width / 2, var5.height / 2 + var1 - var11 - var4.height / 2);
 				}

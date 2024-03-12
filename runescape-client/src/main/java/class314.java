@@ -1,4 +1,3 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,78 +7,72 @@ public class class314 implements class309 {
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3435;
+	public static final class314 field2818;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3425;
+	public static final class314 field2821;
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3424;
+	public static final class314 field2817;
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3426;
+	public static final class314 field2816;
 	@ObfuscatedName("ar")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3433;
+	public static final class314 field2819;
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3429;
+	public static final class314 field2820;
 	@ObfuscatedName("aa")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	public static final class314 field3430;
+	public static final class314 field2815;
 	@ObfuscatedName("az")
 	@ObfuscatedSignature(
 		descriptor = "Lmf;"
 	)
-	static final class314 field3427;
+	static final class314 field2822;
 	@ObfuscatedName("ak")
 	@ObfuscatedSignature(
 		descriptor = "[Lmf;"
 	)
-	static final class314[] field3434;
+	static final class314[] field2823;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 858522627
-	)
-	public final int field3432;
+	public final int field2824;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1221085013
-	)
-	public final int field3431;
+	public final int field2825;
 
 	static {
-		field3435 = new class314(14, 0);
-		field3425 = new class314(15, 4);
-		field3424 = new class314(16, -2);
-		field3426 = new class314(18, -2);
-		field3433 = new class314(19, -2);
-		field3429 = new class314(20, 58);
-		field3430 = new class314(21, 37);
-		field3427 = new class314(27, 0);
-		field3434 = new class314[32];
-		class314[] var0 = class172.method3542();
+		field2818 = new class314(14, 0);
+		field2821 = new class314(15, 4);
+		field2817 = new class314(16, -2);
+		field2816 = new class314(18, -2);
+		field2819 = new class314(19, -2);
+		field2820 = new class314(20, 58);
+		field2815 = new class314(21, 37);
+		field2822 = new class314(27, 0);
+		field2823 = new class314[32];
+		class314[] var0 = class172.method892();
 
 		for (int var1 = 0; var1 < var0.length; ++var1) {
-			field3434[var0[var1].field3432] = var0[var1];
+			field2823[var0[var1].field2824] = var0[var1];
 		}
 
 	}
 
 	class314(int var1, int var2) {
-		this.field3432 = var1;
-		this.field3431 = var2;
+		this.field2824 = var1;
+		this.field2825 = var2;
 	}
 }

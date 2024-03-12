@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,12 +7,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("BuddyRankComparator")
 public class BuddyRankComparator extends AbstractUserComparator {
 	@ObfuscatedName("aa")
-	static boolean[] field1481;
+	static boolean[] field1218;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 460990005
-	)
-	static int field1480;
+	static int field1219;
 	@ObfuscatedName("aq")
 	@Export("reversed")
 	final boolean reversed;
@@ -45,7 +41,7 @@ public class BuddyRankComparator extends AbstractUserComparator {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "1302234549"
 	)
-	static int method2976(int var0, Script var1, boolean var2) {
+	static int method689(int var0, Script var1, boolean var2) {
 		return 2;
 	}
 
@@ -92,7 +88,7 @@ public class BuddyRankComparator extends AbstractUserComparator {
 				}
 			}
 
-			class103.method2750(var2, var3, true);
+			class103.method618(var2, var3, true);
 		} else {
 			boolean var15 = var1.readUnsignedByteAdd() == 1;
 			var3 = var1.readUnsignedShortAdd();
@@ -161,7 +157,7 @@ public class BuddyRankComparator extends AbstractUserComparator {
 				}
 			}
 
-			class103.method2750(var4, var3, !var15);
+			class103.method618(var4, var3, !var15);
 		}
 
 	}

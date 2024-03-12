@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,10 +13,7 @@ public class ChatChannel {
 	@Export("headIconHintSprites")
 	static SpritePixels[] headIconHintSprites;
 	@ObfuscatedName("ui")
-	@ObfuscatedGetter(
-		intValue = 330495129
-	)
-	static int field1045;
+	static int field868;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "[Lcy;"
@@ -25,9 +21,6 @@ public class ChatChannel {
 	@Export("messages")
 	Message[] messages;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 1578030201
-	)
 	@Export("count")
 	int count;
 
@@ -95,7 +88,7 @@ public class ChatChannel {
 	static final void updatePlayers(PacketBuffer var0, int var1) {
 		int var2 = var0.offset;
 		Players.Players_pendingUpdateCount = 0;
-		class198.method3835(var0);
+		class198.method995(var0);
 
 		for (int var3 = 0; var3 < Players.Players_pendingUpdateCount; ++var3) {
 			int var4 = Players.Players_pendingUpdateIndices[var3];
@@ -109,7 +102,7 @@ public class ChatChannel {
 				var6 += var0.readUnsignedByte() << 16;
 			}
 
-			GameBuild.method6999(var0, var4, var5, var6);
+			GameBuild.method1951(var0, var4, var5, var6);
 		}
 
 		if (var0.offset - var2 != var1) {
@@ -122,7 +115,7 @@ public class ChatChannel {
 		descriptor = "(I)V",
 		garbageValue = "-361858122"
 	)
-	static void method2249() {
+	static void method463() {
 		MenuAction.otp.trim();
 		if (MenuAction.otp.length() != 6) {
 			SecureUrlRequester.setLoginResponseString("", "Please enter a 6-digit PIN.", "");

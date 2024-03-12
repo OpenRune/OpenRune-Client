@@ -13,7 +13,7 @@ public abstract class PcmStream extends Node {
 	@Export("after")
 	PcmStream after;
 	@ObfuscatedName("ag")
-	int field348;
+	int field243;
 	@ObfuscatedName("am")
 	@ObfuscatedSignature(
 		descriptor = "Lcx;"
@@ -43,6 +43,7 @@ public abstract class PcmStream extends Node {
 	protected abstract PcmStream nextSubStream();
 
 	@ObfuscatedName("az")
+	@Export("vmethod6346")
 	protected abstract int vmethod6346();
 
 	@ObfuscatedName("ao")
@@ -54,6 +55,7 @@ public abstract class PcmStream extends Node {
 	protected abstract void skip(int var1);
 
 	@ObfuscatedName("bh")
+	@Export("vmethod1014")
 	int vmethod1014() {
 		return 255;
 	}

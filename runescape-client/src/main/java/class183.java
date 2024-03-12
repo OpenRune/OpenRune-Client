@@ -17,7 +17,7 @@ public class class183 extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Ltv;"
 	)
-	static Fonts field1925;
+	static Fonts field1541;
 
 	static {
 		field2007 = new EvictingDualNodeHashTable(64);
@@ -28,7 +28,7 @@ public class class183 extends DualNode {
 		descriptor = "(Ljava/lang/CharSequence;I)Ljava/lang/String;",
 		garbageValue = "732819098"
 	)
-	public static String method3663(CharSequence var0) {
+	public static String method937(CharSequence var0) {
 		int var1 = var0.length();
 		StringBuilder var2 = new StringBuilder(var1);
 

@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,27 +7,15 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("CollisionMap")
 public class CollisionMap {
 	@ObfuscatedName("bk")
-	@ObfuscatedGetter(
-		intValue = 1240242239
-	)
 	@Export("xInset")
 	int xInset;
 	@ObfuscatedName("bm")
-	@ObfuscatedGetter(
-		intValue = -1738192267
-	)
 	@Export("yInset")
 	int yInset;
 	@ObfuscatedName("bw")
-	@ObfuscatedGetter(
-		intValue = 2147461673
-	)
 	@Export("xSize")
 	int xSize;
 	@ObfuscatedName("bv")
-	@ObfuscatedGetter(
-		intValue = -1249642927
-	)
 	@Export("ySize")
 	int ySize;
 	@ObfuscatedName("by")
@@ -68,7 +55,7 @@ public class CollisionMap {
 		descriptor = "(IIIIZI)V",
 		garbageValue = "665290822"
 	)
-	public void method4504(int var1, int var2, int var3, int var4, boolean var5) {
+	public void method1194(int var1, int var2, int var3, int var4, boolean var5) {
 		var1 -= this.xInset;
 		var2 -= this.yInset;
 		if (var3 == 0) {
@@ -218,7 +205,7 @@ public class CollisionMap {
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "(IIIIZI)V",
-		garbageValue = "1841586054"
+		garbageValue = "-992356473"
 	)
 	@Export("addGameObject")
 	public void addGameObject(int var1, int var2, int var3, int var4, boolean var5) {
@@ -284,7 +271,7 @@ public class CollisionMap {
 		descriptor = "(IIIIZI)V",
 		garbageValue = "2079558106"
 	)
-	public void method4476(int var1, int var2, int var3, int var4, boolean var5) {
+	public void method1199(int var1, int var2, int var3, int var4, boolean var5) {
 		var1 -= this.xInset;
 		var2 -= this.yInset;
 		if (var3 == 0) {
@@ -480,7 +467,7 @@ public class CollisionMap {
 		descriptor = "(III)V",
 		garbageValue = "-941897487"
 	)
-	public void method4489(int var1, int var2) {
+	public void method1202(int var1, int var2) {
 		var1 -= this.xInset;
 		var2 -= this.yInset;
 		int[] var10000 = this.flags[var1];
@@ -492,7 +479,7 @@ public class CollisionMap {
 		descriptor = "(Lvd;IIII)V",
 		garbageValue = "-1901946014"
 	)
-	static void method4469(SpritePixels var0, int var1, int var2, int var3) {
+	static void method1192(SpritePixels var0, int var1, int var2, int var3) {
 		DemotingHashTable var4 = WorldMapRegion.WorldMapRegion_cachedSprites;
 		long var6 = (long)(var3 << 16 | var1 << 8 | var2);
 		var4.put(var0, var6, var0.pixels.length * 4);
@@ -503,7 +490,7 @@ public class CollisionMap {
 		descriptor = "(ILdc;ZB)I",
 		garbageValue = "-110"
 	)
-	static int method4470(int var0, Script var1, boolean var2) {
+	static int method1203(int var0, Script var1, boolean var2) {
 		return 2;
 	}
 
@@ -512,14 +499,14 @@ public class CollisionMap {
 		descriptor = "(ILdc;ZI)I",
 		garbageValue = "-1752894688"
 	)
-	static int method4501(int var0, Script var1, boolean var2) {
+	static int method1204(int var0, Script var1, boolean var2) {
 		int var3;
 		int var4;
 		if (var0 == 8000) {
 			--Interpreter.Interpreter_intStackSize;
 			var3 = Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize];
 			var4 = Interpreter.Interpreter_arrayLengths[var3];
-			MouseRecorder.method2364(Interpreter.Interpreter_arrays[var3], new int[var4], 0, var4 - 1);
+			MouseRecorder.method484(Interpreter.Interpreter_arrays[var3], new int[var4], 0, var4 - 1);
 			return 1;
 		} else if (var0 == 8001) {
 			Interpreter.Interpreter_intStackSize -= 3;
@@ -530,7 +517,7 @@ public class CollisionMap {
 			if (var6 <= 1) {
 				return 1;
 			} else {
-				class428.method8056(Interpreter.Interpreter_arrays[var3], var6, var4, var5);
+				class428.method2226(Interpreter.Interpreter_arrays[var3], var6, var4, var5);
 				return 1;
 			}
 		} else {
@@ -543,11 +530,11 @@ public class CollisionMap {
 		descriptor = "(B)V",
 		garbageValue = "1"
 	)
-	static final void method4503() {
+	static final void method1205() {
 		for (PendingSpawn var0 = (PendingSpawn)Client.pendingSpawns.last(); var0 != null; var0 = (PendingSpawn)Client.pendingSpawns.previous()) {
 			if (var0.hitpoints == -1) {
 				var0.delay = 0;
-				class209.method4126(var0);
+				class209.method1085(var0);
 			} else {
 				var0.remove();
 			}

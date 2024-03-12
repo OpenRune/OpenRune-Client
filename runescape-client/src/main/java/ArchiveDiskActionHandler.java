@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -20,14 +19,11 @@ public class ArchiveDiskActionHandler implements Runnable {
 	@Export("ArchiveDiskActionHandler_responseQueue")
 	static NodeDeque ArchiveDiskActionHandler_responseQueue;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -407533941
-	)
-	static int field4362;
+	static int field3605;
 	@ObfuscatedName("ai")
-	static boolean field4363;
+	static boolean field3604;
 	@ObfuscatedName("ar")
-	static Object field4365;
+	static Object field3606;
 	@ObfuscatedName("as")
 	@Export("ArchiveDiskActionHandler_thread")
 	static Thread ArchiveDiskActionHandler_thread;
@@ -35,14 +31,16 @@ public class ArchiveDiskActionHandler implements Runnable {
 	static {
 		ArchiveDiskActionHandler_requestQueue = new NodeDeque();
 		ArchiveDiskActionHandler_responseQueue = new NodeDeque();
-		field4362 = 0;
-		field4363 = false;
-		field4365 = new Object();
+		field3605 = 0;
+		field3604 = false;
+		field3606 = new Object();
 	}
 
 	ArchiveDiskActionHandler() {
 	}
 
+//	@Export("run")
+//	@ObfuscatedName("run")
 	public void run() {
 		try {
 			while (true) {
@@ -64,25 +62,25 @@ public class ArchiveDiskActionHandler implements Runnable {
 						}
 					}
 
-					synchronized(field4365) {
-						if ((field4363 || field4362 <= 1) && ArchiveDiskActionHandler_requestQueue.method7425()) {
-							field4362 = 0;
-							field4365.notifyAll();
+					synchronized(field3606) {
+						if ((field3604 || field3605 <= 1) && ArchiveDiskActionHandler_requestQueue.method2080()) {
+							field3605 = 0;
+							field3606.notifyAll();
 							return;
 						}
 
-						field4362 = 600;
+						field3605 = 600;
 					}
 				} else {
-					LoginPacket.method3209(100L);
-					synchronized(field4365) {
-						if ((field4363 || field4362 <= 1) && ArchiveDiskActionHandler_requestQueue.method7425()) {
-							field4362 = 0;
-							field4365.notifyAll();
+					LoginPacket.method764(100L);
+					synchronized(field3606) {
+						if ((field3604 || field3605 <= 1) && ArchiveDiskActionHandler_requestQueue.method2080()) {
+							field3605 = 0;
+							field3606.notifyAll();
 							return;
 						}
 
-						--field4362;
+						--field3605;
 					}
 				}
 			}

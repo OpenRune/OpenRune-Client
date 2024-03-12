@@ -6,7 +6,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,9 +16,6 @@ public class AsyncRestClient {
 	@Export("garbageCollector")
 	static GarbageCollectorMXBean garbageCollector;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 1265131985
-	)
 	@Export("workQueueCapacity")
 	final int workQueueCapacity;
 	@ObfuscatedName("aw")
@@ -52,7 +48,7 @@ public class AsyncRestClient {
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "(Lak;B)Lad;",
-		garbageValue = "-86"
+		garbageValue = "-59"
 	)
 	@Export("submitRequest")
 	public AsyncHttpResponse submitRequest(HttpRequest var1) {
@@ -85,7 +81,7 @@ public class AsyncRestClient {
 		descriptor = "(S)V",
 		garbageValue = "26903"
 	)
-	public static void method165() {
+	public static void method46() {
 		FloorUnderlayDefinition.FloorUnderlayDefinition_cached.clear();
 	}
 
@@ -94,12 +90,12 @@ public class AsyncRestClient {
 		descriptor = "(Lng;Lnt;ZI)V",
 		garbageValue = "-550444644"
 	)
-	public static void method161(Widget var0, PlayerComposition var1, boolean var2) {
+	public static void method47(Widget var0, PlayerComposition var1, boolean var2) {
 		var0.modelType = 7;
-		var0.field3774 = new PlayerComposition(var1);
+		var0.field3186 = new PlayerComposition(var1);
 		if (!var2) {
-			var0.field3774.equipment = Arrays.copyOf(var0.field3774.field3666, var0.field3774.field3666.length);
-			var0.field3774.method6477();
+			var0.field3186.equipment = Arrays.copyOf(var0.field3186.field3003, var0.field3186.field3003.length);
+			var0.field3186.method1807();
 		}
 
 	}

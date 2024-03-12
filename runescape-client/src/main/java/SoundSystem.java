@@ -17,6 +17,8 @@ public class SoundSystem implements Runnable {
 		this.players = new PcmPlayer[2];
 	}
 
+//	@Export("run")
+//	@ObfuscatedName("run")
 	public void run() {
 		try {
 			for (int var1 = 0; var1 < 2; ++var1) {
@@ -32,7 +34,7 @@ public class SoundSystem implements Runnable {
 	}
 
 	@ObfuscatedName("as")
-	public static int method809(long var0) {
+	public static int method209(long var0) {
 		return (int)(var0 >>> 7 & 127L);
 	}
 
@@ -41,11 +43,11 @@ public class SoundSystem implements Runnable {
 		descriptor = "(IZIB)V",
 		garbageValue = "115"
 	)
-	public static final void method805(int var0, boolean var1, int var2) {
+	public static final void method208(int var0, boolean var1, int var2) {
 		if (var0 >= 8000 && var0 <= 48000) {
-			PcmPlayer.field295 = var0;
+			PcmPlayer.field183 = var0;
 			PcmPlayer.PcmPlayer_stereo = var1;
-			class362.field3960 = var2;
+			class362.field3232 = var2;
 		} else {
 			throw new IllegalArgumentException();
 		}
@@ -56,7 +58,7 @@ public class SoundSystem implements Runnable {
 		descriptor = "(I)I",
 		garbageValue = "-1560357606"
 	)
-	static int method808() {
+	static int method210() {
 		return Login.loginIndex;
 	}
 
@@ -65,7 +67,7 @@ public class SoundSystem implements Runnable {
 		descriptor = "(II)Ljava/lang/String;",
 		garbageValue = "2146340843"
 	)
-	static String method810(int var0) {
+	static String method211(int var0) {
 		if (var0 < 0) {
 			return "";
 		} else {
@@ -78,7 +80,7 @@ public class SoundSystem implements Runnable {
 		descriptor = "(Lng;I)Z",
 		garbageValue = "-2081066520"
 	)
-	static final boolean method807(Widget var0) {
+	static final boolean method212(Widget var0) {
 		int var1 = var0.contentType;
 		if (var1 == 205) {
 			Client.logoutTimer = 250;
@@ -95,19 +97,19 @@ public class SoundSystem implements Runnable {
 			if (var1 >= 314 && var1 <= 323) {
 				var2 = (var1 - 314) / 2;
 				var3 = var1 & 1;
-				Client.playerAppearance.method6471(var2, var3 == 1);
+				Client.playerAppearance.method1800(var2, var3 == 1);
 			}
 
 			if (var1 == 324) {
-				Client.playerAppearance.method6493(0);
+				Client.playerAppearance.method1801(0);
 			}
 
 			if (var1 == 325) {
-				Client.playerAppearance.method6493(1);
+				Client.playerAppearance.method1801(1);
 			}
 
 			if (var1 == 326) {
-				PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field3201, Client.packetWriter.isaacCipher);
+				PacketBufferNode var4 = ViewportMouse.getPacketBufferNode(ClientPacket.field2605, Client.packetWriter.isaacCipher);
 				Client.playerAppearance.write(var4.packetBuffer);
 				Client.packetWriter.addNode(var4);
 				return true;

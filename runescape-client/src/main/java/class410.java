@@ -1,59 +1,50 @@
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import net.runelite.mapping.ObfuscatedGetter;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("pm")
 public class class410 implements Iterator {
 	@ObfuscatedName("gb")
-	@ObfuscatedGetter(
-		intValue = -1593024751
-	)
-	static int field4556;
+	static int field3758;
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
 		descriptor = "Lpj;"
 	)
-	class411 field4558;
+	class411 field3761;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -1806140175
-	)
-	int field4557;
+	int field3760;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -591196913
-	)
-	int field4559;
+	int field3759;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lpj;)V"
 	)
 	class410(class411 var1) {
-		this.field4557 = 0;
-		this.field4559 = this.field4558.field4561;
-		this.field4558 = var1;
+		this.field3760 = 0;
+		this.field3759 = this.field3761.field3763;
+		this.field3761 = var1;
 	}
 
-	public void remove() {
-		throw new UnsupportedOperationException();
+	public boolean hasNext() {
+		return this.field3760 < this.field3761.field3762;
 	}
 
 	public Object next() {
-		if (this.field4558.field4561 != this.field4559) {
+		if (this.field3761.field3763 != this.field3759) {
 			throw new ConcurrentModificationException();
-		} else if (this.field4557 < this.field4558.field4563) {
-			Object var1 = this.field4558.field4562[this.field4557].field4554;
-			++this.field4557;
+		} else if (this.field3760 < this.field3761.field3762) {
+			Object var1 = this.field3761.field3765[this.field3760].field3757;
+			++this.field3760;
 			return var1;
 		} else {
 			throw new NoSuchElementException();
 		}
 	}
 
-	public boolean hasNext() {
-		return this.field4557 < this.field4558.field4563;
+	public void remove() {
+		throw new UnsupportedOperationException();
 	}
 }

@@ -40,9 +40,9 @@ public class class433 {
 				return var0.activity.compareTo(var1.activity);
 			}
 		} else if (var2 == 4) {
-			return var0.method1816() ? (var1.method1816() ? 0 : 1) : (var1.method1816() ? -1 : 0);
+			return var0.method395() ? (var1.method395() ? 0 : 1) : (var1.method395() ? -1 : 0);
 		} else if (var2 == 5) {
-			return var0.method1814() ? (var1.method1814() ? 0 : 1) : (var1.method1814() ? -1 : 0);
+			return var0.method393() ? (var1.method393() ? 0 : 1) : (var1.method393() ? -1 : 0);
 		} else if (var2 == 6) {
 			return var0.isPvp() ? (var1.isPvp() ? 0 : 1) : (var1.isPvp() ? -1 : 0);
 		} else if (var2 == 7) {
@@ -57,12 +57,12 @@ public class class433 {
 		descriptor = "(Ljava/lang/String;I)Ljava/lang/String;",
 		garbageValue = "-758637940"
 	)
-	static String method8127(String var0) {
+	static String method2238(String var0) {
 		PlayerType[] var1 = FontName.PlayerType_values();
 
 		for (int var2 = 0; var2 < var1.length; ++var2) {
 			PlayerType var3 = var1[var2];
-			if (var3.modIcon != -1 && var0.startsWith(class415.method7833(var3.modIcon))) {
+			if (var3.modIcon != -1 && var0.startsWith(class415.method2158(var3.modIcon))) {
 				var0 = var0.substring(6 + Integer.toString(var3.modIcon).length());
 				break;
 			}

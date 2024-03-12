@@ -8,7 +8,7 @@ public class class368 {
 		descriptor = "(II)Ljava/lang/String;",
 		garbageValue = "-1891610836"
 	)
-	static final String method7010(int var0) {
+	static final String method1958(int var0) {
 		if (var0 < 100000) {
 			return "<col=ffff00>" + var0 + "</col>";
 		} else {
@@ -21,7 +21,7 @@ public class class368 {
 		descriptor = "(Ljava/lang/CharSequence;I)Ljava/lang/String;",
 		garbageValue = "-462155747"
 	)
-	public static String method7012(CharSequence var0) {
+	public static String method1957(CharSequence var0) {
 		int var2 = var0.length();
 		char[] var3 = new char[var2];
 
@@ -38,7 +38,7 @@ public class class368 {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "90"
 	)
-	static final void method7011(String var0) {
-		SecureRandomCallable.method2319(var0 + " is already on your ignore list");
+	static final void method1956(String var0) {
+		SecureRandomCallable.method466(var0 + " is already on your ignore list");
 	}
 }

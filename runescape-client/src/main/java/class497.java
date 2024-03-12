@@ -1,26 +1,19 @@
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("tk")
 public class class497 extends class499 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1572270949
-	)
-	int field4977;
+	int field4067;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 954734261
-	)
-	int field4978;
+	int field4068;
 
 	public class497(int var1, int var2, int var3, int var4) {
 		super(var3, var4);
-		this.field4977 = 0;
-		this.field4978 = 0;
-		this.field4977 = var1;
-		this.field4978 = var2;
+		this.field4067 = 0;
+		this.field4068 = 0;
+		this.field4067 = var1;
+		this.field4068 = var2;
 	}
 
 	@ObfuscatedName("aq")
@@ -28,8 +21,8 @@ public class class497 extends class499 {
 		descriptor = "(I)I",
 		garbageValue = "2068931324"
 	)
-	public int method8865() {
-		double var1 = this.method8876();
-		return (int)Math.round((double)this.field4977 + var1 * (double)(this.field4978 - this.field4977));
+	public int method2447() {
+		double var1 = this.method2452();
+		return (int)Math.round((double)this.field4067 + var1 * (double)(this.field4068 - this.field4067));
 	}
 }

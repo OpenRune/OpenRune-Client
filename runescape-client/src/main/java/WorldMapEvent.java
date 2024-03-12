@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,9 +7,6 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("WorldMapEvent")
 public class WorldMapEvent {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -199471253
-	)
 	@Export("mapElement")
 	public int mapElement;
 	@ObfuscatedName("aw")

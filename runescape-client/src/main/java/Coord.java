@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,21 +7,12 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("Coord")
 public class Coord {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1626902329
-	)
 	@Export("plane")
 	public int plane;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1359676603
-	)
 	@Export("x")
 	public int x;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 831568535
-	)
 	@Export("y")
 	public int y;
 

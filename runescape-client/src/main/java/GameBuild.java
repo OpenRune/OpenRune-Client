@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -32,17 +31,11 @@ public class GameBuild {
 	@Export("WIP")
 	static final GameBuild WIP;
 	@ObfuscatedName("tq")
-	@ObfuscatedGetter(
-		intValue = 501795079
-	)
-	static int field3978;
+	static int field3240;
 	@ObfuscatedName("ar")
 	@Export("name")
 	public final String name;
 	@ObfuscatedName("as")
-	@ObfuscatedGetter(
-		intValue = -2048598199
-	)
 	@Export("buildId")
 	final int buildId;
 
@@ -63,40 +56,40 @@ public class GameBuild {
 		descriptor = "(Lun;ILdj;IB)V",
 		garbageValue = "97"
 	)
-	static final void method6999(PacketBuffer var0, int var1, Player var2, int var3) {
-		byte var4 = class233.field2471.field2473;
+	static final void method1951(PacketBuffer var0, int var1, Player var2, int var3) {
+		byte var4 = class233.field1990.field1992;
 		if ((var3 & 4096) != 0) {
-			var2.field1257 = var0.readByteSub();
-			var2.field1259 = var0.readByteSub();
-			var2.field1258 = var0.readByteSub();
-			var2.field1248 = var0.readByteNeg();
+			var2.field1048 = var0.readByteSub();
+			var2.field1054 = var0.readByteSub();
+			var2.field1055 = var0.readByteSub();
+			var2.field1053 = var0.readByteNeg();
 			var2.spotAnimation = var0.readUnsignedShort() + Client.cycle;
-			var2.field1271 = var0.readUnsignedShortAddLE() + Client.cycle;
-			var2.field1223 = var0.readUnsignedShortAdd();
-			if (var2.field1147) {
-				var2.field1257 += var2.tileX;
-				var2.field1259 += var2.tileY;
-				var2.field1258 += var2.tileX;
-				var2.field1248 += var2.tileY;
+			var2.field1038 = var0.readUnsignedShortAddLE() + Client.cycle;
+			var2.field1052 = var0.readUnsignedShortAdd();
+			if (var2.field935) {
+				var2.field1048 += var2.tileX;
+				var2.field1054 += var2.tileY;
+				var2.field1055 += var2.tileX;
+				var2.field1053 += var2.tileY;
 				var2.pathLength = 0;
 			} else {
-				var2.field1257 += var2.pathX[0];
-				var2.field1259 += var2.pathY[0];
-				var2.field1258 += var2.pathX[0];
-				var2.field1248 += var2.pathY[0];
+				var2.field1048 += var2.pathX[0];
+				var2.field1054 += var2.pathY[0];
+				var2.field1055 += var2.pathX[0];
+				var2.field1053 += var2.pathY[0];
 				var2.pathLength = 1;
 			}
 
-			var2.field1280 = 0;
+			var2.field1057 = 0;
 		}
 
 		if ((var3 & 16384) != 0) {
-			var2.field1262 = Client.cycle + var0.readUnsignedShortAdd();
-			var2.field1278 = Client.cycle + var0.readUnsignedShortAddLE();
-			var2.field1268 = var0.readByteAdd();
-			var2.field1269 = var0.readByteAdd();
-			var2.field1276 = var0.readByte();
-			var2.field1255 = (byte)var0.readUnsignedByteSub();
+			var2.field1047 = Client.cycle + var0.readUnsignedShortAdd();
+			var2.field1046 = Client.cycle + var0.readUnsignedShortAddLE();
+			var2.field1002 = var0.readByteAdd();
+			var2.field1003 = var0.readByteAdd();
+			var2.field1004 = var0.readByte();
+			var2.field1001 = (byte)var0.readUnsignedByteSub();
 		}
 
 		int var5;
@@ -124,8 +117,8 @@ public class GameBuild {
 			var5 = var0.readUnsignedByteAdd();
 			byte[] var16 = new byte[var5];
 			Buffer var7 = new Buffer(var16);
-			var0.method9562(var16, 0, var5);
-			Players.field1389[var1] = var7;
+			var0.method2675(var16, 0, var5);
+			Players.field1152[var1] = var7;
 			var2.read(var7);
 		}
 
@@ -138,24 +131,24 @@ public class GameBuild {
 				class209.addGameMessage(2, var2.username.getName(), var2.overheadText);
 			}
 
-			var2.field1228 = false;
-			var2.field1208 = 0;
-			var2.field1231 = 0;
+			var2.field998 = false;
+			var2.field1027 = 0;
+			var2.field1030 = 0;
 			var2.overheadTextCyclesRemaining = 150;
 		}
 
 		if ((var3 & 256) != 0) {
-			class233[] var17 = Players.field1378;
-			class233[] var21 = new class233[]{class233.field2472, class233.field2469, class233.field2470, class233.field2471};
+			class233[] var17 = Players.field1150;
+			class233[] var21 = new class233[]{class233.field1988, class233.field1991, class233.field1989, class233.field1990};
 			var17[var1] = (class233)class356.findEnumerated(var21, var0.readByte());
 		}
 
 		int var8;
 		int var9;
 		int var10;
+		int var11;
 		int var12;
 		int var18;
-		int var20;
 		if ((var3 & 4) != 0) {
 			var5 = var0.readUnsignedByte();
 			if (var5 > 0) {
@@ -175,8 +168,8 @@ public class GameBuild {
 						var18 = -1;
 					}
 
-					var20 = var0.readUShortSmart();
-					var2.addHitSplat(var18, var9, var8, var10, Client.cycle, var20);
+					var11 = var0.readUShortSmart();
+					var2.addHitSplat(var18, var9, var8, var10, Client.cycle, var11);
 				}
 			}
 
@@ -187,9 +180,9 @@ public class GameBuild {
 					var9 = var0.readUShortSmart();
 					if (var9 != 32767) {
 						var10 = var0.readUShortSmart();
-						var20 = var0.readUnsignedByteAdd();
-						var12 = var9 > 0 ? var0.readUnsignedByteNeg() : var20;
-						var2.addHealthBar(var8, Client.cycle, var9, var10, var20, var12);
+						var11 = var0.readUnsignedByteAdd();
+						var12 = var9 > 0 ? var0.readUnsignedByteNeg() : var11;
+						var2.addHealthBar(var8, Client.cycle, var9, var10, var11, var12);
 					} else {
 						var2.removeHealthBar(var8);
 					}
@@ -209,18 +202,18 @@ public class GameBuild {
 					var23 = true;
 				}
 
-				if (!var23 && Client.field649 == 0 && !var2.isHidden) {
-					Players.field1381.offset = 0;
-					var0.readBytes(Players.field1381.array, 0, var8);
-					Players.field1381.offset = 0;
-					String var11 = AbstractFont.escapeBrackets(ClanChannel.method3490(class495.method8856(Players.field1381)));
-					var2.overheadText = var11.trim();
-					var2.field1208 = var5 >> 8;
-					var2.field1231 = var5 & 255;
+				if (!var23 && Client.field515 == 0 && !var2.isHidden) {
+					Players.field1151.offset = 0;
+					var0.readBytes(Players.field1151.array, 0, var8);
+					Players.field1151.offset = 0;
+					String var19 = AbstractFont.escapeBrackets(ClanChannel.method872(class495.method2443(Players.field1151)));
+					var2.overheadText = var19.trim();
+					var2.field1027 = var5 >> 8;
+					var2.field1030 = var5 & 255;
 					var2.overheadTextCyclesRemaining = 150;
-					var2.field1226 = null;
-					var2.field1228 = var28;
-					var2.field1205 = var2 != VarpDefinition.localPlayer && var25.isUser && !Client.field643.isEmpty() && var11.toLowerCase().indexOf(Client.field643) == -1;
+					var2.field1062 = null;
+					var2.field998 = var28;
+					var2.field997 = var2 != VarpDefinition.localPlayer && var25.isUser && !Client.field628.isEmpty() && var19.toLowerCase().indexOf(Client.field628) == -1;
 					if (var25.isPrivileged) {
 						var12 = var28 ? 91 : 1;
 					} else {
@@ -228,9 +221,9 @@ public class GameBuild {
 					}
 
 					if (var25.modIcon != -1) {
-						class209.addGameMessage(var12, class415.method7833(var25.modIcon) + var2.username.getName(), var11);
+						class209.addGameMessage(var12, class415.method2158(var25.modIcon) + var2.username.getName(), var19);
 					} else {
-						class209.addGameMessage(var12, var2.username.getName(), var11);
+						class209.addGameMessage(var12, var2.username.getName(), var19);
 					}
 				}
 			}
@@ -242,24 +235,24 @@ public class GameBuild {
 			var5 = var0.readUnsignedShort();
 			var6 = var5 >> 8;
 			var18 = var6 >= 13 && var6 <= 20 ? var6 - 12 : 0;
-			PlayerType var19 = (PlayerType)class356.findEnumerated(FontName.PlayerType_values(), var0.readUnsignedByteSub());
+			PlayerType var20 = (PlayerType)class356.findEnumerated(FontName.PlayerType_values(), var0.readUnsignedByteSub());
 			boolean var22 = var0.readUnsignedByte() == 1;
 			var10 = var0.readUnsignedByteAdd();
-			var20 = var0.offset;
+			var11 = var0.offset;
 			if (var2.username != null && var2.appearance != null) {
 				boolean var24 = false;
-				if (var19.isUser && InterfaceParent.friendSystem.isIgnored(var2.username)) {
+				if (var20.isUser && InterfaceParent.friendSystem.isIgnored(var2.username)) {
 					var24 = true;
 				}
 
-				if (!var24 && Client.field649 == 0 && !var2.isHidden) {
-					Players.field1381.offset = 0;
-					var0.method9531(Players.field1381.array, 0, var10);
-					Players.field1381.offset = 0;
-					String var13 = AbstractFont.escapeBrackets(ClanChannel.method3490(class495.method8856(Players.field1381)));
+				if (!var24 && Client.field515 == 0 && !var2.isHidden) {
+					Players.field1151.offset = 0;
+					var0.method2674(Players.field1151.array, 0, var10);
+					Players.field1151.offset = 0;
+					String var13 = AbstractFont.escapeBrackets(ClanChannel.method872(class495.method2443(Players.field1151)));
 					var2.overheadText = var13.trim();
-					var2.field1208 = var5 >> 8;
-					var2.field1231 = var5 & 255;
+					var2.field1027 = var5 >> 8;
+					var2.field1030 = var5 & 255;
 					var2.overheadTextCyclesRemaining = 150;
 					byte[] var14 = null;
 					int var15;
@@ -271,24 +264,24 @@ public class GameBuild {
 						}
 					}
 
-					var2.field1226 = class321.method6147(var14);
-					var2.field1228 = var22;
-					var2.field1205 = var2 != VarpDefinition.localPlayer && var19.isUser && !Client.field643.isEmpty() && var13.toLowerCase().indexOf(Client.field643) == -1;
-					if (var19.isPrivileged) {
+					var2.field1062 = class321.method1697(var14);
+					var2.field998 = var22;
+					var2.field997 = var2 != VarpDefinition.localPlayer && var20.isUser && !Client.field628.isEmpty() && var13.toLowerCase().indexOf(Client.field628) == -1;
+					if (var20.isPrivileged) {
 						var15 = var22 ? 91 : 1;
 					} else {
 						var15 = var22 ? 90 : 2;
 					}
 
-					if (var19.modIcon != -1) {
-						class209.addGameMessage(var15, class415.method7833(var19.modIcon) + var2.username.getName(), var13);
+					if (var20.modIcon != -1) {
+						class209.addGameMessage(var15, class415.method2158(var20.modIcon) + var2.username.getName(), var13);
 					} else {
 						class209.addGameMessage(var15, var2.username.getName(), var13);
 					}
 				}
 			}
 
-			var0.offset = var20 + var10 + var18;
+			var0.offset = var11 + var10 + var18;
 		}
 
 		if ((var3 & 1024) != 0) {
@@ -313,26 +306,26 @@ public class GameBuild {
 		}
 
 		if ((var3 & 1) != 0) {
-			var2.field1242 = var0.readUnsignedShortAddLE();
+			var2.field1031 = var0.readUnsignedShortAddLE();
 			if (var2.pathLength == 0) {
-				var2.orientation = var2.field1242;
-				var2.method2470();
+				var2.orientation = var2.field1031;
+				var2.method535();
 			}
 		}
 
-		if (var2.field1147) {
+		if (var2.field935) {
 			if (var4 == 127) {
 				var2.resetPath(var2.tileX, var2.tileY);
 			} else {
 				class233 var27;
-				if (var4 != class233.field2471.field2473) {
-					class233[] var26 = new class233[]{class233.field2472, class233.field2469, class233.field2470, class233.field2471};
+				if (var4 != class233.field1990.field1992) {
+					class233[] var26 = new class233[]{class233.field1988, class233.field1991, class233.field1989, class233.field1990};
 					var27 = (class233)class356.findEnumerated(var26, var4);
 				} else {
-					var27 = Players.field1378[var1];
+					var27 = Players.field1150[var1];
 				}
 
-				var2.method2433(var2.tileX, var2.tileY, var27);
+				var2.method504(var2.tileX, var2.tileY, var27);
 			}
 		}
 

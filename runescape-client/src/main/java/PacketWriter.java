@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -22,9 +21,6 @@ public class PacketWriter {
 	@Export("packetBufferNodes")
 	IterableNodeDeque packetBufferNodes;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1821044063
-	)
 	@Export("bufferSize")
 	int bufferSize;
 	@ObfuscatedName("ai")
@@ -52,22 +48,13 @@ public class PacketWriter {
 	@Export("serverPacket")
 	ServerPacket serverPacket;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = 1154647963
-	)
 	@Export("serverPacketLength")
 	int serverPacketLength;
 	@ObfuscatedName("ao")
-	boolean field1431;
+	boolean field1183;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1134596027
-	)
-	int field1432;
+	int field1186;
 	@ObfuscatedName("ak")
-	@ObfuscatedGetter(
-		intValue = -160467177
-	)
 	@Export("pendingWrites")
 	int pendingWrites;
 	@ObfuscatedName("ah")
@@ -79,12 +66,12 @@ public class PacketWriter {
 	@ObfuscatedSignature(
 		descriptor = "Lmj;"
 	)
-	ServerPacket field1435;
+	ServerPacket field1191;
 	@ObfuscatedName("af")
 	@ObfuscatedSignature(
 		descriptor = "Lmj;"
 	)
-	ServerPacket field1424;
+	ServerPacket field1189;
 
 	PacketWriter() {
 		this.packetBufferNodes = new IterableNodeDeque();
@@ -93,8 +80,8 @@ public class PacketWriter {
 		this.packetBuffer = new PacketBuffer(40000);
 		this.serverPacket = null;
 		this.serverPacketLength = 0;
-		this.field1431 = true;
-		this.field1432 = 0;
+		this.field1183 = true;
+		this.field1186 = 0;
 		this.pendingWrites = 0;
 	}
 
@@ -199,7 +186,7 @@ public class PacketWriter {
 		descriptor = "(Lof;I)V",
 		garbageValue = "-1568893992"
 	)
-	public static void method2892(AbstractArchive var0) {
+	public static void method646(AbstractArchive var0) {
 		class528.VarcInt_archive = var0;
 	}
 
@@ -208,27 +195,27 @@ public class PacketWriter {
 		descriptor = "(Ljava/util/ArrayList;IIIIZI)V",
 		garbageValue = "-283981484"
 	)
-	public static void method2891(ArrayList var0, int var1, int var2, int var3, int var4, boolean var5) {
+	public static void method648(ArrayList var0, int var1, int var2, int var3, int var4, boolean var5) {
 		if (!var0.isEmpty()) {
-			class321.field3478.clear();
-			class321.field3481.clear();
-			PendingSpawn.method2458(var5);
-			MusicPatchNode2.method6109(var0, var5);
-			if (!class321.field3478.isEmpty()) {
-				ScriptFrame.method1158(var1, var2, var3, var4);
-				class321.field3481.add(new AddRequestTask((SongTask)null));
-				class321.field3481.add(new class427((SongTask)null, class321.field3480, class321.field3475, class321.field3477));
+			class321.field2849.clear();
+			class321.field2848.clear();
+			PendingSpawn.method525(var5);
+			MusicPatchNode2.method1695(var0, var5);
+			if (!class321.field2849.isEmpty()) {
+				ScriptFrame.method327(var1, var2, var3, var4);
+				class321.field2848.add(new AddRequestTask((SongTask)null));
+				class321.field2848.add(new class427((SongTask)null, class321.field2851, class321.field2852, class321.field2850));
 				ArrayList var6 = new ArrayList();
-				var6.add(new class422(new FadeInTask((SongTask)null, 0, true, class321.field3486)));
+				var6.add(new class422(new FadeInTask((SongTask)null, 0, true, class321.field2855)));
 				if (!class321.musicSongs.isEmpty()) {
 					ArrayList var7 = new ArrayList();
-					var7.add(new DelayFadeTask(new ConcurrentMidiTask((SongTask)null, var6), class321.field3485));
-					ArrayList var8 = WorldMapLabelSize.method4627();
-					var7.add(new DelayFadeTask(new FadeOutTask(new class420((SongTask)null, var8), 0, false, class321.field3476), class321.musicPlayerStatus));
-					class321.field3481.add(new ConcurrentMidiTask((SongTask)null, var7));
+					var7.add(new DelayFadeTask(new ConcurrentMidiTask((SongTask)null, var6), class321.field2854));
+					ArrayList var8 = WorldMapLabelSize.method1243();
+					var7.add(new DelayFadeTask(new FadeOutTask(new class420((SongTask)null, var8), 0, false, class321.field2856), class321.musicPlayerStatus));
+					class321.field2848.add(new ConcurrentMidiTask((SongTask)null, var7));
 				} else {
-					class321.field3481.add(new DelayFadeTask((SongTask)null, class321.field3485));
-					class321.field3481.add(new ConcurrentMidiTask((SongTask)null, var6));
+					class321.field2848.add(new DelayFadeTask((SongTask)null, class321.field2854));
+					class321.field2848.add(new ConcurrentMidiTask((SongTask)null, var6));
 				}
 
 			}
@@ -250,13 +237,13 @@ public class PacketWriter {
 		int[] var7 = var1.intOperands;
 		byte var8 = -1;
 		Interpreter.Interpreter_frameDepth = 0;
-		Interpreter.field893 = false;
+		Interpreter.field734 = false;
 		boolean var9 = false;
 		int var10 = 0;
 		boolean var29 = false;
 
-		label936: {
-			label937: {
+		label860: {
+			label861: {
 				try {
 					int var13;
 					try {
@@ -280,7 +267,7 @@ public class PacketWriter {
 								}
 
 								if (var14 == -2147483645) {
-									var14 = var0.widget != null ? var0.widget.id : -1;
+									var14 = var0.widget != null ? var0.widget.id * -917460645 * 403660499 : -1;
 								}
 
 								if (var14 == -2147483644) {
@@ -288,15 +275,15 @@ public class PacketWriter {
 								}
 
 								if (var14 == -2147483643) {
-									var14 = var0.widget != null ? var0.widget.childIndex : -1;
+									var14 = var0.widget != null ? var0.widget.childIndex * -1764737119 * 756900961 : -1;
 								}
 
 								if (var14 == -2147483642) {
-									var14 = var0.dragTarget != null ? var0.dragTarget.id : -1;
+									var14 = var0.dragTarget != null ? var0.dragTarget.id * -917460645 * 403660499 : -1;
 								}
 
 								if (var14 == -2147483641) {
-									var14 = var0.dragTarget != null ? var0.dragTarget.childIndex : -1;
+									var14 = var0.dragTarget != null ? var0.dragTarget.childIndex * -1764737119 * 756900961 : -1;
 								}
 
 								if (var14 == -2147483640) {
@@ -318,8 +305,9 @@ public class PacketWriter {
 							}
 						}
 
-						Interpreter.field896 = var0.field1102;
+						Interpreter.field739 = var0.field901;
 
+						label841:
 						while (true) {
 							++var10;
 							if (var10 > var2) {
@@ -336,11 +324,11 @@ public class PacketWriter {
 									var34 = false;
 								}
 
-								var14 = Canvas.method296(var32, var1, var34);
+								var14 = Canvas.method74(var32, var1, var34);
 								switch(var14) {
 								case 0:
 									var29 = false;
-									break label936;
+									break label841;
 								case 1:
 								default:
 									break;
@@ -383,7 +371,7 @@ public class PacketWriter {
 							} else if (var32 == 21) {
 								if (Interpreter.Interpreter_frameDepth == 0) {
 									var29 = false;
-									break;
+									break label861;
 								}
 
 								ScriptFrame var39 = Interpreter.Interpreter_frames[--Interpreter.Interpreter_frameDepth];
@@ -398,7 +386,7 @@ public class PacketWriter {
 								Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = class332.getVarbit(var13);
 							} else if (var32 == 27) {
 								var13 = var7[var5];
-								class130.method3072(var13, Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
+								class130.method717(var13, Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize]);
 							} else if (var32 == 31) {
 								Interpreter.Interpreter_intStackSize -= 2;
 								if (Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize] <= Interpreter.Interpreter_intStack[Interpreter.Interpreter_intStackSize + 1]) {
@@ -420,7 +408,7 @@ public class PacketWriter {
 							} else if (var32 == 37) {
 								var13 = var7[var5];
 								class60.Interpreter_stringStackSize -= var13;
-								var20 = PacketBufferNode.method6049(Interpreter.Interpreter_stringStack, class60.Interpreter_stringStackSize, var13);
+								var20 = PacketBufferNode.method1676(Interpreter.Interpreter_stringStack, class60.Interpreter_stringStackSize, var13);
 								Interpreter.Interpreter_stringStack[++class60.Interpreter_stringStackSize - 1] = var20;
 							} else if (var32 == 38) {
 								--Interpreter.Interpreter_intStackSize;
@@ -492,7 +480,7 @@ public class PacketWriter {
 										} else {
 											Integer var38;
 											if (var32 == 74) {
-												var38 = class53.field363.getTitleGroupValue(var7[var5]);
+												var38 = class53.field255.getTitleGroupValue(var7[var5]);
 												if (var38 == null) {
 													Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = -1;
 												} else {
@@ -503,7 +491,7 @@ public class PacketWriter {
 													throw new IllegalStateException();
 												}
 
-												var38 = class73.field920.method8720(var7[var5]);
+												var38 = class73.field763.method2396(var7[var5]);
 												if (var38 == null) {
 													Interpreter.Interpreter_intStack[++Interpreter.Interpreter_intStackSize - 1] = -1;
 												} else {
@@ -555,73 +543,73 @@ public class PacketWriter {
 						var26.append("").append(var8);
 						class315.RunException_sendStackTrace(var26.toString(), var30);
 						var29 = false;
-						break label937;
+						break label860;
 					}
 				} finally {
 					if (var29) {
-						while (Interpreter.field895.size() > 0) {
-							class103 var19 = (class103)Interpreter.field895.remove(0);
-							class185.widgetDefaultMenuAction(var19.method2733(), var19.method2748(), var19.method2734(), var19.method2735(), "");
+						while (Interpreter.field745.size() > 0) {
+							class103 var19 = (class103)Interpreter.field745.remove(0);
+							class185.widgetDefaultMenuAction(var19.method612(), var19.method613(), var19.method614(), var19.method615(), "");
 						}
 
-						if (Interpreter.field893) {
-							Interpreter.field893 = false;
-							class272.method5372();
+						if (Interpreter.field734) {
+							Interpreter.field734 = false;
+							class272.method1486();
 						}
 
 						if (!var9 && var3 > 0 && var10 >= var3) {
-							class315.RunException_sendStackTrace("Warning: Script " + var1.field1028 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
+							class315.RunException_sendStackTrace("Warning: Script " + var1.field856 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
 						}
 
 					}
 				}
 
-				while (Interpreter.field895.size() > 0) {
-					class103 var40 = (class103)Interpreter.field895.remove(0);
-					class185.widgetDefaultMenuAction(var40.method2733(), var40.method2748(), var40.method2734(), var40.method2735(), "");
+				while (Interpreter.field745.size() > 0) {
+					class103 var33 = (class103)Interpreter.field745.remove(0);
+					class185.widgetDefaultMenuAction(var33.method612(), var33.method613(), var33.method614(), var33.method615(), "");
 				}
 
-				if (Interpreter.field893) {
-					Interpreter.field893 = false;
-					class272.method5372();
+				if (Interpreter.field734) {
+					Interpreter.field734 = false;
+					class272.method1486();
 				}
 
 				if (!var9 && var3 > 0 && var10 >= var3) {
-					class315.RunException_sendStackTrace("Warning: Script " + var1.field1028 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
+					class315.RunException_sendStackTrace("Warning: Script " + var1.field856 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
 				}
 
 				return;
 			}
 
-			while (Interpreter.field895.size() > 0) {
-				class103 var25 = (class103)Interpreter.field895.remove(0);
-				class185.widgetDefaultMenuAction(var25.method2733(), var25.method2748(), var25.method2734(), var25.method2735(), "");
+			while (Interpreter.field745.size() > 0) {
+				class103 var40 = (class103)Interpreter.field745.remove(0);
+				class185.widgetDefaultMenuAction(var40.method612(), var40.method613(), var40.method614(), var40.method615(), "");
 			}
 
-			if (Interpreter.field893) {
-				Interpreter.field893 = false;
-				class272.method5372();
+			if (Interpreter.field734) {
+				Interpreter.field734 = false;
+				class272.method1486();
 			}
 
 			if (!var9 && var3 > 0 && var10 >= var3) {
-				class315.RunException_sendStackTrace("Warning: Script " + var1.field1028 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
+				class315.RunException_sendStackTrace("Warning: Script " + var1.field856 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
 			}
 
 			return;
 		}
 
-		while (Interpreter.field895.size() > 0) {
-			class103 var33 = (class103)Interpreter.field895.remove(0);
-			class185.widgetDefaultMenuAction(var33.method2733(), var33.method2748(), var33.method2734(), var33.method2735(), "");
+		while (Interpreter.field745.size() > 0) {
+			class103 var25 = (class103)Interpreter.field745.remove(0);
+			class185.widgetDefaultMenuAction(var25.method612(), var25.method613(), var25.method614(), var25.method615(), "");
 		}
 
-		if (Interpreter.field893) {
-			Interpreter.field893 = false;
-			class272.method5372();
+		if (Interpreter.field734) {
+			Interpreter.field734 = false;
+			class272.method1486();
 		}
 
 		if (!var9 && var3 > 0 && var10 >= var3) {
-			class315.RunException_sendStackTrace("Warning: Script " + var1.field1028 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
+			class315.RunException_sendStackTrace("Warning: Script " + var1.field856 + " finished at op count " + var10 + " of max " + var2, (Throwable)null);
 		}
 
 	}

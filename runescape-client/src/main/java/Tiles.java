@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -20,37 +19,28 @@ public final class Tiles {
 	@Export("Tiles_renderFlags")
 	static byte[][][] Tiles_renderFlags;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -611988791
-	)
 	@Export("Tiles_minPlane")
 	static int Tiles_minPlane;
 	@ObfuscatedName("ao")
-	static int[][] field1049;
+	static int[][] field876;
 	@ObfuscatedName("ax")
-	static int[][][] field1050;
+	static int[][][] field878;
 	@ObfuscatedName("ad")
-	static final int[] field1060;
+	static final int[] field882;
 	@ObfuscatedName("at")
-	static final int[] field1056;
+	static final int[] field884;
 	@ObfuscatedName("ay")
-	static final int[] field1053;
+	static final int[] field885;
 	@ObfuscatedName("ae")
-	static final int[] field1054;
+	static final int[] field883;
 	@ObfuscatedName("ac")
-	static final int[] field1055;
+	static final int[] field881;
 	@ObfuscatedName("ab")
-	static final int[] field1046;
+	static final int[] field880;
 	@ObfuscatedName("av")
-	@ObfuscatedGetter(
-		intValue = -514495155
-	)
 	@Export("rndHue")
 	static int rndHue;
 	@ObfuscatedName("ap")
-	@ObfuscatedGetter(
-		intValue = -51634815
-	)
 	@Export("rndLightness")
 	static int rndLightness;
 
@@ -58,12 +48,12 @@ public final class Tiles {
 		Tiles_heights = new int[4][105][105];
 		Tiles_renderFlags = new byte[4][104][104];
 		Tiles_minPlane = 99;
-		field1060 = new int[]{1, 2, 4, 8};
-		field1056 = new int[]{16, 32, 64, 128};
-		field1053 = new int[]{1, 0, -1, 0};
-		field1054 = new int[]{0, -1, 0, 1};
-		field1055 = new int[]{1, -1, -1, 1};
-		field1046 = new int[]{-1, -1, 1, 1};
+		field882 = new int[]{1, 2, 4, 8};
+		field884 = new int[]{16, 32, 64, 128};
+		field885 = new int[]{1, 0, -1, 0};
+		field883 = new int[]{0, -1, 0, 1};
+		field881 = new int[]{1, -1, -1, 1};
+		field880 = new int[]{-1, -1, 1, 1};
 		rndHue = (int)(Math.random() * 17.0D) - 8;
 		rndLightness = (int)(Math.random() * 33.0D) - 16;
 	}
@@ -72,7 +62,7 @@ public final class Tiles {
 	@ObfuscatedSignature(
 		descriptor = "([BIIIIIIILkq;[Liz;)V"
 	)
-	static final void method2285(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, Scene var8, CollisionMap[] var9) {
+	static final void method464(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, Scene var8, CollisionMap[] var9) {
 		Buffer var10 = new Buffer(var0);
 		int var11 = -1;
 
@@ -100,7 +90,7 @@ public final class Tiles {
 				int var20 = var18 & 3;
 				if (var17 == var4 && var16 >= var5 && var16 < var5 + 8 && var15 >= var6 && var15 < var6 + 8) {
 					ObjectComposition var21 = class127.getObjectDefinition(var11);
-					int var22 = var2 + class190.method3772(var16 & 7, var15 & 7, var7, var21.sizeX, var21.sizeY, var20);
+					int var22 = var2 + class190.method966(var16 & 7, var15 & 7, var7, var21.sizeX, var21.sizeY, var20);
 					int var25 = var16 & 7;
 					int var26 = var15 & 7;
 					int var28 = var21.sizeX;

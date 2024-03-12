@@ -1,5 +1,4 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -12,10 +11,7 @@ public class class159 extends class145 {
 	@Export("textureProvider")
 	static TextureProvider textureProvider;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 1150472867
-	)
-	int field1774;
+	int field1432;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lfg;"
@@ -27,7 +23,7 @@ public class class159 extends class145 {
 	)
 	class159(class148 var1) {
 		this.this$0 = var1;
-		this.field1774 = -1;
+		this.field1432 = -1;
 	}
 
 	@ObfuscatedName("aq")
@@ -35,8 +31,9 @@ public class class159 extends class145 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "584073694"
 	)
+	@Export("vmethod3512")
 	void vmethod3512(Buffer var1) {
-		this.field1774 = var1.readUnsignedShort();
+		this.field1432 = var1.readUnsignedShort();
 	}
 
 	@ObfuscatedName("aw")
@@ -44,8 +41,9 @@ public class class159 extends class145 {
 		descriptor = "(Lgt;I)V",
 		garbageValue = "406847376"
 	)
+	@Export("vmethod3513")
 	void vmethod3513(ClanSettings var1) {
-		var1.method3330(this.field1774);
+		var1.method824(this.field1432);
 	}
 
 	@ObfuscatedName("aq")
@@ -53,7 +51,7 @@ public class class159 extends class145 {
 		descriptor = "(IIII)Lvd;",
 		garbageValue = "592118156"
 	)
-	static SpritePixels method3417(int var0, int var1, int var2) {
+	static SpritePixels method841(int var0, int var1, int var2) {
 		DemotingHashTable var3 = WorldMapRegion.WorldMapRegion_cachedSprites;
 		long var4 = (long)(var2 << 16 | var0 << 8 | var1);
 		return (SpritePixels)var3.get(var4);
@@ -64,7 +62,7 @@ public class class159 extends class145 {
 		descriptor = "(Lof;IB)Lvg;",
 		garbageValue = "8"
 	)
-	public static IndexedSprite method3418(AbstractArchive var0, int var1) {
+	public static IndexedSprite method842(AbstractArchive var0, int var1) {
 		byte[] var3 = var0.takeFileFlat(var1);
 		boolean var2;
 		if (var3 == null) {
@@ -74,7 +72,7 @@ public class class159 extends class145 {
 			var2 = true;
 		}
 
-		return !var2 ? null : Interpreter.method2107();
+		return !var2 ? null : Interpreter.method421();
 	}
 
 	@ObfuscatedName("hx")

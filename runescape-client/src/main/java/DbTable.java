@@ -14,7 +14,7 @@ public class DbTable extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "[Luh;"
 	)
-	class521[] field5141;
+	class521[] field4212;
 	@ObfuscatedName("ar")
 	@Export("columns")
 	List columns;
@@ -24,7 +24,7 @@ public class DbTable extends DualNode {
 	)
 	public DbTable(AbstractArchive var1, int var2) {
 		byte[] var3 = var1.takeFile(var2, 0);
-		this.method9368(new Buffer(var3));
+		this.method2579(new Buffer(var3));
 	}
 
 	@ObfuscatedSignature(
@@ -32,7 +32,7 @@ public class DbTable extends DualNode {
 	)
 	public DbTable(AbstractArchive var1, int var2, int var3) {
 		byte[] var4 = var1.takeFile(var2, var3 + 1);
-		this.method9368(new Buffer(var4));
+		this.method2579(new Buffer(var4));
 	}
 
 	@ObfuscatedName("aq")
@@ -40,18 +40,18 @@ public class DbTable extends DualNode {
 		descriptor = "(Luq;I)V",
 		garbageValue = "-2122994832"
 	)
-	void method9368(Buffer var1) {
+	void method2579(Buffer var1) {
 		int var2 = var1.packBytesToInt();
-		this.field5141 = new class521[var2];
+		this.field4212 = new class521[var2];
 		this.columns = new ArrayList(var2);
 
 		for (int var3 = 0; var3 < var2; ++var3) {
-			this.field5141[var3] = (class521)class356.findEnumerated(class521.method9335(), var1.readUnsignedByte());
+			this.field4212[var3] = (class521)class356.findEnumerated(class521.method2568(), var1.readUnsignedByte());
 			int var4 = var1.packBytesToInt();
 			HashMap var5 = new HashMap(var4);
 
 			while (var4-- > 0) {
-				Object var6 = this.field5141[var3].method9323(var1);
+				Object var6 = this.field4212[var3].method2572(var1);
 				int var7 = var1.packBytesToInt();
 				ArrayList var8 = new ArrayList();
 
@@ -73,7 +73,7 @@ public class DbTable extends DualNode {
 		descriptor = "(Ljava/lang/Object;IB)Ljava/util/List;",
 		garbageValue = "-7"
 	)
-	public List method9370(Object var1, int var2) {
+	public List method2580(Object var1, int var2) {
 		if (var2 < 0) {
 			var2 = 0;
 		}

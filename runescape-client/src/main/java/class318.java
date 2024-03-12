@@ -1,15 +1,11 @@
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("ml")
 public class class318 {
 	@ObfuscatedName("ci")
-	@ObfuscatedGetter(
-		intValue = 1267961965
-	)
-	static int field3457;
+	static int field2834;
 	@ObfuscatedName("id")
 	@Export("regionMapArchiveIds")
 	static int[] regionMapArchiveIds;
@@ -19,7 +15,7 @@ public class class318 {
 		descriptor = "(IB)I",
 		garbageValue = "-77"
 	)
-	public static int method6083(int var0) {
+	public static int method1693(int var0) {
 		--var0;
 		var0 |= var0 >>> 1;
 		var0 |= var0 >>> 2;

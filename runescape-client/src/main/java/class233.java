@@ -8,28 +8,28 @@ public enum class233 implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lip;"
 	)
-	field2471((byte)-1),
+	field1990((byte)-1),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lip;"
 	)
-	field2469((byte)0),
+	field1991((byte)0),
 	@ObfuscatedName("al")
 	@ObfuscatedSignature(
 		descriptor = "Lip;"
 	)
-	field2470((byte)1),
+	field1989((byte)1),
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
 		descriptor = "Lip;"
 	)
-	field2472((byte)2);
+	field1988((byte)2);
 
 	@ObfuscatedName("ar")
-	public byte field2473;
+	public byte field1992;
 
 	class233(byte var3) {
-		this.field2473 = var3;
+		this.field1992 = var3;
 	}
 
 	@ObfuscatedName("aq")
@@ -39,7 +39,7 @@ public enum class233 implements Enum {
 	)
 	@Export("rsOrdinal")
 	public int rsOrdinal() {
-		return this.field2473;
+		return this.field1992;
 	}
 
 	@ObfuscatedName("bk")
@@ -47,7 +47,7 @@ public enum class233 implements Enum {
 		descriptor = "(Lhe;I)Z",
 		garbageValue = "1258060610"
 	)
-	static boolean method4568(ObjectComposition var0) {
+	static boolean method1223(ObjectComposition var0) {
 		if (var0.transforms != null) {
 			int[] var1 = var0.transforms;
 

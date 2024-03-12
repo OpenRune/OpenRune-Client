@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,38 +7,20 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("BoundaryObject")
 public final class BoundaryObject {
 	@ObfuscatedName("pb")
-	@ObfuscatedGetter(
-		intValue = 1135227967
-	)
-	static int field3111;
+	static int field2515;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1442786301
-	)
 	@Export("z")
 	int z;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1948067907
-	)
 	@Export("x")
 	int x;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 990182061
-	)
 	@Export("y")
 	int y;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -954673215
-	)
 	@Export("orientationA")
 	int orientationA;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = 718867179
-	)
 	@Export("orientationB")
 	int orientationB;
 	@ObfuscatedName("as")
@@ -55,15 +36,9 @@ public final class BoundaryObject {
 	@Export("renderable2")
 	public Renderable renderable2;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		longValue = -5775559510302590085L
-	)
 	@Export("tag")
 	public long tag;
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = -1101717799
-	)
 	@Export("flags")
 	int flags;
 
@@ -77,7 +52,7 @@ public final class BoundaryObject {
 		descriptor = "(Ljava/lang/Object;ZI)[B",
 		garbageValue = "-214764962"
 	)
-	public static byte[] method5944(Object var0, boolean var1) {
+	public static byte[] method1643(Object var0, boolean var1) {
 		if (var0 == null) {
 			return null;
 		} else if (var0 instanceof byte[]) {
@@ -105,7 +80,7 @@ public final class BoundaryObject {
 	)
 	@Export("isNumber")
 	public static boolean isNumber(CharSequence var0) {
-		return class53.method1068(var0, 10, true);
+		return class53.method286(var0, 10, true);
 	}
 
 	@ObfuscatedName("aj")

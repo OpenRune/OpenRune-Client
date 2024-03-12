@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,10 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("FriendsChat")
 public class FriendsChat extends UserList {
 	@ObfuscatedName("uq")
-	@ObfuscatedGetter(
-		intValue = -1532293877
-	)
-	static int field4736;
+	static int field3881;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lte;"
@@ -34,16 +30,10 @@ public class FriendsChat extends UserList {
 	@Export("minKick")
 	public byte minKick;
 	@ObfuscatedName("aa")
-	@ObfuscatedGetter(
-		intValue = 1728806629
-	)
 	@Export("rank")
 	public int rank;
 	@ObfuscatedName("az")
-	@ObfuscatedGetter(
-		intValue = -625990309
-	)
-	int field4743;
+	int field3882;
 
 	@ObfuscatedSignature(
 		descriptor = "(Lte;Lru;)V"
@@ -52,7 +42,7 @@ public class FriendsChat extends UserList {
 		super(500);
 		this.name = null;
 		this.owner = null;
-		this.field4743 = 1;
+		this.field3882 = 1;
 		this.loginType = var1;
 		this.localUser = var2;
 	}
@@ -82,8 +72,8 @@ public class FriendsChat extends UserList {
 		descriptor = "(Ljava/lang/String;I)V",
 		garbageValue = "1677257374"
 	)
-	final void method8265(String var1) {
-		String var3 = class224.base37DecodeLong(class135.method3138(var1));
+	final void method2276(String var1) {
+		String var3 = class224.base37DecodeLong(class135.method743(var1));
 		if (var3 == null) {
 			var3 = "";
 		}
@@ -96,8 +86,8 @@ public class FriendsChat extends UserList {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "68"
 	)
-	final void method8266(String var1) {
-		String var3 = class224.base37DecodeLong(class135.method3138(var1));
+	final void method2277(String var1) {
+		String var3 = class224.base37DecodeLong(class135.method743(var1));
 		if (var3 == null) {
 			var3 = "";
 		}
@@ -110,8 +100,8 @@ public class FriendsChat extends UserList {
 		descriptor = "(Luq;II)V",
 		garbageValue = "-1885490435"
 	)
-	public final void method8277(Buffer var1, int var2) {
-		this.method8266(var1.readStringCp1252NullTerminated());
+	public final void method2278(Buffer var1, int var2) {
+		this.method2277(var1.readStringCp1252NullTerminated());
 		long var3 = var1.readLong();
 		long var6 = var3;
 		String var5;
@@ -140,7 +130,7 @@ public class FriendsChat extends UserList {
 			var5 = null;
 		}
 
-		this.method8265(var5);
+		this.method2276(var5);
 		this.minKick = var1.readByte();
 		short var14;
 		if (var2 == 1) {
@@ -162,7 +152,7 @@ public class FriendsChat extends UserList {
 			for (int var15 = 0; var15 < var10; ++var15) {
 				ClanMate var16 = (ClanMate)this.addLastNoPreviousUsername(new Username(var1.readStringCp1252NullTerminated(), this.loginType));
 				int var13 = var1.readUnsignedShort();
-				var16.set(var13, ++this.field4743 - 1);
+				var16.set(var13, ++this.field3882 - 1);
 				var16.rank = var1.readByte();
 				var1.readStringCp1252NullTerminated();
 				this.isLocalPlayer(var16);
@@ -176,7 +166,7 @@ public class FriendsChat extends UserList {
 		descriptor = "(Luq;B)V",
 		garbageValue = "11"
 	)
-	public final void method8268(Buffer var1) {
+	public final void method2279(Buffer var1) {
 		Username var2 = new Username(var1.readStringCp1252NullTerminated(), this.loginType);
 		int var3 = var1.readUnsignedShort();
 		byte var4 = var1.readByte();
@@ -206,7 +196,7 @@ public class FriendsChat extends UserList {
 				var6 = (ClanMate)this.addLastNoPreviousUsername(var2);
 			}
 
-			var6.set(var3, ++this.field4743 - 1);
+			var6.set(var3, ++this.field3882 - 1);
 			var6.rank = var4;
 			this.isLocalPlayer(var6);
 		}

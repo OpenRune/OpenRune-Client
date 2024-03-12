@@ -1,23 +1,17 @@
-import net.runelite.mapping.ObfuscatedGetter;
+import net.runelite.mapping.Export;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("gb")
 public class class158 extends class161 {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -533538717
-	)
-	int field1769;
+	int field1429;
 	@ObfuscatedName("aw")
-	byte field1764;
+	byte field1427;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = -1906278015
-	)
-	int field1766;
+	int field1428;
 	@ObfuscatedName("ai")
-	String field1767;
+	String field1430;
 	// $FF: synthetic field
 	@ObfuscatedSignature(
 		descriptor = "Lga;"
@@ -29,7 +23,7 @@ public class class158 extends class161 {
 	)
 	class158(class162 var1) {
 		this.this$0 = var1;
-		this.field1769 = -1;
+		this.field1429 = -1;
 	}
 
 	@ObfuscatedName("aq")
@@ -37,13 +31,14 @@ public class class158 extends class161 {
 		descriptor = "(Luq;I)V",
 		garbageValue = "1174207862"
 	)
+	@Export("vmethod3504")
 	void vmethod3504(Buffer var1) {
 		var1.readUnsignedByte();
-		this.field1769 = var1.readUnsignedShort();
-		this.field1764 = var1.readByte();
-		this.field1766 = var1.readUnsignedShort();
+		this.field1429 = var1.readUnsignedShort();
+		this.field1427 = var1.readByte();
+		this.field1428 = var1.readUnsignedShort();
 		var1.readLong();
-		this.field1767 = var1.readStringCp1252NullTerminated();
+		this.field1430 = var1.readStringCp1252NullTerminated();
 		var1.readUnsignedByte();
 	}
 
@@ -52,11 +47,12 @@ public class class158 extends class161 {
 		descriptor = "(Lgg;I)V",
 		garbageValue = "378355771"
 	)
+	@Export("vmethod3509")
 	void vmethod3509(ClanChannel var1) {
-		ClanChannelMember var2 = (ClanChannelMember)var1.members.get(this.field1769);
-		var2.rank = this.field1764;
-		var2.world = this.field1766;
-		var2.username = new Username(this.field1767);
+		ClanChannelMember var2 = (ClanChannelMember)var1.members.get(this.field1429);
+		var2.rank = this.field1427;
+		var2.world = this.field1428;
+		var2.username = new Username(this.field1430);
 	}
 
 	@ObfuscatedName("bg")
@@ -64,8 +60,8 @@ public class class158 extends class161 {
 		descriptor = "(Lng;III)V",
 		garbageValue = "512140024"
 	)
-	public static void method3402(Widget var0, int var1, int var2) {
-		var0.field3774.bodyColors[var1] = var2;
-		var0.field3774.method6477();
+	public static void method840(Widget var0, int var1, int var2) {
+		var0.field3186.bodyColors[var1] = var2;
+		var0.field3186.method1807();
 	}
 }

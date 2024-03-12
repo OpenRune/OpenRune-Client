@@ -10,7 +10,7 @@ public class DbTableType extends DualNode {
 	@ObfuscatedSignature(
 		descriptor = "Lof;"
 	)
-	static AbstractArchive field5137;
+	static AbstractArchive field4208;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lll;"
@@ -39,14 +39,14 @@ public class DbTableType extends DualNode {
 		descriptor = "(Luq;I)V",
 		garbageValue = "887031690"
 	)
-	void method9352(Buffer var1) {
+	void method2576(Buffer var1) {
 		while (true) {
 			int var2 = var1.readUnsignedByte();
 			if (var2 == 0) {
 				return;
 			}
 
-			this.method9353(var1, var2);
+			this.method2577(var1, var2);
 		}
 	}
 
@@ -55,7 +55,7 @@ public class DbTableType extends DualNode {
 		descriptor = "(Luq;IB)V",
 		garbageValue = "0"
 	)
-	void method9353(Buffer var1, int var2) {
+	void method2577(Buffer var1, int var2) {
 		if (var2 == 1) {
 			int var3 = var1.readUnsignedByte();
 			if (this.types == null) {
@@ -77,7 +77,7 @@ public class DbTableType extends DualNode {
 						this.defaultValues = new Object[this.types.length][];
 					}
 
-					this.defaultValues[var5] = class75.method2123(var1, var7);
+					this.defaultValues[var5] = class75.method430(var1, var7);
 				}
 			}
 		}
@@ -89,6 +89,6 @@ public class DbTableType extends DualNode {
 		descriptor = "(S)V",
 		garbageValue = "128"
 	)
-	void method9354() {
+	void method2578() {
 	}
 }

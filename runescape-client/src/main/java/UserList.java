@@ -3,7 +3,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,15 +10,9 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("UserList")
 public abstract class UserList {
 	@ObfuscatedName("ao")
-	@ObfuscatedGetter(
-		intValue = 1317636467
-	)
 	@Export("capacity")
 	final int capacity;
 	@ObfuscatedName("au")
-	@ObfuscatedGetter(
-		intValue = 1948012467
-	)
 	@Export("size")
 	int size;
 	@ObfuscatedName("ak")
@@ -188,15 +181,11 @@ public abstract class UserList {
 	)
 	@Export("addLast")
 	User addLast(Username var1, Username var2) {
-		if (this.getByCurrentUsername(var1) != null) {
-			throw new IllegalStateException();
-		} else {
-			User var3 = this.newInstance();
-			var3.set(var1, var2);
-			this.arrayAddLast(var3);
-			this.mapPut(var3);
-			return var3;
-		}
+		User var3 = this.newInstance();
+		var3.set(var1, var2);
+		this.arrayAddLast(var3);
+		this.mapPut(var3);
+		return var3;
 	}
 
 	@ObfuscatedName("bf")
@@ -263,14 +252,10 @@ public abstract class UserList {
 	)
 	@Export("mapRemove")
 	final void mapRemove(User var1) {
-		if (this.usernamesMap.remove(var1.username) == null) {
-			throw new IllegalStateException();
-		} else {
-			if (var1.previousUsername != null) {
-				this.previousUsernamesMap.remove(var1.previousUsername);
-			}
-
+		if (var1.previousUsername != null) {
+			this.previousUsernamesMap.remove(var1.previousUsername);
 		}
+
 	}
 
 	@ObfuscatedName("bh")
@@ -344,7 +329,7 @@ public abstract class UserList {
 		descriptor = "(III)I",
 		garbageValue = "-1261843335"
 	)
-	public static int method8427(int var0, int var1) {
+	public static int method2305(int var0, int var1) {
 		int var2;
 		if (var1 > var0) {
 			var2 = var0;

@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -14,22 +13,16 @@ public class InterfaceParent extends Node {
 	@Export("friendSystem")
 	public static FriendSystem friendSystem;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1605215703
-	)
 	@Export("group")
 	int group;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = -407242107
-	)
 	@Export("type")
 	int type;
 	@ObfuscatedName("al")
-	boolean field1087;
+	boolean field895;
 
 	InterfaceParent() {
-		this.field1087 = false;
+		this.field895 = false;
 	}
 
 	@ObfuscatedName("aq")
@@ -37,7 +30,7 @@ public class InterfaceParent extends Node {
 		descriptor = "(B)V",
 		garbageValue = "93"
 	)
-	static void method2350() {
+	static void method475() {
 		for (ObjectSound var0 = (ObjectSound)ObjectSound.objectSounds.last(); var0 != null; var0 = (ObjectSound)ObjectSound.objectSounds.previous()) {
 			if (var0.stream1 != null) {
 				SceneTilePaint.pcmStreamMixer.removeSubStream(var0.stream1);
@@ -69,13 +62,13 @@ public class InterfaceParent extends Node {
 		Player var4 = Client.players[var1];
 		if (var3 == 0) {
 			if (var2) {
-				var4.field1147 = false;
+				var4.field935 = false;
 			} else if (Client.localPlayerIndex == var1) {
 				throw new RuntimeException();
 			} else {
-				Players.Players_regions[var1] = (var4.plane << 28) + (Projectile.baseX * 64 + var4.pathX[0] >> 13 << 14) + (GameEngine.baseY * 64 + var4.pathY[0] >> 13);
-				if (var4.field1242 != -1) {
-					Players.Players_orientations[var1] = var4.field1242;
+				Players.Players_regions[var1] = (var4.plane << 28) + (GameEngine.baseY + var4.pathY[0] >> 13) + (Projectile.baseX + var4.pathX[0] >> 13 << 14);
+				if (var4.field1031 != -1) {
+					Players.Players_orientations[var1] = var4.field1031;
 				} else {
 					Players.Players_orientations[var1] = var4.orientation;
 				}
@@ -119,14 +112,14 @@ public class InterfaceParent extends Node {
 
 				if (Client.localPlayerIndex == var1 && (var4.x < 1536 || var4.y < 1536 || var4.x >= 11776 || var4.y >= 11776)) {
 					var4.resetPath(var6, var7);
-					var4.field1147 = false;
+					var4.field935 = false;
 				} else if (var2) {
-					var4.field1147 = true;
+					var4.field935 = true;
 					var4.tileX = var6;
 					var4.tileY = var7;
 				} else {
-					var4.field1147 = false;
-					var4.method2433(var6, var7, Players.field1378[var1]);
+					var4.field935 = false;
+					var4.method504(var6, var7, Players.field1150[var1]);
 				}
 
 			} else if (var3 == 2) {
@@ -181,16 +174,16 @@ public class InterfaceParent extends Node {
 
 				if (Client.localPlayerIndex != var1 || var4.x >= 1536 && var4.y >= 1536 && var4.x < 11776 && var4.y < 11776) {
 					if (var2) {
-						var4.field1147 = true;
+						var4.field935 = true;
 						var4.tileX = var6;
 						var4.tileY = var7;
 					} else {
-						var4.field1147 = false;
-						var4.method2433(var6, var7, Players.field1378[var1]);
+						var4.field935 = false;
+						var4.method504(var6, var7, Players.field1150[var1]);
 					}
 				} else {
 					var4.resetPath(var6, var7);
-					var4.field1147 = false;
+					var4.field935 = false;
 				}
 
 			} else {
@@ -216,16 +209,16 @@ public class InterfaceParent extends Node {
 					var11 = var9 + var4.pathY[0];
 					if (Client.localPlayerIndex != var1 || var4.x >= 1536 && var4.y >= 1536 && var4.x < 11776 && var4.y < 11776) {
 						if (var2) {
-							var4.field1147 = true;
+							var4.field935 = true;
 							var4.tileX = var10;
 							var4.tileY = var11;
 						} else {
-							var4.field1147 = false;
-							var4.method2433(var10, var11, Players.field1378[var1]);
+							var4.field935 = false;
+							var4.method504(var10, var11, Players.field1150[var1]);
 						}
 					} else {
 						var4.resetPath(var10, var11);
-						var4.field1147 = false;
+						var4.field935 = false;
 					}
 
 					var4.plane = (byte)(var7 + var4.plane & 3);
@@ -238,18 +231,18 @@ public class InterfaceParent extends Node {
 					var7 = var6 >> 28;
 					var8 = var6 >> 14 & 16383;
 					var9 = var6 & 16383;
-					var10 = (Projectile.baseX * 64 + var8 + var4.pathX[0] & 16383) - Projectile.baseX * 64;
-					var11 = (GameEngine.baseY * 64 + var9 + var4.pathY[0] & 16383) - GameEngine.baseY * 64;
+					var10 = (var8 + Projectile.baseX + var4.pathX[0] & 16383) - Projectile.baseX;
+					var11 = (var9 + GameEngine.baseY + var4.pathY[0] & 16383) - GameEngine.baseY;
 					if (Client.localPlayerIndex == var1 && (var4.x < 1536 || var4.y < 1536 || var4.x >= 11776 || var4.y >= 11776)) {
 						var4.resetPath(var10, var11);
-						var4.field1147 = false;
+						var4.field935 = false;
 					} else if (var2) {
-						var4.field1147 = true;
+						var4.field935 = true;
 						var4.tileX = var10;
 						var4.tileY = var11;
 					} else {
-						var4.field1147 = false;
-						var4.method2433(var10, var11, Players.field1378[var1]);
+						var4.field935 = false;
+						var4.method504(var10, var11, Players.field1150[var1]);
 					}
 
 					var4.plane = (byte)(var7 + var4.plane & 3);

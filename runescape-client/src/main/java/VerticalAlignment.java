@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -11,7 +10,7 @@ public enum VerticalAlignment implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lhk;"
 	)
-	field2019(2, 0),
+	field1614(2, 0),
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lhk;"
@@ -22,18 +21,12 @@ public enum VerticalAlignment implements Enum {
 	@ObfuscatedSignature(
 		descriptor = "Lhk;"
 	)
-	field2015(0, 2);
+	field1613(0, 2);
 
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -967565021
-	)
 	@Export("value")
 	public final int value;
 	@ObfuscatedName("ar")
-	@ObfuscatedGetter(
-		intValue = -982423325
-	)
 	@Export("id")
 	final int id;
 

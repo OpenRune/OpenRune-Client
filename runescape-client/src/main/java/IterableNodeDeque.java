@@ -18,7 +18,7 @@ public class IterableNodeDeque implements Iterable, Collection {
 	@ObfuscatedSignature(
 		descriptor = "Lse;"
 	)
-	Node field4521;
+	Node field3738;
 
 	public IterableNodeDeque() {
 		this.sentinel = new Node();
@@ -73,14 +73,14 @@ public class IterableNodeDeque implements Iterable, Collection {
 	)
 	@Export("last")
 	public Node last() {
-		return this.method7453((Node)null);
+		return this.method2088((Node)null);
 	}
 
 	@ObfuscatedName("as")
 	@ObfuscatedSignature(
 		descriptor = "(Lse;)Lse;"
 	)
-	Node method7453(Node var1) {
+	Node method2088(Node var1) {
 		Node var2;
 		if (var1 == null) {
 			var2 = this.sentinel.previous;
@@ -89,10 +89,10 @@ public class IterableNodeDeque implements Iterable, Collection {
 		}
 
 		if (var2 == this.sentinel) {
-			this.field4521 = null;
+			this.field3738 = null;
 			return null;
 		} else {
-			this.field4521 = var2.previous;
+			this.field3738 = var2.previous;
 			return var2;
 		}
 	}
@@ -103,18 +103,18 @@ public class IterableNodeDeque implements Iterable, Collection {
 	)
 	@Export("previous")
 	public Node previous() {
-		Node var1 = this.field4521;
+		Node var1 = this.field3738;
 		if (var1 == this.sentinel) {
-			this.field4521 = null;
+			this.field3738 = null;
 			return null;
 		} else {
-			this.field4521 = var1.previous;
+			this.field3738 = var1.previous;
 			return var1;
 		}
 	}
 
 	@ObfuscatedName("az")
-	int method7490() {
+	int method2090() {
 		int var1 = 0;
 
 		for (Node var2 = this.sentinel.previous; var2 != this.sentinel; var2 = var2.previous) {
@@ -125,7 +125,7 @@ public class IterableNodeDeque implements Iterable, Collection {
 	}
 
 	@ObfuscatedName("ao")
-	public boolean method7456() {
+	public boolean method2091() {
 		return this.sentinel.previous == this.sentinel;
 	}
 
@@ -133,8 +133,8 @@ public class IterableNodeDeque implements Iterable, Collection {
 	@ObfuscatedSignature(
 		descriptor = "()[Lse;"
 	)
-	Node[] method7458() {
-		Node[] var1 = new Node[this.method7490()];
+	Node[] method2092() {
+		Node[] var1 = new Node[this.method2090()];
 		int var2 = 0;
 
 		for (Node var3 = this.sentinel.previous; var3 != this.sentinel; var3 = var3.previous) {
@@ -148,7 +148,7 @@ public class IterableNodeDeque implements Iterable, Collection {
 	@ObfuscatedSignature(
 		descriptor = "(Lse;)Z"
 	)
-	boolean method7460(Node var1) {
+	boolean method2093(Node var1) {
 		this.addFirst(var1);
 		return true;
 	}
@@ -158,14 +158,32 @@ public class IterableNodeDeque implements Iterable, Collection {
 	}
 
 	public int size() {
-		return this.method7490();
+		return this.method2090();
 	}
 
 	public boolean isEmpty() {
-		return this.method7456();
+		return this.method2091();
 	}
 
 	public boolean contains(Object var1) {
+		throw new RuntimeException();
+	}
+
+	public Object[] toArray() {
+		return this.method2092();
+	}
+
+	public Object[] toArray(Object[] var1) {
+		int var2 = 0;
+
+		for (Node var3 = this.sentinel.previous; var3 != this.sentinel; var3 = var3.previous) {
+			var1[var2++] = var3;
+		}
+
+		return var1;
+	}
+
+	public boolean remove(Object var1) {
 		throw new RuntimeException();
 	}
 
@@ -181,12 +199,16 @@ public class IterableNodeDeque implements Iterable, Collection {
 		throw new RuntimeException();
 	}
 
+	public boolean retainAll(Collection var1) {
+		throw new RuntimeException();
+	}
+
 	public void clear() {
 		this.rsClear();
 	}
 
 	public boolean add(Object var1) {
-		return this.method7460((Node)var1);
+		return this.method2093((Node)var1);
 	}
 
 	public boolean equals(Object var1) {
@@ -195,28 +217,6 @@ public class IterableNodeDeque implements Iterable, Collection {
 
 	public int hashCode() {
 		return super.hashCode();
-	}
-
-	public boolean retainAll(Collection var1) {
-		throw new RuntimeException();
-	}
-
-	public boolean remove(Object var1) {
-		throw new RuntimeException();
-	}
-
-	public Object[] toArray() {
-		return this.method7458();
-	}
-
-	public Object[] toArray(Object[] var1) {
-		int var2 = 0;
-
-		for (Node var3 = this.sentinel.previous; var3 != this.sentinel; var3 = var3.previous) {
-			var1[var2++] = var3;
-		}
-
-		return var1;
 	}
 
 	@ObfuscatedName("ai")

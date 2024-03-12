@@ -7,7 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("VorbisCodebook")
 public class VorbisCodebook {
 	@ObfuscatedName("aq")
-	int field359;
+	int field250;
 	@ObfuscatedName("aw")
 	@Export("entries")
 	int entries;
@@ -15,67 +15,67 @@ public class VorbisCodebook {
 	@Export("lengthMap")
 	int[] lengthMap;
 	@ObfuscatedName("ai")
-	int[] field358;
+	int[] field252;
 	@ObfuscatedName("ar")
-	float[][] field360;
+	float[][] field249;
 	@ObfuscatedName("as")
 	@Export("keys")
 	int[] keys;
 
 	VorbisCodebook() {
-		class60 var1 = VorbisSample.field392;
-		var1.method1138(24);
-		this.field359 = var1.method1138(16);
-		this.entries = var1.method1138(24);
+		class60 var1 = VorbisSample.field262;
+		var1.method320(24);
+		this.field250 = var1.method320(16);
+		this.entries = var1.method320(24);
 		this.lengthMap = new int[this.entries];
-		boolean var2 = var1.method1139() != 0;
+		boolean var2 = var1.method321() != 0;
 		int var3;
 		int var4;
 		int var6;
 		if (var2) {
 			var3 = 0;
 
-			for (var4 = var1.method1138(5) + 1; var3 < this.entries; ++var4) {
-				int var5 = var1.method1138(WorldMapAreaData.iLog(this.entries - var3));
+			for (var4 = var1.method320(5) + 1; var3 < this.entries; ++var4) {
+				int var5 = var1.method320(WorldMapAreaData.iLog(this.entries - var3));
 
 				for (var6 = 0; var6 < var5; ++var6) {
 					this.lengthMap[var3++] = var4;
 				}
 			}
 		} else {
-			boolean var15 = var1.method1139() != 0;
+			boolean var15 = var1.method321() != 0;
 
 			for (var4 = 0; var4 < this.entries; ++var4) {
-				if (var15 && var1.method1139() == 0) {
+				if (var15 && var1.method321() == 0) {
 					this.lengthMap[var4] = 0;
 				} else {
-					this.lengthMap[var4] = var1.method1138(5) + 1;
+					this.lengthMap[var4] = var1.method320(5) + 1;
 				}
 			}
 		}
 
-		this.method1043();
-		var3 = var1.method1138(4);
+		this.method280();
+		var3 = var1.method320(4);
 		if (var3 > 0) {
-			float var16 = VorbisSample.float32Unpack(var1.method1138(32));
-			float var17 = VorbisSample.float32Unpack(var1.method1138(32));
-			var6 = var1.method1138(4) + 1;
-			boolean var7 = var1.method1139() != 0;
+			float var16 = VorbisSample.float32Unpack(var1.method320(32));
+			float var17 = VorbisSample.float32Unpack(var1.method320(32));
+			var6 = var1.method320(4) + 1;
+			boolean var7 = var1.method321() != 0;
 			int var8;
 			if (var3 == 1) {
-				var8 = mapType1QuantValues(this.entries, this.field359);
+				var8 = mapType1QuantValues(this.entries, this.field250);
 			} else {
-				var8 = this.entries * this.field359;
+				var8 = this.entries * this.field250;
 			}
 
-			this.field358 = new int[var8];
+			this.field252 = new int[var8];
 
 			int var9;
 			for (var9 = 0; var9 < var8; ++var9) {
-				this.field358[var9] = var1.method1138(var6);
+				this.field252[var9] = var1.method320(var6);
 			}
 
-			this.field360 = new float[this.entries][this.field359];
+			this.field249 = new float[this.entries][this.field250];
 			float var10;
 			int var11;
 			int var12;
@@ -84,10 +84,10 @@ public class VorbisCodebook {
 					var10 = 0.0F;
 					var11 = 1;
 
-					for (var12 = 0; var12 < this.field359; ++var12) {
+					for (var12 = 0; var12 < this.field250; ++var12) {
 						int var13 = var9 / var11 % var8;
-						float var14 = (float)this.field358[var13] * var17 + var16 + var10;
-						this.field360[var9][var12] = var14;
+						float var14 = (float)this.field252[var13] * var17 + var16 + var10;
+						this.field249[var9][var12] = var14;
 						if (var7) {
 							var10 = var14;
 						}
@@ -98,11 +98,11 @@ public class VorbisCodebook {
 			} else {
 				for (var9 = 0; var9 < this.entries; ++var9) {
 					var10 = 0.0F;
-					var11 = var9 * this.field359;
+					var11 = var9 * this.field250;
 
-					for (var12 = 0; var12 < this.field359; ++var12) {
-						float var18 = (float)this.field358[var11] * var17 + var16 + var10;
-						this.field360[var9][var12] = var18;
+					for (var12 = 0; var12 < this.field250; ++var12) {
+						float var18 = (float)this.field252[var11] * var17 + var16 + var10;
+						this.field249[var9][var12] = var18;
 						if (var7) {
 							var10 = var18;
 						}
@@ -116,7 +116,7 @@ public class VorbisCodebook {
 	}
 
 	@ObfuscatedName("aw")
-	void method1043() {
+	void method280() {
 		int[] var1 = new int[this.entries];
 		int[] var2 = new int[33];
 
@@ -133,33 +133,33 @@ public class VorbisCodebook {
 				var5 = 1 << 32 - var4;
 				var6 = var2[var4];
 				var1[var3] = var6;
-				int var12;
+				int var9;
 				if ((var6 & var5) != 0) {
 					var7 = var2[var4 - 1];
 				} else {
 					var7 = var6 | var5;
 
 					for (var8 = var4 - 1; var8 >= 1; --var8) {
-						var12 = var2[var8];
-						if (var12 != var6) {
+						var9 = var2[var8];
+						if (var9 != var6) {
 							break;
 						}
 
 						var10 = 1 << 32 - var8;
-						if ((var12 & var10) != 0) {
+						if ((var9 & var10) != 0) {
 							var2[var8] = var2[var8 - 1];
 							break;
 						}
 
-						var2[var8] = var12 | var10;
+						var2[var8] = var9 | var10;
 					}
 				}
 
 				var2[var4] = var7;
 
 				for (var8 = var4 + 1; var8 <= 32; ++var8) {
-					var12 = var2[var8];
-					if (var12 == var6) {
+					var9 = var2[var8];
+					if (var9 == var6) {
 						var2[var8] = var7;
 					}
 				}
@@ -188,13 +188,13 @@ public class VorbisCodebook {
 					}
 
 					if (var6 >= this.keys.length) {
-						int[] var9 = new int[this.keys.length * 2];
+						int[] var12 = new int[this.keys.length * 2];
 
 						for (var10 = 0; var10 < this.keys.length; ++var10) {
-							var9[var10] = this.keys[var10];
+							var12[var10] = this.keys[var10];
 						}
 
-						this.keys = var9;
+						this.keys = var12;
 					}
 
 					var8 >>>= 1;
@@ -213,9 +213,9 @@ public class VorbisCodebook {
 	@ObfuscatedSignature(
 		descriptor = "(Lcl;)I"
 	)
-	int method1042(class60 var1) {
+	int method281(class60 var1) {
 		int var2;
-		for (var2 = 0; this.keys[var2] >= 0; var2 = var1.method1139() != 0 ? this.keys[var2] : var2 + 1) {
+		for (var2 = 0; this.keys[var2] >= 0; var2 = var1.method321() != 0 ? this.keys[var2] : var2 + 1) {
 		}
 
 		return ~this.keys[var2];
@@ -225,15 +225,15 @@ public class VorbisCodebook {
 	@ObfuscatedSignature(
 		descriptor = "(Lcl;)[F"
 	)
-	float[] method1050(class60 var1) {
-		return this.field360[this.method1042(var1)];
+	float[] method282(class60 var1) {
+		return this.field249[this.method281(var1)];
 	}
 
 	@ObfuscatedName("aq")
 	@Export("mapType1QuantValues")
 	static int mapType1QuantValues(int var0, int var1) {
 		int var2;
-		for (var2 = (int)Math.pow((double)var0, 1.0D / (double)var1) + 1; class148.method3252(var2, var1) > var0; --var2) {
+		for (var2 = (int)Math.pow((double)var0, 1.0D / (double)var1) + 1; class148.method785(var2, var1) > var0; --var2) {
 		}
 
 		return var2;

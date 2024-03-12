@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -8,25 +7,16 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("TileItem")
 public final class TileItem extends Renderable {
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = 418956957
-	)
 	@Export("id")
 	int id;
 	@ObfuscatedName("aw")
-	@ObfuscatedGetter(
-		intValue = 1152551687
-	)
 	@Export("quantity")
 	int quantity;
 	@ObfuscatedName("ai")
-	@ObfuscatedGetter(
-		intValue = -63855207
-	)
-	int field1368;
+	int field1136;
 
 	TileItem() {
-		this.field1368 = 31;
+		this.field1136 = 31;
 	}
 
 	@ObfuscatedName("aq")
@@ -34,8 +24,8 @@ public final class TileItem extends Renderable {
 		descriptor = "(II)V",
 		garbageValue = "255610960"
 	)
-	void method2758(int var1) {
-		this.field1368 = var1;
+	void method621(int var1) {
+		this.field1136 = var1;
 	}
 
 	@ObfuscatedName("aw")
@@ -53,9 +43,9 @@ public final class TileItem extends Renderable {
 		descriptor = "(IB)Z",
 		garbageValue = "-20"
 	)
-	boolean method2760(int var1) {
+	boolean method622(int var1) {
 		if (var1 >= 0 && var1 <= 4) {
-			return (this.field1368 & 1 << var1) != 0;
+			return (this.field1136 & 1 << var1) != 0;
 		} else {
 			return true;
 		}

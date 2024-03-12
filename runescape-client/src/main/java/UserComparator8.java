@@ -7,7 +7,7 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("UserComparator8")
 public class UserComparator8 extends AbstractUserComparator {
 	@ObfuscatedName("ao")
-	static int[] field1457;
+	static int[] field1210;
 	@ObfuscatedName("bb")
 	@ObfuscatedSignature(
 		descriptor = "Lua;"
@@ -49,7 +49,7 @@ public class UserComparator8 extends AbstractUserComparator {
 		descriptor = "(I)Z",
 		garbageValue = "-2029946391"
 	)
-	static final boolean method2944() {
+	static final boolean method674() {
 		return ViewportMouse.ViewportMouse_isInViewport;
 	}
 
@@ -58,18 +58,18 @@ public class UserComparator8 extends AbstractUserComparator {
 		descriptor = "(Lng;II)V",
 		garbageValue = "-1245873869"
 	)
-	public static void method2942(Widget var0, int var1) {
+	public static void method675(Widget var0, int var1) {
 		ItemComposition var2 = ArchiveDiskActionHandler.ItemDefinition_get(var1);
-		var0.field3774.equipment[var2.maleModel] = var1 + 512;
+		var0.field3186.equipment[var2.maleModel] = var1 + 512;
 		if (var2.maleModel1 != -1) {
-			var0.field3774.equipment[var2.maleModel1] = 0;
+			var0.field3186.equipment[var2.maleModel1] = 0;
 		}
 
 		if (var2.maleModel2 != -1) {
-			var0.field3774.equipment[var2.maleModel2] = 0;
+			var0.field3186.equipment[var2.maleModel2] = 0;
 		}
 
-		var0.field3774.method6477();
+		var0.field3186.method1807();
 	}
 
 	@ObfuscatedName("nc")

@@ -131,7 +131,7 @@ public final class IndexedSprite extends Rasterizer2D {
 	}
 
 	@ObfuscatedName("ar")
-	public void method9884(int var1, int var2, int var3, int var4) {
+	public void method2730(int var1, int var2, int var3, int var4) {
 		int var5 = this.subWidth;
 		int var6 = this.subHeight;
 		int var7 = 0;

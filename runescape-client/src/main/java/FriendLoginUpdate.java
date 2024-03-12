@@ -1,6 +1,5 @@
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -17,10 +16,7 @@ public class FriendLoginUpdate extends Link {
 	@Export("xteaKeys")
 	static int[][] xteaKeys;
 	@ObfuscatedName("aq")
-	@ObfuscatedGetter(
-		intValue = -1925686629
-	)
-	public int field4751;
+	public int field3894;
 	@ObfuscatedName("aw")
 	@ObfuscatedSignature(
 		descriptor = "Lvn;"
@@ -35,7 +31,7 @@ public class FriendLoginUpdate extends Link {
 		descriptor = "(Lvn;I)V"
 	)
 	FriendLoginUpdate(Username var1, int var2) {
-		this.field4751 = (int)(SecureRandomCallable.method2320() / 1000L);
+		this.field3894 = (int)(SecureRandomCallable.method465() / 1000L);
 		this.username = var1;
 		this.world = (short)var2;
 	}
@@ -45,7 +41,7 @@ public class FriendLoginUpdate extends Link {
 		descriptor = "(I)V",
 		garbageValue = "-2060638001"
 	)
-	public static void method8302() {
+	public static void method2286() {
 		KitDefinition.KitDefinition_archive = null;
 		class4.KitDefinition_modelsArchive = null;
 		KitDefinition.KitDefinition_fileCount = 0;

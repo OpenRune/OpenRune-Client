@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import net.runelite.mapping.Export;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 import org.json.JSONArray;
@@ -17,7 +16,7 @@ public class class223 {
 	@ObfuscatedSignature(
 		descriptor = "Lia;"
 	)
-	static final class223 field2401;
+	static final class223 field1936;
 	@ObfuscatedName("sz")
 	@ObfuscatedSignature(
 		descriptor = "Lgt;"
@@ -25,20 +24,17 @@ public class class223 {
 	@Export("guestClanSettings")
 	static ClanSettings guestClanSettings;
 	@ObfuscatedName("aw")
-	Map field2402;
+	Map field1938;
 	@ObfuscatedName("al")
-	@ObfuscatedGetter(
-		intValue = 571857845
-	)
-	int field2400;
+	int field1937;
 
 	static {
-		field2401 = new class223();
+		field1936 = new class223();
 	}
 
 	class223() {
-		this.field2402 = new HashMap();
-		this.field2400 = 0;
+		this.field1938 = new HashMap();
+		this.field1937 = 0;
 	}
 
 	@ObfuscatedName("aq")
@@ -46,13 +42,13 @@ public class class223 {
 		descriptor = "(Lorg/json/JSONObject;ILel;I)V",
 		garbageValue = "-737927221"
 	)
-	void method4353(JSONObject var1, int var2, UrlRequester var3) {
-		this.field2402.clear();
+	void method1149(JSONObject var1, int var2, UrlRequester var3) {
+		this.field1938.clear();
 
 		JSONObject var4;
 		try {
 			var4 = var1;
-			this.field2400 = var2;
+			this.field1937 = var2;
 			var1.getLong("lastfullsyncat");
 			var1.getLong("lastcardupdatedat");
 		} catch (Exception var7) {
@@ -60,7 +56,7 @@ public class class223 {
 		}
 
 		try {
-			this.method4345(var4.getJSONArray("crmcomponents"), this.field2400, var3);
+			this.method1152(var4.getJSONArray("crmcomponents"), this.field1937, var3);
 		} catch (Exception var6) {
 		}
 	}
@@ -70,7 +66,7 @@ public class class223 {
 		descriptor = "(Lorg/json/JSONArray;ILel;I)V",
 		garbageValue = "-1974650686"
 	)
-	void method4345(JSONArray var1, int var2, UrlRequester var3) throws JSONException {
+	void method1152(JSONArray var1, int var2, UrlRequester var3) throws JSONException {
 		if (var1 != null) {
 			for (int var4 = 0; var4 < var1.length(); ++var4) {
 				JSONObject var5 = var1.getJSONObject(var4);
@@ -80,20 +76,20 @@ public class class223 {
 						class221 var7 = new class221();
 
 						try {
-							var7.method4304(var5, var2, var3);
+							var7.method1141(var5, var2, var3);
 						} catch (Exception var9) {
 						}
 
-						if (!var7.field2387.isEmpty()) {
+						if (!var7.field1923.isEmpty()) {
 							String var8 = var5.getString("location");
-							this.field2402.put(var8, var7);
+							this.field1938.put(var8, var7);
 						}
 					}
 				}
 			}
 
-			this.field2402 = this.method4347();
-			SecureRandomCallable.method2320();
+			this.field1938 = this.method1153();
+			SecureRandomCallable.method465();
 		}
 	}
 
@@ -102,29 +98,29 @@ public class class223 {
 		descriptor = "(B)Ljava/util/Map;",
 		garbageValue = "38"
 	)
-	Map method4347() {
+	Map method1153() {
 		HashMap var1 = new HashMap();
 		ArrayList var2 = new ArrayList();
-		var2.addAll(this.field2402.entrySet());
+		var2.addAll(this.field1938.entrySet());
 		boolean var3 = false;
 
 		while (!var3) {
 			var3 = true;
 
-			for (int var7 = 0; var7 < var2.size() - 1; ++var7) {
-				if (((class221)((Entry)var2.get(var7)).getValue()).method4336() > ((class221)((Entry)var2.get(var7 + 1)).getValue()).method4336()) {
-					Entry var4 = (Entry)var2.get(var7);
-					var2.set(var7, var2.get(var7 + 1));
-					var2.set(var7 + 1, var4);
+			for (int var5 = 0; var5 < var2.size() - 1; ++var5) {
+				if (((class221)((Entry)var2.get(var5)).getValue()).method1139() > ((class221)((Entry)var2.get(var5 + 1)).getValue()).method1139()) {
+					Entry var4 = (Entry)var2.get(var5);
+					var2.set(var5, var2.get(var5 + 1));
+					var2.set(var5 + 1, var4);
 					var3 = false;
 				}
 			}
 		}
 
-		Iterator var5 = var2.iterator();
+		Iterator var7 = var2.iterator();
 
-		while (var5.hasNext()) {
-			Entry var6 = (Entry)var5.next();
+		while (var7.hasNext()) {
+			Entry var6 = (Entry)var7.next();
 			var1.put(var6.getKey(), var6.getValue());
 		}
 
@@ -136,8 +132,8 @@ public class class223 {
 		descriptor = "(Ljava/lang/String;B)Lit;",
 		garbageValue = "1"
 	)
-	class221 method4348(String var1) {
-		return (class221)this.field2402.get(var1);
+	class221 method1154(String var1) {
+		return (class221)this.field1938.get(var1);
 	}
 
 	@ObfuscatedName("aw")
@@ -194,17 +190,17 @@ public class class223 {
 		long var6 = -1L;
 
 		int var8;
-		for (var8 = 0; var8 < SecureRandomFuture.method2228(); ++var8) {
-			long var22 = FloorUnderlayDefinition.method3815(var8);
-			if (var6 != var22) {
-				var6 = var22;
-				int var11 = class86.method2349(var8);
-				int var12 = class367.method7009(var8);
-				int var13 = WorldMapDecoration.method5032(var8);
+		for (var8 = 0; var8 < SecureRandomFuture.method450(); ++var8) {
+			long var9 = FloorUnderlayDefinition.method984(var8);
+			if (var6 != var9) {
+				var6 = var9;
+				int var11 = class86.method474(var8);
+				int var12 = class367.method1955(var8);
+				int var13 = WorldMapDecoration.method1369(var8);
 				int var14 = Message.Entity_unpackID(ViewportMouse.ViewportMouse_entityTags[var8]);
 				int var15 = var14;
 				int var19;
-				if (var13 == 2 && Actor.scene.getObjectFlags(class473.Client_plane, var11, var12, var22) >= 0) {
+				if (var13 == 2 && Actor.scene.getObjectFlags(class473.Client_plane, var11, var12, var9) >= 0) {
 					ObjectComposition var16 = class127.getObjectDefinition(var14);
 					if (var16.transforms != null) {
 						var16 = var16.transform();
@@ -217,23 +213,23 @@ public class class223 {
 					PendingSpawn var17 = null;
 
 					for (PendingSpawn var18 = (PendingSpawn)Client.pendingSpawns.last(); var18 != null; var18 = (PendingSpawn)Client.pendingSpawns.previous()) {
-						if (var18.plane == class473.Client_plane && var11 == var18.x && var12 == var18.y && var15 == var18.field1198) {
+						if (var18.plane == class473.Client_plane && var11 == var18.x && var12 == var18.y && var15 == var18.field993) {
 							var17 = var18;
 							break;
 						}
 					}
 
 					if (Client.isItemSelected == 1) {
-						UrlRequest.insertMenuItemNoShift("Use", Client.field822 + " " + "->" + " " + class370.colorStartTag(65535) + var16.name, 1, var15, var11, var12);
+						UrlRequest.insertMenuItemNoShift("Use", Client.field625 + " " + "->" + " " + class370.colorStartTag(65535) + var16.name, 1, var15, var11, var12);
 					} else if (Client.isSpellSelected) {
 						if ((class128.selectedSpellFlags & 4) == 4) {
 							UrlRequest.insertMenuItemNoShift(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + class370.colorStartTag(65535) + var16.name, 2, var15, var11, var12);
 						}
 					} else {
-						String[] var31 = var16.actions;
-						if (var31 != null) {
+						String[] var30 = var16.actions;
+						if (var30 != null) {
 							for (var19 = 4; var19 >= 0; --var19) {
-								if ((var17 == null || var17.method2460(var19)) && var31[var19] != null) {
+								if ((var17 == null || var17.method522(var19)) && var30[var19] != null) {
 									short var20 = 0;
 									if (var19 == 0) {
 										var20 = 3;
@@ -255,7 +251,7 @@ public class class223 {
 										var20 = 1001;
 									}
 
-									UrlRequest.insertMenuItemNoShift(var31[var19], class370.colorStartTag(65535) + var16.name, var20, var15, var11, var12);
+									UrlRequest.insertMenuItemNoShift(var30[var19], class370.colorStartTag(65535) + var16.name, var20, var15, var11, var12);
 								}
 							}
 						}
@@ -264,116 +260,116 @@ public class class223 {
 					}
 				}
 
-				int var24;
-				Player var25;
-				NPC var32;
-				int[] var33;
+				int var22;
+				Player var23;
+				NPC var31;
+				int[] var32;
 				if (var13 == 1) {
-					NPC var27 = Client.npcs[var15];
+					NPC var26 = Client.npcs[var15];
+					if (var26 == null) {
+						continue;
+					}
+
+					if (var26.definition.size == 1 && (var26.x & 127) == 64 && (var26.y & 127) == 64) {
+						for (var22 = 0; var22 < Client.npcCount; ++var22) {
+							var31 = Client.npcs[Client.npcIndices[var22]];
+							if (var31 != null && var31 != var26 && var31.definition.size == 1 && var31.x == var26.x && var26.y == var31.y) {
+								Skeleton.addNpcToMenu(var31, Client.npcIndices[var22], var11, var12);
+							}
+						}
+
+						var22 = Players.Players_count;
+						var32 = Players.Players_indices;
+
+						for (var19 = 0; var19 < var22; ++var19) {
+							var23 = Client.players[var32[var19]];
+							if (var23 != null && var23.x == var26.x && var23.y == var26.y) {
+								MilliClock.addPlayerToMenu(var23, var32[var19], var11, var12);
+							}
+						}
+					}
+
+					Skeleton.addNpcToMenu(var26, var15, var11, var12);
+				}
+
+				if (var13 == 0) {
+					Player var27 = Client.players[var15];
 					if (var27 == null) {
 						continue;
 					}
 
-					if (var27.definition.size == 1 && (var27.x & 127) == 64 && (var27.y & 127) == 64) {
-						for (var24 = 0; var24 < Client.npcCount; ++var24) {
-							var32 = Client.npcs[Client.npcIndices[var24]];
-							if (var32 != null && var32 != var27 && var32.definition.size == 1 && var32.x == var27.x && var27.y == var32.y) {
-								Skeleton.addNpcToMenu(var32, Client.npcIndices[var24], var11, var12);
+					if ((var27.x & 127) == 64 && (var27.y & 127) == 64) {
+						for (var22 = 0; var22 < Client.npcCount; ++var22) {
+							var31 = Client.npcs[Client.npcIndices[var22]];
+							if (var31 != null && var31.definition.size == 1 && var31.x == var27.x && var27.y == var31.y) {
+								Skeleton.addNpcToMenu(var31, Client.npcIndices[var22], var11, var12);
 							}
 						}
 
-						var24 = Players.Players_count;
-						var33 = Players.Players_indices;
+						var22 = Players.Players_count;
+						var32 = Players.Players_indices;
 
-						for (var19 = 0; var19 < var24; ++var19) {
-							var25 = Client.players[var33[var19]];
-							if (var25 != null && var25.x == var27.x && var25.y == var27.y) {
-								MilliClock.addPlayerToMenu(var25, var33[var19], var11, var12);
-							}
-						}
-					}
-
-					Skeleton.addNpcToMenu(var27, var15, var11, var12);
-				}
-
-				if (var13 == 0) {
-					Player var28 = Client.players[var15];
-					if (var28 == null) {
-						continue;
-					}
-
-					if ((var28.x & 127) == 64 && (var28.y & 127) == 64) {
-						for (var24 = 0; var24 < Client.npcCount; ++var24) {
-							var32 = Client.npcs[Client.npcIndices[var24]];
-							if (var32 != null && var32.definition.size == 1 && var32.x == var28.x && var28.y == var32.y) {
-								Skeleton.addNpcToMenu(var32, Client.npcIndices[var24], var11, var12);
-							}
-						}
-
-						var24 = Players.Players_count;
-						var33 = Players.Players_indices;
-
-						for (var19 = 0; var19 < var24; ++var19) {
-							var25 = Client.players[var33[var19]];
-							if (var25 != null && var28 != var25 && var28.x == var25.x && var28.y == var25.y) {
-								MilliClock.addPlayerToMenu(var25, var33[var19], var11, var12);
+						for (var19 = 0; var19 < var22; ++var19) {
+							var23 = Client.players[var32[var19]];
+							if (var23 != null && var27 != var23 && var27.x == var23.x && var27.y == var23.y) {
+								MilliClock.addPlayerToMenu(var23, var32[var19], var11, var12);
 							}
 						}
 					}
 
 					if (var15 != Client.combatTargetPlayerIndex) {
-						MilliClock.addPlayerToMenu(var28, var15, var11, var12);
+						MilliClock.addPlayerToMenu(var27, var15, var11, var12);
 					} else {
-						var4 = var22;
+						var4 = var9;
 					}
 				}
 
 				if (var13 == 3) {
-					NodeDeque var29 = Client.groundItems[class473.Client_plane][var11][var12];
-					if (var29 != null) {
-						for (TileItem var30 = (TileItem)var29.first(); var30 != null; var30 = (TileItem)var29.next()) {
-							ItemComposition var34 = ArchiveDiskActionHandler.ItemDefinition_get(var30.id);
+					NodeDeque var28 = Client.groundItems[class473.Client_plane][var11][var12];
+					if (var28 != null) {
+						for (TileItem var29 = (TileItem)var28.first(); var29 != null; var29 = (TileItem)var28.next()) {
+							ItemComposition var33 = ArchiveDiskActionHandler.ItemDefinition_get(var29.id);
 							if (Client.isItemSelected == 1) {
-								UrlRequest.insertMenuItemNoShift("Use", Client.field822 + " " + "->" + " " + class370.colorStartTag(16748608) + var34.name, 16, var30.id, var11, var12);
+								UrlRequest.insertMenuItemNoShift("Use", Client.field625 + " " + "->" + " " + class370.colorStartTag(16748608) + var33.name, 16, var29.id, var11, var12);
 							} else if (Client.isSpellSelected) {
 								if ((class128.selectedSpellFlags & 1) == 1) {
-									UrlRequest.insertMenuItemNoShift(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + class370.colorStartTag(16748608) + var34.name, 17, var30.id, var11, var12);
+									UrlRequest.insertMenuItemNoShift(Client.selectedSpellActionName, Client.selectedSpellName + " " + "->" + " " + class370.colorStartTag(16748608) + var33.name, 17, var29.id, var11, var12);
 								}
 							} else {
-								String[] var26 = var34.groundActions;
+								String[] var24 = var33.groundActions;
 
-								for (int var35 = 4; var35 >= 0; --var35) {
-									if (var30.method2760(var35)) {
-										if (var26 != null && var26[var35] != null) {
+								for (int var34 = 4; var34 >= 0; --var34) {
+									if (var29.method622(var34)) {
+										if (var24 != null && var24[var34] != null) {
 											byte var21 = 0;
-											if (var35 == 0) {
+											if (var34 == 0) {
 												var21 = 18;
 											}
 
-											if (var35 == 1) {
+											if (var34 == 1) {
 												var21 = 19;
 											}
 
-											if (var35 == 2) {
+											if (var34 == 2) {
 												var21 = 20;
 											}
 
-											if (var35 == 3) {
+											if (var34 == 3) {
 												var21 = 21;
 											}
 
-											if (var35 == 4) {
+											if (var34 == 4) {
 												var21 = 22;
 											}
 
-											UrlRequest.insertMenuItemNoShift(var26[var35], class370.colorStartTag(16748608) + var34.name, var21, var30.id, var11, var12);
-										} else if (var35 == 2) {
-											UrlRequest.insertMenuItemNoShift("Take", class370.colorStartTag(16748608) + var34.name, 20, var30.id, var11, var12);
+											UrlRequest.insertMenuItemNoShift(var24[var34], class370.colorStartTag(16748608) + var33.name, var21, var29.id, var11, var12);
+										} else if (var34 == 2) {
+											UrlRequest.insertMenuItemNoShift("Take", class370.colorStartTag(16748608) + var33.name, 20, var29.id, var11, var12);
 										}
 									}
 								}
 
-								UrlRequest.insertMenuItemNoShift("Examine", class370.colorStartTag(16748608) + var34.name, 1004, var30.id, var11, var12);
+								UrlRequest.insertMenuItemNoShift("Examine", class370.colorStartTag(16748608) + var33.name, 1004, var29.id, var11, var12);
 							}
 						}
 					}
@@ -382,10 +378,10 @@ public class class223 {
 		}
 
 		if (-1L != var4) {
-			var8 = GrandExchangeOfferAgeComparator.method7271(var4);
-			int var9 = SoundSystem.method809(var4);
+			var8 = GrandExchangeOfferAgeComparator.method2033(var4);
+			int var25 = SoundSystem.method209(var4);
 			Player var10 = Client.players[Client.combatTargetPlayerIndex];
-			MilliClock.addPlayerToMenu(var10, Client.combatTargetPlayerIndex, var8, var9);
+			MilliClock.addPlayerToMenu(var10, Client.combatTargetPlayerIndex, var8, var25);
 		}
 
 	}

@@ -3,7 +3,6 @@ import java.awt.datatransfer.ClipboardOwner;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -13,121 +12,79 @@ public class class347 {
 	@ObfuscatedSignature(
 		descriptor = "Lpv;"
 	)
-	class413 field3683;
+	class413 field3030;
 	@ObfuscatedName("ad")
 	@ObfuscatedSignature(
 		descriptor = "Lpv;"
 	)
-	class413 field3684;
+	class413 field3029;
 	@ObfuscatedName("at")
-	boolean field3687;
+	boolean field3011;
 	@ObfuscatedName("ay")
-	boolean field3686;
+	boolean field3012;
 	@ObfuscatedName("ae")
-	@ObfuscatedGetter(
-		intValue = -98494749
-	)
-	int field3692;
+	int field3014;
 	@ObfuscatedName("ac")
-	boolean field3688;
+	boolean field3010;
 	@ObfuscatedName("ab")
-	@ObfuscatedGetter(
-		intValue = 457671495
-	)
-	int field3689;
+	int field3013;
 	@ObfuscatedName("av")
-	@ObfuscatedGetter(
-		intValue = 576040561
-	)
-	int field3690;
+	int field3016;
 	@ObfuscatedName("ap")
-	@ObfuscatedGetter(
-		intValue = 2028893089
-	)
-	int field3691;
+	int field3015;
 	@ObfuscatedName("bu")
-	@ObfuscatedGetter(
-		intValue = 2064086413
-	)
-	int field3693;
+	int field3025;
 	@ObfuscatedName("bo")
-	@ObfuscatedGetter(
-		intValue = 100459291
-	)
-	int field3679;
+	int field3022;
 	@ObfuscatedName("bd")
-	@ObfuscatedGetter(
-		intValue = 1200781745
-	)
-	int field3699;
+	int field3018;
 	@ObfuscatedName("bi")
-	@ObfuscatedGetter(
-		intValue = -1619311665
-	)
-	int field3676;
+	int field3019;
 	@ObfuscatedName("bq")
-	@ObfuscatedGetter(
-		intValue = 1109506203
-	)
-	int field3696;
+	int field3023;
 	@ObfuscatedName("ba")
-	@ObfuscatedGetter(
-		intValue = 1106870875
-	)
-	int field3697;
+	int field3017;
 	@ObfuscatedName("bt")
-	@ObfuscatedGetter(
-		intValue = -1605854399
-	)
-	int field3698;
+	int field3024;
 	@ObfuscatedName("bk")
-	@ObfuscatedGetter(
-		intValue = -413240369
-	)
-	int field3695;
+	int field3020;
 	@ObfuscatedName("bm")
-	@ObfuscatedGetter(
-		intValue = -1727719529
-	)
-	int field3694;
+	int field3021;
 	@ObfuscatedName("bw")
-	@ObfuscatedGetter(
-		intValue = 977160551
-	)
-	int field3701;
+	int field3026;
 	@ObfuscatedName("bv")
 	@ObfuscatedSignature(
 		descriptor = "Lnw;"
 	)
-	class339 field3702;
+	class339 field3027;
 	@ObfuscatedName("by")
 	@ObfuscatedSignature(
 		descriptor = "Lnw;"
 	)
-	class339 field3703;
+	class339 field3028;
 
 	class347() {
-		this.field3683 = new class413();
-		this.field3684 = new class413();
-		this.field3687 = false;
-		this.field3686 = true;
-		this.field3692 = 0;
-		this.field3688 = false;
-		this.field3689 = 0;
-		this.field3690 = 0;
-		this.field3691 = 0;
-		this.field3693 = 0;
-		this.field3679 = 0;
-		this.field3699 = 0;
-		this.field3676 = 0;
-		this.field3696 = Integer.MAX_VALUE;
-		this.field3697 = Integer.MAX_VALUE;
-		this.field3698 = 0;
-		this.field3695 = 0;
-		this.field3694 = 0;
-		this.field3701 = 0;
-		this.field3683.method7779(1);
-		this.field3684.method7779(1);
+		this.field3030 = new class413();
+		this.field3029 = new class413();
+		this.field3011 = false;
+		this.field3012 = true;
+		this.field3014 = 0;
+		this.field3010 = false;
+		this.field3013 = 0;
+		this.field3016 = 0;
+		this.field3015 = 0;
+		this.field3025 = 0;
+		this.field3022 = 0;
+		this.field3018 = 0;
+		this.field3019 = 0;
+		this.field3023 = Integer.MAX_VALUE;
+		this.field3017 = Integer.MAX_VALUE;
+		this.field3024 = 0;
+		this.field3020 = 0;
+		this.field3021 = 0;
+		this.field3026 = 0;
+		this.field3030.method2126(1);
+		this.field3029.method2126(1);
 	}
 
 	@ObfuscatedName("aq")
@@ -135,10 +92,10 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "-756472438"
 	)
-	void method6681() {
-		this.field3692 = (this.field3692 + 1) % 60;
-		if (this.field3676 > 0) {
-			--this.field3676;
+	void method1808() {
+		this.field3014 = (this.field3014 + 1) % 60;
+		if (this.field3019 > 0) {
+			--this.field3019;
 		}
 
 	}
@@ -148,12 +105,12 @@ public class class347 {
 		descriptor = "(ZI)Z",
 		garbageValue = "753569973"
 	)
-	public boolean method6722(boolean var1) {
-		var1 = var1 && this.field3686;
-		boolean var2 = this.field3687 != var1;
-		this.field3687 = var1;
-		if (!this.field3687) {
-			this.method6530(this.field3693, this.field3693);
+	public boolean method1809(boolean var1) {
+		var1 = var1 && this.field3012;
+		boolean var2 = this.field3011 != var1;
+		this.field3011 = var1;
+		if (!this.field3011) {
+			this.method1833(this.field3025, this.field3025);
 		}
 
 		return var2;
@@ -164,9 +121,9 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "1273758417"
 	)
-	public void method6508(boolean var1) {
-		this.field3686 = var1;
-		this.field3687 = var1 && this.field3687;
+	public void method1810(boolean var1) {
+		this.field3012 = var1;
+		this.field3011 = var1 && this.field3011;
 	}
 
 	@ObfuscatedName("ai")
@@ -174,15 +131,15 @@ public class class347 {
 		descriptor = "(Ljava/lang/String;I)Z",
 		garbageValue = "528177582"
 	)
-	public boolean method6551(String var1) {
-		String var2 = this.field3683.method7754();
+	public boolean method1811(String var1) {
+		String var2 = this.field3030.method2121();
 		if (!var2.equals(var1)) {
-			var1 = this.method6527(var1);
-			this.field3683.method7792(var1);
-			this.method6530(this.field3679, this.field3693);
-			this.method6516(this.field3694, this.field3701);
-			this.method6578();
-			this.method6583();
+			var1 = this.method1877(var1);
+			this.field3030.method2133(var1);
+			this.method1833(this.field3022, this.field3025);
+			this.method1818(this.field3021, this.field3026);
+			this.method1881();
+			this.method1886();
 			return true;
 		} else {
 			return false;
@@ -194,8 +151,8 @@ public class class347 {
 		descriptor = "(Ljava/lang/String;I)Z",
 		garbageValue = "-2132521772"
 	)
-	boolean method6510(String var1) {
-		this.field3684.method7792(var1);
+	boolean method1812(String var1) {
+		this.field3029.method2133(var1);
 		return true;
 	}
 
@@ -204,15 +161,15 @@ public class class347 {
 		descriptor = "(Lqi;B)Z",
 		garbageValue = "7"
 	)
-	boolean method6511(AbstractFont var1) {
-		boolean var2 = !this.field3688;
-		this.field3683.method7800(var1);
-		this.field3684.method7800(var1);
-		this.field3688 = true;
-		var2 |= this.method6516(this.field3694, this.field3701);
-		var2 |= this.method6530(this.field3679, this.field3693);
-		if (this.method6578()) {
-			this.method6583();
+	boolean method1813(AbstractFont var1) {
+		boolean var2 = !this.field3010;
+		this.field3030.method2125(var1);
+		this.field3029.method2125(var1);
+		this.field3010 = true;
+		var2 |= this.method1818(this.field3021, this.field3026);
+		var2 |= this.method1833(this.field3022, this.field3025);
+		if (this.method1881()) {
+			this.method1886();
 			var2 = true;
 		}
 
@@ -224,11 +181,11 @@ public class class347 {
 		descriptor = "(IIB)Z",
 		garbageValue = "4"
 	)
-	public boolean method6512(int var1, int var2) {
-		boolean var3 = this.field3698 != var1 || var2 != this.field3695;
-		this.field3698 = var1;
-		this.field3695 = var2;
-		var3 |= this.method6516(this.field3694, this.field3701);
+	public boolean method1814(int var1, int var2) {
+		boolean var3 = this.field3024 != var1 || var2 != this.field3020;
+		this.field3024 = var1;
+		this.field3020 = var2;
+		var3 |= this.method1818(this.field3021, this.field3026);
 		return var3;
 	}
 
@@ -237,16 +194,16 @@ public class class347 {
 		descriptor = "(II)Z",
 		garbageValue = "-2020341672"
 	)
-	public boolean method6519(int var1) {
+	public boolean method1815(int var1) {
 		if (var1 < 0) {
 			var1 = Integer.MAX_VALUE;
 		}
 
-		boolean var2 = var1 == this.field3683.method7767();
-		this.field3683.method7700(var1);
-		this.field3684.method7700(var1);
-		if (this.method6578()) {
-			this.method6583();
+		boolean var2 = var1 == this.field3030.method2144();
+		this.field3030.method2122(var1);
+		this.field3029.method2122(var1);
+		if (this.method1881()) {
+			this.method1886();
 			var2 = true;
 		}
 
@@ -258,10 +215,10 @@ public class class347 {
 		descriptor = "(IB)Z",
 		garbageValue = "96"
 	)
-	public boolean method6577(int var1) {
-		this.field3683.method7701(var1);
-		if (this.method6578()) {
-			this.method6583();
+	public boolean method1816(int var1) {
+		this.field3030.method2123(var1);
+		if (this.method1881()) {
+			this.method1886();
 			return true;
 		} else {
 			return false;
@@ -273,10 +230,10 @@ public class class347 {
 		descriptor = "(II)Z",
 		garbageValue = "2117018219"
 	)
-	public boolean method6772(int var1) {
-		this.field3697 = var1;
-		if (this.method6578()) {
-			this.method6583();
+	public boolean method1817(int var1) {
+		this.field3017 = var1;
+		if (this.method1881()) {
+			this.method1886();
 			return true;
 		} else {
 			return false;
@@ -288,19 +245,19 @@ public class class347 {
 		descriptor = "(III)Z",
 		garbageValue = "-1128260790"
 	)
-	public boolean method6516(int var1, int var2) {
-		if (!this.method6562()) {
-			this.field3694 = var1;
-			this.field3701 = var2;
+	public boolean method1818(int var1, int var2) {
+		if (!this.method1865()) {
+			this.field3021 = var1;
+			this.field3026 = var2;
 			return false;
 		} else {
-			int var3 = this.field3694;
-			int var4 = this.field3701;
-			int var5 = Math.max(0, this.field3683.method7717() - this.field3698 + 2);
-			int var6 = Math.max(0, this.field3683.method7735() - this.field3695 + 1);
-			this.field3694 = Math.max(0, Math.min(var5, var1));
-			this.field3701 = Math.max(0, Math.min(var6, var2));
-			return var3 != this.field3694 || var4 != this.field3701;
+			int var3 = this.field3021;
+			int var4 = this.field3026;
+			int var5 = Math.max(0, this.field3030.method2139() - this.field3024 + 2);
+			int var6 = Math.max(0, this.field3030.method2140() - this.field3020 + 1);
+			this.field3021 = Math.max(0, Math.min(var5, var1));
+			this.field3026 = Math.max(0, Math.min(var6, var2));
+			return var3 != this.field3021 || var4 != this.field3026;
 		}
 	}
 
@@ -309,7 +266,7 @@ public class class347 {
 		descriptor = "(III)Z",
 		garbageValue = "911185863"
 	)
-	public boolean method6517(int var1, int var2) {
+	public boolean method1819(int var1, int var2) {
 		boolean var3 = true;
 		if (var1 < 0 || var1 > 2) {
 			var3 = false;
@@ -319,7 +276,7 @@ public class class347 {
 			var3 = false;
 		}
 
-		return var3 ? this.field3683.method7705(var1, var2) : false;
+		return var3 ? this.field3030.method2127(var1, var2) : false;
 	}
 
 	@ObfuscatedName("aj")
@@ -327,8 +284,8 @@ public class class347 {
 		descriptor = "(IB)V",
 		garbageValue = "65"
 	)
-	public void method6554(int var1) {
-		this.field3683.method7706(var1);
+	public void method1820(int var1) {
+		this.field3030.method2128(var1);
 	}
 
 	@ObfuscatedName("af")
@@ -336,8 +293,8 @@ public class class347 {
 		descriptor = "(II)V",
 		garbageValue = "1715771131"
 	)
-	public void method6639(int var1) {
-		this.field3689 = var1;
+	public void method1821(int var1) {
+		this.field3013 = var1;
 	}
 
 	@ObfuscatedName("ax")
@@ -345,8 +302,8 @@ public class class347 {
 		descriptor = "(II)V",
 		garbageValue = "-525256758"
 	)
-	public void method6520(int var1) {
-		this.field3683.method7779(var1);
+	public void method1822(int var1) {
+		this.field3030.method2126(var1);
 	}
 
 	@ObfuscatedName("an")
@@ -354,8 +311,8 @@ public class class347 {
 		descriptor = "(IB)V",
 		garbageValue = "7"
 	)
-	public void method6521(int var1) {
-		this.field3683.method7731(var1);
+	public void method1823(int var1) {
+		this.field3030.method2124(var1);
 	}
 
 	@ObfuscatedName("ag")
@@ -363,16 +320,16 @@ public class class347 {
 		descriptor = "(IB)Z",
 		garbageValue = "-104"
 	)
-	public boolean method6651(int var1) {
-		this.field3691 = var1;
-		String var2 = this.field3683.method7754();
+	public boolean method1824(int var1) {
+		this.field3015 = var1;
+		String var2 = this.field3030.method2121();
 		int var3 = var2.length();
-		var2 = this.method6527(var2);
+		var2 = this.method1877(var2);
 		if (var2.length() != var3) {
-			this.field3683.method7792(var2);
-			this.method6516(this.field3694, this.field3701);
-			this.method6578();
-			this.method6583();
+			this.field3030.method2133(var2);
+			this.method1818(this.field3021, this.field3026);
+			this.method1881();
+			this.method1886();
 			return true;
 		} else {
 			return false;
@@ -384,8 +341,8 @@ public class class347 {
 		descriptor = "(S)V",
 		garbageValue = "-20912"
 	)
-	public void method6742() {
-		this.field3688 = false;
+	public void method1825() {
+		this.field3010 = false;
 	}
 
 	@ObfuscatedName("ad")
@@ -393,13 +350,13 @@ public class class347 {
 		descriptor = "(II)Z",
 		garbageValue = "-290248574"
 	)
-	public boolean method6524(int var1) {
-		if (this.method6584(var1)) {
-			this.method6734();
-			class414 var2 = this.field3683.method7708((char)var1, this.field3693, this.field3696);
-			this.method6530(var2.method7832(), var2.method7832());
-			this.method6578();
-			this.method6583();
+	public boolean method1826(int var1) {
+		if (this.method1887(var1)) {
+			this.method1831();
+			class414 var2 = this.field3030.method2130((char)var1, this.field3025, this.field3023);
+			this.method1833(var2.method2157(), var2.method2157());
+			this.method1881();
+			this.method1886();
 		}
 
 		return true;
@@ -410,11 +367,11 @@ public class class347 {
 		descriptor = "(B)V",
 		garbageValue = "1"
 	)
-	public void method6525() {
-		if (!this.method6734() && this.field3693 > 0) {
-			int var1 = this.field3683.method7713(this.field3693 - 1);
-			this.method6583();
-			this.method6530(var1, var1);
+	public void method1827() {
+		if (!this.method1831() && this.field3025 > 0) {
+			int var1 = this.field3030.method2135(this.field3025 - 1);
+			this.method1886();
+			this.method1833(var1, var1);
 		}
 
 	}
@@ -424,11 +381,11 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "898173700"
 	)
-	public void method6526() {
-		if (!this.method6734() && this.field3693 < this.field3683.method7711()) {
-			int var1 = this.field3683.method7713(this.field3693);
-			this.method6583();
-			this.method6530(var1, var1);
+	public void method1828() {
+		if (!this.method1831() && this.field3025 < this.field3030.method2120()) {
+			int var1 = this.field3030.method2135(this.field3025);
+			this.method1886();
+			this.method1833(var1, var1);
 		}
 
 	}
@@ -438,12 +395,12 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "-811114332"
 	)
-	public void method6783() {
-		if (!this.method6734() && this.field3693 > 0) {
-			class504 var1 = this.method6657(this.field3693 - 1);
-			int var2 = this.field3683.method7798((Integer)var1.field5063, this.field3693);
-			this.method6583();
-			this.method6530(var2, var2);
+	public void method1829() {
+		if (!this.method1831() && this.field3025 > 0) {
+			class504 var1 = this.method1879(this.field3025 - 1);
+			int var2 = this.field3030.method2136((Integer)var1.field4144, this.field3025);
+			this.method1886();
+			this.method1833(var2, var2);
 		}
 
 	}
@@ -453,12 +410,12 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "878062977"
 	)
-	public void method6528() {
-		if (!this.method6734() && this.field3693 < this.field3683.method7711()) {
-			class504 var1 = this.method6657(this.field3693);
-			int var2 = this.field3683.method7798(this.field3693, (Integer)var1.field5064);
-			this.method6583();
-			this.method6530(var2, var2);
+	public void method1830() {
+		if (!this.method1831() && this.field3025 < this.field3030.method2120()) {
+			class504 var1 = this.method1879(this.field3025);
+			int var2 = this.field3030.method2136(this.field3025, (Integer)var1.field4145);
+			this.method1886();
+			this.method1833(var2, var2);
 		}
 
 	}
@@ -468,13 +425,13 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "-1048060656"
 	)
-	boolean method6734() {
-		if (!this.method6600()) {
+	boolean method1831() {
+		if (!this.method1876()) {
 			return false;
 		} else {
-			int var1 = this.field3683.method7798(this.field3679, this.field3693);
-			this.method6583();
-			this.method6530(var1, var1);
+			int var1 = this.field3030.method2136(this.field3022, this.field3025);
+			this.method1886();
+			this.method1833(var1, var1);
 			return true;
 		}
 	}
@@ -484,8 +441,8 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "1354777542"
 	)
-	public void method6514() {
-		this.method6530(0, this.field3683.method7711());
+	public void method1832() {
+		this.method1833(0, this.field3030.method2120());
 	}
 
 	@ObfuscatedName("ap")
@@ -493,30 +450,30 @@ public class class347 {
 		descriptor = "(IIB)Z",
 		garbageValue = "34"
 	)
-	public boolean method6530(int var1, int var2) {
-		if (!this.method6562()) {
-			this.field3679 = var1;
-			this.field3693 = var2;
+	public boolean method1833(int var1, int var2) {
+		if (!this.method1865()) {
+			this.field3022 = var1;
+			this.field3025 = var2;
 			return false;
 		} else {
-			if (var1 > this.field3683.method7711()) {
-				var1 = this.field3683.method7711();
+			if (var1 > this.field3030.method2120()) {
+				var1 = this.field3030.method2120();
 			}
 
-			if (var2 > this.field3683.method7711()) {
-				var2 = this.field3683.method7711();
+			if (var2 > this.field3030.method2120()) {
+				var2 = this.field3030.method2120();
 			}
 
-			boolean var3 = this.field3679 != var1 || var2 != this.field3693;
-			this.field3679 = var1;
-			if (var2 != this.field3693) {
-				this.field3693 = var2;
-				this.field3692 = 0;
-				this.method6715();
+			boolean var3 = this.field3022 != var1 || var2 != this.field3025;
+			this.field3022 = var1;
+			if (var2 != this.field3025) {
+				this.field3025 = var2;
+				this.field3014 = 0;
+				this.method1884();
 			}
 
-			if (var3 && this.field3703 != null) {
-				this.field3703.vmethod6430();
+			if (var3 && this.field3028 != null) {
+				this.field3028.vmethod6430();
 			}
 
 			return var3;
@@ -528,9 +485,9 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "-955837720"
 	)
-	public void method6531(boolean var1) {
-		class504 var2 = this.method6574(this.field3693);
-		this.method6579((Integer)var2.field5063, var1);
+	public void method1834(boolean var1) {
+		class504 var2 = this.method1880(this.field3025);
+		this.method1882((Integer)var2.field4144, var1);
 	}
 
 	@ObfuscatedName("bo")
@@ -538,9 +495,9 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "-552794233"
 	)
-	public void method6532(boolean var1) {
-		class504 var2 = this.method6574(this.field3693);
-		this.method6579((Integer)var2.field5064, var1);
+	public void method1835(boolean var1) {
+		class504 var2 = this.method1880(this.field3025);
+		this.method1882((Integer)var2.field4145, var1);
 	}
 
 	@ObfuscatedName("bd")
@@ -548,8 +505,8 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "7"
 	)
-	public void method6533(boolean var1) {
-		this.method6579(0, var1);
+	public void method1836(boolean var1) {
+		this.method1882(0, var1);
 	}
 
 	@ObfuscatedName("bi")
@@ -557,8 +514,8 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "1480986847"
 	)
-	public void method6766(boolean var1) {
-		this.method6579(this.field3683.method7711(), var1);
+	public void method1837(boolean var1) {
+		this.method1882(this.field3030.method2120(), var1);
 	}
 
 	@ObfuscatedName("bq")
@@ -566,11 +523,11 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "1932709766"
 	)
-	public void method6535(boolean var1) {
-		if (this.method6600() && !var1) {
-			this.method6579(Math.min(this.field3679, this.field3693), var1);
-		} else if (this.field3693 > 0) {
-			this.method6579(this.field3693 - 1, var1);
+	public void method1838(boolean var1) {
+		if (this.method1876() && !var1) {
+			this.method1882(Math.min(this.field3022, this.field3025), var1);
+		} else if (this.field3025 > 0) {
+			this.method1882(this.field3025 - 1, var1);
 		}
 
 	}
@@ -580,11 +537,11 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "1446723021"
 	)
-	public void method6737(boolean var1) {
-		if (this.method6600() && !var1) {
-			this.method6579(Math.max(this.field3679, this.field3693), var1);
-		} else if (this.field3693 < this.field3683.method7711()) {
-			this.method6579(this.field3693 + 1, var1);
+	public void method1839(boolean var1) {
+		if (this.method1876() && !var1) {
+			this.method1882(Math.max(this.field3022, this.field3025), var1);
+		} else if (this.field3025 < this.field3030.method2120()) {
+			this.method1882(this.field3025 + 1, var1);
 		}
 
 	}
@@ -594,10 +551,10 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "0"
 	)
-	public void method6537(boolean var1) {
-		if (this.field3693 > 0) {
-			class504 var2 = this.method6657(this.field3693 - 1);
-			this.method6579((Integer)var2.field5063, var1);
+	public void method1840(boolean var1) {
+		if (this.field3025 > 0) {
+			class504 var2 = this.method1879(this.field3025 - 1);
+			this.method1882((Integer)var2.field4144, var1);
 		}
 
 	}
@@ -607,10 +564,10 @@ public class class347 {
 		descriptor = "(ZI)V",
 		garbageValue = "-1107971774"
 	)
-	public void method6538(boolean var1) {
-		if (this.field3693 < this.field3683.method7711()) {
-			class504 var2 = this.method6657(this.field3693 + 1);
-			this.method6579((Integer)var2.field5064, var1);
+	public void method1841(boolean var1) {
+		if (this.field3025 < this.field3030.method2120()) {
+			class504 var2 = this.method1879(this.field3025 + 1);
+			this.method1882((Integer)var2.field4145, var1);
 		}
 
 	}
@@ -620,9 +577,9 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "-59"
 	)
-	public void method6539(boolean var1) {
-		if (this.field3693 > 0) {
-			this.method6579(this.field3683.method7716(this.field3693, -1), var1);
+	public void method1842(boolean var1) {
+		if (this.field3025 > 0) {
+			this.method1882(this.field3030.method2138(this.field3025, -1), var1);
 		}
 
 	}
@@ -632,9 +589,9 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "1"
 	)
-	public void method6710(boolean var1) {
-		if (this.field3693 < this.field3683.method7711()) {
-			this.method6579(this.field3683.method7716(this.field3693, 1), var1);
+	public void method1843(boolean var1) {
+		if (this.field3025 < this.field3030.method2120()) {
+			this.method1882(this.field3030.method2138(this.field3025, 1), var1);
 		}
 
 	}
@@ -644,10 +601,10 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "1"
 	)
-	public void method6505(boolean var1) {
-		if (this.field3693 > 0) {
-			int var2 = this.method6580();
-			this.method6579(this.field3683.method7716(this.field3693, -var2), var1);
+	public void method1844(boolean var1) {
+		if (this.field3025 > 0) {
+			int var2 = this.method1883();
+			this.method1882(this.field3030.method2138(this.field3025, -var2), var1);
 		}
 
 	}
@@ -657,10 +614,10 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "-9"
 	)
-	public void method6542(boolean var1) {
-		if (this.field3693 < this.field3683.method7711()) {
-			int var2 = this.method6580();
-			this.method6579(this.field3683.method7716(this.field3693, var2), var1);
+	public void method1845(boolean var1) {
+		if (this.field3025 < this.field3030.method2120()) {
+			int var2 = this.method1883();
+			this.method1882(this.field3030.method2138(this.field3025, var2), var1);
 		}
 
 	}
@@ -670,10 +627,10 @@ public class class347 {
 		descriptor = "(ZB)V",
 		garbageValue = "-57"
 	)
-	public void method6543(boolean var1) {
-		class417 var2 = this.field3683.method7707(0, this.field3693);
-		class504 var3 = var2.method7963();
-		this.method6579(this.field3683.method7715((Integer)var3.field5063, this.field3701), var1);
+	public void method1846(boolean var1) {
+		class417 var2 = this.field3030.method2129(0, this.field3025);
+		class504 var3 = var2.method2200();
+		this.method1882(this.field3030.method2137((Integer)var3.field4144, this.field3026), var1);
 	}
 
 	@ObfuscatedName("bn")
@@ -681,10 +638,10 @@ public class class347 {
 		descriptor = "(ZS)V",
 		garbageValue = "-25917"
 	)
-	public void method6544(boolean var1) {
-		class417 var2 = this.field3683.method7707(0, this.field3693);
-		class504 var3 = var2.method7963();
-		this.method6579(this.field3683.method7715((Integer)var3.field5063, this.field3695 + this.field3701), var1);
+	public void method1847(boolean var1) {
+		class417 var2 = this.field3030.method2129(0, this.field3025);
+		class504 var3 = var2.method2200();
+		this.method1882(this.field3030.method2137((Integer)var3.field4144, this.field3020 + this.field3026), var1);
 	}
 
 	@ObfuscatedName("br")
@@ -692,49 +649,49 @@ public class class347 {
 		descriptor = "(IIZZI)V",
 		garbageValue = "-1047851640"
 	)
-	public void method6545(int var1, int var2, boolean var3, boolean var4) {
+	public void method1848(int var1, int var2, boolean var3, boolean var4) {
 		boolean var5 = false;
 		class504 var6;
 		int var8;
-		if (!this.field3688) {
+		if (!this.field3010) {
 			var8 = 0;
 		} else {
-			var1 += this.field3694;
-			var2 += this.field3701;
-			var6 = this.method6585();
-			var8 = this.field3683.method7715(var1 - (Integer)var6.field5063, var2 - (Integer)var6.field5064);
+			var1 += this.field3021;
+			var2 += this.field3026;
+			var6 = this.method1888();
+			var8 = this.field3030.method2137(var1 - (Integer)var6.field4144, var2 - (Integer)var6.field4145);
 		}
 
 		if (var3 && var4) {
-			this.field3690 = 1;
-			var6 = this.method6657(var8);
-			class504 var7 = this.method6657(this.field3699);
-			this.method6575(var7, var6);
+			this.field3016 = 1;
+			var6 = this.method1879(var8);
+			class504 var7 = this.method1879(this.field3018);
+			this.method1878(var7, var6);
 		} else if (var3) {
-			this.field3690 = 1;
-			var6 = this.method6657(var8);
-			this.method6530((Integer)var6.field5063, (Integer)var6.field5064);
-			this.field3699 = (Integer)var6.field5063;
+			this.field3016 = 1;
+			var6 = this.method1879(var8);
+			this.method1833((Integer)var6.field4144, (Integer)var6.field4145);
+			this.field3018 = (Integer)var6.field4144;
 		} else if (var4) {
-			this.method6530(this.field3699, var8);
+			this.method1833(this.field3018, var8);
 		} else {
-			if (this.field3676 > 0 && var8 == this.field3699) {
-				if (this.field3679 == this.field3693) {
-					this.field3690 = 1;
-					var6 = this.method6657(var8);
-					this.method6530((Integer)var6.field5063, (Integer)var6.field5064);
+			if (this.field3019 > 0 && var8 == this.field3018) {
+				if (this.field3022 == this.field3025) {
+					this.field3016 = 1;
+					var6 = this.method1879(var8);
+					this.method1833((Integer)var6.field4144, (Integer)var6.field4145);
 				} else {
-					this.field3690 = 2;
-					var6 = this.method6574(var8);
-					this.method6530((Integer)var6.field5063, (Integer)var6.field5064);
+					this.field3016 = 2;
+					var6 = this.method1880(var8);
+					this.method1833((Integer)var6.field4144, (Integer)var6.field4145);
 				}
 			} else {
-				this.field3690 = 0;
-				this.method6530(var8, var8);
-				this.field3699 = var8;
+				this.field3016 = 0;
+				this.method1833(var8, var8);
+				this.field3018 = var8;
 			}
 
-			this.field3676 = 25;
+			this.field3019 = 25;
 		}
 
 	}
@@ -744,27 +701,27 @@ public class class347 {
 		descriptor = "(III)V",
 		garbageValue = "528254532"
 	)
-	public void method6546(int var1, int var2) {
-		if (this.field3688 && this.method6557()) {
-			var1 += this.field3694;
-			var2 += this.field3701;
-			class504 var3 = this.method6585();
-			int var4 = this.field3683.method7715(var1 - (Integer)var3.field5063, var2 - (Integer)var3.field5064);
+	public void method1849(int var1, int var2) {
+		if (this.field3010 && this.method1860()) {
+			var1 += this.field3021;
+			var2 += this.field3026;
+			class504 var3 = this.method1888();
+			int var4 = this.field3030.method2137(var1 - (Integer)var3.field4144, var2 - (Integer)var3.field4145);
 			class504 var5;
 			class504 var6;
-			switch(this.field3690) {
+			switch(this.field3016) {
 			case 0:
-				this.method6530(this.field3679, var4);
+				this.method1833(this.field3022, var4);
 				break;
 			case 1:
-				var5 = this.method6657(this.field3699);
-				var6 = this.method6657(var4);
-				this.method6575(var5, var6);
+				var5 = this.method1879(this.field3018);
+				var6 = this.method1879(var4);
+				this.method1878(var5, var6);
 				break;
 			case 2:
-				var5 = this.method6574(this.field3699);
-				var6 = this.method6574(var4);
-				this.method6575(var5, var6);
+				var5 = this.method1880(this.field3018);
+				var6 = this.method1880(var4);
+				this.method1878(var5, var6);
 			}
 		}
 
@@ -775,10 +732,10 @@ public class class347 {
 		descriptor = "(Ljava/awt/datatransfer/Clipboard;I)V",
 		garbageValue = "-1147801496"
 	)
-	public void method6547(Clipboard var1) {
-		class417 var2 = this.field3683.method7707(this.field3679, this.field3693);
-		if (!var2.method7956()) {
-			String var3 = var2.method7960();
+	public void method1850(Clipboard var1) {
+		class417 var2 = this.field3030.method2129(this.field3022, this.field3025);
+		if (!var2.method2196()) {
+			String var3 = var2.method2193();
 			if (!var3.isEmpty()) {
 				var1.setContents(new StringSelection(var3), (ClipboardOwner)null);
 			}
@@ -791,10 +748,10 @@ public class class347 {
 		descriptor = "(Ljava/awt/datatransfer/Clipboard;I)V",
 		garbageValue = "-2048151798"
 	)
-	public void method6747(Clipboard var1) {
-		if (this.method6600()) {
-			this.method6547(var1);
-			this.method6734();
+	public void method1851(Clipboard var1) {
+		if (this.method1876()) {
+			this.method1850(var1);
+			this.method1831();
 		}
 
 	}
@@ -804,16 +761,16 @@ public class class347 {
 		descriptor = "(Ljava/awt/datatransfer/Clipboard;I)V",
 		garbageValue = "-932002013"
 	)
-	public void method6599(Clipboard var1) {
+	public void method1852(Clipboard var1) {
 		Transferable var2 = var1.getContents((Object)null);
 		if (var2 != null && var2.isDataFlavorSupported(DataFlavor.stringFlavor)) {
 			try {
-				String var3 = this.method6527((String)var2.getTransferData(DataFlavor.stringFlavor));
-				this.method6734();
-				class414 var4 = this.field3683.method7709(var3, this.field3693, this.field3696);
-				this.method6530(var4.method7832(), var4.method7832());
-				this.method6578();
-				this.method6583();
+				String var3 = this.method1877((String)var2.getTransferData(DataFlavor.stringFlavor));
+				this.method1831();
+				class414 var4 = this.field3030.method2131(var3, this.field3025, this.field3023);
+				this.method1833(var4.method2157(), var4.method2157());
+				this.method1881();
+				this.method1886();
 			} catch (Exception var5) {
 			}
 		}
@@ -825,8 +782,8 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "1610173482"
 	)
-	public void method6550() {
-		this.field3701 = Math.max(0, this.field3701 - this.field3683.method7719());
+	public void method1853() {
+		this.field3026 = Math.max(0, this.field3026 - this.field3030.method2141());
 	}
 
 	@ObfuscatedName("bz")
@@ -834,9 +791,9 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "-1391428115"
 	)
-	public void method6653() {
-		int var1 = Math.max(0, this.field3683.method7735() - this.field3695);
-		this.field3701 = Math.min(var1, this.field3701 + this.field3683.method7719());
+	public void method1854() {
+		int var1 = Math.max(0, this.field3030.method2140() - this.field3020);
+		this.field3026 = Math.min(var1, this.field3026 + this.field3030.method2141());
 	}
 
 	@ObfuscatedName("bh")
@@ -844,8 +801,8 @@ public class class347 {
 		descriptor = "(Lnw;B)V",
 		garbageValue = "8"
 	)
-	public void method6552(class339 var1) {
-		this.field3702 = var1;
+	public void method1855(class339 var1) {
+		this.field3027 = var1;
 	}
 
 	@ObfuscatedName("bs")
@@ -853,8 +810,8 @@ public class class347 {
 		descriptor = "(Lnw;I)V",
 		garbageValue = "-1665927607"
 	)
-	public void method6779(class339 var1) {
-		this.field3703 = var1;
+	public void method1856(class339 var1) {
+		this.field3028 = var1;
 	}
 
 	@ObfuscatedName("bj")
@@ -862,8 +819,8 @@ public class class347 {
 		descriptor = "(I)Lpv;",
 		garbageValue = "1257442185"
 	)
-	public class413 method6515() {
-		return this.field3683;
+	public class413 method1857() {
+		return this.field3030;
 	}
 
 	@ObfuscatedName("bl")
@@ -871,8 +828,8 @@ public class class347 {
 		descriptor = "(I)Lpv;",
 		garbageValue = "-212619046"
 	)
-	public class413 method6711() {
-		return this.field3684;
+	public class413 method1858() {
+		return this.field3029;
 	}
 
 	@ObfuscatedName("bx")
@@ -880,8 +837,8 @@ public class class347 {
 		descriptor = "(B)Lqz;",
 		garbageValue = "-57"
 	)
-	public class417 method6556() {
-		return this.field3683.method7707(this.field3679, this.field3693);
+	public class417 method1859() {
+		return this.field3030.method2129(this.field3022, this.field3025);
 	}
 
 	@ObfuscatedName("cs")
@@ -889,8 +846,8 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "-1403865728"
 	)
-	public boolean method6557() {
-		return this.field3687;
+	public boolean method1860() {
+		return this.field3011;
 	}
 
 	@ObfuscatedName("ch")
@@ -898,8 +855,8 @@ public class class347 {
 		descriptor = "(S)Z",
 		garbageValue = "-3432"
 	)
-	public boolean method6558() {
-		return this.field3686;
+	public boolean method1861() {
+		return this.field3012;
 	}
 
 	@ObfuscatedName("co")
@@ -907,8 +864,8 @@ public class class347 {
 		descriptor = "(B)Z",
 		garbageValue = "0"
 	)
-	public boolean method6559() {
-		return this.method6557() && this.field3692 % 60 < 30;
+	public boolean method1862() {
+		return this.method1860() && this.field3014 % 60 < 30;
 	}
 
 	@ObfuscatedName("cd")
@@ -916,8 +873,8 @@ public class class347 {
 		descriptor = "(B)I",
 		garbageValue = "-73"
 	)
-	public int method6560() {
-		return this.field3693;
+	public int method1863() {
+		return this.field3025;
 	}
 
 	@ObfuscatedName("cg")
@@ -925,8 +882,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "395517084"
 	)
-	public int method6561() {
-		return this.field3679;
+	public int method1864() {
+		return this.field3022;
 	}
 
 	@ObfuscatedName("cn")
@@ -934,8 +891,8 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "1180862872"
 	)
-	public boolean method6562() {
-		return this.field3688;
+	public boolean method1865() {
+		return this.field3010;
 	}
 
 	@ObfuscatedName("cz")
@@ -943,8 +900,8 @@ public class class347 {
 		descriptor = "(B)I",
 		garbageValue = "101"
 	)
-	public int method6507() {
-		return this.field3694;
+	public int method1866() {
+		return this.field3021;
 	}
 
 	@ObfuscatedName("ci")
@@ -952,8 +909,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "-2060373188"
 	)
-	public int method6564() {
-		return this.field3701;
+	public int method1867() {
+		return this.field3026;
 	}
 
 	@ObfuscatedName("cl")
@@ -961,8 +918,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "2120111535"
 	)
-	public int method6565() {
-		return this.field3683.method7767();
+	public int method1868() {
+		return this.field3030.method2144();
 	}
 
 	@ObfuscatedName("cm")
@@ -970,8 +927,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "1108307152"
 	)
-	public int method6663() {
-		return this.field3683.method7808();
+	public int method1869() {
+		return this.field3030.method2145();
 	}
 
 	@ObfuscatedName("cx")
@@ -979,8 +936,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "-2136471290"
 	)
-	public int method6623() {
-		return this.field3697;
+	public int method1870() {
+		return this.field3017;
 	}
 
 	@ObfuscatedName("cw")
@@ -988,8 +945,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "-1990544466"
 	)
-	public int method6568() {
-		return this.field3689;
+	public int method1871() {
+		return this.field3013;
 	}
 
 	@ObfuscatedName("cy")
@@ -997,8 +954,8 @@ public class class347 {
 		descriptor = "(B)I",
 		garbageValue = "14"
 	)
-	public int method6569() {
-		return this.field3683.method7724();
+	public int method1872() {
+		return this.field3030.method2146();
 	}
 
 	@ObfuscatedName("cu")
@@ -1006,8 +963,8 @@ public class class347 {
 		descriptor = "(B)I",
 		garbageValue = "95"
 	)
-	public int method6570() {
-		return this.field3691;
+	public int method1873() {
+		return this.field3015;
 	}
 
 	@ObfuscatedName("ce")
@@ -1015,8 +972,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "-773664366"
 	)
-	public int method6636() {
-		return this.field3683.method7765();
+	public int method1874() {
+		return this.field3030.method2147();
 	}
 
 	@ObfuscatedName("cv")
@@ -1024,8 +981,8 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "-1937995389"
 	)
-	public boolean method6572() {
-		return this.method6663() > 1;
+	public boolean method1875() {
+		return this.method1869() > 1;
 	}
 
 	@ObfuscatedName("cj")
@@ -1033,8 +990,8 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "-1356361203"
 	)
-	boolean method6600() {
-		return this.field3679 != this.field3693;
+	boolean method1876() {
+		return this.field3022 != this.field3025;
 	}
 
 	@ObfuscatedName("ct")
@@ -1042,12 +999,12 @@ public class class347 {
 		descriptor = "(Ljava/lang/String;I)Ljava/lang/String;",
 		garbageValue = "159066077"
 	)
-	String method6527(String var1) {
+	String method1877(String var1) {
 		StringBuilder var2 = new StringBuilder(var1.length());
 
 		for (int var3 = 0; var3 < var1.length(); ++var3) {
 			char var4 = var1.charAt(var3);
-			if (this.method6584(var4)) {
+			if (this.method1887(var4)) {
 				var2.append(var4);
 			}
 		}
@@ -1060,11 +1017,11 @@ public class class347 {
 		descriptor = "(Lth;Lth;S)V",
 		garbageValue = "-86"
 	)
-	void method6575(class504 var1, class504 var2) {
-		if ((Integer)var2.field5063 < (Integer)var1.field5063) {
-			this.method6530((Integer)var1.field5064, (Integer)var2.field5063);
+	void method1878(class504 var1, class504 var2) {
+		if ((Integer)var2.field4144 < (Integer)var1.field4144) {
+			this.method1833((Integer)var1.field4145, (Integer)var2.field4144);
 		} else {
-			this.method6530((Integer)var1.field5063, (Integer)var2.field5064);
+			this.method1833((Integer)var1.field4144, (Integer)var2.field4145);
 		}
 
 	}
@@ -1072,23 +1029,23 @@ public class class347 {
 	@ObfuscatedName("ca")
 	@ObfuscatedSignature(
 		descriptor = "(II)Lth;",
-		garbageValue = "326724202"
+		garbageValue = "535230839"
 	)
-	class504 method6657(int var1) {
-		int var2 = this.field3683.method7711();
+	class504 method1879(int var1) {
+		int var2 = this.field3030.method2120();
 		int var3 = 0;
 		int var4 = var2;
 
 		int var5;
 		for (var5 = var1; var5 > 0; --var5) {
-			if (this.method6522(this.field3683.method7775(var5 - 1).field4583)) {
+			if (this.method1885(this.field3030.method2116(var5 - 1).field3778)) {
 				var3 = var5;
 				break;
 			}
 		}
 
 		for (var5 = var1; var5 < var2; ++var5) {
-			if (this.method6522(this.field3683.method7775(var5).field4583)) {
+			if (this.method1885(this.field3030.method2116(var5).field3778)) {
 				var4 = var5;
 				break;
 			}
@@ -1102,21 +1059,21 @@ public class class347 {
 		descriptor = "(II)Lth;",
 		garbageValue = "1298604778"
 	)
-	class504 method6574(int var1) {
-		int var2 = this.field3683.method7711();
+	class504 method1880(int var1) {
+		int var2 = this.field3030.method2120();
 		int var3 = 0;
 		int var4 = var2;
 
 		int var5;
 		for (var5 = var1; var5 > 0; --var5) {
-			if (this.field3683.method7775(var5 - 1).field4583 == '\n') {
+			if (this.field3030.method2116(var5 - 1).field3778 == '\n') {
 				var3 = var5;
 				break;
 			}
 		}
 
 		for (var5 = var1; var5 < var2; ++var5) {
-			if (this.field3683.method7775(var5).field4583 == '\n') {
+			if (this.field3030.method2116(var5).field3778 == '\n') {
 				var4 = var5;
 				break;
 			}
@@ -1130,37 +1087,37 @@ public class class347 {
 		descriptor = "(I)Z",
 		garbageValue = "-140710823"
 	)
-	boolean method6578() {
-		if (!this.method6562()) {
+	boolean method1881() {
+		if (!this.method1865()) {
 			return false;
 		} else {
 			boolean var1 = false;
-			if (this.field3683.method7711() > this.field3697) {
-				this.field3683.method7798(this.field3697, this.field3683.method7711());
+			if (this.field3030.method2120() > this.field3017) {
+				this.field3030.method2136(this.field3017, this.field3030.method2120());
 				var1 = true;
 			}
 
-			int var2 = this.method6663();
+			int var2 = this.method1869();
 			int var3;
-			if (this.field3683.method7720() > var2) {
-				var3 = this.field3683.method7716(0, var2) - 1;
-				this.field3683.method7798(var3, this.field3683.method7711());
+			if (this.field3030.method2142() > var2) {
+				var3 = this.field3030.method2138(0, var2) - 1;
+				this.field3030.method2136(var3, this.field3030.method2120());
 				var1 = true;
 			}
 
 			if (var1) {
-				var3 = this.field3693;
-				int var4 = this.field3679;
-				int var5 = this.field3683.method7711();
-				if (this.field3693 > var5) {
+				var3 = this.field3025;
+				int var4 = this.field3022;
+				int var5 = this.field3030.method2120();
+				if (this.field3025 > var5) {
 					var3 = var5;
 				}
 
-				if (this.field3679 > var5) {
+				if (this.field3022 > var5) {
 					var4 = var5;
 				}
 
-				this.method6530(var4, var3);
+				this.method1833(var4, var3);
 			}
 
 			return var1;
@@ -1172,11 +1129,11 @@ public class class347 {
 		descriptor = "(IZI)V",
 		garbageValue = "1955972447"
 	)
-	void method6579(int var1, boolean var2) {
+	void method1882(int var1, boolean var2) {
 		if (var2) {
-			this.method6530(this.field3679, var1);
+			this.method1833(this.field3022, var1);
 		} else {
-			this.method6530(var1, var1);
+			this.method1833(var1, var1);
 		}
 
 	}
@@ -1186,8 +1143,8 @@ public class class347 {
 		descriptor = "(I)I",
 		garbageValue = "-925662674"
 	)
-	int method6580() {
-		return this.field3695 / this.field3683.method7719();
+	int method1883() {
+		return this.field3020 / this.field3030.method2141();
 	}
 
 	@ObfuscatedName("cf")
@@ -1195,33 +1152,33 @@ public class class347 {
 		descriptor = "(I)V",
 		garbageValue = "1025063266"
 	)
-	void method6715() {
-		class417 var1 = this.field3683.method7707(0, this.field3693);
-		class504 var2 = var1.method7963();
-		int var3 = this.field3683.method7719();
-		int var4 = (Integer)var2.field5063 - 10;
+	void method1884() {
+		class417 var1 = this.field3030.method2129(0, this.field3025);
+		class504 var2 = var1.method2200();
+		int var3 = this.field3030.method2141();
+		int var4 = (Integer)var2.field4144 - 10;
 		int var5 = var4 + 20;
-		int var6 = (Integer)var2.field5064 - 3;
+		int var6 = (Integer)var2.field4145 - 3;
 		int var7 = var6 + var3 + 6;
-		int var8 = this.field3694;
-		int var9 = var8 + this.field3698;
-		int var10 = this.field3701;
-		int var11 = var10 + this.field3695;
-		int var12 = this.field3694;
-		int var13 = this.field3701;
+		int var8 = this.field3021;
+		int var9 = var8 + this.field3024;
+		int var10 = this.field3026;
+		int var11 = var10 + this.field3020;
+		int var12 = this.field3021;
+		int var13 = this.field3026;
 		if (var4 < var8) {
 			var12 = var4;
 		} else if (var5 > var9) {
-			var12 = var5 - this.field3698;
+			var12 = var5 - this.field3024;
 		}
 
 		if (var6 < var10) {
 			var13 = var6;
 		} else if (var7 > var11) {
-			var13 = var7 - this.field3695;
+			var13 = var7 - this.field3020;
 		}
 
-		this.method6516(var12, var13);
+		this.method1818(var12, var13);
 	}
 
 	@ObfuscatedName("cr")
@@ -1229,7 +1186,7 @@ public class class347 {
 		descriptor = "(II)Z",
 		garbageValue = "-2048388371"
 	)
-	boolean method6522(int var1) {
+	boolean method1885(int var1) {
 		return var1 == 32 || var1 == 10 || var1 == 9;
 	}
 
@@ -1238,9 +1195,9 @@ public class class347 {
 		descriptor = "(B)V",
 		garbageValue = "0"
 	)
-	void method6583() {
-		if (this.field3702 != null) {
-			this.field3702.vmethod6430();
+	void method1886() {
+		if (this.field3027 != null) {
+			this.field3027.vmethod6430();
 		}
 
 	}
@@ -1250,8 +1207,8 @@ public class class347 {
 		descriptor = "(II)Z",
 		garbageValue = "-423014427"
 	)
-	boolean method6584(int var1) {
-		switch(this.field3691) {
+	boolean method1887(int var1) {
+		switch(this.field3015) {
 		case 1:
 			return BoundaryObject.isAlphaNumeric((char)var1);
 		case 2:
@@ -1279,9 +1236,9 @@ public class class347 {
 		descriptor = "(I)Lth;",
 		garbageValue = "1240566023"
 	)
-	class504 method6585() {
-		int var1 = this.field3683.method7773(this.field3698);
-		int var2 = this.field3683.method7786(this.field3695);
+	class504 method1888() {
+		int var1 = this.field3030.method2148(this.field3024);
+		int var2 = this.field3030.method2149(this.field3020);
 		return new class504(var1, var2);
 	}
 }

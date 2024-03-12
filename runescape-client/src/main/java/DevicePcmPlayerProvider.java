@@ -29,8 +29,8 @@ public class DevicePcmPlayerProvider implements class51 {
 		descriptor = "(ZB)V",
 		garbageValue = "42"
 	)
-	static final void method287(boolean var0) {
-		class190.method3774();
+	static final void method72(boolean var0) {
+		class190.method968();
 		++Client.packetWriter.pendingWrites;
 		if (Client.packetWriter.pendingWrites >= 50 || var0) {
 			Client.packetWriter.pendingWrites = 0;

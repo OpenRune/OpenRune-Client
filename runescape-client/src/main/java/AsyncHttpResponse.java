@@ -1,7 +1,6 @@
 import java.util.concurrent.Future;
 import net.runelite.mapping.Export;
 import net.runelite.mapping.Implements;
-import net.runelite.mapping.ObfuscatedGetter;
 import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
@@ -9,16 +8,10 @@ import net.runelite.mapping.ObfuscatedSignature;
 @Implements("AsyncHttpResponse")
 public class AsyncHttpResponse {
 	@ObfuscatedName("kf")
-	@ObfuscatedGetter(
-		intValue = -442066059
-	)
 	@Export("cameraY")
 	static int cameraY;
 	@ObfuscatedName("uz")
-	@ObfuscatedGetter(
-		intValue = -1584333625
-	)
-	static int field86;
+	static int field55;
 	@ObfuscatedName("aq")
 	@Export("responseFuture")
 	Future responseFuture;
@@ -31,7 +24,7 @@ public class AsyncHttpResponse {
 	}
 
 	AsyncHttpResponse(String var1) {
-		this.method240(var1);
+		this.method52(var1);
 	}
 
 	@ObfuscatedName("aq")
@@ -39,7 +32,7 @@ public class AsyncHttpResponse {
 		descriptor = "(Ljava/lang/String;B)V",
 		garbageValue = "17"
 	)
-	void method240(String var1) {
+	void method52(String var1) {
 		if (var1 == null) {
 			var1 = "";
 		}
@@ -99,7 +92,7 @@ public class AsyncHttpResponse {
 			} catch (Exception var3) {
 				String var2 = "Error retrieving REST request reply";
 				System.err.println(var2 + "\r\n" + var3);
-				this.method240(var2);
+				this.method52(var2);
 				return new HttpResponse(var2);
 			}
 		}
@@ -125,17 +118,17 @@ public class AsyncHttpResponse {
 		descriptor = "(IIB)V",
 		garbageValue = "-65"
 	)
-	static final void method252(int var0, int var1) {
+	static final void method58(int var0, int var1) {
 		if (Client.menuOptionsCount >= 2 || Client.isItemSelected != 0 || Client.isSpellSelected) {
 			if (Client.showMouseOverText) {
-				int var2 = FontName.method9113();
+				int var2 = FontName.method2524();
 				String var3;
 				if (Client.isItemSelected == 1 && Client.menuOptionsCount < 2) {
-					var3 = "Use" + " " + Client.field822 + " " + "->";
+					var3 = "Use" + " " + Client.field625 + " " + "->";
 				} else if (Client.isSpellSelected && Client.menuOptionsCount < 2) {
 					var3 = Client.selectedSpellActionName + " " + Client.selectedSpellName + " " + "->";
 				} else {
-					var3 = SoundSystem.method810(var2);
+					var3 = SoundSystem.method211(var2);
 				}
 
 				if (Client.menuOptionsCount > 2) {
