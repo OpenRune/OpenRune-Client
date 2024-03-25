@@ -133,10 +133,10 @@ class RSAppletStub implements AppletStub
 					if (code.equals("error_game_js5connect"))
 					{
 						SwingUtilities.invokeLater(() ->
-							new FatalErrorDialog("Devious Client is unable to connect to the RuneScape update server. " +
+							new FatalErrorDialog("OpenRune Client is unable to connect to the RuneScape update server. " +
 								"RuneScape might be offline for an update, check the game status page. If the game " +
-								"is online, then either a firewall is blocking Devious Client, or you don't have internet access.")
-								.setTitle("Devious Client", "Unable to connect to update server")
+								"is online, then either a firewall is blocking OpenRune Client, or you don't have internet access.")
+								.setTitle("OpenRune Client", "Unable to connect to update server")
 								.addButton("Game Status", () -> LinkBrowser.browse("https://secure.runescape.com/m=news/game-status-information-centre?oldschool=1"))
 								.open());
 					}
@@ -146,7 +146,7 @@ class RSAppletStub implements AppletStub
 							new FatalErrorDialog("OldSchool RuneScape is unable to retrieve updates from its update server. " +
 								"This is likely due to a firewall blocking the RuneScape server. Try disabling your firewall, or use " +
 								"a different network.")
-								.setTitle("Devious Client", "Unable to connect to update server")
+								.setTitle("OpenRune Client", "Unable to connect to update server")
 								.addHelpButtons()
 								.open());
 					}
@@ -154,10 +154,10 @@ class RSAppletStub implements AppletStub
 					{
 						SwingUtilities.invokeLater(() ->
 							new FatalErrorDialog("OldSchool RuneScape has crashed. Crashes are most commonly caused by plugin hub plugins, " +
-								"but can also be caused by Devious or Jagex client bugs. If you receive this message commonly, try playing in " +
+								"but can also be caused by OpenRune or Jagex client bugs. If you receive this message commonly, try playing in " +
 								"safe mode to eliminate the potential of plugins causing the crash. The client log file will contain additional " +
 								"information about the crash.")
-								.setTitle("Devious Client", "OldSchool RuneScape has crashed")
+								.setTitle("OpenRune Client", "OldSchool RuneScape has crashed")
 								.addHelpButtons()
 								.open());
 					}
@@ -165,7 +165,7 @@ class RSAppletStub implements AppletStub
 					{
 						SwingUtilities.invokeLater(() ->
 							new FatalErrorDialog("OldSchool RuneScape has crashed with the message: " + code)
-								.setTitle("Devious Client", "OldSchool RuneScape has crashed")
+								.setTitle("OpenRune Client", "OldSchool RuneScape has crashed")
 								.addHelpButtons()
 								.open());
 					}

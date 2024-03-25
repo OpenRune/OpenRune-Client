@@ -13,31 +13,31 @@ public class class75 {
 
 	static {
 		field775 = new BigInteger("10001", 16);
-		field776 = new BigInteger("b24a3d5e440eca7e467297f5a5e00a73a0c4750320d889a908dcc343591afb1ab975a16df1793c49e66afc0e94fd73e24d95f54db980e1be37b4043a6c767468275b2833763bda1dfc52e06aafc845ac84391df571d0d79e239393079e8d8c37019be639457e2a32158b876f8c7256de733e38a909bbf1104d830746fbc597e3", 16);
+		field776 = new BigInteger("80bd45632ab8832b9a3166bea254ff0ee973a1f54f6e0244b189188ee5cc3340372d9b502f7174399e956f9cb39f481dd11359c96a3c31a6f34fdc8f90ac4558631e7a3b095ae524ac23343ff51e45767a407f43065db4d8a306bdad4373113ef2bc50fd7f541bb78f41f4ada546fffc8c61463b6efd07d9a68bff3f73fe67a1", 16);
 	}
 
 	@ObfuscatedName("aq")
 	@ObfuscatedSignature(
-		descriptor = "(Lte;I)I",
-		garbageValue = "1678088189"
+			descriptor = "(Lte;I)I",
+			garbageValue = "1678088189"
 	)
 	static final int method429(LoginType var0) {
 		if (var0 == null) {
 			return 12;
 		} else {
 			switch(var0.field4171) {
-			case 5:
-				return 20;
-			default:
-				return 12;
+				case 5:
+					return 20;
+				default:
+					return 12;
 			}
 		}
 	}
 
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
-		descriptor = "(Luq;[II)[Ljava/lang/Object;",
-		garbageValue = "-1281861605"
+			descriptor = "(Luq;[II)[Ljava/lang/Object;",
+			garbageValue = "-1281861605"
 	)
 	static Object[] method430(Buffer var0, int[] var1) {
 		int var2 = var0.readUShortSmart();
@@ -56,8 +56,8 @@ public class class75 {
 
 	@ObfuscatedName("ai")
 	@ObfuscatedSignature(
-		descriptor = "(IIIII)V",
-		garbageValue = "-1228894690"
+			descriptor = "(IIIII)V",
+			garbageValue = "-1228894690"
 	)
 	public static void method431(int var0, int var1, int var2, int var3) {
 		if (class321.musicSongs.size() > 1 && class321.musicSongs.get(0) != null && ((MusicSong)class321.musicSongs.get(0)).midiPcmStream.isReady() && class321.musicSongs.get(1) != null && ((MusicSong)class321.musicSongs.get(1)).midiPcmStream.isReady()) {
@@ -78,8 +78,8 @@ public class class75 {
 
 	@ObfuscatedName("bu")
 	@ObfuscatedSignature(
-		descriptor = "(B)V",
-		garbageValue = "3"
+			descriptor = "(B)V",
+			garbageValue = "3"
 	)
 	@Export("SpriteBuffer_reset")
 	static void SpriteBuffer_reset() {

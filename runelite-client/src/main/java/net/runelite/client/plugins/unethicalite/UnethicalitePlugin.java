@@ -19,7 +19,7 @@ import java.awt.image.BufferedImage;
 import java.util.concurrent.ExecutorService;
 
 @PluginDescriptor(
-		name = "Devious Client",
+		name = "OpenRune Client",
 		hidden = true
 )
 @Slf4j
@@ -62,7 +62,7 @@ public class UnethicalitePlugin extends SettingsPlugin
 		final BufferedImage icon = ImageUtil.loadImageResource(getClass(), "openosrs.png");
 
 		navButton = NavigationButton.builder()
-				.tooltip("Devious Client")
+				.tooltip("OpenRune Client")
 				.icon(icon)
 				.priority(-1)
 				.panel(unethicalitePanel)
@@ -88,13 +88,13 @@ public class UnethicalitePlugin extends SettingsPlugin
 	@Override
 	public String getPluginName()
 	{
-		return "Devious Client";
+		return "OpenRune Client";
 	}
 
 	@Override
 	public String getPluginDescription()
 	{
-		return "Devious Client Settings";
+		return "OpenRune Client Settings";
 	}
 
 	@Override

@@ -32,7 +32,7 @@ import lombok.Getter;
 @Getter
 class RSConfig
 {
-	private String codeBase = "http://oldschool14.runescape.com/";
+	private String codeBase = "http://127.0.0.1/";
 
 	private final Map<String, String> appletProperties = new HashMap<>();
 
