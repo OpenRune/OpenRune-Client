@@ -112,7 +112,6 @@ import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.events.ExternalPluginsChanged;
 import net.runelite.client.events.PluginChanged;
 import net.runelite.client.externalplugins.ExternalPluginManager;
-import net.runelite.client.plugins.OPRSExternalPluginManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.ui.ColorScheme;
@@ -158,7 +157,6 @@ class ConfigPanel extends PluginPanel
 	private final PluginManager pluginManager;
 	private final ExternalPluginManager externalPluginManager;
 	private final ColorPickerManager colorPickerManager;
-	private final OPRSExternalPluginManager oprsExternalPluginManager;
 	private final EventBus eventBus;
 
 	private final TitleCaseListCellRenderer listCellRenderer = new TitleCaseListCellRenderer();
@@ -173,8 +171,7 @@ class ConfigPanel extends PluginPanel
 
 	@Inject
 	private ConfigPanel(PluginListPanel pluginList, ConfigManager configManager, PluginManager pluginManager,
-		ExternalPluginManager externalPluginManager, ColorPickerManager colorPickerManager,
-		OPRSExternalPluginManager oprsExternalPluginManager, EventBus eventBus)
+		ExternalPluginManager externalPluginManager, ColorPickerManager colorPickerManager, EventBus eventBus)
 	{
 		super(false);
 
@@ -183,7 +180,6 @@ class ConfigPanel extends PluginPanel
 		this.pluginManager = pluginManager;
 		this.externalPluginManager = externalPluginManager;
 		this.colorPickerManager = colorPickerManager;
-		this.oprsExternalPluginManager = oprsExternalPluginManager;
 		this.eventBus = eventBus;
 
 		setLayout(new BorderLayout());
@@ -285,52 +281,7 @@ class ConfigPanel extends PluginPanel
 
 		ConfigDescriptor cd = pluginConfig.getConfigDescriptor();
 
-		Map<String, Map<String, String>> pluginsInfoMap = oprsExternalPluginManager.getPluginsInfoMap();
 
-		if (pluginConfig.getPlugin() != null && pluginsInfoMap.containsKey(pluginConfig.getPlugin().getClass().getSimpleName()))
-		{
-
-			JPanel infoPanel = new JPanel();
-			infoPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
-			infoPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-			infoPanel.setLayout(new GridLayout(0, 1));
-
-			final Font smallFont = FontManager.getRunescapeSmallFont();
-
-			Map<String, String> pluginInfo = pluginsInfoMap.get(pluginConfig.getPlugin().getClass().getSimpleName());
-
-			JLabel idLabel = new JLabel(htmlLabel("id", pluginInfo.get("id")));
-			idLabel.setFont(smallFont);
-			infoPanel.add(idLabel);
-
-			JLabel versionLabel = new JLabel(htmlLabel("version", pluginInfo.get("version")));
-			versionLabel.setFont(smallFont);
-			infoPanel.add(versionLabel);
-
-			JLabel providerLabel = new JLabel(htmlLabel("provider", pluginInfo.get("provider")));
-			providerLabel.setFont(smallFont);
-			infoPanel.add(providerLabel);
-
-			JButton button = new JButton("Support");
-			button.addActionListener(e -> LinkBrowser.browse(pluginInfo.get("support")));
-
-			JSeparator separator = new JSeparator()
-			{
-				@Override
-				protected void paintComponent(Graphics g)
-				{
-					int width = this.getSize().width;
-					Graphics2D g2 = (Graphics2D) g;
-					g2.setStroke(new BasicStroke(2));
-					g2.setColor(ColorScheme.BRAND_BLUE);
-					g2.drawLine(0, 0, width, 0);
-				}
-			};
-
-			mainPanel.add(infoPanel);
-			mainPanel.add(button);
-			mainPanel.add(separator);
-		}
 
 		final Map<String, JPanel> sectionWidgets = new HashMap<>();
 		final Map<String, JPanel> titleWidgets = new HashMap<>();

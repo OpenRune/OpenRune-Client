@@ -57,7 +57,6 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ExternalPluginsChanged;
 import net.runelite.client.events.PluginChanged;
 import net.runelite.client.externalplugins.ExternalPluginManager;
-import net.runelite.client.plugins.OPRSExternalPluginManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginInstantiationException;
@@ -94,7 +93,6 @@ public class PluginListPanel extends PluginPanel
 
 	@Getter
 	private final ExternalPluginManager externalPluginManager;
-	private final OPRSExternalPluginManager oprsExternalPluginManager;
 
 	@Getter
 	private final MultiplexingPluginPanel muxer;
@@ -109,7 +107,6 @@ public class PluginListPanel extends PluginPanel
 		ConfigManager configManager,
 		PluginManager pluginManager,
 		ExternalPluginManager externalPluginManager,
-		OPRSExternalPluginManager oprsExternalPluginManager,
 		EventBus eventBus,
 		Provider<ConfigPanel> configPanelProvider,
 		Provider<PluginHubPanel> pluginHubPanelProvider)
@@ -119,7 +116,6 @@ public class PluginListPanel extends PluginPanel
 		this.configManager = configManager;
 		this.pluginManager = pluginManager;
 		this.externalPluginManager = externalPluginManager;
-		this.oprsExternalPluginManager = oprsExternalPluginManager;
 		this.configPanelProvider = configPanelProvider;
 
 		muxer = new MultiplexingPluginPanel(this)
@@ -199,40 +195,41 @@ public class PluginListPanel extends PluginPanel
 
 		// populate pluginList with all non-hidden plugins
 		pluginList = Stream.concat(
-			fakePlugins.stream(),
-			pluginManager.getPlugins().stream()
-				.filter(plugin -> !plugin.getClass().getAnnotation(PluginDescriptor.class).hidden())
-				.map(plugin ->
-				{
-					PluginDescriptor descriptor = plugin.getClass().getAnnotation(PluginDescriptor.class);
-					Config config = pluginManager.getPluginConfigProxy(plugin);
-					ConfigDescriptor configDescriptor = config == null ? null : configManager.getConfigDescriptor(config);
-					List<String> conflicts = pluginManager.conflictsForPlugin(plugin).stream()
-						.map(Plugin::getName)
-						.collect(Collectors.toList());
+						fakePlugins.stream(),
+						pluginManager.getPlugins().stream()
+								.filter(plugin -> !plugin.getClass().getAnnotation(PluginDescriptor.class).hidden())
+								.map(plugin ->
+								{
+									PluginDescriptor descriptor = plugin.getClass().getAnnotation(PluginDescriptor.class);
+									Config config = pluginManager.getPluginConfigProxy(plugin);
+									ConfigDescriptor configDescriptor = config == null ? null : configManager.getConfigDescriptor(config);
+									List<String> conflicts = pluginManager.conflictsForPlugin(plugin).stream()
+											.map(Plugin::getName)
+											.collect(Collectors.toList());
 
-					return new PluginConfigurationDescriptor(
-						descriptor.name(),
-						descriptor.description(),
-						descriptor.tags(),
-						plugin,
-						config,
-						configDescriptor,
-						conflicts);
+									return new PluginConfigurationDescriptor(
+											descriptor.name(),
+											descriptor.description(),
+											descriptor.tags(),
+											plugin,
+											config,
+											configDescriptor,
+											conflicts);
+								})
+				)
+				.map(desc ->
+				{
+					PluginListItem listItem = new PluginListItem(this, desc);
+					listItem.setPinned(pinnedPlugins.contains(desc.getName()));
+					return listItem;
 				})
-		)
-			.map(desc ->
-			{
-				PluginListItem listItem = new PluginListItem(this, desc, oprsExternalPluginManager);
-				listItem.setPinned(pinnedPlugins.contains(desc.getName()));
-				return listItem;
-			})
-			.sorted(Comparator.comparing(p -> p.getPluginConfig().getName()))
-			.collect(Collectors.toList());
+				.sorted(Comparator.comparing(p -> p.getPluginConfig().getName()))
+				.collect(Collectors.toList());
 
 		mainPanel.removeAll();
 		refresh();
 	}
+
 
 	public void addFakePlugin(PluginConfigurationDescriptor... descriptor)
 	{

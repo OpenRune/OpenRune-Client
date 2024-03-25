@@ -79,7 +79,6 @@ import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 import net.runelite.client.game.WorldService;
 import net.runelite.client.game.XpDropManager;
-import net.runelite.client.plugins.OPRSExternalPluginManager;
 import net.runelite.client.rs.ClientLoader;
 import net.runelite.client.rs.ClientUpdateCheckMode;
 import net.runelite.client.ui.ClientUI;
@@ -136,8 +135,7 @@ public class RuneLite
 	private net.runelite.client.plugins.PluginManager pluginManager;
 	@Inject
 	private ExternalPluginManager externalPluginManager;
-	@Inject
-	private OPRSExternalPluginManager oprsExternalPluginManager;
+
 	@Inject
 	private EventBus eventBus;
 	@Inject
@@ -527,23 +525,12 @@ public class RuneLite
 		// Tell the plugin manager if client is outdated or not
 		pluginManager.setOutdated(isOutdated);
 
-		// Load external plugin manager
-		oprsExternalPluginManager.setupInstance();
-		oprsExternalPluginManager.startExternalUpdateManager();
-		oprsExternalPluginManager.startExternalPluginManager();
-		oprsExternalPluginManager.setOutdated(isOutdated);
 
-		// Update external plugins
-		oprsExternalPluginManager.update();
 
 		// Load the plugins, but does not start them yet.
 		// This will initialize configuration
 		pluginManager.loadCorePlugins();
 		pluginManager.loadSideLoadPlugins();
-
-		oprsExternalPluginManager.loadPlugins();
-
-		externalPluginManager.loadExternalPlugins();
 
 		SplashScreen.stage(.70, null, "Finalizing configuration");
 

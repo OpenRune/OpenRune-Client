@@ -47,7 +47,6 @@ import net.runelite.client.events.ClientShutdown;
 import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.events.ConfigSync;
 import net.runelite.client.events.RuneScapeProfileChanged;
-import net.runelite.client.plugins.OPRSExternalPluginManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.util.ColorUtil;
 import net.runelite.http.api.config.ConfigPatch;
@@ -912,40 +911,6 @@ public class ConfigManager
 			if (parameterizedType.getRawType() == Set.class)
 			{
 				return gson.fromJson(str, parameterizedType);
-			}
-		}
-		if (type == EnumSet.class)
-		{
-			try
-			{
-				String substring = str.substring(str.indexOf("{") + 1, str.length() - 1);
-				String[] splitStr = substring.split(", ");
-				Class<? extends Enum> enumClass = null;
-				if (!str.contains("{"))
-				{
-					return null;
-				}
-
-				enumClass = findEnumClass(str, OPRSExternalPluginManager.pluginClassLoaders);
-
-				EnumSet enumSet = EnumSet.noneOf(enumClass);
-				for (String s : splitStr)
-				{
-					try
-					{
-						enumSet.add(Enum.valueOf(enumClass, s.replace("[", "").replace("]", "")));
-					}
-					catch (IllegalArgumentException ignore)
-					{
-						return EnumSet.noneOf(enumClass);
-					}
-				}
-				return enumSet;
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-				return null;
 			}
 		}
 
