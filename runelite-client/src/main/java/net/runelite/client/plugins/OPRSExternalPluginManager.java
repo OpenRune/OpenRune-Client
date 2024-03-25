@@ -38,7 +38,6 @@ import com.openosrs.client.OpenOSRS;
 import com.openosrs.client.config.OpenOSRSConfig;
 import com.openosrs.client.events.OPRSPluginChanged;
 import com.openosrs.client.events.OPRSRepositoryChanged;
-import com.openosrs.client.ui.OpenOSRSSplashScreen;
 import com.openosrs.client.util.Groups;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -52,6 +51,7 @@ import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.events.ExternalPluginsChanged;
 import net.runelite.client.ui.ClientUI;
+import net.runelite.client.ui.SplashScreen;
 import net.runelite.client.util.SwingUtil;
 import net.unethicalite.client.plugins.PrivateUpdateRepository;
 import org.jgroups.Message;
@@ -546,7 +546,7 @@ public class OPRSExternalPluginManager
 
 	private void scanAndInstantiate(List<Plugin> plugins, boolean init, boolean initConfig)
 	{
-		OpenOSRSSplashScreen.stage(.66, "Loading external plugins");
+		SplashScreen.stage(.66, "Loading external plugins","");
 		MutableGraph<Class<? extends Plugin>> graph = GraphBuilder
 			.directed()
 			.build();
@@ -647,7 +647,7 @@ public class OPRSExternalPluginManager
 
 					loaded.getAndIncrement();
 
-					OpenOSRSSplashScreen.stage(.67, .75, "Loading external plugins", loaded.get(), scannedPlugins.size());
+					SplashScreen.stage(.67, .75, null, "Loading plugins", loaded.get(), scannedPlugins.size(), false);
 				})));
 			curGroup.forEach(future ->
 			{
@@ -1081,7 +1081,7 @@ public class OPRSExternalPluginManager
 			return;
 		}
 
-		OpenOSRSSplashScreen.stage(.59, "Updating external plugins");
+		SplashScreen.stage(.59, "Updating external plugins","");
 
 		boolean error = false;
 
@@ -1095,7 +1095,7 @@ public class OPRSExternalPluginManager
 				try
 				{
 
-					OpenOSRSSplashScreen.stage(.59, "Updating " + plugin.id + " to version " + lastVersion);
+					SplashScreen.stage(.59, "Updating " + plugin.id + " to version " + lastVersion,"");
 					boolean updated = updateManager.updatePlugin(plugin.id, lastVersion);
 
 					if (!updated)

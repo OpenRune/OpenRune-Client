@@ -2,7 +2,6 @@ package com.openosrs.client.util;
 
 import com.openosrs.client.OpenOSRS;
 import com.openosrs.client.config.OpenOSRSConfig;
-import com.openosrs.client.ui.OpenOSRSSplashScreen;
 import io.reactivex.rxjava3.subjects.PublishSubject;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -12,6 +11,7 @@ import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ClientShutdown;
 import net.runelite.client.events.ConfigChanged;
+import net.runelite.client.ui.SplashScreen;
 import net.unethicalite.client.config.UnethicaliteConfig;
 import org.jgroups.Address;
 import org.jgroups.JChannel;
@@ -105,7 +105,7 @@ public class Groups implements Receiver
 
 	public void sendConfig(Address destination, ConfigChanged configChanged)
 	{
-		if (!openOSRSConfig.localSync() || OpenOSRSSplashScreen.showing() || instanceCount < 2)
+		if (!openOSRSConfig.localSync() || SplashScreen.isOpen() || instanceCount < 2)
 		{
 			return;
 		}
@@ -146,7 +146,7 @@ public class Groups implements Receiver
 
 	public void send(Address destination, String command)
 	{
-		if (!openOSRSConfig.localSync() || OpenOSRSSplashScreen.showing() || instanceCount < 2 || channel == null)
+		if (!openOSRSConfig.localSync() || SplashScreen.isOpen() || instanceCount < 2 || channel == null)
 		{
 			return;
 		}
@@ -171,7 +171,7 @@ public class Groups implements Receiver
 	@Override
 	public void receive(Message message)
 	{
-		if (OpenOSRSSplashScreen.showing())
+		if (SplashScreen.isOpen())
 		{
 			return;
 		}

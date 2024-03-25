@@ -180,7 +180,7 @@ public class ExternalPluginManager
 			double splashLength = startup ? .10 : 1;
 			if (!startup)
 			{
-				SplashScreen.init();
+				SplashScreen.init(RuneLite.splashScreenType);
 			}
 
 			Instant now = Instant.now();

@@ -24,26 +24,18 @@
  */
 package net.runelite.client.ui;
 
-import com.openosrs.client.ui.OpenOSRSSplashScreen;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import javax.annotation.Nullable;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JProgressBar;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.Timer;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicProgressBarUI;
+
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.ui.laf.RuneLiteLAF;
 import net.runelite.client.util.ImageUtil;
@@ -59,77 +51,99 @@ public class SplashScreen extends JFrame implements ActionListener
 	private final JLabel action = new JLabel("Loading");
 	private final JProgressBar progress = new JProgressBar();
 	private final JLabel subAction = new JLabel();
-	private final Timer timer;
+	private Timer timer;
+	public static final Dimension FRAME_SIZE = new Dimension(600, 350);
 
 	private volatile double overallProgress = 0;
 	private volatile String actionText = "Loading";
 	private volatile String subActionText = "";
 	private volatile String progressText = null;
 
-	private SplashScreen()
+	@Getter
+	private final MessagePanel messagePanel = new MessagePanel();
+
+	private SplashScreenType splashScreenType;
+
+	private SplashScreen(SplashScreenType type)
 	{
-		setTitle("OpenOSRS Launcher");
+		splashScreenType = type;
+		setTitle("OpenRune Launcher");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
 		setIconImages(Arrays.asList(ClientUI.ICON_128, ClientUI.ICON_16));
-		setLayout(null);
-		Container pane = getContentPane();
-		pane.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		if (type == SplashScreenType.RUNELITE) {
+			setLayout(null);
+			Container pane = getContentPane();
+			pane.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 
-		Font font = new Font(Font.DIALOG, Font.PLAIN, 12);
+			Font font = new Font(Font.DIALOG, Font.PLAIN, 12);
 
-		BufferedImage logo = ImageUtil.loadImageResource(SplashScreen.class, "openosrs_splash.png");
-		JLabel logoLabel = new JLabel(new ImageIcon(logo));
-		pane.add(logoLabel);
-		logoLabel.setBounds(0, 0, WIDTH, WIDTH);
+			BufferedImage logo = ImageUtil.loadImageResource(SplashScreen.class, "runelite_splash_2.png");
+			JLabel logoLabel = new JLabel(new ImageIcon(logo));
+			pane.add(logoLabel);
+			logoLabel.setBounds(0, 0, WIDTH, WIDTH);
 
-		int y = WIDTH;
+			int y = WIDTH;
 
-		pane.add(action);
-		action.setForeground(Color.WHITE);
-		action.setBounds(0, y, WIDTH, 16);
-		action.setHorizontalAlignment(SwingConstants.CENTER);
-		action.setFont(font);
-		y += action.getHeight() + PAD;
+			pane.add(action);
+			action.setForeground(Color.WHITE);
+			action.setBounds(0, y, WIDTH, 16);
+			action.setHorizontalAlignment(SwingConstants.CENTER);
+			action.setFont(font);
+			y += action.getHeight() + PAD;
 
-		pane.add(progress);
-		progress.setForeground(ColorScheme.BRAND_BLUE);
-		progress.setBackground(ColorScheme.BRAND_BLUE.darker().darker());
-		progress.setBorder(new EmptyBorder(0, 0, 0, 0));
-		progress.setBounds(0, y, WIDTH, 14);
-		progress.setFont(font);
-		progress.setUI(new BasicProgressBarUI()
-		{
-			@Override
-			protected Color getSelectionBackground()
+			pane.add(progress);
+			progress.setForeground(ColorScheme.BRAND_BLUE);
+			progress.setBackground(ColorScheme.BRAND_BLUE.darker().darker());
+			progress.setBorder(new EmptyBorder(0, 0, 0, 0));
+			progress.setBounds(0, y, WIDTH, 14);
+			progress.setFont(font);
+			progress.setUI(new BasicProgressBarUI()
 			{
-				return Color.BLACK;
-			}
+				@Override
+				protected Color getSelectionBackground()
+				{
+					return Color.BLACK;
+				}
 
-			@Override
-			protected Color getSelectionForeground()
-			{
-				return Color.BLACK;
-			}
-		});
-		y += 12 + PAD;
+				@Override
+				protected Color getSelectionForeground()
+				{
+					return Color.BLACK;
+				}
+			});
+			y += 12 + PAD;
 
-		pane.add(subAction);
-		subAction.setForeground(Color.LIGHT_GRAY);
-		subAction.setBounds(0, y, WIDTH, 16);
-		subAction.setHorizontalAlignment(SwingConstants.CENTER);
-		subAction.setFont(font);
-		y += subAction.getHeight() + PAD;
+			pane.add(subAction);
+			subAction.setForeground(Color.LIGHT_GRAY);
+			subAction.setBounds(0, y, WIDTH, 16);
+			subAction.setHorizontalAlignment(SwingConstants.CENTER);
+			subAction.setFont(font);
+			y += subAction.getHeight() + PAD;
 
-		setSize(WIDTH, y);
-		setLocationRelativeTo(null);
+			setSize(WIDTH, y);
+			setLocationRelativeTo(null);
 
-		timer = new Timer(100, this);
-		timer.setRepeats(true);
-		timer.start();
+			timer = new Timer(100, this);
+			timer.setRepeats(true);
+			timer.start();
 
-		//setVisible(true);
+			setVisible(true);
+		} else {
+			final JPanel panel = new JPanel();
+			panel.setLayout(new BorderLayout());
+			panel.setPreferredSize(FRAME_SIZE);
+
+			panel.add(new InfoPanelSplash(), BorderLayout.EAST);
+			panel.add(messagePanel, BorderLayout.WEST);
+
+			this.setContentPane(panel);
+			pack();
+
+			this.setLocationRelativeTo(null);
+			this.setVisible(true);
+		}
 	}
 
 	@Override
@@ -157,7 +171,7 @@ public class SplashScreen extends JFrame implements ActionListener
 		return INSTANCE != null;
 	}
 
-	public static void init()
+	public static void init(SplashScreenType type)
 	{
 		try
 		{
@@ -175,7 +189,7 @@ public class SplashScreen extends JFrame implements ActionListener
 					{
 						UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 					}
-					INSTANCE = new SplashScreen();
+					INSTANCE = new SplashScreen(type);
 				}
 				catch (Exception e)
 				{
@@ -208,13 +222,11 @@ public class SplashScreen extends JFrame implements ActionListener
 			INSTANCE.dispose();
 			INSTANCE = null;
 		});
-		OpenOSRSSplashScreen.close();
 	}
 
 	public static void stage(double overallProgress, @Nullable String actionText, String subActionText)
 	{
 		stage(overallProgress, actionText, subActionText, null);
-		OpenOSRSSplashScreen.stage(overallProgress, subActionText);
 	}
 
 	public static void stage(double startProgress, double endProgress,
@@ -233,20 +245,44 @@ public class SplashScreen extends JFrame implements ActionListener
 			progress = done + " / " + total;
 		}
 		stage(startProgress + ((endProgress - startProgress) * done / total), actionText, subActionText, progress);
-		OpenOSRSSplashScreen.stage(startProgress, endProgress, subActionText, done, total);
 	}
+
+	private void setBarText(final String text)
+	{
+		final JProgressBar bar = messagePanel.getBar();
+		bar.setString(text);
+		bar.setStringPainted(text != null);
+		bar.revalidate();
+		bar.repaint();
+	}
+
+	private void setMessage(final String msg, final double value, String barText)
+	{
+		messagePanel.getBarLabel().setText(msg);
+		messagePanel.getBar().setMaximum(1000);
+		messagePanel.getBar().setValue((int) (value * 1000));
+		setBarText(barText);
+
+		this.getContentPane().revalidate();
+		this.getContentPane().repaint();
+	}
+
 
 	public static void stage(double overallProgress, @Nullable String actionText, String subActionText, @Nullable String progressText)
 	{
 		if (INSTANCE != null)
 		{
-			INSTANCE.overallProgress = overallProgress;
-			if (actionText != null)
-			{
-				INSTANCE.actionText = actionText;
+			if (INSTANCE.splashScreenType.equals(SplashScreenType.OPENOSRS)) {
+				INSTANCE.setMessage(subActionText, overallProgress,progressText);
+			} else {
+				INSTANCE.overallProgress = overallProgress;
+				if (actionText != null)
+				{
+					INSTANCE.actionText = actionText;
+				}
+				INSTANCE.subActionText = subActionText;
+				INSTANCE.progressText = progressText;
 			}
-			INSTANCE.subActionText = subActionText;
-			INSTANCE.progressText = progressText;
 		}
 	}
 }

@@ -32,7 +32,7 @@ import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.openosrs.client.OpenOSRS;
 import com.openosrs.client.game.PlayerManager;
-import com.openosrs.client.ui.OpenOSRSSplashScreen;
+
 import java.applet.Applet;
 import java.io.File;
 import java.io.IOException;
@@ -61,6 +61,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.swing.SwingUtilities;
+
 import joptsimple.ArgumentAcceptingOptionSpec;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
@@ -84,6 +85,7 @@ import net.runelite.client.rs.ClientUpdateCheckMode;
 import net.runelite.client.ui.ClientUI;
 import net.runelite.client.ui.FatalErrorDialog;
 import net.runelite.client.ui.SplashScreen;
+import net.runelite.client.ui.SplashScreenType;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.ui.overlay.WidgetOverlay;
 import net.runelite.client.ui.overlay.tooltip.TooltipOverlay;
@@ -168,6 +170,8 @@ public class RuneLite
 	@Nullable
 	private RuntimeConfig runtimeConfig;
 
+	public static SplashScreenType splashScreenType;
+
 	public static void main(String[] args) throws Exception
 	{
 		args = Arrays.stream(args).filter(s -> !BYPASS_ARG.equals(s)).toArray(String[]::new);
@@ -175,6 +179,7 @@ public class RuneLite
 
 		final OptionParser parser = new OptionParser(false);
 		parser.accepts("developer-mode", "Enable developer tools");
+		parser.accepts("splash-type", "SplashScreen Type");
 		parser.accepts("debug", "Show extra debugging output");
 		parser.accepts("safe-mode", "Disables external plugins and the GPU plugin");
 		parser.accepts("insecure-skip-tls-verification", "Disables TLS verification");
@@ -201,6 +206,12 @@ public class RuneLite
 			.withValuesConvertedBy(new ConfigFileConverter())
 			.defaultsTo(DEFAULT_CONFIG_FILE);
 
+		final ArgumentAcceptingOptionSpec<SplashScreenType> splashType = parser
+				.accepts("splash-type", "SplashScreen Type")
+				.withRequiredArg()
+				.ofType(SplashScreenType.class)
+				.defaultsTo(SplashScreenType.RUNELITE);
+
 		final ArgumentAcceptingOptionSpec<ClientUpdateCheckMode> updateMode = parser
 			.accepts("rs", "Select client type")
 			.withRequiredArg()
@@ -214,6 +225,8 @@ public class RuneLite
 					return super.convert(v.toUpperCase());
 				}
 			});
+
+
 
 		final OptionSpec<Void> insecureWriteCredentials = parser.accepts("insecure-write-credentials", "Dump authentication tokens from the Jagex Launcher to a text file to be used for development");
 
@@ -234,6 +247,8 @@ public class RuneLite
 			final Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 			logger.setLevel(Level.DEBUG);
 		}
+
+		splashScreenType = options.valueOf(splashType);
 
 		if (options.has("proxy"))
 		{
@@ -285,8 +300,7 @@ public class RuneLite
 		final OkHttpClient okHttpClient = buildHttpClient(options.has("insecure-skip-tls-verification"));
 		RuneLiteAPI.CLIENT = okHttpClient;
 
-		SplashScreen.init();
-		OpenOSRSSplashScreen.init();
+		SplashScreen.init(splashScreenType);
 		SplashScreen.stage(0, "Retrieving client", "");
 
 		try
